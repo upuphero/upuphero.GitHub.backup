@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-05-16T22:22:27.311Z</updated>
+  <updated>2022-05-17T01:30:31.902Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo 新建/启动/部署命令</title>
+    <link href="http://example.com/2022/05/16/hexo-usage/"/>
+    <id>http://example.com/2022/05/16/hexo-usage/</id>
+    <published>2022-05-17T01:25:13.000Z</published>
+    <updated>2022-05-17T01:30:31.902Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-新建一篇文章"><a href="#1-新建一篇文章" class="headerlink" title="1.新建一篇文章"></a>1.新建一篇文章</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post &quot;文章名称&quot;</span><br></pre></td></tr></table></figure><p>例子</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post hexo_usage</span><br></pre></td></tr></table></figure><h2 id="2-部署"><a href="#2-部署" class="headerlink" title="2.部署"></a>2.部署</h2><h3 id="（1）清除缓存文件-db-json-和已生成的静态文件-public-。"><a href="#（1）清除缓存文件-db-json-和已生成的静态文件-public-。" class="headerlink" title="（1）清除缓存文件 (db.json) 和已生成的静态文件 (public)。"></a>（1）清除缓存文件 (db.json) 和已生成的静态文件 (public)。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure><p>其实不需要每次都清除缓存文件，直接进行下面两步就可以</p><h3 id="（2）生成静态文件。"><a href="#（2）生成静态文件。" class="headerlink" title="（2）生成静态文件。"></a>（2）生成静态文件。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure><h3 id="（3）部署网站"><a href="#（3）部署网站" class="headerlink" title="（3）部署网站"></a>（3）部署网站</h3><p>部署之前预先生成静态文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure><h2 id="3-启动服务器。默认情况下，访问网址为："><a href="#3-启动服务器。默认情况下，访问网址为：" class="headerlink" title="3.启动服务器。默认情况下，访问网址为："></a>3.启动服务器。默认情况下，访问网址为：</h2><p><a href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;1-新建一篇文章&quot;&gt;&lt;a href=&quot;#1-新建一篇文章&quot; class=&quot;headerlink&quot; title=&quot;1.新建一篇文章&quot;&gt;&lt;/a&gt;1.新建一篇文章&lt;/h2&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;t</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="skills" scheme="http://example.com/tags/skills/"/>
+    
+  </entry>
   
   <entry>
     <title>艾尔登法环boss战</title>

@@ -24,7 +24,7 @@
 
   
 
-  <title>关于 | 八角书屋</title>
+  <title>hexo 新建/启动/部署命令 | 八角书屋</title>
 
   
 
@@ -46,9 +46,9 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/DVA鬼刀3440x1440壁纸.6ozhdm4v0us0.webp)"></div>
+    <div class="post-image" style="background-image: url(https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/dressing.3dlbyajni7o0.webp)"></div>
   
 
   <!-- navbar -->
@@ -96,36 +96,104 @@
 
   
   
-
-  
-  
     <div class="header-content">
-      <div class="post-text layout-block layout-padding">
-        <h1 class="title-wrap">关于</h1>
-        
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">hexo 新建/启动/部署命令</h1>
+          <h2 class="title-sub-wrap">
+            <strong>leaf</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2022-05-17T01:25:13.000Z" itemprop="datePublished">2022-05-16</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/study/">📒 study</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/skills/">🏷️ skills</a></li>
+  
+</ul>
+        </div>
       </div>
     </div>
+  
+
+  
   
   
 </header>
 
-    <!-- 分页(其他自定义页面) -->
+    <!-- 文章 -->
 
-<!-- 自定义页面 -->
-
+<!-- 文章内容 -->
 <div class="body-container">
   <article class="content-container layout-block post-container">
     <div class="article-info">
       
+      
+      
+      
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        
+        <h2 id="1-新建一篇文章"><a href="#1-新建一篇文章" class="headerlink" title="1.新建一篇文章"></a>1.新建一篇文章</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post &quot;文章名称&quot;</span><br></pre></td></tr></table></figure>
+<p>例子</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post hexo_usage</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="2-部署"><a href="#2-部署" class="headerlink" title="2.部署"></a>2.部署</h2><h3 id="（1）清除缓存文件-db-json-和已生成的静态文件-public-。"><a href="#（1）清除缓存文件-db-json-和已生成的静态文件-public-。" class="headerlink" title="（1）清除缓存文件 (db.json) 和已生成的静态文件 (public)。"></a>（1）清除缓存文件 (db.json) 和已生成的静态文件 (public)。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<p>其实不需要每次都清除缓存文件，直接进行下面两步就可以</p>
+<h3 id="（2）生成静态文件。"><a href="#（2）生成静态文件。" class="headerlink" title="（2）生成静态文件。"></a>（2）生成静态文件。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<h3 id="（3）部署网站"><a href="#（3）部署网站" class="headerlink" title="（3）部署网站"></a>（3）部署网站</h3><p>部署之前预先生成静态文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-启动服务器。默认情况下，访问网址为："><a href="#3-启动服务器。默认情况下，访问网址为：" class="headerlink" title="3.启动服务器。默认情况下，访问网址为："></a>3.启动服务器。默认情况下，访问网址为：</h2><p><a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
       </section>
 
       
       
+        <nav class="article-nav">
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/黄金树+法环.7guc6vicdtg0.webp"></div>
+    
+    <div class="card-text">
+      
+        <a href="/2022/05/16/elden-ring-boss/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">艾尔登法环boss战</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
 
-      
-      
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
     </div>
     <div class="widget-info">
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -162,6 +230,8 @@
     </div>
   </div>
 </section>
+
+      
 
       
 <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -219,7 +289,6 @@
     </div>
   </article>
 </div>
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">
