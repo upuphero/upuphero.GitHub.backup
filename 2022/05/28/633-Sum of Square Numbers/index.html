@@ -24,7 +24,7 @@
 
   
 
-  <title>hexo 新建/启动/部署命令 | 八角书屋</title>
+  <title>633. Sum of Square Numbers (Medium) | 八角书屋</title>
 
   
 
@@ -48,7 +48,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/dressing.3dlbyajni7o0.webp)"></div>
+    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/19.3fp1tvrxliu0.webp)"></div>
   
 
   <!-- navbar -->
@@ -97,11 +97,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">hexo 新建/启动/部署命令</h1>
+          <h1 class="title-wrap">633. Sum of Square Numbers (Medium)</h1>
           <h2 class="title-sub-wrap">
             <strong>leaf</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2022-05-17T01:25:13.000Z" itemprop="datePublished">2022-05-16</time>
+            <time  class="article-date" datetime="2022-05-28T23:31:13.000Z" itemprop="datePublished">2022-05-28</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -110,7 +110,7 @@
 </ul>
           <ul class="wrap-list dark">
   
-    <li><a href="/tags/skills/">🏷️ skills</a></li>
+    <li><a href="/tags/leetcode-two-pointers/">🏷️ leetcode two-pointers</a></li>
   
 </ul>
         </div>
@@ -134,25 +134,10 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h2 id="1-新建一篇文章"><a href="#1-新建一篇文章" class="headerlink" title="1.新建一篇文章"></a>1.新建一篇文章</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post &quot;文章名称&quot;</span><br></pre></td></tr></table></figure>
-<p>例子</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post hexo_usage</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="2-部署"><a href="#2-部署" class="headerlink" title="2.部署"></a>2.部署</h2><h3 id="（1）清除缓存文件-db-json-和已生成的静态文件-public-。"><a href="#（1）清除缓存文件-db-json-和已生成的静态文件-public-。" class="headerlink" title="（1）清除缓存文件 (db.json) 和已生成的静态文件 (public)。"></a>（1）清除缓存文件 (db.json) 和已生成的静态文件 (public)。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-<p>其实不需要每次都清除缓存文件，直接进行下面两步就可以</p>
-<h3 id="（2）生成静态文件。"><a href="#（2）生成静态文件。" class="headerlink" title="（2）生成静态文件。"></a>（2）生成静态文件。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<h3 id="（3）部署网站"><a href="#（3）部署网站" class="headerlink" title="（3）部署网站"></a>（3）部署网站</h3><p>部署之前预先生成静态文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="3-启动服务器。默认情况下，访问网址为："><a href="#3-启动服务器。默认情况下，访问网址为：" class="headerlink" title="3.启动服务器。默认情况下，访问网址为："></a>3.启动服务器。默认情况下，访问网址为：</h2><p><a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+        <h1 id="633-Sum-of-Square-Numbers"><a href="#633-Sum-of-Square-Numbers" class="headerlink" title="633. Sum of Square Numbers"></a>633. Sum of Square Numbers</h1><h2 id="Given-a-non-negative-integer-c-decide-whether-there’re-two-integers-a-and-b-such-that-a2-b2-c"><a href="#Given-a-non-negative-integer-c-decide-whether-there’re-two-integers-a-and-b-such-that-a2-b2-c" class="headerlink" title="Given a non-negative integer c, decide whether there’re two integers a and b such that a2 + b2 = c."></a>Given a non-negative integer c, decide whether there’re two integers a and b such that a2 + b2 = c.</h2><p>同样是双指针</p>
+<p>本题的关键是右指针的初始化，实现剪枝，从而降低时间复杂度。设右指针为 x，左指针固定为 0，为了使 02 + x2 的值尽可能接近 target，我们可以将 x 取为 sqrt(target)。</p>
+<p>因为最多只需要遍历一次 0~sqrt(target)，所以时间复杂度为 O(sqrt(target))。又因为只使用了两个额外的变量，因此空间复杂度为 O(1)。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">judgeSquareSum</span>(<span class="params">self, c</span>):</span></span><br><span class="line">        l, r = <span class="number">0</span>, <span class="built_in">int</span>(c**<span class="number">0.5</span>)</span><br><span class="line">        <span class="keyword">while</span> l &lt;= r:</span><br><span class="line">            <span class="built_in">sum</span> = l*l+r*r</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">sum</span> &lt; c:</span><br><span class="line">                l +=<span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="built_in">sum</span>&gt;c:</span><br><span class="line">                r -=<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
 
       </section>
 
@@ -167,8 +152,8 @@
     
     <div class="card-text">
       
-        <a href="/2022/05/25/LeetCode02/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">LeetCode02  双指针</h2>
+        <a href="/2022/05/28/345/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">345. Reverse Vowels of a String (Easy)</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -180,12 +165,12 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/黄金树+法环.7guc6vicdtg0.webp"></div>
+      <div class="card-cover" background-image-lazy data-img="https://raw.githubusercontent.com/upuphero/image-hosting/master/19.3fp1tvrxliu0.webp"></div>
     
     <div class="card-text">
       
-        <a href="/2022/05/16/elden-ring-boss/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">艾尔登法环boss战</h2>
+        <a href="/2022/05/28/167-twosum-sorted/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">167. Two Sum II - Input array is sorted (Easy)</h2>
         </a>
       
       <div class="card-text--row">Older</div>

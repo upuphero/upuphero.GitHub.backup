@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-05-17T01:30:31.902Z</updated>
+  <updated>2022-05-28T23:52:03.582Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,127 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>345. Reverse Vowels of a String (Easy)</title>
+    <link href="http://example.com/2022/05/28/345/"/>
+    <id>http://example.com/2022/05/28/345/</id>
+    <published>2022-05-28T23:50:01.000Z</published>
+    <updated>2022-05-28T23:52:03.582Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="345-Reverse-Vowels-of-a-String"><a href="#345-Reverse-Vowels-of-a-String" class="headerlink" title="345. Reverse Vowels of a String"></a>345. Reverse Vowels of a String</h1><h2 id="Given-a-string-s-reverse-only-all-the-vowels-in-the-string-and-return-it"><a href="#Given-a-string-s-reverse-only-all-the-vowels-in-the-string-and-return-it" class="headerlink" title="Given a string s, reverse only all the vowels in the string and return it."></a>Given a string s, reverse only all the vowels in the string and return it.</h2><h2 id="The-vowels-are-‘a’-‘e’-‘i’-‘o’-and-‘u’-and-they-can-appear-in-both-cases"><a href="#The-vowels-are-‘a’-‘e’-‘i’-‘o’-and-‘u’-and-they-can-appear-in-both-cases" class="headerlink" title="The vowels are ‘a’, ‘e’, ‘i’, ‘o’, and ‘u’, and they can appear in both cases."></a>The vowels are ‘a’, ‘e’, ‘i’, ‘o’, and ‘u’, and they can appear in both cases.</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;345-Reverse-Vowels-of-a-String&quot;&gt;&lt;a href=&quot;#345-Reverse-Vowels-of-a-String&quot; class=&quot;headerlink&quot; title=&quot;345. Reverse Vowels of a String&quot;</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode two-pointers" scheme="http://example.com/tags/leetcode-two-pointers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>633. Sum of Square Numbers (Medium)</title>
+    <link href="http://example.com/2022/05/28/633-Sum%20of%20Square%20Numbers/"/>
+    <id>http://example.com/2022/05/28/633-Sum%20of%20Square%20Numbers/</id>
+    <published>2022-05-28T23:31:13.000Z</published>
+    <updated>2022-05-28T23:52:35.966Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="633-Sum-of-Square-Numbers"><a href="#633-Sum-of-Square-Numbers" class="headerlink" title="633. Sum of Square Numbers"></a>633. Sum of Square Numbers</h1><h2 id="Given-a-non-negative-integer-c-decide-whether-there’re-two-integers-a-and-b-such-that-a2-b2-c"><a href="#Given-a-non-negative-integer-c-decide-whether-there’re-two-integers-a-and-b-such-that-a2-b2-c" class="headerlink" title="Given a non-negative integer c, decide whether there’re two integers a and b such that a2 + b2 = c."></a>Given a non-negative integer c, decide whether there’re two integers a and b such that a2 + b2 = c.</h2><p>同样是双指针</p><p>本题的关键是右指针的初始化，实现剪枝，从而降低时间复杂度。设右指针为 x，左指针固定为 0，为了使 02 + x2 的值尽可能接近 target，我们可以将 x 取为 sqrt(target)。</p><p>因为最多只需要遍历一次 0~sqrt(target)，所以时间复杂度为 O(sqrt(target))。又因为只使用了两个额外的变量，因此空间复杂度为 O(1)。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">judgeSquareSum</span>(<span class="params">self, c</span>):</span></span><br><span class="line">        l, r = <span class="number">0</span>, <span class="built_in">int</span>(c**<span class="number">0.5</span>)</span><br><span class="line">        <span class="keyword">while</span> l &lt;= r:</span><br><span class="line">            <span class="built_in">sum</span> = l*l+r*r</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">sum</span> &lt; c:</span><br><span class="line">                l +=<span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="built_in">sum</span>&gt;c:</span><br><span class="line">                r -=<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;633-Sum-of-Square-Numbers&quot;&gt;&lt;a href=&quot;#633-Sum-of-Square-Numbers&quot; class=&quot;headerlink&quot; title=&quot;633. Sum of Square Numbers&quot;&gt;&lt;/a&gt;633. Sum o</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode two-pointers" scheme="http://example.com/tags/leetcode-two-pointers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>167. Two Sum II - Input array is sorted (Easy)</title>
+    <link href="http://example.com/2022/05/28/167-twosum-sorted/"/>
+    <id>http://example.com/2022/05/28/167-twosum-sorted/</id>
+    <published>2022-05-28T23:13:37.000Z</published>
+    <updated>2022-05-28T23:51:52.660Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="167-Two-Sum-II-Input-Array-Is-Sorted"><a href="#167-Two-Sum-II-Input-Array-Is-Sorted" class="headerlink" title="167. Two Sum II - Input Array Is Sorted"></a>167. Two Sum II - Input Array Is Sorted</h1><h2 id="Given-a-1-indexed-array-of-integers-numbers-that-is-already-sorted-in-non-decreasing-order-find-two-numbers-such-that-they-add-up-to-a-specific-target-number-Let-these-two-numbers-be-numbers-index1-and-numbers-index2-where-1-lt-index1-lt-index2-lt-numbers-length"><a href="#Given-a-1-indexed-array-of-integers-numbers-that-is-already-sorted-in-non-decreasing-order-find-two-numbers-such-that-they-add-up-to-a-specific-target-number-Let-these-two-numbers-be-numbers-index1-and-numbers-index2-where-1-lt-index1-lt-index2-lt-numbers-length" class="headerlink" title="Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 &lt;= index1 &lt; index2 &lt;= numbers.length."></a>Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 &lt;= index1 &lt; index2 &lt;= numbers.length.</h2><h2 id="Return-the-indices-of-the-two-numbers-index1-and-index2-added-by-one-as-an-integer-array-index1-index2-of-length-2"><a href="#Return-the-indices-of-the-two-numbers-index1-and-index2-added-by-one-as-an-integer-array-index1-index2-of-length-2" class="headerlink" title="Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2."></a>Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.</h2><h2 id="The-tests-are-generated-such-that-there-is-exactly-one-solution-You-may-not-use-the-same-element-twice"><a href="#The-tests-are-generated-such-that-there-is-exactly-one-solution-You-may-not-use-the-same-element-twice" class="headerlink" title="The tests are generated such that there is exactly one solution. You may not use the same element twice."></a>The tests are generated such that there is exactly one solution. You may not use the same element twice.</h2><h2 id="Your-solution-must-use-only-constant-extra-space"><a href="#Your-solution-must-use-only-constant-extra-space" class="headerlink" title="Your solution must use only constant extra space."></a>Your solution must use only constant extra space.</h2><p>和第一题几乎可以用同样的思路，只不过这里的index从1开始，而且有序数组比第一题更简单</p><h3 id="根据第一题改的hashmap"><a href="#根据第一题改的hashmap" class="headerlink" title="根据第一题改的hashmap"></a>根据第一题改的hashmap</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers, target</span>):</span></span><br><span class="line">        Hashmap = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> index, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(numbers):</span><br><span class="line">            key = target - value</span><br><span class="line">            <span class="keyword">if</span> key <span class="keyword">in</span> Hashmap:</span><br><span class="line">                <span class="keyword">return</span> [Hashmap[key]+<span class="number">1</span>, index+<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                Hashmap[value] = index</span><br></pre></td></tr></table></figure><p>Two pointers: O(n) time and O(1) space<br>Dictionary: O(n) time and O(n) space<br>Binary search: O(nlogn) time and O(1) space</p><h3 id="two-pointer"><a href="#two-pointer" class="headerlink" title="two-pointer"></a>two-pointer</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers, target</span>):</span></span><br><span class="line">        l, r = <span class="number">0</span>, <span class="built_in">len</span>(numbers)-<span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> l &lt; r:</span><br><span class="line">            s = numbers[l] + numbers[r]</span><br><span class="line">            <span class="keyword">if</span> s == target:</span><br><span class="line">                <span class="keyword">return</span> [l+<span class="number">1</span>, r+<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">elif</span> s &lt; target:</span><br><span class="line">                l += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                r -= <span class="number">1</span></span><br></pre></td></tr></table></figure><h3 id="dictionary"><a href="#dictionary" class="headerlink" title="dictionary"></a>dictionary</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers, target</span>):</span></span><br><span class="line">        dic = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i, num <span class="keyword">in</span> <span class="built_in">enumerate</span>(numbers):</span><br><span class="line">            <span class="keyword">if</span> target-num <span class="keyword">in</span> dic:</span><br><span class="line">                <span class="keyword">return</span> [dic[target-num]+<span class="number">1</span>, i+<span class="number">1</span>]</span><br><span class="line">            dic[num] = i</span><br><span class="line">```           </span><br><span class="line"></span><br><span class="line"><span class="comment">### binary search        </span></span><br><span class="line">```python</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers, target</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> xrange(<span class="built_in">len</span>(numbers)):</span><br><span class="line">        l, r = i+<span class="number">1</span>, <span class="built_in">len</span>(numbers)-<span class="number">1</span></span><br><span class="line">        tmp = target - numbers[i]</span><br><span class="line">        <span class="keyword">while</span> l &lt;= r:</span><br><span class="line">            mid = l + (r-l)//<span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> numbers[mid] == tmp:</span><br><span class="line">                <span class="keyword">return</span> [i+<span class="number">1</span>, mid+<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">elif</span> numbers[mid] &lt; tmp:</span><br><span class="line">                l = mid+<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                r = mid-<span class="number">1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="binary-search-改进版"><a href="#binary-search-改进版" class="headerlink" title="binary search   改进版"></a>binary search   改进版</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers, target</span>):</span></span><br><span class="line">        investigatedSoFar = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(numbers)):</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> numbers[i] <span class="keyword">in</span> investigatedSoFar:</span><br><span class="line">                investigatedSoFar.append(numbers[i])</span><br><span class="line">                l, r = i + <span class="number">1</span>, <span class="built_in">len</span>(numbers) - <span class="number">1</span></span><br><span class="line">                tmp = target - numbers[i]</span><br><span class="line">                <span class="keyword">while</span> l &lt;= r:</span><br><span class="line">                    mid = l + (r-l) // <span class="number">2</span></span><br><span class="line">                    <span class="keyword">if</span> numbers[mid] == tmp:</span><br><span class="line">                        <span class="keyword">return</span>([i + <span class="number">1</span>, mid + <span class="number">1</span>])</span><br><span class="line">                    <span class="keyword">elif</span> numbers[mid] &lt; tmp:</span><br><span class="line">                        l = mid + <span class="number">1</span></span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        r = mid - <span class="number">1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;167-Two-Sum-II-Input-Array-Is-Sorted&quot;&gt;&lt;a href=&quot;#167-Two-Sum-II-Input-Array-Is-Sorted&quot; class=&quot;headerlink&quot; title=&quot;167. Two Sum II - In</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1. Two Sum</title>
+    <link href="http://example.com/2022/05/28/1-twosum/"/>
+    <id>http://example.com/2022/05/28/1-twosum/</id>
+    <published>2022-05-28T23:07:57.000Z</published>
+    <updated>2022-05-28T23:31:52.634Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-Two-Sum"><a href="#1-Two-Sum" class="headerlink" title="1. Two Sum"></a>1. Two Sum</h1><h2 id="Given-an-array-of-integers-nums-and-an-integer-target-return-indices-of-the-two-numbers-such-that-they-add-up-to-target"><a href="#Given-an-array-of-integers-nums-and-an-integer-target-return-indices-of-the-two-numbers-such-that-they-add-up-to-target" class="headerlink" title="Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target."></a>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</h2><h2 id="You-may-assume-that-each-input-would-have-exactly-one-solution-and-you-may-not-use-the-same-element-twice"><a href="#You-may-assume-that-each-input-would-have-exactly-one-solution-and-you-may-not-use-the-same-element-twice" class="headerlink" title="You may assume that each input would have exactly one solution, and you may not use the same element twice."></a>You may assume that each input would have exactly one solution, and you may not use the same element twice.</h2><h2 id="You-can-return-the-answer-in-any-order"><a href="#You-can-return-the-answer-in-any-order" class="headerlink" title="You can return the answer in any order."></a>You can return the answer in any order.</h2><p>（无序）</p><p>hashmap<br>enumerate()(单词意思是枚举的意思)是python中的内置函数<br>enumerate(X,[start=0])<br>函数中的参数X可以是一个迭代器(iterator)或者是一个序列，start是起始计数值，默认从0开始。X可以是一个字典。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums, target</span>):</span></span><br><span class="line">        Hashmap = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> index, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(nums):</span><br><span class="line">            key = target - value</span><br><span class="line">            <span class="keyword">if</span> key <span class="keyword">in</span> Hashmap:</span><br><span class="line">                <span class="keyword">return</span> [Hashmap[key], index]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                Hashmap[value] = index</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1-Two-Sum&quot;&gt;&lt;a href=&quot;#1-Two-Sum&quot; class=&quot;headerlink&quot; title=&quot;1. Two Sum&quot;&gt;&lt;/a&gt;1. Two Sum&lt;/h1&gt;&lt;h2 id=&quot;Given-an-array-of-integers-nums-and</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode02  双指针</title>
+    <link href="http://example.com/2022/05/25/LeetCode02/"/>
+    <id>http://example.com/2022/05/25/LeetCode02/</id>
+    <published>2022-05-25T20:51:58.000Z</published>
+    <updated>2022-05-28T23:25:59.084Z</updated>
+    
+    <content type="html"><![CDATA[<p>第二篇学习笔记，换一个思路尝试学习</p><h6 id="具体学习链接-Leetcode-题解-目录-md"><a href="#具体学习链接-Leetcode-题解-目录-md" class="headerlink" title="具体学习链接:Leetcode 题解 - 目录.md"></a>具体学习链接:<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E7%9B%AE%E5%BD%95.md">Leetcode 题解 - 目录.md</a></h6><h1 id="Leetcode-题解-双指针"><a href="#Leetcode-题解-双指针" class="headerlink" title="Leetcode 题解 - 双指针"></a>Leetcode 题解 - 双指针</h1><h2 id="1-有序数组的-Two-Sum"><a href="#1-有序数组的-Two-Sum" class="headerlink" title="1. 有序数组的 Two Sum"></a>1. 有序数组的 Two Sum</h2><h2 id="2-两数平方和"><a href="#2-两数平方和" class="headerlink" title="2. 两数平方和"></a>2. 两数平方和</h2><h2 id="3-反转字符串中的元音字符"><a href="#3-反转字符串中的元音字符" class="headerlink" title="3. 反转字符串中的元音字符"></a>3. 反转字符串中的元音字符</h2><h2 id="4-回文字符串"><a href="#4-回文字符串" class="headerlink" title="4. 回文字符串"></a>4. 回文字符串</h2><h2 id="5-归并两个有序数组"><a href="#5-归并两个有序数组" class="headerlink" title="5. 归并两个有序数组"></a>5. 归并两个有序数组</h2><h2 id="6-判断链表是否存在环"><a href="#6-判断链表是否存在环" class="headerlink" title="6. 判断链表是否存在环"></a>6. 判断链表是否存在环</h2><h2 id="7-最长子序列"><a href="#7-最长子序列" class="headerlink" title="7. 最长子序列"></a>7. 最长子序列</h2><h2 id="双指针类型"><a href="#双指针类型" class="headerlink" title="双指针类型"></a>双指针类型</h2><p>对撞指针：两个指针方向相反。适合解决查找有序数组中满足某些约束条件的一组元素问题、字符串反转问题。<br>快慢指针：两个指针方向相同。适合解决数组中的移动、删除元素问题，或者链表中的判断是否有环、长度问题。<br>分离双指针：两个指针分别属于不同的数组 / 链表。适合解决有序数组合并，求交集、并集问题。</p><p>双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。</p><p>对撞指针：两个指针方向相反。适合解决查找有序数组中满足某些约束条件的一组元素问题、字符串反转问题。</p><h2 id="相关题目"><a href="#相关题目" class="headerlink" title="相关题目"></a>相关题目</h2><ol><li><p>Two Sum</p></li><li><p>Two Sum II - Input Array Is Sorted两数之和 II - 输入有序数组 </p></li></ol><ol start="125"><li>验证回文串</li></ol><ol start="344"><li><p>Reverse String</p></li><li><p>Remove Duplicates from Sorted Array</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;第二篇学习笔记，换一个思路尝试学习&lt;/p&gt;
+&lt;h6 id=&quot;具体学习链接-Leetcode-题解-目录-md&quot;&gt;&lt;a href=&quot;#具体学习链接-Leetcode-题解-目录-md&quot; class=&quot;headerlink&quot; title=&quot;具体学习链接:Leetcode 题解 </summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo 新建/启动/部署命令</title>
