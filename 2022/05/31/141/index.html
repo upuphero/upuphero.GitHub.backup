@@ -24,7 +24,7 @@
 
   
 
-  <title>八角书屋</title>
+  <title>141. Linked List Cycle (Easy) | 八角书屋</title>
 
   
 
@@ -48,7 +48,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/DVA鬼刀3440x1440壁纸.6ozhdm4v0us0.webp)"></div>
+    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/Queens_4k.ngfyu20zeww.webp)"></div>
   
 
   <!-- navbar -->
@@ -97,16 +97,24 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap"></h1>
+          <h1 class="title-wrap">141. Linked List Cycle (Easy)</h1>
           <h2 class="title-sub-wrap">
             <strong>leaf</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2022-05-31T22:20:08.142Z" itemprop="datePublished">2022-05-31</time>
+            <time  class="article-date" datetime="2022-05-31T22:20:08.000Z" itemprop="datePublished">2022-05-31</time>
           </h2>
           <ul class="wrap-list dark">
   
+    <li><a href="/categories/study/">📒 study</a></li>
+  
 </ul>
           <ul class="wrap-list dark">
+  
+    <li><a href="/tags/leetcode/">🏷️ leetcode</a></li>
+  
+    <li><a href="/tags/two-pointers/">🏷️ two-pointers</a></li>
+  
+    <li><a href="/tags/Python/">🏷️ Python</a></li>
   
 </ul>
         </div>
@@ -130,9 +138,7 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <hr>
-<p>title: 141. Linked List Cycle (Easy)<br>date: 2022-05-31 18:20:08<br>tags: [ ‘leetcode’, ‘two-pointers’, ‘Python’ ]<br>categories: study<br>cover: <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/upuphero/image-hosting/master/Queens_4k.ngfyu20zeww.webp">https://raw.githubusercontent.com/upuphero/image-hosting/master/Queens_4k.ngfyu20zeww.webp</a></p>
-<h1 id="141-Linked-List-Cycle"><a href="#141-Linked-List-Cycle" class="headerlink" title="141. Linked List Cycle"></a>141. Linked List Cycle</h1><h2 id="Given-head-the-head-of-a-linked-list-determine-if-the-linked-list-has-a-cycle-in-it"><a href="#Given-head-the-head-of-a-linked-list-determine-if-the-linked-list-has-a-cycle-in-it" class="headerlink" title="Given head, the head of a linked list, determine if the linked list has a cycle in it."></a>Given head, the head of a linked list, determine if the linked list has a cycle in it.</h2><h2 id="There-is-a-cycle-in-a-linked-list-if-there-is-some-node-in-the-list-that-can-be-reached-again-by-continuously-following-the-next-pointer-Internally-pos-is-used-to-denote-the-index-of-the-node-that-tail’s-next-pointer-is-connected-to-Note-that-pos-is-not-passed-as-a-parameter"><a href="#There-is-a-cycle-in-a-linked-list-if-there-is-some-node-in-the-list-that-can-be-reached-again-by-continuously-following-the-next-pointer-Internally-pos-is-used-to-denote-the-index-of-the-node-that-tail’s-next-pointer-is-connected-to-Note-that-pos-is-not-passed-as-a-parameter" class="headerlink" title="There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail’s next pointer is connected to. Note that pos is not passed as a parameter."></a>There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail’s next pointer is connected to. Note that pos is not passed as a parameter.</h2><h2 id="Return-true-if-there-is-a-cycle-in-the-linked-list-Otherwise-return-false"><a href="#Return-true-if-there-is-a-cycle-in-the-linked-list-Otherwise-return-false" class="headerlink" title="Return true if there is a cycle in the linked list. Otherwise, return false."></a>Return true if there is a cycle in the linked list. Otherwise, return false.</h2><p>快慢指针</p>
+        <h1 id="141-Linked-List-Cycle"><a href="#141-Linked-List-Cycle" class="headerlink" title="141. Linked List Cycle"></a>141. Linked List Cycle</h1><h2 id="Given-head-the-head-of-a-linked-list-determine-if-the-linked-list-has-a-cycle-in-it"><a href="#Given-head-the-head-of-a-linked-list-determine-if-the-linked-list-has-a-cycle-in-it" class="headerlink" title="Given head, the head of a linked list, determine if the linked list has a cycle in it."></a>Given head, the head of a linked list, determine if the linked list has a cycle in it.</h2><h2 id="There-is-a-cycle-in-a-linked-list-if-there-is-some-node-in-the-list-that-can-be-reached-again-by-continuously-following-the-next-pointer-Internally-pos-is-used-to-denote-the-index-of-the-node-that-tail’s-next-pointer-is-connected-to-Note-that-pos-is-not-passed-as-a-parameter"><a href="#There-is-a-cycle-in-a-linked-list-if-there-is-some-node-in-the-list-that-can-be-reached-again-by-continuously-following-the-next-pointer-Internally-pos-is-used-to-denote-the-index-of-the-node-that-tail’s-next-pointer-is-connected-to-Note-that-pos-is-not-passed-as-a-parameter" class="headerlink" title="There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail’s next pointer is connected to. Note that pos is not passed as a parameter."></a>There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail’s next pointer is connected to. Note that pos is not passed as a parameter.</h2><h2 id="Return-true-if-there-is-a-cycle-in-the-linked-list-Otherwise-return-false"><a href="#Return-true-if-there-is-a-cycle-in-the-linked-list-Otherwise-return-false" class="headerlink" title="Return true if there is a cycle in the linked list. Otherwise, return false."></a>Return true if there is a cycle in the linked list. Otherwise, return false.</h2><p>快慢指针</p>
 <p>官方题解：<br>「Floyd 判圈算法」（又称龟兔赛跑算法）<br>假想「乌龟」和「兔子」在链表上移动，「兔子」跑得快，「乌龟」跑得慢。当「乌龟」和「兔子」从链表上的同一个节点开始移动时，如果该链表中没有环，那么「兔子」将一直处于「乌龟」的前方；如果该链表中有环，那么「兔子」会先于「乌龟」进入环，并且一直在环内移动。等到「乌龟」进入环时，由于「兔子」的速度快，它一定会在某个时刻与乌龟相遇，即套了「乌龟」若干圈。</p>
 <p>我们可以根据上述思路来解决本题。具体地，我们定义两个指针，一快一满。慢指针每次只移动一步，而快指针每次移动两步。初始时，慢指针在位置 head，而快指针在位置 head.next。这样一来，如果在移动的过程中，快指针反过来追上慢指针，就说明该链表为环形链表。否则快指针将到达链表尾部，该链表不为环形链表。</p>
 <p>使用双指针，一个指针每次移动一个节点，一个指针每次移动两个节点，如果存在环，那么这两个指针一定会相遇。</p>
@@ -273,7 +279,7 @@
       
         <li class="categorys-list-item">
           <a href="/categories/study/">
-            study (10)
+            study (11)
           </a>
         </li>
       
