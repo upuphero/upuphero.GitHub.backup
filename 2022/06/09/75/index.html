@@ -24,7 +24,7 @@
 
   
 
-  <title>75 | 八角书屋</title>
+  <title>八角书屋</title>
 
   
 
@@ -48,7 +48,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/2b.17pgyghstz9c.webp)"></div>
+    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/DVA鬼刀3440x1440壁纸.6ozhdm4v0us0.webp)"></div>
   
 
   <!-- navbar -->
@@ -97,26 +97,16 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">75</h1>
+          <h1 class="title-wrap"></h1>
           <h2 class="title-sub-wrap">
             <strong>leaf</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2022-06-10T01:53:10.000Z" itemprop="datePublished">2022-06-09</time>
+            <time  class="article-date" datetime="2022-06-10T01:53:10.945Z" itemprop="datePublished">2022-06-09</time>
           </h2>
           <ul class="wrap-list dark">
   
-    <li><a href="/categories/study/">📒 study</a></li>
-  
 </ul>
           <ul class="wrap-list dark">
-  
-    <li><a href="/tags/leetcode/">🏷️ leetcode</a></li>
-  
-    <li><a href="/tags/Python/">🏷️ Python</a></li>
-  
-    <li><a href="/tags/topk/">🏷️ topk</a></li>
-  
-    <li><a href="/tags/hashmap/">🏷️ hashmap</a></li>
   
 </ul>
         </div>
@@ -140,7 +130,9 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="75-Sort-Colors-Medium"><a href="#75-Sort-Colors-Medium" class="headerlink" title="75. Sort Colors (Medium)"></a>75. Sort Colors (Medium)</h1><h2 id="Given-an-array-nums-with-n-objects-colored-red-white-or-blue-sort-them-in-place-so-that-objects-of-the-same-color-are-adjacent-with-the-colors-in-the-order-red-white-and-blue"><a href="#Given-an-array-nums-with-n-objects-colored-red-white-or-blue-sort-them-in-place-so-that-objects-of-the-same-color-are-adjacent-with-the-colors-in-the-order-red-white-and-blue" class="headerlink" title="Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue."></a>Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.</h2><h2 id="We-will-use-the-integers-0-1-and-2-to-represent-the-color-red-white-and-blue-respectively"><a href="#We-will-use-the-integers-0-1-and-2-to-represent-the-color-red-white-and-blue-respectively" class="headerlink" title="We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively."></a>We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.</h2><h2 id="You-must-solve-this-problem-without-using-the-library’s-sort-function"><a href="#You-must-solve-this-problem-without-using-the-library’s-sort-function" class="headerlink" title="You must solve this problem without using the library’s sort function."></a>You must solve this problem without using the library’s sort function.</h2><h2 id="有三种颜色的球，算法的目标是将这三种球按颜色顺序正确地排列。它其实是三向切分快速排序的一种变种，在三向切分快速排序中，每次切分都将数组分成三个区间：小于切分元素、等于切分元素、大于切分元素，而该算法是将数组分成三个区间：等于红色、等于白色、等于蓝色。"><a href="#有三种颜色的球，算法的目标是将这三种球按颜色顺序正确地排列。它其实是三向切分快速排序的一种变种，在三向切分快速排序中，每次切分都将数组分成三个区间：小于切分元素、等于切分元素、大于切分元素，而该算法是将数组分成三个区间：等于红色、等于白色、等于蓝色。" class="headerlink" title="有三种颜色的球，算法的目标是将这三种球按颜色顺序正确地排列。它其实是三向切分快速排序的一种变种，在三向切分快速排序中，每次切分都将数组分成三个区间：小于切分元素、等于切分元素、大于切分元素，而该算法是将数组分成三个区间：等于红色、等于白色、等于蓝色。"></a>有三种颜色的球，算法的目标是将这三种球按颜色顺序正确地排列。它其实是三向切分快速排序的一种变种，在三向切分快速排序中，每次切分都将数组分成三个区间：小于切分元素、等于切分元素、大于切分元素，而该算法是将数组分成三个区间：等于红色、等于白色、等于蓝色。</h2><p>个人理解就是三指针，跟之前的双指针差不多，和之前不同的是因为有三个区间所以要三个指针<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1624933#:~:text=%E8%8D%B7%E5%85%B0%E5%9B%BD%E6%97%97%E9%97%AE%E9%A2%98%EF%BC%9A%E7%8E%B0%E5%9C%A8%E6%9C%89,%E5%90%8E%E6%AD%A3%E5%A5%BD%E7%BB%84%E6%88%90%E8%8D%B7%E5%85%B0%E5%9B%BD%E6%97%97%E3%80%82&text=%E8%BF%99%E9%81%93%E9%A2%98%E5%BE%88%E7%BB%8F%E5%85%B8%EF%BC%8C%E5%BE%88%E9%AB%98%E9%A2%91%E3%80%82">荷兰国旗问题参考</a></p>
+        <hr>
+<p>title: 75<br>date: 2022-06-09 21:53:10<br>tags: [ ‘leetcode’, ‘hashmap’, ‘Python’,’topk’ ]<br>categories: study<br>cover: <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/upuphero/image-hosting/master/6.1kdk0yqdvfcw.webp">https://raw.githubusercontent.com/upuphero/image-hosting/master/6.1kdk0yqdvfcw.webp</a></p>
+<h1 id="75-Sort-Colors-Medium"><a href="#75-Sort-Colors-Medium" class="headerlink" title="75. Sort Colors (Medium)"></a>75. Sort Colors (Medium)</h1><h2 id="Given-an-array-nums-with-n-objects-colored-red-white-or-blue-sort-them-in-place-so-that-objects-of-the-same-color-are-adjacent-with-the-colors-in-the-order-red-white-and-blue"><a href="#Given-an-array-nums-with-n-objects-colored-red-white-or-blue-sort-them-in-place-so-that-objects-of-the-same-color-are-adjacent-with-the-colors-in-the-order-red-white-and-blue" class="headerlink" title="Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue."></a>Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.</h2><h2 id="We-will-use-the-integers-0-1-and-2-to-represent-the-color-red-white-and-blue-respectively"><a href="#We-will-use-the-integers-0-1-and-2-to-represent-the-color-red-white-and-blue-respectively" class="headerlink" title="We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively."></a>We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.</h2><h2 id="You-must-solve-this-problem-without-using-the-library’s-sort-function"><a href="#You-must-solve-this-problem-without-using-the-library’s-sort-function" class="headerlink" title="You must solve this problem without using the library’s sort function."></a>You must solve this problem without using the library’s sort function.</h2><h2 id="有三种颜色的球，算法的目标是将这三种球按颜色顺序正确地排列。它其实是三向切分快速排序的一种变种，在三向切分快速排序中，每次切分都将数组分成三个区间：小于切分元素、等于切分元素、大于切分元素，而该算法是将数组分成三个区间：等于红色、等于白色、等于蓝色。"><a href="#有三种颜色的球，算法的目标是将这三种球按颜色顺序正确地排列。它其实是三向切分快速排序的一种变种，在三向切分快速排序中，每次切分都将数组分成三个区间：小于切分元素、等于切分元素、大于切分元素，而该算法是将数组分成三个区间：等于红色、等于白色、等于蓝色。" class="headerlink" title="有三种颜色的球，算法的目标是将这三种球按颜色顺序正确地排列。它其实是三向切分快速排序的一种变种，在三向切分快速排序中，每次切分都将数组分成三个区间：小于切分元素、等于切分元素、大于切分元素，而该算法是将数组分成三个区间：等于红色、等于白色、等于蓝色。"></a>有三种颜色的球，算法的目标是将这三种球按颜色顺序正确地排列。它其实是三向切分快速排序的一种变种，在三向切分快速排序中，每次切分都将数组分成三个区间：小于切分元素、等于切分元素、大于切分元素，而该算法是将数组分成三个区间：等于红色、等于白色、等于蓝色。</h2><p>个人理解就是三指针，跟之前的双指针差不多，和之前不同的是因为有三个区间所以要三个指针<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1624933#:~:text=%E8%8D%B7%E5%85%B0%E5%9B%BD%E6%97%97%E9%97%AE%E9%A2%98%EF%BC%9A%E7%8E%B0%E5%9C%A8%E6%9C%89,%E5%90%8E%E6%AD%A3%E5%A5%BD%E7%BB%84%E6%88%90%E8%8D%B7%E5%85%B0%E5%9B%BD%E6%97%97%E3%80%82&text=%E8%BF%99%E9%81%93%E9%A2%98%E5%BE%88%E7%BB%8F%E5%85%B8%EF%BC%8C%E5%BE%88%E9%AB%98%E9%A2%91%E3%80%82">荷兰国旗问题参考</a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortColors</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="literal">None</span>:</span></span><br><span class="line">        a = c = <span class="number">0</span></span><br><span class="line">        b = <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> c &lt;= b:</span><br><span class="line">            <span class="keyword">if</span> nums[c] == <span class="number">0</span>:</span><br><span class="line">                nums[a], nums[c] = nums[c], nums[a]</span><br><span class="line">                a += <span class="number">1</span></span><br><span class="line">                c += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums[c] == <span class="number">2</span>:</span><br><span class="line">                nums[c], nums[b] = nums[b], nums[c]</span><br><span class="line">                b -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                c += <span class="number">1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
       </section>
 
@@ -151,7 +143,7 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://raw.githubusercontent.com/upuphero/image-hosting/master/19.3fp1tvrxliu0.webp"></div>
+      <div class="card-cover" background-image-lazy data-img="https://raw.githubusercontent.com/upuphero/image-hosting/master/yuna.4n8w5jxstok0.webp"></div>
     
     <div class="card-text">
       
@@ -168,7 +160,7 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://raw.githubusercontent.com/upuphero/image-hosting/master/2b.17pgyghstz9c.webp"></div>
+      <div class="card-cover" background-image-lazy data-img="https://raw.githubusercontent.com/upuphero/image-hosting/master/37.6i7oov5vcx80.webp"></div>
     
     <div class="card-text">
       
@@ -267,7 +259,7 @@
       
         <li class="categorys-list-item">
           <a href="/categories/study/">
-            study (17)
+            study (16)
           </a>
         </li>
       
@@ -284,7 +276,7 @@
   </div>
   <div class="widget-body">
     <div class="tags-cloud">
-      <a href="/tags/Heap-Sort/" style="font-size: 10px;" class="tags-cloud-0">Heap Sort</a> <a href="/tags/Python/" style="font-size: 18.33px;" class="tags-cloud-8">Python</a> <a href="/tags/Quick-Sort/" style="font-size: 11.67px;" class="tags-cloud-2">Quick Sort</a> <a href="/tags/game/" style="font-size: 11.67px;" class="tags-cloud-2">game</a> <a href="/tags/hashmap/" style="font-size: 13.33px;" class="tags-cloud-3">hashmap</a> <a href="/tags/leetcode/" style="font-size: 20px;" class="tags-cloud-10">leetcode</a> <a href="/tags/life/" style="font-size: 10px;" class="tags-cloud-0">life</a> <a href="/tags/list/" style="font-size: 10px;" class="tags-cloud-0">list</a> <a href="/tags/schedule/" style="font-size: 10px;" class="tags-cloud-0">schedule</a> <a href="/tags/skills/" style="font-size: 10px;" class="tags-cloud-0">skills</a> <a href="/tags/topk/" style="font-size: 15px;" class="tags-cloud-5">topk</a> <a href="/tags/two-pointers/" style="font-size: 16.67px;" class="tags-cloud-7">two-pointers</a>
+      <a href="/tags/Heap-Sort/" style="font-size: 10px;" class="tags-cloud-0">Heap Sort</a> <a href="/tags/Python/" style="font-size: 18px;" class="tags-cloud-8">Python</a> <a href="/tags/Quick-Sort/" style="font-size: 12px;" class="tags-cloud-2">Quick Sort</a> <a href="/tags/game/" style="font-size: 12px;" class="tags-cloud-2">game</a> <a href="/tags/hashmap/" style="font-size: 12px;" class="tags-cloud-2">hashmap</a> <a href="/tags/leetcode/" style="font-size: 20px;" class="tags-cloud-10">leetcode</a> <a href="/tags/life/" style="font-size: 10px;" class="tags-cloud-0">life</a> <a href="/tags/list/" style="font-size: 10px;" class="tags-cloud-0">list</a> <a href="/tags/schedule/" style="font-size: 10px;" class="tags-cloud-0">schedule</a> <a href="/tags/skills/" style="font-size: 10px;" class="tags-cloud-0">skills</a> <a href="/tags/topk/" style="font-size: 14px;" class="tags-cloud-4">topk</a> <a href="/tags/two-pointers/" style="font-size: 16px;" class="tags-cloud-6">two-pointers</a>
     </div>
   </div>
 </section>
