@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>435</title>
+      <title>435. Non-overlapping Intervals (Medium)</title>
       <link href="/2022/06/09/435/"/>
       <url>/2022/06/09/435/</url>
       
@@ -22,10 +22,6 @@
             
             <tag> leetcode </tag>
             
-            <tag> Quick Sort </tag>
-            
-            <tag> topk </tag>
-            
             <tag> greedy algorithm </tag>
             
         </tags>
@@ -35,7 +31,7 @@
     
     
     <entry>
-      <title>45</title>
+      <title>455.Assign Cookies (Easy)</title>
       <link href="/2022/06/09/455/"/>
       <url>/2022/06/09/455/</url>
       
@@ -52,10 +48,6 @@
         <tags>
             
             <tag> leetcode </tag>
-            
-            <tag> Quick Sort </tag>
-            
-            <tag> topk </tag>
             
             <tag> greedy algorithm </tag>
             
