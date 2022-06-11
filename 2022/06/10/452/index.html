@@ -24,7 +24,7 @@
 
   
 
-  <title>452 | 八角书屋</title>
+  <title>452. Minimum Number of Arrows to Burst Balloons (Medium) | 八角书屋</title>
 
   
 
@@ -48,7 +48,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/DVA鬼刀3440x1440壁纸.6ozhdm4v0us0.webp)"></div>
+    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/violet.ks1pa57aggw.webp)"></div>
   
 
   <!-- navbar -->
@@ -97,7 +97,7 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">452</h1>
+          <h1 class="title-wrap">452. Minimum Number of Arrows to Burst Balloons (Medium)</h1>
           <h2 class="title-sub-wrap">
             <strong>leaf</strong>
             <span>发布于</span>
@@ -105,8 +105,14 @@
           </h2>
           <ul class="wrap-list dark">
   
+    <li><a href="/categories/study/">📒 study</a></li>
+  
 </ul>
           <ul class="wrap-list dark">
+  
+    <li><a href="/tags/leetcode/">🏷️ leetcode</a></li>
+  
+    <li><a href="/tags/greedy-algorithm/">🏷️ greedy algorithm</a></li>
   
 </ul>
         </div>
@@ -130,7 +136,18 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        
+        <h1 id="452-Minimum-Number-of-Arrows-to-Burst-Balloons-Medium"><a href="#452-Minimum-Number-of-Arrows-to-Burst-Balloons-Medium" class="headerlink" title="452. Minimum Number of Arrows to Burst Balloons (Medium)"></a>452. Minimum Number of Arrows to Burst Balloons (Medium)</h1><h2 id="There-are-some-spherical-balloons-taped-onto-a-flat-wall-that-represents-the-XY-plane-The-balloons-are-represented-as-a-2D-integer-array-points-where-points-i-xstart-xend-denotes-a-balloon-whose-horizontal-diameter-stretches-between-xstart-and-xend-You-do-not-know-the-exact-y-coordinates-of-the-balloons"><a href="#There-are-some-spherical-balloons-taped-onto-a-flat-wall-that-represents-the-XY-plane-The-balloons-are-represented-as-a-2D-integer-array-points-where-points-i-xstart-xend-denotes-a-balloon-whose-horizontal-diameter-stretches-between-xstart-and-xend-You-do-not-know-the-exact-y-coordinates-of-the-balloons" class="headerlink" title="There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons."></a>There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.</h2><h2 id="Arrows-can-be-shot-up-directly-vertically-in-the-positive-y-direction-from-different-points-along-the-x-axis-A-balloon-with-xstart-and-xend-is-burst-by-an-arrow-shot-at-x-if-xstart-lt-x-lt-xend-There-is-no-limit-to-the-number-of-arrows-that-can-be-shot-A-shot-arrow-keeps-traveling-up-infinitely-bursting-any-balloons-in-its-path"><a href="#Arrows-can-be-shot-up-directly-vertically-in-the-positive-y-direction-from-different-points-along-the-x-axis-A-balloon-with-xstart-and-xend-is-burst-by-an-arrow-shot-at-x-if-xstart-lt-x-lt-xend-There-is-no-limit-to-the-number-of-arrows-that-can-be-shot-A-shot-arrow-keeps-traveling-up-infinitely-bursting-any-balloons-in-its-path" class="headerlink" title="Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;= x &lt;= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path."></a>Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;= x &lt;= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path.</h2><h2 id="Given-the-array-points-return-the-minimum-number-of-arrows-that-must-be-shot-to-burst-all-balloons"><a href="#Given-the-array-points-return-the-minimum-number-of-arrows-that-must-be-shot-to-burst-all-balloons" class="headerlink" title="Given the array points, return the minimum number of arrows that must be shot to burst all balloons."></a>Given the array points, return the minimum number of arrows that must be shot to burst all balloons.</h2><p>题目描述：气球在一个水平数轴上摆放，可以重叠，飞镖垂直投向坐标轴，使得路径上的气球都被刺破。求解最小的投飞镖次数使所有气球都被刺破。</p>
+<p>也是计算不重叠的区间个数，不过和 Non-overlapping points 的区别在于，[1, 2] 和 [2, 3] 在本题中算是重叠区间。</p>
+<p><img src="https://assets.leetcode-cn.com/solution-static/452/1.png" alt="射箭"></p>
+<p>Example</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">[[10,16], [2,8], [1,6], [7,12]]</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<h2 id="排序-贪心"><a href="#排序-贪心" class="headerlink" title="排序 + 贪心"></a>排序 + 贪心</h2><p>这道题和 435. Non-overlapping Intervals (Medium) 有些类似，都是寻找重合区间</p>
+<p>贪心：<br>既然每个气球都需要被引爆，那么在满足引爆对箭限制最大的那个气球（因为它一定要被引爆，而箭和其它同时被引爆的气球 都可以迁就它，所以满足它是必须的） 的同时，引爆尽可能多其他的气球。</p>
+<p>在付出不变的的前提下，获得尽可能多。</p>
+<p>简单来说就是先按照区间最右边从小到大排序，为了尽可能的多引爆气球，第一支箭射在第一个区间的最右边，根据后面区间的左端点判断一共引爆了哪些区间，并从剩下未被引爆的气球中，再选择右边界位置最靠左的那一个，确定下一支箭，直到所有的气球都被引爆。</p>
+<p>有个问题是这 nn 个气球对应的区间互不重叠，while 循环需要执行 n 次。所以当遇到x(j) ≤ y(i)时 我们可以直接跳出循环，y(j)就是下一个箭的位置。</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/solution/yong-zui-shao-shu-liang-de-jian-yin-bao-qi-qiu-1-2/">官方题解</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMinArrowShots</span>(<span class="params">self, points: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> points:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>        </span><br><span class="line">        points.sort(key=<span class="keyword">lambda</span> balloon: balloon[<span class="number">1</span>])</span><br><span class="line">        pos = points[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">        ans = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> balloon <span class="keyword">in</span> points:</span><br><span class="line">            <span class="keyword">if</span> balloon[<span class="number">0</span>] &gt; pos:</span><br><span class="line">                pos = balloon[<span class="number">1</span>]</span><br><span class="line">                ans += <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
       </section>
 
       
@@ -240,7 +257,7 @@
       
         <li class="categorys-list-item">
           <a href="/categories/study/">
-            study (19)
+            study (20)
           </a>
         </li>
       
@@ -257,7 +274,7 @@
   </div>
   <div class="widget-body">
     <div class="tags-cloud">
-      <a href="/tags/Heap-Sort/" style="font-size: 10px;" class="tags-cloud-0">Heap Sort</a> <a href="/tags/Python/" style="font-size: 18.33px;" class="tags-cloud-8">Python</a> <a href="/tags/Quick-Sort/" style="font-size: 11.67px;" class="tags-cloud-2">Quick Sort</a> <a href="/tags/game/" style="font-size: 11.67px;" class="tags-cloud-2">game</a> <a href="/tags/greedy-algorithm/" style="font-size: 11.67px;" class="tags-cloud-2">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 13.33px;" class="tags-cloud-3">hashmap</a> <a href="/tags/leetcode/" style="font-size: 20px;" class="tags-cloud-10">leetcode</a> <a href="/tags/life/" style="font-size: 10px;" class="tags-cloud-0">life</a> <a href="/tags/list/" style="font-size: 10px;" class="tags-cloud-0">list</a> <a href="/tags/schedule/" style="font-size: 10px;" class="tags-cloud-0">schedule</a> <a href="/tags/skills/" style="font-size: 10px;" class="tags-cloud-0">skills</a> <a href="/tags/topk/" style="font-size: 15px;" class="tags-cloud-5">topk</a> <a href="/tags/two-pointers/" style="font-size: 16.67px;" class="tags-cloud-7">two-pointers</a>
+      <a href="/tags/Heap-Sort/" style="font-size: 10px;" class="tags-cloud-0">Heap Sort</a> <a href="/tags/Python/" style="font-size: 18.33px;" class="tags-cloud-8">Python</a> <a href="/tags/Quick-Sort/" style="font-size: 11.67px;" class="tags-cloud-2">Quick Sort</a> <a href="/tags/game/" style="font-size: 11.67px;" class="tags-cloud-2">game</a> <a href="/tags/greedy-algorithm/" style="font-size: 13.33px;" class="tags-cloud-3">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 13.33px;" class="tags-cloud-3">hashmap</a> <a href="/tags/leetcode/" style="font-size: 20px;" class="tags-cloud-10">leetcode</a> <a href="/tags/life/" style="font-size: 10px;" class="tags-cloud-0">life</a> <a href="/tags/list/" style="font-size: 10px;" class="tags-cloud-0">list</a> <a href="/tags/schedule/" style="font-size: 10px;" class="tags-cloud-0">schedule</a> <a href="/tags/skills/" style="font-size: 10px;" class="tags-cloud-0">skills</a> <a href="/tags/topk/" style="font-size: 15px;" class="tags-cloud-5">topk</a> <a href="/tags/two-pointers/" style="font-size: 16.67px;" class="tags-cloud-7">two-pointers</a>
     </div>
   </div>
 </section>
