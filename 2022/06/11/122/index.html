@@ -24,7 +24,7 @@
 
   
 
-  <title>75. Sort Colors (Medium) | 八角书屋</title>
+  <title>122 | 八角书屋</title>
 
   
 
@@ -48,7 +48,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/6.1kdk0yqdvfcw.webp)"></div>
+    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/violet.ks1pa57aggw.webp)"></div>
   
 
   <!-- navbar -->
@@ -97,11 +97,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">75. Sort Colors (Medium)</h1>
+          <h1 class="title-wrap">122</h1>
           <h2 class="title-sub-wrap">
             <strong>leaf</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2022-06-10T01:53:10.000Z" itemprop="datePublished">2022-06-09</time>
+            <time  class="article-date" datetime="2022-06-12T01:33:44.000Z" itemprop="datePublished">2022-06-11</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -112,11 +112,9 @@
   
     <li><a href="/tags/leetcode/">🏷️ leetcode</a></li>
   
-    <li><a href="/tags/Python/">🏷️ Python</a></li>
+    <li><a href="/tags/greedy-algorithm/">🏷️ greedy algorithm</a></li>
   
-    <li><a href="/tags/topk/">🏷️ topk</a></li>
-  
-    <li><a href="/tags/hashmap/">🏷️ hashmap</a></li>
+    <li><a href="/tags/Dynamic-Programming/">🏷️ Dynamic Programming</a></li>
   
 </ul>
         </div>
@@ -140,8 +138,15 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="75-Sort-Colors-Medium"><a href="#75-Sort-Colors-Medium" class="headerlink" title="75. Sort Colors (Medium)"></a>75. Sort Colors (Medium)</h1><h2 id="Given-an-array-nums-with-n-objects-colored-red-white-or-blue-sort-them-in-place-so-that-objects-of-the-same-color-are-adjacent-with-the-colors-in-the-order-red-white-and-blue"><a href="#Given-an-array-nums-with-n-objects-colored-red-white-or-blue-sort-them-in-place-so-that-objects-of-the-same-color-are-adjacent-with-the-colors-in-the-order-red-white-and-blue" class="headerlink" title="Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue."></a>Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.</h2><h2 id="We-will-use-the-integers-0-1-and-2-to-represent-the-color-red-white-and-blue-respectively"><a href="#We-will-use-the-integers-0-1-and-2-to-represent-the-color-red-white-and-blue-respectively" class="headerlink" title="We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively."></a>We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.</h2><h2 id="You-must-solve-this-problem-without-using-the-library’s-sort-function"><a href="#You-must-solve-this-problem-without-using-the-library’s-sort-function" class="headerlink" title="You must solve this problem without using the library’s sort function."></a>You must solve this problem without using the library’s sort function.</h2><h2 id="有三种颜色的球，算法的目标是将这三种球按颜色顺序正确地排列。它其实是三向切分快速排序的一种变种，在三向切分快速排序中，每次切分都将数组分成三个区间：小于切分元素、等于切分元素、大于切分元素，而该算法是将数组分成三个区间：等于红色、等于白色、等于蓝色。"><a href="#有三种颜色的球，算法的目标是将这三种球按颜色顺序正确地排列。它其实是三向切分快速排序的一种变种，在三向切分快速排序中，每次切分都将数组分成三个区间：小于切分元素、等于切分元素、大于切分元素，而该算法是将数组分成三个区间：等于红色、等于白色、等于蓝色。" class="headerlink" title="有三种颜色的球，算法的目标是将这三种球按颜色顺序正确地排列。它其实是三向切分快速排序的一种变种，在三向切分快速排序中，每次切分都将数组分成三个区间：小于切分元素、等于切分元素、大于切分元素，而该算法是将数组分成三个区间：等于红色、等于白色、等于蓝色。"></a>有三种颜色的球，算法的目标是将这三种球按颜色顺序正确地排列。它其实是三向切分快速排序的一种变种，在三向切分快速排序中，每次切分都将数组分成三个区间：小于切分元素、等于切分元素、大于切分元素，而该算法是将数组分成三个区间：等于红色、等于白色、等于蓝色。</h2><p>个人理解就是三指针，跟之前的双指针差不多，和之前不同的是因为有三个区间所以要三个指针<br><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1624933#:~:text=%E8%8D%B7%E5%85%B0%E5%9B%BD%E6%97%97%E9%97%AE%E9%A2%98%EF%BC%9A%E7%8E%B0%E5%9C%A8%E6%9C%89,%E5%90%8E%E6%AD%A3%E5%A5%BD%E7%BB%84%E6%88%90%E8%8D%B7%E5%85%B0%E5%9B%BD%E6%97%97%E3%80%82&text=%E8%BF%99%E9%81%93%E9%A2%98%E5%BE%88%E7%BB%8F%E5%85%B8%EF%BC%8C%E5%BE%88%E9%AB%98%E9%A2%91%E3%80%82">荷兰国旗问题参考</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortColors</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="literal">None</span>:</span></span><br><span class="line">        a = c = <span class="number">0</span></span><br><span class="line">        b = <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> c &lt;= b:</span><br><span class="line">            <span class="keyword">if</span> nums[c] == <span class="number">0</span>:</span><br><span class="line">                nums[a], nums[c] = nums[c], nums[a]</span><br><span class="line">                a += <span class="number">1</span></span><br><span class="line">                c += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums[c] == <span class="number">2</span>:</span><br><span class="line">                nums[c], nums[b] = nums[b], nums[c]</span><br><span class="line">                b -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                c += <span class="number">1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h1 id="122-Best-Time-to-Buy-and-Sell-Stock-II-Easy"><a href="#122-Best-Time-to-Buy-and-Sell-Stock-II-Easy" class="headerlink" title="122. Best Time to Buy and Sell Stock II (Easy)"></a>122. Best Time to Buy and Sell Stock II (Easy)</h1><h2 id="You-are-given-an-integer-array-prices-where-prices-i-is-the-price-of-a-given-stock-on-the-ith-day"><a href="#You-are-given-an-integer-array-prices-where-prices-i-is-the-price-of-a-given-stock-on-the-ith-day" class="headerlink" title="You are given an integer array prices where prices[i] is the price of a given stock on the ith day."></a>You are given an integer array prices where prices[i] is the price of a given stock on the ith day.</h2><h2 id="On-each-day-you-may-decide-to-buy-and-or-sell-the-stock-You-can-only-hold-at-most-one-share-of-the-stock-at-any-time-However-you-can-buy-it-then-immediately-sell-it-on-the-same-day"><a href="#On-each-day-you-may-decide-to-buy-and-or-sell-the-stock-You-can-only-hold-at-most-one-share-of-the-stock-at-any-time-However-you-can-buy-it-then-immediately-sell-it-on-the-same-day" class="headerlink" title="On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any time. However, you can buy it then immediately sell it on the same day."></a>On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any time. However, you can buy it then immediately sell it on the same day.</h2><h2 id="Find-and-return-the-maximum-profit-you-can-achieve"><a href="#Find-and-return-the-maximum-profit-you-can-achieve" class="headerlink" title="Find and return the maximum profit you can achieve."></a>Find and return the maximum profit you can achieve.</h2><p>卖股票第二弹</p>
+<p>卖股票一共六题，分别是<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/">122</a>,<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/">123</a>,<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/">188</a>,<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309</a>,<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">714</a></p>
+<p>给你一个整数数组 prices ，其中 prices[i] 表示某支股票第 i 天的价格。</p>
+<p>在每一天，你可以决定是否购买和/或出售股票。你在任何时候 最多 只能持有 一股 股票。你也可以先购买，然后在 同一天 出售。</p>
+<p>返回 你能获得的 最大利润 。</p>
+<p>这一题一样是可以用贪心算法或者动态规划写的，但是我在<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/solution/mai-mai-gu-piao-de-zui-jia-shi-ji-ii-by-leetcode-s/658886">官方题解评论区</a>发现一个极其简单的小技巧。在本题中买卖都是无限次的，所以只要把盈利（也就是上升段）全部加在一起就可以了，相当于每隔一天算一次盈利，盈利为正算在总利润里，盈利为负就丢掉。</p>
+<p>简单来说就是只要把所有的盈利加在一起。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxProfit</span>(<span class="params">self, prices: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        i = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(prices)):</span><br><span class="line">            <span class="keyword">if</span> prices[i]-prices[i-<span class="number">1</span>]&gt;<span class="number">0</span>:</span><br><span class="line">                res += prices[i]-prices[i-<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
       </section>
 
       
@@ -151,12 +156,10 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://raw.githubusercontent.com/upuphero/image-hosting/master/yuna.4n8w5jxstok0.webp"></div>
-    
     <div class="card-text">
       
-        <a href="/2022/06/09/LeetCode04/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">LeetCode04贪心思想</h2>
+        <a href="/2022/06/11/123/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">123</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -168,12 +171,12 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://raw.githubusercontent.com/upuphero/image-hosting/master/37.6i7oov5vcx80.webp"></div>
+      <div class="card-cover" background-image-lazy data-img="https://raw.githubusercontent.com/upuphero/image-hosting/master/violet.ks1pa57aggw.webp"></div>
     
     <div class="card-text">
       
-        <a href="/2022/06/09/451/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">451. Sort Characters By Frequency (Medium)</h2>
+        <a href="/2022/06/11/121/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">121</h2>
         </a>
       
       <div class="card-text--row">Older</div>
