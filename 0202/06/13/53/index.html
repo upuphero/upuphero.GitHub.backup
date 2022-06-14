@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 5.4.0">
+
+  
+    <meta name="description" content="所求皆如愿，所行化坦途">
+  
+
+  
+
+  
+    <meta name="author" content="leaf">
+  
+
+  
+
+  
+
+  <title>53. Maximum Subarray (Easy) | 八角书屋</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/tree.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@1.1.3/index.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/monokai.css">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="alternate" href="/atom.xml" title="八角书屋" type="application/atom+xml">
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/lightning.1zugvg1y2ao.webp)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          八角书屋
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">关于</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">53. Maximum Subarray (Easy)</h1>
+          <h2 class="title-sub-wrap">
+            <strong>leaf</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="0202-06-14T04:09:58.000Z" itemprop="datePublished">0202-06-13</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/study/">📒 study</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/leetcode/">🏷️ leetcode</a></li>
+  
+    <li><a href="/tags/greedy-algorithm/">🏷️ greedy algorithm</a></li>
+  
+    <li><a href="/tags/Dynamic-Programming/">🏷️ Dynamic Programming</a></li>
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="53-Maximum-Subarray-Easy"><a href="#53-Maximum-Subarray-Easy" class="headerlink" title="53. Maximum Subarray (Easy)"></a>53. Maximum Subarray (Easy)</h1><h2 id="Given-an-integer-array-nums-find-the-contiguous-subarray-containing-at-least-one-number-which-has-the-largest-sum-and-return-its-sum"><a href="#Given-an-integer-array-nums-find-the-contiguous-subarray-containing-at-least-one-number-which-has-the-largest-sum-and-return-its-sum" class="headerlink" title="Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum."></a>Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.</h2><h1 id="A-subarray-is-a-contiguous-part-of-an-array"><a href="#A-subarray-is-a-contiguous-part-of-an-array" class="headerlink" title="A subarray is a contiguous part of an array."></a>A subarray is a contiguous part of an array.</h1><p>Example:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [-2,1,-3,4,-1,2,1,-5,4]</span><br><span class="line">Output: 6</span><br><span class="line">Explanation: [4,-1,2,1] has the largest sum = 6.</span><br></pre></td></tr></table></figure>
+
+<p>这题第一眼非常像买股票第一弹</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxProfit</span>(<span class="params">self, prices: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        minprice = <span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>) <span class="comment">#float(&#x27;inf&#x27;)表示正无穷大</span></span><br><span class="line">        maxprofit = <span class="number">0</span> <span class="comment">#保存当前最大的利润</span></span><br><span class="line">        <span class="keyword">for</span> price <span class="keyword">in</span> prices: <span class="comment">#一次遍历</span></span><br><span class="line">            maxprofit = <span class="built_in">max</span>(price - minprice, maxprofit)<span class="comment">#当前利润与最大的利润相比</span></span><br><span class="line">            minprice = <span class="built_in">min</span>(price, minprice) <span class="comment">#保存当前最小的价格</span></span><br><span class="line">        <span class="keyword">return</span> maxprofit</span><br></pre></td></tr></table></figure>
+<h2 id="本质上是动态规划问题："><a href="#本质上是动态规划问题：" class="headerlink" title="本质上是动态规划问题："></a>本质上是动态规划问题：</h2><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-subarray/solution/dong-tai-gui-hua-fen-zhi-fa-python-dai-ma-java-dai/">leetcode题解</a></p>
+<p>方法一：动态规划<br>「力扣」第 53 题（最大子序和）是「力扣」第 124 题（二叉树的最大路径和）的线性版本，它们的状态设计思想和状态转移是类似的，希望大家能够通过本题题解进一步体会状态是如何想到的（即子问题的定义需要从哪些方面考虑）。</p>
+<p>本题接的重点在「关键 1：理解题意」和「关键 2：如何定义子问题（如何定义状态）」和「最后再谈谈「无后效性」。</p>
+<h2 id="关键-1：理解题意"><a href="#关键-1：理解题意" class="headerlink" title="关键 1：理解题意"></a>关键 1：理解题意</h2><p>题目要我们找出和最大的连续子数组的值是多少，「连续」是关键字，连续很重要，不是子序列。</p>
+<p>题目只要求返回结果，不要求得到最大的连续子数组是哪一个。这样的问题通常可以使用「动态规划」解决。</p>
+<h2 id="关键-2：如何定义子问题（如何定义状态）"><a href="#关键-2：如何定义子问题（如何定义状态）" class="headerlink" title="关键 2：如何定义子问题（如何定义状态）"></a>关键 2：如何定义子问题（如何定义状态）</h2><p>设计状态思路：把不确定的因素确定下来，进而把子问题定义清楚，把子问题定义得简单。动态规划的思想通过解决了一个一个简单的问题，进而把简单的问题的解组成了复杂的问题的解。</p>
+<p>友情提示：上面这句话大家姑且这么一看，脑子里有个印象，没有那么绝对。可能不同的人看会有不同的理解。如果我以后讲解的动态规划的设计思想与这里讲解的「设计状态思路」不一样的，我会再和大家说明。如果讲解有误导的地方，还请大家指出。，</p>
+<p>我们 不知道和最大的连续子数组一定会选哪一个数，那么我们可以求出 所有 经过输入数组的某一个数的连续子数组的最大和。</p>
+<p>例如，示例 1 输入数组是 [-2,1,-3,4,-1,2,1,-5,4] ，我们可以求出以下子问题：</p>
+<p>子问题 1：经过 -2 的连续子数组的最大和是多少；<br>子问题 2：经过 1 的连续子数组的最大和是多少；<br>子问题 3：经过 -3 的连续子数组的最大和是多少；<br>子问题 4：经过 4 的连续子数组的最大和是多少；<br>子问题 5：经过 -1 的连续子数组的最大和是多少；<br>子问题 6：经过 2 的连续子数组的最大和是多少；<br>子问题 7：经过 1 的连续子数组的最大和是多少；<br>子问题 8：经过 -5 的连续子数组的最大和是多少；<br>子问题 9：经过 4 的连续子数组的最大和是多少。<br>一共 9 个子问题，这些子问题之间的联系并没有那么好看出来，这是因为子问题的描述还有不确定的地方（这件事情叫做「有后效性」，我们在本文的最后会讲解什么是「无后效性」）。</p>
+<p>例如「子问题 3」：经过 -3 的连续子数组的最大和是多少。</p>
+<p>「经过 -3 的连续子数组」我们任意举出几个：</p>
+<p>[-2,1,-3,4] ，-3 是这个连续子数组的第 3 个元素；<br>[1,-3,4,-1] ，-3 是这个连续子数组的第 2 个元素；<br>……<br>我们不确定的是：-3 是连续子数组的第几个元素。那么我们就把 -3 定义成连续子数组的最后一个元素。在新的定义下，我们列出子问题如下：</p>
+<p>子问题 1：以 -2 结尾的连续子数组的最大和是多少；<br>子问题 2：以 1 结尾的连续子数组的最大和是多少；<br>子问题 3：以 -3 结尾的连续子数组的最大和是多少；<br>子问题 4：以 4 结尾的连续子数组的最大和是多少；<br>子问题 5：以 -1 结尾的连续子数组的最大和是多少；<br>子问题 6：以 2 结尾的连续子数组的最大和是多少；<br>子问题 7：以 1 结尾的连续子数组的最大和是多少；<br>子问题 8：以 -5 结尾的连续子数组的最大和是多少；<br>子问题 9：以 4 结尾的连续子数组的最大和是多少。<br>我们加上了「结尾的」，这些子问题之间就有了联系。我们单独看子问题 1 和子问题 2：</p>
+<p>子问题 1：以 -2 结尾的连续子数组的最大和是多少；<br>以 -2 结尾的连续子数组是 [-2]，因此最大和就是 -2。</p>
+<p>子问题 2：以 1 结尾的连续子数组的最大和是多少；<br>以 1 结尾的连续子数组有 [-2,1] 和 [1] ，其中 [-2,1] 就是在「子问题 1」的后面加上 1 得到。-2 + 1 = -1 &lt; 1−2+1=−1&lt;1 ，因此「子问题 2」 的答案是 1。</p>
+<p>大家发现了吗，如果编号为 i 的子问题的结果是负数或者 0 ，那么编号为 i + 1 的子问题就可以把编号为 i 的子问题的结果舍弃掉（这里 i 为整数，最小值为 1 ，最大值为 8），这是因为：</p>
+<p>一个数 a 加上负数的结果比 a 更小；<br>一个数 a 加上 0 的结果不会比 a 更大；<br>而子问题的定义必须以一个数结尾，因此如果子问题 i 的结果是负数或者 0，那么子问题 i + 1 的答案就是以 nums[i] 结尾的那个数。<br>因为我们把子问题定义的更清楚，子问题之间的联系就容易观察到。这是我们定义子问题、定义状态的经验。</p>
+<p>接下来我们按照编写动态规划题解的步骤，把「状态定义」「状态转移方程」「初始化」「输出」「是否可以空间优化」全都写出来。</p>
+<h2 id="定义状态（定义子问题）"><a href="#定义状态（定义子问题）" class="headerlink" title="定义状态（定义子问题）"></a>定义状态（定义子问题）</h2><p>dp[i]：表示以 nums[i] 结尾 的 连续 子数组的最大和。</p>
+<p>说明：「结尾」和「连续」是关键字。</p>
+<h2 id="状态转移方程（描述子问题之间的联系）"><a href="#状态转移方程（描述子问题之间的联系）" class="headerlink" title="状态转移方程（描述子问题之间的联系）"></a>状态转移方程（描述子问题之间的联系）</h2><p>根据状态的定义，由于 nums[i] 一定会被选取，并且以 nums[i] 结尾的连续子数组与以 nums[i - 1] 结尾的连续子数组只相差一个元素 nums[i] 。</p>
+<p>假设数组 nums 的值全都严格大于 0，那么一定有 dp[i] = dp[i - 1] + nums[i]。</p>
+<p>可是 dp[i - 1] 有可能是负数，于是分类讨论：</p>
+<p>如果 dp[i - 1] &gt; 0，那么可以把 nums[i] 直接接在 dp[i - 1] 表示的那个数组的后面，得到和更大的连续子数组；<br>如果 dp[i - 1] &lt;= 0，那么 nums[i] 加上前面的数 dp[i - 1] 以后值不会变大。于是 dp[i] 「另起炉灶」，此时单独的一个 nums[i] 的值，就是 dp[i]。</p>
+<h2 id="思考初始值"><a href="#思考初始值" class="headerlink" title="思考初始值"></a>思考初始值</h2><p>dp[0] 根据定义，只有 1 个数，一定以 nums[0] 结尾，因此 dp[0] = nums[0]。</p>
+<h2 id="思考输出"><a href="#思考输出" class="headerlink" title="思考输出"></a>思考输出</h2><p>注意：</p>
+<h3 id="这里状态的定义不是题目中的问题的定义，不能直接将最后一个状态返回回去；"><a href="#这里状态的定义不是题目中的问题的定义，不能直接将最后一个状态返回回去；" class="headerlink" title="这里状态的定义不是题目中的问题的定义，不能直接将最后一个状态返回回去；"></a>这里状态的定义不是题目中的问题的定义，不能直接将最后一个状态返回回去；</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxSubArray</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        size = <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">if</span> size == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        dp = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(size)]</span><br><span class="line"></span><br><span class="line">        dp[<span class="number">0</span>] = nums[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, size):</span><br><span class="line">            <span class="keyword">if</span> dp[i - <span class="number">1</span>] &gt;= <span class="number">0</span>:</span><br><span class="line">                dp[i] = dp[i - <span class="number">1</span>] + nums[i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                dp[i] = nums[i]</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(dp)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://raw.githubusercontent.com/upuphero/image-hosting/master/19.3fp1tvrxliu0.webp"></div>
+    
+    <div class="card-text">
+      
+        <a href="/2021/09/07/hello-world/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Hello World</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="https://raw.githubusercontent.com/upuphero/image-hosting/master/鬼刀风铃-蝴蝶飞舞4k壁纸.5yao5kzk1oc0.webp" class="soft-size--round soft-style--box" alt="leaf">
+    
+    
+      <h2>leaf</h2>
+    
+    
+      <p>所求皆如愿，所行化坦途</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>34</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        2
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        14
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      
+<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+    <span>NOTICE</span>
+  </div>
+  <div class="widget-body">
+    <p>每天一个类型的题目，刷到哭为止</p>
+  </div>
+</section>
+
+
+      <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+    <span>CATEGORYS</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categorys-list">
+      
+        <li class="categorys-list-item">
+          <a href="/categories/life/">
+            life (3)
+          </a>
+        </li>
+      
+        <li class="categorys-list-item">
+          <a href="/categories/study/">
+            study (29)
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      <a href="/tags/Dynamic-Programming/" style="font-size: 15px;" class="tags-cloud-5">Dynamic Programming</a> <a href="/tags/Heap-Sort/" style="font-size: 10px;" class="tags-cloud-0">Heap Sort</a> <a href="/tags/Python/" style="font-size: 17.5px;" class="tags-cloud-8">Python</a> <a href="/tags/Quick-Sort/" style="font-size: 11.25px;" class="tags-cloud-1">Quick Sort</a> <a href="/tags/game/" style="font-size: 11.25px;" class="tags-cloud-1">game</a> <a href="/tags/greedy-algorithm/" style="font-size: 18.75px;" class="tags-cloud-9">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 12.5px;" class="tags-cloud-3">hashmap</a> <a href="/tags/leetcode/" style="font-size: 20px;" class="tags-cloud-10">leetcode</a> <a href="/tags/life/" style="font-size: 10px;" class="tags-cloud-0">life</a> <a href="/tags/list/" style="font-size: 10px;" class="tags-cloud-0">list</a> <a href="/tags/schedule/" style="font-size: 10px;" class="tags-cloud-0">schedule</a> <a href="/tags/skills/" style="font-size: 10px;" class="tags-cloud-0">skills</a> <a href="/tags/topk/" style="font-size: 13.75px;" class="tags-cloud-4">topk</a> <a href="/tags/two-pointers/" style="font-size: 16.25px;" class="tags-cloud-6">two-pointers</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/miiiku/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://twitter.com/guanquanhong" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2022 <a href="/" target="_blank">leaf</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
+
+
+<!-- dplayer -->
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>
