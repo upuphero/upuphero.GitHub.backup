@@ -42,6 +42,20 @@
         <content type="html"><![CDATA[<h1 id="744-Find-Smallest-Letter-Greater-Than-Target-Easy"><a href="#744-Find-Smallest-Letter-Greater-Than-Target-Easy" class="headerlink" title="744. Find Smallest Letter Greater Than Target (Easy)"></a>744. Find Smallest Letter Greater Than Target (Easy)</h1><h2 id="Given-a-characters-array-letters-that-is-sorted-in-non-decreasing-order-and-a-character-target-return-the-smallest-character-in-the-array-that-is-larger-than-target"><a href="#Given-a-characters-array-letters-that-is-sorted-in-non-decreasing-order-and-a-character-target-return-the-smallest-character-in-the-array-that-is-larger-than-target" class="headerlink" title="Given a characters array letters that is sorted in non-decreasing order and a character target, return the smallest character in the array that is larger than target."></a>Given a characters array letters that is sorted in non-decreasing order and a character target, return the smallest character in the array that is larger than target.</h2>]]></content>
       
       
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> binary search algorithm </tag>
+            
+        </tags>
       
     </entry>
     
