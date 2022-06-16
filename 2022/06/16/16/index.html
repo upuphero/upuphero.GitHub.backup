@@ -24,7 +24,7 @@
 
   
 
-  <title>生活 | 八角书屋</title>
+  <title>16. 3Sum Closest(medium) | 八角书屋</title>
 
   
 
@@ -46,9 +46,9 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/DVA鬼刀3440x1440壁纸.6ozhdm4v0us0.webp)"></div>
+    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/water.v8a0ltebnio.webp)"></div>
   
 
   <!-- navbar -->
@@ -94,36 +94,91 @@
 
   
   
-
-  
-  
     <div class="header-content">
-      <div class="post-text layout-block layout-padding">
-        <h1 class="title-wrap">生活</h1>
-        
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">16. 3Sum Closest(medium)</h1>
+          <h2 class="title-sub-wrap">
+            <strong>leaf</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2022-06-16T19:24:32.000Z" itemprop="datePublished">2022-06-16</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/study/">📒 study</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/leetcode/">🏷️ leetcode</a></li>
+  
+    <li><a href="/tags/two-pointers/">🏷️ two-pointers</a></li>
+  
+    <li><a href="/tags/Python/">🏷️ Python</a></li>
+  
+    <li><a href="/tags/sort/">🏷️ sort</a></li>
+  
+</ul>
+        </div>
       </div>
     </div>
+  
+
+  
   
   
 </header>
 
-    <!-- 分页(其他自定义页面) -->
+    <!-- 文章 -->
 
-<!-- 自定义页面 -->
-
+<!-- 文章内容 -->
 <div class="body-container">
   <article class="content-container layout-block post-container">
     <div class="article-info">
       
+      
+      
+      
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        
+        <h1 id="16-3Sum-Closest-medium"><a href="#16-3Sum-Closest-medium" class="headerlink" title="16. 3Sum Closest(medium)"></a>16. 3Sum Closest(medium)</h1><h2 id="Given-an-integer-array-nums-of-length-n-and-an-integer-target-find-three-integers-in-nums-such-that-the-sum-is-closest-to-target"><a href="#Given-an-integer-array-nums-of-length-n-and-an-integer-target-find-three-integers-in-nums-such-that-the-sum-is-closest-to-target" class="headerlink" title="Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target."></a>Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target.</h2><h2 id="Return-the-sum-of-the-three-integers"><a href="#Return-the-sum-of-the-three-integers" class="headerlink" title="Return the sum of the three integers."></a>Return the sum of the three integers.</h2><h2 id="You-may-assume-that-each-input-would-have-exactly-one-solution"><a href="#You-may-assume-that-each-input-would-have-exactly-one-solution" class="headerlink" title="You may assume that each input would have exactly one solution."></a>You may assume that each input would have exactly one solution.</h2><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/3sum-closest/solution/pythonshuang-zhi-zhen-you-hua-ji-bai-999-by-hardca/">排序 + 双指针</a><br>这题和三数之和接近，就是排序然后再使用双指针。寻找最接近的数，刚好原来的三数之和就是使用慢慢接近的方法寻找target的，所以就可以在寻找target的过程中每一次都判断是否是最接近的。</p>
+<p>优化的细节是在双指针前加入当前这一轮，也就是first固定下来后，的最大值和最小值与target的关系。如果最大的数都小于等于target，那直接下一轮，first往右也许能更大；如果最小的数都大于等于target，那压根别找了，因为不可能再有更小的数了，直接Break掉返回结果即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">threeSumClosest</span>(<span class="params">self, nums, target</span>):</span></span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        nums.sort()         <span class="comment"># 排序</span></span><br><span class="line">        ans = <span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>) </span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> first <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">2</span>):        <span class="comment"># 枚举第一个元素</span></span><br><span class="line">            <span class="keyword">if</span> first &gt; <span class="number">0</span> <span class="keyword">and</span> nums[first] == nums[first-<span class="number">1</span>]: <span class="keyword">continue</span>     <span class="comment"># 保证first不会有重复</span></span><br><span class="line"></span><br><span class="line">            second, third = first + <span class="number">1</span>, n - <span class="number">1</span></span><br><span class="line">            max_sum = nums[first] + nums[-<span class="number">2</span>] + nums[-<span class="number">1</span>]</span><br><span class="line">            min_sum = nums[first] + nums[first + <span class="number">1</span>] + nums[first + <span class="number">2</span>]</span><br><span class="line">            <span class="keyword">if</span> max_sum &lt;= target:    <span class="comment"># 最大的数</span></span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">abs</span>(max_sum - target) &lt; <span class="built_in">abs</span>(ans - target):</span><br><span class="line">                    ans = max_sum</span><br><span class="line">                <span class="keyword">continue</span>              </span><br><span class="line">            <span class="keyword">elif</span> min_sum &gt;= target:  <span class="comment"># 最小的数</span></span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">abs</span>(min_sum - target) &lt; <span class="built_in">abs</span>(ans - target):</span><br><span class="line">                    ans = min_sum      </span><br><span class="line">                <span class="keyword">break</span>   </span><br><span class="line">                      </span><br><span class="line">            <span class="keyword">while</span> second &lt; third:</span><br><span class="line">                two_sum_target = target - nums[first]</span><br><span class="line">                s = nums[second] + nums[third]</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">abs</span>(s + nums[first] - target) &lt; <span class="built_in">abs</span>(ans - target):</span><br><span class="line">                    ans = s + nums[first]</span><br><span class="line">                <span class="keyword">if</span> s &gt; two_sum_target:  <span class="comment"># 当前数值太大 右指针左移</span></span><br><span class="line">                    third -= <span class="number">1</span></span><br><span class="line">                    <span class="keyword">while</span> third &gt; second <span class="keyword">and</span> nums[third] == nums[third + <span class="number">1</span>]:</span><br><span class="line">                        third -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">elif</span> s &lt; two_sum_target:  <span class="comment"># 当前数值太小 左指针右移</span></span><br><span class="line">                    second += <span class="number">1</span></span><br><span class="line">                    <span class="keyword">while</span> third &gt; second <span class="keyword">and</span> nums[second] == nums[second - <span class="number">1</span>]:</span><br><span class="line">                        second += <span class="number">1</span> </span><br><span class="line">                <span class="keyword">else</span>:                   <span class="comment"># 刚好等于 直接返回target即可</span></span><br><span class="line">                    <span class="keyword">return</span> target </span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
       </section>
 
       
       
+        <nav class="article-nav">
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2022/06/16/744/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">744. Find Smallest Letter Greater Than Target (Easy)</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
 
-      
-      
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
     </div>
     <div class="widget-info">
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -160,6 +215,8 @@
     </div>
   </div>
 </section>
+
+      
 
       
 <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -217,7 +274,6 @@
     </div>
   </article>
 </div>
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">
