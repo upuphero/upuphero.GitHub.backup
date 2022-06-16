@@ -51,7 +51,7 @@
     <link href="http://example.com/2022/06/16/744/"/>
     <id>http://example.com/2022/06/16/744/</id>
     <published>2022-06-16T16:42:31.000Z</published>
-    <updated>2022-06-16T19:37:54.329Z</updated>
+    <updated>2022-06-16T19:38:32.052Z</updated>
     
     <content type="html"><![CDATA[<h1 id="744-Find-Smallest-Letter-Greater-Than-Target-Easy"><a href="#744-Find-Smallest-Letter-Greater-Than-Target-Easy" class="headerlink" title="744. Find Smallest Letter Greater Than Target (Easy)"></a>744. Find Smallest Letter Greater Than Target (Easy)</h1><h2 id="Given-a-characters-array-letters-that-is-sorted-in-non-decreasing-order-and-a-character-target-return-the-smallest-character-in-the-array-that-is-larger-than-target"><a href="#Given-a-characters-array-letters-that-is-sorted-in-non-decreasing-order-and-a-character-target-return-the-smallest-character-in-the-array-that-is-larger-than-target" class="headerlink" title="Given a characters array letters that is sorted in non-decreasing order and a character target, return the smallest character in the array that is larger than target."></a>Given a characters array letters that is sorted in non-decreasing order and a character target, return the smallest character in the array that is larger than target.</h2>]]></content>
     
