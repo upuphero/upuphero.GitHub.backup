@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>LeetCode06</title>
+      <link href="/2022/06/23/LeetCode06/"/>
+      <url>/2022/06/23/LeetCode06/</url>
+      
+        <content type="html"><![CDATA[<h6 id="具体学习链接-Leetcode-题解-目录-md"><a href="#具体学习链接-Leetcode-题解-目录-md" class="headerlink" title="具体学习链接:Leetcode 题解 - 目录.md"></a>具体学习链接:<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E6%90%9C%E7%B4%A2.md">Leetcode 题解 - 目录.md</a></h6><h1 id="Leetcode-题解-搜索"><a href="#Leetcode-题解-搜索" class="headerlink" title="Leetcode 题解 - 搜索"></a>Leetcode 题解 - 搜索</h1><h2 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h2><h3 id="1-计算在网格中从原点到特定点的最短路径长度"><a href="#1-计算在网格中从原点到特定点的最短路径长度" class="headerlink" title="1. 计算在网格中从原点到特定点的最短路径长度"></a>1. 计算在网格中从原点到特定点的最短路径长度</h3><h3 id="2-组成整数的最小平方数数量"><a href="#2-组成整数的最小平方数数量" class="headerlink" title="2. 组成整数的最小平方数数量"></a>2. 组成整数的最小平方数数量</h3><h3 id="3-最短单词路径"><a href="#3-最短单词路径" class="headerlink" title="3. 最短单词路径"></a>3. 最短单词路径</h3><h2 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h2><h3 id="1-查找最大的连通面积"><a href="#1-查找最大的连通面积" class="headerlink" title="1. 查找最大的连通面积"></a>1. 查找最大的连通面积</h3><h3 id="2-矩阵中的连通分量数目"><a href="#2-矩阵中的连通分量数目" class="headerlink" title="2. 矩阵中的连通分量数目"></a>2. 矩阵中的连通分量数目</h3><h3 id="3-好友关系的连通分量数目"><a href="#3-好友关系的连通分量数目" class="headerlink" title="3. 好友关系的连通分量数目"></a>3. 好友关系的连通分量数目</h3><h3 id="4-填充封闭区域"><a href="#4-填充封闭区域" class="headerlink" title="4. 填充封闭区域"></a>4. 填充封闭区域</h3><h3 id="5-能到达的太平洋和大西洋的区域"><a href="#5-能到达的太平洋和大西洋的区域" class="headerlink" title="5. 能到达的太平洋和大西洋的区域"></a>5. 能到达的太平洋和大西洋的区域</h3><h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><h3 id="1-数字键盘组合"><a href="#1-数字键盘组合" class="headerlink" title="1. 数字键盘组合"></a>1. 数字键盘组合</h3><h3 id="2-IP-地址划分"><a href="#2-IP-地址划分" class="headerlink" title="2. IP 地址划分"></a>2. IP 地址划分</h3><h3 id="3-在矩阵中寻找字符串"><a href="#3-在矩阵中寻找字符串" class="headerlink" title="3. 在矩阵中寻找字符串"></a>3. 在矩阵中寻找字符串</h3><h3 id="4-输出二叉树中所有从根到叶子的路径"><a href="#4-输出二叉树中所有从根到叶子的路径" class="headerlink" title="4. 输出二叉树中所有从根到叶子的路径"></a>4. 输出二叉树中所有从根到叶子的路径</h3><h3 id="5-排列"><a href="#5-排列" class="headerlink" title="5. 排列"></a>5. 排列</h3><h3 id="6-含有相同元素求排列"><a href="#6-含有相同元素求排列" class="headerlink" title="6. 含有相同元素求排列"></a>6. 含有相同元素求排列</h3><h3 id="7-组合"><a href="#7-组合" class="headerlink" title="7. 组合"></a>7. 组合</h3><h3 id="8-组合求和"><a href="#8-组合求和" class="headerlink" title="8. 组合求和"></a>8. 组合求和</h3><h3 id="9-含有相同元素的组合求和"><a href="#9-含有相同元素的组合求和" class="headerlink" title="9. 含有相同元素的组合求和"></a>9. 含有相同元素的组合求和</h3><h3 id="10-1-9-数字的组合求和"><a href="#10-1-9-数字的组合求和" class="headerlink" title="10. 1-9 数字的组合求和"></a>10. 1-9 数字的组合求和</h3><h3 id="11-子集"><a href="#11-子集" class="headerlink" title="11. 子集"></a>11. 子集</h3><h3 id="12-含有相同元素求子集"><a href="#12-含有相同元素求子集" class="headerlink" title="12. 含有相同元素求子集"></a>12. 含有相同元素求子集</h3><h3 id="13-分割字符串使得每个部分都是回文数"><a href="#13-分割字符串使得每个部分都是回文数" class="headerlink" title="13. 分割字符串使得每个部分都是回文数"></a>13. 分割字符串使得每个部分都是回文数</h3><h3 id="14-数独"><a href="#14-数独" class="headerlink" title="14. 数独"></a>14. 数独</h3><h3 id="15-N-皇后"><a href="#15-N-皇后" class="headerlink" title="15. N 皇后"></a>15. N 皇后</h3><h2 id="BFS-1"><a href="#BFS-1" class="headerlink" title="BFS"></a>BFS</h2><p>宽度优先搜索算法（又称广度优先搜索）是最简便的图的搜索算法之一，这一算法也是很多重要的图的算法的原型。Dijkstra单源最短路径算法和Prim最小生成树算法都采用了和宽度优先搜索类似的思想。其别名又叫BFS，属于一种盲目搜寻法，目的是系统地展开并检查图中的所有节点，以找寻结果。换句话说，它并不考虑结果的可能位置，彻底地搜索整张图，直到找到结果为止。</p><p>bfs是按一层一层来访问的，所以适合有目标求最短路的步数，你想想层层搜索每次层就代表了一步。bfs优先访问的是兄弟节点，只有这一层全部访问完才能访问下一层，也就是说bfs第几层就代表当前可以走到的位置(结点).而dfs是按递归来实现的，它优先搜索深度，再回溯，优先访问的是没有访问过的子节点<br>DFS多用于连通性问题因为其运行思想与人脑的思维很相似，故解决连通性问题更自然。BFS多用于解决最短路问题，其运行过程中需要储存每一层的信息，所以其运行时需要储存的信息量较大，如果人脑也可储存大量信息的话，理论上人脑也可运行BFS。<br>总的来说多数情况下运行BFS所需的内存会大于DFS需要的内存(DFS一次访问一条路，BFS一次访问多条路)，DFS容易爆栈(栈不易”控制”)，BFS通过控制队列可以很好解决”爆队列”风险。<br>它们两者间各自的优势需要通过实际的问题来具体分析，根据它们各自的特点来应用于不同的问题中才能获得最优的性能。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>95. Unique Binary Search Trees II (Medium)</title>
       <link href="/2022/06/21/95/"/>
       <url>/2022/06/21/95/</url>
@@ -1169,6 +1194,31 @@
       <url>/2021/09/24/first-blog/</url>
       
         <content type="html"><![CDATA[<p>这里是记录研究生生活和学习的第一篇文章，也是一切的开始。<br>生活篇分为日记，回忆，生活技巧。</p><h2 id="日记1"><a href="#日记1" class="headerlink" title="日记1"></a>日记1</h2><h3 id="2021-9-24"><a href="#2021-9-24" class="headerlink" title="2021.9.24"></a>2021.9.24</h3><p>已经是上课的第三周了，逐渐习惯了这样的学习节奏和自己做饭的生活。今天烧了一份红烧蹄膀。在华超买的蹄膀，让人出乎意料的事蹄膀居然是最便宜的肉类，真是暴殄天物啊。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> life </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>how to start the first blog</title>
+      <link href="/2021/09/24/%E5%A6%82%E4%BD%95%E5%86%99blog/"/>
+      <url>/2021/09/24/%E5%A6%82%E4%BD%95%E5%86%99blog/</url>
+      
+        <content type="html"><![CDATA[<p><a href="http://localhost:4000/">http://localhost:4000/</a></p><p><a href="https://blog.csdn.net/wizardforcel/article/details/40684953?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-40684953-blog-97758641.pc_relevant_antiscanv2&spm=1001.2101.3001.4242.1&utm_relevant_index=3">Hexo 入门指南（四） - 页面、导航、边栏、底栏</a></p><p><a href="https://hexo.io/themes/">https://hexo.io/themes/</a></p><p><a href="https://picx.xpoet.cn/#/management">https://picx.xpoet.cn/#/management</a></p>]]></content>
       
       
       <categories>

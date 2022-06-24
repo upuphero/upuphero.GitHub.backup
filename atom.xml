@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-06-23T15:35:37.925Z</updated>
+  <updated>2022-06-24T03:08:57.344Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode06</title>
+    <link href="http://example.com/2022/06/23/LeetCode06/"/>
+    <id>http://example.com/2022/06/23/LeetCode06/</id>
+    <published>2022-06-24T02:59:51.000Z</published>
+    <updated>2022-06-24T03:08:57.344Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="具体学习链接-Leetcode-题解-目录-md"><a href="#具体学习链接-Leetcode-题解-目录-md" class="headerlink" title="具体学习链接:Leetcode 题解 - 目录.md"></a>具体学习链接:<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E6%90%9C%E7%B4%A2.md">Leetcode 题解 - 目录.md</a></h6><h1 id="Leetcode-题解-搜索"><a href="#Leetcode-题解-搜索" class="headerlink" title="Leetcode 题解 - 搜索"></a>Leetcode 题解 - 搜索</h1><h2 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h2><h3 id="1-计算在网格中从原点到特定点的最短路径长度"><a href="#1-计算在网格中从原点到特定点的最短路径长度" class="headerlink" title="1. 计算在网格中从原点到特定点的最短路径长度"></a>1. 计算在网格中从原点到特定点的最短路径长度</h3><h3 id="2-组成整数的最小平方数数量"><a href="#2-组成整数的最小平方数数量" class="headerlink" title="2. 组成整数的最小平方数数量"></a>2. 组成整数的最小平方数数量</h3><h3 id="3-最短单词路径"><a href="#3-最短单词路径" class="headerlink" title="3. 最短单词路径"></a>3. 最短单词路径</h3><h2 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h2><h3 id="1-查找最大的连通面积"><a href="#1-查找最大的连通面积" class="headerlink" title="1. 查找最大的连通面积"></a>1. 查找最大的连通面积</h3><h3 id="2-矩阵中的连通分量数目"><a href="#2-矩阵中的连通分量数目" class="headerlink" title="2. 矩阵中的连通分量数目"></a>2. 矩阵中的连通分量数目</h3><h3 id="3-好友关系的连通分量数目"><a href="#3-好友关系的连通分量数目" class="headerlink" title="3. 好友关系的连通分量数目"></a>3. 好友关系的连通分量数目</h3><h3 id="4-填充封闭区域"><a href="#4-填充封闭区域" class="headerlink" title="4. 填充封闭区域"></a>4. 填充封闭区域</h3><h3 id="5-能到达的太平洋和大西洋的区域"><a href="#5-能到达的太平洋和大西洋的区域" class="headerlink" title="5. 能到达的太平洋和大西洋的区域"></a>5. 能到达的太平洋和大西洋的区域</h3><h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><h3 id="1-数字键盘组合"><a href="#1-数字键盘组合" class="headerlink" title="1. 数字键盘组合"></a>1. 数字键盘组合</h3><h3 id="2-IP-地址划分"><a href="#2-IP-地址划分" class="headerlink" title="2. IP 地址划分"></a>2. IP 地址划分</h3><h3 id="3-在矩阵中寻找字符串"><a href="#3-在矩阵中寻找字符串" class="headerlink" title="3. 在矩阵中寻找字符串"></a>3. 在矩阵中寻找字符串</h3><h3 id="4-输出二叉树中所有从根到叶子的路径"><a href="#4-输出二叉树中所有从根到叶子的路径" class="headerlink" title="4. 输出二叉树中所有从根到叶子的路径"></a>4. 输出二叉树中所有从根到叶子的路径</h3><h3 id="5-排列"><a href="#5-排列" class="headerlink" title="5. 排列"></a>5. 排列</h3><h3 id="6-含有相同元素求排列"><a href="#6-含有相同元素求排列" class="headerlink" title="6. 含有相同元素求排列"></a>6. 含有相同元素求排列</h3><h3 id="7-组合"><a href="#7-组合" class="headerlink" title="7. 组合"></a>7. 组合</h3><h3 id="8-组合求和"><a href="#8-组合求和" class="headerlink" title="8. 组合求和"></a>8. 组合求和</h3><h3 id="9-含有相同元素的组合求和"><a href="#9-含有相同元素的组合求和" class="headerlink" title="9. 含有相同元素的组合求和"></a>9. 含有相同元素的组合求和</h3><h3 id="10-1-9-数字的组合求和"><a href="#10-1-9-数字的组合求和" class="headerlink" title="10. 1-9 数字的组合求和"></a>10. 1-9 数字的组合求和</h3><h3 id="11-子集"><a href="#11-子集" class="headerlink" title="11. 子集"></a>11. 子集</h3><h3 id="12-含有相同元素求子集"><a href="#12-含有相同元素求子集" class="headerlink" title="12. 含有相同元素求子集"></a>12. 含有相同元素求子集</h3><h3 id="13-分割字符串使得每个部分都是回文数"><a href="#13-分割字符串使得每个部分都是回文数" class="headerlink" title="13. 分割字符串使得每个部分都是回文数"></a>13. 分割字符串使得每个部分都是回文数</h3><h3 id="14-数独"><a href="#14-数独" class="headerlink" title="14. 数独"></a>14. 数独</h3><h3 id="15-N-皇后"><a href="#15-N-皇后" class="headerlink" title="15. N 皇后"></a>15. N 皇后</h3><h2 id="BFS-1"><a href="#BFS-1" class="headerlink" title="BFS"></a>BFS</h2><p>宽度优先搜索算法（又称广度优先搜索）是最简便的图的搜索算法之一，这一算法也是很多重要的图的算法的原型。Dijkstra单源最短路径算法和Prim最小生成树算法都采用了和宽度优先搜索类似的思想。其别名又叫BFS，属于一种盲目搜寻法，目的是系统地展开并检查图中的所有节点，以找寻结果。换句话说，它并不考虑结果的可能位置，彻底地搜索整张图，直到找到结果为止。</p><p>bfs是按一层一层来访问的，所以适合有目标求最短路的步数，你想想层层搜索每次层就代表了一步。bfs优先访问的是兄弟节点，只有这一层全部访问完才能访问下一层，也就是说bfs第几层就代表当前可以走到的位置(结点).而dfs是按递归来实现的，它优先搜索深度，再回溯，优先访问的是没有访问过的子节点<br>DFS多用于连通性问题因为其运行思想与人脑的思维很相似，故解决连通性问题更自然。BFS多用于解决最短路问题，其运行过程中需要储存每一层的信息，所以其运行时需要储存的信息量较大，如果人脑也可储存大量信息的话，理论上人脑也可运行BFS。<br>总的来说多数情况下运行BFS所需的内存会大于DFS需要的内存(DFS一次访问一条路，BFS一次访问多条路)，DFS容易爆栈(栈不易”控制”)，BFS通过控制队列可以很好解决”爆队列”风险。<br>它们两者间各自的优势需要通过实际的问题来具体分析，根据它们各自的特点来应用于不同的问题中才能获得最优的性能。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h6 id=&quot;具体学习链接-Leetcode-题解-目录-md&quot;&gt;&lt;a href=&quot;#具体学习链接-Leetcode-题解-目录-md&quot; class=&quot;headerlink&quot; title=&quot;具体学习链接:Leetcode 题解 - 目录.md&quot;&gt;&lt;/a&gt;具体学习链接:&lt;a hr</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>95. Unique Binary Search Trees II (Medium)</title>
@@ -515,32 +539,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;406-Queue-Reconstruction-by-Height-Medium&quot;&gt;&lt;a href=&quot;#406-Queue-Reconstruction-by-Height-Medium&quot; class=&quot;headerlink&quot; title=&quot;406. Queue</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="greedy algorithm" scheme="http://example.com/tags/greedy-algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>452. Minimum Number of Arrows to Burst Balloons (Medium)</title>
-    <link href="http://example.com/2022/06/10/452/"/>
-    <id>http://example.com/2022/06/10/452/</id>
-    <published>2022-06-11T02:58:19.000Z</published>
-    <updated>2022-06-11T20:52:51.353Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="452-Minimum-Number-of-Arrows-to-Burst-Balloons-Medium"><a href="#452-Minimum-Number-of-Arrows-to-Burst-Balloons-Medium" class="headerlink" title="452. Minimum Number of Arrows to Burst Balloons (Medium)"></a>452. Minimum Number of Arrows to Burst Balloons (Medium)</h1><h2 id="There-are-some-spherical-balloons-taped-onto-a-flat-wall-that-represents-the-XY-plane-The-balloons-are-represented-as-a-2D-integer-array-points-where-points-i-xstart-xend-denotes-a-balloon-whose-horizontal-diameter-stretches-between-xstart-and-xend-You-do-not-know-the-exact-y-coordinates-of-the-balloons"><a href="#There-are-some-spherical-balloons-taped-onto-a-flat-wall-that-represents-the-XY-plane-The-balloons-are-represented-as-a-2D-integer-array-points-where-points-i-xstart-xend-denotes-a-balloon-whose-horizontal-diameter-stretches-between-xstart-and-xend-You-do-not-know-the-exact-y-coordinates-of-the-balloons" class="headerlink" title="There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons."></a>There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.</h2><h2 id="Arrows-can-be-shot-up-directly-vertically-in-the-positive-y-direction-from-different-points-along-the-x-axis-A-balloon-with-xstart-and-xend-is-burst-by-an-arrow-shot-at-x-if-xstart-lt-x-lt-xend-There-is-no-limit-to-the-number-of-arrows-that-can-be-shot-A-shot-arrow-keeps-traveling-up-infinitely-bursting-any-balloons-in-its-path"><a href="#Arrows-can-be-shot-up-directly-vertically-in-the-positive-y-direction-from-different-points-along-the-x-axis-A-balloon-with-xstart-and-xend-is-burst-by-an-arrow-shot-at-x-if-xstart-lt-x-lt-xend-There-is-no-limit-to-the-number-of-arrows-that-can-be-shot-A-shot-arrow-keeps-traveling-up-infinitely-bursting-any-balloons-in-its-path" class="headerlink" title="Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;= x &lt;= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path."></a>Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;= x &lt;= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path.</h2><h2 id="Given-the-array-points-return-the-minimum-number-of-arrows-that-must-be-shot-to-burst-all-balloons"><a href="#Given-the-array-points-return-the-minimum-number-of-arrows-that-must-be-shot-to-burst-all-balloons" class="headerlink" title="Given the array points, return the minimum number of arrows that must be shot to burst all balloons."></a>Given the array points, return the minimum number of arrows that must be shot to burst all balloons.</h2><p>题目描述：气球在一个水平数轴上摆放，可以重叠，飞镖垂直投向坐标轴，使得路径上的气球都被刺破。求解最小的投飞镖次数使所有气球都被刺破。</p><p>也是计算不重叠的区间个数，不过和 Non-overlapping points 的区别在于，[1, 2] 和 [2, 3] 在本题中算是重叠区间。</p><p><img src="https://assets.leetcode-cn.com/solution-static/452/1.png" alt="射箭"></p><p>Example</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">[[10,16], [2,8], [1,6], [7,12]]</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">2</span><br></pre></td></tr></table></figure><h2 id="排序-贪心"><a href="#排序-贪心" class="headerlink" title="排序 + 贪心"></a>排序 + 贪心</h2><p>这道题和 435. Non-overlapping Intervals (Medium) 有些类似，都是寻找重合区间</p><p>贪心：<br>既然每个气球都需要被引爆，那么在满足引爆对箭限制最大的那个气球（因为它一定要被引爆，而箭和其它同时被引爆的气球 都可以迁就它，所以满足它是必须的） 的同时，引爆尽可能多其他的气球。</p><p>在付出不变的的前提下，获得尽可能多。</p><p>简单来说就是先按照区间右边边界从小到大排序，为了尽可能的多引爆气球，第一支箭射在第一个区间的最右边，根据后面区间的左端点判断一共引爆了哪些区间，并从剩下未被引爆的气球中，再选择右边界位置最靠左的那一个，确定下一支箭，直到所有的气球都被引爆。</p><p>有个问题是这 nn 个气球对应的区间互不重叠，while 循环需要执行 n 次。所以当遇到x(j) ≤ y(i)时 我们可以直接跳出循环，y(j)就是下一个箭的位置。</p><p><a href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/solution/yong-zui-shao-shu-liang-de-jian-yin-bao-qi-qiu-1-2/">官方题解</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMinArrowShots</span>(<span class="params">self, points: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> points:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>        </span><br><span class="line">        points.sort(key=<span class="keyword">lambda</span> balloon: balloon[<span class="number">1</span>])</span><br><span class="line">        pos = points[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">        ans = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> balloon <span class="keyword">in</span> points:</span><br><span class="line">            <span class="keyword">if</span> balloon[<span class="number">0</span>] &gt; pos:</span><br><span class="line">                pos = balloon[<span class="number">1</span>]</span><br><span class="line">                ans += <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;452-Minimum-Number-of-Arrows-to-Burst-Balloons-Medium&quot;&gt;&lt;a href=&quot;#452-Minimum-Number-of-Arrows-to-Burst-Balloons-Medium&quot; class=&quot;heade</summary>
       
     
     
