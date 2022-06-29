@@ -4,6 +4,135 @@
   
     
     <entry>
+      <title>LeetCode09</title>
+      <link href="/2022/06/28/LeetCode09/"/>
+      <url>/2022/06/28/LeetCode09/</url>
+      
+        <content type="html"><![CDATA[<p>专门列出的一期：hashmap</p><p>官方是有专门的hashmap的<a href="https://leetcode.com/tag/hash-table/">tag</a></p><h6 id="具体学习链接-Leetcode-题解-目录-md"><a href="#具体学习链接-Leetcode-题解-目录-md" class="headerlink" title="具体学习链接:Leetcode 题解 - 目录.md"></a>具体学习链接:<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E5%93%88%E5%B8%8C%E8%A1%A8.md">Leetcode 题解 - 目录.md</a></h6>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode08</title>
+      <link href="/2022/06/28/LeetCode08/"/>
+      <url>/2022/06/28/LeetCode08/</url>
+      
+        <content type="html"><![CDATA[<h6 id="具体学习链接-Leetcode-题解-目录-md"><a href="#具体学习链接-Leetcode-题解-目录-md" class="headerlink" title="具体学习链接:Leetcode 题解 - 目录.md"></a>具体学习链接:<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.md">Leetcode 题解 - 目录.md</a></h6><h1 id="Leetcode-题解-动态规划"><a href="#Leetcode-题解-动态规划" class="headerlink" title="Leetcode 题解 - 动态规划"></a>Leetcode 题解 - 动态规划</h1><h2 id="素数分解"><a href="#素数分解" class="headerlink" title="素数分解"></a>素数分解</h2><p>每一个数都可以分解成素数的乘积</p><h2 id="整除"><a href="#整除" class="headerlink" title="整除"></a>整除</h2><p>令 x = 2m0 * 3m1 * 5m2 * 7m3 * 11m4 * …</p><p>令 y = 2n0 * 3n1 * 5n2 * 7n3 * 11n4 * …</p><p>如果 x 整除 y（y mod x == 0），则对于所有 i，mi &lt;= ni。</p><h2 id="最大公约数最小公倍数"><a href="#最大公约数最小公倍数" class="headerlink" title="最大公约数最小公倍数"></a>最大公约数最小公倍数</h2><p>x 和 y 的最大公约数为：gcd(x,y) = 2min(m0,n0) * 3min(m1,n1) * 5min(m2,n2) * …</p><p>x 和 y 的最小公倍数为：lcm(x,y) = 2max(m0,n0) * 3max(m1,n1) * 5max(m2,n2) * …</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>914</title>
+      <link href="/2022/06/27/914/"/>
+      <url>/2022/06/27/914/</url>
+      
+        <content type="html"><![CDATA[<ol start="914"><li>卡牌分组</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Greatest common divisor  </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>204. Count Primes (Easy)</title>
+      <link href="/2022/06/27/204/"/>
+      <url>/2022/06/27/204/</url>
+      
+        <content type="html"><![CDATA[<h1 id="204-Count-Primes-Easy"><a href="#204-Count-Primes-Easy" class="headerlink" title="204. Count Primes (Easy)"></a>204. Count Primes (Easy)</h1><h2 id="Given-an-integer-n-return-the-number-of-prime-numbers-that-are-strictly-less-than-n"><a href="#Given-an-integer-n-return-the-number-of-prime-numbers-that-are-strictly-less-than-n" class="headerlink" title="Given an integer n, return the number of prime numbers that are strictly less than n."></a>Given an integer n, return the number of prime numbers that are strictly less than n.</h2><h2 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/count-primes/solution/ji-shu-zhi-shu-by-leetcode-solution/">官方题解</a></h2><h3 id="方法一：枚举"><a href="#方法一：枚举" class="headerlink" title="方法一：枚举"></a>方法一：枚举</h3><p>很直观的思路是我们枚举每个数判断其是不是质数。</p><p>考虑质数的定义：在大于 1 的自然数中，除了 1 和它本身以外不再有其他因数的自然数。因此对于每个数 x，我们可以从小到大枚举 [2,x−1] 中的每个数 y，判断 y 是否为 x 的因数。但这样判断一个数是否为质数的时间复杂度最差情况下会到 O(n)，无法通过所有测试数据。</p><h3 id="方法二：埃氏筛"><a href="#方法二：埃氏筛" class="headerlink" title="方法二：埃氏筛"></a>方法二：埃氏筛</h3><p>枚举没有考虑到数与数的关联性，因此难以再继续优化时间复杂度。接下来我们介绍一个常见的算法，该算法由希腊数学家厄拉多塞（Eratosthenes）提出，称为厄拉多塞筛法，简称埃氏筛。</p><p>我们考虑这样一个事实：如果 x 是质数，那么大于 x 的 x 的倍数 2x,3x,… 一定不是质数，因此我们可以从这里入手。</p><p>我们设 isPrime[i] 表示数 i 是不是质数，如果是质数则为 1，否则为 0。从小到大遍历每个数，如果这个数为质数，则将其所有的倍数都标记为合数（除了该质数本身），即 0，这样在运行结束的时候我们即能知道质数的个数。</p><p>这种方法的正确性是比较显然的：这种方法显然不会将质数标记成合数；另一方面，当从小到大遍历到数 x 时，倘若它是合数，则它一定是某个小于 x 的质数 yy 的整数倍，故根据此方法的步骤，我们在遍历到 y 时，就一定会在此时将 xx 标记为 isPrime[x]=0。因此，这种方法也不会将合数标记为质数。</p><p>当然这里还可以继续优化，对于一个质数 x，如果按上文说的我们从 2x 开始标记其实是冗余的，应该直接从 x⋅x 开始标记，因为 2x,3x,… 这些数一定在 x 之前就被其他数的倍数标记过了，例如 2 的所有倍数，3 的所有倍数等。</p><h4 id="leetcode题解"><a href="#leetcode题解" class="headerlink" title="leetcode题解"></a><a href="https://leetcode.com/problems/count-primes/discuss/153528/Python3-99-112-ms-Explained%3A-The-Sieve-of-Eratosthenes-with-optimizations">leetcode题解</a></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countPrimes</span>(<span class="params">self, n</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type n: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># Sieve of Eratosthenes埃氏筛</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># We are only interested in numbers LESS than the input number</span></span><br><span class="line">        <span class="comment"># exit early for numbers LESS than 2; (two is prime)</span></span><br><span class="line">        <span class="keyword">if</span> n &lt; <span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># create strike list for the input range, initializing all indices to</span></span><br><span class="line">        <span class="comment"># prime (1).</span></span><br><span class="line">        strikes = [<span class="number">1</span>] * n</span><br><span class="line"></span><br><span class="line">        <span class="comment"># we know that 0 and 2 are not prime</span></span><br><span class="line">        strikes[<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line">        strikes[<span class="number">1</span>] = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Now set multiples of remaining numbers that are marked as prime to</span></span><br><span class="line">        <span class="comment"># not prime.  It is safe ignore numbers alreay marked as not prime</span></span><br><span class="line">        <span class="comment"># because there are factor(s) that divide evenly into this number and</span></span><br><span class="line">        <span class="comment"># all its multiples.  Use upper limit of (n**0.5)+1, because:</span></span><br><span class="line">        <span class="comment">#  (a) the smallest factor of a non-prime number will not be &gt; sqrt(n).</span></span><br><span class="line">        <span class="comment">#      Ex. non-prime = 100, </span></span><br><span class="line">        <span class="comment">#           5*20</span></span><br><span class="line">        <span class="comment">#           10*10, </span></span><br><span class="line">        <span class="comment">#           20*5   # !! we have seen 5 before.</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="built_in">int</span>(n**<span class="number">0.5</span>)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span>  strikes[i] != <span class="number">0</span>:</span><br><span class="line">                <span class="comment"># slow:</span></span><br><span class="line">                <span class="comment">#for j in range(i*i, n, i):</span></span><br><span class="line">                <span class="comment">#    strikes[j] = 0</span></span><br><span class="line"></span><br><span class="line">                <span class="comment"># 3x faster:</span></span><br><span class="line">                <span class="comment"># strikes[i*i:n:i] = [0] * ((n-1-i*i)//i + 1)</span></span><br><span class="line">                <span class="comment"># n = 11</span></span><br><span class="line">                <span class="comment"># i = 2</span></span><br><span class="line">                <span class="comment"># (n-1-i*i)//i + 1</span></span><br><span class="line">                <span class="comment"># (n-1)               # get total # of indicies for n (non-inclusive)</span></span><br><span class="line">                <span class="comment">#     -i*i            # shift to get # of slots in range of interest</span></span><br><span class="line">                <span class="comment">#          //i        # get number of groups</span></span><br><span class="line">                <span class="comment">#              + 1    # get number of slots</span></span><br><span class="line">                <span class="comment"># strikes[2*2:11:2]  = [0] * ((11-1-2*2)//2 + 1</span></span><br><span class="line">                <span class="comment"># strikes[4:11:2]    = [0] * 4</span></span><br><span class="line">                <span class="comment"># s[4], s[6], s[8], s10] = 0, 0, 0, 0</span></span><br><span class="line">                strikes[i*i:n:i] = [<span class="number">0</span>] * ((n-<span class="number">1</span>-i*i)//i + <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span>(strikes)</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countPrimes</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot; 用数组primes[i]表示数字i是否是素数，如果值为True则为素数，</span></span><br><span class="line"><span class="string">        如果值为False则为合数 </span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        primes = [<span class="literal">True</span>] * n</span><br><span class="line">        primes[<span class="number">0</span>]=primes[<span class="number">1</span>]=<span class="literal">False</span></span><br><span class="line">        result = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, n):</span><br><span class="line">            <span class="comment"># 如果当前值是素数，就将它倍数标记为合数</span></span><br><span class="line">            <span class="keyword">if</span> primes[i]:</span><br><span class="line">                result += <span class="number">1</span></span><br><span class="line">                _power = i * i</span><br><span class="line">                <span class="keyword">if</span> _power &lt; n :</span><br><span class="line">                    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(_power, n, i):</span><br><span class="line">                        primes[j] = <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countPrimes</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot; 用数组primes[i]表示数字i是否是素数，如果值为True则为素数，</span></span><br><span class="line"><span class="string">        如果值为False则为合数 </span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> n&lt;<span class="number">3</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        primes = [<span class="literal">True</span>] * n</span><br><span class="line">        primes[<span class="number">0</span>]= primes[<span class="number">1</span>] = <span class="literal">False</span></span><br><span class="line">        result = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, n):</span><br><span class="line">            <span class="comment"># 如果当前值是素数，就将它倍数标记为合数</span></span><br><span class="line">            <span class="keyword">if</span> primes[i]:</span><br><span class="line">                result += <span class="number">1</span></span><br><span class="line">                _power = i * i</span><br><span class="line">                <span class="keyword">if</span> _power &lt; n :</span><br><span class="line">                    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(_power, n, i):</span><br><span class="line">                        primes[j] = <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> prime number </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode07</title>
+      <link href="/2022/06/26/LeetCode07/"/>
+      <url>/2022/06/26/LeetCode07/</url>
+      
+        <content type="html"><![CDATA[<h6 id="具体学习链接-Leetcode-题解-目录-md"><a href="#具体学习链接-Leetcode-题解-目录-md" class="headerlink" title="具体学习链接:Leetcode 题解 - 目录.md"></a>具体学习链接:<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E6%95%B0%E5%AD%A6.md">Leetcode 题解 - 目录.md</a></h6><h1 id="Leetcode-题解-数学"><a href="#Leetcode-题解-数学" class="headerlink" title="Leetcode 题解 - 数学"></a>Leetcode 题解 - 数学</h1><h2 id="素数分解"><a href="#素数分解" class="headerlink" title="素数分解"></a>素数分解</h2><p>每一个数都可以分解成素数的乘积</p><h2 id="整除"><a href="#整除" class="headerlink" title="整除"></a>整除</h2><p>令 x = 2m0 * 3m1 * 5m2 * 7m3 * 11m4 * …</p><p>令 y = 2n0 * 3n1 * 5n2 * 7n3 * 11n4 * …</p><p>如果 x 整除 y（y mod x == 0），则对于所有 i，mi &lt;= ni。</p><h2 id="最大公约数最小公倍数"><a href="#最大公约数最小公倍数" class="headerlink" title="最大公约数最小公倍数"></a>最大公约数最小公倍数</h2><p>x 和 y 的最大公约数为：gcd(x,y) = 2min(m0,n0) * 3min(m1,n1) * 5min(m2,n2) * …</p><p>x 和 y 的最小公倍数为：lcm(x,y) = 2max(m0,n0) * 3max(m1,n1) * 5max(m2,n2) * …</p><h3 id="1-生成素数序列"><a href="#1-生成素数序列" class="headerlink" title="1. 生成素数序列"></a>1. 生成素数序列</h3><h3 id="2-最大公约数"><a href="#2-最大公约数" class="headerlink" title="2. 最大公约数"></a>2. 最大公约数</h3><h3 id="3-使用位操作和减法求解最大公约数"><a href="#3-使用位操作和减法求解最大公约数" class="headerlink" title="3. 使用位操作和减法求解最大公约数"></a>3. 使用位操作和减法求解最大公约数</h3><h2 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h2><h3 id="1-7-进制"><a href="#1-7-进制" class="headerlink" title="1. 7 进制"></a>1. 7 进制</h3><h3 id="2-16-进制"><a href="#2-16-进制" class="headerlink" title="2. 16 进制"></a>2. 16 进制</h3><h3 id="3-26-进制"><a href="#3-26-进制" class="headerlink" title="3. 26 进制"></a>3. 26 进制</h3><h2 id="阶乘"><a href="#阶乘" class="headerlink" title="阶乘"></a>阶乘</h2><h3 id="1-统计阶乘尾部有多少个-0"><a href="#1-统计阶乘尾部有多少个-0" class="headerlink" title="1. 统计阶乘尾部有多少个 0"></a>1. 统计阶乘尾部有多少个 0</h3><h2 id="字符串加法减法"><a href="#字符串加法减法" class="headerlink" title="字符串加法减法"></a>字符串加法减法</h2><h3 id="1-二进制加法"><a href="#1-二进制加法" class="headerlink" title="1. 二进制加法"></a>1. 二进制加法</h3><h3 id="2-字符串加法"><a href="#2-字符串加法" class="headerlink" title="2. 字符串加法"></a>2. 字符串加法</h3><h2 id="相遇问题"><a href="#相遇问题" class="headerlink" title="相遇问题"></a>相遇问题</h2><h3 id="1-改变数组元素使所有的数组元素都相等"><a href="#1-改变数组元素使所有的数组元素都相等" class="headerlink" title="1. 改变数组元素使所有的数组元素都相等"></a>1. 改变数组元素使所有的数组元素都相等</h3><h2 id="多数投票问题"><a href="#多数投票问题" class="headerlink" title="多数投票问题"></a>多数投票问题</h2><h3 id="1-数组中出现次数多于-n-2-的元素"><a href="#1-数组中出现次数多于-n-2-的元素" class="headerlink" title="1. 数组中出现次数多于 n / 2 的元素"></a>1. 数组中出现次数多于 n / 2 的元素</h3><h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><h3 id="1-平方数"><a href="#1-平方数" class="headerlink" title="1. 平方数"></a>1. 平方数</h3><h3 id="2-3-的-n-次方"><a href="#2-3-的-n-次方" class="headerlink" title="2. 3 的 n 次方"></a>2. 3 的 n 次方</h3><h3 id="3-乘积数组"><a href="#3-乘积数组" class="headerlink" title="3. 乘积数组"></a>3. 乘积数组</h3><h3 id="4-找出数组中的乘积最大的三个数"><a href="#4-找出数组中的乘积最大的三个数" class="headerlink" title="4. 找出数组中的乘积最大的三个数"></a>4. 找出数组中的乘积最大的三个数</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode06</title>
       <link href="/2022/06/23/LeetCode06/"/>
       <url>/2022/06/23/LeetCode06/</url>
@@ -1218,7 +1347,7 @@
       <link href="/2021/09/24/%E5%A6%82%E4%BD%95%E5%86%99blog/"/>
       <url>/2021/09/24/%E5%A6%82%E4%BD%95%E5%86%99blog/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://localhost:4000/">http://localhost:4000/</a></p><p><a href="https://blog.csdn.net/wizardforcel/article/details/40684953?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-40684953-blog-97758641.pc_relevant_antiscanv2&spm=1001.2101.3001.4242.1&utm_relevant_index=3">Hexo 入门指南（四） - 页面、导航、边栏、底栏</a></p><p><a href="https://hexo.io/themes/">https://hexo.io/themes/</a></p><p><a href="https://picx.xpoet.cn/#/management">https://picx.xpoet.cn/#/management</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="创建新blog"><a href="#创建新blog" class="headerlink" title="创建新blog"></a>创建新blog</h1><h2 id="个人博客学习总结"><a href="#个人博客学习总结" class="headerlink" title="个人博客学习总结"></a><a href="https://www.zhihu.com/column/c_1201860091307458560">个人博客学习总结</a></h2><p>基本可以按照这个流程走</p><p><a href="http://localhost:4000/">http://localhost:4000/</a></p><h2 id="hexo-美化"><a href="#hexo-美化" class="headerlink" title="hexo 美化"></a>hexo 美化</h2><p><a href="https://blog.csdn.net/wizardforcel/article/details/40684953?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-40684953-blog-97758641.pc_relevant_antiscanv2&spm=1001.2101.3001.4242.1&utm_relevant_index=3">Hexo 入门指南（四） - 页面、导航、边栏、底栏</a></p><p><a href="https://hexo.io/themes/">https://hexo.io/themes/</a></p><p><a href="https://picx.xpoet.cn/#/management">https://picx.xpoet.cn/#/management</a></p><p><a href="https://tholman.com/github-corners/">github corners</a></p><p><a href="http://www.fontawesome.com.cn/faicons/#web-application">图标</a></p><p><a href="https://hexo.io/zh-cn/docs/writing">https://hexo.io/zh-cn/docs/writing</a></p><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a><a href="https://zhuanlan.zhihu.com/p/26625249">流程</a></h2>]]></content>
       
       
       <categories>
