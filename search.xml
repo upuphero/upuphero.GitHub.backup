@@ -4,6 +4,95 @@
   
     
     <entry>
+      <title>13. Roman to Integer(easy)</title>
+      <link href="/2022/07/01/13/"/>
+      <url>/2022/07/01/13/</url>
+      
+        <content type="html"><![CDATA[<h1 id="13-Roman-to-Integer-easy"><a href="#13-Roman-to-Integer-easy" class="headerlink" title="13. Roman to Integer(easy)"></a>13. Roman to Integer(easy)</h1><h2 id="Roman-numerals-are-represented-by-seven-different-symbols-I-V-X-L-C-D-and-M"><a href="#Roman-numerals-are-represented-by-seven-different-symbols-I-V-X-L-C-D-and-M" class="headerlink" title="Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M."></a>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.</h2><h2 id="For-example-2-is-written-as-II-in-Roman-numeral-just-two-ones-added-together-12-is-written-as-XII-which-is-simply-X-II-The-number-27-is-written-as-XXVII-which-is-XX-V-II"><a href="#For-example-2-is-written-as-II-in-Roman-numeral-just-two-ones-added-together-12-is-written-as-XII-which-is-simply-X-II-The-number-27-is-written-as-XXVII-which-is-XX-V-II" class="headerlink" title="For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II."></a>For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.</h2><h2 id="Roman-numerals-are-usually-written-largest-to-smallest-from-left-to-right-However-the-numeral-for-four-is-not-IIII-Instead-the-number-four-is-written-as-IV-Because-the-one-is-before-the-five-we-subtract-it-making-four-The-same-principle-applies-to-the-number-nine-which-is-written-as-IX-There-are-six-instances-where-subtraction-is-used"><a href="#Roman-numerals-are-usually-written-largest-to-smallest-from-left-to-right-However-the-numeral-for-four-is-not-IIII-Instead-the-number-four-is-written-as-IV-Because-the-one-is-before-the-five-we-subtract-it-making-four-The-same-principle-applies-to-the-number-nine-which-is-written-as-IX-There-are-six-instances-where-subtraction-is-used" class="headerlink" title="Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:"></a>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:</h2><h2 id="I-can-be-placed-before-V-5-and-X-10-to-make-4-and-9"><a href="#I-can-be-placed-before-V-5-and-X-10-to-make-4-and-9" class="headerlink" title="I can be placed before V (5) and X (10) to make 4 and 9."></a>I can be placed before V (5) and X (10) to make 4 and 9.</h2><h2 id="X-can-be-placed-before-L-50-and-C-100-to-make-40-and-90"><a href="#X-can-be-placed-before-L-50-and-C-100-to-make-40-and-90" class="headerlink" title="X can be placed before L (50) and C (100) to make 40 and 90."></a>X can be placed before L (50) and C (100) to make 40 and 90.</h2><h2 id="C-can-be-placed-before-D-500-and-M-1000-to-make-400-and-900"><a href="#C-can-be-placed-before-D-500-and-M-1000-to-make-400-and-900" class="headerlink" title="C can be placed before D (500) and M (1000) to make 400 and 900."></a>C can be placed before D (500) and M (1000) to make 400 and 900.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Symbol       Value</span><br><span class="line">I             1</span><br><span class="line">V             5</span><br><span class="line">X             10</span><br><span class="line">L             50</span><br><span class="line">C             100</span><br><span class="line">D             500</span><br><span class="line">M             1000</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.cn/problems/roman-to-integer/solution/luo-ma-shu-zi-zhuan-zheng-shu-by-leetcod-w55p/">官方题解</a></p><p>这题的特点<br>通常情况下，罗马数字中小的数字在大的数字的右边。若输入的字符串满足该情况，那么可以将每个字符视作一个单独的值，累加每个字符对应的数值即可。</p><p>例如 XXVII 可视作 X+X+V+I+I=10+10+5+1+1=27。</p><p>若存在小的数字在大的数字的左边的情况，根据规则需要减去小的数字。对于这种情况，我们也可以将每个字符视作一个单独的值，若一个数字右侧的数字比它大，则将该数字的符号取反。</p><p>例如 XIV 可视作 X−I+V=10−1+5=14。</p><h3 id="但是评论里有超神思路："><a href="#但是评论里有超神思路：" class="headerlink" title="但是评论里有超神思路："></a>但是评论里有超神思路：</h3><p><a href="https://leetcode.cn/problems/roman-to-integer/solution/luo-ma-shu-zi-zhuan-zheng-shu-by-leetcod-w55p/1060752">从右到左遍历，记录当前遇到的最大的数字，遇到更大的就加，并且更新最大数，遇到小的就减，更好理解吧</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">romanToInt</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        mapping = &#123;</span><br><span class="line">            <span class="string">&#x27;I&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;V&#x27;</span>:<span class="number">5</span>,<span class="string">&#x27;X&#x27;</span>:<span class="number">10</span>,<span class="string">&#x27;L&#x27;</span>:<span class="number">50</span>,<span class="string">&#x27;C&#x27;</span>:<span class="number">100</span>,<span class="string">&#x27;D&#x27;</span>:<span class="number">500</span>,<span class="string">&#x27;M&#x27;</span>:<span class="number">1000</span></span><br><span class="line">        &#125;</span><br><span class="line">        highestLevel = <span class="number">1</span></span><br><span class="line">        result = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> ch <span class="keyword">in</span> s[::-<span class="number">1</span>]:</span><br><span class="line">            level = mapping[ch]</span><br><span class="line">            <span class="keyword">if</span> level &gt;= highestLevel:</span><br><span class="line">                result += level</span><br><span class="line">                highestLevel = level</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                result -= level</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Palindrome Number </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>9. Palindrome Number(easy)</title>
+      <link href="/2022/07/01/9/"/>
+      <url>/2022/07/01/9/</url>
+      
+        <content type="html"><![CDATA[<h1 id="9-Palindrome-Number-easy"><a href="#9-Palindrome-Number-easy" class="headerlink" title="9. Palindrome Number(easy)"></a>9. Palindrome Number(easy)</h1><h2 id="Given-an-integer-x-return-true-if-x-is-palindrome-integer"><a href="#Given-an-integer-x-return-true-if-x-is-palindrome-integer" class="headerlink" title="Given an integer x, return true if x is palindrome integer."></a>Given an integer x, return true if x is palindrome integer.</h2><h2 id="An-integer-is-a-palindrome-when-it-reads-the-same-backward-as-forward"><a href="#An-integer-is-a-palindrome-when-it-reads-the-same-backward-as-forward" class="headerlink" title="An integer is a palindrome when it reads the same backward as forward."></a>An integer is a palindrome when it reads the same backward as forward.</h2><h2 id="For-example-121-is-a-palindrome-while-123-is-not"><a href="#For-example-121-is-a-palindrome-while-123-is-not" class="headerlink" title="For example, 121 is a palindrome while 123 is not."></a>For example, 121 is a palindrome while 123 is not.</h2><p>找到回文数</p><h2 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/palindrome-number/solution/hui-wen-shu-by-leetcode-solution/">官方题解</a></h2><p>反转一半数字<br>思路</p><p>映入脑海的第一个想法是将数字转换为字符串，并检查字符串是否为回文。但是，这需要额外的非常量空间来创建问题描述中所不允许的字符串。</p><p>第二个想法是将数字本身反转，然后将反转后的数字与原始数字进行比较，如果它们是相同的，那么这个数字就是回文。<br>但是，如果反转后的数字大于 int.MAX，我们将遇到整数溢出问题。</p><p>按照第二个想法，为了避免数字反转可能导致的溢出问题，为什么不考虑只反转 int 数字的一半？毕竟，如果该数字是回文，其后半部分反转后应该与原始数字的前半部分相同。</p><p>例如，输入 1221，我们可以将数字 “1221” 的后半部分从 “21” 反转为 “12”，并将其与前半部分 “12” 进行比较，因为二者相同，我们得知数字 1221 是回文。</p><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>首先，我们应该处理一些临界情况。所有负数都不可能是回文，例如：-123 不是回文，因为 - 不等于 3。所以我们可以对所有负数返回 false。除了 0 以外，所有个位是 0 的数字不可能是回文，因为最高位不等于 0。所以我们可以对所有大于 0 且个位是 0 的数字返回 false。</p><p>现在，让我们来考虑如何反转后半部分的数字。</p><p>对于数字 1221，如果执行 1221 % 10，我们将得到最后一位数字 1，要得到倒数第二位数字，我们可以先通过除以 10 把最后一位数字从 1221 中移除，1221 / 10 = 122，再求出上一步结果除以 10 的余数，122 % 10 = 2，就可以得到倒数第二位数字。如果我们把最后一位数字乘以 10，再加上倒数第二位数字，1 * 10 + 2 = 12，就得到了我们想要的反转后的数字。如果继续这个过程，我们将得到更多位数的反转数字。</p><p>现在的问题是，我们如何知道反转数字的位数已经达到原始数字位数的一半？</p><p>由于整个过程我们不断将原始数字除以 10，然后给反转后的数字乘上 10，所以，当原始数字小于或等于反转后的数字时，就意味着我们已经处理了一半位数的数字了。</p><p>根据官方题解改的python代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPalindrome</span>(<span class="params">self, x: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="keyword">if</span> x &lt; <span class="number">0</span> <span class="keyword">or</span> (x % <span class="number">10</span> == <span class="number">0</span> <span class="keyword">and</span> x != <span class="number">0</span>):</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        revertedNumber = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> x &gt; revertedNumber:</span><br><span class="line">            revertedNumber = revertedNumber * <span class="number">10</span> + x % <span class="number">10</span></span><br><span class="line">            x //= <span class="number">10</span></span><br><span class="line">        <span class="keyword">return</span> x == revertedNumber <span class="keyword">or</span> x == revertedNumber // <span class="number">10</span>        </span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Palindrome Number </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>15. 3Sum(medium)</title>
+      <link href="/2022/07/01/15/"/>
+      <url>/2022/07/01/15/</url>
+      
+        <content type="html"><![CDATA[<h1 id="15-3Sum-medium"><a href="#15-3Sum-medium" class="headerlink" title="15. 3Sum(medium)"></a>15. 3Sum(medium)</h1><h2 id="Given-an-integer-array-nums-return-all-the-triplets-nums-i-nums-j-nums-k-such-that-i-j-i-k-and-j-k-and-nums-i-nums-j-nums-k-0"><a href="#Given-an-integer-array-nums-return-all-the-triplets-nums-i-nums-j-nums-k-such-that-i-j-i-k-and-j-k-and-nums-i-nums-j-nums-k-0" class="headerlink" title="Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0."></a>Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.</h2><h2 id="Notice-that-the-solution-set-must-not-contain-duplicate-triplets"><a href="#Notice-that-the-solution-set-must-not-contain-duplicate-triplets" class="headerlink" title="Notice that the solution set must not contain duplicate triplets."></a>Notice that the solution set must not contain duplicate triplets.</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">threeSum</span>(<span class="params">self, nums</span>):</span></span><br><span class="line">    nums.sort()</span><br><span class="line">    result = []</span><br><span class="line">    <span class="keyword">for</span> left <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums) - <span class="number">2</span>): <span class="comment"># renamed this to left because this will always be the leftmost pointer in the triplet</span></span><br><span class="line">        <span class="keyword">if</span> left &gt; <span class="number">0</span> <span class="keyword">and</span> nums[left] == nums[left - <span class="number">1</span>]: <span class="comment"># this step makes sure that we do not have any duplicates in our result output</span></span><br><span class="line">            <span class="keyword">continue</span> </span><br><span class="line">        mid = left + <span class="number">1</span> <span class="comment"># renamed this to mid because this is the pointer that is between the left and right pointers</span></span><br><span class="line">        right = <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> mid &lt; right:</span><br><span class="line">            curr_sum = nums[left] + nums[mid] + nums[right]</span><br><span class="line">            <span class="keyword">if</span> curr_sum &lt; <span class="number">0</span>:</span><br><span class="line">                mid += <span class="number">1</span> </span><br><span class="line">            <span class="keyword">elif</span> curr_sum &gt; <span class="number">0</span>:</span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                result.append([nums[left], nums[mid], nums[right]])</span><br><span class="line">                <span class="keyword">while</span> mid &lt; right <span class="keyword">and</span> nums[mid] == nums[mid + <span class="number">1</span>]: <span class="comment"># Another conditional for not calculating duplicates</span></span><br><span class="line">                    mid += <span class="number">1</span></span><br><span class="line">                <span class="keyword">while</span> mid &lt; right <span class="keyword">and</span> nums[right] == nums[right - <span class="number">1</span>]: <span class="comment"># Avoiding duplicates check</span></span><br><span class="line">                    right -= <span class="number">1</span></span><br><span class="line">                mid += <span class="number">1</span></span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> two-pointers </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> hashmap </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>11</title>
       <link href="/2022/07/01/11/"/>
       <url>/2022/07/01/11/</url>
@@ -66,7 +155,7 @@
     
     
     <entry>
-      <title>LeetCode09</title>
+      <title>LeetCode09-hashmap</title>
       <link href="/2022/06/28/LeetCode09/"/>
       <url>/2022/06/28/LeetCode09/</url>
       
@@ -91,7 +180,7 @@
     
     
     <entry>
-      <title>LeetCode08</title>
+      <title>LeetCode08-动态规划</title>
       <link href="/2022/06/28/LeetCode08/"/>
       <url>/2022/06/28/LeetCode08/</url>
       
@@ -170,7 +259,7 @@
     
     
     <entry>
-      <title>LeetCode07</title>
+      <title>LeetCode07-数学</title>
       <link href="/2022/06/26/LeetCode07/"/>
       <url>/2022/06/26/LeetCode07/</url>
       
@@ -195,7 +284,7 @@
     
     
     <entry>
-      <title>LeetCode06</title>
+      <title>LeetCode06-搜索</title>
       <link href="/2022/06/23/LeetCode06/"/>
       <url>/2022/06/23/LeetCode06/</url>
       
