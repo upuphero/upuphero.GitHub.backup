@@ -24,7 +24,7 @@
 
   
 
-  <title>LeetCode08-动态规划 | 八角书屋</title>
+  <title>Leetcode05- 二分查找 | 八角书屋</title>
 
   
 
@@ -48,7 +48,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://cdn.staticaly.com/gh/upuphero/image-hosting@master/2018-06-25-195100.24pxjb0lbwxs.webp)"></div>
+    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/7.5eab3kyv9fw0.webp)"></div>
   
 
   <!-- navbar -->
@@ -97,11 +97,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">LeetCode08-动态规划</h1>
+          <h1 class="title-wrap">Leetcode05- 二分查找</h1>
           <h2 class="title-sub-wrap">
             <strong>leaf</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2022-06-29T03:14:48.000Z" itemprop="datePublished">2022-06-28</time>
+            <time  class="article-date" datetime="2022-06-16T14:12:48.000Z" itemprop="datePublished">2022-06-16</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -134,12 +134,12 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h6 id="具体学习链接-Leetcode-题解-目录-md"><a href="#具体学习链接-Leetcode-题解-目录-md" class="headerlink" title="具体学习链接:Leetcode 题解 - 目录.md"></a>具体学习链接:<a target="_blank" rel="noopener" href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.md">Leetcode 题解 - 目录.md</a></h6><h1 id="Leetcode-题解-动态规划"><a href="#Leetcode-题解-动态规划" class="headerlink" title="Leetcode 题解 - 动态规划"></a>Leetcode 题解 - 动态规划</h1><h2 id="素数分解"><a href="#素数分解" class="headerlink" title="素数分解"></a>素数分解</h2><p>每一个数都可以分解成素数的乘积</p>
-<h2 id="整除"><a href="#整除" class="headerlink" title="整除"></a>整除</h2><p>令 x = 2m0 * 3m1 * 5m2 * 7m3 * 11m4 * …</p>
-<p>令 y = 2n0 * 3n1 * 5n2 * 7n3 * 11n4 * …</p>
-<p>如果 x 整除 y（y mod x == 0），则对于所有 i，mi &lt;= ni。</p>
-<h2 id="最大公约数最小公倍数"><a href="#最大公约数最小公倍数" class="headerlink" title="最大公约数最小公倍数"></a>最大公约数最小公倍数</h2><p>x 和 y 的最大公约数为：gcd(x,y) = 2min(m0,n0) * 3min(m1,n1) * 5min(m2,n2) * …</p>
-<p>x 和 y 的最小公倍数为：lcm(x,y) = 2max(m0,n0) * 3max(m1,n1) * 5max(m2,n2) * …</p>
+        <h6 id="具体学习链接-Leetcode-题解-目录-md"><a href="#具体学习链接-Leetcode-题解-目录-md" class="headerlink" title="具体学习链接:Leetcode 题解 - 目录.md"></a>具体学习链接:<a target="_blank" rel="noopener" href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.md">Leetcode 题解 - 目录.md</a></h6><h1 id="Leetcode-题解-二分查找"><a href="#Leetcode-题解-二分查找" class="headerlink" title="Leetcode 题解 - 二分查找"></a>Leetcode 题解 - 二分查找</h1><h2 id="1-求开方"><a href="#1-求开方" class="headerlink" title="1. 求开方"></a>1. 求开方</h2><h2 id="2-大于给定元素的最小元素"><a href="#2-大于给定元素的最小元素" class="headerlink" title="2. 大于给定元素的最小元素"></a>2. 大于给定元素的最小元素</h2><h2 id="3-有序数组的-Single-Element"><a href="#3-有序数组的-Single-Element" class="headerlink" title="3. 有序数组的 Single Element"></a>3. 有序数组的 Single Element</h2><h2 id="4-第一个错误的版本"><a href="#4-第一个错误的版本" class="headerlink" title="4. 第一个错误的版本"></a>4. 第一个错误的版本</h2><h2 id="5-旋转数组的最小数字"><a href="#5-旋转数组的最小数字" class="headerlink" title="5. 旋转数组的最小数字"></a>5. 旋转数组的最小数字</h2><h2 id="6-查找区间"><a href="#6-查找区间" class="headerlink" title="6. 查找区间"></a>6. 查找区间</h2><p>二分查找 binary search algorithm</p>
+<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>二分查找也称为折半查找，每次都能将查找区间减半，这种折半特性的算法时间复杂度为 O(logN)。</p>
+<h2 id="m-计算"><a href="#m-计算" class="headerlink" title="m 计算"></a>m 计算</h2><p>有两种计算中值 m 的方式：</p>
+<p>m = (l + h) / 2<br>m = l + (h - l) / 2<br>l + h 可能出现加法溢出，也就是说加法的结果大于整型能够表示的范围。但是 l 和 h 都为正数，因此 h - l 不会出现加法溢出问题。所以，最好使用第二种计算法方法。</p>
+<h2 id="未成功查找的返回值"><a href="#未成功查找的返回值" class="headerlink" title="未成功查找的返回值"></a>未成功查找的返回值</h2><p>循环退出时如果仍然没有查找到 key，那么表示查找失败。可以有两种返回值：</p>
+<p>-1：以一个错误码表示没有查找到 key<br>l：将 key 插入到 nums 中的正确位置</p>
 
       </section>
 
@@ -150,12 +150,12 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/2018-07-02-124605.1ywp1fs82fz4.webp"></div>
+      <div class="card-cover" background-image-lazy data-img="https://raw.githubusercontent.com/upuphero/image-hosting/master/allied.20xk4cunkzb4.webp"></div>
     
     <div class="card-text">
       
-        <a href="/2022/06/28/LeetCode09/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">LeetCode09-hashmap</h2>
+        <a href="/2022/06/16/69/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">69. Sqrt(x) (Easy)</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -167,12 +167,12 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/23.6z90ni4b5uk0.webp"></div>
+      <div class="card-cover" background-image-lazy data-img="https://raw.githubusercontent.com/upuphero/image-hosting/master/Nora.443tik99pe2.webp"></div>
     
     <div class="card-text">
       
-        <a href="/2022/06/27/914/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">914</h2>
+        <a href="/2022/06/13/763/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">763. Partition Labels (Medium)</h2>
         </a>
       
       <div class="card-text--row">Older</div>
@@ -214,7 +214,7 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>56</span>
+        <span>57</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -266,7 +266,7 @@
       
         <li class="categorys-list-item">
           <a href="/categories/study/">
-            study (50)
+            study (51)
           </a>
         </li>
       
@@ -283,7 +283,7 @@
   </div>
   <div class="widget-body">
     <div class="tags-cloud">
-      <a href="/tags/Dynamic-Programming/" style="font-size: 15.71px;" class="tags-cloud-6">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;" class="tags-cloud-0">Greatest common divisor </a> <a href="/tags/Heap-Sort/" style="font-size: 10px;" class="tags-cloud-0">Heap Sort</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;" class="tags-cloud-0">Palindrome Number</a> <a href="/tags/Python/" style="font-size: 18.57px;" class="tags-cloud-9">Python</a> <a href="/tags/Quick-Sort/" style="font-size: 11.43px;" class="tags-cloud-1">Quick Sort</a> <a href="/tags/binary-search-algorithm/" style="font-size: 14.29px;" class="tags-cloud-4">binary search algorithm</a> <a href="/tags/divide-and-conquer/" style="font-size: 11.43px;" class="tags-cloud-1">divide and conquer</a> <a href="/tags/game/" style="font-size: 11.43px;" class="tags-cloud-1">game</a> <a href="/tags/greedy-algorithm/" style="font-size: 17.14px;" class="tags-cloud-7">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 14.29px;" class="tags-cloud-4">hashmap</a> <a href="/tags/leetcode/" style="font-size: 20px;" class="tags-cloud-10">leetcode</a> <a href="/tags/life/" style="font-size: 11.43px;" class="tags-cloud-1">life</a> <a href="/tags/list/" style="font-size: 10px;" class="tags-cloud-0">list</a> <a href="/tags/mapping/" style="font-size: 10px;" class="tags-cloud-0">mapping</a> <a href="/tags/prime-number/" style="font-size: 10px;" class="tags-cloud-0">prime number</a> <a href="/tags/schedule/" style="font-size: 10px;" class="tags-cloud-0">schedule</a> <a href="/tags/skills/" style="font-size: 10px;" class="tags-cloud-0">skills</a> <a href="/tags/sort/" style="font-size: 10px;" class="tags-cloud-0">sort</a> <a href="/tags/topk/" style="font-size: 12.86px;" class="tags-cloud-3">topk</a> <a href="/tags/two-pointers/" style="font-size: 17.14px;" class="tags-cloud-7">two-pointers</a>
+      <a href="/tags/Dynamic-Programming/" style="font-size: 15.71px;" class="tags-cloud-6">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;" class="tags-cloud-0">Greatest common divisor </a> <a href="/tags/Heap-Sort/" style="font-size: 10px;" class="tags-cloud-0">Heap Sort</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;" class="tags-cloud-0">Palindrome Number</a> <a href="/tags/Python/" style="font-size: 18.57px;" class="tags-cloud-9">Python</a> <a href="/tags/Quick-Sort/" style="font-size: 11.43px;" class="tags-cloud-1">Quick Sort</a> <a href="/tags/binary-search-algorithm/" style="font-size: 14.29px;" class="tags-cloud-4">binary search algorithm</a> <a href="/tags/divide-and-conquer/" style="font-size: 11.43px;" class="tags-cloud-1">divide and conquer</a> <a href="/tags/game/" style="font-size: 11.43px;" class="tags-cloud-1">game</a> <a href="/tags/greedy-algorithm/" style="font-size: 17.14px;" class="tags-cloud-7">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 14.29px;" class="tags-cloud-4">hashmap</a> <a href="/tags/leetcode/" style="font-size: 20px;" class="tags-cloud-10">leetcode</a> <a href="/tags/life/" style="font-size: 11.43px;" class="tags-cloud-1">life</a> <a href="/tags/list/" style="font-size: 10px;" class="tags-cloud-0">list</a> <a href="/tags/mapping/" style="font-size: 11.43px;" class="tags-cloud-1">mapping</a> <a href="/tags/prime-number/" style="font-size: 10px;" class="tags-cloud-0">prime number</a> <a href="/tags/schedule/" style="font-size: 10px;" class="tags-cloud-0">schedule</a> <a href="/tags/skills/" style="font-size: 10px;" class="tags-cloud-0">skills</a> <a href="/tags/sort/" style="font-size: 10px;" class="tags-cloud-0">sort</a> <a href="/tags/topk/" style="font-size: 12.86px;" class="tags-cloud-3">topk</a> <a href="/tags/two-pointers/" style="font-size: 17.14px;" class="tags-cloud-7">two-pointers</a>
     </div>
   </div>
 </section>
