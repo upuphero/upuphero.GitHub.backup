@@ -234,11 +234,11 @@
     
     
     <entry>
-      <title>914</title>
+      <title>914. X of a Kind in a Deck of Cards</title>
       <link href="/2022/06/27/914/"/>
       <url>/2022/06/27/914/</url>
       
-        <content type="html"><![CDATA[<ol start="914"><li>卡牌分组</li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="914-X-of-a-Kind-in-a-Deck-of-Cards"><a href="#914-X-of-a-Kind-in-a-Deck-of-Cards" class="headerlink" title="914. X of a Kind in a Deck of Cards"></a>914. X of a Kind in a Deck of Cards</h1><h2 id="In-a-deck-of-cards-each-card-has-an-integer-written-on-it"><a href="#In-a-deck-of-cards-each-card-has-an-integer-written-on-it" class="headerlink" title="In a deck of cards, each card has an integer written on it."></a>In a deck of cards, each card has an integer written on it.</h2><h2 id="Return-true-if-and-only-if-you-can-choose-X-gt-2-such-that-it-is-possible-to-split-the-entire-deck-into-1-or-more-groups-of-cards-where"><a href="#Return-true-if-and-only-if-you-can-choose-X-gt-2-such-that-it-is-possible-to-split-the-entire-deck-into-1-or-more-groups-of-cards-where" class="headerlink" title="Return true if and only if you can choose X &gt;= 2 such that it is possible to split the entire deck into 1 or more groups of cards, where:"></a>Return true if and only if you can choose X &gt;= 2 such that it is possible to split the entire deck into 1 or more groups of cards, where:</h2><h2 id="Each-group-has-exactly-X-cards"><a href="#Each-group-has-exactly-X-cards" class="headerlink" title="Each group has exactly X cards."></a>Each group has exactly X cards.</h2><h2 id="All-the-cards-in-each-group-have-the-same-integer"><a href="#All-the-cards-in-each-group-have-the-same-integer" class="headerlink" title="All the cards in each group have the same integer."></a>All the cards in each group have the same integer.</h2>]]></content>
       
       
       <categories>
@@ -950,9 +950,9 @@
     
     
     <entry>
-      <title>LeetCode04贪心思想</title>
-      <link href="/2022/06/09/LeetCode04/"/>
-      <url>/2022/06/09/LeetCode04/</url>
+      <title>LeetCode04-贪心思想</title>
+      <link href="/2022/06/09/LeetCode04-%E8%B4%AA%E5%BF%83%E6%80%9D%E6%83%B3/"/>
+      <url>/2022/06/09/LeetCode04-%E8%B4%AA%E5%BF%83%E6%80%9D%E6%83%B3/</url>
       
         <content type="html"><![CDATA[<h6 id="具体学习链接-Leetcode-题解-目录-md"><a href="#具体学习链接-Leetcode-题解-目录-md" class="headerlink" title="具体学习链接:Leetcode 题解 - 目录.md"></a>具体学习链接:<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E8%B4%AA%E5%BF%83%E6%80%9D%E6%83%B3.md">Leetcode 题解 - 目录.md</a></h6><h1 id="Leetcode-题解-贪心思想"><a href="#Leetcode-题解-贪心思想" class="headerlink" title="Leetcode 题解 - 贪心思想"></a>Leetcode 题解 - 贪心思想</h1><h2 id="1-分配饼干"><a href="#1-分配饼干" class="headerlink" title="1. 分配饼干"></a>1. 分配饼干</h2><h2 id="2-不重叠的区间个数"><a href="#2-不重叠的区间个数" class="headerlink" title="2. 不重叠的区间个数"></a>2. 不重叠的区间个数</h2><h2 id="3-投飞镖刺破气球"><a href="#3-投飞镖刺破气球" class="headerlink" title="3. 投飞镖刺破气球"></a>3. 投飞镖刺破气球</h2><h2 id="4-根据身高和序号重组队列"><a href="#4-根据身高和序号重组队列" class="headerlink" title="4. 根据身高和序号重组队列"></a>4. 根据身高和序号重组队列</h2><h2 id="5-买卖股票最大的收益"><a href="#5-买卖股票最大的收益" class="headerlink" title="5. 买卖股票最大的收益"></a>5. 买卖股票最大的收益</h2><h2 id="6-买卖股票的最大收益-II"><a href="#6-买卖股票的最大收益-II" class="headerlink" title="6. 买卖股票的最大收益 II"></a>6. 买卖股票的最大收益 II</h2><h2 id="7-种植花朵"><a href="#7-种植花朵" class="headerlink" title="7. 种植花朵"></a>7. 种植花朵</h2><h2 id="8-判断是否为子序列"><a href="#8-判断是否为子序列" class="headerlink" title="8. 判断是否为子序列"></a>8. 判断是否为子序列</h2><h2 id="9-修改一个数成为非递减数组"><a href="#9-修改一个数成为非递减数组" class="headerlink" title="9. 修改一个数成为非递减数组"></a>9. 修改一个数成为非递减数组</h2><h2 id="10-子数组最大的和"><a href="#10-子数组最大的和" class="headerlink" title="10. 子数组最大的和"></a>10. 子数组最大的和</h2><h2 id="11-分隔字符串使同种字符出现在一起"><a href="#11-分隔字符串使同种字符出现在一起" class="headerlink" title="11. 分隔字符串使同种字符出现在一起"></a>11. 分隔字符串使同种字符出现在一起</h2><p>保证每次操作都是局部最优的，并且最后得到的结果是全局最优的。</p>]]></content>
       
@@ -1099,9 +1099,9 @@
     
     
     <entry>
-      <title>LeetCode03排序</title>
-      <link href="/2022/06/03/LeetCode03/"/>
-      <url>/2022/06/03/LeetCode03/</url>
+      <title>LeetCode03-排序</title>
+      <link href="/2022/06/03/LeetCode03-%E6%8E%92%E5%BA%8F/"/>
+      <url>/2022/06/03/LeetCode03-%E6%8E%92%E5%BA%8F/</url>
       
         <content type="html"><![CDATA[<h6 id="具体学习链接-Leetcode-题解-目录-md"><a href="#具体学习链接-Leetcode-题解-目录-md" class="headerlink" title="具体学习链接:Leetcode 题解 - 目录.md"></a>具体学习链接:<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E7%9B%AE%E5%BD%95.md">Leetcode 题解 - 目录.md</a></h6><h1 id="Leetcode-题解-排序"><a href="#Leetcode-题解-排序" class="headerlink" title="Leetcode 题解 - 排序"></a>Leetcode 题解 - 排序</h1><h2 id="1-快速选择"><a href="#1-快速选择" class="headerlink" title="1. 快速选择"></a>1. 快速选择</h2><h2 id="2-堆-Kth-Element"><a href="#2-堆-Kth-Element" class="headerlink" title="2. 堆-Kth Element"></a>2. 堆-Kth Element</h2><h2 id="3-桶排序"><a href="#3-桶排序" class="headerlink" title="3. 桶排序"></a>3. 桶排序</h2><h2 id="4-荷兰国旗问题"><a href="#4-荷兰国旗问题" class="headerlink" title="4. 荷兰国旗问题"></a>4. 荷兰国旗问题</h2><ol><li>快速选择（快速排序）</li></ol><p>用于求解 Kth Element 问题，也就是第 K 个元素的问题。</p><p>快速选择算法是基于快速排序算法思想的用于解决Top K 问题的算法</p><p>可以使用快速排序的 partition() 进行实现。需要先打乱数组，否则最坏情况下时间复杂度为 O(N2)。</p><p>步骤：<br>a. 从数列中挑出一个元素，称为 “基准”（pivot）;</p><p>b. 重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；</p><p>c. 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序；</p><ol start="2"><li>堆排序</li></ol><p>用于求解 TopK Elements 问题，也就是 K 个最小元素的问题。使用最小堆来实现 TopK 问题，最小堆使用大顶堆来实现，大顶堆的堆顶元素为当前堆的最大元素。实现过程：不断地往大顶堆中插入新元素，当堆中元素的数量大于 k 时，移除堆顶元素，也就是当前堆中最大的元素，剩下的元素都为当前添加过的元素中最小的 K 个元素。插入和移除堆顶元素的时间复杂度都为 log2N。</p><p>堆也可以用于求解 Kth Element 问题，得到了大小为 K 的最小堆之后，因为使用了大顶堆来实现，因此堆顶元素就是第 K 大的元素。</p><p>快速选择也可以求解 TopK Elements 问题，因为找到 Kth Element 之后，再遍历一次数组，所有小于等于 Kth Element 的元素都是 TopK Elements。</p><p>可以看到，快速选择和堆排序都可以求解 Kth Element 和 TopK Elements 问题。</p><ol start="3"><li>桶排序<br>桶排序，简单来说就是将待排序序列，按照序列值的大小划分成几个桶，分别对每组进行排序，排完序之后再按照一定的顺序合并所有的桶，即排序完成。</li></ol><p>对这道题而言，设置若干个桶，每个桶存储出现频率相同的数。桶的下标表示数出现的频率，即第 i 个桶中存储的数出现的频率为 i。</p><p>把数都放到桶之后，从后向前遍历桶，最先得到的 k 个数就是出现频率最多的的 k 个数。</p><ol start="4"><li>荷兰国旗问题</li></ol><p>“荷兰国旗问题” 是计算机科学中的一个经典题目，它是由Edsger Dijkstra提出的。荷兰国旗由红、白、蓝三色组成。</p><p>荷兰国旗问题：现在有若干个红、白、蓝三种颜色的球随机排列成一条直线。现在我们的任务是把这些球按照红、白、蓝排序。</p><p>这个问题之所以叫荷兰国旗，是因为我们可以将红白蓝三色小球想象成条状物，有序排列后正好组成荷兰国旗。</p>]]></content>
       
@@ -1354,9 +1354,9 @@
     
     
     <entry>
-      <title>LeetCode02  双指针</title>
-      <link href="/2022/05/25/LeetCode02/"/>
-      <url>/2022/05/25/LeetCode02/</url>
+      <title>LeetCode02-指针</title>
+      <link href="/2022/05/25/LeetCode02-%E6%8C%87%E9%92%88/"/>
+      <url>/2022/05/25/LeetCode02-%E6%8C%87%E9%92%88/</url>
       
         <content type="html"><![CDATA[<p>第二篇学习笔记，换一个思路尝试学习</p><h6 id="具体学习链接-Leetcode-题解-目录-md"><a href="#具体学习链接-Leetcode-题解-目录-md" class="headerlink" title="具体学习链接:Leetcode 题解 - 目录.md"></a>具体学习链接:<a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E7%9B%AE%E5%BD%95.md">Leetcode 题解 - 目录.md</a></h6><h1 id="Leetcode-题解-双指针"><a href="#Leetcode-题解-双指针" class="headerlink" title="Leetcode 题解 - 双指针"></a>Leetcode 题解 - 双指针</h1><h2 id="1-有序数组的-Two-Sum"><a href="#1-有序数组的-Two-Sum" class="headerlink" title="1. 有序数组的 Two Sum"></a>1. 有序数组的 Two Sum</h2><h2 id="2-两数平方和"><a href="#2-两数平方和" class="headerlink" title="2. 两数平方和"></a>2. 两数平方和</h2><h2 id="3-反转字符串中的元音字符"><a href="#3-反转字符串中的元音字符" class="headerlink" title="3. 反转字符串中的元音字符"></a>3. 反转字符串中的元音字符</h2><h2 id="4-回文字符串"><a href="#4-回文字符串" class="headerlink" title="4. 回文字符串"></a>4. 回文字符串</h2><h2 id="5-归并两个有序数组"><a href="#5-归并两个有序数组" class="headerlink" title="5. 归并两个有序数组"></a>5. 归并两个有序数组</h2><h2 id="6-判断链表是否存在环"><a href="#6-判断链表是否存在环" class="headerlink" title="6. 判断链表是否存在环"></a>6. 判断链表是否存在环</h2><h2 id="7-最长子序列"><a href="#7-最长子序列" class="headerlink" title="7. 最长子序列"></a>7. 最长子序列</h2><h2 id="双指针类型"><a href="#双指针类型" class="headerlink" title="双指针类型"></a>双指针类型</h2><p>对撞指针：两个指针方向相反。适合解决查找有序数组中满足某些约束条件的一组元素问题、字符串反转问题。<br>快慢指针：两个指针方向相同。适合解决数组中的移动、删除元素问题，或者链表中的判断是否有环、长度问题。<br>分离双指针：两个指针分别属于不同的数组 / 链表。适合解决有序数组合并，求交集、并集问题。</p><p>双指针主要用于遍历数组，两个指针指向不同的元素，从而协同完成任务。</p><p>对撞指针：两个指针方向相反。适合解决查找有序数组中满足某些约束条件的一组元素问题、字符串反转问题。</p><h2 id="相关题目"><a href="#相关题目" class="headerlink" title="相关题目"></a>相关题目</h2><ol><li><p>Two Sum</p></li><li><p>Two Sum II - Input Array Is Sorted两数之和 II - 输入有序数组 </p></li></ol><ol start="125"><li>验证回文串</li></ol><ol start="344"><li><p>Reverse String</p></li><li><p>Remove Duplicates from Sorted Array</p></li></ol>]]></content>
       
