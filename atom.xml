@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-17T03:55:30.984Z</updated>
+  <updated>2022-08-18T03:44:32.221Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,96 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>101. Symmetric Tree (Easy)</title>
+    <link href="http://example.com/2022/08/17/101/"/>
+    <id>http://example.com/2022/08/17/101/</id>
+    <published>2022-08-18T03:42:45.000Z</published>
+    <updated>2022-08-18T03:44:32.221Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="101-Symmetric-Tree-Easy"><a href="#101-Symmetric-Tree-Easy" class="headerlink" title="101. Symmetric Tree (Easy)"></a>101. Symmetric Tree (Easy)</h1><h2 id="Given-the-root-of-a-binary-tree-check-whether-it-is-a-mirror-of-itself-i-e-symmetric-around-its-center"><a href="#Given-the-root-of-a-binary-tree-check-whether-it-is-a-mirror-of-itself-i-e-symmetric-around-its-center" class="headerlink" title="Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center)."></a>Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isSymmetric</span>(<span class="params">self, root</span>):</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">:type root: TreeNode</span></span><br><span class="line"><span class="string">:rtype: bool</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line"><span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dfs</span>(<span class="params">left,right</span>):</span></span><br><span class="line"><span class="comment"># 递归的终止条件是两个节点都为空</span></span><br><span class="line"><span class="comment"># 或者两个节点中有一个为空</span></span><br><span class="line"><span class="comment"># 或者两个节点的值不相等</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> (left <span class="keyword">or</span> right):</span><br><span class="line"><span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> (left <span class="keyword">and</span> right):</span><br><span class="line"><span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"><span class="keyword">if</span> left.val!=right.val:</span><br><span class="line"><span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"><span class="keyword">return</span> dfs(left.left,right.right) <span class="keyword">and</span> dfs(left.right,right.left)</span><br><span class="line"><span class="comment"># 用递归函数，比较左节点，右节点</span></span><br><span class="line"><span class="keyword">return</span> dfs(root.left,root.right)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;101-Symmetric-Tree-Easy&quot;&gt;&lt;a href=&quot;#101-Symmetric-Tree-Easy&quot; class=&quot;headerlink&quot; title=&quot;101. Symmetric Tree (Easy)&quot;&gt;&lt;/a&gt;101. Symmetric</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="Linked list" scheme="http://example.com/tags/Linked-list/"/>
+    
+    <category term="recursion" scheme="http://example.com/tags/recursion/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>572. Subtree of Another Tree (Easy)</title>
+    <link href="http://example.com/2022/08/17/572/"/>
+    <id>http://example.com/2022/08/17/572/</id>
+    <published>2022-08-18T03:39:46.000Z</published>
+    <updated>2022-08-18T03:41:49.697Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="572-Subtree-of-Another-Tree-Easy"><a href="#572-Subtree-of-Another-Tree-Easy" class="headerlink" title="572. Subtree of Another Tree (Easy)"></a>572. Subtree of Another Tree (Easy)</h1><h2 id="Given-the-roots-of-two-binary-trees-root-and-subRoot-return-true-if-there-is-a-subtree-of-root-with-the-same-structure-and-node-values-of-subRoot-and-false-otherwise"><a href="#Given-the-roots-of-two-binary-trees-root-and-subRoot-return-true-if-there-is-a-subtree-of-root-with-the-same-structure-and-node-values-of-subRoot-and-false-otherwise" class="headerlink" title="Given the roots of two binary trees root and subRoot, return true if there is a subtree of root with the same structure and node values of subRoot and false otherwise."></a>Given the roots of two binary trees root and subRoot, return true if there is a subtree of root with the same structure and node values of subRoot and false otherwise.</h2><h2 id="A-subtree-of-a-binary-tree-tree-is-a-tree-that-consists-of-a-node-in-tree-and-all-of-this-node’s-descendants-The-tree-tree-could-also-be-considered-as-a-subtree-of-itself"><a href="#A-subtree-of-a-binary-tree-tree-is-a-tree-that-consists-of-a-node-in-tree-and-all-of-this-node’s-descendants-The-tree-tree-could-also-be-considered-as-a-subtree-of-itself" class="headerlink" title="A subtree of a binary tree tree is a tree that consists of a node in tree and all of this node’s descendants. The tree tree could also be considered as a subtree of itself."></a>A subtree of a binary tree tree is a tree that consists of a node in tree and all of this node’s descendants. The tree tree could also be considered as a subtree of itself.</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isSubtree</span>(<span class="params">self, root, subRoot</span>) :</span></span><br><span class="line">        queue = [root]</span><br><span class="line">        <span class="keyword">while</span> <span class="built_in">len</span>(queue) &gt; <span class="number">0</span>:</span><br><span class="line">            curr = queue.pop(<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">if</span> curr.val == subRoot.val :</span><br><span class="line">                <span class="keyword">if</span> self.compare(curr,subRoot):</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">if</span> curr.right:</span><br><span class="line">                queue.append(curr.right)</span><br><span class="line">            <span class="keyword">if</span> curr.left:</span><br><span class="line">                queue.append(curr.left)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">compare</span>(<span class="params">self,curr,subRoot</span>):</span></span><br><span class="line">        <span class="keyword">if</span> curr <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">and</span> subRoot <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">elif</span> <span class="keyword">not</span> curr <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">and</span> subRoot <span class="keyword">is</span> <span class="literal">None</span> :</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">elif</span> curr <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">and</span> <span class="keyword">not</span> subRoot <span class="keyword">is</span> <span class="literal">None</span> :</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">elif</span> curr.val == subRoot.val :</span><br><span class="line">            r_flag = self.compare(curr.right,subRoot.right)</span><br><span class="line">            l_flag = self.compare(curr.left,subRoot.left)</span><br><span class="line">            <span class="keyword">if</span> r_flag <span class="keyword">and</span> l_flag:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;572-Subtree-of-Another-Tree-Easy&quot;&gt;&lt;a href=&quot;#572-Subtree-of-Another-Tree-Easy&quot; class=&quot;headerlink&quot; title=&quot;572. Subtree of Another Tree</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="Linked list" scheme="http://example.com/tags/Linked-list/"/>
+    
+    <category term="recursion" scheme="http://example.com/tags/recursion/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>437. Path Sum III (Easy)</title>
+    <link href="http://example.com/2022/08/17/437/"/>
+    <id>http://example.com/2022/08/17/437/</id>
+    <published>2022-08-18T03:34:41.000Z</published>
+    <updated>2022-08-18T03:40:56.696Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="437-Path-Sum-III-Easy"><a href="#437-Path-Sum-III-Easy" class="headerlink" title="437. Path Sum III (Easy)"></a>437. Path Sum III (Easy)</h1><h2 id="Given-the-root-of-a-binary-tree-and-an-integer-targetSum-return-the-number-of-paths-where-the-sum-of-the-values-along-the-path-equals-targetSum"><a href="#Given-the-root-of-a-binary-tree-and-an-integer-targetSum-return-the-number-of-paths-where-the-sum-of-the-values-along-the-path-equals-targetSum" class="headerlink" title="Given the root of a binary tree and an integer targetSum, return the number of paths where the sum of the values along the path equals targetSum."></a>Given the root of a binary tree and an integer targetSum, return the number of paths where the sum of the values along the path equals targetSum.</h2><h2 id="The-path-does-not-need-to-start-or-end-at-the-root-or-a-leaf-but-it-must-go-downwards-i-e-traveling-only-from-parent-nodes-to-child-nodes"><a href="#The-path-does-not-need-to-start-or-end-at-the-root-or-a-leaf-but-it-must-go-downwards-i-e-traveling-only-from-parent-nodes-to-child-nodes" class="headerlink" title="The path does not need to start or end at the root or a leaf, but it must go downwards (i.e., traveling only from parent nodes to child nodes)."></a>The path does not need to start or end at the root or a leaf, but it must go downwards (i.e., traveling only from parent nodes to child nodes).</h2><h3 id="前缀和"><a href="#前缀和" class="headerlink" title="前缀和"></a>前缀和</h3><h3 id="思路与算法"><a href="#思路与算法" class="headerlink" title="思路与算法"></a>思路与算法</h3><h3 id="我们仔细思考一下，解法一中应该存在许多重复计算。我们定义节点的前缀和为：由根结点到当前结点的路径上所有节点的和。我们利用先序遍历二叉树，记录下根节点-root-到当前节点-pp-的路径上除当前节点以外所有节点的前缀和，在已保存的路径前缀和中查找是否存在前缀和刚好等于当前节点到根节点的前缀和-currcurr-减去-targetSum。"><a href="#我们仔细思考一下，解法一中应该存在许多重复计算。我们定义节点的前缀和为：由根结点到当前结点的路径上所有节点的和。我们利用先序遍历二叉树，记录下根节点-root-到当前节点-pp-的路径上除当前节点以外所有节点的前缀和，在已保存的路径前缀和中查找是否存在前缀和刚好等于当前节点到根节点的前缀和-currcurr-减去-targetSum。" class="headerlink" title="我们仔细思考一下，解法一中应该存在许多重复计算。我们定义节点的前缀和为：由根结点到当前结点的路径上所有节点的和。我们利用先序遍历二叉树，记录下根节点 root 到当前节点 pp 的路径上除当前节点以外所有节点的前缀和，在已保存的路径前缀和中查找是否存在前缀和刚好等于当前节点到根节点的前缀和 currcurr 减去 targetSum。"></a>我们仔细思考一下，解法一中应该存在许多重复计算。我们定义节点的前缀和为：由根结点到当前结点的路径上所有节点的和。我们利用先序遍历二叉树，记录下根节点 root 到当前节点 pp 的路径上除当前节点以外所有节点的前缀和，在已保存的路径前缀和中查找是否存在前缀和刚好等于当前节点到根节点的前缀和 currcurr 减去 targetSum。</h3><h3 id="对于空路径我们也需要保存预先处理一下，此时因为空路径不经过任何节点，因此它的前缀和为-00。"><a href="#对于空路径我们也需要保存预先处理一下，此时因为空路径不经过任何节点，因此它的前缀和为-00。" class="headerlink" title="对于空路径我们也需要保存预先处理一下，此时因为空路径不经过任何节点，因此它的前缀和为 00。"></a>对于空路径我们也需要保存预先处理一下，此时因为空路径不经过任何节点，因此它的前缀和为 00。</h3><h3 id="假设根节点为-root，我们当前刚好访问节点-node，则此时从根节点-root-到节点-node-的路径（无重复节点）刚好为-rightarrow-p-1-rightarrow-p-2-rightarrow-ldots-rightarrow-p-k-rightarrow-root→p"><a href="#假设根节点为-root，我们当前刚好访问节点-node，则此时从根节点-root-到节点-node-的路径（无重复节点）刚好为-rightarrow-p-1-rightarrow-p-2-rightarrow-ldots-rightarrow-p-k-rightarrow-root→p" class="headerlink" title="假设根节点为 root，我们当前刚好访问节点 node，则此时从根节点 root 到节点 node 的路径（无重复节点）刚好为  \rightarrow p_1 \rightarrow p_2 \rightarrow \ldots \rightarrow p_k \rightarrow root→p"></a>假设根节点为 root，我们当前刚好访问节点 node，则此时从根节点 root 到节点 node 的路径（无重复节点）刚好为  \rightarrow p_1 \rightarrow p_2 \rightarrow \ldots \rightarrow p_k \rightarrow root→p</h3><p>1<br>​<br> →p<br>2<br>​<br> →…→p<br>k<br>​<br> →node，此时我们可以已经保存了节点 p_1, p_2, p_3, \ldots, p_kp<br>1<br>​<br> ,p<br>2<br>​<br> ,p<br>3<br>​<br> ,…,p<br>k<br>​<br>  的前缀和，并且计算出了节点 node 的前缀和。</p><p>假设当前从根节点 root 到节点 node 的前缀和为 \textit{curr}curr，则此时我们在已保存的前缀和查找是否存在前缀和刚好等于 \textit{curr} - curr−targetSum。假设从根节点 root 到节点 node 的路径中存在节点 p_ip<br>i<br>​<br>  到根节点 root 的前缀和为 \textit{curr} - curr−targetSum，则节点 p_{i+1}p<br>i+1<br>​<br>  到 node 的路径上所有节点的和一定为 targetSum。</p><p>我们利用深度搜索遍历树，当我们退出当前节点时，我们需要及时更新已经保存的前缀和。</p><p>作者：LeetCode-Solution<br>链接：<a href="https://leetcode.cn/problems/path-sum-iii/solution/lu-jing-zong-he-iii-by-leetcode-solution-z9td/">https://leetcode.cn/problems/path-sum-iii/solution/lu-jing-zong-he-iii-by-leetcode-solution-z9td/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;437-Path-Sum-III-Easy&quot;&gt;&lt;a href=&quot;#437-Path-Sum-III-Easy&quot; class=&quot;headerlink&quot; title=&quot;437. Path Sum III (Easy)&quot;&gt;&lt;/a&gt;437. Path Sum III (E</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="Linked list" scheme="http://example.com/tags/Linked-list/"/>
+    
+    <category term="recursion" scheme="http://example.com/tags/recursion/"/>
+    
+  </entry>
   
   <entry>
     <title>112. Path Sum (Easy)</title>
@@ -504,96 +594,6 @@
     <category term="Python" scheme="http://example.com/tags/Python/"/>
     
     <category term="Linked list" scheme="http://example.com/tags/Linked-list/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode11-Linked list</title>
-    <link href="http://example.com/2022/07/15/LeetCode11-Linked%20list/"/>
-    <id>http://example.com/2022/07/15/LeetCode11-Linked%20list/</id>
-    <published>2022-07-15T19:54:06.000Z</published>
-    <updated>2022-07-21T03:22:52.536Z</updated>
-    
-    <content type="html"><![CDATA[<p>链表是空节点，或者有一个值和一个指向下一个链表的指针，因此很多链表问题可以用递归来处理。</p><p>参考：</p><h2 id="Leetcode-题解-链表"><a href="#Leetcode-题解-链表" class="headerlink" title="Leetcode 题解 - 链表"></a><a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E9%93%BE%E8%A1%A8.md">Leetcode 题解 - 链表</a></h2><h2 id="leetcode-tag"><a href="#leetcode-tag" class="headerlink" title="leetcode tag"></a><a href="https://leetcode.com/tag/linked-list/">leetcode tag</a></h2><p>如果说数据结构是算法的基础，那么数组和链表就是数据结构的基础。因为像堆，栈，树，图等比较复杂的数组结基本上都可以由数组和链表来表示，所以掌握数组和链表的基本操作十分重要。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;链表是空节点，或者有一个值和一个指向下一个链表的指针，因此很多链表问题可以用递归来处理。&lt;/p&gt;
-&lt;p&gt;参考：&lt;/p&gt;
-&lt;h2 id=&quot;Leetcode-题解-链表&quot;&gt;&lt;a href=&quot;#Leetcode-题解-链表&quot; class=&quot;headerlink&quot; title=&quot;L</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="Linked list" scheme="http://example.com/tags/Linked-list/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode10-Backtracking</title>
-    <link href="http://example.com/2022/07/14/LeetCode10-Backtracking/"/>
-    <id>http://example.com/2022/07/14/LeetCode10-Backtracking/</id>
-    <published>2022-07-15T02:56:54.000Z</published>
-    <updated>2022-07-15T03:14:35.229Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="回溯题目总结："><a href="#回溯题目总结：" class="headerlink" title="回溯题目总结："></a>回溯题目总结：</h1><h2 id="Backtracking-Python-problems-solutions-interview-prep"><a href="#Backtracking-Python-problems-solutions-interview-prep" class="headerlink" title="Backtracking Python problems+ solutions- interview prep"></a><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/780232/Backtracking-Python-problems%2B-solutions-interview-prep">Backtracking Python problems+ solutions- interview prep</a></h2><h2 id="leetcode-tag"><a href="#leetcode-tag" class="headerlink" title="leetcode tag"></a><a href="https://leetcode.com/tag/backtracking/">leetcode tag</a></h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;回溯题目总结：&quot;&gt;&lt;a href=&quot;#回溯题目总结：&quot; class=&quot;headerlink&quot; title=&quot;回溯题目总结：&quot;&gt;&lt;/a&gt;回溯题目总结：&lt;/h1&gt;&lt;h2 id=&quot;Backtracking-Python-problems-solutions-interv</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="Backtracking" scheme="http://example.com/tags/Backtracking/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>17. Letter Combinations of a Phone Number(medium)</title>
-    <link href="http://example.com/2022/07/14/17/"/>
-    <id>http://example.com/2022/07/14/17/</id>
-    <published>2022-07-15T01:55:06.000Z</published>
-    <updated>2022-07-15T03:15:36.774Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="17-Letter-Combinations-of-a-Phone-Number-medium"><a href="#17-Letter-Combinations-of-a-Phone-Number-medium" class="headerlink" title="17. Letter Combinations of a Phone Number(medium)"></a>17. Letter Combinations of a Phone Number(medium)</h1><h2 id="Given-a-string-containing-digits-from-2-9-inclusive-return-all-possible-letter-combinations-that-the-number-could-represent-Return-the-answer-in-any-order"><a href="#Given-a-string-containing-digits-from-2-9-inclusive-return-all-possible-letter-combinations-that-the-number-could-represent-Return-the-answer-in-any-order" class="headerlink" title="Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order."></a>Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.</h2><h2 id="A-mapping-of-digits-to-letters-just-like-on-the-telephone-buttons-is-given-below-Note-that-1-does-not-map-to-any-letters"><a href="#A-mapping-of-digits-to-letters-just-like-on-the-telephone-buttons-is-given-below-Note-that-1-does-not-map-to-any-letters" class="headerlink" title="A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters."></a>A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">phone = &#123;&#x27;2&#x27;:[&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;],</span><br><span class="line">                 &#x27;3&#x27;:[&#x27;d&#x27;,&#x27;e&#x27;,&#x27;f&#x27;],</span><br><span class="line">                 &#x27;4&#x27;:[&#x27;g&#x27;,&#x27;h&#x27;,&#x27;i&#x27;],</span><br><span class="line">                 &#x27;5&#x27;:[&#x27;j&#x27;,&#x27;k&#x27;,&#x27;l&#x27;],</span><br><span class="line">                 &#x27;6&#x27;:[&#x27;m&#x27;,&#x27;n&#x27;,&#x27;o&#x27;],</span><br><span class="line">                 &#x27;7&#x27;:[&#x27;p&#x27;,&#x27;q&#x27;,&#x27;r&#x27;,&#x27;s&#x27;],</span><br><span class="line">                 &#x27;8&#x27;:[&#x27;t&#x27;,&#x27;u&#x27;,&#x27;v&#x27;],</span><br><span class="line">                 &#x27;9&#x27;:[&#x27;w&#x27;,&#x27;x&#x27;,&#x27;y&#x27;,&#x27;z&#x27;]&#125;</span><br><span class="line">                </span><br></pre></td></tr></table></figure><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>这题属于是hashmap记录数字和字母的对应关系，然后再用回溯的方法解决</p><h2 id="leetcode题解"><a href="#leetcode题解" class="headerlink" title="leetcode题解"></a><a href="https://leetcode.cn/problems/letter-combinations-of-a-phone-number/solution/hui-su-dui-lie-tu-jie-by-ml-zimingmeng/">leetcode题解</a></h2><h3 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">letterCombinations</span>(<span class="params">self, digits: <span class="built_in">str</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">str</span>]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> digits: </span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line"></span><br><span class="line">        phone = &#123;<span class="string">&#x27;2&#x27;</span>:[<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>],</span><br><span class="line">                 <span class="string">&#x27;3&#x27;</span>:[<span class="string">&#x27;d&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;f&#x27;</span>],</span><br><span class="line">                 <span class="string">&#x27;4&#x27;</span>:[<span class="string">&#x27;g&#x27;</span>,<span class="string">&#x27;h&#x27;</span>,<span class="string">&#x27;i&#x27;</span>],</span><br><span class="line">                 <span class="string">&#x27;5&#x27;</span>:[<span class="string">&#x27;j&#x27;</span>,<span class="string">&#x27;k&#x27;</span>,<span class="string">&#x27;l&#x27;</span>],</span><br><span class="line">                 <span class="string">&#x27;6&#x27;</span>:[<span class="string">&#x27;m&#x27;</span>,<span class="string">&#x27;n&#x27;</span>,<span class="string">&#x27;o&#x27;</span>],</span><br><span class="line">                 <span class="string">&#x27;7&#x27;</span>:[<span class="string">&#x27;p&#x27;</span>,<span class="string">&#x27;q&#x27;</span>,<span class="string">&#x27;r&#x27;</span>,<span class="string">&#x27;s&#x27;</span>],</span><br><span class="line">                 <span class="string">&#x27;8&#x27;</span>:[<span class="string">&#x27;t&#x27;</span>,<span class="string">&#x27;u&#x27;</span>,<span class="string">&#x27;v&#x27;</span>],</span><br><span class="line">                 <span class="string">&#x27;9&#x27;</span>:[<span class="string">&#x27;w&#x27;</span>,<span class="string">&#x27;x&#x27;</span>,<span class="string">&#x27;y&#x27;</span>,<span class="string">&#x27;z&#x27;</span>]&#125;</span><br><span class="line">                </span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">backtrack</span>(<span class="params">conbination,nextdigit</span>):</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(nextdigit) == <span class="number">0</span>:</span><br><span class="line">                res.append(conbination)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">for</span> letter <span class="keyword">in</span> phone[nextdigit[<span class="number">0</span>]]:</span><br><span class="line">                    backtrack(conbination + letter,nextdigit[<span class="number">1</span>:])</span><br><span class="line"></span><br><span class="line">        res = []</span><br><span class="line">        backtrack(<span class="string">&#x27;&#x27;</span>,digits)</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;17-Letter-Combinations-of-a-Phone-Number-medium&quot;&gt;&lt;a href=&quot;#17-Letter-Combinations-of-a-Phone-Number-medium&quot; class=&quot;headerlink&quot; title</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
-    
-    <category term="mapping" scheme="http://example.com/tags/mapping/"/>
-    
-    <category term="Backtracking" scheme="http://example.com/tags/Backtracking/"/>
     
   </entry>
   
