@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>八角书屋</title>
   
-  
+  <subtitle>Engineering House</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-18T21:35:24.497Z</updated>
+  <updated>2022-08-18T21:36:30.340Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2022/08/17/101/"/>
     <id>http://example.com/2022/08/17/101/</id>
     <published>2022-08-18T03:42:45.000Z</published>
-    <updated>2022-08-18T21:35:24.497Z</updated>
+    <updated>2022-08-18T21:36:30.340Z</updated>
     
     <content type="html"><![CDATA[<h1 id="101-Symmetric-Tree-Easy"><a href="#101-Symmetric-Tree-Easy" class="headerlink" title="101. Symmetric Tree (Easy)"></a>101. Symmetric Tree (Easy)</h1><h2 id="Given-the-root-of-a-binary-tree-check-whether-it-is-a-mirror-of-itself-i-e-symmetric-around-its-center"><a href="#Given-the-root-of-a-binary-tree-check-whether-it-is-a-mirror-of-itself-i-e-symmetric-around-its-center" class="headerlink" title="Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center)."></a>Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isSymmetric</span>(<span class="params">self, root</span>):</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">:type root: TreeNode</span></span><br><span class="line"><span class="string">:rtype: bool</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line"><span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dfs</span>(<span class="params">left,right</span>):</span></span><br><span class="line"><span class="comment"># 递归的终止条件是两个节点都为空</span></span><br><span class="line"><span class="comment"># 或者两个节点中有一个为空</span></span><br><span class="line"><span class="comment"># 或者两个节点的值不相等</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> (left <span class="keyword">or</span> right):</span><br><span class="line"><span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> (left <span class="keyword">and</span> right):</span><br><span class="line"><span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"><span class="keyword">if</span> left.val!=right.val:</span><br><span class="line"><span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"><span class="keyword">return</span> dfs(left.left,right.right) <span class="keyword">and</span> dfs(left.right,right.left)</span><br><span class="line"><span class="comment"># 用递归函数，比较左节点，右节点</span></span><br><span class="line"><span class="keyword">return</span> dfs(root.left,root.right)</span><br></pre></td></tr></table></figure>]]></content>
     
