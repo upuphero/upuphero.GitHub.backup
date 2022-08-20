@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-18T21:36:30.340Z</updated>
+  <updated>2022-08-20T03:27:45.409Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>202. Happy Number(easy)</title>
+    <link href="http://example.com/2022/08/19/202/"/>
+    <id>http://example.com/2022/08/19/202/</id>
+    <published>2022-08-19T21:05:01.000Z</published>
+    <updated>2022-08-20T03:27:45.409Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="202-Happy-Number-easy"><a href="#202-Happy-Number-easy" class="headerlink" title="202. Happy Number(easy)"></a>202. Happy Number(easy)</h1><h2 id="Write-an-algorithm-to-determine-if-a-number-n-is-happy"><a href="#Write-an-algorithm-to-determine-if-a-number-n-is-happy" class="headerlink" title="Write an algorithm to determine if a number n is happy."></a>Write an algorithm to determine if a number n is happy.</h2><h2 id="A-happy-number-is-a-number-defined-by-the-following-process"><a href="#A-happy-number-is-a-number-defined-by-the-following-process" class="headerlink" title="A happy number is a number defined by the following process:"></a>A happy number is a number defined by the following process:</h2><h2 id="Starting-with-any-positive-integer-replace-the-number-by-the-sum-of-the-squares-of-its-digits"><a href="#Starting-with-any-positive-integer-replace-the-number-by-the-sum-of-the-squares-of-its-digits" class="headerlink" title="Starting with any positive integer, replace the number by the sum of the squares of its digits."></a>Starting with any positive integer, replace the number by the sum of the squares of its digits.</h2><h2 id="Repeat-the-process-until-the-number-equals-1-where-it-will-stay-or-it-loops-endlessly-in-a-cycle-which-does-not-include-1"><a href="#Repeat-the-process-until-the-number-equals-1-where-it-will-stay-or-it-loops-endlessly-in-a-cycle-which-does-not-include-1" class="headerlink" title="Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1."></a>Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.</h2><h2 id="Those-numbers-for-which-this-process-ends-in-1-are-happy"><a href="#Those-numbers-for-which-this-process-ends-in-1-are-happy" class="headerlink" title="Those numbers for which this process ends in 1 are happy."></a>Those numbers for which this process ends in 1 are happy.</h2><h2 id="Return-true-if-n-is-a-happy-number-and-false-if-not"><a href="#Return-true-if-n-is-a-happy-number-and-false-if-not" class="headerlink" title="Return true if n is a happy number, and false if not."></a>Return true if n is a happy number, and false if not.</h2><p>又是一个奇怪的数，叫做happy number</p><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/happy-number/solution/kuai-le-shu-by-leetcode-solution/">官方题解</a></h3><p>总结一下，数字每一位的平方和后的结果有两种可能性</p><ol><li>变成1</li><li>变成循环</li></ol><p>对于 3 位数的数字，它不可能大于 243。这意味着它要么被困在 243 以下的循环内，要么跌到 1。4 位或 4 位以上的数字在每一步都会丢失一位，直到降到 3 位为止。所以我们知道，最坏的情况下，算法可能会在 243 以下的所有数字上循环，然后回到它已经到过的一个循环或者回到 1。但它不会无限期地进行下去，所以我们排除无限增大的选择。</p><p>算法</p><p>算法分为两部分，我们需要设计和编写代码。</p><p>给一个数字 nn，它的下一个数字是什么？<br>按照一系列的数字来判断我们是否进入了一个循环。</p><ol><li><p>我们按照题目的要求做数位分离，求平方和。</p></li><li><p>可以使用哈希集合完成。每次生成链中的下一个数字时，我们都会检查它是否已经在哈希集合中。</p></li></ol><p>如果它不在哈希集合中，我们应该添加它。<br>如果它在哈希集合中，这意味着我们处于一个循环中，因此应该返回 false。</p><p>我们使用哈希集合而不是向量、列表或数组的原因是因为我们反复检查其中是否存在某数字。检查数字是否在哈希集合中需要 O(1) 的时间，而对于其他数据结构，则需要 O(n) 的时间。选择正确的数据结构是解决这些问题的关键部分。</p><p>Hashmap解法</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isHappy</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        n_history=&#123;&#125;</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                n_history[n]+=<span class="number">1</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                n_history[n]=<span class="number">0</span></span><br><span class="line">                digit_li=[<span class="built_in">str</span>(n)[i] <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(<span class="built_in">str</span>(n)))]</span><br><span class="line">                n=<span class="built_in">sum</span>(<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x:(<span class="built_in">int</span>(x))**<span class="number">2</span>,digit_li)))</span><br><span class="line">                <span class="keyword">if</span> n==<span class="number">1</span>:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">```                </span><br><span class="line">相当于把数字n转换成字符串，再进行平方和运算                </span><br><span class="line">```python                </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isHappy</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        </span><br><span class="line">        seen = <span class="built_in">set</span>()</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> n != <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">if</span> n <span class="keyword">in</span> seen:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            </span><br><span class="line">            seen.add(n)</span><br><span class="line">            </span><br><span class="line">            num = <span class="built_in">str</span>(n)</span><br><span class="line">            temp = <span class="number">0</span></span><br><span class="line">            <span class="keyword">for</span> ch <span class="keyword">in</span> num:</span><br><span class="line">                temp += <span class="built_in">int</span>(ch)**<span class="number">2</span></span><br><span class="line">            n = temp            </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span> </span><br><span class="line">```             </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">hashset解法</span><br><span class="line">```python</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isHappy</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">get_next</span>(<span class="params">n</span>):</span></span><br><span class="line">            total_sum = <span class="number">0</span></span><br><span class="line">            <span class="keyword">while</span> n &gt; <span class="number">0</span>:</span><br><span class="line">                n, digit = <span class="built_in">divmod</span>(n, <span class="number">10</span>)   <span class="comment">#divmod求余数</span></span><br><span class="line">                total_sum += digit ** <span class="number">2</span></span><br><span class="line">            <span class="keyword">return</span> total_sum</span><br><span class="line"></span><br><span class="line">        seen = <span class="built_in">set</span>() <span class="comment"># python里hashset的本质就是set</span></span><br><span class="line">        <span class="keyword">while</span> n != <span class="number">1</span> <span class="keyword">and</span> n <span class="keyword">not</span> <span class="keyword">in</span> seen:</span><br><span class="line">            seen.add(n)</span><br><span class="line">            n = get_next(n)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> n == <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;202-Happy-Number-easy&quot;&gt;&lt;a href=&quot;#202-Happy-Number-easy&quot; class=&quot;headerlink&quot; title=&quot;202. Happy Number(easy)&quot;&gt;&lt;/a&gt;202. Happy Number(eas</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
+    
+    <category term="hashset" scheme="http://example.com/tags/hashset/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>169. Majority Element(easy)</title>
+    <link href="http://example.com/2022/08/19/169/"/>
+    <id>http://example.com/2022/08/19/169/</id>
+    <published>2022-08-19T20:38:31.000Z</published>
+    <updated>2022-08-19T21:05:17.746Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="169-Majority-Element-easy"><a href="#169-Majority-Element-easy" class="headerlink" title="169. Majority Element(easy)"></a>169. Majority Element(easy)</h1><h2 id="Given-an-array-nums-of-size-n-return-the-majority-element"><a href="#Given-an-array-nums-of-size-n-return-the-majority-element" class="headerlink" title="Given an array nums of size n, return the majority element."></a>Given an array nums of size n, return the majority element.</h2><h2 id="The-majority-element-is-the-element-that-appears-more-than-⌊n-2⌋-times-You-may-assume-that-the-majority-element-always-exists-in-the-array"><a href="#The-majority-element-is-the-element-that-appears-more-than-⌊n-2⌋-times-You-may-assume-that-the-majority-element-always-exists-in-the-array" class="headerlink" title="The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array."></a>The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Example 1:</span><br><span class="line"></span><br><span class="line">Input: nums = [3,2,3]</span><br><span class="line">Output: 3</span><br></pre></td></tr></table></figure><h4 id="堪称hashamp最基础题目，纯粹是考hashmap的性质，前面是把数字都录入hashmap，后面再进行一个简单的判断。"><a href="#堪称hashamp最基础题目，纯粹是考hashmap的性质，前面是把数字都录入hashmap，后面再进行一个简单的判断。" class="headerlink" title="堪称hashamp最基础题目，纯粹是考hashmap的性质，前面是把数字都录入hashmap，后面再进行一个简单的判断。"></a>堪称hashamp最基础题目，纯粹是考hashmap的性质，前面是把数字都录入hashmap，后面再进行一个简单的判断。</h4><pre><code class="python">class Solution:    def majorityElement(self, nums: List[int]) -&gt; int:        hashmap = &#123;&#125;        n=len(nums)        for ans in nums:            if ans not in hashmap:                hashmap[ans]=1            else:                hashmap[ans]+=1        for ans in hashmap:            if hashmap[ans]&gt;n//2:                return ans</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;169-Majority-Element-easy&quot;&gt;&lt;a href=&quot;#169-Majority-Element-easy&quot; class=&quot;headerlink&quot; title=&quot;169. Majority Element(easy)&quot;&gt;&lt;/a&gt;169. Majo</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
+    
+  </entry>
   
   <entry>
     <title>101. Symmetric Tree (Easy)</title>
@@ -533,63 +591,6 @@
     <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
     
     <category term="two-pointers" scheme="http://example.com/tags/two-pointers/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="Linked list" scheme="http://example.com/tags/Linked-list/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode12-Tree</title>
-    <link href="http://example.com/2022/07/20/LeetCode12-Tree/"/>
-    <id>http://example.com/2022/07/20/LeetCode12-Tree/</id>
-    <published>2022-07-20T21:37:08.000Z</published>
-    <updated>2022-08-16T03:27:01.011Z</updated>
-    
-    <content type="html"><![CDATA[<p>参考：</p><h2 id="Leetcode-题解-链表"><a href="#Leetcode-题解-链表" class="headerlink" title="Leetcode 题解 - 链表"></a><a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E9%93%BE%E8%A1%A8.md">Leetcode 题解 - 链表</a></h2><h2 id="leetcode-tag"><a href="#leetcode-tag" class="headerlink" title="leetcode tag"></a><a href="https://leetcode.com/tag/linked-list/">leetcode tag</a></h2><p>如果说数据结构是算法的基础，那么数组和链表就是数据结构的基础。因为像堆，栈，树，图等比较复杂的数组结基本上都可以由数组和链表来表示，所以掌握数组和链表的基本操作十分重要。</p><p>一棵树要么是空树，要么有两个指针，每个指针指向一棵树。树是一种递归结构，很多树的问题可以使用递归来处理。<br><img src="https://s2.51cto.com/oss/202108/05/76b5d27335a0239eacf8b76a391ed229.jpg" alt="binary tree"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;参考：&lt;/p&gt;
-&lt;h2 id=&quot;Leetcode-题解-链表&quot;&gt;&lt;a href=&quot;#Leetcode-题解-链表&quot; class=&quot;headerlink&quot; title=&quot;Leetcode 题解 - 链表&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/CyC</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="Linked list" scheme="http://example.com/tags/Linked-list/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2. Add Two Numbers(medium)</title>
-    <link href="http://example.com/2022/07/15/2/"/>
-    <id>http://example.com/2022/07/15/2/</id>
-    <published>2022-07-15T20:30:53.000Z</published>
-    <updated>2022-07-21T03:23:24.445Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="2-Add-Two-Numbers-medium"><a href="#2-Add-Two-Numbers-medium" class="headerlink" title="2. Add Two Numbers(medium)"></a>2. Add Two Numbers(medium)</h1><h2 id="You-are-given-two-non-empty-linked-lists-representing-two-non-negative-integers-The-digits-are-stored-in-reverse-order-and-each-of-their-nodes-contains-a-single-digit-Add-the-two-numbers-and-return-the-sum-as-a-linked-list"><a href="#You-are-given-two-non-empty-linked-lists-representing-two-non-negative-integers-The-digits-are-stored-in-reverse-order-and-each-of-their-nodes-contains-a-single-digit-Add-the-two-numbers-and-return-the-sum-as-a-linked-list" class="headerlink" title="You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list."></a>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.</h2><h2 id="You-may-assume-the-two-numbers-do-not-contain-any-leading-zero-except-the-number-0-itself"><a href="#You-may-assume-the-two-numbers-do-not-contain-any-leading-zero-except-the-number-0-itself" class="headerlink" title="You may assume the two numbers do not contain any leading zero, except the number 0 itself."></a>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</h2><p>参考：</p><h2 id="Leetcode-题解-链表"><a href="#Leetcode-题解-链表" class="headerlink" title="Leetcode 题解 - 链表"></a><a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E9%93%BE%E8%A1%A8.md">Leetcode 题解 - 链表</a></h2><h2 id="leetcode-tag"><a href="#leetcode-tag" class="headerlink" title="leetcode tag"></a><a href="https://leetcode.com/tag/linked-list/">leetcode tag</a></h2><p>如果说数据结构是算法的基础，那么数组和链表就是数据结构的基础。因为像堆，栈，树，图等比较复杂的数组结基本上都可以由数组和链表来表示，所以掌握数组和链表的基本操作十分重要。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;2-Add-Two-Numbers-medium&quot;&gt;&lt;a href=&quot;#2-Add-Two-Numbers-medium&quot; class=&quot;headerlink&quot; title=&quot;2. Add Two Numbers(medium)&quot;&gt;&lt;/a&gt;2. Add Two N</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
     
     <category term="Python" scheme="http://example.com/tags/Python/"/>
     
