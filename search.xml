@@ -4,11 +4,68 @@
   
     
     <entry>
+      <title>LeetCode-skill5-difference-array</title>
+      <link href="/2022/08/29/LeetCode-skill5-difference-array/"/>
+      <url>/2022/08/29/LeetCode-skill5-difference-array/</url>
+      
+        <content type="html"><![CDATA[<p>本文讲一个和前缀和思想非常类似的算法技巧「差分数组」，差分数组的主要适用场景是频繁对原始数组的某个区间的元素进行增减。</p><p>比如说，我给你输入一个数组 nums，然后又要求给区间 nums[2..6] 全部加 1，再给 nums[3..9] 全部减 3，再给 nums[0..4] 全部加 2，再给…</p><p>一通操作猛如虎，然后问你，最后 nums 数组的值是什么？</p><p>常规的思路很容易，你让我给区间 nums[i..j] 加上 val，那我就一个 for 循环给它们都加上呗，还能咋样？这种思路的时间复杂度是 O(N)，由于这个场景下对 nums 的修改非常频繁，所以效率会很低下。</p><p>这里就需要差分数组的技巧，类似前缀和技巧构造的 prefix 数组，我们先对 nums 数组构造一个 diff 差分数组，diff[i] 就是 nums[i] 和 nums[i-1] 之差：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] diff = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length];</span><br><span class="line"><span class="comment">// 构造差分数组</span></span><br><span class="line">diff[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">    diff[i] = nums[i] - nums[i - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>通过这个 diff 差分数组是可以反推出原始数组 nums 的，代码逻辑如下：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[diff.length];</span><br><span class="line"><span class="comment">// 根据差分数组构造结果数组</span></span><br><span class="line">res[<span class="number">0</span>] = diff[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; diff.length; i++) &#123;</span><br><span class="line">    res[i] = res[i - <span class="number">1</span>] + diff[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>原理很简单，回想 diff 数组反推 nums 数组的过程，diff[i] += 3 意味着给 nums[i..] 所有的元素都加了 3，然后 diff[j+1] -= 3 又意味着对于 nums[j+1..] 所有元素再减 3，那综合起来，是不是就是对 nums[i..j] 中的所有元素都加 3 了？</p><p>只要花费 O(1) 的时间修改 diff 数组，就相当于给 nums 的整个区间做了修改。多次修改 diff，然后通过 diff 数组反推，即可得到 nums 修改后的结果。</p><p>现在我们把差分数组抽象成一个类，包含 increment 方法和 result 方法：</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Dynamic Programming </tag>
+            
+            <tag> prefix sum </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode15-DFS</title>
+      <link href="/2022/08/29/LeetCode15-DFS/"/>
+      <url>/2022/08/29/LeetCode15-DFS/</url>
+      
+        <content type="html"><![CDATA[<p>我们所熟悉的 DFS（深度优先搜索）问题通常是在树或者图结构上进行的。而我们今天要讨论的 DFS 问题，是在一种「网格」结构中进行的。岛屿问题是这类网格 DFS 问题的典型代表。网格结构遍历起来要比二叉树复杂一些，如果没有掌握一定的方法，DFS 代码容易写得冗长繁杂。</p><p>本文将以岛屿问题为例，展示网格类问题 DFS 通用思路，以及如何让代码变得简洁。</p><p>在 LeetCode 中，「岛屿问题」是一个系列系列问题，比如：</p><p>L200. 岛屿数量 （Easy）<br>463. 岛屿的周长 （Easy）<br>695. 岛屿的最大面积 （Medium）<br>827. 最大人工岛 （Hard）</p><p>作者：nettee<br>链接：<a href="https://leetcode.cn/problems/number-of-islands/solution/dao-yu-lei-wen-ti-de-tong-yong-jie-fa-dfs-bian-li-/">https://leetcode.cn/problems/number-of-islands/solution/dao-yu-lei-wen-ti-de-tong-yong-jie-fa-dfs-bian-li-/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode14-BFS</title>
+      <link href="/2022/08/29/LeetCode14-BFS/"/>
+      <url>/2022/08/29/LeetCode14-BFS/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>5. Longest Palindromic Substring(medium)</title>
       <link href="/2022/08/29/5/"/>
       <url>/2022/08/29/5/</url>
       
-        <content type="html"><![CDATA[<h1 id="5-Longest-Palindromic-Substring-medium"><a href="#5-Longest-Palindromic-Substring-medium" class="headerlink" title="5. Longest Palindromic Substring(medium)"></a>5. Longest Palindromic Substring(medium)</h1><h2 id="Given-a-string-s-return-the-longest-palindromic-substring-in-s"><a href="#Given-a-string-s-return-the-longest-palindromic-substring-in-s" class="headerlink" title="Given a string s, return the longest palindromic substring in s."></a>Given a string s, return the longest palindromic substring in s.</h2>]]></content>
+        <content type="html"><![CDATA[<h1 id="5-Longest-Palindromic-Substring-medium"><a href="#5-Longest-Palindromic-Substring-medium" class="headerlink" title="5. Longest Palindromic Substring(medium)"></a>5. Longest Palindromic Substring(medium)</h1><h2 id="Given-a-string-s-return-the-longest-palindromic-substring-in-s"><a href="#Given-a-string-s-return-the-longest-palindromic-substring-in-s" class="headerlink" title="Given a string s, return the longest palindromic substring in s."></a>Given a string s, return the longest palindromic substring in s.</h2><p>substring和subsequence：<br>substring是子串。例如，‘wee’ 是 ‘helloween’的substring，‘hwn’ 不是 ‘helloween’的substring。取子串的时候不能隔着字符取。<br>subsequence是子序列。例如，‘wee’ 和 ‘hwn’ 都是 ‘helloween’的subsequence。取子序列的时候可以隔着字符取。<br>palindromic substring 是回文子串，例如‘soebeos’ 是 ‘absoebeostge’ 的回文子串。回文的意思是正过来念和反过来念都一样的字符串，比如“上海自来水来自海上”。</p><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/longest-palindromic-substring/solution/zui-chang-hui-wen-zi-chuan-by-leetcode-solution/">官方题解</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">expandAroundCenter</span>(<span class="params">self, s, left, right</span>):</span></span><br><span class="line">        <span class="keyword">while</span> left &gt;= <span class="number">0</span> <span class="keyword">and</span> right &lt; <span class="built_in">len</span>(s) <span class="keyword">and</span> s[left] == s[right]:</span><br><span class="line">            left -= <span class="number">1</span></span><br><span class="line">            right += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> left + <span class="number">1</span>, right - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestPalindrome</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        start, end = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            left1, right1 = self.expandAroundCenter(s, i, i)</span><br><span class="line">            left2, right2 = self.expandAroundCenter(s, i, i + <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">if</span> right1 - left1 &gt; end - start:</span><br><span class="line">                start, end = left1, right1</span><br><span class="line">            <span class="keyword">if</span> right2 - left2 &gt; end - start:</span><br><span class="line">                start, end = left2, right2</span><br><span class="line">        <span class="keyword">return</span> s[start: end + <span class="number">1</span>]</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -73,6 +130,24 @@
         <content type="html"><![CDATA[<h1 id="704-Binary-Search-easy"><a href="#704-Binary-Search-easy" class="headerlink" title="704. Binary Search(easy)"></a>704. Binary Search(easy)</h1><h2 id="Given-an-array-of-integers-nums-which-is-sorted-in-ascending-order-and-an-integer-target-write-a-function-to-search-target-in-nums-If-target-exists-then-return-its-index-Otherwise-return-1"><a href="#Given-an-array-of-integers-nums-which-is-sorted-in-ascending-order-and-an-integer-target-write-a-function-to-search-target-in-nums-If-target-exists-then-return-its-index-Otherwise-return-1" class="headerlink" title="Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1."></a>Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.</h2><h2 id="You-must-write-an-algorithm-with-O-log-n-runtime-complexity"><a href="#You-must-write-an-algorithm-with-O-log-n-runtime-complexity" class="headerlink" title="You must write an algorithm with O(log n) runtime complexity."></a>You must write an algorithm with O(log n) runtime complexity.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [-1,0,3,5,9,12], target = 9</span><br><span class="line">Output: 4</span><br><span class="line">Explanation: 9 exists in nums and its index is 4</span><br></pre></td></tr></table></figure><p>二分查找模板</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        left =<span class="number">0</span></span><br><span class="line">        right=<span class="built_in">len</span>(nums)-<span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span>(left&lt;=right):</span><br><span class="line">            mid =left+(right-left)//<span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> nums[mid]==target:</span><br><span class="line">                <span class="keyword">return</span> mid</span><br><span class="line">            <span class="keyword">elif</span> nums[mid]&lt;target:</span><br><span class="line">                left=mid+<span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums[mid]&gt;target:</span><br><span class="line">                right = mid-<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
       
       
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> two-pointers </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+        </tags>
       
     </entry>
     
