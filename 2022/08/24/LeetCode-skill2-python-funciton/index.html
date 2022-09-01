@@ -164,6 +164,10 @@
 
 <h2 id="deque"><a href="#deque" class="headerlink" title="deque"></a>deque</h2><p>list 删除末尾的操作是O(1)的，但是删除头操作就是O(n)，这时候我们就需要一个双端队列 deque。<br>首尾的常规操作为：</p>
 <p>append，添加到末尾<br>appendleft, 添加到开头<br>pop, 剔除末尾<br>popleft，移除开头</p>
+<h2 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h2><p>list 自身有自带的 sort(), 但是它不返回新的 list.可以加reverse使结果倒序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vowels list</span></span><br><span class="line">a= [<span class="number">6</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">8</span>]</span><br><span class="line">a.sort(reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(a)<span class="comment">#[8, 6, 3, 2]</span></span><br></pre></td></tr></table></figure>
+
+
 <h2 id="sorted"><a href="#sorted" class="headerlink" title="sorted"></a>sorted</h2><p>list 自身有自带的 sort(), 但是它不返回新的 list. sorted 能返回一个新的 list, 并且支持传入参数reverse。</p>
 <p>比如我们有一个 tuple 的数组，我们想按照 tuple 的第一个元素进行排序：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">l1 = [(1,2), (0,1), (3,10) ]</span><br><span class="line"></span><br><span class="line">l2 = sorted(l1, key=lambda x: x[0])</span><br><span class="line"></span><br><span class="line"># l2 = [(0, 1), (1, 2), (3, 10)]</span><br></pre></td></tr></table></figure>
@@ -311,7 +315,7 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>130</span>
+        <span>131</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
