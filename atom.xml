@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-03T20:41:23.975Z</updated>
+  <updated>2022-09-06T00:42:43.655Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>practicecodesignal4</title>
+    <link href="http://example.com/2022/09/05/practicecodesignal4/"/>
+    <id>http://example.com/2022/09/05/practicecodesignal4/</id>
+    <published>2022-09-06T00:31:02.000Z</published>
+    <updated>2022-09-06T00:42:43.655Z</updated>
+    
+    <content type="html"><![CDATA[<p>def samesign(a,b):<br>    if a/abs(a) == b/abs(b):<br>        return True<br>    else:<br>        return False</p><p>def countSawSubarrays(arr):<br>    n = len(arr)</p><pre><code>if n&lt;2:    return 0s = 0e = 1count = 0while(e&lt;n):    sign = arr[e] - arr[s]    while(e&lt;n and arr[e] != arr[e-1] and samesign(arr[e] - arr[e-1], sign)):        sign = -1*sign        e+=1    size = e-s    if (size==1):        e+=1    count += (size*(size-1))//2    s = e-1    e = s+1return count</code></pre><p>arr1 = [9,8,7,6,5]<br>print(countSawSubarrays(arr1))<br>arr2 = [1,2,1,3,4,-2]<br>print(countSawSubarrays(arr2))<br>arr3 = [1,2,1,2,1]<br>print(countSawSubarrays(arr3))<br>arr4 = [10,10,10]<br>print(countSawSubarrays(arr4))</p><p>def solution(matrix, a, b):<br>    if a + b - 1 &gt; min(len(matrix), len(matrix[0])):<br>        return 0</p><pre><code>ret = 0for w, h in ((a, b), (b, a)):    # for every possible leftmost axb/bxa rectangle...    for start in range(min(len(matrix), len(matrix[0])) - (a + b - 1) + 1):        i = start        cur = 0        deques = []        j1 = j2 = w - 1        # build the rectangle         while j1 &lt;= j2:            for k in range(j1, j2 + 1):                cur += matrix[i][k]            deques.append((j1, j2))             j1 += (-1 if i - start &lt; w - 1 else 1)            j2 += (1 if i - start &lt; h - 1 else -1)            i += 1                stop = False        # slide it to the right until you can&#39;t anymore        while True:            ret = max(ret, cur)                        for ind, tup in enumerate(deques):                j1, j2 = tup                i = start + ind                if j2 == len(matrix[0]) - 1:                    stop = True                    break                j2 += 1                cur += matrix[i][j2] - matrix[i][j1]                j1 += 1                deques[ind] = (j1, j2)            if stop:                breakreturn ret</code></pre><p>You are given an array of integers numbers and two integers left and right. You task is to calculate a boolean array result, where result[i] = true if there exists an integer x, such that numbers[i] = (i + 1) * x and left ≤ x ≤ right. Otherwise, result[i] should be set to false.</p><p>You are given two strings - pattern and source. The first string pattern contains only the symbols 0 and 1, and the second string source contains only lowercase English letters.</p><p>Let’s say that pattern matches a substring source[l..r] of source if the following three conditions are met:<br>they have equal length,<br>for each 0 in pattern the corresponding letter in the substring is a vowel,<br>for each 1 in pattern the corresponding letter is a consonant.<br>Your task is to calculate the number of substrings of source that match pattern.</p><p>Note: In this task we define the vowels as ‘a’, ‘e’, ‘i’, ‘o’, ‘u’, and ‘y’. All other letters are consonants.</p><p>Given a matrix of integers, we’d like to consider the sum of the elements within the area of a 45° rotated rectangle. More formally, the area is bounded by two diagonals parallel to the main diagonal and two diagonals parallel to the secondary diagonal. The dimensions of the rotated rectangle are defined by the number of elements along the borders of the rectangle.</p><p>A sawtooth sequence is a sequence of numbers that alternate between increasing and decreasing. In other words, each element is either strictly greater than its neighbouring elements or strictly less than its neighbouring elements.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;def samesign(a,b):&lt;br&gt;    if a/abs(a) == b/abs(b):&lt;br&gt;        return True&lt;br&gt;    else:&lt;br&gt;        return False&lt;/p&gt;
+&lt;p&gt;def countSawSubarra</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>LeetCode-skill7-box_blur</title>
@@ -531,36 +552,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;344-Reverse-String-easy&quot;&gt;&lt;a href=&quot;#344-Reverse-String-easy&quot; class=&quot;headerlink&quot; title=&quot;344. Reverse String(easy)&quot;&gt;&lt;/a&gt;344. Reverse St</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="two-pointers" scheme="http://example.com/tags/two-pointers/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>704. Binary Search(easy)</title>
-    <link href="http://example.com/2022/08/29/704/"/>
-    <id>http://example.com/2022/08/29/704/</id>
-    <published>2022-08-29T19:22:20.000Z</published>
-    <updated>2022-08-29T20:42:41.038Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="704-Binary-Search-easy"><a href="#704-Binary-Search-easy" class="headerlink" title="704. Binary Search(easy)"></a>704. Binary Search(easy)</h1><h2 id="Given-an-array-of-integers-nums-which-is-sorted-in-ascending-order-and-an-integer-target-write-a-function-to-search-target-in-nums-If-target-exists-then-return-its-index-Otherwise-return-1"><a href="#Given-an-array-of-integers-nums-which-is-sorted-in-ascending-order-and-an-integer-target-write-a-function-to-search-target-in-nums-If-target-exists-then-return-its-index-Otherwise-return-1" class="headerlink" title="Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1."></a>Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.</h2><h2 id="You-must-write-an-algorithm-with-O-log-n-runtime-complexity"><a href="#You-must-write-an-algorithm-with-O-log-n-runtime-complexity" class="headerlink" title="You must write an algorithm with O(log n) runtime complexity."></a>You must write an algorithm with O(log n) runtime complexity.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [-1,0,3,5,9,12], target = 9</span><br><span class="line">Output: 4</span><br><span class="line">Explanation: 9 exists in nums and its index is 4</span><br></pre></td></tr></table></figure><p>二分查找模板</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">search</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        left =<span class="number">0</span></span><br><span class="line">        right=<span class="built_in">len</span>(nums)-<span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span>(left&lt;=right):</span><br><span class="line">            mid =left+(right-left)//<span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> nums[mid]==target:</span><br><span class="line">                <span class="keyword">return</span> mid</span><br><span class="line">            <span class="keyword">elif</span> nums[mid]&lt;target:</span><br><span class="line">                left=mid+<span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums[mid]&gt;target:</span><br><span class="line">                right = mid-<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;704-Binary-Search-easy&quot;&gt;&lt;a href=&quot;#704-Binary-Search-easy&quot; class=&quot;headerlink&quot; title=&quot;704. Binary Search(easy)&quot;&gt;&lt;/a&gt;704. Binary Search</summary>
       
     
     

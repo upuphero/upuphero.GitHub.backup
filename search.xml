@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>practicecodesignal4</title>
+      <link href="/2022/09/05/practicecodesignal4/"/>
+      <url>/2022/09/05/practicecodesignal4/</url>
+      
+        <content type="html"><![CDATA[<p>def samesign(a,b):<br>    if a/abs(a) == b/abs(b):<br>        return True<br>    else:<br>        return False</p><p>def countSawSubarrays(arr):<br>    n = len(arr)</p><pre><code>if n&lt;2:    return 0s = 0e = 1count = 0while(e&lt;n):    sign = arr[e] - arr[s]    while(e&lt;n and arr[e] != arr[e-1] and samesign(arr[e] - arr[e-1], sign)):        sign = -1*sign        e+=1    size = e-s    if (size==1):        e+=1    count += (size*(size-1))//2    s = e-1    e = s+1return count</code></pre><p>arr1 = [9,8,7,6,5]<br>print(countSawSubarrays(arr1))<br>arr2 = [1,2,1,3,4,-2]<br>print(countSawSubarrays(arr2))<br>arr3 = [1,2,1,2,1]<br>print(countSawSubarrays(arr3))<br>arr4 = [10,10,10]<br>print(countSawSubarrays(arr4))</p><p>def solution(matrix, a, b):<br>    if a + b - 1 &gt; min(len(matrix), len(matrix[0])):<br>        return 0</p><pre><code>ret = 0for w, h in ((a, b), (b, a)):    # for every possible leftmost axb/bxa rectangle...    for start in range(min(len(matrix), len(matrix[0])) - (a + b - 1) + 1):        i = start        cur = 0        deques = []        j1 = j2 = w - 1        # build the rectangle         while j1 &lt;= j2:            for k in range(j1, j2 + 1):                cur += matrix[i][k]            deques.append((j1, j2))             j1 += (-1 if i - start &lt; w - 1 else 1)            j2 += (1 if i - start &lt; h - 1 else -1)            i += 1                stop = False        # slide it to the right until you can&#39;t anymore        while True:            ret = max(ret, cur)                        for ind, tup in enumerate(deques):                j1, j2 = tup                i = start + ind                if j2 == len(matrix[0]) - 1:                    stop = True                    break                j2 += 1                cur += matrix[i][j2] - matrix[i][j1]                j1 += 1                deques[ind] = (j1, j2)            if stop:                breakreturn ret</code></pre><p>You are given an array of integers numbers and two integers left and right. You task is to calculate a boolean array result, where result[i] = true if there exists an integer x, such that numbers[i] = (i + 1) * x and left ≤ x ≤ right. Otherwise, result[i] should be set to false.</p><p>You are given two strings - pattern and source. The first string pattern contains only the symbols 0 and 1, and the second string source contains only lowercase English letters.</p><p>Let’s say that pattern matches a substring source[l..r] of source if the following three conditions are met:<br>they have equal length,<br>for each 0 in pattern the corresponding letter in the substring is a vowel,<br>for each 1 in pattern the corresponding letter is a consonant.<br>Your task is to calculate the number of substrings of source that match pattern.</p><p>Note: In this task we define the vowels as ‘a’, ‘e’, ‘i’, ‘o’, ‘u’, and ‘y’. All other letters are consonants.</p><p>Given a matrix of integers, we’d like to consider the sum of the elements within the area of a 45° rotated rectangle. More formally, the area is bounded by two diagonals parallel to the main diagonal and two diagonals parallel to the secondary diagonal. The dimensions of the rotated rectangle are defined by the number of elements along the borders of the rectangle.</p><p>A sawtooth sequence is a sequence of numbers that alternate between increasing and decreasing. In other words, each element is either strictly greater than its neighbouring elements or strictly less than its neighbouring elements.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode-skill7-box_blur</title>
       <link href="/2022/09/03/LeetCode-skill7-box-blur/"/>
       <url>/2022/09/03/LeetCode-skill7-box-blur/</url>
