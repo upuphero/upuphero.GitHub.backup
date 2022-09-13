@@ -4,6 +4,196 @@
   
     
     <entry>
+      <title>528. Random Pick with Weight(medium)</title>
+      <link href="/2022/09/12/528/"/>
+      <url>/2022/09/12/528/</url>
+      
+        <content type="html"><![CDATA[<h1 id="528-Random-Pick-with-Weight-medium"><a href="#528-Random-Pick-with-Weight-medium" class="headerlink" title="528. Random Pick with Weight(medium)"></a>528. Random Pick with Weight(medium)</h1><h2 id="You-are-given-a-0-indexed-array-of-positive-integers-w-where-w-i-describes-the-weight-of-the-ith-index"><a href="#You-are-given-a-0-indexed-array-of-positive-integers-w-where-w-i-describes-the-weight-of-the-ith-index" class="headerlink" title="You are given a 0-indexed array of positive integers w where w[i] describes the weight of the ith index."></a>You are given a 0-indexed array of positive integers w where w[i] describes the weight of the ith index.</h2><h2 id="You-need-to-implement-the-function-pickIndex-which-randomly-picks-an-index-in-the-range-0-w-length-1-inclusive-and-returns-it-The-probability-of-picking-an-index-i-is-w-i-sum-w"><a href="#You-need-to-implement-the-function-pickIndex-which-randomly-picks-an-index-in-the-range-0-w-length-1-inclusive-and-returns-it-The-probability-of-picking-an-index-i-is-w-i-sum-w" class="headerlink" title="You need to implement the function pickIndex(), which randomly picks an index in the range [0, w.length - 1] (inclusive) and returns it. The probability of picking an index i is w[i] / sum(w)."></a>You need to implement the function pickIndex(), which randomly picks an index in the range [0, w.length - 1] (inclusive) and returns it. The probability of picking an index i is w[i] / sum(w).</h2><h2 id="For-example-if-w-1-3-the-probability-of-picking-index-0-is-1-1-3-0-25-i-e-25-and-the-probability-of-picking-index-1-is-3-1-3-0-75-i-e-75"><a href="#For-example-if-w-1-3-the-probability-of-picking-index-0-is-1-1-3-0-25-i-e-25-and-the-probability-of-picking-index-1-is-3-1-3-0-75-i-e-75" class="headerlink" title="For example, if w = [1, 3], the probability of picking index 0 is 1 / (1 + 3) = 0.25 (i.e., 25%), and the probability of picking index 1 is 3 / (1 + 3) = 0.75 (i.e., 75%)."></a>For example, if w = [1, 3], the probability of picking index 0 is 1 / (1 + 3) = 0.25 (i.e., 25%), and the probability of picking index 1 is 3 / (1 + 3) = 0.75 (i.e., 75%).</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> prefix sum </tag>
+            
+            <tag> array </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>567. Permutation in String(medium)</title>
+      <link href="/2022/09/11/567/"/>
+      <url>/2022/09/11/567/</url>
+      
+        <content type="html"><![CDATA[<h1 id="567-Permutation-in-String-medium"><a href="#567-Permutation-in-String-medium" class="headerlink" title="567. Permutation in String(medium)"></a>567. Permutation in String(medium)</h1><h2 id="Given-two-strings-s1-and-s2-return-true-if-s2-contains-a-permutation-of-s1-or-false-otherwise"><a href="#Given-two-strings-s1-and-s2-return-true-if-s2-contains-a-permutation-of-s1-or-false-otherwise" class="headerlink" title="Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise."></a>Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.</h2><h2 id="In-other-words-return-true-if-one-of-s1’s-permutations-is-the-substring-of-s2"><a href="#In-other-words-return-true-if-one-of-s1’s-permutations-is-the-substring-of-s2" class="headerlink" title="In other words, return true if one of s1’s permutations is the substring of s2."></a>In other words, return true if one of s1’s permutations is the substring of s2.</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> two-pointers </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> Sliding-Window </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1356. Sort Integers by The Number of 1 Bits(easy)</title>
+      <link href="/2022/09/11/1356/"/>
+      <url>/2022/09/11/1356/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1356-Sort-Integers-by-The-Number-of-1-Bits-easy"><a href="#1356-Sort-Integers-by-The-Number-of-1-Bits-easy" class="headerlink" title="1356. Sort Integers by The Number of 1 Bits(easy)"></a>1356. Sort Integers by The Number of 1 Bits(easy)</h1><h2 id="You-are-given-an-integer-array-arr-Sort-the-integers-in-the-array-in-ascending-order-by-the-number-of-1’s-in-their-binary-representation-and-in-case-of-two-or-more-integers-have-the-same-number-of-1’s-you-have-to-sort-them-in-ascending-order"><a href="#You-are-given-an-integer-array-arr-Sort-the-integers-in-the-array-in-ascending-order-by-the-number-of-1’s-in-their-binary-representation-and-in-case-of-two-or-more-integers-have-the-same-number-of-1’s-you-have-to-sort-them-in-ascending-order" class="headerlink" title="You are given an integer array arr. Sort the integers in the array in ascending order by the number of 1’s in their binary representation and in case of two or more integers have the same number of 1’s you have to sort them in ascending order."></a>You are given an integer array arr. Sort the integers in the array in ascending order by the number of 1’s in their binary representation and in case of two or more integers have the same number of 1’s you have to sort them in ascending order.</h2><h2 id="Return-the-array-after-sorting-it"><a href="#Return-the-array-after-sorting-it" class="headerlink" title="Return the array after sorting it."></a>Return the array after sorting it.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: arr = [0,1,2,3,4,5,6,7,8]</span><br><span class="line">Output: [0,1,2,4,8,3,5,6,7]</span><br><span class="line">Explantion: [0] is the only integer with 0 bits.</span><br><span class="line">[1,2,4,8] all have 1 bit.</span><br><span class="line">[3,5,6] have 2 bits.</span><br><span class="line">[7] has 3 bits.</span><br><span class="line">The sorted array by bits is [0,1,2,4,8,3,5,6,7]</span><br></pre></td></tr></table></figure><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="python">class Solution:    def sortByBits(self, arr: List[int]) -&gt; List[int]:        return sorted(arr, key = lambda num : (sum((num &gt;&gt; i) &amp; 1 for i in range(32)), num))</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> two-pointers </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>76. Minimum Window Substring(hard)</title>
+      <link href="/2022/09/11/76/"/>
+      <url>/2022/09/11/76/</url>
+      
+        <content type="html"><![CDATA[<h1 id="76-Minimum-Window-Substring-hard"><a href="#76-Minimum-Window-Substring-hard" class="headerlink" title="76. Minimum Window Substring(hard)"></a>76. Minimum Window Substring(hard)</h1><h2 id="Given-two-strings-s-and-t-of-lengths-m-and-n-respectively-return-the-minimum-window-substring-of-s-such-that-every-character-in-t-including-duplicates-is-included-in-the-window-If-there-is-no-such-substring-return-the-empty-string-“”"><a href="#Given-two-strings-s-and-t-of-lengths-m-and-n-respectively-return-the-minimum-window-substring-of-s-such-that-every-character-in-t-including-duplicates-is-included-in-the-window-If-there-is-no-such-substring-return-the-empty-string-“”" class="headerlink" title="Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string “”."></a>Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string “”.</h2><h2 id="The-testcases-will-be-generated-such-that-the-answer-is-unique"><a href="#The-testcases-will-be-generated-such-that-the-answer-is-unique" class="headerlink" title="The testcases will be generated such that the answer is unique."></a>The testcases will be generated such that the answer is unique.</h2><h2 id="A-substring-is-a-contiguous-sequence-of-characters-within-the-string"><a href="#A-substring-is-a-contiguous-sequence-of-characters-within-the-string" class="headerlink" title="A substring is a contiguous sequence of characters within the string."></a>A substring is a contiguous sequence of characters within the string.</h2><p>这道题是滑动窗口的经典题目，滑动窗口算法的思路是这样：</p><ol><li>我们在字符串 S 中使用双指针中的左右指针技巧，初始化 left = right = 0，把索引左闭右开区间 [left, right) 称为一个「窗口」。</li></ol><p>PS：理论上你可以设计两端都开或者两端都闭的区间，但设计为左闭右开区间是最方便处理的。因为这样初始化 left = right = 0 时区间 [0, 0) 中没有元素，但只要让 right 向右移动（扩大）一位，区间 [0, 1) 就包含一个元素 0 了。如果你设置为两端都开的区间，那么让 right 向右移动一位后开区间 (0, 1) 仍然没有元素；如果你设置为两端都闭的区间，那么初始区间 [0, 0] 就包含了一个元素。这两种情况都会给边界处理带来不必要的麻烦。</p><ol start="2"><li><p>我们先不断地增加 right 指针扩大窗口 [left, right)，直到窗口中的字符串符合要求（包含了 T 中的所有字符）。</p></li><li><p>此时，我们停止增加 right，转而不断增加 left 指针缩小窗口 [left, right)，直到窗口中的字符串不再符合要求（不包含 T 中的所有字符了）。同时，每次增加 left，我们都要更新一轮结果。</p></li><li><p>重复第 2 和第 3 步，直到 right 到达字符串 S 的尽头。</p></li></ol><p>这个思路其实也不难，第 2 步相当于在寻找一个「可行解」，然后第 3 步在优化这个「可行解」，最终找到最优解，也就是最短的覆盖子串。左右指针轮流前进，窗口大小增增减减，窗口不断向右滑动，这就是「滑动窗口」这个名字的来历。</p><p>下面画图理解一下，needs 和 window 相当于计数器，分别记录 T 中字符出现次数和「窗口」中的相应字符的出现次数。</p><h4 id="C-解法"><a href="#C-解法" class="headerlink" title="C++解法"></a><a href="https://labuladong.github.io/algo/2/20/27/">C++解法</a></h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">minWindow</span><span class="params">(string s, string t)</span> </span>&#123;</span><br><span class="line">    unordered_map&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; need, window;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> c : t) need[c]++;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> valid = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 记录最小覆盖子串的起始索引及长度</span></span><br><span class="line">    <span class="keyword">int</span> start = <span class="number">0</span>, len = INT_MAX;</span><br><span class="line">    <span class="keyword">while</span> (right &lt; s.<span class="built_in">size</span>()) &#123;</span><br><span class="line">        <span class="comment">// c 是将移入窗口的字符</span></span><br><span class="line">        <span class="keyword">char</span> c = s[right];</span><br><span class="line">        <span class="comment">// 扩大窗口</span></span><br><span class="line">        right++;</span><br><span class="line">        <span class="comment">// 进行窗口内数据的一系列更新</span></span><br><span class="line">        <span class="keyword">if</span> (need.<span class="built_in">count</span>(c)) &#123;</span><br><span class="line">            window[c]++;</span><br><span class="line">            <span class="keyword">if</span> (window[c] == need[c])</span><br><span class="line">                valid++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 判断左侧窗口是否要收缩</span></span><br><span class="line">        <span class="keyword">while</span> (valid == need.<span class="built_in">size</span>()) &#123;</span><br><span class="line">            <span class="comment">// 在这里更新最小覆盖子串</span></span><br><span class="line">            <span class="keyword">if</span> (right - left &lt; len) &#123;</span><br><span class="line">                start = left;</span><br><span class="line">                len = right - left;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// d 是将移出窗口的字符</span></span><br><span class="line">            <span class="keyword">char</span> d = s[left];</span><br><span class="line">            <span class="comment">// 缩小窗口</span></span><br><span class="line">            left++;</span><br><span class="line">            <span class="comment">// 进行窗口内数据的一系列更新</span></span><br><span class="line">            <span class="keyword">if</span> (need.<span class="built_in">count</span>(d)) &#123;</span><br><span class="line">                <span class="keyword">if</span> (window[d] == need[d])</span><br><span class="line">                    valid--;</span><br><span class="line">                window[d]--;</span><br><span class="line">            &#125;                    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 返回最小覆盖子串</span></span><br><span class="line">    <span class="keyword">return</span> len == INT_MAX ?</span><br><span class="line">        <span class="string">&quot;&quot;</span> : s.<span class="built_in">substr</span>(start, len);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="python解法"><a href="#python解法" class="headerlink" title="python解法"></a><a href="https://leetcode.com/problems/minimum-window-substring/discuss/26804/12-lines-Python/1079619">python解法</a></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minWindow</span>(<span class="params">self, s: <span class="built_in">str</span>, t: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># hash table to store the required char frequency</span></span><br><span class="line">        need = collections.Counter(t)            </span><br><span class="line"></span><br><span class="line">        <span class="comment"># total character count we need to care about</span></span><br><span class="line">        missing = <span class="built_in">len</span>(t)                         </span><br><span class="line"></span><br><span class="line">        <span class="comment"># windowStart and windowEnd to be</span></span><br><span class="line">        windowStart, windowEnd = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment"># iterate over s starting over index 1</span></span><br><span class="line">        <span class="keyword">for</span> j, char <span class="keyword">in</span> <span class="built_in">enumerate</span>(s, <span class="number">1</span>): <span class="comment"># j is index,char is value         </span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># if char is required then decrease missing</span></span><br><span class="line">            <span class="keyword">if</span> need[char] &gt; <span class="number">0</span>:                   </span><br><span class="line">                missing -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># decrease the freq of char from need (maybe be negative - which basically denotes</span></span><br><span class="line">            <span class="comment">#   that we have few extra characters which are not required but present in between current window)</span></span><br><span class="line">            need[char] -= <span class="number">1</span>                      </span><br><span class="line"></span><br><span class="line">            <span class="comment"># we found a valid window</span></span><br><span class="line">            <span class="keyword">if</span> missing == <span class="number">0</span>:                     </span><br><span class="line">                <span class="comment"># chars from start to find the real windowStart</span></span><br><span class="line">                <span class="keyword">while</span> i &lt; j <span class="keyword">and</span> need[s[i]] &lt; <span class="number">0</span>:  </span><br><span class="line">                    need[s[i]] += <span class="number">1</span></span><br><span class="line">                    i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">                <span class="comment"># if it&#x27;s only one char case or curr window is smaller, then update window</span></span><br><span class="line">                <span class="keyword">if</span> windowEnd == <span class="number">0</span> <span class="keyword">or</span> j-i &lt; windowEnd-windowStart:  </span><br><span class="line">                    windowStart, windowEnd = i, j</span><br><span class="line"></span><br><span class="line">                <span class="comment"># now resetting the window to make it invalid</span></span><br><span class="line">                <span class="comment"># sure the first appearing char satisfies need[char]&gt;0</span></span><br><span class="line">                need[s[i]] += <span class="number">1</span>          </span><br><span class="line"></span><br><span class="line">                <span class="comment"># missed this first char, so add missing by 1</span></span><br><span class="line">                missing += <span class="number">1</span>                     </span><br><span class="line"></span><br><span class="line">                <span class="comment">#update i to windowStart+1 for next window</span></span><br><span class="line">                i += <span class="number">1</span>                          </span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> s[windowStart:windowEnd]</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> two-pointers </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> Sliding-Window </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode-skill8-two_pointers</title>
+      <link href="/2022/09/11/LeetCode-skill8-two-pointers/"/>
+      <url>/2022/09/11/LeetCode-skill8-two-pointers/</url>
+      
+        <content type="html"><![CDATA[<p>滑动窗口：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 滑动窗口算法框架 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">slidingWindow</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">    unordered_map&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; window;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (right &lt; s.size()) &#123;</span><br><span class="line">        <span class="comment">// c 是将移入窗口的字符</span></span><br><span class="line">        <span class="keyword">char</span> c = s[right];</span><br><span class="line">        <span class="comment">// 增大窗口</span></span><br><span class="line">        right++;</span><br><span class="line">        <span class="comment">// 进行窗口内数据的一系列更新</span></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*** debug 输出的位置 ***/</span></span><br><span class="line">        printf(<span class="string">&quot;window: [%d, %d)\n&quot;</span>, left, right);</span><br><span class="line">        <span class="comment">/********************/</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 判断左侧窗口是否要收缩</span></span><br><span class="line">        <span class="keyword">while</span> (window needs shrink) &#123;</span><br><span class="line">            <span class="comment">// d 是将移出窗口的字符</span></span><br><span class="line">            <span class="keyword">char</span> d = s[left];</span><br><span class="line">            <span class="comment">// 缩小窗口</span></span><br><span class="line">            left++;</span><br><span class="line">            <span class="comment">// 进行窗口内数据的一系列更新</span></span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">slidingWindow</span>(<span class="params">string s</span>):</span></span><br><span class="line">    </span><br><span class="line">    window=&#123;&#125;</span><br><span class="line">    <span class="built_in">int</span> left = <span class="number">0</span>, right = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> right&lt;<span class="built_in">len</span>(s):</span><br><span class="line">        <span class="comment">#c 是将移入窗口的字符</span></span><br><span class="line">        c=s[right]</span><br><span class="line">        <span class="comment"># 增大窗口</span></span><br><span class="line">        right+=<span class="number">1</span></span><br><span class="line">        <span class="comment"># 进行窗口内数据的一系列更新</span></span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">#*** debug 输出的位置 ***/</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;window: [%d, %d)\n&quot;</span>, left, right)</span><br><span class="line">        <span class="comment">#********************/</span></span><br><span class="line">        <span class="comment"># 判断左侧窗口是否要收缩</span></span><br><span class="line">        <span class="keyword">while</span> (window needs shrink) </span><br><span class="line">            <span class="comment">#d 是将移出窗口的字符</span></span><br><span class="line">            d = s[left]</span><br><span class="line">            <span class="comment">#缩小窗口</span></span><br><span class="line">            left+=<span class="number">1</span></span><br><span class="line">            <span class="comment">#进行窗口内数据的一系列更新</span></span><br><span class="line">            ...</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> two-pointers </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> Sliding-Window </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1360. Number of Days Between Two Dates</title>
+      <link href="/2022/09/09/1360/"/>
+      <url>/2022/09/09/1360/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1360-Number-of-Days-Between-Two-Dates-easy"><a href="#1360-Number-of-Days-Between-Two-Dates-easy" class="headerlink" title="1360. Number of Days Between Two Dates(easy)"></a>1360. Number of Days Between Two Dates(easy)</h1><h2 id="Write-a-program-to-count-the-number-of-days-between-two-dates"><a href="#Write-a-program-to-count-the-number-of-days-between-two-dates" class="headerlink" title="Write a program to count the number of days between two dates."></a>Write a program to count the number of days between two dates.</h2><h2 id="The-two-dates-are-given-as-strings-their-format-is-YYYY-MM-DD-as-shown-in-the-examples"><a href="#The-two-dates-are-given-as-strings-their-format-is-YYYY-MM-DD-as-shown-in-the-examples" class="headerlink" title="The two dates are given as strings, their format is YYYY-MM-DD as shown in the examples."></a>The two dates are given as strings, their format is YYYY-MM-DD as shown in the examples.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: date1 = &quot;2019-06-29&quot;, date2 = &quot;2019-06-30&quot;</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解:"></a><a href="https://leetcode.com/problems/number-of-days-between-two-dates/discuss/517582/Python-Magical-Formula">官方题解</a>:</h3><p>When m=1 or m=2 (January or February), we let m=13 or m=14 and let y decreased by 1. Imagine it is 13th or 14th month of the last year. By doing that, we let the magical formula also work for those two months. (153 * m + 8) // 5 is just a carefully designed way to record the days of each month. More specifically, it is designed to record the difference of days between two months. Suppose we have March 1st and April 1st, (153 * 3 + 8) // 5 = 93 while (153 * 4 + 8) // 5 = 124, the difference is 31 which is the number of days in March. Suppose we have April 1st to May 1st, (153 * 4 + 8) // 5 = 124 and (153 * 5 + 8) // 5 = 154, the difference is now 30 which is the number of days in April. You can also check other months.</p><p>I learned this formula somewhere else before. It is not something to come up with in minutes.<br>首先把1月2月加12当作13和14月，这样使得他们也可以套用公式<br>这里有一个关键的函数(153 * m + 8) // 5，通过前后月代入以后的相减，可以区分不同月份的长度，确实是非常神奇</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span>    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">daysBetweenDates</span>(<span class="params">self, date1: <span class="built_in">str</span>, date2: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">date</span>):</span></span><br><span class="line">            y, m, d = <span class="built_in">map</span>(<span class="built_in">int</span>, date.split(<span class="string">&#x27;-&#x27;</span>))</span><br><span class="line">            <span class="keyword">if</span> m &lt; <span class="number">3</span>:</span><br><span class="line">                m += <span class="number">12</span></span><br><span class="line">                y -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">365</span> * y + y // <span class="number">4</span> + y // <span class="number">400</span> - y // <span class="number">100</span> + d + (<span class="number">153</span> * m + <span class="number">8</span>) // <span class="number">5</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">abs</span>(f(date1) - f(date2))</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> math </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>practicecodesignal4</title>
       <link href="/2022/09/05/practicecodesignal4/"/>
       <url>/2022/09/05/practicecodesignal4/</url>
@@ -477,6 +667,24 @@
         <content type="html"><![CDATA[<p>我们所熟悉的 DFS（深度优先搜索）问题通常是在树或者图结构上进行的。而我们今天要讨论的 DFS 问题，是在一种「网格」结构中进行的。岛屿问题是这类网格 DFS 问题的典型代表。网格结构遍历起来要比二叉树复杂一些，如果没有掌握一定的方法，DFS 代码容易写得冗长繁杂。</p><p>本文将以岛屿问题为例，展示网格类问题 DFS 通用思路，以及如何让代码变得简洁。</p><p>在 LeetCode 中，「岛屿问题」是一个系列系列问题，比如：</p><p>L200. 岛屿数量 （Easy）<br>463. 岛屿的周长 （Easy）<br>695. 岛屿的最大面积 （Medium）<br>827. 最大人工岛 （Hard）</p><p>作者：nettee<br>链接：<a href="https://leetcode.cn/problems/number-of-islands/solution/dao-yu-lei-wen-ti-de-tong-yong-jie-fa-dfs-bian-li-/">https://leetcode.cn/problems/number-of-islands/solution/dao-yu-lei-wen-ti-de-tong-yong-jie-fa-dfs-bian-li-/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>]]></content>
       
       
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Tree </tag>
+            
+            <tag> DFS </tag>
+            
+        </tags>
       
     </entry>
     
