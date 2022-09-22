@@ -4,6 +4,159 @@
   
     
     <entry>
+      <title>985. Sum of Even Numbers After Queries(medium)</title>
+      <link href="/2022/09/21/985/"/>
+      <url>/2022/09/21/985/</url>
+      
+        <content type="html"><![CDATA[<h1 id="985-Sum-of-Even-Numbers-After-Queries-medium"><a href="#985-Sum-of-Even-Numbers-After-Queries-medium" class="headerlink" title="985. Sum of Even Numbers After Queries(medium)"></a>985. Sum of Even Numbers After Queries(medium)</h1><h2 id="You-are-given-an-integer-array-nums-and-an-array-queries-where-queries-i-vali-indexi"><a href="#You-are-given-an-integer-array-nums-and-an-array-queries-where-queries-i-vali-indexi" class="headerlink" title="You are given an integer array nums and an array queries where queries[i] = [vali, indexi]."></a>You are given an integer array nums and an array queries where queries[i] = [vali, indexi].</h2><h2 id="For-each-query-i-first-apply-nums-indexi-nums-indexi-vali-then-print-the-sum-of-the-even-values-of-nums"><a href="#For-each-query-i-first-apply-nums-indexi-nums-indexi-vali-then-print-the-sum-of-the-even-values-of-nums" class="headerlink" title="For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums."></a>For each query i, first, apply nums[indexi] = nums[indexi] + vali, then print the sum of the even values of nums.</h2><h2 id="Return-an-integer-array-answer-where-answer-i-is-the-answer-to-the-ith-query"><a href="#Return-an-integer-array-answer-where-answer-i-is-the-answer-to-the-ith-query" class="headerlink" title="Return an integer array answer where answer[i] is the answer to the ith query."></a>Return an integer array answer where answer[i] is the answer to the ith query.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]</span><br><span class="line">Output: [8,6,2,4]</span><br><span class="line">Explanation: At the beginning, the array is [1,2,3,4].</span><br><span class="line">After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.</span><br><span class="line">After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.</span><br><span class="line">After adding -4 to nums[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.</span><br><span class="line">After adding 2 to nums[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4.</span><br></pre></td></tr></table></figure><p>这道题的思路很有特点，维护一个数组，先把原数组的偶数和求出来，接下来根据queries不断调整 S，即每一步操作之后整个数组的偶数和。操作数组中的某一个元素 A[index] 的时候，数组 A 其他位置的元素都应保持不变。如果 A[index] 是偶数，我们就从 S 中减去它，然后计算 A[index] + val 对 S 的影响（如果是偶数则在 S 中加上它）。相当于再计算前先把这个value减去（如果是偶数），算上新加入的index再计算对整个和的影响（如果是偶数）</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sumEvenAfterQueries</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], queries: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        even_sum=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> num%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">                even_sum+=num</span><br><span class="line">        ans=[]</span><br><span class="line">        <span class="keyword">for</span> val,i <span class="keyword">in</span> queries:</span><br><span class="line">            <span class="keyword">if</span> nums[i]%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">                even_sum-=nums[i]</span><br><span class="line">            nums[i]+=val</span><br><span class="line">            <span class="keyword">if</span> nums[i]%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">                even_sum+=nums[i]</span><br><span class="line">            ans.append(even_sum)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>402</title>
+      <link href="/2022/09/21/402/"/>
+      <url>/2022/09/21/402/</url>
+      
+        <content type="html"><![CDATA[<p>相似题型<br>316. 去除重复字母(困难)<br>321. 拼接最大数(困难)<br>402. 移掉 K 位数字(中等)<br>1081. 不同字符的最小子序列（中等）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> stack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>718</title>
+      <link href="/2022/09/21/718/"/>
+      <url>/2022/09/21/718/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> stack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>739. Daily Temperatures(medium)</title>
+      <link href="/2022/09/20/739/"/>
+      <url>/2022/09/20/739/</url>
+      
+        <content type="html"><![CDATA[<h1 id="739-Daily-Temperatures-medium"><a href="#739-Daily-Temperatures-medium" class="headerlink" title="739. Daily Temperatures(medium)"></a>739. Daily Temperatures(medium)</h1><h2 id="Given-an-array-of-integers-temperatures-represents-the-daily-temperatures-return-an-array-answer-such-that-answer-i-is-the-number-of-days-you-have-to-wait-after-the-ith-day-to-get-a-warmer-temperature-If-there-is-no-future-day-for-which-this-is-possible-keep-answer-i-0-instead"><a href="#Given-an-array-of-integers-temperatures-represents-the-daily-temperatures-return-an-array-answer-such-that-answer-i-is-the-number-of-days-you-have-to-wait-after-the-ith-day-to-get-a-warmer-temperature-If-there-is-no-future-day-for-which-this-is-possible-keep-answer-i-0-instead" class="headerlink" title="Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead."></a>Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.</h2><h3 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a><a href="https://leetcode.cn/problems/daily-temperatures/solution/mei-ri-wen-du-by-leetcode-solution/">单调栈</a></h3><p>可以维护一个存储下标的单调栈，从栈底到栈顶的下标对应的温度列表中的温度依次递减。如果一个下标在单调栈里，则表示尚未找到下一次温度更高的下标。</p><p>正向遍历温度列表。对于温度列表中的每个元素 temperatures[i]，如果栈为空，则直接将 i 进栈，如果栈不为空，则比较栈顶元素 prevIndex 对应的温度 temperatures[prevIndex] 和当前温度 temperatures[i]，如果 temperatures[i] &gt; temperatures[prevIndex]，则将 prevIndex 移除，并将 prevIndex 对应的等待天数赋为 i - prevIndex，重复上述操作直到栈为空或者栈顶元素对应的温度小于等于当前温度，然后将 i 进栈。</p><p>为什么可以在弹栈的时候更新 ans[prevIndex] 呢？因为在这种情况下，即将进栈的 i 对应的 temperatures[i] 一定是 temperatures[prevIndex] 右边第一个比它大的元素，试想如果 prevIndex 和 i 有比它大的元素，假设下标为 j，那么 prevIndex 一定会在下标 j 的那一轮被弹掉。</p><p>由于单调栈满足从栈底到栈顶元素对应的温度递减，因此每次有元素进栈时，会将温度更低的元素全部移除，并更新出栈元素对应的等待天数，这样可以确保等待天数一定是最小的。</p><p>以下用一个具体的例子帮助读者理解单调栈。对于温度列表 [73,74,75,71,69,72,76,73]，单调栈 stack 的初始状态为空，答案 ans 的初始状态是 [0,0,0,0,0,0,0,0]，按照以下步骤更新单调栈和答案，其中单调栈内的元素都是下标，括号内的数字表示下标在温度列表中对应的温度。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dailyTemperatures</span>(<span class="params">self, temperatures: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        length = <span class="built_in">len</span>(temperatures)</span><br><span class="line">        ans = [<span class="number">0</span>] * length</span><br><span class="line">        stack = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length):</span><br><span class="line">            temperature = temperatures[i]</span><br><span class="line">            <span class="keyword">while</span> stack <span class="keyword">and</span> temperature &gt; temperatures[stack[-<span class="number">1</span>]]:</span><br><span class="line">                prev_index = stack.pop()</span><br><span class="line">                ans[prev_index] = i - prev_index</span><br><span class="line">            stack.append(i)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.cn/problems/daily-temperatures/solution/mei-ri-wen-du-by-leetcode-solution/438101">KMP</a></p><p>这是评论里的解法，相对更好理解一些</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dailyTemperatures</span>(<span class="params">self, T: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        n=<span class="built_in">len</span>(T)</span><br><span class="line">        ans=[<span class="number">0</span>]*n</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">2</span>,-<span class="number">1</span>,-<span class="number">1</span>):</span><br><span class="line">            now=i+<span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> T[now]&lt;=T[i]:</span><br><span class="line">                <span class="keyword">if</span> ans[now]:</span><br><span class="line">                    now+=ans[now]</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ans[i]=now-i</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> stack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>496. Next Greater Element I(easy)</title>
+      <link href="/2022/09/20/496/"/>
+      <url>/2022/09/20/496/</url>
+      
+        <content type="html"><![CDATA[<h1 id="496-Next-Greater-Element-I-easy"><a href="#496-Next-Greater-Element-I-easy" class="headerlink" title="496. Next Greater Element I(easy)"></a>496. Next Greater Element I(easy)</h1><h2 id="The-next-greater-element-of-some-element-x-in-an-array-is-the-first-greater-element-that-is-to-the-right-of-x-in-the-same-array"><a href="#The-next-greater-element-of-some-element-x-in-an-array-is-the-first-greater-element-that-is-to-the-right-of-x-in-the-same-array" class="headerlink" title="The next greater element of some element x in an array is the first greater element that is to the right of x in the same array."></a>The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.</h2><h2 id="You-are-given-two-distinct-0-indexed-integer-arrays-nums1-and-nums2-where-nums1-is-a-subset-of-nums2"><a href="#You-are-given-two-distinct-0-indexed-integer-arrays-nums1-and-nums2-where-nums1-is-a-subset-of-nums2" class="headerlink" title="You are given two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2."></a>You are given two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2.</h2><h2 id="For-each-0-lt-i-lt-nums1-length-find-the-index-j-such-that-nums1-i-nums2-j-and-determine-the-next-greater-element-of-nums2-j-in-nums2-If-there-is-no-next-greater-element-then-the-answer-for-this-query-is-1"><a href="#For-each-0-lt-i-lt-nums1-length-find-the-index-j-such-that-nums1-i-nums2-j-and-determine-the-next-greater-element-of-nums2-j-in-nums2-If-there-is-no-next-greater-element-then-the-answer-for-this-query-is-1" class="headerlink" title="For each 0 &lt;= i &lt; nums1.length, find the index j such that nums1[i] == nums2[j] and determine the next greater element of nums2[j] in nums2. If there is no next greater element, then the answer for this query is -1."></a>For each 0 &lt;= i &lt; nums1.length, find the index j such that nums1[i] == nums2[j] and determine the next greater element of nums2[j] in nums2. If there is no next greater element, then the answer for this query is -1.</h2><h2 id="Return-an-array-ans-of-length-nums1-length-such-that-ans-i-is-the-next-greater-element-as-described-above"><a href="#Return-an-array-ans-of-length-nums1-length-such-that-ans-i-is-the-next-greater-element-as-described-above" class="headerlink" title="Return an array ans of length nums1.length such that ans[i] is the next greater element as described above."></a>Return an array ans of length nums1.length such that ans[i] is the next greater element as described above.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: nums1 = [4,1,2], nums2 = [1,3,4,2]</span><br><span class="line">Output: [-1,3,-1]</span><br><span class="line">Explanation: The next greater element for each value of nums1 is as follows:</span><br><span class="line">- 4 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.</span><br><span class="line">- 1 is underlined in nums2 = [1,3,4,2]. The next greater element is 3.</span><br><span class="line">- 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.</span><br></pre></td></tr></table></figure><h3 id="单调栈-哈希表"><a href="#单调栈-哈希表" class="headerlink" title="单调栈 + 哈希表"></a><a href="https://leetcode.cn/problems/next-greater-element-i/solution/xia-yi-ge-geng-da-yuan-su-i-by-leetcode-bfcoj/">单调栈 + 哈希表</a></h3><p>思路</p><p>我们可以先预处理 nums2 ，使查询 nums1中的每个元素在 nums2中对应位置的右边的第一个更大的元素值时不需要再遍历 nums2。于是，我们将题目分解为两个子问题：</p><p>第 1 个子问题：如何更高效地计算 nums2中每个元素右边的第一个更大的值；</p><p>第 2 个子问题：如何存储第 1 个子问题的结果。</p><p>算法</p><p>我们可以使用单调栈来解决第 1 个子问题。倒序遍历 nums2，并用单调栈中维护当前位置右边的更大的元素列表，从栈底到栈顶的元素是单调递减的。</p><p>具体地，每次我们移动到数组中一个新的位置 i，就将当前单调栈中所有小于 nums2[i]的元素弹出单调栈，当前位置右边的第一个更大的元素即为栈顶元素，如果栈为空则说明当前位置右边没有更大的元素。随后我们将位置 i 的元素入栈。</p><p>可以结合以下例子来理解。</p><p>因为题目规定了 nums2是没有重复元素的，所以我们可以使用哈希表来解决第 22 个子问题，将元素值与其右边第一个更大的元素值的对应关系存入哈希表。</p><p>细节</p><p>因为在这道题中我们只需要用到 nums2中元素的顺序而不需要用到下标，所以栈中直接存储 nums2中元素的值即可。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">nextGreaterElement</span>(<span class="params">self, nums1: <span class="type">List</span>[<span class="built_in">int</span>], nums2: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        res = &#123;&#125;</span><br><span class="line">        stack = []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> <span class="built_in">reversed</span>(nums2):</span><br><span class="line">            <span class="keyword">while</span> stack <span class="keyword">and</span> num &gt;= stack[-<span class="number">1</span>]:</span><br><span class="line">                stack.pop()</span><br><span class="line">            res[num] = stack[-<span class="number">1</span>] <span class="keyword">if</span> stack <span class="keyword">else</span> -<span class="number">1</span></span><br><span class="line">            stack.append(num)</span><br><span class="line">        <span class="keyword">return</span> [res[num] <span class="keyword">for</span> num <span class="keyword">in</span> nums1]</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> stack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>380. Insert Delete GetRandom O(1)(medium)</title>
       <link href="/2022/09/13/380/"/>
       <url>/2022/09/13/380/</url>
