@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>1002. Find Common Characters(easy)</title>
+      <link href="/2022/09/25/1002/"/>
+      <url>/2022/09/25/1002/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1002-Find-Common-Characters-easy"><a href="#1002-Find-Common-Characters-easy" class="headerlink" title="1002. Find Common Characters(easy)"></a>1002. Find Common Characters(easy)</h1><h2 id="Given-a-string-array-words-return-an-array-of-all-characters-that-show-up-in-all-strings-within-the-words-including-duplicates-You-may-return-the-answer-in-any-order"><a href="#Given-a-string-array-words-return-an-array-of-all-characters-that-show-up-in-all-strings-within-the-words-including-duplicates-You-may-return-the-answer-in-any-order" class="headerlink" title="Given a string array words, return an array of all characters that show up in all strings within the words (including duplicates). You may return the answer in any order."></a>Given a string array words, return an array of all characters that show up in all strings within the words (including duplicates). You may return the answer in any order.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: words = [&quot;bella&quot;,&quot;label&quot;,&quot;roller&quot;]</span><br><span class="line">Output: [&quot;e&quot;,&quot;l&quot;,&quot;l&quot;]</span><br></pre></td></tr></table></figure><p>这个就是利用hashmap判断数量和是否存在，然后用&amp;=判断相同值</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">commonChars</span>(<span class="params">self, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">str</span>]:</span></span><br><span class="line">        res = collections.Counter(words[<span class="number">0</span>])</span><br><span class="line">        <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">            res &amp;=collections.Counter(word)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">list</span>(res.elements())    </span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> hashmap </tag>
+            
+            <tag> string </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>1081. Smallest Subsequence of Distinct Characters(medium)</title>
       <link href="/2022/09/24/1081/"/>
       <url>/2022/09/24/1081/</url>
