@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-25T20:24:50.593Z</updated>
+  <updated>2022-10-02T19:15:37.363Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,345 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>35. Search Insert Position(easy)</title>
+    <link href="http://example.com/2022/10/02/35/"/>
+    <id>http://example.com/2022/10/02/35/</id>
+    <published>2022-10-02T19:06:08.000Z</published>
+    <updated>2022-10-02T19:15:37.363Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Given-a-sorted-array-of-distinct-integers-and-a-target-value-return-the-index-if-the-target-is-found-If-not-return-the-index-where-it-would-be-if-it-were-inserted-in-order"><a href="#Given-a-sorted-array-of-distinct-integers-and-a-target-value-return-the-index-if-the-target-is-found-If-not-return-the-index-where-it-would-be-if-it-were-inserted-in-order" class="headerlink" title="Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order."></a>Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</h2><h2 id="You-must-write-an-algorithm-with-O-log-n-runtime-complexity"><a href="#You-must-write-an-algorithm-with-O-log-n-runtime-complexity" class="headerlink" title="You must write an algorithm with O(log n) runtime complexity."></a>You must write an algorithm with O(log n) runtime complexity.</h2><p>基础做法，遍历</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        res=<span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums)==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">if</span> target&gt;nums[<span class="number">0</span>]:</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> target&gt;nums[-<span class="number">1</span>]:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i]&gt;=target:</span><br><span class="line">                res=i</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure><p>二分查找</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        length=<span class="built_in">len</span>(nums)</span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = length</span><br><span class="line">        <span class="keyword">while</span> left&lt;right:</span><br><span class="line">            mid = <span class="built_in">int</span>(left + (right - left) / <span class="number">2</span>)</span><br><span class="line">            <span class="keyword">if</span> nums[mid]&lt;target:</span><br><span class="line">                left = mid+<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right= mid</span><br><span class="line">        <span class="keyword">return</span> left</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Given-a-sorted-array-of-distinct-integers-and-a-target-value-return-the-index-if-the-target-is-found-If-not-return-the-index-where-i</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="array" scheme="http://example.com/tags/array/"/>
+    
+    <category term="binary search" scheme="http://example.com/tags/binary-search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>14. Longest Common Prefix(easy)</title>
+    <link href="http://example.com/2022/10/02/14/"/>
+    <id>http://example.com/2022/10/02/14/</id>
+    <published>2022-10-02T18:51:47.000Z</published>
+    <updated>2022-10-02T19:06:57.754Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="14-Longest-Common-Prefix-easy"><a href="#14-Longest-Common-Prefix-easy" class="headerlink" title="14. Longest Common Prefix(easy)"></a>14. Longest Common Prefix(easy)</h1><h2 id="Write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings"><a href="#Write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings" class="headerlink" title="Write a function to find the longest common prefix string amongst an array of strings."></a>Write a function to find the longest common prefix string amongst an array of strings.</h2><h2 id="If-there-is-no-common-prefix-return-an-empty-string-“”"><a href="#If-there-is-no-common-prefix-return-an-empty-string-“”" class="headerlink" title="If there is no common prefix, return an empty string “”."></a>If there is no common prefix, return an empty string “”.</h2><p><a href="https://leetcode.cn/problems/longest-common-prefix/solution/zui-chang-gong-gong-qian-zhui-by-leetcode-solution/">官方题解</a></p><p>纵向扫描<br>方法一是横向扫描，依次遍历每个字符串，更新最长公共前缀。另一种方法是纵向扫描。纵向扫描时，从前往后遍历所有字符串的每一列，比较相同列上的字符是否相同，如果相同则继续对下一列进行比较，如果不相同则当前列不再属于公共前缀，当前列之前的部分为最长公共前缀。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestCommonPrefix</span>(<span class="params">self, strs: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> strs:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span></span><br><span class="line">        </span><br><span class="line">        length, count = <span class="built_in">len</span>(strs[<span class="number">0</span>]), <span class="built_in">len</span>(strs)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length):</span><br><span class="line">            c = strs[<span class="number">0</span>][i]</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">any</span>(i == <span class="built_in">len</span>(strs[j]) <span class="keyword">or</span> strs[j][i] != c <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, count)):</span><br><span class="line">                <span class="keyword">return</span> strs[<span class="number">0</span>][:i]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> strs[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;14-Longest-Common-Prefix-easy&quot;&gt;&lt;a href=&quot;#14-Longest-Common-Prefix-easy&quot; class=&quot;headerlink&quot; title=&quot;14. Longest Common Prefix(easy)&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="array" scheme="http://example.com/tags/array/"/>
+    
+    <category term="LCP" scheme="http://example.com/tags/LCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1480. Running Sum of 1d Array(easy)</title>
+    <link href="http://example.com/2022/10/02/1480/"/>
+    <id>http://example.com/2022/10/02/1480/</id>
+    <published>2022-10-02T18:25:28.000Z</published>
+    <updated>2022-10-02T18:35:56.309Z</updated>
+    
+    <content type="html"><![CDATA[<p>Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).</p><p>Return the running sum of nums.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,3,4]</span><br><span class="line">Output: [1,3,6,10]</span><br><span class="line">Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].</span><br></pre></td></tr></table></figure><p>其实这题就是前缀和数组</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def runningSum(self, nums: List[int]) -&gt; List[int]:</span><br><span class="line">        res=[0]*len(nums)</span><br><span class="line">        res[0]=nums[0]</span><br><span class="line">        for i in range(1,len(nums)):</span><br><span class="line">            res[i]=nums[i]+res[i-1]</span><br><span class="line">        return res</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).&lt;/p&gt;
+&lt;p&gt;Return the running sum of nums.&lt;</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="array" scheme="http://example.com/tags/array/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>231. Power of Two(easy)</title>
+    <link href="http://example.com/2022/10/01/231/"/>
+    <id>http://example.com/2022/10/01/231/</id>
+    <published>2022-10-02T03:45:11.000Z</published>
+    <updated>2022-10-02T04:35:57.777Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="231-Power-of-Two-easy"><a href="#231-Power-of-Two-easy" class="headerlink" title="231. Power of Two(easy)"></a>231. Power of Two(easy)</h1><h2 id="Given-an-integer-n-return-true-if-it-is-a-power-of-two-Otherwise-return-false"><a href="#Given-an-integer-n-return-true-if-it-is-a-power-of-two-Otherwise-return-false" class="headerlink" title="Given an integer n, return true if it is a power of two. Otherwise, return false."></a>Given an integer n, return true if it is a power of two. Otherwise, return false.</h2><h2 id="An-integer-n-is-a-power-of-two-if-there-exists-an-integer-x-such-that-n-2-x"><a href="#An-integer-n-is-a-power-of-two-if-there-exists-an-integer-x-such-that-n-2-x" class="headerlink" title="An integer n is a power of two, if there exists an integer x such that n == 2^x."></a>An integer n is a power of two, if there exists an integer x such that n == 2^x.</h2><p>How to get / isolate the rightmost 1-bit : x &amp; (-x).</p><p>How to turn off (= set to 0) the rightmost 1-bit : x &amp; (x - 1).<br><a href="https://leetcode.com/problems/power-of-two/solutions/360718/power-of-two/">官方题解</a></p><p>Approach 1: Bitwise Operators : Get the Rightmost 1-bit</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;231-Power-of-Two-easy&quot;&gt;&lt;a href=&quot;#231-Power-of-Two-easy&quot; class=&quot;headerlink&quot; title=&quot;231. Power of Two(easy)&quot;&gt;&lt;/a&gt;231. Power of Two(eas</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="bitwise" scheme="http://example.com/tags/bitwise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>260. Single Number III(medium)</title>
+    <link href="http://example.com/2022/10/01/260/"/>
+    <id>http://example.com/2022/10/01/260/</id>
+    <published>2022-10-02T03:33:57.000Z</published>
+    <updated>2022-10-02T03:44:31.518Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="260-Single-Number-III-medium"><a href="#260-Single-Number-III-medium" class="headerlink" title="260. Single Number III(medium)"></a>260. Single Number III(medium)</h1><h2 id="Given-an-integer-array-nums-in-which-exactly-two-elements-appear-only-once-and-all-the-other-elements-appear-exactly-twice-Find-the-two-elements-that-appear-only-once-You-can-return-the-answer-in-any-order"><a href="#Given-an-integer-array-nums-in-which-exactly-two-elements-appear-only-once-and-all-the-other-elements-appear-exactly-twice-Find-the-two-elements-that-appear-only-once-You-can-return-the-answer-in-any-order" class="headerlink" title="Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order."></a>Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order.</h2><h2 id="You-must-write-an-algorithm-that-runs-in-linear-runtime-complexity-and-uses-only-constant-extra-space"><a href="#You-must-write-an-algorithm-that-runs-in-linear-runtime-complexity-and-uses-only-constant-extra-space" class="headerlink" title="You must write an algorithm that runs in linear runtime complexity and uses only constant extra space."></a>You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,1,3,2,5]</span><br><span class="line">Output: [3,5]</span><br><span class="line">Explanation:  [5, 3] is also a valid answer.</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.com/problems/single-number-iii/solutions/366935/single-number-iii/">官方题解</a></p><p>Two bitmasks</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;260-Single-Number-III-medium&quot;&gt;&lt;a href=&quot;#260-Single-Number-III-medium&quot; class=&quot;headerlink&quot; title=&quot;260. Single Number III(medium)&quot;&gt;&lt;/a&gt;</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="bitwise" scheme="http://example.com/tags/bitwise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>91. Decode Ways(medium)</title>
+    <link href="http://example.com/2022/10/01/91/"/>
+    <id>http://example.com/2022/10/01/91/</id>
+    <published>2022-10-02T03:25:21.000Z</published>
+    <updated>2022-10-02T03:27:07.188Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="91-Decode-Ways-medium"><a href="#91-Decode-Ways-medium" class="headerlink" title="91. Decode Ways(medium)"></a>91. Decode Ways(medium)</h1><h2 id="A-message-containing-letters-from-A-Z-can-be-encoded-into-numbers-using-the-following-mapping"><a href="#A-message-containing-letters-from-A-Z-can-be-encoded-into-numbers-using-the-following-mapping" class="headerlink" title="A message containing letters from A-Z can be encoded into numbers using the following mapping:"></a>A message containing letters from A-Z can be encoded into numbers using the following mapping:</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x27;A&#x27; -&gt; &quot;1&quot;</span><br><span class="line">&#x27;B&#x27; -&gt; &quot;2&quot;</span><br><span class="line">...</span><br><span class="line">&#x27;Z&#x27; -&gt; &quot;26&quot;</span><br></pre></td></tr></table></figure><p>To decode an encoded message, all the digits must be grouped then mapped back into letters using the reverse of the mapping above (there may be multiple ways). For example, “11106” can be mapped into:</p><p>“AAJF” with the grouping (1 1 10 6)<br>“KJF” with the grouping (11 10 6)<br>Note that the grouping (1 11 06) is invalid because “06” cannot be mapped into ‘F’ since “6” is different from “06”.</p><p>Given a string s containing only digits, return the number of ways to decode it.</p><p>The test cases are generated so that the answer fits in a 32-bit integer.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;12&quot;</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: &quot;12&quot; could be decoded as &quot;AB&quot; (1 2) or &quot;L&quot; (12).</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;226&quot;</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: &quot;226&quot; could be decoded as &quot;BZ&quot; (2 26), &quot;VF&quot; (22 6), or &quot;BBF&quot; (2 2 6). </span><br></pre></td></tr></table></figure><h3 id="Leetcode-Solution"><a href="#Leetcode-Solution" class="headerlink" title="Leetcode Solution"></a><a href="https://leetcode.com/problems/decode-ways/solutions/525903/decode-ways/">Leetcode Solution</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numDecodings</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> s[<span class="number">0</span>] == <span class="string">&quot;0&quot;</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">        two_back = <span class="number">1</span></span><br><span class="line">        one_back = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(s)):</span><br><span class="line">            current = <span class="number">0</span></span><br><span class="line">            <span class="keyword">if</span> s[i] != <span class="string">&quot;0&quot;</span>:</span><br><span class="line">                current = one_back</span><br><span class="line">            two_digit = <span class="built_in">int</span>(s[i - <span class="number">1</span>: i + <span class="number">1</span>])</span><br><span class="line">            <span class="keyword">if</span> two_digit &gt;= <span class="number">10</span> <span class="keyword">and</span> two_digit &lt;= <span class="number">26</span>:</span><br><span class="line">                current += two_back</span><br><span class="line">            two_back = one_back</span><br><span class="line">            one_back = current</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> one_back</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;91-Decode-Ways-medium&quot;&gt;&lt;a href=&quot;#91-Decode-Ways-medium&quot; class=&quot;headerlink&quot; title=&quot;91. Decode Ways(medium)&quot;&gt;&lt;/a&gt;91. Decode Ways(mediu</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>137. Single Number II(medium)</title>
+    <link href="http://example.com/2022/10/01/137/"/>
+    <id>http://example.com/2022/10/01/137/</id>
+    <published>2022-10-01T20:51:38.000Z</published>
+    <updated>2022-10-02T03:33:25.679Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="137-Single-Number-medium"><a href="#137-Single-Number-medium" class="headerlink" title="137. Single Number(medium)"></a>137. Single Number(medium)</h1><h2 id="Given-an-integer-array-nums-where-every-element-appears-three-times-except-for-one-which-appears-exactly-once-Find-the-single-element-and-return-it"><a href="#Given-an-integer-array-nums-where-every-element-appears-three-times-except-for-one-which-appears-exactly-once-Find-the-single-element-and-return-it" class="headerlink" title="Given an integer array nums where every element appears three times except for one, which appears exactly once. Find the single element and return it."></a>Given an integer array nums where every element appears three times except for one, which appears exactly once. Find the single element and return it.</h2><h2 id="You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space"><a href="#You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space" class="headerlink" title="You must implement a solution with a linear runtime complexity and use only constant extra space."></a>You must implement a solution with a linear runtime complexity and use only constant extra space.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [2,2,3,2]</span><br><span class="line">Output: 3</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.com/problems/single-number-ii/solutions/356460/single-number-ii/">官方题解</a></p><p>这里用到了异或<br>XOR</p><p>Let’s start from XOR operator which could be used to detect the bit which appears odd number of times: 1, 3, 5, etc.</p><p>XOR of zero and a bit results in that bit</p><p>0⊕x=x</p><p>XOR of two equal bits (even if they are zeros) results in a zero</p><p>x⊕x=0</p><p>and so on and so forth, i.e. one could see the bit in a bitmask only if it appears odd number of times.<br>That’s already great, so one could detect the bit which appears once, and the bit which appears three times. The problem is to distinguish between these two situations.</p><p>AND and NOT</p><p>To separate number that appears once from a number that appears three times let’s use two bitmasks instead of one: seen_once and seen_twice.</p><p>The idea is to</p><p>change seen_once only if seen_twice is unchanged</p><p>change seen_twice only if seen_once is unchanged</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">singleNumber</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        seen_once = seen_twice = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="comment"># first appearance: </span></span><br><span class="line">            <span class="comment"># add num to seen_once </span></span><br><span class="line">            <span class="comment"># don&#x27;t add to seen_twice because of presence in seen_once</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># second appearance: </span></span><br><span class="line">            <span class="comment"># remove num from seen_once </span></span><br><span class="line">            <span class="comment"># add num to seen_twice</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># third appearance: </span></span><br><span class="line">            <span class="comment"># don&#x27;t add to seen_once because of presence in seen_twice</span></span><br><span class="line">            <span class="comment"># remove num from seen_twice</span></span><br><span class="line">            seen_once = ~seen_twice &amp; (seen_once ^ num)</span><br><span class="line">            seen_twice = ~seen_once &amp; (seen_twice ^ num)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> seen_once</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;137-Single-Number-medium&quot;&gt;&lt;a href=&quot;#137-Single-Number-medium&quot; class=&quot;headerlink&quot; title=&quot;137. Single Number(medium)&quot;&gt;&lt;/a&gt;137. Single </summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="bitwise" scheme="http://example.com/tags/bitwise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>136. Single Number(easy)</title>
+    <link href="http://example.com/2022/09/30/136/"/>
+    <id>http://example.com/2022/09/30/136/</id>
+    <published>2022-09-30T15:28:13.000Z</published>
+    <updated>2022-10-01T20:51:05.801Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="136-Single-Number-easy"><a href="#136-Single-Number-easy" class="headerlink" title="136. Single Number(easy)"></a>136. Single Number(easy)</h1><h2 id="Given-a-non-empty-array-of-integers-nums-every-element-appears-twice-except-for-one-Find-that-single-one"><a href="#Given-a-non-empty-array-of-integers-nums-every-element-appears-twice-except-for-one-Find-that-single-one" class="headerlink" title="Given a non-empty array of integers nums, every element appears twice except for one. Find that single one."></a>Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.</h2><h2 id="You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space"><a href="#You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space" class="headerlink" title="You must implement a solution with a linear runtime complexity and use only constant extra space."></a>You must implement a solution with a linear runtime complexity and use only constant extra space.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [2,2,1]</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure><p>这道题的关键在于异或运算，异或也叫半加运算，其运算法则相当于不带进位的二进制加法：二进制下用1表示真，0表示假，则异或的运算法则为：0⊕0=0，1⊕0=1，0⊕1=1，1⊕1=0</p><p>假设数组中有 2m+1 个数，其中有 m 个数各出现两次，一个数出现一次。<br>a1⊕a1⊕a2⊕a2⊕a3⊕a3⊕a4⊕a4⊕a5⊕a5⋯⋯⋯⊕am⊕am⊕am+1<br>=0⊕0⊕0⊕0⊕0⊕0⊕0⊕0⊕am+1=am+1<br>​</p><p>因此，数组中的全部元素的异或运算结果即为数组中只出现一次的数字。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">singleNumber</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">return</span> reduce(<span class="keyword">lambda</span> x, y: x ^ y, nums)</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="python-reduce"><a href="#python-reduce" class="headerlink" title="python reduce"></a><a href="https://thepythonguru.com/python-builtin-functions/reduce/">python reduce</a></h3><p>The reduce() function accepts a function and a sequence and returns a single value calculated as follows:</p><p>Initially, the function is called with the first two items from the sequence and the result is returned.<br>The function is then called again with the result obtained in step 1 and the next value in the sequence. This process keeps repeating until there are items in the sequence.<br>The syntax of the reduce() function is as follows:</p><p>Syntax: reduce(function, sequence[, initial]) -&gt; value</p><p>When the initial value is provided, the function is called with the initial value and the first item from the sequence.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;136-Single-Number-easy&quot;&gt;&lt;a href=&quot;#136-Single-Number-easy&quot; class=&quot;headerlink&quot; title=&quot;136. Single Number(easy)&quot;&gt;&lt;/a&gt;136. Single Number</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="bitwise" scheme="http://example.com/tags/bitwise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>191. Number of 1 Bits(easy)</title>
+    <link href="http://example.com/2022/09/30/191/"/>
+    <id>http://example.com/2022/09/30/191/</id>
+    <published>2022-09-30T15:23:15.000Z</published>
+    <updated>2022-09-30T15:27:41.918Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="191-Number-of-1-Bits-easy"><a href="#191-Number-of-1-Bits-easy" class="headerlink" title="191. Number of 1 Bits(easy)"></a>191. Number of 1 Bits(easy)</h1><h2 id="Write-a-function-that-takes-an-unsigned-integer-and-returns-the-number-of-‘1’-bits-it-has-also-known-as-the-Hamming-weight"><a href="#Write-a-function-that-takes-an-unsigned-integer-and-returns-the-number-of-‘1’-bits-it-has-also-known-as-the-Hamming-weight" class="headerlink" title="Write a function that takes an unsigned integer and returns the number of ‘1’ bits it has (also known as the Hamming weight)."></a>Write a function that takes an unsigned integer and returns the number of ‘1’ bits it has (also known as the Hamming weight).</h2><h2 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h2><h2 id="Note-that-in-some-languages-such-as-Java-there-is-no-unsigned-integer-type-In-this-case-the-input-will-be-given-as-a-signed-integer-type-It-should-not-affect-your-implementation-as-the-integer’s-internal-binary-representation-is-the-same-whether-it-is-signed-or-unsigned"><a href="#Note-that-in-some-languages-such-as-Java-there-is-no-unsigned-integer-type-In-this-case-the-input-will-be-given-as-a-signed-integer-type-It-should-not-affect-your-implementation-as-the-integer’s-internal-binary-representation-is-the-same-whether-it-is-signed-or-unsigned" class="headerlink" title="Note that in some languages, such as Java, there is no unsigned integer type. In this case, the input will be given as a signed integer type. It should not affect your implementation, as the integer’s internal binary representation is the same, whether it is signed or unsigned."></a>Note that in some languages, such as Java, there is no unsigned integer type. In this case, the input will be given as a signed integer type. It should not affect your implementation, as the integer’s internal binary representation is the same, whether it is signed or unsigned.</h2><h2 id="In-Java-the-compiler-represents-the-signed-integers-using-2’s-complement-notation-Therefore-in-Example-3-the-input-represents-the-signed-integer-3"><a href="#In-Java-the-compiler-represents-the-signed-integers-using-2’s-complement-notation-Therefore-in-Example-3-the-input-represents-the-signed-integer-3" class="headerlink" title="In Java, the compiler represents the signed integers using 2’s complement notation. Therefore, in Example 3, the input represents the signed integer. -3."></a>In Java, the compiler represents the signed integers using 2’s complement notation. Therefore, in Example 3, the input represents the signed integer. -3.</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hammingWeight</span>(<span class="params">self, n</span>):</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> n:</span><br><span class="line">            res += n &amp; <span class="number">1</span></span><br><span class="line">            n &gt;&gt;= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;191-Number-of-1-Bits-easy&quot;&gt;&lt;a href=&quot;#191-Number-of-1-Bits-easy&quot; class=&quot;headerlink&quot; title=&quot;191. Number of 1 Bits(easy)&quot;&gt;&lt;/a&gt;191. Numb</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="bitwise" scheme="http://example.com/tags/bitwise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode-skill9-bitwise</title>
+    <link href="http://example.com/2022/09/30/LeetCode-skill9-bitwise/"/>
+    <id>http://example.com/2022/09/30/LeetCode-skill9-bitwise/</id>
+    <published>2022-09-30T15:17:26.000Z</published>
+    <updated>2022-10-02T03:23:28.077Z</updated>
+    
+    <content type="html"><![CDATA[<p>位运算   Bit Manipulation</p><p>n &amp; 1   使用 n &amp; 1 得到二进制末尾是否为 1；<br>n &gt;&gt;= 1 把 n 右移 1 位，直至结束。</p><h1 id="bit操作"><a href="#bit操作" class="headerlink" title="bit操作"></a>bit操作</h1><p>&amp; 符号，x &amp; y ，会将两个十进制数在二进制下进行与运算<br>| 符号，x | y ，会将两个十进制数在二进制下进行或运算<br>^ 符号，x ^ y ，会将两个十进制数在二进制下进行异或运算<br>&lt;&lt; 符号，x &lt;&lt; y 左移操作，最右边用 0 填充</p><blockquote><blockquote><p>符号，x &gt;&gt; y 右移操作，最左边用 0 填充<br>~ 符号，~x ，按位取反操作，将 x 在二进制下的每一位取反</p></blockquote></blockquote><h1 id="整数集合set位运算"><a href="#整数集合set位运算" class="headerlink" title="整数集合set位运算"></a>整数集合set位运算</h1><h1 id="整数集合做标志时，比如回溯时的visited标志数组"><a href="#整数集合做标志时，比如回溯时的visited标志数组" class="headerlink" title="整数集合做标志时，比如回溯时的visited标志数组"></a>整数集合做标志时，比如回溯时的visited标志数组</h1><p>vstd 访问 i ：vstd | (1 &lt;&lt; i)<br>vstd 离开 i ：vstd &amp; ~(1 &lt;&lt; i)<br>vstd 不包含 i : not vstd &amp; (1 &lt;&lt; i)</p><p>并集 ：A | B<br>交集 ：A &amp; B<br>全集 ：(1 &lt;&lt; n) - 1<br>补集 ：((1 &lt;&lt; n) - 1) ^ A<br>子集 ：(A &amp; B) == B<br>判断是否是 2 的幂 ：A &amp; (A - 1) == 0<br>最低位的 1 变为 0 ：n &amp;= (n - 1)<br>最低位的 1：A &amp; (-A)，最低位的 1 一般记为 lowbit(A)</p><ol start="191"><li>Number of 1 Bits</li></ol><p>计算数字的二进制中有多少个1。</p><ol start="136"><li><p>Single Number<br>找出数组中不重复的元素。其它元素出现两次。原题</p></li><li><p>Single Number II<br>找出数组中出现一次的元素，其它元素出现三次。原题</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;位运算   Bit Manipulation&lt;/p&gt;
+&lt;p&gt;n &amp;amp; 1   使用 n &amp;amp; 1 得到二进制末尾是否为 1；&lt;br&gt;n &amp;gt;&amp;gt;= 1 把 n 右移 1 位，直至结束。&lt;/p&gt;
+&lt;h1 id=&quot;bit操作&quot;&gt;&lt;a href=&quot;#bit操作</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="bitwise" scheme="http://example.com/tags/bitwise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>218. The Skyline Problem(hard)</title>
+    <link href="http://example.com/2022/09/29/218/"/>
+    <id>http://example.com/2022/09/29/218/</id>
+    <published>2022-09-30T03:17:19.000Z</published>
+    <updated>2022-09-30T03:19:51.409Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="218-The-Skyline-Problem-hard"><a href="#218-The-Skyline-Problem-hard" class="headerlink" title="218. The Skyline Problem(hard)"></a>218. The Skyline Problem(hard)</h1><h2 id="A-city’s-skyline-is-the-outer-contour-of-the-silhouette-formed-by-all-the-buildings-in-that-city-when-viewed-from-a-distance-Given-the-locations-and-heights-of-all-the-buildings-return-the-skyline-formed-by-these-buildings-collectively"><a href="#A-city’s-skyline-is-the-outer-contour-of-the-silhouette-formed-by-all-the-buildings-in-that-city-when-viewed-from-a-distance-Given-the-locations-and-heights-of-all-the-buildings-return-the-skyline-formed-by-these-buildings-collectively" class="headerlink" title="A city’s skyline is the outer contour of the silhouette formed by all the buildings in that city when viewed from a distance. Given the locations and heights of all the buildings, return the skyline formed by these buildings collectively."></a>A city’s skyline is the outer contour of the silhouette formed by all the buildings in that city when viewed from a distance. Given the locations and heights of all the buildings, return the skyline formed by these buildings collectively.</h2><h2 id="The-geometric-information-of-each-building-is-given-in-the-array-buildings-where-buildings-i-lefti-righti-heighti"><a href="#The-geometric-information-of-each-building-is-given-in-the-array-buildings-where-buildings-i-lefti-righti-heighti" class="headerlink" title="The geometric information of each building is given in the array buildings where buildings[i] = [lefti, righti, heighti]:"></a>The geometric information of each building is given in the array buildings where buildings[i] = [lefti, righti, heighti]:</h2><p>lefti is the x coordinate of the left edge of the ith building.<br>righti is the x coordinate of the right edge of the ith building.<br>heighti is the height of the ith building.</p><h2 id="You-may-assume-all-buildings-are-perfect-rectangles-grounded-on-an-absolutely-flat-surface-at-height-0"><a href="#You-may-assume-all-buildings-are-perfect-rectangles-grounded-on-an-absolutely-flat-surface-at-height-0" class="headerlink" title="You may assume all buildings are perfect rectangles grounded on an absolutely flat surface at height 0."></a>You may assume all buildings are perfect rectangles grounded on an absolutely flat surface at height 0.</h2><h2 id="The-skyline-should-be-represented-as-a-list-of-“key-points”-sorted-by-their-x-coordinate-in-the-form-x1-y1-x2-y2-…-Each-key-point-is-the-left-endpoint-of-some-horizontal-segment-in-the-skyline-except-the-last-point-in-the-list-which-always-has-a-y-coordinate-0-and-is-used-to-mark-the-skyline’s-termination-where-the-rightmost-building-ends-Any-ground-between-the-leftmost-and-rightmost-buildings-should-be-part-of-the-skyline’s-contour"><a href="#The-skyline-should-be-represented-as-a-list-of-“key-points”-sorted-by-their-x-coordinate-in-the-form-x1-y1-x2-y2-…-Each-key-point-is-the-left-endpoint-of-some-horizontal-segment-in-the-skyline-except-the-last-point-in-the-list-which-always-has-a-y-coordinate-0-and-is-used-to-mark-the-skyline’s-termination-where-the-rightmost-building-ends-Any-ground-between-the-leftmost-and-rightmost-buildings-should-be-part-of-the-skyline’s-contour" class="headerlink" title="The skyline should be represented as a list of “key points” sorted by their x-coordinate in the form [[x1,y1],[x2,y2],…]. Each key point is the left endpoint of some horizontal segment in the skyline except the last point in the list, which always has a y-coordinate 0 and is used to mark the skyline’s termination where the rightmost building ends. Any ground between the leftmost and rightmost buildings should be part of the skyline’s contour."></a>The skyline should be represented as a list of “key points” sorted by their x-coordinate in the form [[x1,y1],[x2,y2],…]. Each key point is the left endpoint of some horizontal segment in the skyline except the last point in the list, which always has a y-coordinate 0 and is used to mark the skyline’s termination where the rightmost building ends. Any ground between the leftmost and rightmost buildings should be part of the skyline’s contour.</h2><h2 id="Note-There-must-be-no-consecutive-horizontal-lines-of-equal-height-in-the-output-skyline-For-instance-…-2-3-4-5-7-5-11-5-12-7-…-is-not-acceptable-the-three-lines-of-height-5-should-be-merged-into-one-in-the-final-output-as-such-…-2-3-4-5-12-7-…"><a href="#Note-There-must-be-no-consecutive-horizontal-lines-of-equal-height-in-the-output-skyline-For-instance-…-2-3-4-5-7-5-11-5-12-7-…-is-not-acceptable-the-three-lines-of-height-5-should-be-merged-into-one-in-the-final-output-as-such-…-2-3-4-5-12-7-…" class="headerlink" title="Note: There must be no consecutive horizontal lines of equal height in the output skyline. For instance, […,[2 3],[4 5],[7 5],[11 5],[12 7],…] is not acceptable; the three lines of height 5 should be merged into one in the final output as such: […,[2 3],[4 5],[12 7],…]"></a>Note: There must be no consecutive horizontal lines of equal height in the output skyline. For instance, […,[2 3],[4 5],[7 5],[11 5],[12 7],…] is not acceptable; the three lines of height 5 should be merged into one in the final output as such: […,[2 3],[4 5],[12 7],…]</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: buildings = [[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]]</span><br><span class="line">Output: [[2,10],[3,15],[7,12],[12,0],[15,10],[20,8],[24,0]]</span><br><span class="line">Explanation:</span><br><span class="line">Figure A shows the buildings of the input.</span><br><span class="line">Figure B shows the skyline formed by those buildings. The red points in figure B represent the key points in the output list.</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getSkyline</span>(<span class="params">self, buildings: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span></span><br><span class="line">        <span class="comment"># Iterate over the left and right edges of all the buildings, </span></span><br><span class="line">        <span class="comment"># If its a left edge, add (left, height) to &#x27;edges&#x27;.</span></span><br><span class="line">        <span class="comment"># Otherwise, add (right, -height) to &#x27;edges&#x27;.</span></span><br><span class="line">        edges = []</span><br><span class="line">        <span class="keyword">for</span> left, right, height <span class="keyword">in</span> buildings:</span><br><span class="line">            edges.append([left, height])</span><br><span class="line">            edges.append([right, -height])</span><br><span class="line">        edges.sort()</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Initailize two empty priority queues &#x27;live&#x27; and &#x27;past&#x27; </span></span><br><span class="line">        <span class="comment"># for the live buildings and the past buildings.</span></span><br><span class="line">        live, past = [], []</span><br><span class="line">        answer = []</span><br><span class="line">        idx = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Iterate over all the sorted edges.</span></span><br><span class="line">        <span class="keyword">while</span> idx &lt; <span class="built_in">len</span>(edges):</span><br><span class="line">            <span class="comment"># Since we might have multiple edges at same x,</span></span><br><span class="line">            <span class="comment"># Let the &#x27;curr_x&#x27; be the current position.</span></span><br><span class="line">            curr_x = edges[idx][<span class="number">0</span>]</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># While we are handling the edges at &#x27;curr_x&#x27;:</span></span><br><span class="line">            <span class="keyword">while</span> idx &lt; <span class="built_in">len</span>(edges) <span class="keyword">and</span> edges[idx][<span class="number">0</span>] == curr_x:</span><br><span class="line">                height = edges[idx][<span class="number">1</span>]</span><br><span class="line">                </span><br><span class="line">                <span class="comment"># If &#x27;height&#x27; &gt; 0, meaning a building of height &#x27;height&#x27;</span></span><br><span class="line">                <span class="comment"># is live, push &#x27;height&#x27; to &#x27;live&#x27;. </span></span><br><span class="line">                <span class="comment"># Otherwise, a building of height &#x27;height&#x27; is passed, </span></span><br><span class="line">                <span class="comment"># push the height to &#x27;past&#x27;.</span></span><br><span class="line">                <span class="keyword">if</span> height &gt; <span class="number">0</span>:</span><br><span class="line">                    heapq.heappush(live, -height)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    heapq.heappush(past, height)</span><br><span class="line">                idx += <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># While the top height from &#x27;live&#x27; equals to that from &#x27;past&#x27;,</span></span><br><span class="line">            <span class="comment"># Remove top height from both &#x27;live&#x27; and &#x27;past&#x27;.</span></span><br><span class="line">            <span class="keyword">while</span> past <span class="keyword">and</span> past[<span class="number">0</span>] == live[<span class="number">0</span>]:</span><br><span class="line">                heapq.heappop(live)</span><br><span class="line">                heapq.heappop(past)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># Get the maximum height from &#x27;live&#x27;.</span></span><br><span class="line">            max_height = -live[<span class="number">0</span>] <span class="keyword">if</span> live <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># If the height changes at &#x27;curr_x&#x27;, we add this</span></span><br><span class="line">            <span class="comment"># skyline key point [curr_x, max_height] to &#x27;answer&#x27;.</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> answer <span class="keyword">or</span> answer[-<span class="number">1</span>][<span class="number">1</span>] != max_height:</span><br><span class="line">                answer.append([curr_x, max_height])</span><br><span class="line">                </span><br><span class="line">        <span class="comment"># Return &#x27;answer&#x27; as the skyline.</span></span><br><span class="line">        <span class="keyword">return</span> answer            </span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;218-The-Skyline-Problem-hard&quot;&gt;&lt;a href=&quot;#218-The-Skyline-Problem-hard&quot; class=&quot;headerlink&quot; title=&quot;218. The Skyline Problem(hard)&quot;&gt;&lt;/a&gt;</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="array" scheme="http://example.com/tags/array/"/>
+    
+    <category term="Priority Queue" scheme="http://example.com/tags/Priority-Queue/"/>
+    
+    <category term="Sweep Line " scheme="http://example.com/tags/Sweep-Line/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>189. Rotate Array(medium)</title>
+    <link href="http://example.com/2022/09/29/189/"/>
+    <id>http://example.com/2022/09/29/189/</id>
+    <published>2022-09-30T03:05:44.000Z</published>
+    <updated>2022-09-30T03:17:39.783Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="189-Rotate-Array-medium"><a href="#189-Rotate-Array-medium" class="headerlink" title="189. Rotate Array(medium)"></a>189. Rotate Array(medium)</h1><h2 id="Given-an-array-rotate-the-array-to-the-right-by-k-steps-where-k-is-non-negative"><a href="#Given-an-array-rotate-the-array-to-the-right-by-k-steps-where-k-is-non-negative" class="headerlink" title="Given an array, rotate the array to the right by k steps, where k is non-negative."></a>Given an array, rotate the array to the right by k steps, where k is non-negative.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,3,4,5,6,7], k = 3</span><br><span class="line">Output: [5,6,7,1,2,3,4]</span><br><span class="line">Explanation:</span><br><span class="line">rotate 1 steps to the right: [7,1,2,3,4,5,6]</span><br><span class="line">rotate 2 steps to the right: [6,7,1,2,3,4,5]</span><br><span class="line">rotate 3 steps to the right: [5,6,7,1,2,3,4]</span><br></pre></td></tr></table></figure><p>这道题其实不像是rotate，意思是把最后一个数不断的移到第一位，就跟开火车似的。<br>把这个数组分成两部分，Part1[P1] 和 Part2[P2]<br>举个例子：<br>[P1] 是最后三位数字之前的数字，[1,2,3,4]<br>[P2] 是我们要翻转的数字 [5,6,7]<br>然后分别把P1 和P2前后调转<br>P1=[4321]<br>P2=[765]<br>这样整个数组就是[4321765]<br>将最后三位与前三位互换位置就是[5,6,7,1,2,3,4]<br>[P1] is defined as the array part just before the last 3 values. What I mean is something like [1,2,3,4]<br>[P2] is defined as the array part just after remaining values which we have to rotate [5,6,7]</p><p>但是这里根据K有不同的情况，比如说k = 101, 就是说K大于整个数组长度了，但我们不需要翻转数组101次，利用K对数组长度求余就行，因为转过7次以后就是 [1,2,3,4,5,6,7]</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverse</span> (<span class="params">self, nums, i, j</span>) :</span> </span><br><span class="line">        li = i</span><br><span class="line">        ri = j</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> li &lt; ri:</span><br><span class="line">            temp = nums[li]</span><br><span class="line">            nums[li] = nums[ri]</span><br><span class="line">            nums[ri] = temp</span><br><span class="line">            </span><br><span class="line">            li += <span class="number">1</span></span><br><span class="line">            ri -= <span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">rotate</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], k: <span class="built_in">int</span></span>) -&gt; <span class="literal">None</span>:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        k = k % <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">if</span> k &lt; <span class="number">0</span> : </span><br><span class="line">            k += <span class="built_in">len</span>(nums)</span><br><span class="line">        </span><br><span class="line">        self.reverse(nums, <span class="number">0</span>, <span class="built_in">len</span>(nums) - k - <span class="number">1</span>);</span><br><span class="line">        self.reverse(nums, <span class="built_in">len</span>(nums) - k, <span class="built_in">len</span>(nums) - <span class="number">1</span>);</span><br><span class="line">        self.reverse(nums, <span class="number">0</span>, <span class="built_in">len</span>(nums) - <span class="number">1</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;189-Rotate-Array-medium&quot;&gt;&lt;a href=&quot;#189-Rotate-Array-medium&quot; class=&quot;headerlink&quot; title=&quot;189. Rotate Array(medium)&quot;&gt;&lt;/a&gt;189. Rotate Arr</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="array" scheme="http://example.com/tags/array/"/>
+    
+  </entry>
   
   <entry>
     <title>622. Design Circular Queue(medium)</title>
@@ -244,368 +583,6 @@
     <category term="array" scheme="http://example.com/tags/array/"/>
     
     <category term="stack" scheme="http://example.com/tags/stack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>739. Daily Temperatures(medium)</title>
-    <link href="http://example.com/2022/09/20/739/"/>
-    <id>http://example.com/2022/09/20/739/</id>
-    <published>2022-09-20T20:58:33.000Z</published>
-    <updated>2022-09-22T03:38:49.985Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="739-Daily-Temperatures-medium"><a href="#739-Daily-Temperatures-medium" class="headerlink" title="739. Daily Temperatures(medium)"></a>739. Daily Temperatures(medium)</h1><h2 id="Given-an-array-of-integers-temperatures-represents-the-daily-temperatures-return-an-array-answer-such-that-answer-i-is-the-number-of-days-you-have-to-wait-after-the-ith-day-to-get-a-warmer-temperature-If-there-is-no-future-day-for-which-this-is-possible-keep-answer-i-0-instead"><a href="#Given-an-array-of-integers-temperatures-represents-the-daily-temperatures-return-an-array-answer-such-that-answer-i-is-the-number-of-days-you-have-to-wait-after-the-ith-day-to-get-a-warmer-temperature-If-there-is-no-future-day-for-which-this-is-possible-keep-answer-i-0-instead" class="headerlink" title="Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead."></a>Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.</h2><h3 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a><a href="https://leetcode.cn/problems/daily-temperatures/solution/mei-ri-wen-du-by-leetcode-solution/">单调栈</a></h3><p>可以维护一个存储下标的单调栈，从栈底到栈顶的下标对应的温度列表中的温度依次递减。如果一个下标在单调栈里，则表示尚未找到下一次温度更高的下标。</p><p>正向遍历温度列表。对于温度列表中的每个元素 temperatures[i]，如果栈为空，则直接将 i 进栈，如果栈不为空，则比较栈顶元素 prevIndex 对应的温度 temperatures[prevIndex] 和当前温度 temperatures[i]，如果 temperatures[i] &gt; temperatures[prevIndex]，则将 prevIndex 移除，并将 prevIndex 对应的等待天数赋为 i - prevIndex，重复上述操作直到栈为空或者栈顶元素对应的温度小于等于当前温度，然后将 i 进栈。</p><p>为什么可以在弹栈的时候更新 ans[prevIndex] 呢？因为在这种情况下，即将进栈的 i 对应的 temperatures[i] 一定是 temperatures[prevIndex] 右边第一个比它大的元素，试想如果 prevIndex 和 i 有比它大的元素，假设下标为 j，那么 prevIndex 一定会在下标 j 的那一轮被弹掉。</p><p>由于单调栈满足从栈底到栈顶元素对应的温度递减，因此每次有元素进栈时，会将温度更低的元素全部移除，并更新出栈元素对应的等待天数，这样可以确保等待天数一定是最小的。</p><p>以下用一个具体的例子帮助读者理解单调栈。对于温度列表 [73,74,75,71,69,72,76,73]，单调栈 stack 的初始状态为空，答案 ans 的初始状态是 [0,0,0,0,0,0,0,0]，按照以下步骤更新单调栈和答案，其中单调栈内的元素都是下标，括号内的数字表示下标在温度列表中对应的温度。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dailyTemperatures</span>(<span class="params">self, temperatures: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        length = <span class="built_in">len</span>(temperatures)</span><br><span class="line">        ans = [<span class="number">0</span>] * length</span><br><span class="line">        stack = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length):</span><br><span class="line">            temperature = temperatures[i]</span><br><span class="line">            <span class="keyword">while</span> stack <span class="keyword">and</span> temperature &gt; temperatures[stack[-<span class="number">1</span>]]:</span><br><span class="line">                prev_index = stack.pop()</span><br><span class="line">                ans[prev_index] = i - prev_index</span><br><span class="line">            stack.append(i)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.cn/problems/daily-temperatures/solution/mei-ri-wen-du-by-leetcode-solution/438101">KMP</a></p><p>这是评论里的解法，相对更好理解一些</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dailyTemperatures</span>(<span class="params">self, T: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        n=<span class="built_in">len</span>(T)</span><br><span class="line">        ans=[<span class="number">0</span>]*n</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">2</span>,-<span class="number">1</span>,-<span class="number">1</span>):</span><br><span class="line">            now=i+<span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> T[now]&lt;=T[i]:</span><br><span class="line">                <span class="keyword">if</span> ans[now]:</span><br><span class="line">                    now+=ans[now]</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ans[i]=now-i</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;739-Daily-Temperatures-medium&quot;&gt;&lt;a href=&quot;#739-Daily-Temperatures-medium&quot; class=&quot;headerlink&quot; title=&quot;739. Daily Temperatures(medium)&quot;&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="stack" scheme="http://example.com/tags/stack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>496. Next Greater Element I(easy)</title>
-    <link href="http://example.com/2022/09/20/496/"/>
-    <id>http://example.com/2022/09/20/496/</id>
-    <published>2022-09-20T20:32:31.000Z</published>
-    <updated>2022-09-22T03:48:26.808Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="496-Next-Greater-Element-I-easy"><a href="#496-Next-Greater-Element-I-easy" class="headerlink" title="496. Next Greater Element I(easy)"></a>496. Next Greater Element I(easy)</h1><h2 id="The-next-greater-element-of-some-element-x-in-an-array-is-the-first-greater-element-that-is-to-the-right-of-x-in-the-same-array"><a href="#The-next-greater-element-of-some-element-x-in-an-array-is-the-first-greater-element-that-is-to-the-right-of-x-in-the-same-array" class="headerlink" title="The next greater element of some element x in an array is the first greater element that is to the right of x in the same array."></a>The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.</h2><h2 id="You-are-given-two-distinct-0-indexed-integer-arrays-nums1-and-nums2-where-nums1-is-a-subset-of-nums2"><a href="#You-are-given-two-distinct-0-indexed-integer-arrays-nums1-and-nums2-where-nums1-is-a-subset-of-nums2" class="headerlink" title="You are given two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2."></a>You are given two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2.</h2><h2 id="For-each-0-lt-i-lt-nums1-length-find-the-index-j-such-that-nums1-i-nums2-j-and-determine-the-next-greater-element-of-nums2-j-in-nums2-If-there-is-no-next-greater-element-then-the-answer-for-this-query-is-1"><a href="#For-each-0-lt-i-lt-nums1-length-find-the-index-j-such-that-nums1-i-nums2-j-and-determine-the-next-greater-element-of-nums2-j-in-nums2-If-there-is-no-next-greater-element-then-the-answer-for-this-query-is-1" class="headerlink" title="For each 0 &lt;= i &lt; nums1.length, find the index j such that nums1[i] == nums2[j] and determine the next greater element of nums2[j] in nums2. If there is no next greater element, then the answer for this query is -1."></a>For each 0 &lt;= i &lt; nums1.length, find the index j such that nums1[i] == nums2[j] and determine the next greater element of nums2[j] in nums2. If there is no next greater element, then the answer for this query is -1.</h2><h2 id="Return-an-array-ans-of-length-nums1-length-such-that-ans-i-is-the-next-greater-element-as-described-above"><a href="#Return-an-array-ans-of-length-nums1-length-such-that-ans-i-is-the-next-greater-element-as-described-above" class="headerlink" title="Return an array ans of length nums1.length such that ans[i] is the next greater element as described above."></a>Return an array ans of length nums1.length such that ans[i] is the next greater element as described above.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: nums1 = [4,1,2], nums2 = [1,3,4,2]</span><br><span class="line">Output: [-1,3,-1]</span><br><span class="line">Explanation: The next greater element for each value of nums1 is as follows:</span><br><span class="line">- 4 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.</span><br><span class="line">- 1 is underlined in nums2 = [1,3,4,2]. The next greater element is 3.</span><br><span class="line">- 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.</span><br></pre></td></tr></table></figure><h3 id="单调栈-哈希表"><a href="#单调栈-哈希表" class="headerlink" title="单调栈 + 哈希表"></a><a href="https://leetcode.cn/problems/next-greater-element-i/solution/xia-yi-ge-geng-da-yuan-su-i-by-leetcode-bfcoj/">单调栈 + 哈希表</a></h3><p>思路</p><p>我们可以先预处理 nums2 ，使查询 nums1中的每个元素在 nums2中对应位置的右边的第一个更大的元素值时不需要再遍历 nums2。于是，我们将题目分解为两个子问题：</p><p>第 1 个子问题：如何更高效地计算 nums2中每个元素右边的第一个更大的值；</p><p>第 2 个子问题：如何存储第 1 个子问题的结果。</p><p>算法</p><p>我们可以使用单调栈来解决第 1 个子问题。倒序遍历 nums2，并用单调栈中维护当前位置右边的更大的元素列表，从栈底到栈顶的元素是单调递减的。</p><p>具体地，每次我们移动到数组中一个新的位置 i，就将当前单调栈中所有小于 nums2[i]的元素弹出单调栈，当前位置右边的第一个更大的元素即为栈顶元素，如果栈为空则说明当前位置右边没有更大的元素。随后我们将位置 i 的元素入栈。</p><p>可以结合以下例子来理解。</p><p>因为题目规定了 nums2是没有重复元素的，所以我们可以使用哈希表来解决第 22 个子问题，将元素值与其右边第一个更大的元素值的对应关系存入哈希表。</p><p>细节</p><p>因为在这道题中我们只需要用到 nums2中元素的顺序而不需要用到下标，所以栈中直接存储 nums2中元素的值即可。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">nextGreaterElement</span>(<span class="params">self, nums1: <span class="type">List</span>[<span class="built_in">int</span>], nums2: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        res = &#123;&#125;</span><br><span class="line">        stack = []</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> <span class="built_in">reversed</span>(nums2):</span><br><span class="line">            <span class="keyword">while</span> stack <span class="keyword">and</span> num &gt;= stack[-<span class="number">1</span>]:</span><br><span class="line">                stack.pop()</span><br><span class="line">            res[num] = stack[-<span class="number">1</span>] <span class="keyword">if</span> stack <span class="keyword">else</span> -<span class="number">1</span></span><br><span class="line">            stack.append(num)</span><br><span class="line">        <span class="keyword">return</span> [res[num] <span class="keyword">for</span> num <span class="keyword">in</span> nums1]</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;496-Next-Greater-Element-I-easy&quot;&gt;&lt;a href=&quot;#496-Next-Greater-Element-I-easy&quot; class=&quot;headerlink&quot; title=&quot;496. Next Greater Element I(ea</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="stack" scheme="http://example.com/tags/stack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>380. Insert Delete GetRandom O(1)(medium)</title>
-    <link href="http://example.com/2022/09/13/380/"/>
-    <id>http://example.com/2022/09/13/380/</id>
-    <published>2022-09-13T19:17:59.000Z</published>
-    <updated>2022-09-13T20:49:21.005Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="380-Insert-Delete-GetRandom-O-1-medium"><a href="#380-Insert-Delete-GetRandom-O-1-medium" class="headerlink" title="380. Insert Delete GetRandom O(1)(medium)"></a>380. Insert Delete GetRandom O(1)(medium)</h1><h2 id="Implement-the-RandomizedSet-class"><a href="#Implement-the-RandomizedSet-class" class="headerlink" title="Implement the RandomizedSet class:"></a>Implement the RandomizedSet class:</h2><p>RandomizedSet() Initializes the RandomizedSet object.<br>bool insert(int val) Inserts an item val into the set if not present. Returns true if the item was not present, false otherwise.<br>bool remove(int val) Removes an item val from the set if present. Returns true if the item was present, false otherwise.<br>int getRandom() Returns a random element from the current set of elements (it’s guaranteed that at least one element exists when this method is called). Each element must have the same probability of being returned.</p><h2 id="You-must-implement-the-functions-of-the-class-such-that-each-function-works-in-average-O-1-time-complexity"><a href="#You-must-implement-the-functions-of-the-class-such-that-each-function-works-in-average-O-1-time-complexity" class="headerlink" title="You must implement the functions of the class such that each function works in average O(1) time complexity."></a>You must implement the functions of the class such that each function works in average O(1) time complexity.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Input</span><br><span class="line">[&quot;RandomizedSet&quot;, &quot;insert&quot;, &quot;remove&quot;, &quot;insert&quot;, &quot;getRandom&quot;, &quot;remove&quot;, &quot;insert&quot;, &quot;getRandom&quot;]</span><br><span class="line">[[], [1], [2], [2], [], [1], [2], []]</span><br><span class="line">Output</span><br><span class="line">[null, true, false, true, 2, true, false, 2]</span><br><span class="line"></span><br><span class="line">Explanation</span><br><span class="line">RandomizedSet randomizedSet = new RandomizedSet();</span><br><span class="line">randomizedSet.insert(1); // Inserts 1 to the set. Returns true as 1 was inserted successfully.</span><br><span class="line">randomizedSet.remove(2); // Returns false as 2 does not exist in the set.</span><br><span class="line">randomizedSet.insert(2); // Inserts 2 to the set, returns true. Set now contains [1,2].</span><br><span class="line">randomizedSet.getRandom(); // getRandom() should return either 1 or 2 randomly.</span><br><span class="line">randomizedSet.remove(1); // Removes 1 from the set, returns true. Set now contains [2].</span><br><span class="line">randomizedSet.insert(2); // 2 was already in the set, so return false.</span><br><span class="line">randomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom() will always return 2.</span><br></pre></td></tr></table></figure><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a><a href="https://labuladong.github.io/algo/2/20/33/">Solution</a></h3><p>本题的难点在于两点：</p><p>1、插入，删除，获取随机元素这三个操作的时间复杂度必须都是 O(1)。</p><p>2、getRandom 方法返回的元素必须等概率返回随机元素，也就是说，如果集合里面有 n 个元素，每个元素被返回的概率必须是 1/n。</p><p>我们先来分析一下：对于插入，删除，查找这几个操作，哪种数据结构的时间复杂度是 O(1)？</p><p>HashSet 肯定算一个对吧。哈希集合的底层原理就是一个大数组，我们把元素通过哈希函数映射到一个索引上；如果用拉链法解决哈希冲突，那么这个索引可能连着一个链表或者红黑树。</p><p>那么请问对于这样一个标准的 HashSet，你能否在 O(1) 的时间内实现 getRandom 函数？</p><p>其实是不能的，因为根据刚才说到的底层实现，元素是被哈希函数「分散」到整个数组里面的，更别说还有拉链法等等解决哈希冲突的机制，所以做不到 O(1) 时间「等概率」随机获取元素。</p><p>除了 HashSet，还有一些类似的数据结构，比如哈希链表 LinkedHashSet，我们后文 手把手实现LRU算法 和 手把手实现LFU算法 讲过这类数据结构的实现原理，本质上就是哈希表配合双链表，元素存储在双链表中。</p><p>但是，LinkedHashSet 只是给 HashSet 增加了有序性，依然无法按要求实现我们的 getRandom 函数，因为底层用链表结构存储元素的话，是无法在 O(1) 的时间内访问某一个元素的。</p><p>根据上面的分析，对于 getRandom 方法，如果想「等概率」且「在 O(1) 的时间」取出元素，一定要满足：底层用数组实现，且数组必须是紧凑的。</p><p>这样我们就可以直接生成随机数作为索引，从数组中取出该随机索引对应的元素，作为随机元素。</p><p>但如果用数组存储元素的话，插入，删除的时间复杂度怎么可能是 O(1) 呢？</p><p>可以做到！对数组尾部进行插入和删除操作不会涉及数据搬移，时间复杂度是 O(1)。</p><p>所以，如果我们想在 O(1) 的时间删除数组中的某一个元素 val，可以先把这个元素交换到数组的尾部，然后再 pop 掉。</p><p>交换两个元素必须通过索引进行交换对吧，那么我们需要一个哈希表 valToIndex 来记录每个元素值对应的索引。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RandomizedSet</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="comment"># 存储元素的值</span></span><br><span class="line">        self.nums=[]</span><br><span class="line">        <span class="comment"># 记录每个元素对应在 nums 中的索引</span></span><br><span class="line">        self.valToIndex=&#123;&#125;</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">insert</span>(<span class="params">self, val: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="comment">#若 val 已存在，不用再插入</span></span><br><span class="line">        <span class="keyword">if</span> val <span class="keyword">in</span> self.valToIndex:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="comment">#若 val 不存在，插入到 nums 尾部，</span></span><br><span class="line">        <span class="comment">#并记录 val 对应的索引值</span></span><br><span class="line">        self.valToIndex[val]=<span class="built_in">len</span>(self.nums)</span><br><span class="line">        self.nums.append(val)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">remove</span>(<span class="params">self, val: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="comment">#若 val 不存在，不用再删除</span></span><br><span class="line">        <span class="keyword">if</span> val <span class="keyword">not</span> <span class="keyword">in</span> self.valToIndex:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="comment">#先拿到 val 的索引</span></span><br><span class="line">        index= self.valToIndex[val]</span><br><span class="line">        <span class="comment">#将最后一个元素对应的索引修改为 index</span></span><br><span class="line">        self.nums[index]=self.nums[-<span class="number">1</span>]</span><br><span class="line">        <span class="comment">#交换 val 和最后一个元素</span></span><br><span class="line">        self.valToIndex[self.nums[index]]=index</span><br><span class="line">        <span class="comment">#在数组中删除元素 val</span></span><br><span class="line">        self.nums.pop()</span><br><span class="line">        <span class="comment">#删除元素 val 对应的索引(hashmap)</span></span><br><span class="line">        <span class="keyword">del</span> self.valToIndex[val]</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getRandom</span>(<span class="params">self</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="comment"># 随机获取 nums 中的一个元素</span></span><br><span class="line">        <span class="keyword">return</span> choice(self.nums)</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Your RandomizedSet object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"># obj = RandomizedSet()</span></span><br><span class="line"><span class="comment"># param_1 = obj.insert(val)</span></span><br><span class="line"><span class="comment"># param_2 = obj.remove(val)</span></span><br><span class="line"><span class="comment"># param_3 = obj.getRandom()</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;380-Insert-Delete-GetRandom-O-1-medium&quot;&gt;&lt;a href=&quot;#380-Insert-Delete-GetRandom-O-1-medium&quot; class=&quot;headerlink&quot; title=&quot;380. Insert Dele</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="two-pointers" scheme="http://example.com/tags/two-pointers/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="Sliding-Window" scheme="http://example.com/tags/Sliding-Window/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>647. Palindromic Substrings(medium)</title>
-    <link href="http://example.com/2022/09/13/647/"/>
-    <id>http://example.com/2022/09/13/647/</id>
-    <published>2022-09-13T19:10:07.000Z</published>
-    <updated>2022-09-22T03:39:19.694Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="647-Palindromic-Substrings-medium"><a href="#647-Palindromic-Substrings-medium" class="headerlink" title="647. Palindromic Substrings(medium)"></a>647. Palindromic Substrings(medium)</h1><h2 id="Given-a-string-s-return-the-number-of-palindromic-substrings-in-it"><a href="#Given-a-string-s-return-the-number-of-palindromic-substrings-in-it" class="headerlink" title="Given a string s, return the number of palindromic substrings in it."></a>Given a string s, return the number of palindromic substrings in it.</h2><h2 id="A-string-is-a-palindrome-when-it-reads-the-same-backward-as-forward"><a href="#A-string-is-a-palindrome-when-it-reads-the-same-backward-as-forward" class="headerlink" title="A string is a palindrome when it reads the same backward as forward."></a>A string is a palindrome when it reads the same backward as forward.</h2><h2 id="A-substring-is-a-contiguous-sequence-of-characters-within-the-string"><a href="#A-substring-is-a-contiguous-sequence-of-characters-within-the-string" class="headerlink" title="A substring is a contiguous sequence of characters within the string."></a>A substring is a contiguous sequence of characters within the string.</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countSubstrings</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">    L, r = <span class="built_in">len</span>(s), <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(L):</span><br><span class="line">    <span class="keyword">for</span> a,b <span class="keyword">in</span> [(i,i),(i,i+<span class="number">1</span>)]:</span><br><span class="line">    <span class="keyword">while</span> a &gt;= <span class="number">0</span> <span class="keyword">and</span> b &lt; L <span class="keyword">and</span> s[a] == s[b]: a -= <span class="number">1</span>; b += <span class="number">1</span></span><br><span class="line">                    </span><br><span class="line">    r += (b-a)//<span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> r</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;647-Palindromic-Substrings-medium&quot;&gt;&lt;a href=&quot;#647-Palindromic-Substrings-medium&quot; class=&quot;headerlink&quot; title=&quot;647. Palindromic Substring</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>870. Advantage Shuffle(medium)</title>
-    <link href="http://example.com/2022/09/12/870/"/>
-    <id>http://example.com/2022/09/12/870/</id>
-    <published>2022-09-13T01:19:20.000Z</published>
-    <updated>2022-09-22T03:48:05.802Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="870-Advantage-Shuffle-medium"><a href="#870-Advantage-Shuffle-medium" class="headerlink" title="870. Advantage Shuffle(medium)"></a>870. Advantage Shuffle(medium)</h1><h2 id="You-are-given-two-integer-arrays-nums1-and-nums2-both-of-the-same-length-The-advantage-of-nums1-with-respect-to-nums2-is-the-number-of-indices-i-for-which-nums1-i-gt-nums2-i"><a href="#You-are-given-two-integer-arrays-nums1-and-nums2-both-of-the-same-length-The-advantage-of-nums1-with-respect-to-nums2-is-the-number-of-indices-i-for-which-nums1-i-gt-nums2-i" class="headerlink" title="You are given two integer arrays nums1 and nums2 both of the same length. The advantage of nums1 with respect to nums2 is the number of indices i for which nums1[i] &gt; nums2[i]."></a>You are given two integer arrays nums1 and nums2 both of the same length. The advantage of nums1 with respect to nums2 is the number of indices i for which nums1[i] &gt; nums2[i].</h2><h2 id="Return-any-permutation-of-nums1-that-maximizes-its-advantage-with-respect-to-nums2"><a href="#Return-any-permutation-of-nums1-that-maximizes-its-advantage-with-respect-to-nums2" class="headerlink" title="Return any permutation of nums1 that maximizes its advantage with respect to nums2."></a>Return any permutation of nums1 that maximizes its advantage with respect to nums2.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums1 = [2,7,11,15], nums2 = [1,10,4,11]</span><br><span class="line">Output: [2,11,7,15]</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums1 = [2,7,11,15], nums2 = [1,10,4,11]</span><br><span class="line">Output: [2,11,7,15]</span><br></pre></td></tr></table></figure><p>类似于田忌赛马的故事，排序nums2使得nums2比nums1有优势</p><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a><a href="https://leetcode.cn/problems/advantage-shuffle/solution/by-qingfengpython-mvix/">Solution</a></h2><p>按照上面的思路，可以考虑贪心的思维模式。</p><p>首先需要将nums2按照[value,index]的模式加入保存至数组中，最终按照value值逆序生成一个二维数组<br>之后对nums1进行排序<br>分配left、right指针指向nums1的头尾节点<br>创建一个长度为nums1的初始化数组ret，开始循环二维数组<br>按照上面的思路<br>如果right节点比nums2当前的下表数字大，那就是强强对碰，正面硬刚<br>如果不敌则用left节点的小兵以次充好<br>不论1、2如何选择，都将left或right对应的num，根据二维数组的index将value保存至ret数组<br>最终返回ret数组即可</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">advantageCount</span>(<span class="params">self, A, B</span>):</span></span><br><span class="line">        sortedA = <span class="built_in">sorted</span>(A)</span><br><span class="line">        sortedB = <span class="built_in">sorted</span>(B)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># assigned[b] = list of a that are assigned to beat b</span></span><br><span class="line">        <span class="comment"># remaining = list of a that are not assigned to any b</span></span><br><span class="line">        assigned = &#123;b: [] <span class="keyword">for</span> b <span class="keyword">in</span> B&#125;</span><br><span class="line">        remaining = []</span><br><span class="line"></span><br><span class="line">        <span class="comment"># populate (assigned, remaining) appropriately</span></span><br><span class="line">        <span class="comment"># sortedB[j] is always the smallest unassigned element in B</span></span><br><span class="line">        j = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> a <span class="keyword">in</span> sortedA:</span><br><span class="line">            <span class="keyword">if</span> a &gt; sortedB[j]:</span><br><span class="line">                assigned[sortedB[j]].append(a)</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                remaining.append(a)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Reconstruct the answer from annotations (assigned, remaining)</span></span><br><span class="line">        <span class="keyword">return</span> [assigned[b].pop() <span class="keyword">if</span> assigned[b] <span class="keyword">else</span> remaining.pop()</span><br><span class="line">                <span class="keyword">for</span> b <span class="keyword">in</span> B]</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;870-Advantage-Shuffle-medium&quot;&gt;&lt;a href=&quot;#870-Advantage-Shuffle-medium&quot; class=&quot;headerlink&quot; title=&quot;870. Advantage Shuffle(medium)&quot;&gt;&lt;/a&gt;</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="prefix sum" scheme="http://example.com/tags/prefix-sum/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>528. Random Pick with Weight(medium)</title>
-    <link href="http://example.com/2022/09/12/528/"/>
-    <id>http://example.com/2022/09/12/528/</id>
-    <published>2022-09-13T00:37:41.000Z</published>
-    <updated>2022-09-13T01:19:43.316Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="528-Random-Pick-with-Weight-medium"><a href="#528-Random-Pick-with-Weight-medium" class="headerlink" title="528. Random Pick with Weight(medium)"></a>528. Random Pick with Weight(medium)</h1><h2 id="You-are-given-a-0-indexed-array-of-positive-integers-w-where-w-i-describes-the-weight-of-the-ith-index"><a href="#You-are-given-a-0-indexed-array-of-positive-integers-w-where-w-i-describes-the-weight-of-the-ith-index" class="headerlink" title="You are given a 0-indexed array of positive integers w where w[i] describes the weight of the ith index."></a>You are given a 0-indexed array of positive integers w where w[i] describes the weight of the ith index.</h2><h2 id="You-need-to-implement-the-function-pickIndex-which-randomly-picks-an-index-in-the-range-0-w-length-1-inclusive-and-returns-it-The-probability-of-picking-an-index-i-is-w-i-sum-w"><a href="#You-need-to-implement-the-function-pickIndex-which-randomly-picks-an-index-in-the-range-0-w-length-1-inclusive-and-returns-it-The-probability-of-picking-an-index-i-is-w-i-sum-w" class="headerlink" title="You need to implement the function pickIndex(), which randomly picks an index in the range [0, w.length - 1] (inclusive) and returns it. The probability of picking an index i is w[i] / sum(w)."></a>You need to implement the function pickIndex(), which randomly picks an index in the range [0, w.length - 1] (inclusive) and returns it. The probability of picking an index i is w[i] / sum(w).</h2><h2 id="For-example-if-w-1-3-the-probability-of-picking-index-0-is-1-1-3-0-25-i-e-25-and-the-probability-of-picking-index-1-is-3-1-3-0-75-i-e-75"><a href="#For-example-if-w-1-3-the-probability-of-picking-index-0-is-1-1-3-0-25-i-e-25-and-the-probability-of-picking-index-1-is-3-1-3-0-75-i-e-75" class="headerlink" title="For example, if w = [1, 3], the probability of picking index 0 is 1 / (1 + 3) = 0.25 (i.e., 25%), and the probability of picking index 1 is 3 / (1 + 3) = 0.75 (i.e., 75%)."></a>For example, if w = [1, 3], the probability of picking index 0 is 1 / (1 + 3) = 0.25 (i.e., 25%), and the probability of picking index 1 is 3 / (1 + 3) = 0.75 (i.e., 75%).</h2><p>前缀和数组加二分搜索的题目</p><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a><a href="https://leetcode.cn/problems/random-pick-with-weight/solution/an-quan-zhong-sui-ji-xuan-ze-by-leetcode-h13t/">Solution</a></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, w: <span class="type">List</span>[<span class="built_in">int</span>]</span>):</span></span><br><span class="line">        self.pre = <span class="built_in">list</span>(accumulate(w))</span><br><span class="line">        self.total = <span class="built_in">sum</span>(w)</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pickIndex</span>(<span class="params">self</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        x = random.randint(<span class="number">1</span>, self.total)</span><br><span class="line">        <span class="keyword">return</span> bisect_left(self.pre, x)</span><br><span class="line">        </span><br><span class="line"><span class="comment"># Your Solution object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"># obj = Solution(w)</span></span><br><span class="line"><span class="comment"># param_1 = obj.pickIndex()</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;528-Random-Pick-with-Weight-medium&quot;&gt;&lt;a href=&quot;#528-Random-Pick-with-Weight-medium&quot; class=&quot;headerlink&quot; title=&quot;528. Random Pick with We</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="prefix sum" scheme="http://example.com/tags/prefix-sum/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>567. Permutation in String(medium)</title>
-    <link href="http://example.com/2022/09/11/567/"/>
-    <id>http://example.com/2022/09/11/567/</id>
-    <published>2022-09-12T02:16:46.000Z</published>
-    <updated>2022-09-13T01:19:41.380Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="567-Permutation-in-String-medium"><a href="#567-Permutation-in-String-medium" class="headerlink" title="567. Permutation in String(medium)"></a>567. Permutation in String(medium)</h1><h2 id="Given-two-strings-s1-and-s2-return-true-if-s2-contains-a-permutation-of-s1-or-false-otherwise"><a href="#Given-two-strings-s1-and-s2-return-true-if-s2-contains-a-permutation-of-s1-or-false-otherwise" class="headerlink" title="Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise."></a>Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.</h2><h2 id="In-other-words-return-true-if-one-of-s1’s-permutations-is-the-substring-of-s2"><a href="#In-other-words-return-true-if-one-of-s1’s-permutations-is-the-substring-of-s2" class="headerlink" title="In other words, return true if one of s1’s permutations is the substring of s2."></a>In other words, return true if one of s1’s permutations is the substring of s2.</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;567-Permutation-in-String-medium&quot;&gt;&lt;a href=&quot;#567-Permutation-in-String-medium&quot; class=&quot;headerlink&quot; title=&quot;567. Permutation in String(m</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="two-pointers" scheme="http://example.com/tags/two-pointers/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="Sliding-Window" scheme="http://example.com/tags/Sliding-Window/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1356. Sort Integers by The Number of 1 Bits(easy)</title>
-    <link href="http://example.com/2022/09/11/1356/"/>
-    <id>http://example.com/2022/09/11/1356/</id>
-    <published>2022-09-11T21:18:32.000Z</published>
-    <updated>2022-09-13T00:59:11.730Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1356-Sort-Integers-by-The-Number-of-1-Bits-easy"><a href="#1356-Sort-Integers-by-The-Number-of-1-Bits-easy" class="headerlink" title="1356. Sort Integers by The Number of 1 Bits(easy)"></a>1356. Sort Integers by The Number of 1 Bits(easy)</h1><h2 id="You-are-given-an-integer-array-arr-Sort-the-integers-in-the-array-in-ascending-order-by-the-number-of-1’s-in-their-binary-representation-and-in-case-of-two-or-more-integers-have-the-same-number-of-1’s-you-have-to-sort-them-in-ascending-order"><a href="#You-are-given-an-integer-array-arr-Sort-the-integers-in-the-array-in-ascending-order-by-the-number-of-1’s-in-their-binary-representation-and-in-case-of-two-or-more-integers-have-the-same-number-of-1’s-you-have-to-sort-them-in-ascending-order" class="headerlink" title="You are given an integer array arr. Sort the integers in the array in ascending order by the number of 1’s in their binary representation and in case of two or more integers have the same number of 1’s you have to sort them in ascending order."></a>You are given an integer array arr. Sort the integers in the array in ascending order by the number of 1’s in their binary representation and in case of two or more integers have the same number of 1’s you have to sort them in ascending order.</h2><h2 id="Return-the-array-after-sorting-it"><a href="#Return-the-array-after-sorting-it" class="headerlink" title="Return the array after sorting it."></a>Return the array after sorting it.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: arr = [0,1,2,3,4,5,6,7,8]</span><br><span class="line">Output: [0,1,2,4,8,3,5,6,7]</span><br><span class="line">Explantion: [0] is the only integer with 0 bits.</span><br><span class="line">[1,2,4,8] all have 1 bit.</span><br><span class="line">[3,5,6] have 2 bits.</span><br><span class="line">[7] has 3 bits.</span><br><span class="line">The sorted array by bits is [0,1,2,4,8,3,5,6,7]</span><br></pre></td></tr></table></figure><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="python">class Solution:    def sortByBits(self, arr: List[int]) -&gt; List[int]:        return sorted(arr, key = lambda num : (sum((num &gt;&gt; i) &amp; 1 for i in range(32)), num))</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1356-Sort-Integers-by-The-Number-of-1-Bits-easy&quot;&gt;&lt;a href=&quot;#1356-Sort-Integers-by-The-Number-of-1-Bits-easy&quot; class=&quot;headerlink&quot; title</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="two-pointers" scheme="http://example.com/tags/two-pointers/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>76. Minimum Window Substring(hard)</title>
-    <link href="http://example.com/2022/09/11/76/"/>
-    <id>http://example.com/2022/09/11/76/</id>
-    <published>2022-09-11T20:55:34.000Z</published>
-    <updated>2022-09-13T00:58:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="76-Minimum-Window-Substring-hard"><a href="#76-Minimum-Window-Substring-hard" class="headerlink" title="76. Minimum Window Substring(hard)"></a>76. Minimum Window Substring(hard)</h1><h2 id="Given-two-strings-s-and-t-of-lengths-m-and-n-respectively-return-the-minimum-window-substring-of-s-such-that-every-character-in-t-including-duplicates-is-included-in-the-window-If-there-is-no-such-substring-return-the-empty-string-“”"><a href="#Given-two-strings-s-and-t-of-lengths-m-and-n-respectively-return-the-minimum-window-substring-of-s-such-that-every-character-in-t-including-duplicates-is-included-in-the-window-If-there-is-no-such-substring-return-the-empty-string-“”" class="headerlink" title="Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string “”."></a>Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string “”.</h2><h2 id="The-testcases-will-be-generated-such-that-the-answer-is-unique"><a href="#The-testcases-will-be-generated-such-that-the-answer-is-unique" class="headerlink" title="The testcases will be generated such that the answer is unique."></a>The testcases will be generated such that the answer is unique.</h2><h2 id="A-substring-is-a-contiguous-sequence-of-characters-within-the-string"><a href="#A-substring-is-a-contiguous-sequence-of-characters-within-the-string" class="headerlink" title="A substring is a contiguous sequence of characters within the string."></a>A substring is a contiguous sequence of characters within the string.</h2><p>这道题是滑动窗口的经典题目，滑动窗口算法的思路是这样：</p><ol><li>我们在字符串 S 中使用双指针中的左右指针技巧，初始化 left = right = 0，把索引左闭右开区间 [left, right) 称为一个「窗口」。</li></ol><p>PS：理论上你可以设计两端都开或者两端都闭的区间，但设计为左闭右开区间是最方便处理的。因为这样初始化 left = right = 0 时区间 [0, 0) 中没有元素，但只要让 right 向右移动（扩大）一位，区间 [0, 1) 就包含一个元素 0 了。如果你设置为两端都开的区间，那么让 right 向右移动一位后开区间 (0, 1) 仍然没有元素；如果你设置为两端都闭的区间，那么初始区间 [0, 0] 就包含了一个元素。这两种情况都会给边界处理带来不必要的麻烦。</p><ol start="2"><li><p>我们先不断地增加 right 指针扩大窗口 [left, right)，直到窗口中的字符串符合要求（包含了 T 中的所有字符）。</p></li><li><p>此时，我们停止增加 right，转而不断增加 left 指针缩小窗口 [left, right)，直到窗口中的字符串不再符合要求（不包含 T 中的所有字符了）。同时，每次增加 left，我们都要更新一轮结果。</p></li><li><p>重复第 2 和第 3 步，直到 right 到达字符串 S 的尽头。</p></li></ol><p>这个思路其实也不难，第 2 步相当于在寻找一个「可行解」，然后第 3 步在优化这个「可行解」，最终找到最优解，也就是最短的覆盖子串。左右指针轮流前进，窗口大小增增减减，窗口不断向右滑动，这就是「滑动窗口」这个名字的来历。</p><p>下面画图理解一下，needs 和 window 相当于计数器，分别记录 T 中字符出现次数和「窗口」中的相应字符的出现次数。</p><h4 id="C-解法"><a href="#C-解法" class="headerlink" title="C++解法"></a><a href="https://labuladong.github.io/algo/2/20/27/">C++解法</a></h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">minWindow</span><span class="params">(string s, string t)</span> </span>&#123;</span><br><span class="line">    unordered_map&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; need, window;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> c : t) need[c]++;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> valid = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 记录最小覆盖子串的起始索引及长度</span></span><br><span class="line">    <span class="keyword">int</span> start = <span class="number">0</span>, len = INT_MAX;</span><br><span class="line">    <span class="keyword">while</span> (right &lt; s.<span class="built_in">size</span>()) &#123;</span><br><span class="line">        <span class="comment">// c 是将移入窗口的字符</span></span><br><span class="line">        <span class="keyword">char</span> c = s[right];</span><br><span class="line">        <span class="comment">// 扩大窗口</span></span><br><span class="line">        right++;</span><br><span class="line">        <span class="comment">// 进行窗口内数据的一系列更新</span></span><br><span class="line">        <span class="keyword">if</span> (need.<span class="built_in">count</span>(c)) &#123;</span><br><span class="line">            window[c]++;</span><br><span class="line">            <span class="keyword">if</span> (window[c] == need[c])</span><br><span class="line">                valid++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 判断左侧窗口是否要收缩</span></span><br><span class="line">        <span class="keyword">while</span> (valid == need.<span class="built_in">size</span>()) &#123;</span><br><span class="line">            <span class="comment">// 在这里更新最小覆盖子串</span></span><br><span class="line">            <span class="keyword">if</span> (right - left &lt; len) &#123;</span><br><span class="line">                start = left;</span><br><span class="line">                len = right - left;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// d 是将移出窗口的字符</span></span><br><span class="line">            <span class="keyword">char</span> d = s[left];</span><br><span class="line">            <span class="comment">// 缩小窗口</span></span><br><span class="line">            left++;</span><br><span class="line">            <span class="comment">// 进行窗口内数据的一系列更新</span></span><br><span class="line">            <span class="keyword">if</span> (need.<span class="built_in">count</span>(d)) &#123;</span><br><span class="line">                <span class="keyword">if</span> (window[d] == need[d])</span><br><span class="line">                    valid--;</span><br><span class="line">                window[d]--;</span><br><span class="line">            &#125;                    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 返回最小覆盖子串</span></span><br><span class="line">    <span class="keyword">return</span> len == INT_MAX ?</span><br><span class="line">        <span class="string">&quot;&quot;</span> : s.<span class="built_in">substr</span>(start, len);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="python解法"><a href="#python解法" class="headerlink" title="python解法"></a><a href="https://leetcode.com/problems/minimum-window-substring/discuss/26804/12-lines-Python/1079619">python解法</a></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minWindow</span>(<span class="params">self, s: <span class="built_in">str</span>, t: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># hash table to store the required char frequency</span></span><br><span class="line">        need = collections.Counter(t)            </span><br><span class="line"></span><br><span class="line">        <span class="comment"># total character count we need to care about</span></span><br><span class="line">        missing = <span class="built_in">len</span>(t)                         </span><br><span class="line"></span><br><span class="line">        <span class="comment"># windowStart and windowEnd to be</span></span><br><span class="line">        windowStart, windowEnd = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment"># iterate over s starting over index 1</span></span><br><span class="line">        <span class="keyword">for</span> j, char <span class="keyword">in</span> <span class="built_in">enumerate</span>(s, <span class="number">1</span>): <span class="comment"># j is index,char is value         </span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># if char is required then decrease missing</span></span><br><span class="line">            <span class="keyword">if</span> need[char] &gt; <span class="number">0</span>:                   </span><br><span class="line">                missing -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># decrease the freq of char from need (maybe be negative - which basically denotes</span></span><br><span class="line">            <span class="comment">#   that we have few extra characters which are not required but present in between current window)</span></span><br><span class="line">            need[char] -= <span class="number">1</span>                      </span><br><span class="line"></span><br><span class="line">            <span class="comment"># we found a valid window</span></span><br><span class="line">            <span class="keyword">if</span> missing == <span class="number">0</span>:                     </span><br><span class="line">                <span class="comment"># chars from start to find the real windowStart</span></span><br><span class="line">                <span class="keyword">while</span> i &lt; j <span class="keyword">and</span> need[s[i]] &lt; <span class="number">0</span>:  </span><br><span class="line">                    need[s[i]] += <span class="number">1</span></span><br><span class="line">                    i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">                <span class="comment"># if it&#x27;s only one char case or curr window is smaller, then update window</span></span><br><span class="line">                <span class="keyword">if</span> windowEnd == <span class="number">0</span> <span class="keyword">or</span> j-i &lt; windowEnd-windowStart:  </span><br><span class="line">                    windowStart, windowEnd = i, j</span><br><span class="line"></span><br><span class="line">                <span class="comment"># now resetting the window to make it invalid</span></span><br><span class="line">                <span class="comment"># sure the first appearing char satisfies need[char]&gt;0</span></span><br><span class="line">                need[s[i]] += <span class="number">1</span>          </span><br><span class="line"></span><br><span class="line">                <span class="comment"># missed this first char, so add missing by 1</span></span><br><span class="line">                missing += <span class="number">1</span>                     </span><br><span class="line"></span><br><span class="line">                <span class="comment">#update i to windowStart+1 for next window</span></span><br><span class="line">                i += <span class="number">1</span>                          </span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> s[windowStart:windowEnd]</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;76-Minimum-Window-Substring-hard&quot;&gt;&lt;a href=&quot;#76-Minimum-Window-Substring-hard&quot; class=&quot;headerlink&quot; title=&quot;76. Minimum Window Substring</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="two-pointers" scheme="http://example.com/tags/two-pointers/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="Sliding-Window" scheme="http://example.com/tags/Sliding-Window/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode-skill8-two_pointers</title>
-    <link href="http://example.com/2022/09/11/LeetCode-skill8-two-pointers/"/>
-    <id>http://example.com/2022/09/11/LeetCode-skill8-two-pointers/</id>
-    <published>2022-09-11T20:34:44.000Z</published>
-    <updated>2022-09-13T00:58:33.247Z</updated>
-    
-    <content type="html"><![CDATA[<p>滑动窗口：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 滑动窗口算法框架 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">slidingWindow</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">    unordered_map&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; window;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (right &lt; s.size()) &#123;</span><br><span class="line">        <span class="comment">// c 是将移入窗口的字符</span></span><br><span class="line">        <span class="keyword">char</span> c = s[right];</span><br><span class="line">        <span class="comment">// 增大窗口</span></span><br><span class="line">        right++;</span><br><span class="line">        <span class="comment">// 进行窗口内数据的一系列更新</span></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*** debug 输出的位置 ***/</span></span><br><span class="line">        printf(<span class="string">&quot;window: [%d, %d)\n&quot;</span>, left, right);</span><br><span class="line">        <span class="comment">/********************/</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 判断左侧窗口是否要收缩</span></span><br><span class="line">        <span class="keyword">while</span> (window needs shrink) &#123;</span><br><span class="line">            <span class="comment">// d 是将移出窗口的字符</span></span><br><span class="line">            <span class="keyword">char</span> d = s[left];</span><br><span class="line">            <span class="comment">// 缩小窗口</span></span><br><span class="line">            left++;</span><br><span class="line">            <span class="comment">// 进行窗口内数据的一系列更新</span></span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">slidingWindow</span>(<span class="params">string s</span>):</span></span><br><span class="line">    </span><br><span class="line">    window=&#123;&#125;</span><br><span class="line">    <span class="built_in">int</span> left = <span class="number">0</span>, right = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> right&lt;<span class="built_in">len</span>(s):</span><br><span class="line">        <span class="comment">#c 是将移入窗口的字符</span></span><br><span class="line">        c=s[right]</span><br><span class="line">        <span class="comment"># 增大窗口</span></span><br><span class="line">        right+=<span class="number">1</span></span><br><span class="line">        <span class="comment"># 进行窗口内数据的一系列更新</span></span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">#*** debug 输出的位置 ***/</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;window: [%d, %d)\n&quot;</span>, left, right)</span><br><span class="line">        <span class="comment">#********************/</span></span><br><span class="line">        <span class="comment"># 判断左侧窗口是否要收缩</span></span><br><span class="line">        <span class="keyword">while</span> (window needs shrink) </span><br><span class="line">            <span class="comment">#d 是将移出窗口的字符</span></span><br><span class="line">            d = s[left]</span><br><span class="line">            <span class="comment">#缩小窗口</span></span><br><span class="line">            left+=<span class="number">1</span></span><br><span class="line">            <span class="comment">#进行窗口内数据的一系列更新</span></span><br><span class="line">            ...</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;滑动窗口：&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="two-pointers" scheme="http://example.com/tags/two-pointers/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="Sliding-Window" scheme="http://example.com/tags/Sliding-Window/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1360. Number of Days Between Two Dates</title>
-    <link href="http://example.com/2022/09/09/1360/"/>
-    <id>http://example.com/2022/09/09/1360/</id>
-    <published>2022-09-09T20:43:14.000Z</published>
-    <updated>2022-09-11T20:35:16.587Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1360-Number-of-Days-Between-Two-Dates-easy"><a href="#1360-Number-of-Days-Between-Two-Dates-easy" class="headerlink" title="1360. Number of Days Between Two Dates(easy)"></a>1360. Number of Days Between Two Dates(easy)</h1><h2 id="Write-a-program-to-count-the-number-of-days-between-two-dates"><a href="#Write-a-program-to-count-the-number-of-days-between-two-dates" class="headerlink" title="Write a program to count the number of days between two dates."></a>Write a program to count the number of days between two dates.</h2><h2 id="The-two-dates-are-given-as-strings-their-format-is-YYYY-MM-DD-as-shown-in-the-examples"><a href="#The-two-dates-are-given-as-strings-their-format-is-YYYY-MM-DD-as-shown-in-the-examples" class="headerlink" title="The two dates are given as strings, their format is YYYY-MM-DD as shown in the examples."></a>The two dates are given as strings, their format is YYYY-MM-DD as shown in the examples.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: date1 = &quot;2019-06-29&quot;, date2 = &quot;2019-06-30&quot;</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解:"></a><a href="https://leetcode.com/problems/number-of-days-between-two-dates/discuss/517582/Python-Magical-Formula">官方题解</a>:</h3><p>When m=1 or m=2 (January or February), we let m=13 or m=14 and let y decreased by 1. Imagine it is 13th or 14th month of the last year. By doing that, we let the magical formula also work for those two months. (153 * m + 8) // 5 is just a carefully designed way to record the days of each month. More specifically, it is designed to record the difference of days between two months. Suppose we have March 1st and April 1st, (153 * 3 + 8) // 5 = 93 while (153 * 4 + 8) // 5 = 124, the difference is 31 which is the number of days in March. Suppose we have April 1st to May 1st, (153 * 4 + 8) // 5 = 124 and (153 * 5 + 8) // 5 = 154, the difference is now 30 which is the number of days in April. You can also check other months.</p><p>I learned this formula somewhere else before. It is not something to come up with in minutes.<br>首先把1月2月加12当作13和14月，这样使得他们也可以套用公式<br>这里有一个关键的函数(153 * m + 8) // 5，通过前后月代入以后的相减，可以区分不同月份的长度，确实是非常神奇</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span>    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">daysBetweenDates</span>(<span class="params">self, date1: <span class="built_in">str</span>, date2: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">date</span>):</span></span><br><span class="line">            y, m, d = <span class="built_in">map</span>(<span class="built_in">int</span>, date.split(<span class="string">&#x27;-&#x27;</span>))</span><br><span class="line">            <span class="keyword">if</span> m &lt; <span class="number">3</span>:</span><br><span class="line">                m += <span class="number">12</span></span><br><span class="line">                y -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">365</span> * y + y // <span class="number">4</span> + y // <span class="number">400</span> - y // <span class="number">100</span> + d + (<span class="number">153</span> * m + <span class="number">8</span>) // <span class="number">5</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">abs</span>(f(date1) - f(date2))</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1360-Number-of-Days-Between-Two-Dates-easy&quot;&gt;&lt;a href=&quot;#1360-Number-of-Days-Between-Two-Dates-easy&quot; class=&quot;headerlink&quot; title=&quot;1360. Nu</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="math" scheme="http://example.com/tags/math/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>practicecodesignal4</title>
-    <link href="http://example.com/2022/09/05/practicecodesignal4/"/>
-    <id>http://example.com/2022/09/05/practicecodesignal4/</id>
-    <published>2022-09-06T00:31:02.000Z</published>
-    <updated>2022-09-13T00:57:43.229Z</updated>
-    
-    <content type="html"><![CDATA[<p>def samesign(a,b):<br>    if a/abs(a) == b/abs(b):<br>        return True<br>    else:<br>        return False</p><p>def countSawSubarrays(arr):<br>    n = len(arr)</p><pre><code>if n&lt;2:    return 0s = 0e = 1count = 0while(e&lt;n):    sign = arr[e] - arr[s]    while(e&lt;n and arr[e] != arr[e-1] and samesign(arr[e] - arr[e-1], sign)):        sign = -1*sign        e+=1    size = e-s    if (size==1):        e+=1    count += (size*(size-1))//2    s = e-1    e = s+1return count</code></pre><p>arr1 = [9,8,7,6,5]<br>print(countSawSubarrays(arr1))<br>arr2 = [1,2,1,3,4,-2]<br>print(countSawSubarrays(arr2))<br>arr3 = [1,2,1,2,1]<br>print(countSawSubarrays(arr3))<br>arr4 = [10,10,10]<br>print(countSawSubarrays(arr4))</p><p>def solution(matrix, a, b):<br>    if a + b - 1 &gt; min(len(matrix), len(matrix[0])):<br>        return 0</p><pre><code>ret = 0for w, h in ((a, b), (b, a)):    # for every possible leftmost axb/bxa rectangle...    for start in range(min(len(matrix), len(matrix[0])) - (a + b - 1) + 1):        i = start        cur = 0        deques = []        j1 = j2 = w - 1        # build the rectangle         while j1 &lt;= j2:            for k in range(j1, j2 + 1):                cur += matrix[i][k]            deques.append((j1, j2))             j1 += (-1 if i - start &lt; w - 1 else 1)            j2 += (1 if i - start &lt; h - 1 else -1)            i += 1                stop = False        # slide it to the right until you can&#39;t anymore        while True:            ret = max(ret, cur)                        for ind, tup in enumerate(deques):                j1, j2 = tup                i = start + ind                if j2 == len(matrix[0]) - 1:                    stop = True                    break                j2 += 1                cur += matrix[i][j2] - matrix[i][j1]                j1 += 1                deques[ind] = (j1, j2)            if stop:                breakreturn ret</code></pre><p>You are given an array of integers numbers and two integers left and right. You task is to calculate a boolean array result, where result[i] = true if there exists an integer x, such that numbers[i] = (i + 1) * x and left ≤ x ≤ right. Otherwise, result[i] should be set to false.</p><p>You are given two strings - pattern and source. The first string pattern contains only the symbols 0 and 1, and the second string source contains only lowercase English letters.</p><p>Let’s say that pattern matches a substring source[l..r] of source if the following three conditions are met:<br>they have equal length,<br>for each 0 in pattern the corresponding letter in the substring is a vowel,<br>for each 1 in pattern the corresponding letter is a consonant.<br>Your task is to calculate the number of substrings of source that match pattern.</p><p>Note: In this task we define the vowels as ‘a’, ‘e’, ‘i’, ‘o’, ‘u’, and ‘y’. All other letters are consonants.</p><p>Given a matrix of integers, we’d like to consider the sum of the elements within the area of a 45° rotated rectangle. More formally, the area is bounded by two diagonals parallel to the main diagonal and two diagonals parallel to the secondary diagonal. The dimensions of the rotated rectangle are defined by the number of elements along the borders of the rectangle.</p><p>A sawtooth sequence is a sequence of numbers that alternate between increasing and decreasing. In other words, each element is either strictly greater than its neighbouring elements or strictly less than its neighbouring elements.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;def samesign(a,b):&lt;br&gt;    if a/abs(a) == b/abs(b):&lt;br&gt;        return True&lt;br&gt;    else:&lt;br&gt;        return False&lt;/p&gt;
-&lt;p&gt;def countSawSubarra</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="prefix sum" scheme="http://example.com/tags/prefix-sum/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
     
   </entry>
   

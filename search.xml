@@ -4,6 +4,346 @@
   
     
     <entry>
+      <title>35. Search Insert Position(easy)</title>
+      <link href="/2022/10/02/35/"/>
+      <url>/2022/10/02/35/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Given-a-sorted-array-of-distinct-integers-and-a-target-value-return-the-index-if-the-target-is-found-If-not-return-the-index-where-it-would-be-if-it-were-inserted-in-order"><a href="#Given-a-sorted-array-of-distinct-integers-and-a-target-value-return-the-index-if-the-target-is-found-If-not-return-the-index-where-it-would-be-if-it-were-inserted-in-order" class="headerlink" title="Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order."></a>Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</h2><h2 id="You-must-write-an-algorithm-with-O-log-n-runtime-complexity"><a href="#You-must-write-an-algorithm-with-O-log-n-runtime-complexity" class="headerlink" title="You must write an algorithm with O(log n) runtime complexity."></a>You must write an algorithm with O(log n) runtime complexity.</h2><p>基础做法，遍历</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        res=<span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums)==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">if</span> target&gt;nums[<span class="number">0</span>]:</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> target&gt;nums[-<span class="number">1</span>]:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i]&gt;=target:</span><br><span class="line">                res=i</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure><p>二分查找</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        length=<span class="built_in">len</span>(nums)</span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = length</span><br><span class="line">        <span class="keyword">while</span> left&lt;right:</span><br><span class="line">            mid = <span class="built_in">int</span>(left + (right - left) / <span class="number">2</span>)</span><br><span class="line">            <span class="keyword">if</span> nums[mid]&lt;target:</span><br><span class="line">                left = mid+<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right= mid</span><br><span class="line">        <span class="keyword">return</span> left</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> binary search </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>14. Longest Common Prefix(easy)</title>
+      <link href="/2022/10/02/14/"/>
+      <url>/2022/10/02/14/</url>
+      
+        <content type="html"><![CDATA[<h1 id="14-Longest-Common-Prefix-easy"><a href="#14-Longest-Common-Prefix-easy" class="headerlink" title="14. Longest Common Prefix(easy)"></a>14. Longest Common Prefix(easy)</h1><h2 id="Write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings"><a href="#Write-a-function-to-find-the-longest-common-prefix-string-amongst-an-array-of-strings" class="headerlink" title="Write a function to find the longest common prefix string amongst an array of strings."></a>Write a function to find the longest common prefix string amongst an array of strings.</h2><h2 id="If-there-is-no-common-prefix-return-an-empty-string-“”"><a href="#If-there-is-no-common-prefix-return-an-empty-string-“”" class="headerlink" title="If there is no common prefix, return an empty string “”."></a>If there is no common prefix, return an empty string “”.</h2><p><a href="https://leetcode.cn/problems/longest-common-prefix/solution/zui-chang-gong-gong-qian-zhui-by-leetcode-solution/">官方题解</a></p><p>纵向扫描<br>方法一是横向扫描，依次遍历每个字符串，更新最长公共前缀。另一种方法是纵向扫描。纵向扫描时，从前往后遍历所有字符串的每一列，比较相同列上的字符是否相同，如果相同则继续对下一列进行比较，如果不相同则当前列不再属于公共前缀，当前列之前的部分为最长公共前缀。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestCommonPrefix</span>(<span class="params">self, strs: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> strs:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span></span><br><span class="line">        </span><br><span class="line">        length, count = <span class="built_in">len</span>(strs[<span class="number">0</span>]), <span class="built_in">len</span>(strs)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length):</span><br><span class="line">            c = strs[<span class="number">0</span>][i]</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">any</span>(i == <span class="built_in">len</span>(strs[j]) <span class="keyword">or</span> strs[j][i] != c <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, count)):</span><br><span class="line">                <span class="keyword">return</span> strs[<span class="number">0</span>][:i]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> strs[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> LCP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1480. Running Sum of 1d Array(easy)</title>
+      <link href="/2022/10/02/1480/"/>
+      <url>/2022/10/02/1480/</url>
+      
+        <content type="html"><![CDATA[<p>Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).</p><p>Return the running sum of nums.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,3,4]</span><br><span class="line">Output: [1,3,6,10]</span><br><span class="line">Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].</span><br></pre></td></tr></table></figure><p>其实这题就是前缀和数组</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def runningSum(self, nums: List[int]) -&gt; List[int]:</span><br><span class="line">        res=[0]*len(nums)</span><br><span class="line">        res[0]=nums[0]</span><br><span class="line">        for i in range(1,len(nums)):</span><br><span class="line">            res[i]=nums[i]+res[i-1]</span><br><span class="line">        return res</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>231. Power of Two(easy)</title>
+      <link href="/2022/10/01/231/"/>
+      <url>/2022/10/01/231/</url>
+      
+        <content type="html"><![CDATA[<h1 id="231-Power-of-Two-easy"><a href="#231-Power-of-Two-easy" class="headerlink" title="231. Power of Two(easy)"></a>231. Power of Two(easy)</h1><h2 id="Given-an-integer-n-return-true-if-it-is-a-power-of-two-Otherwise-return-false"><a href="#Given-an-integer-n-return-true-if-it-is-a-power-of-two-Otherwise-return-false" class="headerlink" title="Given an integer n, return true if it is a power of two. Otherwise, return false."></a>Given an integer n, return true if it is a power of two. Otherwise, return false.</h2><h2 id="An-integer-n-is-a-power-of-two-if-there-exists-an-integer-x-such-that-n-2-x"><a href="#An-integer-n-is-a-power-of-two-if-there-exists-an-integer-x-such-that-n-2-x" class="headerlink" title="An integer n is a power of two, if there exists an integer x such that n == 2^x."></a>An integer n is a power of two, if there exists an integer x such that n == 2^x.</h2><p>How to get / isolate the rightmost 1-bit : x &amp; (-x).</p><p>How to turn off (= set to 0) the rightmost 1-bit : x &amp; (x - 1).<br><a href="https://leetcode.com/problems/power-of-two/solutions/360718/power-of-two/">官方题解</a></p><p>Approach 1: Bitwise Operators : Get the Rightmost 1-bit</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> bitwise </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>260. Single Number III(medium)</title>
+      <link href="/2022/10/01/260/"/>
+      <url>/2022/10/01/260/</url>
+      
+        <content type="html"><![CDATA[<h1 id="260-Single-Number-III-medium"><a href="#260-Single-Number-III-medium" class="headerlink" title="260. Single Number III(medium)"></a>260. Single Number III(medium)</h1><h2 id="Given-an-integer-array-nums-in-which-exactly-two-elements-appear-only-once-and-all-the-other-elements-appear-exactly-twice-Find-the-two-elements-that-appear-only-once-You-can-return-the-answer-in-any-order"><a href="#Given-an-integer-array-nums-in-which-exactly-two-elements-appear-only-once-and-all-the-other-elements-appear-exactly-twice-Find-the-two-elements-that-appear-only-once-You-can-return-the-answer-in-any-order" class="headerlink" title="Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order."></a>Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order.</h2><h2 id="You-must-write-an-algorithm-that-runs-in-linear-runtime-complexity-and-uses-only-constant-extra-space"><a href="#You-must-write-an-algorithm-that-runs-in-linear-runtime-complexity-and-uses-only-constant-extra-space" class="headerlink" title="You must write an algorithm that runs in linear runtime complexity and uses only constant extra space."></a>You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,1,3,2,5]</span><br><span class="line">Output: [3,5]</span><br><span class="line">Explanation:  [5, 3] is also a valid answer.</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.com/problems/single-number-iii/solutions/366935/single-number-iii/">官方题解</a></p><p>Two bitmasks</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> bitwise </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>91. Decode Ways(medium)</title>
+      <link href="/2022/10/01/91/"/>
+      <url>/2022/10/01/91/</url>
+      
+        <content type="html"><![CDATA[<h1 id="91-Decode-Ways-medium"><a href="#91-Decode-Ways-medium" class="headerlink" title="91. Decode Ways(medium)"></a>91. Decode Ways(medium)</h1><h2 id="A-message-containing-letters-from-A-Z-can-be-encoded-into-numbers-using-the-following-mapping"><a href="#A-message-containing-letters-from-A-Z-can-be-encoded-into-numbers-using-the-following-mapping" class="headerlink" title="A message containing letters from A-Z can be encoded into numbers using the following mapping:"></a>A message containing letters from A-Z can be encoded into numbers using the following mapping:</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x27;A&#x27; -&gt; &quot;1&quot;</span><br><span class="line">&#x27;B&#x27; -&gt; &quot;2&quot;</span><br><span class="line">...</span><br><span class="line">&#x27;Z&#x27; -&gt; &quot;26&quot;</span><br></pre></td></tr></table></figure><p>To decode an encoded message, all the digits must be grouped then mapped back into letters using the reverse of the mapping above (there may be multiple ways). For example, “11106” can be mapped into:</p><p>“AAJF” with the grouping (1 1 10 6)<br>“KJF” with the grouping (11 10 6)<br>Note that the grouping (1 11 06) is invalid because “06” cannot be mapped into ‘F’ since “6” is different from “06”.</p><p>Given a string s containing only digits, return the number of ways to decode it.</p><p>The test cases are generated so that the answer fits in a 32-bit integer.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;12&quot;</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: &quot;12&quot; could be decoded as &quot;AB&quot; (1 2) or &quot;L&quot; (12).</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;226&quot;</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: &quot;226&quot; could be decoded as &quot;BZ&quot; (2 26), &quot;VF&quot; (22 6), or &quot;BBF&quot; (2 2 6). </span><br></pre></td></tr></table></figure><h3 id="Leetcode-Solution"><a href="#Leetcode-Solution" class="headerlink" title="Leetcode Solution"></a><a href="https://leetcode.com/problems/decode-ways/solutions/525903/decode-ways/">Leetcode Solution</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numDecodings</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> s[<span class="number">0</span>] == <span class="string">&quot;0&quot;</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">        two_back = <span class="number">1</span></span><br><span class="line">        one_back = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(s)):</span><br><span class="line">            current = <span class="number">0</span></span><br><span class="line">            <span class="keyword">if</span> s[i] != <span class="string">&quot;0&quot;</span>:</span><br><span class="line">                current = one_back</span><br><span class="line">            two_digit = <span class="built_in">int</span>(s[i - <span class="number">1</span>: i + <span class="number">1</span>])</span><br><span class="line">            <span class="keyword">if</span> two_digit &gt;= <span class="number">10</span> <span class="keyword">and</span> two_digit &lt;= <span class="number">26</span>:</span><br><span class="line">                current += two_back</span><br><span class="line">            two_back = one_back</span><br><span class="line">            one_back = current</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> one_back</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>137. Single Number II(medium)</title>
+      <link href="/2022/10/01/137/"/>
+      <url>/2022/10/01/137/</url>
+      
+        <content type="html"><![CDATA[<h1 id="137-Single-Number-medium"><a href="#137-Single-Number-medium" class="headerlink" title="137. Single Number(medium)"></a>137. Single Number(medium)</h1><h2 id="Given-an-integer-array-nums-where-every-element-appears-three-times-except-for-one-which-appears-exactly-once-Find-the-single-element-and-return-it"><a href="#Given-an-integer-array-nums-where-every-element-appears-three-times-except-for-one-which-appears-exactly-once-Find-the-single-element-and-return-it" class="headerlink" title="Given an integer array nums where every element appears three times except for one, which appears exactly once. Find the single element and return it."></a>Given an integer array nums where every element appears three times except for one, which appears exactly once. Find the single element and return it.</h2><h2 id="You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space"><a href="#You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space" class="headerlink" title="You must implement a solution with a linear runtime complexity and use only constant extra space."></a>You must implement a solution with a linear runtime complexity and use only constant extra space.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [2,2,3,2]</span><br><span class="line">Output: 3</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.com/problems/single-number-ii/solutions/356460/single-number-ii/">官方题解</a></p><p>这里用到了异或<br>XOR</p><p>Let’s start from XOR operator which could be used to detect the bit which appears odd number of times: 1, 3, 5, etc.</p><p>XOR of zero and a bit results in that bit</p><p>0⊕x=x</p><p>XOR of two equal bits (even if they are zeros) results in a zero</p><p>x⊕x=0</p><p>and so on and so forth, i.e. one could see the bit in a bitmask only if it appears odd number of times.<br>That’s already great, so one could detect the bit which appears once, and the bit which appears three times. The problem is to distinguish between these two situations.</p><p>AND and NOT</p><p>To separate number that appears once from a number that appears three times let’s use two bitmasks instead of one: seen_once and seen_twice.</p><p>The idea is to</p><p>change seen_once only if seen_twice is unchanged</p><p>change seen_twice only if seen_once is unchanged</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">singleNumber</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        seen_once = seen_twice = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="comment"># first appearance: </span></span><br><span class="line">            <span class="comment"># add num to seen_once </span></span><br><span class="line">            <span class="comment"># don&#x27;t add to seen_twice because of presence in seen_once</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># second appearance: </span></span><br><span class="line">            <span class="comment"># remove num from seen_once </span></span><br><span class="line">            <span class="comment"># add num to seen_twice</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># third appearance: </span></span><br><span class="line">            <span class="comment"># don&#x27;t add to seen_once because of presence in seen_twice</span></span><br><span class="line">            <span class="comment"># remove num from seen_twice</span></span><br><span class="line">            seen_once = ~seen_twice &amp; (seen_once ^ num)</span><br><span class="line">            seen_twice = ~seen_once &amp; (seen_twice ^ num)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> seen_once</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> bitwise </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>136. Single Number(easy)</title>
+      <link href="/2022/09/30/136/"/>
+      <url>/2022/09/30/136/</url>
+      
+        <content type="html"><![CDATA[<h1 id="136-Single-Number-easy"><a href="#136-Single-Number-easy" class="headerlink" title="136. Single Number(easy)"></a>136. Single Number(easy)</h1><h2 id="Given-a-non-empty-array-of-integers-nums-every-element-appears-twice-except-for-one-Find-that-single-one"><a href="#Given-a-non-empty-array-of-integers-nums-every-element-appears-twice-except-for-one-Find-that-single-one" class="headerlink" title="Given a non-empty array of integers nums, every element appears twice except for one. Find that single one."></a>Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.</h2><h2 id="You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space"><a href="#You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space" class="headerlink" title="You must implement a solution with a linear runtime complexity and use only constant extra space."></a>You must implement a solution with a linear runtime complexity and use only constant extra space.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [2,2,1]</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure><p>这道题的关键在于异或运算，异或也叫半加运算，其运算法则相当于不带进位的二进制加法：二进制下用1表示真，0表示假，则异或的运算法则为：0⊕0=0，1⊕0=1，0⊕1=1，1⊕1=0</p><p>假设数组中有 2m+1 个数，其中有 m 个数各出现两次，一个数出现一次。<br>a1⊕a1⊕a2⊕a2⊕a3⊕a3⊕a4⊕a4⊕a5⊕a5⋯⋯⋯⊕am⊕am⊕am+1<br>=0⊕0⊕0⊕0⊕0⊕0⊕0⊕0⊕am+1=am+1<br>​</p><p>因此，数组中的全部元素的异或运算结果即为数组中只出现一次的数字。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">singleNumber</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">return</span> reduce(<span class="keyword">lambda</span> x, y: x ^ y, nums)</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="python-reduce"><a href="#python-reduce" class="headerlink" title="python reduce"></a><a href="https://thepythonguru.com/python-builtin-functions/reduce/">python reduce</a></h3><p>The reduce() function accepts a function and a sequence and returns a single value calculated as follows:</p><p>Initially, the function is called with the first two items from the sequence and the result is returned.<br>The function is then called again with the result obtained in step 1 and the next value in the sequence. This process keeps repeating until there are items in the sequence.<br>The syntax of the reduce() function is as follows:</p><p>Syntax: reduce(function, sequence[, initial]) -&gt; value</p><p>When the initial value is provided, the function is called with the initial value and the first item from the sequence.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> bitwise </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>191. Number of 1 Bits(easy)</title>
+      <link href="/2022/09/30/191/"/>
+      <url>/2022/09/30/191/</url>
+      
+        <content type="html"><![CDATA[<h1 id="191-Number-of-1-Bits-easy"><a href="#191-Number-of-1-Bits-easy" class="headerlink" title="191. Number of 1 Bits(easy)"></a>191. Number of 1 Bits(easy)</h1><h2 id="Write-a-function-that-takes-an-unsigned-integer-and-returns-the-number-of-‘1’-bits-it-has-also-known-as-the-Hamming-weight"><a href="#Write-a-function-that-takes-an-unsigned-integer-and-returns-the-number-of-‘1’-bits-it-has-also-known-as-the-Hamming-weight" class="headerlink" title="Write a function that takes an unsigned integer and returns the number of ‘1’ bits it has (also known as the Hamming weight)."></a>Write a function that takes an unsigned integer and returns the number of ‘1’ bits it has (also known as the Hamming weight).</h2><h2 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h2><h2 id="Note-that-in-some-languages-such-as-Java-there-is-no-unsigned-integer-type-In-this-case-the-input-will-be-given-as-a-signed-integer-type-It-should-not-affect-your-implementation-as-the-integer’s-internal-binary-representation-is-the-same-whether-it-is-signed-or-unsigned"><a href="#Note-that-in-some-languages-such-as-Java-there-is-no-unsigned-integer-type-In-this-case-the-input-will-be-given-as-a-signed-integer-type-It-should-not-affect-your-implementation-as-the-integer’s-internal-binary-representation-is-the-same-whether-it-is-signed-or-unsigned" class="headerlink" title="Note that in some languages, such as Java, there is no unsigned integer type. In this case, the input will be given as a signed integer type. It should not affect your implementation, as the integer’s internal binary representation is the same, whether it is signed or unsigned."></a>Note that in some languages, such as Java, there is no unsigned integer type. In this case, the input will be given as a signed integer type. It should not affect your implementation, as the integer’s internal binary representation is the same, whether it is signed or unsigned.</h2><h2 id="In-Java-the-compiler-represents-the-signed-integers-using-2’s-complement-notation-Therefore-in-Example-3-the-input-represents-the-signed-integer-3"><a href="#In-Java-the-compiler-represents-the-signed-integers-using-2’s-complement-notation-Therefore-in-Example-3-the-input-represents-the-signed-integer-3" class="headerlink" title="In Java, the compiler represents the signed integers using 2’s complement notation. Therefore, in Example 3, the input represents the signed integer. -3."></a>In Java, the compiler represents the signed integers using 2’s complement notation. Therefore, in Example 3, the input represents the signed integer. -3.</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hammingWeight</span>(<span class="params">self, n</span>):</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> n:</span><br><span class="line">            res += n &amp; <span class="number">1</span></span><br><span class="line">            n &gt;&gt;= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> bitwise </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode-skill9-bitwise</title>
+      <link href="/2022/09/30/LeetCode-skill9-bitwise/"/>
+      <url>/2022/09/30/LeetCode-skill9-bitwise/</url>
+      
+        <content type="html"><![CDATA[<p>位运算   Bit Manipulation</p><p>n &amp; 1   使用 n &amp; 1 得到二进制末尾是否为 1；<br>n &gt;&gt;= 1 把 n 右移 1 位，直至结束。</p><h1 id="bit操作"><a href="#bit操作" class="headerlink" title="bit操作"></a>bit操作</h1><p>&amp; 符号，x &amp; y ，会将两个十进制数在二进制下进行与运算<br>| 符号，x | y ，会将两个十进制数在二进制下进行或运算<br>^ 符号，x ^ y ，会将两个十进制数在二进制下进行异或运算<br>&lt;&lt; 符号，x &lt;&lt; y 左移操作，最右边用 0 填充</p><blockquote><blockquote><p>符号，x &gt;&gt; y 右移操作，最左边用 0 填充<br>~ 符号，~x ，按位取反操作，将 x 在二进制下的每一位取反</p></blockquote></blockquote><h1 id="整数集合set位运算"><a href="#整数集合set位运算" class="headerlink" title="整数集合set位运算"></a>整数集合set位运算</h1><h1 id="整数集合做标志时，比如回溯时的visited标志数组"><a href="#整数集合做标志时，比如回溯时的visited标志数组" class="headerlink" title="整数集合做标志时，比如回溯时的visited标志数组"></a>整数集合做标志时，比如回溯时的visited标志数组</h1><p>vstd 访问 i ：vstd | (1 &lt;&lt; i)<br>vstd 离开 i ：vstd &amp; ~(1 &lt;&lt; i)<br>vstd 不包含 i : not vstd &amp; (1 &lt;&lt; i)</p><p>并集 ：A | B<br>交集 ：A &amp; B<br>全集 ：(1 &lt;&lt; n) - 1<br>补集 ：((1 &lt;&lt; n) - 1) ^ A<br>子集 ：(A &amp; B) == B<br>判断是否是 2 的幂 ：A &amp; (A - 1) == 0<br>最低位的 1 变为 0 ：n &amp;= (n - 1)<br>最低位的 1：A &amp; (-A)，最低位的 1 一般记为 lowbit(A)</p><ol start="191"><li>Number of 1 Bits</li></ol><p>计算数字的二进制中有多少个1。</p><ol start="136"><li><p>Single Number<br>找出数组中不重复的元素。其它元素出现两次。原题</p></li><li><p>Single Number II<br>找出数组中出现一次的元素，其它元素出现三次。原题</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> bitwise </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>218. The Skyline Problem(hard)</title>
+      <link href="/2022/09/29/218/"/>
+      <url>/2022/09/29/218/</url>
+      
+        <content type="html"><![CDATA[<h1 id="218-The-Skyline-Problem-hard"><a href="#218-The-Skyline-Problem-hard" class="headerlink" title="218. The Skyline Problem(hard)"></a>218. The Skyline Problem(hard)</h1><h2 id="A-city’s-skyline-is-the-outer-contour-of-the-silhouette-formed-by-all-the-buildings-in-that-city-when-viewed-from-a-distance-Given-the-locations-and-heights-of-all-the-buildings-return-the-skyline-formed-by-these-buildings-collectively"><a href="#A-city’s-skyline-is-the-outer-contour-of-the-silhouette-formed-by-all-the-buildings-in-that-city-when-viewed-from-a-distance-Given-the-locations-and-heights-of-all-the-buildings-return-the-skyline-formed-by-these-buildings-collectively" class="headerlink" title="A city’s skyline is the outer contour of the silhouette formed by all the buildings in that city when viewed from a distance. Given the locations and heights of all the buildings, return the skyline formed by these buildings collectively."></a>A city’s skyline is the outer contour of the silhouette formed by all the buildings in that city when viewed from a distance. Given the locations and heights of all the buildings, return the skyline formed by these buildings collectively.</h2><h2 id="The-geometric-information-of-each-building-is-given-in-the-array-buildings-where-buildings-i-lefti-righti-heighti"><a href="#The-geometric-information-of-each-building-is-given-in-the-array-buildings-where-buildings-i-lefti-righti-heighti" class="headerlink" title="The geometric information of each building is given in the array buildings where buildings[i] = [lefti, righti, heighti]:"></a>The geometric information of each building is given in the array buildings where buildings[i] = [lefti, righti, heighti]:</h2><p>lefti is the x coordinate of the left edge of the ith building.<br>righti is the x coordinate of the right edge of the ith building.<br>heighti is the height of the ith building.</p><h2 id="You-may-assume-all-buildings-are-perfect-rectangles-grounded-on-an-absolutely-flat-surface-at-height-0"><a href="#You-may-assume-all-buildings-are-perfect-rectangles-grounded-on-an-absolutely-flat-surface-at-height-0" class="headerlink" title="You may assume all buildings are perfect rectangles grounded on an absolutely flat surface at height 0."></a>You may assume all buildings are perfect rectangles grounded on an absolutely flat surface at height 0.</h2><h2 id="The-skyline-should-be-represented-as-a-list-of-“key-points”-sorted-by-their-x-coordinate-in-the-form-x1-y1-x2-y2-…-Each-key-point-is-the-left-endpoint-of-some-horizontal-segment-in-the-skyline-except-the-last-point-in-the-list-which-always-has-a-y-coordinate-0-and-is-used-to-mark-the-skyline’s-termination-where-the-rightmost-building-ends-Any-ground-between-the-leftmost-and-rightmost-buildings-should-be-part-of-the-skyline’s-contour"><a href="#The-skyline-should-be-represented-as-a-list-of-“key-points”-sorted-by-their-x-coordinate-in-the-form-x1-y1-x2-y2-…-Each-key-point-is-the-left-endpoint-of-some-horizontal-segment-in-the-skyline-except-the-last-point-in-the-list-which-always-has-a-y-coordinate-0-and-is-used-to-mark-the-skyline’s-termination-where-the-rightmost-building-ends-Any-ground-between-the-leftmost-and-rightmost-buildings-should-be-part-of-the-skyline’s-contour" class="headerlink" title="The skyline should be represented as a list of “key points” sorted by their x-coordinate in the form [[x1,y1],[x2,y2],…]. Each key point is the left endpoint of some horizontal segment in the skyline except the last point in the list, which always has a y-coordinate 0 and is used to mark the skyline’s termination where the rightmost building ends. Any ground between the leftmost and rightmost buildings should be part of the skyline’s contour."></a>The skyline should be represented as a list of “key points” sorted by their x-coordinate in the form [[x1,y1],[x2,y2],…]. Each key point is the left endpoint of some horizontal segment in the skyline except the last point in the list, which always has a y-coordinate 0 and is used to mark the skyline’s termination where the rightmost building ends. Any ground between the leftmost and rightmost buildings should be part of the skyline’s contour.</h2><h2 id="Note-There-must-be-no-consecutive-horizontal-lines-of-equal-height-in-the-output-skyline-For-instance-…-2-3-4-5-7-5-11-5-12-7-…-is-not-acceptable-the-three-lines-of-height-5-should-be-merged-into-one-in-the-final-output-as-such-…-2-3-4-5-12-7-…"><a href="#Note-There-must-be-no-consecutive-horizontal-lines-of-equal-height-in-the-output-skyline-For-instance-…-2-3-4-5-7-5-11-5-12-7-…-is-not-acceptable-the-three-lines-of-height-5-should-be-merged-into-one-in-the-final-output-as-such-…-2-3-4-5-12-7-…" class="headerlink" title="Note: There must be no consecutive horizontal lines of equal height in the output skyline. For instance, […,[2 3],[4 5],[7 5],[11 5],[12 7],…] is not acceptable; the three lines of height 5 should be merged into one in the final output as such: […,[2 3],[4 5],[12 7],…]"></a>Note: There must be no consecutive horizontal lines of equal height in the output skyline. For instance, […,[2 3],[4 5],[7 5],[11 5],[12 7],…] is not acceptable; the three lines of height 5 should be merged into one in the final output as such: […,[2 3],[4 5],[12 7],…]</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: buildings = [[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]]</span><br><span class="line">Output: [[2,10],[3,15],[7,12],[12,0],[15,10],[20,8],[24,0]]</span><br><span class="line">Explanation:</span><br><span class="line">Figure A shows the buildings of the input.</span><br><span class="line">Figure B shows the skyline formed by those buildings. The red points in figure B represent the key points in the output list.</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getSkyline</span>(<span class="params">self, buildings: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span></span><br><span class="line">        <span class="comment"># Iterate over the left and right edges of all the buildings, </span></span><br><span class="line">        <span class="comment"># If its a left edge, add (left, height) to &#x27;edges&#x27;.</span></span><br><span class="line">        <span class="comment"># Otherwise, add (right, -height) to &#x27;edges&#x27;.</span></span><br><span class="line">        edges = []</span><br><span class="line">        <span class="keyword">for</span> left, right, height <span class="keyword">in</span> buildings:</span><br><span class="line">            edges.append([left, height])</span><br><span class="line">            edges.append([right, -height])</span><br><span class="line">        edges.sort()</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Initailize two empty priority queues &#x27;live&#x27; and &#x27;past&#x27; </span></span><br><span class="line">        <span class="comment"># for the live buildings and the past buildings.</span></span><br><span class="line">        live, past = [], []</span><br><span class="line">        answer = []</span><br><span class="line">        idx = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Iterate over all the sorted edges.</span></span><br><span class="line">        <span class="keyword">while</span> idx &lt; <span class="built_in">len</span>(edges):</span><br><span class="line">            <span class="comment"># Since we might have multiple edges at same x,</span></span><br><span class="line">            <span class="comment"># Let the &#x27;curr_x&#x27; be the current position.</span></span><br><span class="line">            curr_x = edges[idx][<span class="number">0</span>]</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># While we are handling the edges at &#x27;curr_x&#x27;:</span></span><br><span class="line">            <span class="keyword">while</span> idx &lt; <span class="built_in">len</span>(edges) <span class="keyword">and</span> edges[idx][<span class="number">0</span>] == curr_x:</span><br><span class="line">                height = edges[idx][<span class="number">1</span>]</span><br><span class="line">                </span><br><span class="line">                <span class="comment"># If &#x27;height&#x27; &gt; 0, meaning a building of height &#x27;height&#x27;</span></span><br><span class="line">                <span class="comment"># is live, push &#x27;height&#x27; to &#x27;live&#x27;. </span></span><br><span class="line">                <span class="comment"># Otherwise, a building of height &#x27;height&#x27; is passed, </span></span><br><span class="line">                <span class="comment"># push the height to &#x27;past&#x27;.</span></span><br><span class="line">                <span class="keyword">if</span> height &gt; <span class="number">0</span>:</span><br><span class="line">                    heapq.heappush(live, -height)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    heapq.heappush(past, height)</span><br><span class="line">                idx += <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># While the top height from &#x27;live&#x27; equals to that from &#x27;past&#x27;,</span></span><br><span class="line">            <span class="comment"># Remove top height from both &#x27;live&#x27; and &#x27;past&#x27;.</span></span><br><span class="line">            <span class="keyword">while</span> past <span class="keyword">and</span> past[<span class="number">0</span>] == live[<span class="number">0</span>]:</span><br><span class="line">                heapq.heappop(live)</span><br><span class="line">                heapq.heappop(past)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># Get the maximum height from &#x27;live&#x27;.</span></span><br><span class="line">            max_height = -live[<span class="number">0</span>] <span class="keyword">if</span> live <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># If the height changes at &#x27;curr_x&#x27;, we add this</span></span><br><span class="line">            <span class="comment"># skyline key point [curr_x, max_height] to &#x27;answer&#x27;.</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> answer <span class="keyword">or</span> answer[-<span class="number">1</span>][<span class="number">1</span>] != max_height:</span><br><span class="line">                answer.append([curr_x, max_height])</span><br><span class="line">                </span><br><span class="line">        <span class="comment"># Return &#x27;answer&#x27; as the skyline.</span></span><br><span class="line">        <span class="keyword">return</span> answer            </span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> Priority Queue </tag>
+            
+            <tag> Sweep Line  </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>189. Rotate Array(medium)</title>
+      <link href="/2022/09/29/189/"/>
+      <url>/2022/09/29/189/</url>
+      
+        <content type="html"><![CDATA[<h1 id="189-Rotate-Array-medium"><a href="#189-Rotate-Array-medium" class="headerlink" title="189. Rotate Array(medium)"></a>189. Rotate Array(medium)</h1><h2 id="Given-an-array-rotate-the-array-to-the-right-by-k-steps-where-k-is-non-negative"><a href="#Given-an-array-rotate-the-array-to-the-right-by-k-steps-where-k-is-non-negative" class="headerlink" title="Given an array, rotate the array to the right by k steps, where k is non-negative."></a>Given an array, rotate the array to the right by k steps, where k is non-negative.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,3,4,5,6,7], k = 3</span><br><span class="line">Output: [5,6,7,1,2,3,4]</span><br><span class="line">Explanation:</span><br><span class="line">rotate 1 steps to the right: [7,1,2,3,4,5,6]</span><br><span class="line">rotate 2 steps to the right: [6,7,1,2,3,4,5]</span><br><span class="line">rotate 3 steps to the right: [5,6,7,1,2,3,4]</span><br></pre></td></tr></table></figure><p>这道题其实不像是rotate，意思是把最后一个数不断的移到第一位，就跟开火车似的。<br>把这个数组分成两部分，Part1[P1] 和 Part2[P2]<br>举个例子：<br>[P1] 是最后三位数字之前的数字，[1,2,3,4]<br>[P2] 是我们要翻转的数字 [5,6,7]<br>然后分别把P1 和P2前后调转<br>P1=[4321]<br>P2=[765]<br>这样整个数组就是[4321765]<br>将最后三位与前三位互换位置就是[5,6,7,1,2,3,4]<br>[P1] is defined as the array part just before the last 3 values. What I mean is something like [1,2,3,4]<br>[P2] is defined as the array part just after remaining values which we have to rotate [5,6,7]</p><p>但是这里根据K有不同的情况，比如说k = 101, 就是说K大于整个数组长度了，但我们不需要翻转数组101次，利用K对数组长度求余就行，因为转过7次以后就是 [1,2,3,4,5,6,7]</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverse</span> (<span class="params">self, nums, i, j</span>) :</span> </span><br><span class="line">        li = i</span><br><span class="line">        ri = j</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> li &lt; ri:</span><br><span class="line">            temp = nums[li]</span><br><span class="line">            nums[li] = nums[ri]</span><br><span class="line">            nums[ri] = temp</span><br><span class="line">            </span><br><span class="line">            li += <span class="number">1</span></span><br><span class="line">            ri -= <span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">rotate</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], k: <span class="built_in">int</span></span>) -&gt; <span class="literal">None</span>:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        k = k % <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">if</span> k &lt; <span class="number">0</span> : </span><br><span class="line">            k += <span class="built_in">len</span>(nums)</span><br><span class="line">        </span><br><span class="line">        self.reverse(nums, <span class="number">0</span>, <span class="built_in">len</span>(nums) - k - <span class="number">1</span>);</span><br><span class="line">        self.reverse(nums, <span class="built_in">len</span>(nums) - k, <span class="built_in">len</span>(nums) - <span class="number">1</span>);</span><br><span class="line">        self.reverse(nums, <span class="number">0</span>, <span class="built_in">len</span>(nums) - <span class="number">1</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>622. Design Circular Queue(medium)</title>
       <link href="/2022/09/25/622/"/>
       <url>/2022/09/25/622/</url>
