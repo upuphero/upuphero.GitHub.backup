@@ -4,6 +4,155 @@
   
     
     <entry>
+      <title>94</title>
+      <link href="/2022/10/02/94/"/>
+      <url>/2022/10/02/94/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> dynamic programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>70. Climbing Stairs(easy)</title>
+      <link href="/2022/10/02/70/"/>
+      <url>/2022/10/02/70/</url>
+      
+        <content type="html"><![CDATA[<h1 id="70-Climbing-Stairs-easy"><a href="#70-Climbing-Stairs-easy" class="headerlink" title="70. Climbing Stairs(easy)"></a>70. Climbing Stairs(easy)</h1><h2 id="You-are-climbing-a-staircase-It-takes-n-steps-to-reach-the-top"><a href="#You-are-climbing-a-staircase-It-takes-n-steps-to-reach-the-top" class="headerlink" title="You are climbing a staircase. It takes n steps to reach the top."></a>You are climbing a staircase. It takes n steps to reach the top.</h2><h2 id="Each-time-you-can-either-climb-1-or-2-steps-In-how-many-distinct-ways-can-you-climb-to-the-top"><a href="#Each-time-you-can-either-climb-1-or-2-steps-In-how-many-distinct-ways-can-you-climb-to-the-top" class="headerlink" title="Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?"></a>Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 2</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: There are two ways to climb to the top.</span><br><span class="line">1. 1 step + 1 step</span><br><span class="line">2. 2 steps</span><br></pre></td></tr></table></figure><p>一道经典DP题</p><p>状态转移方程：dp[i]=dp[i−1]+dp[i−2]<br>f(1) = 1  f(2) = 2  </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def climbStairs(self, n: int) -&gt; int:</span><br><span class="line">        if n&lt;=2:</span><br><span class="line">            return n</span><br><span class="line">        before_last=1</span><br><span class="line">        last=2</span><br><span class="line">        for i in range(2,n):</span><br><span class="line">            current=before_last+last</span><br><span class="line">            before_last=last</span><br><span class="line">            last = current</span><br><span class="line">        return last</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> dynamic programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>67. Add Binary(easy)</title>
+      <link href="/2022/10/02/67/"/>
+      <url>/2022/10/02/67/</url>
+      
+        <content type="html"><![CDATA[<h1 id="67-Add-Binary-easy"><a href="#67-Add-Binary-easy" class="headerlink" title="67. Add Binary(easy)"></a>67. Add Binary(easy)</h1><h2 id="Given-two-binary-strings-a-and-b-return-their-sum-as-a-binary-string"><a href="#Given-two-binary-strings-a-and-b-return-their-sum-as-a-binary-string" class="headerlink" title="Given two binary strings a and b, return their sum as a binary string."></a>Given two binary strings a and b, return their sum as a binary string.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: a = &quot;11&quot;, b = &quot;1&quot;</span><br><span class="line">Output: &quot;100&quot;</span><br></pre></td></tr></table></figure><p>实现二进制加法<br><a href="https://leetcode.com/problems/add-binary/solutions/414426/add-binary/">官方题解</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addBinary</span>(<span class="params">self, a, b</span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        n = <span class="built_in">max</span>(<span class="built_in">len</span>(a), <span class="built_in">len</span>(b))</span><br><span class="line">        a, b = a.zfill(n), b.zfill(n)</span><br><span class="line">        </span><br><span class="line">        carry = <span class="number">0</span></span><br><span class="line">        answer = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n - <span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> a[i] == <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">                carry += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> b[i] == <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">                carry += <span class="number">1</span></span><br><span class="line">                </span><br><span class="line">            <span class="keyword">if</span> carry % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                answer.append(<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                answer.append(<span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">            </span><br><span class="line">            carry //= <span class="number">2</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> carry == <span class="number">1</span>:</span><br><span class="line">            answer.append(<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">        answer.reverse()</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span>.join(answer)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> bitwise </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>66. Plus One(easy)</title>
+      <link href="/2022/10/02/66/"/>
+      <url>/2022/10/02/66/</url>
+      
+        <content type="html"><![CDATA[<h1 id="66-Plus-One-easy"><a href="#66-Plus-One-easy" class="headerlink" title="66. Plus One(easy)"></a>66. Plus One(easy)</h1><h2 id="You-are-given-a-large-integer-represented-as-an-integer-array-digits-where-each-digits-i-is-the-ith-digit-of-the-integer-The-digits-are-ordered-from-most-significant-to-least-significant-in-left-to-right-order-The-large-integer-does-not-contain-any-leading-0’s"><a href="#You-are-given-a-large-integer-represented-as-an-integer-array-digits-where-each-digits-i-is-the-ith-digit-of-the-integer-The-digits-are-ordered-from-most-significant-to-least-significant-in-left-to-right-order-The-large-integer-does-not-contain-any-leading-0’s" class="headerlink" title="You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0’s."></a>You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0’s.</h2><h2 id="Increment-the-large-integer-by-one-and-return-the-resulting-array-of-digits"><a href="#Increment-the-large-integer-by-one-and-return-the-resulting-array-of-digits" class="headerlink" title="Increment the large integer by one and return the resulting array of digits."></a>Increment the large integer by one and return the resulting array of digits.</h2><p>这道题可以用数学方法分类去算，但也可以先把digits转换为一整个数字，加1后，再转换回数组</p><pre><code class="python">class Solution:    def plusOne(self, digits: List[int]) -&gt; List[int]:                res=&quot;&quot;.join(str(digit) for digit in digits)        res= int(res)+1        return str(res)</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> string </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>58. Length of Last Word(easy)</title>
+      <link href="/2022/10/02/58/"/>
+      <url>/2022/10/02/58/</url>
+      
+        <content type="html"><![CDATA[<h1 id="58-Length-of-Last-Word-easy"><a href="#58-Length-of-Last-Word-easy" class="headerlink" title="58. Length of Last Word(easy)"></a>58. Length of Last Word(easy)</h1><h2 id="Given-a-string-s-consisting-of-words-and-spaces-return-the-length-of-the-last-word-in-the-string"><a href="#Given-a-string-s-consisting-of-words-and-spaces-return-the-length-of-the-last-word-in-the-string" class="headerlink" title="Given a string s consisting of words and spaces, return the length of the last word in the string."></a>Given a string s consisting of words and spaces, return the length of the last word in the string.</h2><h2 id="A-word-is-a-maximal-substring-consisting-of-non-space-characters-only"><a href="#A-word-is-a-maximal-substring-consisting-of-non-space-characters-only" class="headerlink" title="A word is a maximal substring consisting of non-space characters only."></a>A word is a maximal substring consisting of non-space characters only.</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLastWord</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        l=s.split()</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(l[-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> string </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>35. Search Insert Position(easy)</title>
       <link href="/2022/10/02/35/"/>
       <url>/2022/10/02/35/</url>
@@ -257,7 +406,7 @@
       <link href="/2022/09/30/LeetCode-skill9-bitwise/"/>
       <url>/2022/09/30/LeetCode-skill9-bitwise/</url>
       
-        <content type="html"><![CDATA[<p>位运算   Bit Manipulation</p><p>n &amp; 1   使用 n &amp; 1 得到二进制末尾是否为 1；<br>n &gt;&gt;= 1 把 n 右移 1 位，直至结束。</p><h1 id="bit操作"><a href="#bit操作" class="headerlink" title="bit操作"></a>bit操作</h1><p>&amp; 符号，x &amp; y ，会将两个十进制数在二进制下进行与运算<br>| 符号，x | y ，会将两个十进制数在二进制下进行或运算<br>^ 符号，x ^ y ，会将两个十进制数在二进制下进行异或运算<br>&lt;&lt; 符号，x &lt;&lt; y 左移操作，最右边用 0 填充</p><blockquote><blockquote><p>符号，x &gt;&gt; y 右移操作，最左边用 0 填充<br>~ 符号，~x ，按位取反操作，将 x 在二进制下的每一位取反</p></blockquote></blockquote><h1 id="整数集合set位运算"><a href="#整数集合set位运算" class="headerlink" title="整数集合set位运算"></a>整数集合set位运算</h1><h1 id="整数集合做标志时，比如回溯时的visited标志数组"><a href="#整数集合做标志时，比如回溯时的visited标志数组" class="headerlink" title="整数集合做标志时，比如回溯时的visited标志数组"></a>整数集合做标志时，比如回溯时的visited标志数组</h1><p>vstd 访问 i ：vstd | (1 &lt;&lt; i)<br>vstd 离开 i ：vstd &amp; ~(1 &lt;&lt; i)<br>vstd 不包含 i : not vstd &amp; (1 &lt;&lt; i)</p><p>并集 ：A | B<br>交集 ：A &amp; B<br>全集 ：(1 &lt;&lt; n) - 1<br>补集 ：((1 &lt;&lt; n) - 1) ^ A<br>子集 ：(A &amp; B) == B<br>判断是否是 2 的幂 ：A &amp; (A - 1) == 0<br>最低位的 1 变为 0 ：n &amp;= (n - 1)<br>最低位的 1：A &amp; (-A)，最低位的 1 一般记为 lowbit(A)</p><ol start="191"><li>Number of 1 Bits</li></ol><p>计算数字的二进制中有多少个1。</p><ol start="136"><li><p>Single Number<br>找出数组中不重复的元素。其它元素出现两次。原题</p></li><li><p>Single Number II<br>找出数组中出现一次的元素，其它元素出现三次。原题</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<p>位运算   Bit Manipulation</p><p>n &amp; 1   使用 n &amp; 1 得到二进制末尾是否为 1；<br>n &gt;&gt;= 1 把 n 右移 1 位，直至结束。</p><h1 id="bit操作"><a href="#bit操作" class="headerlink" title="bit操作"></a>bit操作</h1><p>&amp; 符号，x &amp; y ，会将两个十进制数在二进制下进行与运算<br>| 符号，x | y ，会将两个十进制数在二进制下进行或运算<br>^ 符号，x ^ y ，会将两个十进制数在二进制下进行异或运算<br>&lt;&lt; 符号，x &lt;&lt; y 左移操作，最右边用 0 填充</p><blockquote><blockquote><p>符号，x &gt;&gt; y 右移操作，最左边用 0 填充<br>~ 符号，~x ，按位取反操作，将 x 在二进制下的每一位取反</p></blockquote></blockquote><h1 id="整数集合set位运算"><a href="#整数集合set位运算" class="headerlink" title="整数集合set位运算"></a>整数集合set位运算</h1><h1 id="整数集合做标志时，比如回溯时的visited标志数组"><a href="#整数集合做标志时，比如回溯时的visited标志数组" class="headerlink" title="整数集合做标志时，比如回溯时的visited标志数组"></a>整数集合做标志时，比如回溯时的visited标志数组</h1><p>vstd 访问 i ：vstd | (1 &lt;&lt; i)<br>vstd 离开 i ：vstd &amp; ~(1 &lt;&lt; i)<br>vstd 不包含 i : not vstd &amp; (1 &lt;&lt; i)</p><p>并集 ：A | B<br>交集 ：A &amp; B<br>全集 ：(1 &lt;&lt; n) - 1<br>补集 ：((1 &lt;&lt; n) - 1) ^ A<br>子集 ：(A &amp; B) == B<br>判断是否是 2 的幂 ：A &amp; (A - 1) == 0<br>最低位的 1 变为 0 ：n &amp;= (n - 1)<br>最低位的 1：A &amp; (-A)，最低位的 1 一般记为 lowbit(A)</p><ol start="191"><li>Number of 1 Bits</li></ol><p>计算数字的二进制中有多少个1。</p><ol start="136"><li><p>Single Number<br>找出数组中不重复的元素。其它元素出现两次。原题</p></li><li><p>Single Number II<br>找出数组中出现一次的元素，其它元素出现三次。原题</p></li></ol><ol start="67"><li>Add Binary(easy)<br>二进制加法</li></ol>]]></content>
       
       
       <categories>
