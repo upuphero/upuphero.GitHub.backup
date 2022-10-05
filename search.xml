@@ -4,6 +4,300 @@
   
     
     <entry>
+      <title>832. Flipping an Image(easy)</title>
+      <link href="/2022/10/04/832/"/>
+      <url>/2022/10/04/832/</url>
+      
+        <content type="html"><![CDATA[<h1 id="832-Flipping-an-Image-easy"><a href="#832-Flipping-an-Image-easy" class="headerlink" title="832. Flipping an Image(easy)"></a>832. Flipping an Image(easy)</h1><h2 id="Given-an-n-x-n-binary-matrix-image-flip-the-image-horizontally-then-invert-it-and-return-the-resulting-image"><a href="#Given-an-n-x-n-binary-matrix-image-flip-the-image-horizontally-then-invert-it-and-return-the-resulting-image" class="headerlink" title="Given an n x n binary matrix image, flip the image horizontally, then invert it, and return the resulting image."></a>Given an n x n binary matrix image, flip the image horizontally, then invert it, and return the resulting image.</h2><h2 id="To-flip-an-image-horizontally-means-that-each-row-of-the-image-is-reversed"><a href="#To-flip-an-image-horizontally-means-that-each-row-of-the-image-is-reversed" class="headerlink" title="To flip an image horizontally means that each row of the image is reversed."></a>To flip an image horizontally means that each row of the image is reversed.</h2><h2 id="For-example-flipping-1-1-0-horizontally-results-in-0-1-1"><a href="#For-example-flipping-1-1-0-horizontally-results-in-0-1-1" class="headerlink" title="For example, flipping [1,1,0] horizontally results in [0,1,1]."></a>For example, flipping [1,1,0] horizontally results in [0,1,1].</h2><h2 id="To-invert-an-image-means-that-each-0-is-replaced-by-1-and-each-1-is-replaced-by-0"><a href="#To-invert-an-image-means-that-each-0-is-replaced-by-1-and-each-1-is-replaced-by-0" class="headerlink" title="To invert an image means that each 0 is replaced by 1, and each 1 is replaced by 0."></a>To invert an image means that each 0 is replaced by 1, and each 1 is replaced by 0.</h2><h2 id="For-example-inverting-0-1-1-results-in-1-0-0"><a href="#For-example-inverting-0-1-1-results-in-1-0-0" class="headerlink" title="For example, inverting [0,1,1] results in [1,0,0]."></a>For example, inverting [0,1,1] results in [1,0,0].</h2><p>两次遍历，第一次遍历是10互换，第二次遍历是前后数字互换</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">flipAndInvertImage</span>(<span class="params">self, image: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span></span><br><span class="line">        n=<span class="built_in">len</span>(image)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">                <span class="keyword">if</span> image[i][j]==<span class="number">1</span>:</span><br><span class="line">                    image[i][j]=<span class="number">0</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    image[i][j]=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">if</span> n%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n//<span class="number">2</span>):</span><br><span class="line">                    tmp=image[i][j]</span><br><span class="line">                    image[i][j]=image[i][n-j-<span class="number">1</span>]</span><br><span class="line">                    image[i][n-j-<span class="number">1</span>]=tmp</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n//<span class="number">2</span>+<span class="number">1</span>):</span><br><span class="line">                    tmp=image[i][j]</span><br><span class="line">                    image[i][j]=image[i][n-j-<span class="number">1</span>]</span><br><span class="line">                    image[i][n-j-<span class="number">1</span>]=tmp</span><br><span class="line">        <span class="keyword">return</span> image</span><br></pre></td></tr></table></figure><p>相对轻便的算法<br>[::-1] 顺序相反操作<br>[-1] 读取倒数第一个元素<br>[3::-1] 从下标为3（从0开始）的元素开始翻转读取</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">flipAndInvertImage</span>(<span class="params">self, image: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span></span><br><span class="line">        result=[]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> image:</span><br><span class="line">            result.append(i[::-<span class="number">1</span>])</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(result)):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(result[i])):</span><br><span class="line">                <span class="keyword">if</span> result[i][j]==<span class="number">0</span>:</span><br><span class="line">                    result[i][j]=<span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    result[i][j]=<span class="number">0</span></span><br><span class="line">                    </span><br><span class="line">                    </span><br><span class="line">        <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Matrix </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2373. Largest Local Values in a Matrix(easy)</title>
+      <link href="/2022/10/04/2373/"/>
+      <url>/2022/10/04/2373/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2373-Largest-Local-Values-in-a-Matrix-easy"><a href="#2373-Largest-Local-Values-in-a-Matrix-easy" class="headerlink" title="2373. Largest Local Values in a Matrix(easy)"></a>2373. Largest Local Values in a Matrix(easy)</h1><h2 id="You-are-given-an-n-x-n-integer-matrix-grid"><a href="#You-are-given-an-n-x-n-integer-matrix-grid" class="headerlink" title="You are given an n x n integer matrix grid."></a>You are given an n x n integer matrix grid.</h2><h2 id="Generate-an-integer-matrix-maxLocal-of-size-n-2-x-n-2-such-that"><a href="#Generate-an-integer-matrix-maxLocal-of-size-n-2-x-n-2-such-that" class="headerlink" title="Generate an integer matrix maxLocal of size (n - 2) x (n - 2) such that:"></a>Generate an integer matrix maxLocal of size (n - 2) x (n - 2) such that:</h2><p>maxLocal[i][j] is equal to the largest value of the 3 x 3 matrix in grid centered around row i + 1 and column j + 1.</p><h2 id="In-other-words-we-want-to-find-the-largest-value-in-every-contiguous-3-x-3-matrix-in-grid"><a href="#In-other-words-we-want-to-find-the-largest-value-in-every-contiguous-3-x-3-matrix-in-grid" class="headerlink" title="In other words, we want to find the largest value in every contiguous 3 x 3 matrix in grid."></a>In other words, we want to find the largest value in every contiguous 3 x 3 matrix in grid.</h2><h2 id="Return-the-generated-matrix"><a href="#Return-the-generated-matrix" class="headerlink" title="Return the generated matrix."></a>Return the generated matrix.</h2><p>二维矩阵遍历</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">largestLocal</span>(<span class="params">self, grid: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span></span><br><span class="line">        n=<span class="built_in">len</span>(grid)</span><br><span class="line">        ans=[[<span class="number">0</span>]*(n-<span class="number">2</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">2</span>)]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">2</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">2</span>):</span><br><span class="line">                ans[i][j]=<span class="built_in">max</span>(grid[x][y] <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(i,i+<span class="number">3</span>) <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(j,j+<span class="number">3</span>))</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Matrix </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode-skill11-matrix</title>
+      <link href="/2022/10/04/LeetCode-skill11-matrix/"/>
+      <url>/2022/10/04/LeetCode-skill11-matrix/</url>
+      
+        <content type="html"><![CDATA[<ol start="1672"><li>Richest Customer Wealth(easy)</li></ol><ol start="54"><li>Spiral Matrix(medium)</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Matrix </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1672. Richest Customer Wealth(easy)</title>
+      <link href="/2022/10/04/1672/"/>
+      <url>/2022/10/04/1672/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1672-Richest-Customer-Wealth-easy"><a href="#1672-Richest-Customer-Wealth-easy" class="headerlink" title="1672. Richest Customer Wealth(easy)"></a>1672. Richest Customer Wealth(easy)</h1><h2 id="You-are-given-an-m-x-n-integer-grid-accounts-where-accounts-i-j-is-the-amount-of-money-the-i​​​​​​​​​​​th​​​​-customer-has-in-the-j​​​​​​​​​​​th​​​​-bank-Return-the-wealth-that-the-richest-customer-has"><a href="#You-are-given-an-m-x-n-integer-grid-accounts-where-accounts-i-j-is-the-amount-of-money-the-i​​​​​​​​​​​th​​​​-customer-has-in-the-j​​​​​​​​​​​th​​​​-bank-Return-the-wealth-that-the-richest-customer-has" class="headerlink" title="You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has."></a>You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.</h2><h2 id="A-customer’s-wealth-is-the-amount-of-money-they-have-in-all-their-bank-accounts-The-richest-customer-is-the-customer-that-has-the-maximum-wealth"><a href="#A-customer’s-wealth-is-the-amount-of-money-they-have-in-all-their-bank-accounts-The-richest-customer-is-the-customer-that-has-the-maximum-wealth" class="headerlink" title="A customer’s wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth."></a>A customer’s wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maximumWealth</span>(<span class="params">self, accounts: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        res=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(accounts)):</span><br><span class="line">            res=<span class="built_in">max</span>(res,<span class="built_in">sum</span>(accounts[i]))</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">```        </span><br><span class="line">```python</span><br><span class="line">accounts = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(accounts)) <span class="comment">#2 行</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(accounts[<span class="number">0</span>])) <span class="comment">#3 列</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Matrix </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>171. Excel Sheet Column Number(easy)</title>
+      <link href="/2022/10/03/171/"/>
+      <url>/2022/10/03/171/</url>
+      
+        <content type="html"><![CDATA[<h1 id="171-Excel-Sheet-Column-Number-easy"><a href="#171-Excel-Sheet-Column-Number-easy" class="headerlink" title="171. Excel Sheet Column Number(easy)"></a>171. Excel Sheet Column Number(easy)</h1><h2 id="Given-a-string-columnTitle-that-represents-the-column-title-as-appears-in-an-Excel-sheet-return-its-corresponding-column-number"><a href="#Given-a-string-columnTitle-that-represents-the-column-title-as-appears-in-an-Excel-sheet-return-its-corresponding-column-number" class="headerlink" title="Given a string columnTitle that represents the column title as appears in an Excel sheet, return its corresponding column number."></a>Given a string columnTitle that represents the column title as appears in an Excel sheet, return its corresponding column number.</h2><h2 id="For-example"><a href="#For-example" class="headerlink" title="For example:"></a>For example:</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A -&gt; 1</span><br><span class="line">B -&gt; 2</span><br><span class="line">C -&gt; 3</span><br><span class="line">...</span><br><span class="line">Z -&gt; 26</span><br><span class="line">AA -&gt; 27</span><br><span class="line">AB -&gt; 28 </span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>这道题是一经典题目，相当于从26进制转换成十进制，这是一个标准算法，我们从右到左迭代数字，并将它们乘以基数到数字位置的幂。为了将字母转换为数字，我们使用ord，该方法返回字母的Unicode代码。通过将代码减去 64，我们可以将字母映射到从 1 到 26 的数字。</p><p>26进制转换为十进制，相当于K*(26^(n-1))</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">titleToNumber</span>(<span class="params">self, columnTitle: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        val=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i,c <span class="keyword">in</span> <span class="built_in">enumerate</span>(<span class="built_in">reversed</span>(columnTitle)):</span><br><span class="line">            val+=(<span class="number">26</span>**i)*(<span class="built_in">ord</span>(c) - <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>) + <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> val</span><br><span class="line"></span><br><span class="line"><span class="comment">#** 代表乘方</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> bitwise </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode-skill10-Data-structure-design</title>
+      <link href="/2022/10/03/LeetCode-skill10-Data-structure-design/"/>
+      <url>/2022/10/03/LeetCode-skill10-Data-structure-design/</url>
+      
+        <content type="html"><![CDATA[<ol start="170"><li>Two Sum III - Data structure design(easy)</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Data structure design </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>170. Two Sum III - Data structure design(easy)</title>
+      <link href="/2022/10/03/170/"/>
+      <url>/2022/10/03/170/</url>
+      
+        <content type="html"><![CDATA[<h1 id="170-Two-Sum-III-Data-structure-design-easy"><a href="#170-Two-Sum-III-Data-structure-design-easy" class="headerlink" title="170. Two Sum III - Data structure design(easy)"></a>170. Two Sum III - Data structure design(easy)</h1><h2 id="Design-a-data-structure-that-accepts-a-stream-of-integers-and-checks-if-it-has-a-pair-of-integers-that-sum-up-to-a-particular-value"><a href="#Design-a-data-structure-that-accepts-a-stream-of-integers-and-checks-if-it-has-a-pair-of-integers-that-sum-up-to-a-particular-value" class="headerlink" title="Design a data structure that accepts a stream of integers and checks if it has a pair of integers that sum up to a particular value."></a>Design a data structure that accepts a stream of integers and checks if it has a pair of integers that sum up to a particular value.</h2><h2 id="Implement-the-TwoSum-class"><a href="#Implement-the-TwoSum-class" class="headerlink" title="Implement the TwoSum class:"></a>Implement the TwoSum class:</h2><p>TwoSum() Initializes the TwoSum object, with an empty array initially.<br>void add(int number) Adds number to the data structure.<br>boolean find(int value) Returns true if there exists any pair of numbers whose sum is equal to value, otherwise, it returns false.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Input</span><br><span class="line">[&quot;TwoSum&quot;, &quot;add&quot;, &quot;add&quot;, &quot;add&quot;, &quot;find&quot;, &quot;find&quot;]</span><br><span class="line">[[], [1], [3], [5], [4], [7]]</span><br><span class="line">Output</span><br><span class="line">[null, null, null, null, true, false]</span><br><span class="line"></span><br><span class="line">Explanation</span><br><span class="line">TwoSum twoSum = new TwoSum();</span><br><span class="line">twoSum.add(1);   // [] --&gt; [1]</span><br><span class="line">twoSum.add(3);   // [1] --&gt; [1,3]</span><br><span class="line">twoSum.add(5);   // [1,3] --&gt; [1,3,5]</span><br><span class="line">twoSum.find(4);  // 1 + 3 = 4, return true</span><br><span class="line">twoSum.find(7);  // No two integers sum up to 7, return false</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.com/problems/two-sum-iii-data-structure-design/solutions/441899/two-sum-iii-data-structure-design/">leetcode题解</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TwoSum</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.nums=[]</span><br><span class="line">        self.is_sorted=<span class="literal">False</span></span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">self, number: <span class="built_in">int</span></span>) -&gt; <span class="literal">None</span>:</span></span><br><span class="line">        <span class="comment"># Inserting while maintaining the ascending order.</span></span><br><span class="line">        <span class="comment"># for index, num in enumerate(self.nums):</span></span><br><span class="line">        <span class="comment">#     if number &lt;= num:</span></span><br><span class="line">        <span class="comment">#         self.nums.insert(index, number)</span></span><br><span class="line">        <span class="comment">#         return</span></span><br><span class="line">        <span class="comment">## larger than any number</span></span><br><span class="line">        <span class="comment">#self.nums.append(number)</span></span><br><span class="line"></span><br><span class="line">        self.nums.append(number)</span><br><span class="line">        self.is_sorted = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find</span>(<span class="params">self, value: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Find if there exists any pair of numbers which sum is equal to the value.</span></span><br><span class="line"><span class="string">        :type value: int</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> self.is_sorted:</span><br><span class="line">            self.nums.sort()</span><br><span class="line">            self.is_sorted = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">        low, high = <span class="number">0</span>, <span class="built_in">len</span>(self.nums)-<span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> low &lt; high:</span><br><span class="line">            currSum = self.nums[low] + self.nums[high]</span><br><span class="line">            <span class="keyword">if</span> currSum &lt; value:</span><br><span class="line">                low += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> currSum &gt; value:</span><br><span class="line">                high -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>: <span class="comment"># currSum == value</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        </span><br><span class="line"><span class="comment"># Your TwoSum object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"># obj = TwoSum()</span></span><br><span class="line"><span class="comment"># obj.add(number)</span></span><br><span class="line"><span class="comment"># param_2 = obj.find(value)</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> two-pointer </tag>
+            
+            <tag> Data structure design </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1572. Matrix Diagonal Sum(easy)</title>
+      <link href="/2022/10/03/1572/"/>
+      <url>/2022/10/03/1572/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1572-Matrix-Diagonal-Sum-easy"><a href="#1572-Matrix-Diagonal-Sum-easy" class="headerlink" title="1572. Matrix Diagonal Sum(easy)"></a>1572. Matrix Diagonal Sum(easy)</h1><h2 id="Given-a-square-matrix-mat-return-the-sum-of-the-matrix-diagonals"><a href="#Given-a-square-matrix-mat-return-the-sum-of-the-matrix-diagonals" class="headerlink" title="Given a square matrix mat, return the sum of the matrix diagonals."></a>Given a square matrix mat, return the sum of the matrix diagonals.</h2><h2 id="Only-include-the-sum-of-all-the-elements-on-the-primary-diagonal-and-all-the-elements-on-the-secondary-diagonal-that-are-not-part-of-the-primary-diagonal"><a href="#Only-include-the-sum-of-all-the-elements-on-the-primary-diagonal-and-all-the-elements-on-the-secondary-diagonal-that-are-not-part-of-the-primary-diagonal" class="headerlink" title="Only include the sum of all the elements on the primary diagonal and all the elements on the secondary diagonal that are not part of the primary diagonal."></a>Only include the sum of all the elements on the primary diagonal and all the elements on the secondary diagonal that are not part of the primary diagonal.</h2><p>矩阵对角线之和，这题很典型</p><p>逐行取数<br>思路与算法</p><p>逐行遍历，记当前的行号为 i，对于一行我们把 (i, i)位置和 (i, n - i - 1) 加入答案。这样如果 n 是奇数的话，最中间的格子会被加入两次。所以 n 为奇数的时候，我们需要减掉矩阵最中心的那个值。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">diagonalSum</span>(<span class="params">self, mat: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        n = <span class="built_in">len</span>(mat)</span><br><span class="line">        total = <span class="number">0</span></span><br><span class="line">        mid = n // <span class="number">2</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            total += mat[i][i] + mat[i][n - <span class="number">1</span> - i]</span><br><span class="line">        <span class="keyword">return</span> total - mat[mid][mid] * (n &amp; <span class="number">1</span>)</span><br></pre></td></tr></table></figure><p>n&amp;1是用来判断奇偶性的<br>n&amp;1   与运算      可以判断n是否为偶数     如果是偶数，n&amp;1返回0；否则返回1，为奇数。<br>一个整数 n，n&amp;1 这个表达式 可以用来 判断 a的奇偶性。<br>二进制的末位为 0表示偶数，末位为 1表是奇数。<br>使用 n%2 来判断奇偶性 和 n&amp;1 是一样的作用，但是 n&amp;1 要快好多。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> two-pointer </tag>
+            
+            <tag> Palindrome </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>163. Missing Ranges(easy)</title>
+      <link href="/2022/10/03/163/"/>
+      <url>/2022/10/03/163/</url>
+      
+        <content type="html"><![CDATA[<h1 id="163-Missing-Ranges-easy"><a href="#163-Missing-Ranges-easy" class="headerlink" title="163. Missing Ranges(easy)"></a>163. Missing Ranges(easy)</h1><h2 id="You-are-given-an-inclusive-range-lower-upper-and-a-sorted-unique-integer-array-nums-where-all-elements-are-in-the-inclusive-range"><a href="#You-are-given-an-inclusive-range-lower-upper-and-a-sorted-unique-integer-array-nums-where-all-elements-are-in-the-inclusive-range" class="headerlink" title="You are given an inclusive range [lower, upper] and a sorted unique integer array nums, where all elements are in the inclusive range."></a>You are given an inclusive range [lower, upper] and a sorted unique integer array nums, where all elements are in the inclusive range.</h2><h2 id="A-number-x-is-considered-missing-if-x-is-in-the-range-lower-upper-and-x-is-not-in-nums"><a href="#A-number-x-is-considered-missing-if-x-is-in-the-range-lower-upper-and-x-is-not-in-nums" class="headerlink" title="A number x is considered missing if x is in the range [lower, upper] and x is not in nums."></a>A number x is considered missing if x is in the range [lower, upper] and x is not in nums.</h2><h2 id="Return-the-smallest-sorted-list-of-ranges-that-cover-every-missing-number-exactly-That-is-no-element-of-nums-is-in-any-of-the-ranges-and-each-missing-number-is-in-one-of-the-ranges"><a href="#Return-the-smallest-sorted-list-of-ranges-that-cover-every-missing-number-exactly-That-is-no-element-of-nums-is-in-any-of-the-ranges-and-each-missing-number-is-in-one-of-the-ranges" class="headerlink" title="Return the smallest sorted list of ranges that cover every missing number exactly. That is, no element of nums is in any of the ranges, and each missing number is in one of the ranges."></a>Return the smallest sorted list of ranges that cover every missing number exactly. That is, no element of nums is in any of the ranges, and each missing number is in one of the ranges.</h2><h2 id="Each-range-a-b-in-the-list-should-be-output-as"><a href="#Each-range-a-b-in-the-list-should-be-output-as" class="headerlink" title="Each range [a,b] in the list should be output as:"></a>Each range [a,b] in the list should be output as:</h2><p>“a-&gt;b” if a != b<br>“a” if a == b</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [0,1,3,50,75], lower = 0, upper = 99</span><br><span class="line">Output: [&quot;2&quot;,&quot;4-&gt;49&quot;,&quot;51-&gt;74&quot;,&quot;76-&gt;99&quot;]</span><br><span class="line">Explanation: The ranges are:</span><br><span class="line">[2,2] --&gt; &quot;2&quot;</span><br><span class="line">[4,49] --&gt; &quot;4-&gt;49&quot;</span><br><span class="line">[51,74] --&gt; &quot;51-&gt;74&quot;</span><br><span class="line">[76,99] --&gt; &quot;76-&gt;99&quot;</span><br></pre></td></tr></table></figure><p>这题是通过lower和upper确定上下边界，然后再挨个前后相减得到范围</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMissingRanges</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], lower: <span class="built_in">int</span>, upper: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">str</span>]:</span></span><br><span class="line">       </span><br><span class="line">        numList = nums</span><br><span class="line">        nums = [lower - <span class="number">1</span>]</span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> numList:</span><br><span class="line">            nums.append(num)</span><br><span class="line">        nums.append(upper + <span class="number">1</span>)</span><br><span class="line">        ranges = <span class="built_in">list</span>()</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums) - <span class="number">1</span>):</span><br><span class="line">            dist = nums[i + <span class="number">1</span>] - nums[i]</span><br><span class="line">            <span class="keyword">if</span> dist &gt; <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">if</span> dist == <span class="number">2</span>:</span><br><span class="line">                    ranges.append(<span class="built_in">str</span>(nums[i] + <span class="number">1</span>))</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    start = nums[i] + <span class="number">1</span></span><br><span class="line">                    end = nums[i + <span class="number">1</span>] - <span class="number">1</span></span><br><span class="line">                    ranges.append(<span class="string">&quot;&#123;0:d&#125;-&gt;&#123;1:d&#125;&quot;</span>.<span class="built_in">format</span>(start, end))</span><br><span class="line">                    </span><br><span class="line">        <span class="keyword">return</span> ranges</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> two-pointer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1155. Number of Dice Rolls With Target Sum(medium)</title>
+      <link href="/2022/10/02/1155/"/>
+      <url>/2022/10/02/1155/</url>
+      
+        <content type="html"><![CDATA[<ol start="1155"><li>Number of Dice Rolls With Target Sum(medium)</li></ol><p>You have n dice and each die has k faces numbered from 1 to k.</p><p>Given three integers n, k, and target, return the number of possible ways (out of the kn total ways) to roll the dice so the sum of the face-up numbers equals target. Since the answer may be too large, return it modulo 109 + 7.</p><p>这题乍一看就是dp，而且类似于爬楼梯问题，相当于一次爬K个台阶，一共爬n次爬到target的位置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 1, k = 6, target = 3</span><br><span class="line">Output: 1</span><br><span class="line">Explanation: You throw one die with 6 faces.</span><br><span class="line">There is only one way to get a sum of 3.</span><br></pre></td></tr></table></figure><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a><a href="https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/solutions/2652934/python-top-down-bottom-up/">题解</a></h3><p>We are asked to figure out how many times we get target sum with n dice with values 1..k.<br>The important point is - sum of all faced-up numbers. So it cannot be a subset of n dice. It should be sum of all faced-up dice.</p><p>We are going to pick the 1st dice with value 1. Then we going to pick the 2nd dice with value 1 and so on until we ran out of dice.<br>sum([1,1,1,..1] n times) == target?</p><p>Then we are going to pick the 1st dice with value 1 and the 2nd dice with value 2 and so on.<br>sum([[1,2,1,..1] n times) == target?</p><p>…<br>sum([[3,1,5,..4] n times) == target?<br>…</p><p>…</p><p>n) sum([k,k,…k] n times) == target?<br>When we ran out of dice (n -&gt; 0) we check if the sum of all picked dice values == target. If yes, return 1, else return 0 for a specific permutation.</p><p>They want us to count [1,2] and [2,1] as 2 different sets. The order of items is important. We are working with permutations.</p><p>Find the target sum in all permutations of size n with element values ranging from 1…k.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numRollsToTarget</span>(<span class="params">self, N: <span class="built_in">int</span>, k: <span class="built_in">int</span>, target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="comment"># [1] 2 3 4 5 6</span></span><br><span class="line">        <span class="comment"># 1 2 3 4 5 [6]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># bottom-up/tabulation TC: (N*k*target) SC: (N*target)</span></span><br><span class="line">        MOD = <span class="number">10</span>**<span class="number">9</span> + <span class="number">7</span></span><br><span class="line">        </span><br><span class="line">        dp = [[<span class="number">0</span>] * (target + <span class="number">1</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(N + <span class="number">1</span>)]</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, N + <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, k + <span class="number">1</span>):</span><br><span class="line">                <span class="keyword">for</span> t <span class="keyword">in</span> <span class="built_in">range</span>(i, target + <span class="number">1</span>):</span><br><span class="line">                    dp[n][t] += dp[n - <span class="number">1</span>][t - i] % MOD</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> dp[N][target] % MOD</span><br><span class="line"></span><br><span class="line"><span class="comment"># top-down</span></span><br><span class="line"><span class="comment">#         @cache</span></span><br><span class="line"><span class="comment">#         def solve(n, t):</span></span><br><span class="line"><span class="comment">#             if n == 0:</span></span><br><span class="line"><span class="comment">#                 return 1 if t == 0 else 0 # if we ran out of dice and we got our target value</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#             count = 0</span></span><br><span class="line"><span class="comment">#             for j in range(1, k + 1):</span></span><br><span class="line"><span class="comment">#                 if t - j &gt;= 0:</span></span><br><span class="line"><span class="comment">#                     count += solve(n - 1, t - j)</span></span><br><span class="line">            </span><br><span class="line"><span class="comment">#             return count</span></span><br><span class="line">        </span><br><span class="line"><span class="comment">#         return solve(n, target) % MOD</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> dynamic programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>119. Pascal&#39;s Triangle II(easy)</title>
       <link href="/2022/10/02/119/"/>
       <url>/2022/10/02/119/</url>
