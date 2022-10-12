@@ -4,6 +4,244 @@
   
     
     <entry>
+      <title>293. Flip Game(easy)</title>
+      <link href="/2022/10/12/293/"/>
+      <url>/2022/10/12/293/</url>
+      
+        <content type="html"><![CDATA[<h1 id="293-Flip-Game-easy"><a href="#293-Flip-Game-easy" class="headerlink" title="293. Flip Game(easy)"></a>293. Flip Game(easy)</h1><h2 id="You-are-playing-a-Flip-Game-with-your-friend"><a href="#You-are-playing-a-Flip-Game-with-your-friend" class="headerlink" title="You are playing a Flip Game with your friend."></a>You are playing a Flip Game with your friend.</h2><h2 id="You-are-given-a-string-currentState-that-contains-only-‘-’-and-‘-‘-You-and-your-friend-take-turns-to-flip-two-consecutive-“-”-into-“–”-The-game-ends-when-a-person-can-no-longer-make-a-move-and-therefore-the-other-person-will-be-the-winner"><a href="#You-are-given-a-string-currentState-that-contains-only-‘-’-and-‘-‘-You-and-your-friend-take-turns-to-flip-two-consecutive-“-”-into-“–”-The-game-ends-when-a-person-can-no-longer-make-a-move-and-therefore-the-other-person-will-be-the-winner" class="headerlink" title="You are given a string currentState that contains only ‘+’ and ‘-‘. You and your friend take turns to flip two consecutive “++” into “–”. The game ends when a person can no longer make a move, and therefore the other person will be the winner."></a>You are given a string currentState that contains only ‘+’ and ‘-‘. You and your friend take turns to flip two consecutive “++” into “–”. The game ends when a person can no longer make a move, and therefore the other person will be the winner.</h2><h2 id="Return-all-possible-states-of-the-string-currentState-after-one-valid-move-You-may-return-the-answer-in-any-order-If-there-is-no-valid-move-return-an-empty-list"><a href="#Return-all-possible-states-of-the-string-currentState-after-one-valid-move-You-may-return-the-answer-in-any-order-If-there-is-no-valid-move-return-an-empty-list" class="headerlink" title="Return all possible states of the string currentState after one valid move. You may return the answer in any order. If there is no valid move, return an empty list []."></a>Return all possible states of the string currentState after one valid move. You may return the answer in any order. If there is no valid move, return an empty list [].</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: currentState = &quot;++++&quot;</span><br><span class="line">Output: [&quot;--++&quot;,&quot;+--+&quot;,&quot;++--&quot;]</span><br></pre></td></tr></table></figure><p>连着的++换成–，看能输出多少个</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">generatePossibleNextMoves</span>(<span class="params">self, currentState: <span class="built_in">str</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">str</span>]:</span></span><br><span class="line">        res=[]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(currentState)-<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> currentState[i:i+<span class="number">2</span>]==<span class="string">&quot;++&quot;</span>:</span><br><span class="line">                res.append(currentState[:i]+<span class="string">&#x27;--&#x27;</span>+currentState[i+<span class="number">2</span>:])</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> string </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>367. Valid Perfect Square(easy)</title>
+      <link href="/2022/10/12/367/"/>
+      <url>/2022/10/12/367/</url>
+      
+        <content type="html"><![CDATA[<h1 id="367-Valid-Perfect-Square-easy"><a href="#367-Valid-Perfect-Square-easy" class="headerlink" title="367. Valid Perfect Square(easy)"></a>367. Valid Perfect Square(easy)</h1><h2 id="Given-a-positive-integer-num-write-a-function-which-returns-True-if-num-is-a-perfect-square-else-False"><a href="#Given-a-positive-integer-num-write-a-function-which-returns-True-if-num-is-a-perfect-square-else-False" class="headerlink" title="Given a positive integer num, write a function which returns True if num is a perfect square else False."></a>Given a positive integer num, write a function which returns True if num is a perfect square else False.</h2><h2 id="Follow-up-Do-not-use-any-built-in-library-function-such-as-sqrt"><a href="#Follow-up-Do-not-use-any-built-in-library-function-such-as-sqrt" class="headerlink" title="Follow up: Do not use any built-in library function such as sqrt."></a>Follow up: Do not use any built-in library function such as sqrt.</h2><p>判断是否是平方数，可以通过等差数列来求，等差数列a0=1, d=2，最后求和的结果就是n^2,所以通过该等差数列来求</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isPerfectSquare</span>(<span class="params">self, num: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        i=<span class="number">1</span></span><br><span class="line">        d=<span class="number">2</span></span><br><span class="line">        <span class="keyword">while</span> num&gt;<span class="number">0</span>:</span><br><span class="line">            num-=i</span><br><span class="line">            i+=d</span><br><span class="line">        <span class="keyword">if</span> num==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> math </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>338. Counting Bits(easy)</title>
+      <link href="/2022/10/12/338/"/>
+      <url>/2022/10/12/338/</url>
+      
+        <content type="html"><![CDATA[<h1 id="338-Counting-Bits-easy"><a href="#338-Counting-Bits-easy" class="headerlink" title="338. Counting Bits(easy)"></a>338. Counting Bits(easy)</h1><h2 id="Given-an-integer-n-return-an-array-ans-of-length-n-1-such-that-for-each-i-0-lt-i-lt-n-ans-i-is-the-number-of-1’s-in-the-binary-representation-of-i"><a href="#Given-an-integer-n-return-an-array-ans-of-length-n-1-such-that-for-each-i-0-lt-i-lt-n-ans-i-is-the-number-of-1’s-in-the-binary-representation-of-i" class="headerlink" title="Given an integer n, return an array ans of length n + 1 such that for each i (0 &lt;= i &lt;= n), ans[i] is the number of 1’s in the binary representation of i."></a>Given an integer n, return an array ans of length n + 1 such that for each i (0 &lt;= i &lt;= n), ans[i] is the number of 1’s in the binary representation of i.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 2</span><br><span class="line">Output: [0,1,1]</span><br><span class="line">Explanation:</span><br><span class="line">0 --&gt; 0</span><br><span class="line">1 --&gt; 1</span><br><span class="line">2 --&gt; 10</span><br></pre></td></tr></table></figure><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.com/problems/counting-bits/solutions/127448/counting-bits/">官方题解</a></h3><p>Use previous count results to generate the count for a new integer.</p><p>DP + Most Significant Bit</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countBits</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        ans = [<span class="number">0</span>] * (n + <span class="number">1</span>)</span><br><span class="line">        x = <span class="number">0</span></span><br><span class="line">        b = <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># [0, b) is calculated</span></span><br><span class="line">        <span class="keyword">while</span> b &lt;= n:</span><br><span class="line">            <span class="comment"># generate [b, 2b) or [b, n) from [0, b)</span></span><br><span class="line">            <span class="keyword">while</span> x &lt; b <span class="keyword">and</span> x + b &lt;= n:</span><br><span class="line">                ans[x + b] = ans[x] + <span class="number">1</span></span><br><span class="line">                x += <span class="number">1</span></span><br><span class="line">            x = <span class="number">0</span> <span class="comment"># reset x</span></span><br><span class="line">            b &lt;&lt;= <span class="number">1</span> <span class="comment"># b = 2b</span></span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> ans               </span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> dynamic programming </tag>
+            
+            <tag> bitwise </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>292. Nim Game(easy)</title>
+      <link href="/2022/10/12/292/"/>
+      <url>/2022/10/12/292/</url>
+      
+        <content type="html"><![CDATA[<h1 id="292-Nim-Game-easy"><a href="#292-Nim-Game-easy" class="headerlink" title="292. Nim Game(easy)"></a>292. Nim Game(easy)</h1><h2 id="You-are-playing-the-following-Nim-Game-with-your-friend"><a href="#You-are-playing-the-following-Nim-Game-with-your-friend" class="headerlink" title="You are playing the following Nim Game with your friend:"></a>You are playing the following Nim Game with your friend:</h2><p>Initially, there is a heap of stones on the table.<br>You and your friend will alternate taking turns, and you go first.<br>On each turn, the person whose turn it is will remove 1 to 3 stones from the heap.<br>The one who removes the last stone is the winner.<br>Given , the number of stones in the heap, return if you can win the game assuming both you and your friend play optimally, otherwise return .n  truefalse</p><p>总结就是让对手只能拿到4或者4的倍数，这样他拿几个我都有机会赢</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">canWinNim</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="keyword">return</span> n%<span class="number">4</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Tree </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>270. Closest Binary Search Tree Value(easy)</title>
+      <link href="/2022/10/12/270/"/>
+      <url>/2022/10/12/270/</url>
+      
+        <content type="html"><![CDATA[<h1 id="270-Closest-Binary-Search-Tree-Value-easy"><a href="#270-Closest-Binary-Search-Tree-Value-easy" class="headerlink" title="270. Closest Binary Search Tree Value(easy)"></a>270. Closest Binary Search Tree Value(easy)</h1><h2 id="Given-the-root-of-a-binary-search-tree-and-a-target-value-return-the-value-in-the-BST-that-is-closest-to-the-target"><a href="#Given-the-root-of-a-binary-search-tree-and-a-target-value-return-the-value-in-the-BST-that-is-closest-to-the-target" class="headerlink" title="Given the root of a binary search tree and a target value, return the value in the BST that is closest to the target."></a>Given the root of a binary search tree and a target value, return the value in the BST that is closest to the target.</h2><p>二叉搜索树上与target最近的数字<br><a href="https://leetcode.com/problems/closest-binary-search-tree-value/solutions/70327/4-7-lines-recursive-iterative-ruby-c-java-python/">leetcode题解</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">closestValue</span>(<span class="params">self, root, target</span>):</span></span><br><span class="line">        a = root.val</span><br><span class="line">        kid = root.left <span class="keyword">if</span> target &lt; a <span class="keyword">else</span> root.right</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> kid: <span class="keyword">return</span> a</span><br><span class="line">        b = self.closestValue(kid, target)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">min</span>((b, a), key=<span class="keyword">lambda</span> x: <span class="built_in">abs</span>(target - x))</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Tree </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>976. Largest Perimeter Triangle(easy)</title>
+      <link href="/2022/10/12/976/"/>
+      <url>/2022/10/12/976/</url>
+      
+        <content type="html"><![CDATA[<h1 id="976-Largest-Perimeter-Triangle-easy"><a href="#976-Largest-Perimeter-Triangle-easy" class="headerlink" title="976. Largest Perimeter Triangle(easy)"></a>976. Largest Perimeter Triangle(easy)</h1><h1 id="Given-an-integer-array-nums-return-the-largest-perimeter-of-a-triangle-with-a-non-zero-area-formed-from-three-of-these-lengths-If-it-is-impossible-to-form-any-triangle-of-a-non-zero-area-return-0"><a href="#Given-an-integer-array-nums-return-the-largest-perimeter-of-a-triangle-with-a-non-zero-area-formed-from-three-of-these-lengths-If-it-is-impossible-to-form-any-triangle-of-a-non-zero-area-return-0" class="headerlink" title="Given an integer array nums, return the largest perimeter of a triangle with a non-zero area, formed from three of these lengths. If it is impossible to form any triangle of a non-zero area, return 0."></a>Given an integer array nums, return the largest perimeter of a triangle with a non-zero area, formed from three of these lengths. If it is impossible to form any triangle of a non-zero area, return 0.</h1><p>组成三角形的条件是两边之和大于第三边，先将数组排序，然后从大往小挨个算能否组成三角形，如果可以就输出，到最后都没有发现就直接return 0</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">largestPerimeter</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        nums.sort(reverse=<span class="literal">True</span>)</span><br><span class="line">        n=<span class="built_in">len</span>(nums)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">2</span>):</span><br><span class="line">            <span class="keyword">if</span> nums[i]&gt;=nums[i+<span class="number">1</span>]+nums[i+<span class="number">2</span>]:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">elif</span> nums[i]&lt;nums[i+<span class="number">1</span>]+nums[i+<span class="number">2</span>]:</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">sum</span>(nums[i:i+<span class="number">3</span>])</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        </span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>263. Ugly Number(easy)</title>
+      <link href="/2022/10/12/263/"/>
+      <url>/2022/10/12/263/</url>
+      
+        <content type="html"><![CDATA[<h1 id="263-Ugly-Number-easy"><a href="#263-Ugly-Number-easy" class="headerlink" title="263. Ugly Number(easy)"></a>263. Ugly Number(easy)</h1><h2 id="An-ugly-number-is-a-positive-integer-whose-prime-factors-are-limited-to-2-3-and-5"><a href="#An-ugly-number-is-a-positive-integer-whose-prime-factors-are-limited-to-2-3-and-5" class="headerlink" title="An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5."></a>An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.</h2><h2 id="Given-an-integer-n-return-true-if-n-is-an-ugly-number"><a href="#Given-an-integer-n-return-true-if-n-is-an-ugly-number" class="headerlink" title="Given an integer n, return true if n is an ugly number."></a>Given an integer n, return true if n is an ugly number.</h2><p>这是一个系列题<br>263. 丑数（简单）</p><ol start="264"><li><p>丑数 II（中等）</p></li><li><p>丑数 III（中等）</p></li><li><p>超级丑数（中等）</p></li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isUgly</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> n&lt;<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">while</span> n%<span class="number">2</span>==<span class="number">0</span> <span class="keyword">or</span> n%<span class="number">3</span>==<span class="number">0</span> <span class="keyword">or</span> n%<span class="number">5</span>==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> n %<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">                n/=<span class="number">2</span></span><br><span class="line">            <span class="keyword">elif</span> n%<span class="number">3</span>==<span class="number">0</span>:</span><br><span class="line">                n/=<span class="number">3</span></span><br><span class="line">            <span class="keyword">elif</span> n%<span class="number">5</span>==<span class="number">0</span>:</span><br><span class="line">                n/=<span class="number">5</span></span><br><span class="line">        <span class="keyword">if</span> n==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span>      </span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> math </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>266. Palindrome Permutation(easy)</title>
+      <link href="/2022/10/12/266/"/>
+      <url>/2022/10/12/266/</url>
+      
+        <content type="html"><![CDATA[<h1 id="266-Palindrome-Permutation-easy"><a href="#266-Palindrome-Permutation-easy" class="headerlink" title="266. Palindrome Permutation(easy)"></a>266. Palindrome Permutation(easy)</h1><h2 id="Given-a-string-s-return-true-if-a-permutation-of-the-string-could-form-a-palindrome"><a href="#Given-a-string-s-return-true-if-a-permutation-of-the-string-could-form-a-palindrome" class="headerlink" title="Given a string s, return true if a permutation of the string could form a palindrome."></a>Given a string s, return true if a permutation of the string could form a palindrome.</h2><p>这题判断string能否组成回文串，回文串的特点就是最多只能有一个字母是奇数，其他的都得是偶数，这里很巧妙的运用了set的去重特性，最多只有一个字母留在set里</p><p><a href="https://leetcode.com/problems/palindrome-permutation/solutions/1006994/python-3-hashmap-dict-sets-tc-o-n-sc-o-1/">Leetcode题解</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="comment"># Set: Iterate over the given string</span></span><br><span class="line">    <span class="comment"># Add the character when it is not there, Remove it when it is.</span></span><br><span class="line">    <span class="comment"># At the end, the length of the sets is lesser than 2</span></span><br><span class="line">    <span class="comment"># TC O(n) n is the number of the character of string</span></span><br><span class="line">    <span class="comment"># SC O(1) the maximum size of the set would be 128 ASCII characters</span></span><br><span class="line">    <span class="comment"># This is bounded (constant),</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">canPermutePalindrome</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        sets = <span class="built_in">set</span>()</span><br><span class="line">        <span class="keyword">for</span> char <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> char <span class="keyword">not</span> <span class="keyword">in</span> sets:</span><br><span class="line">                sets.add(char)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                sets.remove(char)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> (<span class="built_in">len</span>(sets) &lt;= <span class="number">1</span>)          </span><br><span class="line">    </span><br><span class="line"><span class="comment">#     # Hashmap: Count the number of occurence of characters</span></span><br><span class="line"><span class="comment">#     # TC O(n) n is the number of the character of string</span></span><br><span class="line"><span class="comment">#     # SC O(1) the maximum size of the map would be 128 ASCII characters</span></span><br><span class="line"><span class="comment">#     # This is bounded (constant)</span></span><br><span class="line"><span class="comment">#     def canPermutePalindrome(self, s: str) -&gt; bool:</span></span><br><span class="line"><span class="comment">#         # Iterate over a given string</span></span><br><span class="line"><span class="comment">#         # Count the number of occurence of characters</span></span><br><span class="line"><span class="comment">#         # key: Character, value: count</span></span><br><span class="line"><span class="comment">#         maps = collections.defaultdict(int)</span></span><br><span class="line"><span class="comment">#         for char in s:</span></span><br><span class="line"><span class="comment">#             if maps.get(char):</span></span><br><span class="line"><span class="comment">#                 maps[char] += 1</span></span><br><span class="line"><span class="comment">#             else:</span></span><br><span class="line"><span class="comment">#                 maps[char] = 1</span></span><br><span class="line">        </span><br><span class="line"><span class="comment">#         # Traverse over the map to find even number</span></span><br><span class="line"><span class="comment">#         count = 0</span></span><br><span class="line"><span class="comment">#         for key in maps:</span></span><br><span class="line"><span class="comment">#             count += maps[key] %2</span></span><br><span class="line"><span class="comment">#             # if maps[key] % 2 == 1:</span></span><br><span class="line"><span class="comment">#             #     # Odd number of occuerence</span></span><br><span class="line"><span class="comment">#         # if the count is lesser than 2, it is palindrome</span></span><br><span class="line"><span class="comment">#         return (count &lt;= 1)                </span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> set </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>334. Increasing Triplet Subsequence(easy)</title>
       <link href="/2022/10/11/334/"/>
       <url>/2022/10/11/334/</url>
@@ -3504,7 +3742,7 @@
       <link href="/2022/08/20/264/"/>
       <url>/2022/08/20/264/</url>
       
-        <content type="html"><![CDATA[<h1 id="264-Ugly-Number-II-medium"><a href="#264-Ugly-Number-II-medium" class="headerlink" title="264. Ugly Number II(medium)"></a>264. Ugly Number II(medium)</h1><h2 id="An-ugly-number-is-a-positive-integer-whose-prime-factors-are-limited-to-2-3-and-5"><a href="#An-ugly-number-is-a-positive-integer-whose-prime-factors-are-limited-to-2-3-and-5" class="headerlink" title="An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5."></a>An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.</h2><h1 id="Given-an-integer-n-return-the-nth-ugly-number"><a href="#Given-an-integer-n-return-the-nth-ugly-number" class="headerlink" title="Given an integer n, return the nth ugly number."></a>Given an integer n, return the nth ugly number.</h1><p>“prime factor”是质因子，质因子是所有因子中是质数的</p><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/ugly-number-ii/solution/chou-shu-ii-by-leetcode-solution-uoqd/">官方题解</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">nthUglyNumber</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        factors = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>]</span><br><span class="line">        seen = &#123;<span class="number">1</span>&#125;</span><br><span class="line">        heap = [<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n - <span class="number">1</span>):</span><br><span class="line">            curr = heapq.heappop(heap)</span><br><span class="line">            <span class="keyword">for</span> factor <span class="keyword">in</span> factors:</span><br><span class="line">                <span class="keyword">if</span> (nxt := curr * factor) <span class="keyword">not</span> <span class="keyword">in</span> seen:</span><br><span class="line">                    seen.add(nxt)</span><br><span class="line">                    heapq.heappush(heap, nxt)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> heapq.heappop(heap)</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.com/problems/ugly-number-ii/discuss/2427817/Python-solution">https://leetcode.com/problems/ugly-number-ii/discuss/2427817/Python-solution</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">nthUglyNumber</span>(<span class="params">self, n</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type n: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        ugly = [<span class="number">1</span>]</span><br><span class="line">        p2, p3, p5 = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span> <span class="comment"># pointers that point to the last element 2, 3 or 5 was multiplied to</span></span><br><span class="line">        <span class="keyword">while</span> <span class="built_in">len</span>(ugly) &lt; n:</span><br><span class="line">            u2 = <span class="number">2</span> * ugly[p2]</span><br><span class="line">            u3 = <span class="number">3</span> * ugly[p3]</span><br><span class="line">            u5 = <span class="number">5</span> * ugly[p5]</span><br><span class="line">            </span><br><span class="line">            u = <span class="built_in">min</span>(u2, u3, u5) </span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> u == u2: <span class="comment"># if the minimum result was result of multiplying the element(ugly[p2]) by 2</span></span><br><span class="line">                p2 += <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> u == u3: <span class="comment"># if minimum was result of multiplying the element(ugly[p3]) by 3</span></span><br><span class="line">                p3 += <span class="number">1</span></span><br><span class="line">                </span><br><span class="line">            <span class="keyword">if</span> u == u5: <span class="comment"># if minimus was result of multiplying the element(ugly[p5]) by 5</span></span><br><span class="line">                p5 += <span class="number">1</span></span><br><span class="line">                </span><br><span class="line">ugly.append(u)</span><br><span class="line"><span class="keyword">return</span> ugly[-<span class="number">1</span>] <span class="comment"># return the last element of ugly list</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="264-Ugly-Number-II-medium"><a href="#264-Ugly-Number-II-medium" class="headerlink" title="264. Ugly Number II(medium)"></a>264. Ugly Number II(medium)</h1><h2 id="An-ugly-number-is-a-positive-integer-whose-prime-factors-are-limited-to-2-3-and-5"><a href="#An-ugly-number-is-a-positive-integer-whose-prime-factors-are-limited-to-2-3-and-5" class="headerlink" title="An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5."></a>An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.</h2><h1 id="Given-an-integer-n-return-the-nth-ugly-number"><a href="#Given-an-integer-n-return-the-nth-ugly-number" class="headerlink" title="Given an integer n, return the nth ugly number."></a>Given an integer n, return the nth ugly number.</h1><p>这是一个系列题<br>263. 丑数（简单）</p><ol start="264"><li><p>丑数 II（中等）</p></li><li><p>丑数 III（中等）</p></li><li><p>超级丑数（中等）</p></li></ol><p>“prime factor”是质因子，质因子是所有因子中是质数的</p><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/ugly-number-ii/solution/chou-shu-ii-by-leetcode-solution-uoqd/">官方题解</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">nthUglyNumber</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        factors = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>]</span><br><span class="line">        seen = &#123;<span class="number">1</span>&#125;</span><br><span class="line">        heap = [<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n - <span class="number">1</span>):</span><br><span class="line">            curr = heapq.heappop(heap)</span><br><span class="line">            <span class="keyword">for</span> factor <span class="keyword">in</span> factors:</span><br><span class="line">                <span class="keyword">if</span> (nxt := curr * factor) <span class="keyword">not</span> <span class="keyword">in</span> seen:</span><br><span class="line">                    seen.add(nxt)</span><br><span class="line">                    heapq.heappush(heap, nxt)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> heapq.heappop(heap)</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.com/problems/ugly-number-ii/discuss/2427817/Python-solution">https://leetcode.com/problems/ugly-number-ii/discuss/2427817/Python-solution</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">nthUglyNumber</span>(<span class="params">self, n</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type n: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        ugly = [<span class="number">1</span>]</span><br><span class="line">        p2, p3, p5 = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span> <span class="comment"># pointers that point to the last element 2, 3 or 5 was multiplied to</span></span><br><span class="line">        <span class="keyword">while</span> <span class="built_in">len</span>(ugly) &lt; n:</span><br><span class="line">            u2 = <span class="number">2</span> * ugly[p2]</span><br><span class="line">            u3 = <span class="number">3</span> * ugly[p3]</span><br><span class="line">            u5 = <span class="number">5</span> * ugly[p5]</span><br><span class="line">            </span><br><span class="line">            u = <span class="built_in">min</span>(u2, u3, u5) </span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> u == u2: <span class="comment"># if the minimum result was result of multiplying the element(ugly[p2]) by 2</span></span><br><span class="line">                p2 += <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> u == u3: <span class="comment"># if minimum was result of multiplying the element(ugly[p3]) by 3</span></span><br><span class="line">                p3 += <span class="number">1</span></span><br><span class="line">                </span><br><span class="line">            <span class="keyword">if</span> u == u5: <span class="comment"># if minimus was result of multiplying the element(ugly[p5]) by 5</span></span><br><span class="line">                p5 += <span class="number">1</span></span><br><span class="line">                </span><br><span class="line">ugly.append(u)</span><br><span class="line"><span class="keyword">return</span> ugly[-<span class="number">1</span>] <span class="comment"># return the last element of ugly list</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
