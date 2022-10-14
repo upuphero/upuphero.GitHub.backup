@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>2095. Delete the Middle Node of a Linked List(medium)</title>
+      <link href="/2022/10/14/2095/"/>
+      <url>/2022/10/14/2095/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2095-Delete-the-Middle-Node-of-a-Linked-List-medium"><a href="#2095-Delete-the-Middle-Node-of-a-Linked-List-medium" class="headerlink" title="2095. Delete the Middle Node of a Linked List(medium)"></a>2095. Delete the Middle Node of a Linked List(medium)</h1><p>You are given the head of a linked list. Delete the middle node, and return the head of the modified linked list.</p><p>The middle node of a linked list of size n is the ⌊n / 2⌋th node from the start using 0-based indexing, where ⌊x⌋ denotes the largest integer less than or equal to x.</p><p>For n = 1, 2, 3, 4, and 5, the middle nodes are 0, 1, 1, 2, and 2, respectively.</p><p>思路：<br>先遍历一遍链表，判断链表总长度，然后算出一半的长度n在哪里<br>最后遍历到n-1的位置，跳过位置n直接连到n+1</p><pre><code class="python"># Definition for singly-linked list.# class ListNode:#     def __init__(self, val=0, next=None):#         self.val = val#         self.next = nextclass Solution:    def deleteMiddle(self, head: Optional[ListNode]) -&gt; Optional[ListNode]:        if head.next==None:            return None        n=0        p1=p2=head        while p1:            p1=p1.next            n+=1        k=n//2        for i in range(k-1):            p2=p2.next                #p2.next=p2.next.next        p2.next = p2.next.next        return head</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> array </tag>
+            
+            <tag> linked-list </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>401. Binary Watch(easy)</title>
       <link href="/2022/10/12/401/"/>
       <url>/2022/10/12/401/</url>
