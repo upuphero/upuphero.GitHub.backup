@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-05T19:34:27.205Z</updated>
+  <updated>2022-11-05T19:59:25.876Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,71 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>415. Add Strings(easy)</title>
+    <link href="http://example.com/2022/11/05/415/"/>
+    <id>http://example.com/2022/11/05/415/</id>
+    <published>2022-11-05T19:58:23.000Z</published>
+    <updated>2022-11-05T19:59:25.876Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Given-two-non-negative-integers-num1-and-num2-represented-as-string-return-the-sum-of-num1-and-num2-as-a-string"><a href="#Given-two-non-negative-integers-num1-and-num2-represented-as-string-return-the-sum-of-num1-and-num2-as-a-string" class="headerlink" title="Given two non-negative integers, num1 and num2 represented as string, return the sum of num1 and num2 as a string."></a>Given two non-negative integers, num1 and num2 represented as string, return the sum of num1 and num2 as a string.</h2><h2 id="You-must-solve-the-problem-without-using-any-built-in-library-for-handling-large-integers-such-as-BigInteger-You-must-also-not-convert-the-inputs-to-integers-directly"><a href="#You-must-solve-the-problem-without-using-any-built-in-library-for-handling-large-integers-such-as-BigInteger-You-must-also-not-convert-the-inputs-to-integers-directly" class="headerlink" title="You must solve the problem without using any built-in library for handling large integers (such as BigInteger). You must also not convert the inputs to integers directly."></a>You must solve the problem without using any built-in library for handling large integers (such as BigInteger). You must also not convert the inputs to integers directly.</h2><p>将字符串转换成数字相加后再转回字符串</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addStrings</span>(<span class="params">self, num1: <span class="built_in">str</span>, num2: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">str</span>(<span class="built_in">int</span>(num1)+<span class="built_in">int</span>(num2))</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Given-two-non-negative-integers-num1-and-num2-represented-as-string-return-the-sum-of-num1-and-num2-as-a-string&quot;&gt;&lt;a href=&quot;#Given-two</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="array" scheme="http://example.com/tags/array/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>414. Third Maximum Number(easy)</title>
+    <link href="http://example.com/2022/11/05/414/"/>
+    <id>http://example.com/2022/11/05/414/</id>
+    <published>2022-11-05T19:56:26.000Z</published>
+    <updated>2022-11-05T19:57:20.788Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="414-Third-Maximum-Number-easy"><a href="#414-Third-Maximum-Number-easy" class="headerlink" title="414. Third Maximum Number(easy)"></a>414. Third Maximum Number(easy)</h1><h2 id="Given-an-integer-array-nums-return-the-third-distinct-maximum-number-in-this-array-If-the-third-maximum-does-not-exist-return-the-maximum-number"><a href="#Given-an-integer-array-nums-return-the-third-distinct-maximum-number-in-this-array-If-the-third-maximum-does-not-exist-return-the-maximum-number" class="headerlink" title="Given an integer array nums, return the third distinct maximum number in this array. If the third maximum does not exist, return the maximum number."></a>Given an integer array nums, return the third distinct maximum number in this array. If the third maximum does not exist, return the maximum number.</h2><p>这里就是对数组排序，然后取第三大的数</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">thirdMax</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        </span><br><span class="line">        nums=<span class="built_in">sorted</span>(<span class="built_in">set</span>(nums),reverse= <span class="literal">True</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums)&gt;<span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> nums[<span class="number">2</span>]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> nums[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;414-Third-Maximum-Number-easy&quot;&gt;&lt;a href=&quot;#414-Third-Maximum-Number-easy&quot; class=&quot;headerlink&quot; title=&quot;414. Third Maximum Number(easy)&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="array" scheme="http://example.com/tags/array/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
     <title>409. Longest Palindrome(easy)</title>
     <link href="http://example.com/2022/11/05/409/"/>
     <id>http://example.com/2022/11/05/409/</id>
     <published>2022-11-05T19:32:25.000Z</published>
-    <updated>2022-11-05T19:34:27.205Z</updated>
+    <updated>2022-11-05T19:56:18.238Z</updated>
     
     <content type="html"><![CDATA[<h1 id="409-Longest-Palindrome-easy"><a href="#409-Longest-Palindrome-easy" class="headerlink" title="409. Longest Palindrome(easy)"></a>409. Longest Palindrome(easy)</h1><h2 id="Given-a-string-s-which-consists-of-lowercase-or-uppercase-letters-return-the-length-of-the-longest-palindrome-that-can-be-built-with-those-letters"><a href="#Given-a-string-s-which-consists-of-lowercase-or-uppercase-letters-return-the-length-of-the-longest-palindrome-that-can-be-built-with-those-letters" class="headerlink" title="Given a string s which consists of lowercase or uppercase letters, return the length of the longest palindrome that can be built with those letters."></a>Given a string s which consists of lowercase or uppercase letters, return the length of the longest palindrome that can be built with those letters.</h2><h2 id="Letters-are-case-sensitive-for-example-“Aa”-is-not-considered-a-palindrome-here"><a href="#Letters-are-case-sensitive-for-example-“Aa”-is-not-considered-a-palindrome-here" class="headerlink" title="Letters are case sensitive, for example, “Aa” is not considered a palindrome here."></a>Letters are case sensitive, for example, “Aa” is not considered a palindrome here.</h2><p>这道题就是利用hashmap计数，然后偶数直接加到结果，奇数分情况讨论，只有一个的情况那就放到最后加在结果里，如果大于1的奇数，就在结果加上数量减1 </p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestPalindrome</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        result=Counter(s)</span><br><span class="line">        cnt=<span class="number">0</span></span><br><span class="line">        sums=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> cha <span class="keyword">in</span> result:</span><br><span class="line">            <span class="keyword">if</span> result[cha]%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">                sums+=result[cha]</span><br><span class="line">            <span class="keyword">elif</span> result[cha]%<span class="number">2</span>!=<span class="number">0</span> <span class="keyword">and</span> result[cha]&gt;<span class="number">2</span>:</span><br><span class="line">                sums+=result[cha]-<span class="number">1</span></span><br><span class="line">                cnt+=<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                cnt+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> cnt!=<span class="number">0</span>:</span><br><span class="line">            sums+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> sums</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -51,7 +111,7 @@
     <link href="http://example.com/2022/11/05/412/"/>
     <id>http://example.com/2022/11/05/412/</id>
     <published>2022-11-05T19:23:22.000Z</published>
-    <updated>2022-11-05T19:24:36.047Z</updated>
+    <updated>2022-11-05T19:36:43.591Z</updated>
     
     <content type="html"><![CDATA[<h1 id="412-Fizz-Buzz"><a href="#412-Fizz-Buzz" class="headerlink" title="412. Fizz Buzz"></a>412. Fizz Buzz</h1><h2 id="Given-an-integer-n-return-a-string-array-answer-1-indexed-where"><a href="#Given-an-integer-n-return-a-string-array-answer-1-indexed-where" class="headerlink" title="Given an integer n, return a string array answer (1-indexed) where:"></a>Given an integer n, return a string array answer (1-indexed) where:</h2><p>answer[i] == “FizzBuzz” if i is divisible by 3 and 5.<br>answer[i] == “Fizz” if i is divisible by 3.<br>answer[i] == “Buzz” if i is divisible by 5.<br>answer[i] == i (as a string) if none of the above conditions are true.</p><p>这道题是hackerrank一开始遇到的题</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fizzBuzz</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">str</span>]:</span></span><br><span class="line">        result=[]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> i%<span class="number">3</span> ==<span class="number">0</span> <span class="keyword">and</span> i%<span class="number">5</span>==<span class="number">0</span>:</span><br><span class="line">                result.append(<span class="string">&quot;FizzBuzz&quot;</span>)                </span><br><span class="line">            <span class="keyword">elif</span> i%<span class="number">3</span>==<span class="number">0</span>:</span><br><span class="line">                result.append(<span class="string">&quot;Fizz&quot;</span>)</span><br><span class="line">            <span class="keyword">elif</span> i%<span class="number">5</span>==<span class="number">0</span>:</span><br><span class="line">                result.append(<span class="string">&quot;Buzz&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                result.append(<span class="built_in">str</span>(i))</span><br><span class="line">        <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -548,66 +608,6 @@
     <category term="array" scheme="http://example.com/tags/array/"/>
     
     <category term="Data structure design" scheme="http://example.com/tags/Data-structure-design/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>157. Read N Characters Given Read4(easy)</title>
-    <link href="http://example.com/2022/10/12/157/"/>
-    <id>http://example.com/2022/10/12/157/</id>
-    <published>2022-10-12T21:30:01.000Z</published>
-    <updated>2022-10-12T21:59:48.632Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="157-Read-N-Characters-Given-Read4-easy"><a href="#157-Read-N-Characters-Given-Read4-easy" class="headerlink" title="157. Read N Characters Given Read4(easy)"></a>157. Read N Characters Given Read4(easy)</h1><h2 id="Given-a-file-and-assume-that-you-can-only-read-the-file-using-a-given-method-read4-implement-a-method-to-read-n-characters"><a href="#Given-a-file-and-assume-that-you-can-only-read-the-file-using-a-given-method-read4-implement-a-method-to-read-n-characters" class="headerlink" title="Given a file and assume that you can only read the file using a given method read4, implement a method to read n characters."></a>Given a file and assume that you can only read the file using a given method read4, implement a method to read n characters.</h2><h2 id="Method-read4"><a href="#Method-read4" class="headerlink" title="Method read4:"></a>Method read4:</h2><p>The API read4 reads four consecutive characters from file, then writes those characters into the buffer array buf4.</p><p>The return value is the number of actual characters read.</p><p>Note that read4() has its own file pointer, much like FILE *fp in C.</p><h2 id="Definition-of-read4"><a href="#Definition-of-read4" class="headerlink" title="Definition of read4:"></a>Definition of read4:</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    Parameter:  char[] buf4</span><br><span class="line">    Returns:    int</span><br><span class="line"></span><br><span class="line">buf4[] is a destination, not a source. The results from read4 will be copied to buf4[].</span><br></pre></td></tr></table></figure><p>给你一个文件，并且该文件只能通过给定的 read4 方法来读取，请实现一个方法使其能够读取 n 个字符。</p><p>read4 方法：</p><p>API read4 可以从文件中读取 4 个连续的字符，并且将它们写入缓存数组 buf 中。</p><p>返回值为实际读取的字符个数。</p><p>注意 read4() 自身拥有文件指针，很类似于 C 语言中的 FILE *fp 。</p><p>read4 的定义：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">参数类型: char[] buf4</span><br><span class="line">返回类型: int</span><br><span class="line">注意: buf4[] 是目标缓存区不是源缓存区，read4 的返回结果将会复制到 buf4[] 当中。</span><br></pre></td></tr></table></figure><p>read 方法：<br>通过使用 read4 方法，实现 read 方法。该方法可以从文件中读取 n 个字符并将其存储到缓存数组 buf 中。您 不能 直接操作文件。</p><p>返回值为实际读取的字符。</p><p>read 的定义：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">参数类型: char[] buf, int n</span><br><span class="line">返回类型: int</span><br><span class="line">注意: buf[] 是目标缓存区不是源缓存区，你需要将结果写入 buf[] 中。</span><br></pre></td></tr></table></figure><h4 id="hint"><a href="#hint" class="headerlink" title="hint"></a>hint</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">你不能直接操作该文件，文件只能通过 read4 获取而 不能 通过 read。</span><br><span class="line">read 函数只在每个测试用例调用一次。</span><br><span class="line">你可以假定目标缓存数组 buf 保证有足够的空间存下 n 个字符。</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">The read4 API is already defined for you.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    @param buf4, a list of characters</span></span><br><span class="line"><span class="string">    @return an integer</span></span><br><span class="line"><span class="string">    def read4(buf4):</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># Below is an example of how the read4 API can be called.</span></span><br><span class="line"><span class="string">file = File(&quot;abcdefghijk&quot;) # File is &quot;abcdefghijk&quot;, initially file pointer (fp) points to &#x27;a&#x27;</span></span><br><span class="line"><span class="string">buf4 = [&#x27; &#x27;] * 4 # Create buffer with enough space to store characters</span></span><br><span class="line"><span class="string">read4(buf4) # read4 returns 4. Now buf = [&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;,&#x27;d&#x27;], fp points to &#x27;e&#x27;</span></span><br><span class="line"><span class="string">read4(buf4) # read4 returns 4. Now buf = [&#x27;e&#x27;,&#x27;f&#x27;,&#x27;g&#x27;,&#x27;h&#x27;], fp points to &#x27;i&#x27;</span></span><br><span class="line"><span class="string">read4(buf4) # read4 returns 3. Now buf = [&#x27;i&#x27;,&#x27;j&#x27;,&#x27;k&#x27;,...], fp points to end of file</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">read</span>(<span class="params">self, buf, n</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type buf: Destination buffer (List[str])</span></span><br><span class="line"><span class="string">        :type n: Number of characters to read (int)</span></span><br><span class="line"><span class="string">        :rtype: The number of actual characters read (int)</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        temp = [<span class="string">&#x27;&#x27;</span>,<span class="string">&#x27;&#x27;</span>,<span class="string">&#x27;&#x27;</span>,<span class="string">&#x27;&#x27;</span>]</span><br><span class="line">        count = read4(temp)</span><br><span class="line">        s = temp[:count]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> count &gt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(s) &gt;= n: <span class="keyword">break</span></span><br><span class="line">            count = read4(temp)</span><br><span class="line">            s += temp[:count]</span><br><span class="line">            </span><br><span class="line">        total = <span class="built_in">min</span>(n, <span class="built_in">len</span>(s))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(total):</span><br><span class="line">            buf[i] = s[i]</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> total</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;157-Read-N-Characters-Given-Read4-easy&quot;&gt;&lt;a href=&quot;#157-Read-N-Characters-Given-Read4-easy&quot; class=&quot;headerlink&quot; title=&quot;157. Read N Char</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2434. Using a Robot to Print the Lexicographically Smallest String(medium)</title>
-    <link href="http://example.com/2022/10/12/2434/"/>
-    <id>http://example.com/2022/10/12/2434/</id>
-    <published>2022-10-12T21:15:24.000Z</published>
-    <updated>2022-10-12T21:31:48.843Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="2434-Using-a-Robot-to-Print-the-Lexicographically-Smallest-String-medium"><a href="#2434-Using-a-Robot-to-Print-the-Lexicographically-Smallest-String-medium" class="headerlink" title="2434. Using a Robot to Print the Lexicographically Smallest String(medium)"></a>2434. Using a Robot to Print the Lexicographically Smallest String(medium)</h1><h2 id="You-are-given-a-string-s-and-a-robot-that-currently-holds-an-empty-string-t-Apply-one-of-the-following-operations-until-s-and-t-are-both-empty"><a href="#You-are-given-a-string-s-and-a-robot-that-currently-holds-an-empty-string-t-Apply-one-of-the-following-operations-until-s-and-t-are-both-empty" class="headerlink" title="You are given a string s and a robot that currently holds an empty string t. Apply one of the following operations until s and t are both empty:"></a>You are given a string s and a robot that currently holds an empty string t. Apply one of the following operations until s and t are both empty:</h2><p>Remove the first character of a string s and give it to the robot. The robot will append this character to the string t.<br>Remove the last character of a string t and give it to the robot. The robot will write this character on paper.</p><h2 id="Return-the-lexicographically-smallest-string-that-can-be-written-on-the-paper"><a href="#Return-the-lexicographically-smallest-string-that-can-be-written-on-the-paper" class="headerlink" title="Return the lexicographically smallest string that can be written on the paper."></a>Return the lexicographically smallest string that can be written on the paper.</h2><p>周赛题，一道关于栈的题 </p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">robotWithString</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        </span><br><span class="line">        d, stack, ans = Counter(s), [], []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> ch <span class="keyword">in</span> s:</span><br><span class="line">            </span><br><span class="line">            d[ch]-= <span class="number">1</span></span><br><span class="line">            stack.append(ch)</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> d[ch]: d.pop(ch)</span><br><span class="line">                </span><br><span class="line">            <span class="keyword">while</span> d <span class="keyword">and</span> stack <span class="keyword">and</span> <span class="built_in">min</span>(d) &gt;= stack[-<span class="number">1</span>]:</span><br><span class="line">                ans += stack.pop()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span>.join(ans + stack[::-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;2434-Using-a-Robot-to-Print-the-Lexicographically-Smallest-String-medium&quot;&gt;&lt;a href=&quot;#2434-Using-a-Robot-to-Print-the-Lexicographicall</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="stack" scheme="http://example.com/tags/stack/"/>
     
   </entry>
   
