@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-07T03:58:47.479Z</updated>
+  <updated>2022-11-07T22:00:24.712Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,97 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>1684. Count the Number of Consistent Strings(easy)</title>
+    <link href="http://example.com/2022/11/07/1684/"/>
+    <id>http://example.com/2022/11/07/1684/</id>
+    <published>2022-11-07T21:56:53.000Z</published>
+    <updated>2022-11-07T22:00:24.712Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1684-Count-the-Number-of-Consistent-Strings-easy"><a href="#1684-Count-the-Number-of-Consistent-Strings-easy" class="headerlink" title="1684. Count the Number of Consistent Strings(easy)"></a>1684. Count the Number of Consistent Strings(easy)</h1><h2 id="You-are-given-a-string-allowed-consisting-of-distinct-characters-and-an-array-of-strings-words-A-string-is-consistent-if-all-characters-in-the-string-appear-in-the-string-allowed"><a href="#You-are-given-a-string-allowed-consisting-of-distinct-characters-and-an-array-of-strings-words-A-string-is-consistent-if-all-characters-in-the-string-appear-in-the-string-allowed" class="headerlink" title="You are given a string allowed consisting of distinct characters and an array of strings words. A string is consistent if all characters in the string appear in the string allowed."></a>You are given a string allowed consisting of distinct characters and an array of strings words. A string is consistent if all characters in the string appear in the string allowed.</h2><h2 id="Return-the-number-of-consistent-strings-in-the-array-words"><a href="#Return-the-number-of-consistent-strings-in-the-array-words" class="headerlink" title="Return the number of consistent strings in the array words."></a>Return the number of consistent strings in the array words.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: allowed = &quot;ab&quot;, words = [&quot;ad&quot;,&quot;bd&quot;,&quot;aaab&quot;,&quot;baa&quot;,&quot;badab&quot;]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: Strings &quot;aaab&quot; and &quot;baa&quot; are consistent since they only contain characters &#x27;a&#x27; and &#x27;b&#x27;.</span><br></pre></td></tr></table></figure><p>这道题原本是想对words进行set操作的，后面发现对list里的每一个数都操作太麻烦，所以换一个思路，选择从反方向入手。<br>题目是要我们找words里的字母只含有allowed里的字母，所以将allowed去重后，如果words的单词里的字母如果不在allowed里，就记录下来cnt<br>最后输出的是有相同字母的，那么就用words的总个数减去cnt即可</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countConsistentStrings</span>(<span class="params">self, allowed: <span class="built_in">str</span>, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        allowed=<span class="built_in">set</span>(allowed)</span><br><span class="line">        cnt=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> cha <span class="keyword">in</span> words:</span><br><span class="line">            <span class="keyword">for</span> letter <span class="keyword">in</span> cha:</span><br><span class="line">                <span class="keyword">if</span> letter <span class="keyword">not</span> <span class="keyword">in</span> allowed:</span><br><span class="line">                    cnt+=<span class="number">1</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(words)-cnt</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1684-Count-the-Number-of-Consistent-Strings-easy&quot;&gt;&lt;a href=&quot;#1684-Count-the-Number-of-Consistent-Strings-easy&quot; class=&quot;headerlink&quot; tit</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+    <category term="set" scheme="http://example.com/tags/set/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1137. N-th Tribonacci Number(easy)</title>
+    <link href="http://example.com/2022/11/07/1137/"/>
+    <id>http://example.com/2022/11/07/1137/</id>
+    <published>2022-11-07T21:41:07.000Z</published>
+    <updated>2022-11-07T21:42:45.956Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1137-N-th-Tribonacci-Number-easy"><a href="#1137-N-th-Tribonacci-Number-easy" class="headerlink" title="1137. N-th Tribonacci Number(easy)"></a>1137. N-th Tribonacci Number(easy)</h1><h2 id="The-Tribonacci-sequence-Tn-is-defined-as-follows"><a href="#The-Tribonacci-sequence-Tn-is-defined-as-follows" class="headerlink" title="The Tribonacci sequence Tn is defined as follows:"></a>The Tribonacci sequence Tn is defined as follows:</h2><p>T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n &gt;= 0.</p><p>Given n, return the value of Tn.</p><p>三个数连续相加的斐波那契数列，还是动态规划的思路</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tribonacci</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> n&lt;<span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> n</span><br><span class="line">        <span class="keyword">elif</span> n==<span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        dp=[<span class="number">0</span>]*(n+<span class="number">1</span>)</span><br><span class="line">        dp[<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">        dp[<span class="number">2</span>]=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>,n+<span class="number">1</span>):</span><br><span class="line">            dp[i]=dp[i-<span class="number">1</span>]+dp[i-<span class="number">2</span>]+dp[i-<span class="number">3</span>]</span><br><span class="line">        <span class="keyword">return</span> dp[n]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1137-N-th-Tribonacci-Number-easy&quot;&gt;&lt;a href=&quot;#1137-N-th-Tribonacci-Number-easy&quot; class=&quot;headerlink&quot; title=&quot;1137. N-th Tribonacci Number</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>509. Fibonacci Number(easy)</title>
+    <link href="http://example.com/2022/11/07/509/"/>
+    <id>http://example.com/2022/11/07/509/</id>
+    <published>2022-11-07T21:12:54.000Z</published>
+    <updated>2022-11-07T21:14:20.287Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="509-Fibonacci-Number-easy"><a href="#509-Fibonacci-Number-easy" class="headerlink" title="509. Fibonacci Number(easy)"></a>509. Fibonacci Number(easy)</h1><h2 id="The-Fibonacci-numbers-commonly-denoted-F-n-form-a-sequence-called-the-Fibonacci-sequence-such-that-each-number-is-the-sum-of-the-two-preceding-ones-starting-from-0-and-1-That-is"><a href="#The-Fibonacci-numbers-commonly-denoted-F-n-form-a-sequence-called-the-Fibonacci-sequence-such-that-each-number-is-the-sum-of-the-two-preceding-ones-starting-from-0-and-1-That-is" class="headerlink" title="The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,"></a>The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">F(0) = 0, F(1) = 1</span><br><span class="line">F(n) = F(n - 1) + F(n - 2), for n &gt; 1.</span><br></pre></td></tr></table></figure><p>Given n, calculate F(n).</p><p>斐波那契数列<br>F(0)=0,F(1)=1</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fib</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> n&lt;<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> n</span><br><span class="line">        dp=[<span class="number">0</span>]*(n+<span class="number">1</span>)</span><br><span class="line">        dp[<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">            dp[i]=dp[i-<span class="number">1</span>]+dp[i-<span class="number">2</span>]</span><br><span class="line">        <span class="keyword">return</span> dp[n]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;509-Fibonacci-Number-easy&quot;&gt;&lt;a href=&quot;#509-Fibonacci-Number-easy&quot; class=&quot;headerlink&quot; title=&quot;509. Fibonacci Number(easy)&quot;&gt;&lt;/a&gt;509. Fibo</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
+    
+  </entry>
+  
+  <entry>
     <title>1323. Maximum 69 Number(easy)</title>
     <link href="http://example.com/2022/11/06/1323/"/>
     <id>http://example.com/2022/11/06/1323/</id>
     <published>2022-11-07T03:57:00.000Z</published>
-    <updated>2022-11-07T03:58:47.479Z</updated>
+    <updated>2022-11-07T03:59:25.023Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1323-Maximum-69-Number-easy"><a href="#1323-Maximum-69-Number-easy" class="headerlink" title="1323. Maximum 69 Number(easy)"></a>1323. Maximum 69 Number(easy)</h1><h2 id="You-are-given-a-positive-integer-num-consisting-only-of-digits-6-and-9"><a href="#You-are-given-a-positive-integer-num-consisting-only-of-digits-6-and-9" class="headerlink" title="You are given a positive integer num consisting only of digits 6 and 9."></a>You are given a positive integer num consisting only of digits 6 and 9.</h2><h2 id="Return-the-maximum-number-you-can-get-by-changing-at-most-one-digit-6-becomes-9-and-9-becomes-6"><a href="#Return-the-maximum-number-you-can-get-by-changing-at-most-one-digit-6-becomes-9-and-9-becomes-6" class="headerlink" title="Return the maximum number you can get by changing at most one digit (6 becomes 9, and 9 becomes 6)."></a>Return the maximum number you can get by changing at most one digit (6 becomes 9, and 9 becomes 6).</h2><p>将num转换为字符串，然后再转换成list<br>判断list有没有6，如果没有直接输出num<br>index(x)返回找到的第一个x<br>最后join把字符串连在一起</p><pre><code class="python">class Solution:    def maximum69Number (self, num: int) -&gt; int:        s=list(str(num))        if &#39;6&#39; not in s:            return num        s[s.index(&#39;6&#39;)]=&#39;9&#39;        return &#39;&#39;.join(s)</code></pre>]]></content>
     
@@ -507,97 +593,6 @@
     <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
     
     <category term="DFA" scheme="http://example.com/tags/DFA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode16-deterministic-finite-automaton</title>
-    <link href="http://example.com/2022/10/19/LeetCode16-deterministic-finite-automaton/"/>
-    <id>http://example.com/2022/10/19/LeetCode16-deterministic-finite-automaton/</id>
-    <published>2022-10-19T20:36:03.000Z</published>
-    <updated>2022-10-20T01:11:32.338Z</updated>
-    
-    <content type="html"><![CDATA[<p>确定有限状态机（deterministic finite automaton, DFA）。</p><p>我们的程序在每个时刻有一个状态 s，每次从序列中输入一个字符 c，并根据字符 c 转移到下一个状态 s’。这样，我们只需要建立一个覆盖所有情况的从 s 与 c 映射到 s’ 的表格即可解决题目中的问题。</p><ol start="8"><li><p>String to Integer (atoi)(medium)</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">INT_MAX = <span class="number">2</span> ** <span class="number">31</span> - <span class="number">1</span></span><br><span class="line">INT_MIN = -<span class="number">2</span> ** <span class="number">31</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Automaton</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.state = <span class="string">&#x27;start&#x27;</span></span><br><span class="line">        self.sign = <span class="number">1</span></span><br><span class="line">        self.ans = <span class="number">0</span></span><br><span class="line">        self.table = &#123;</span><br><span class="line">            <span class="string">&#x27;start&#x27;</span>: [<span class="string">&#x27;start&#x27;</span>, <span class="string">&#x27;signed&#x27;</span>, <span class="string">&#x27;in_number&#x27;</span>, <span class="string">&#x27;end&#x27;</span>],</span><br><span class="line">            <span class="string">&#x27;signed&#x27;</span>: [<span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;in_number&#x27;</span>, <span class="string">&#x27;end&#x27;</span>],</span><br><span class="line">            <span class="string">&#x27;in_number&#x27;</span>: [<span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;in_number&#x27;</span>, <span class="string">&#x27;end&#x27;</span>],</span><br><span class="line">            <span class="string">&#x27;end&#x27;</span>: [<span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;end&#x27;</span>],</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_col</span>(<span class="params">self, c</span>):</span></span><br><span class="line">        <span class="keyword">if</span> c.isspace():</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> c == <span class="string">&#x27;+&#x27;</span> <span class="keyword">or</span> c == <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> c.isdigit():</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span>(<span class="params">self, c</span>):</span></span><br><span class="line">        self.state = self.table[self.state][self.get_col(c)]</span><br><span class="line">        <span class="keyword">if</span> self.state == <span class="string">&#x27;in_number&#x27;</span>:</span><br><span class="line">            self.ans = self.ans * <span class="number">10</span> + <span class="built_in">int</span>(c)</span><br><span class="line">            self.ans = <span class="built_in">min</span>(self.ans, INT_MAX) <span class="keyword">if</span> self.sign == <span class="number">1</span> <span class="keyword">else</span> <span class="built_in">min</span>(self.ans, -INT_MIN)</span><br><span class="line">        <span class="keyword">elif</span> self.state == <span class="string">&#x27;signed&#x27;</span>:</span><br><span class="line">            self.sign = <span class="number">1</span> <span class="keyword">if</span> c == <span class="string">&#x27;+&#x27;</span> <span class="keyword">else</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">myAtoi</span>(<span class="params">self, <span class="built_in">str</span>: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        automaton = Automaton()</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> <span class="built_in">str</span>:</span><br><span class="line">            automaton.get(c)</span><br><span class="line">        <span class="keyword">return</span> automaton.sign * automaton.ans</span><br></pre></td></tr></table></figure></li><li><p>有效数字</p></li><li><p>UTF-8 Validation</p></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;确定有限状态机（deterministic finite automaton, DFA）。&lt;/p&gt;
-&lt;p&gt;我们的程序在每个时刻有一个状态 s，每次从序列中输入一个字符 c，并根据字符 c 转移到下一个状态 s’。这样，我们只需要建立一个覆盖所有情况的从 s 与 c 映射到 </summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
-    
-    <category term="DFA" scheme="http://example.com/tags/DFA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>692. Top K Frequent Words</title>
-    <link href="http://example.com/2022/10/18/692/"/>
-    <id>http://example.com/2022/10/18/692/</id>
-    <published>2022-10-19T03:12:48.000Z</published>
-    <updated>2022-10-19T20:47:41.964Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Given-an-array-of-strings-words-and-an-integer-k-return-the-k-most-frequent-strings"><a href="#Given-an-array-of-strings-words-and-an-integer-k-return-the-k-most-frequent-strings" class="headerlink" title="Given an array of strings words and an integer k, return the k most frequent strings."></a>Given an array of strings words and an integer k, return the k most frequent strings.</h2><h2 id="Return-the-answer-sorted-by-the-frequency-from-highest-to-lowest-Sort-the-words-with-the-same-frequency-by-their-lexicographical-order"><a href="#Return-the-answer-sorted-by-the-frequency-from-highest-to-lowest-Sort-the-words-with-the-same-frequency-by-their-lexicographical-order" class="headerlink" title="Return the answer sorted by the frequency from highest to lowest. Sort the words with the same frequency by their lexicographical order."></a>Return the answer sorted by the frequency from highest to lowest. Sort the words with the same frequency by their lexicographical order.</h2><p>Top K问题</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: words = [&quot;i&quot;,&quot;love&quot;,&quot;leetcode&quot;,&quot;i&quot;,&quot;love&quot;,&quot;coding&quot;], k = 2</span><br><span class="line">Output: [&quot;i&quot;,&quot;love&quot;]</span><br><span class="line">Explanation: &quot;i&quot; and &quot;love&quot; are the two most frequent words.</span><br><span class="line">Note that &quot;i&quot; comes before &quot;love&quot; due to a lower alphabetical order.</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.cn/problems/top-k-frequent-words/solution/by-sunguodong-3tov/">Leetcode题解</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">topKFrequent</span>(<span class="params">self, words: <span class="type">List</span>[<span class="built_in">str</span>], k: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">str</span>]:</span></span><br><span class="line">        counter = Counter(words)</span><br><span class="line">        occur = <span class="built_in">list</span>(counter.items())</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(k // <span class="number">2</span> - <span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">            self.heapify(occur, i, k)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(k, <span class="built_in">len</span>(occur)):</span><br><span class="line">            <span class="keyword">if</span> occur[i][<span class="number">1</span>] &gt; occur[<span class="number">0</span>][<span class="number">1</span>] <span class="keyword">or</span> occur[i][<span class="number">1</span>] == occur[<span class="number">0</span>][<span class="number">1</span>] <span class="keyword">and</span> occur[i][<span class="number">0</span>] &lt; occur[<span class="number">0</span>][<span class="number">0</span>]:</span><br><span class="line">                occur[i], occur[<span class="number">0</span>] = occur[<span class="number">0</span>], occur[i]</span><br><span class="line">                self.heapify(occur, <span class="number">0</span>, k)</span><br><span class="line">        ans = deque()</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(k):</span><br><span class="line">            ans.appendleft(occur[<span class="number">0</span>][<span class="number">0</span>])</span><br><span class="line">            occur[<span class="number">0</span>] = occur[k - <span class="number">1</span> - i]</span><br><span class="line">            self.heapify(occur, <span class="number">0</span>, k - <span class="number">1</span> - i)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">list</span>(ans)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">heapify</span>(<span class="params">self, heap: <span class="type">List</span>[<span class="type">Tuple</span>], root: <span class="built_in">int</span>, length: <span class="built_in">int</span></span>):</span></span><br><span class="line">        smallest = root</span><br><span class="line">        left = <span class="number">2</span> * root + <span class="number">1</span></span><br><span class="line">        right = left + <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> left &lt; length <span class="keyword">and</span> (heap[left][<span class="number">1</span>] &lt; heap[smallest][<span class="number">1</span>] <span class="keyword">or</span> heap[left][<span class="number">1</span>] == heap[smallest][<span class="number">1</span>] <span class="keyword">and</span> heap[left][<span class="number">0</span>] &gt; heap[smallest][<span class="number">0</span>]):</span><br><span class="line">            smallest = left</span><br><span class="line">        <span class="keyword">if</span> right &lt; length <span class="keyword">and</span> (heap[right][<span class="number">1</span>] &lt; heap[smallest][<span class="number">1</span>] <span class="keyword">or</span> heap[right][<span class="number">1</span>] == heap[smallest][<span class="number">1</span>] <span class="keyword">and</span> heap[right][<span class="number">0</span>] &gt; heap[smallest][<span class="number">0</span>]):</span><br><span class="line">            smallest = right</span><br><span class="line">        <span class="keyword">if</span> smallest != root:</span><br><span class="line">            heap[smallest], heap[root] = heap[root], heap[smallest]</span><br><span class="line">            self.heapify(heap, smallest, length)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;Given-an-array-of-strings-words-and-an-integer-k-return-the-k-most-frequent-strings&quot;&gt;&lt;a href=&quot;#Given-an-array-of-strings-words-and-a</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="topk" scheme="http://example.com/tags/topk/"/>
-    
-    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>38. Count and Say(medium)</title>
-    <link href="http://example.com/2022/10/18/38/"/>
-    <id>http://example.com/2022/10/18/38/</id>
-    <published>2022-10-18T04:06:16.000Z</published>
-    <updated>2022-10-19T20:47:26.649Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="38-Count-and-Say-medium"><a href="#38-Count-and-Say-medium" class="headerlink" title="38. Count and Say(medium)"></a>38. Count and Say(medium)</h1><h2 id="The-count-and-say-sequence-is-a-sequence-of-digit-strings-defined-by-the-recursive-formula"><a href="#The-count-and-say-sequence-is-a-sequence-of-digit-strings-defined-by-the-recursive-formula" class="headerlink" title="The count-and-say sequence is a sequence of digit strings defined by the recursive formula:"></a>The count-and-say sequence is a sequence of digit strings defined by the recursive formula:</h2><p>countAndSay(1) = “1”</p><h2 id="countAndSay-n-is-the-way-you-would-“say”-the-digit-string-from-countAndSay-n-1-which-is-then-converted-into-a-different-digit-string"><a href="#countAndSay-n-is-the-way-you-would-“say”-the-digit-string-from-countAndSay-n-1-which-is-then-converted-into-a-different-digit-string" class="headerlink" title="countAndSay(n) is the way you would “say” the digit string from countAndSay(n-1), which is then converted into a different digit string."></a>countAndSay(n) is the way you would “say” the digit string from countAndSay(n-1), which is then converted into a different digit string.</h2><h2 id="To-determine-how-you-“say”-a-digit-string-split-it-into-the-minimal-number-of-substrings-such-that-each-substring-contains-exactly-one-unique-digit-Then-for-each-substring-say-the-number-of-digits-then-say-the-digit-Finally-concatenate-every-said-digit"><a href="#To-determine-how-you-“say”-a-digit-string-split-it-into-the-minimal-number-of-substrings-such-that-each-substring-contains-exactly-one-unique-digit-Then-for-each-substring-say-the-number-of-digits-then-say-the-digit-Finally-concatenate-every-said-digit" class="headerlink" title="To determine how you “say” a digit string, split it into the minimal number of substrings such that each substring contains exactly one unique digit. Then for each substring, say the number of digits, then say the digit. Finally, concatenate every said digit."></a>To determine how you “say” a digit string, split it into the minimal number of substrings such that each substring contains exactly one unique digit. Then for each substring, say the number of digits, then say the digit. Finally, concatenate every said digit.</h2><h2 id="For-example-the-saying-and-conversion-for-digit-string-“3322251”"><a href="#For-example-the-saying-and-conversion-for-digit-string-“3322251”" class="headerlink" title="For example, the saying and conversion for digit string “3322251”:"></a>For example, the saying and conversion for digit string “3322251”:</h2><h2 id="Given-a-positive-integer-n-return-the-nth-term-of-the-count-and-say-sequence"><a href="#Given-a-positive-integer-n-return-the-nth-term-of-the-count-and-say-sequence" class="headerlink" title="Given a positive integer n, return the nth term of the count-and-say sequence."></a>Given a positive integer n, return the nth term of the count-and-say sequence.</h2><p>说实话这道题给的例子让人非常疑惑，但其实就是一个类似于斐波那契数列的递归数列,国区题库的题目描述更详细也更准确</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.     1</span><br><span class="line">2.     11</span><br><span class="line">3.     21</span><br><span class="line">4.     1211</span><br><span class="line">5.     111221</span><br><span class="line">第一项是数字 1 </span><br><span class="line">描述前一项，这个数是 1 即 “ 一 个 1 ”，记作 &quot;11&quot;</span><br><span class="line">描述前一项，这个数是 11 即 “ 二 个 1 ” ，记作 &quot;21&quot;</span><br><span class="line">描述前一项，这个数是 21 即 “ 一 个 2 + 一 个 1 ” ，记作 &quot;1211&quot;</span><br><span class="line">描述前一项，这个数是 1211 即 “ 一 个 1 + 一 个 2 + 二 个 1 ” ，记作 &quot;111221&quot;</span><br></pre></td></tr></table></figure><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/count-and-say/solution/wai-guan-shu-lie-by-leetcode-solution-9rt8/">官方题解</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countAndSay</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        <span class="keyword">if</span> n==<span class="number">1</span>:<span class="keyword">return</span> <span class="string">&quot;1&quot;</span></span><br><span class="line">        <span class="keyword">if</span> n==<span class="number">2</span>: <span class="keyword">return</span> <span class="string">&quot;11&quot;</span></span><br><span class="line">        res=[<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>,n+<span class="number">1</span>):</span><br><span class="line">            new_res=[]</span><br><span class="line">            num=<span class="number">1</span></span><br><span class="line">            cur=res[<span class="number">0</span>]</span><br><span class="line">            <span class="keyword">for</span> s <span class="keyword">in</span> res[<span class="number">1</span>:]:</span><br><span class="line">                <span class="keyword">if</span> s ==cur:</span><br><span class="line">                    num+=<span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    new_res.append(num)</span><br><span class="line">                    new_res.append(cur)</span><br><span class="line">                    num=<span class="number">1</span></span><br><span class="line">                    cur=s</span><br><span class="line">            new_res.append(num)</span><br><span class="line">            new_res.append(cur)</span><br><span class="line">            res=new_res</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span>.join(<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">str</span>,res)))</span><br></pre></td></tr></table></figure><h3 id="map函数"><a href="#map函数" class="headerlink" title="map函数"></a>map函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">map(function, iterable, ...)</span><br></pre></td></tr></table></figure><blockquote><blockquote><blockquote><p>def square(x) :         # 计算平方数<br>…     return x ** 2<br>…<br>map(square, [1,2,3,4,5])    # 计算列表各个元素的平方</p></blockquote></blockquote></blockquote><blockquote><blockquote><blockquote><p>list(map(square, [1,2,3,4,5]))   # 使用 list() 转换为列表<br>[1, 4, 9, 16, 25]<br>list(map(lambda x: x ** 2, [1, 2, 3, 4, 5]))   # 使用 lambda 匿名函数<br>[1, 4, 9, 16, 25]</p></blockquote></blockquote></blockquote><p>```</p><p>比如n=6,res=[3,1,2,2,1,1],通过map函数list(map(str,res))以后是[‘3’, ‘1’, ‘2’, ‘2’, ‘1’, ‘1’]。<br>再通过’’.join()函数将list里的字符连在一起<br>就这道题而言，转不转换成list都不影响结果，’’.join(map(str,res))也是可以的</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;38-Count-and-Say-medium&quot;&gt;&lt;a href=&quot;#38-Count-and-Say-medium&quot; class=&quot;headerlink&quot; title=&quot;38. Count and Say(medium)&quot;&gt;&lt;/a&gt;38. Count and S</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
     
   </entry>
   
