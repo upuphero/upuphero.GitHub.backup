@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-07T02:28:58.640Z</updated>
+  <updated>2022-11-07T03:40:17.876Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,92 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>459. Repeated Substring Pattern(easy)</title>
+    <link href="http://example.com/2022/11/06/459/"/>
+    <id>http://example.com/2022/11/06/459/</id>
+    <published>2022-11-07T03:31:10.000Z</published>
+    <updated>2022-11-07T03:40:17.876Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="459-Repeated-Substring-Pattern-easy"><a href="#459-Repeated-Substring-Pattern-easy" class="headerlink" title="459. Repeated Substring Pattern(easy)"></a>459. Repeated Substring Pattern(easy)</h1><h2 id="Given-a-string-s-check-if-it-can-be-constructed-by-taking-a-substring-of-it-and-appending-multiple-copies-of-the-substring-together"><a href="#Given-a-string-s-check-if-it-can-be-constructed-by-taking-a-substring-of-it-and-appending-multiple-copies-of-the-substring-together" class="headerlink" title="Given a string s, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together."></a>Given a string s, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.</h2><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a><a href="https://leetcode.com/problems/repeated-substring-pattern/solutions/94334/easy-python-solution-with-explaination/">题解</a></h3><p>这道题的题解非常有技巧：</p><ol><li>First char of input string is first char of repeated substring</li><li>Last char of input string is last char of repeated substring</li><li>Let S1 = S + S (where S in input string)</li><li>Remove 1 and last char of S1. Let this be S2</li><li>If S exists in S2 then return true else false</li><li>Let i be index in S2 where S starts then repeated substring length i + 1 and repeated substring S[0: i+1]</li></ol><p>这里最基础的一点是，新字符串s2=s+s，s是一开始的字符串。如果s是重复的，那么s2从第二个字符到倒数第二个字符里一定包含了s</p><pre><code class="python">class Solution:    def repeatedSubstringPattern(self, s: str) -&gt; bool:        if not s:            return False        s2=(s+s)[1:-1]        return s2.find(s)!=-1</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;459-Repeated-Substring-Pattern-easy&quot;&gt;&lt;a href=&quot;#459-Repeated-Substring-Pattern-easy&quot; class=&quot;headerlink&quot; title=&quot;459. Repeated Substrin</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>422. Valid Word Square(easy)</title>
+    <link href="http://example.com/2022/11/06/422/"/>
+    <id>http://example.com/2022/11/06/422/</id>
+    <published>2022-11-07T03:29:24.000Z</published>
+    <updated>2022-11-07T03:30:42.734Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="422-Valid-Word-Square-easy"><a href="#422-Valid-Word-Square-easy" class="headerlink" title="422. Valid Word Square(easy)"></a>422. Valid Word Square(easy)</h1><h2 id="Given-an-array-of-strings-words-return-true-if-it-forms-a-valid-word-square"><a href="#Given-an-array-of-strings-words-return-true-if-it-forms-a-valid-word-square" class="headerlink" title="Given an array of strings words, return true if it forms a valid word square."></a>Given an array of strings words, return true if it forms a valid word square.</h2><h2 id="A-sequence-of-strings-forms-a-valid-word-square-if-the-kth-row-and-column-read-the-same-string-where-0-lt-k-lt-max-numRows-numColumns"><a href="#A-sequence-of-strings-forms-a-valid-word-square-if-the-kth-row-and-column-read-the-same-string-where-0-lt-k-lt-max-numRows-numColumns" class="headerlink" title="A sequence of strings forms a valid word square if the kth row and column read the same string, where 0 &lt;= k &lt; max(numRows, numColumns)."></a>A sequence of strings forms a valid word square if the kth row and column read the same string, where 0 &lt;= k &lt; max(numRows, numColumns).</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: words = [&quot;abcd&quot;,&quot;bnrt&quot;,&quot;crmy&quot;,&quot;dtye&quot;]</span><br><span class="line">Output: true</span><br><span class="line">Explanation:</span><br><span class="line">The 1st row and 1st column both read &quot;abcd&quot;.</span><br><span class="line">The 2nd row and 2nd column both read &quot;bnrt&quot;.</span><br><span class="line">The 3rd row and 3rd column both read &quot;crmy&quot;.</span><br><span class="line">The 4th row and 4th column both read &quot;dtye&quot;.</span><br><span class="line">Therefore, it is a valid word square.</span><br></pre></td></tr></table></figure><p>找矩阵是否对称</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">validWordSquare</span>(<span class="params">self, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="keyword">if</span> words==<span class="literal">None</span> <span class="keyword">or</span> <span class="built_in">len</span>(words)==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        row=<span class="built_in">len</span>(words)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(row):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(words[i])):</span><br><span class="line">                <span class="keyword">if</span> j&gt;=<span class="built_in">len</span>(words) <span class="keyword">or</span> i &gt;=<span class="built_in">len</span>(words[j]) <span class="keyword">or</span> words[i][j]!=words[j][i]:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;422-Valid-Word-Square-easy&quot;&gt;&lt;a href=&quot;#422-Valid-Word-Square-easy&quot; class=&quot;headerlink&quot; title=&quot;422. Valid Word Square(easy)&quot;&gt;&lt;/a&gt;422. V</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+    <category term="matrix" scheme="http://example.com/tags/matrix/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>463. Island Perimeter(easy)</title>
+    <link href="http://example.com/2022/11/06/463/"/>
+    <id>http://example.com/2022/11/06/463/</id>
+    <published>2022-11-07T02:45:13.000Z</published>
+    <updated>2022-11-07T02:47:04.406Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="463-Island-Perimeter-easy"><a href="#463-Island-Perimeter-easy" class="headerlink" title="463. Island Perimeter(easy)"></a>463. Island Perimeter(easy)</h1><h2 id="You-are-given-row-x-col-grid-representing-a-map-where-grid-i-j-1-represents-land-and-grid-i-j-0-represents-water"><a href="#You-are-given-row-x-col-grid-representing-a-map-where-grid-i-j-1-represents-land-and-grid-i-j-0-represents-water" class="headerlink" title="You are given row x col grid representing a map where grid[i][j] = 1 represents land and grid[i][j] = 0 represents water."></a>You are given row x col grid representing a map where grid[i][j] = 1 represents land and grid[i][j] = 0 represents water.</h2><h2 id="Grid-cells-are-connected-horizontally-vertically-not-diagonally-The-grid-is-completely-surrounded-by-water-and-there-is-exactly-one-island-i-e-one-or-more-connected-land-cells"><a href="#Grid-cells-are-connected-horizontally-vertically-not-diagonally-The-grid-is-completely-surrounded-by-water-and-there-is-exactly-one-island-i-e-one-or-more-connected-land-cells" class="headerlink" title="Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells)."></a>Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).</h2><h2 id="The-island-doesn’t-have-“lakes”-meaning-the-water-inside-isn’t-connected-to-the-water-around-the-island-One-cell-is-a-square-with-side-length-1-The-grid-is-rectangular-width-and-height-don’t-exceed-100-Determine-the-perimeter-of-the-island"><a href="#The-island-doesn’t-have-“lakes”-meaning-the-water-inside-isn’t-connected-to-the-water-around-the-island-One-cell-is-a-square-with-side-length-1-The-grid-is-rectangular-width-and-height-don’t-exceed-100-Determine-the-perimeter-of-the-island" class="headerlink" title="The island doesn’t have “lakes”, meaning the water inside isn’t connected to the water around the island. One cell is a square with side length 1. The grid is rectangular, width and height don’t exceed 100. Determine the perimeter of the island."></a>The island doesn’t have “lakes”, meaning the water inside isn’t connected to the water around the island. One cell is a square with side length 1. The grid is rectangular, width and height don’t exceed 100. Determine the perimeter of the island.</h2><p>直接模拟，看当前为1的格子四边有没有其他为1的格子</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">islandPerimeter</span>(<span class="params">self, grid: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        row=<span class="built_in">len</span>(grid)</span><br><span class="line">        col=<span class="built_in">len</span>(grid[<span class="number">0</span>])</span><br><span class="line">        ans=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(row):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(col):</span><br><span class="line">                <span class="keyword">if</span> grid[i][j]==<span class="number">1</span>:</span><br><span class="line">                    ans+=<span class="number">4</span></span><br><span class="line">                    <span class="keyword">if</span> i+<span class="number">1</span>&lt;row <span class="keyword">and</span> grid[i+<span class="number">1</span>][j]==<span class="number">1</span>:</span><br><span class="line">                        ans-=<span class="number">1</span></span><br><span class="line">                    <span class="keyword">if</span> i-<span class="number">1</span>&gt;=<span class="number">0</span> <span class="keyword">and</span> grid[i-<span class="number">1</span>][j]==<span class="number">1</span>:</span><br><span class="line">                        ans-=<span class="number">1</span></span><br><span class="line">                    <span class="keyword">if</span> j+<span class="number">1</span>&lt;col <span class="keyword">and</span> grid[i][j+<span class="number">1</span>]==<span class="number">1</span>:</span><br><span class="line">                        ans-=<span class="number">1</span></span><br><span class="line">                    <span class="keyword">if</span> j-<span class="number">1</span>&gt;=<span class="number">0</span> <span class="keyword">and</span> grid[i][j-<span class="number">1</span>]==<span class="number">1</span>:</span><br><span class="line">                        ans-=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans </span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;463-Island-Perimeter-easy&quot;&gt;&lt;a href=&quot;#463-Island-Perimeter-easy&quot; class=&quot;headerlink&quot; title=&quot;463. Island Perimeter(easy)&quot;&gt;&lt;/a&gt;463. Isla</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="matrix" scheme="http://example.com/tags/matrix/"/>
+    
+  </entry>
   
   <entry>
     <title>461. Hamming Distance(easy)</title>
@@ -514,96 +600,6 @@
     <category term="Python" scheme="http://example.com/tags/Python/"/>
     
     <category term="string" scheme="http://example.com/tags/string/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>7. Reverse Integer(medium)</title>
-    <link href="http://example.com/2022/10/16/7/"/>
-    <id>http://example.com/2022/10/16/7/</id>
-    <published>2022-10-16T21:07:02.000Z</published>
-    <updated>2022-10-19T20:43:39.105Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="7-Reverse-Integer-medium"><a href="#7-Reverse-Integer-medium" class="headerlink" title="7. Reverse Integer(medium)"></a>7. Reverse Integer(medium)</h1><h2 id="Given-a-signed-32-bit-integer-x-return-x-with-its-digits-reversed-If-reversing-x-causes-the-value-to-go-outside-the-signed-32-bit-integer-range-2-31-2-31-1-then-return-0"><a href="#Given-a-signed-32-bit-integer-x-return-x-with-its-digits-reversed-If-reversing-x-causes-the-value-to-go-outside-the-signed-32-bit-integer-range-2-31-2-31-1-then-return-0" class="headerlink" title="Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-2^31, 2^31 - 1], then return 0."></a>Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-2^31, 2^31 - 1], then return 0.</h2><h2 id="Assume-the-environment-does-not-allow-you-to-store-64-bit-integers-signed-or-unsigned"><a href="#Assume-the-environment-does-not-allow-you-to-store-64-bit-integers-signed-or-unsigned" class="headerlink" title="Assume the environment does not allow you to store 64-bit integers (signed or unsigned)."></a>Assume the environment does not allow you to store 64-bit integers (signed or unsigned).</h2><p><a href="https://leetcode.cn/problems/reverse-integer/solution/pythondan-chu-he-tui-ru-shu-zi-yi-chu-qian-jin-xin/">leetcodde题解</a><br>初始解：将数组转换成字符串，从后往前输出字符串得到结果</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reverse_force</span>(<span class="params">self, x: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">    <span class="keyword">if</span> -<span class="number">10</span> &lt; x &lt; <span class="number">10</span>:</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line">    str_x = <span class="built_in">str</span>(x)</span><br><span class="line">    <span class="keyword">if</span> str_x[<span class="number">0</span>] != <span class="string">&quot;-&quot;</span>:</span><br><span class="line">        str_x = str_x[::-<span class="number">1</span>]</span><br><span class="line">        x = <span class="built_in">int</span>(str_x)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        str_x = str_x[:<span class="number">0</span>:-<span class="number">1</span>]</span><br><span class="line">        x = <span class="built_in">int</span>(str_x)</span><br><span class="line">        x = -x</span><br><span class="line">    <span class="keyword">return</span> x <span class="keyword">if</span> -<span class="number">2147483648</span> &lt; x &lt; <span class="number">2147483647</span> <span class="keyword">else</span> <span class="number">0</span></span><br></pre></td></tr></table></figure><p>优化解：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverse</span>(<span class="params">self, x: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        y, res = <span class="built_in">abs</span>(x), <span class="number">0</span></span><br><span class="line">        <span class="comment"># 则其数值范围为 [−2^31,  2^31 − 1]</span></span><br><span class="line">        boundry = (<span class="number">1</span>&lt;&lt;<span class="number">31</span>) -<span class="number">1</span> <span class="keyword">if</span> x&gt;<span class="number">0</span> <span class="keyword">else</span> <span class="number">1</span>&lt;&lt;<span class="number">31</span></span><br><span class="line">        <span class="keyword">while</span> y != <span class="number">0</span>:</span><br><span class="line">            res = res*<span class="number">10</span> +y%<span class="number">10</span></span><br><span class="line">            <span class="keyword">if</span> res &gt; boundry :</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            y //=<span class="number">10</span></span><br><span class="line">        <span class="keyword">return</span> res <span class="keyword">if</span> x &gt;<span class="number">0</span> <span class="keyword">else</span> -res</span><br></pre></td></tr></table></figure><p>这题没有考什么深的东西，不过可以复习一下 python 的字符运算语法：</p><p>复习一下 python 的位运算符：</p><p>(a &amp; b)<br>按位与运算符：参与运算的两个值，如果两个相应位都为 1，则该位的结果为 1，否则为 0 。<br>输出结果 12 ，二进制解释： 0000 1100</p><p>(a | b)<br>按位或运算符：只要对应的二个二进位有一个为1时，结果位就为1。<br>输出结果 61 ，二进制解释： 0011 1101</p><p>(a ^ b)<br>按位异或运算符：当两对应的二进位相异时，结果为 1<br>输出结果 49 ，二进制解释： 0011 0001</p><p>(<del>a )<br>按位取反运算符：对数据的每个二进制位取反，即把 1 变为 0，把 0 变为 1 。</del>x 类似于 -x-1<br>输出结果 -61 ，二进制解释： 1100 0011，在一个有符号二进制数的补码形式。</p><p>a &lt;&lt; 2<br>左移动运算符：运算数的各二进位全部左移若干位，由 &lt;&lt; 右边的数字指定了移动的位数，高位丢弃，低位补 0。<br>输出结果 240 ，二进制解释： 1111 0000</p><p>a &gt;&gt; 2<br>右移动运算符：把 “&gt;&gt;” 左边的运算数的各二进位全部右移若干位，&gt;&gt; 右边的数字指定了移动的位数<br>输出结果 15 ，二进制解释： 0000 1111</p><p>python 赋值运算符：</p><p>*= 乘法赋值运算符 c *= a 等效于 c = c * a<br>/= 除法赋值运算符 c /= a 等效于 c = c / a<br>%= 取模赋值运算符 c %= a 等效于 c = c % a<br>**= 幂赋值运算符 c **= a 等效于 c = c ** a<br>//= 取整除赋值运算符 c //= a 等效于 c = c // a</p><p>作者：stray_camel<br>链接：<a href="https://leetcode.cn/problems/reverse-integer/solution/pythondan-chu-he-tui-ru-shu-zi-yi-chu-qian-jin-xin/">https://leetcode.cn/problems/reverse-integer/solution/pythondan-chu-he-tui-ru-shu-zi-yi-chu-qian-jin-xin/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;7-Reverse-Integer-medium&quot;&gt;&lt;a href=&quot;#7-Reverse-Integer-medium&quot; class=&quot;headerlink&quot; title=&quot;7. Reverse Integer(medium)&quot;&gt;&lt;/a&gt;7. Reverse I</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-    <category term="bitwise" scheme="http://example.com/tags/bitwise/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2095. Delete the Middle Node of a Linked List(medium)</title>
-    <link href="http://example.com/2022/10/14/2095/"/>
-    <id>http://example.com/2022/10/14/2095/</id>
-    <published>2022-10-14T21:03:19.000Z</published>
-    <updated>2022-10-14T21:05:52.429Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="2095-Delete-the-Middle-Node-of-a-Linked-List-medium"><a href="#2095-Delete-the-Middle-Node-of-a-Linked-List-medium" class="headerlink" title="2095. Delete the Middle Node of a Linked List(medium)"></a>2095. Delete the Middle Node of a Linked List(medium)</h1><p>You are given the head of a linked list. Delete the middle node, and return the head of the modified linked list.</p><p>The middle node of a linked list of size n is the ⌊n / 2⌋th node from the start using 0-based indexing, where ⌊x⌋ denotes the largest integer less than or equal to x.</p><p>For n = 1, 2, 3, 4, and 5, the middle nodes are 0, 1, 1, 2, and 2, respectively.</p><p>思路：<br>先遍历一遍链表，判断链表总长度，然后算出一半的长度n在哪里<br>最后遍历到n-1的位置，跳过位置n直接连到n+1</p><pre><code class="python"># Definition for singly-linked list.# class ListNode:#     def __init__(self, val=0, next=None):#         self.val = val#         self.next = nextclass Solution:    def deleteMiddle(self, head: Optional[ListNode]) -&gt; Optional[ListNode]:        if head.next==None:            return None        n=0        p1=p2=head        while p1:            p1=p1.next            n+=1        k=n//2        for i in range(k-1):            p2=p2.next                #p2.next=p2.next.next        p2.next = p2.next.next        return head</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;2095-Delete-the-Middle-Node-of-a-Linked-List-medium&quot;&gt;&lt;a href=&quot;#2095-Delete-the-Middle-Node-of-a-Linked-List-medium&quot; class=&quot;headerlin</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="linked-list" scheme="http://example.com/tags/linked-list/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>401. Binary Watch(easy)</title>
-    <link href="http://example.com/2022/10/12/401/"/>
-    <id>http://example.com/2022/10/12/401/</id>
-    <published>2022-10-13T02:42:37.000Z</published>
-    <updated>2022-10-13T02:46:08.362Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="401-Binary-Watch-easy"><a href="#401-Binary-Watch-easy" class="headerlink" title="401. Binary Watch(easy)"></a>401. Binary Watch(easy)</h1><h2 id="A-binary-watch-has-4-LEDs-on-the-top-to-represent-the-hours-0-11-and-6-LEDs-on-the-bottom-to-represent-the-minutes-0-59-Each-LED-represents-a-zero-or-one-with-the-least-significant-bit-on-the-right"><a href="#A-binary-watch-has-4-LEDs-on-the-top-to-represent-the-hours-0-11-and-6-LEDs-on-the-bottom-to-represent-the-minutes-0-59-Each-LED-represents-a-zero-or-one-with-the-least-significant-bit-on-the-right" class="headerlink" title="A binary watch has 4 LEDs on the top to represent the hours (0-11), and 6 LEDs on the bottom to represent the minutes (0-59). Each LED represents a zero or one, with the least significant bit on the right."></a>A binary watch has 4 LEDs on the top to represent the hours (0-11), and 6 LEDs on the bottom to represent the minutes (0-59). Each LED represents a zero or one, with the least significant bit on the right.</h2><p>For example, the below binary watch reads “4:51”.</p><p>一共十个灯，四个是二进制显示小时，六个是二进制显示分钟</p><h1 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/binary-watch/solution/er-jin-zhi-shou-biao-by-leetcode-solutio-3559/">官方题解</a></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">readBinaryWatch</span>(<span class="params">self, turnedOn: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">str</span>]:</span></span><br><span class="line">        ans = <span class="built_in">list</span>()</span><br><span class="line">        <span class="keyword">for</span> h <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">12</span>):</span><br><span class="line">            <span class="keyword">for</span> m <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">60</span>):</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">bin</span>(h).count(<span class="string">&quot;1&quot;</span>) + <span class="built_in">bin</span>(m).count(<span class="string">&quot;1&quot;</span>) == turnedOn:</span><br><span class="line">                    ans.append(<span class="string">f&quot;<span class="subst">&#123;h&#125;</span>:<span class="subst">&#123;m:02d&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure><p>由题意可知，小时由 4 个比特表示，分钟由 6 个比特表示，比特位值为 0 表示灯灭，为 1 表示灯亮。</p><p>我们可以枚举小时的所有可能值 [0,11]，以及分钟的所有可能值 [0,59]，并计算二者的二进制中 1 的个数之和，若为 turnedOn，则将其加入到答案中。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;401-Binary-Watch-easy&quot;&gt;&lt;a href=&quot;#401-Binary-Watch-easy&quot; class=&quot;headerlink&quot; title=&quot;401. Binary Watch(easy)&quot;&gt;&lt;/a&gt;401. Binary Watch(eas</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
     
   </entry>
   
