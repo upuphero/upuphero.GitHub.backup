@@ -24,7 +24,7 @@
 
   
 
-  <title>405 | 八角书屋</title>
+  <title>405. Convert a Number to Hexadecimal(easy) | 八角书屋</title>
 
   
 
@@ -48,7 +48,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://raw.githubusercontent.com/upuphero/image-hosting/master/DVA鬼刀3440x1440壁纸.6ozhdm4v0us0.webp)"></div>
+    <div class="post-image" style="background-image: url(https://cdn.staticaly.com/gh/upuphero/image-hosting@master/LonelyParade.5k0e6341fvk0.webp)"></div>
   
 
   <!-- navbar -->
@@ -97,7 +97,7 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">405</h1>
+          <h1 class="title-wrap">405. Convert a Number to Hexadecimal(easy)</h1>
           <h2 class="title-sub-wrap">
             <strong>leaf</strong>
             <span>发布于</span>
@@ -105,8 +105,18 @@
           </h2>
           <ul class="wrap-list dark">
   
+    <li><a href="/categories/study/">📒 study</a></li>
+  
 </ul>
           <ul class="wrap-list dark">
+  
+    <li><a href="/tags/leetcode/">🏷️ leetcode</a></li>
+  
+    <li><a href="/tags/Python/">🏷️ Python</a></li>
+  
+    <li><a href="/tags/stack/">🏷️ stack</a></li>
+  
+    <li><a href="/tags/string/">🏷️ string</a></li>
   
 </ul>
         </div>
@@ -130,19 +140,35 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>class Solution:<br>    def toHex(self, num: int) -&gt; str:<br>        if num==0:<br>            return “0”<br>        p=[“0”,”1”,”2”,”3”,”4”,”5”,”6”,”7”,”8”,”9”,”a”,”b”,”c”,”d”,”e”,”f”]<br>        ans=[]<br>        if num&gt;0:<br>            while num!=0:<br>                ans.append(p[num&amp;15])<br>                num&gt;&gt;=4<br>        else:<br>            num=-num-1<br>            for i in range(0,8):<br>                ans.append(p[15-(num&amp;15)])<br>                num&gt;&gt;=4<br>        ans.reverse()<br>        return ‘’.join(ans)</p>
-
+        <h1 id="405-Convert-a-Number-to-Hexadecimal-easy"><a href="#405-Convert-a-Number-to-Hexadecimal-easy" class="headerlink" title="405. Convert a Number to Hexadecimal(easy)"></a>405. Convert a Number to Hexadecimal(easy)</h1><h2 id="Given-an-integer-num-return-a-string-representing-its-hexadecimal-representation-For-negative-integers-two’s-complement-method-is-used"><a href="#Given-an-integer-num-return-a-string-representing-its-hexadecimal-representation-For-negative-integers-two’s-complement-method-is-used" class="headerlink" title="Given an integer num, return a string representing its hexadecimal representation. For negative integers, two’s complement method is used."></a>Given an integer num, return a string representing its hexadecimal representation. For negative integers, two’s complement method is used.</h2><h2 id="All-the-letters-in-the-answer-string-should-be-lowercase-characters-and-there-should-not-be-any-leading-zeros-in-the-answer-except-for-the-zero-itself"><a href="#All-the-letters-in-the-answer-string-should-be-lowercase-characters-and-there-should-not-be-any-leading-zeros-in-the-answer-except-for-the-zero-itself" class="headerlink" title="All the letters in the answer string should be lowercase characters, and there should not be any leading zeros in the answer except for the zero itself."></a>All the letters in the answer string should be lowercase characters, and there should not be any leading zeros in the answer except for the zero itself.</h2><h2 id="Note-You-are-not-allowed-to-use-any-built-in-library-method-to-directly-solve-this-problem"><a href="#Note-You-are-not-allowed-to-use-any-built-in-library-method-to-directly-solve-this-problem" class="headerlink" title="Note: You are not allowed to use any built-in library method to directly solve this problem."></a>Note: You are not allowed to use any built-in library method to directly solve this problem.</h2><p>分大于0小于0两种情况，大于0则对16求余，再除。小于0则基于0xffffffff进行计算</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">toHex</span>(<span class="params">self, num: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        <span class="keyword">if</span> num==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;0&quot;</span></span><br><span class="line">        <span class="keyword">if</span> num&lt;<span class="number">0</span>:</span><br><span class="line">            num=<span class="number">0xffffffff</span>+<span class="number">1</span>+num        </span><br><span class="line">        hex_digits=<span class="string">&quot;0123456789abcdef&quot;</span></span><br><span class="line">        ans=<span class="string">&quot;&quot;</span></span><br><span class="line">        <span class="keyword">while</span> num:</span><br><span class="line">            ans+=hex_digits[num%<span class="number">16</span>]</span><br><span class="line">            num//=<span class="number">16</span></span><br><span class="line">        <span class="keyword">return</span> ans[::-<span class="number">1</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
       </section>
 
       
       
         <nav class="article-nav">
           
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/ball_4k.6i9ghywhrao0.webp"></div>
+    
+    <div class="card-text">
+      
+        <a href="/2022/11/06/461/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">461. Hamming Distance(easy)</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/fate_anniversary.3cx3yj11naw0.webp"></div>
+      <div class="card-cover" background-image-lazy data-img="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/Jade-Wallpaper.3u7ehhbz6dq0.webp"></div>
     
     <div class="card-text">
       
@@ -189,7 +215,7 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>243</span>
+        <span>244</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -241,7 +267,7 @@
       
         <li class="categorys-list-item">
           <a href="/categories/study/">
-            study (234)
+            study (236)
           </a>
         </li>
       
@@ -258,7 +284,7 @@
   </div>
   <div class="widget-body">
     <div class="tags-cloud">
-      <a href="/tags/Backtracking/" style="font-size: 10.59px;" class="tags-cloud-1">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;" class="tags-cloud-0">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;" class="tags-cloud-0">Counter</a> <a href="/tags/DFA/" style="font-size: 10.59px;" class="tags-cloud-1">DFA</a> <a href="/tags/DFS/" style="font-size: 10px;" class="tags-cloud-0">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 11.76px;" class="tags-cloud-2">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 16.47px;" class="tags-cloud-6">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;" class="tags-cloud-0">Greatest common divisor </a> <a href="/tags/Heap-Sort/" style="font-size: 10px;" class="tags-cloud-0">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;" class="tags-cloud-0">LCP</a> <a href="/tags/Linked-list/" style="font-size: 17.65px;" class="tags-cloud-8">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13.53px;" class="tags-cloud-4">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11.18px;" class="tags-cloud-1">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;" class="tags-cloud-0">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.59px;" class="tags-cloud-1">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;" class="tags-cloud-0">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.41px;" class="tags-cloud-9">Python</a> <a href="/tags/Queues/" style="font-size: 10.59px;" class="tags-cloud-1">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.59px;" class="tags-cloud-1">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.76px;" class="tags-cloud-2">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.76px;" class="tags-cloud-2">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.59px;" class="tags-cloud-1">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;" class="tags-cloud-0">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.59px;" class="tags-cloud-1">Traversal</a> <a href="/tags/Tree/" style="font-size: 14.12px;" class="tags-cloud-4">Tree</a> <a href="/tags/array/" style="font-size: 18.82px;" class="tags-cloud-9">array</a> <a href="/tags/binary-search/" style="font-size: 11.18px;" class="tags-cloud-1">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.94px;" class="tags-cloud-3">binary search algorithm</a> <a href="/tags/bitwise/" style="font-size: 15.88px;" class="tags-cloud-6">bitwise</a> <a href="/tags/difference-array/" style="font-size: 12.35px;" class="tags-cloud-2">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.59px;" class="tags-cloud-1">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 11.76px;" class="tags-cloud-2">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.59px;" class="tags-cloud-1">game</a> <a href="/tags/greedy-algorithm/" style="font-size: 15.29px;" class="tags-cloud-5">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.24px;" class="tags-cloud-8">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.59px;" class="tags-cloud-1">hashset</a> <a href="/tags/if/" style="font-size: 10px;" class="tags-cloud-0">if</a> <a href="/tags/leetcode/" style="font-size: 20px;" class="tags-cloud-10">leetcode</a> <a href="/tags/life/" style="font-size: 10.59px;" class="tags-cloud-1">life</a> <a href="/tags/linked-list/" style="font-size: 10.59px;" class="tags-cloud-1">linked-list</a> <a href="/tags/list/" style="font-size: 10px;" class="tags-cloud-0">list</a> <a href="/tags/loop/" style="font-size: 10px;" class="tags-cloud-0">loop</a> <a href="/tags/mapping/" style="font-size: 11.18px;" class="tags-cloud-1">mapping</a> <a href="/tags/math/" style="font-size: 12.94px;" class="tags-cloud-3">math</a> <a href="/tags/prefix-sum/" style="font-size: 13.53px;" class="tags-cloud-4">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;" class="tags-cloud-0">prime number</a> <a href="/tags/python-function/" style="font-size: 10.59px;" class="tags-cloud-1">python function</a> <a href="/tags/recursion/" style="font-size: 14.71px;" class="tags-cloud-5">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;" class="tags-cloud-0">schedule</a> <a href="/tags/set/" style="font-size: 10.59px;" class="tags-cloud-1">set</a> <a href="/tags/skills/" style="font-size: 10px;" class="tags-cloud-0">skills</a> <a href="/tags/sort/" style="font-size: 10px;" class="tags-cloud-0">sort</a> <a href="/tags/stack/" style="font-size: 15.29px;" class="tags-cloud-5">stack</a> <a href="/tags/string/" style="font-size: 17.06px;" class="tags-cloud-7">string</a> <a href="/tags/topk/" style="font-size: 12.35px;" class="tags-cloud-2">topk</a> <a href="/tags/tree/" style="font-size: 12.35px;" class="tags-cloud-2">tree</a> <a href="/tags/two-pointer/" style="font-size: 11.76px;" class="tags-cloud-2">two-pointer</a> <a href="/tags/two-pointers/" style="font-size: 18.24px;" class="tags-cloud-8">two-pointers</a>
+      <a href="/tags/Backtracking/" style="font-size: 10.59px;" class="tags-cloud-1">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;" class="tags-cloud-0">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;" class="tags-cloud-0">Counter</a> <a href="/tags/DFA/" style="font-size: 10.59px;" class="tags-cloud-1">DFA</a> <a href="/tags/DFS/" style="font-size: 10px;" class="tags-cloud-0">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 11.76px;" class="tags-cloud-2">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 16.47px;" class="tags-cloud-6">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;" class="tags-cloud-0">Greatest common divisor </a> <a href="/tags/Heap-Sort/" style="font-size: 10px;" class="tags-cloud-0">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;" class="tags-cloud-0">LCP</a> <a href="/tags/Linked-list/" style="font-size: 17.65px;" class="tags-cloud-8">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13.53px;" class="tags-cloud-4">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11.18px;" class="tags-cloud-1">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;" class="tags-cloud-0">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.59px;" class="tags-cloud-1">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;" class="tags-cloud-0">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.41px;" class="tags-cloud-9">Python</a> <a href="/tags/Queues/" style="font-size: 10.59px;" class="tags-cloud-1">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.59px;" class="tags-cloud-1">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.76px;" class="tags-cloud-2">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.76px;" class="tags-cloud-2">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.59px;" class="tags-cloud-1">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;" class="tags-cloud-0">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.59px;" class="tags-cloud-1">Traversal</a> <a href="/tags/Tree/" style="font-size: 14.12px;" class="tags-cloud-4">Tree</a> <a href="/tags/array/" style="font-size: 18.82px;" class="tags-cloud-9">array</a> <a href="/tags/binary-search/" style="font-size: 11.18px;" class="tags-cloud-1">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.94px;" class="tags-cloud-3">binary search algorithm</a> <a href="/tags/bitwise/" style="font-size: 16.47px;" class="tags-cloud-6">bitwise</a> <a href="/tags/difference-array/" style="font-size: 12.35px;" class="tags-cloud-2">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.59px;" class="tags-cloud-1">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 11.76px;" class="tags-cloud-2">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.59px;" class="tags-cloud-1">game</a> <a href="/tags/greedy-algorithm/" style="font-size: 15.29px;" class="tags-cloud-5">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.24px;" class="tags-cloud-8">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.59px;" class="tags-cloud-1">hashset</a> <a href="/tags/if/" style="font-size: 10px;" class="tags-cloud-0">if</a> <a href="/tags/leetcode/" style="font-size: 20px;" class="tags-cloud-10">leetcode</a> <a href="/tags/life/" style="font-size: 10.59px;" class="tags-cloud-1">life</a> <a href="/tags/linked-list/" style="font-size: 10.59px;" class="tags-cloud-1">linked-list</a> <a href="/tags/list/" style="font-size: 10px;" class="tags-cloud-0">list</a> <a href="/tags/loop/" style="font-size: 10px;" class="tags-cloud-0">loop</a> <a href="/tags/mapping/" style="font-size: 11.18px;" class="tags-cloud-1">mapping</a> <a href="/tags/math/" style="font-size: 12.94px;" class="tags-cloud-3">math</a> <a href="/tags/prefix-sum/" style="font-size: 13.53px;" class="tags-cloud-4">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;" class="tags-cloud-0">prime number</a> <a href="/tags/python-function/" style="font-size: 10.59px;" class="tags-cloud-1">python function</a> <a href="/tags/recursion/" style="font-size: 14.71px;" class="tags-cloud-5">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;" class="tags-cloud-0">schedule</a> <a href="/tags/set/" style="font-size: 10.59px;" class="tags-cloud-1">set</a> <a href="/tags/skills/" style="font-size: 10px;" class="tags-cloud-0">skills</a> <a href="/tags/sort/" style="font-size: 10px;" class="tags-cloud-0">sort</a> <a href="/tags/stack/" style="font-size: 15.88px;" class="tags-cloud-6">stack</a> <a href="/tags/string/" style="font-size: 17.06px;" class="tags-cloud-7">string</a> <a href="/tags/topk/" style="font-size: 12.35px;" class="tags-cloud-2">topk</a> <a href="/tags/tree/" style="font-size: 12.35px;" class="tags-cloud-2">tree</a> <a href="/tags/two-pointer/" style="font-size: 11.76px;" class="tags-cloud-2">two-pointer</a> <a href="/tags/two-pointers/" style="font-size: 18.24px;" class="tags-cloud-8">two-pointers</a>
     </div>
   </div>
 </section>
