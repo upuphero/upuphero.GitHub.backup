@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-07T03:40:17.876Z</updated>
+  <updated>2022-11-07T03:58:47.479Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>1323. Maximum 69 Number(easy)</title>
+    <link href="http://example.com/2022/11/06/1323/"/>
+    <id>http://example.com/2022/11/06/1323/</id>
+    <published>2022-11-07T03:57:00.000Z</published>
+    <updated>2022-11-07T03:58:47.479Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1323-Maximum-69-Number-easy"><a href="#1323-Maximum-69-Number-easy" class="headerlink" title="1323. Maximum 69 Number(easy)"></a>1323. Maximum 69 Number(easy)</h1><h2 id="You-are-given-a-positive-integer-num-consisting-only-of-digits-6-and-9"><a href="#You-are-given-a-positive-integer-num-consisting-only-of-digits-6-and-9" class="headerlink" title="You are given a positive integer num consisting only of digits 6 and 9."></a>You are given a positive integer num consisting only of digits 6 and 9.</h2><h2 id="Return-the-maximum-number-you-can-get-by-changing-at-most-one-digit-6-becomes-9-and-9-becomes-6"><a href="#Return-the-maximum-number-you-can-get-by-changing-at-most-one-digit-6-becomes-9-and-9-becomes-6" class="headerlink" title="Return the maximum number you can get by changing at most one digit (6 becomes 9, and 9 becomes 6)."></a>Return the maximum number you can get by changing at most one digit (6 becomes 9, and 9 becomes 6).</h2><p>将num转换为字符串，然后再转换成list<br>判断list有没有6，如果没有直接输出num<br>index(x)返回找到的第一个x<br>最后join把字符串连在一起</p><pre><code class="python">class Solution:    def maximum69Number (self, num: int) -&gt; int:        s=list(str(num))        if &#39;6&#39; not in s:            return num        s[s.index(&#39;6&#39;)]=&#39;9&#39;        return &#39;&#39;.join(s)</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1323-Maximum-69-Number-easy&quot;&gt;&lt;a href=&quot;#1323-Maximum-69-Number-easy&quot; class=&quot;headerlink&quot; title=&quot;1323. Maximum 69 Number(easy)&quot;&gt;&lt;/a&gt;132</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>408. Valid Word Abbreviation(easy)</title>
+    <link href="http://example.com/2022/11/06/408/"/>
+    <id>http://example.com/2022/11/06/408/</id>
+    <published>2022-11-07T03:50:54.000Z</published>
+    <updated>2022-11-07T03:52:07.012Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="408-Valid-Word-Abbreviation-easy"><a href="#408-Valid-Word-Abbreviation-easy" class="headerlink" title="408. Valid Word Abbreviation(easy)"></a>408. Valid Word Abbreviation(easy)</h1><h2 id="A-string-can-be-abbreviated-by-replacing-any-number-of-non-adjacent-non-empty-substrings-with-their-lengths-The-lengths-should-not-have-leading-zeros"><a href="#A-string-can-be-abbreviated-by-replacing-any-number-of-non-adjacent-non-empty-substrings-with-their-lengths-The-lengths-should-not-have-leading-zeros" class="headerlink" title="A string can be abbreviated by replacing any number of non-adjacent, non-empty substrings with their lengths. The lengths should not have leading zeros."></a>A string can be abbreviated by replacing any number of non-adjacent, non-empty substrings with their lengths. The lengths should not have leading zeros.</h2><p>For example, a string such as “substitution” could be abbreviated as (but not limited to):</p><p>“s10n” (“s ubstitutio n”)<br>“sub4u4” (“sub stit u tion”)<br>“12” (“substitution”)<br>“su3i1u2on” (“su bst i t u ti on”)<br>“substitution” (no substrings replaced)<br>The following are not valid abbreviations:</p><p>“s55n” (“s ubsti tutio n”, the replaced substrings are adjacent)<br>“s010n” (has leading zeros)<br>“s0ubstitution” (replaces an empty substring)<br>Given a string word and an abbreviation abbr, return whether the string matches the given abbreviation.</p><p>A substring is a contiguous non-empty sequence of characters within a string.</p><p>这道题就是直接模拟计算<br><a href="https://leetcode.com/problems/valid-word-abbreviation/solutions/144195/python-straightforward-solution-beats-100/">题解</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">validWordAbbreviation</span>(<span class="params">self, word, abbr</span>):</span></span><br><span class="line">        i = j = <span class="number">0</span></span><br><span class="line">        m, n = <span class="built_in">len</span>(word), <span class="built_in">len</span>(abbr)</span><br><span class="line">        <span class="keyword">while</span> i &lt; m <span class="keyword">and</span> j &lt; n:</span><br><span class="line">            <span class="keyword">if</span> word[i] == abbr[j]:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> abbr[j] == <span class="string">&quot;0&quot;</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="keyword">elif</span> abbr[j].isnumeric():</span><br><span class="line">                k = j</span><br><span class="line">                <span class="keyword">while</span> k &lt; n <span class="keyword">and</span> abbr[k].isnumeric():</span><br><span class="line">                    k += <span class="number">1</span></span><br><span class="line">                i += <span class="built_in">int</span>(abbr[j:k])</span><br><span class="line">                j = k</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> i == m <span class="keyword">and</span> j == n</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;408-Valid-Word-Abbreviation-easy&quot;&gt;&lt;a href=&quot;#408-Valid-Word-Abbreviation-easy&quot; class=&quot;headerlink&quot; title=&quot;408. Valid Word Abbreviation</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
     <title>459. Repeated Substring Pattern(easy)</title>
     <link href="http://example.com/2022/11/06/459/"/>
     <id>http://example.com/2022/11/06/459/</id>
     <published>2022-11-07T03:31:10.000Z</published>
-    <updated>2022-11-07T03:40:17.876Z</updated>
+    <updated>2022-11-07T03:41:32.883Z</updated>
     
     <content type="html"><![CDATA[<h1 id="459-Repeated-Substring-Pattern-easy"><a href="#459-Repeated-Substring-Pattern-easy" class="headerlink" title="459. Repeated Substring Pattern(easy)"></a>459. Repeated Substring Pattern(easy)</h1><h2 id="Given-a-string-s-check-if-it-can-be-constructed-by-taking-a-substring-of-it-and-appending-multiple-copies-of-the-substring-together"><a href="#Given-a-string-s-check-if-it-can-be-constructed-by-taking-a-substring-of-it-and-appending-multiple-copies-of-the-substring-together" class="headerlink" title="Given a string s, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together."></a>Given a string s, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.</h2><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a><a href="https://leetcode.com/problems/repeated-substring-pattern/solutions/94334/easy-python-solution-with-explaination/">题解</a></h3><p>这道题的题解非常有技巧：</p><ol><li>First char of input string is first char of repeated substring</li><li>Last char of input string is last char of repeated substring</li><li>Let S1 = S + S (where S in input string)</li><li>Remove 1 and last char of S1. Let this be S2</li><li>If S exists in S2 then return true else false</li><li>Let i be index in S2 where S starts then repeated substring length i + 1 and repeated substring S[0: i+1]</li></ol><p>这里最基础的一点是，新字符串s2=s+s，s是一开始的字符串。如果s是重复的，那么s2从第二个字符到倒数第二个字符里一定包含了s</p><pre><code class="python">class Solution:    def repeatedSubstringPattern(self, s: str) -&gt; bool:        if not s:            return False        s2=(s+s)[1:-1]        return s2.find(s)!=-1</code></pre>]]></content>
     
@@ -49,7 +105,7 @@
     <link href="http://example.com/2022/11/06/422/"/>
     <id>http://example.com/2022/11/06/422/</id>
     <published>2022-11-07T03:29:24.000Z</published>
-    <updated>2022-11-07T03:30:42.734Z</updated>
+    <updated>2022-11-07T03:41:17.823Z</updated>
     
     <content type="html"><![CDATA[<h1 id="422-Valid-Word-Square-easy"><a href="#422-Valid-Word-Square-easy" class="headerlink" title="422. Valid Word Square(easy)"></a>422. Valid Word Square(easy)</h1><h2 id="Given-an-array-of-strings-words-return-true-if-it-forms-a-valid-word-square"><a href="#Given-an-array-of-strings-words-return-true-if-it-forms-a-valid-word-square" class="headerlink" title="Given an array of strings words, return true if it forms a valid word square."></a>Given an array of strings words, return true if it forms a valid word square.</h2><h2 id="A-sequence-of-strings-forms-a-valid-word-square-if-the-kth-row-and-column-read-the-same-string-where-0-lt-k-lt-max-numRows-numColumns"><a href="#A-sequence-of-strings-forms-a-valid-word-square-if-the-kth-row-and-column-read-the-same-string-where-0-lt-k-lt-max-numRows-numColumns" class="headerlink" title="A sequence of strings forms a valid word square if the kth row and column read the same string, where 0 &lt;= k &lt; max(numRows, numColumns)."></a>A sequence of strings forms a valid word square if the kth row and column read the same string, where 0 &lt;= k &lt; max(numRows, numColumns).</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: words = [&quot;abcd&quot;,&quot;bnrt&quot;,&quot;crmy&quot;,&quot;dtye&quot;]</span><br><span class="line">Output: true</span><br><span class="line">Explanation:</span><br><span class="line">The 1st row and 1st column both read &quot;abcd&quot;.</span><br><span class="line">The 2nd row and 2nd column both read &quot;bnrt&quot;.</span><br><span class="line">The 3rd row and 3rd column both read &quot;crmy&quot;.</span><br><span class="line">The 4th row and 4th column both read &quot;dtye&quot;.</span><br><span class="line">Therefore, it is a valid word square.</span><br></pre></td></tr></table></figure><p>找矩阵是否对称</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">validWordSquare</span>(<span class="params">self, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="keyword">if</span> words==<span class="literal">None</span> <span class="keyword">or</span> <span class="built_in">len</span>(words)==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        row=<span class="built_in">len</span>(words)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(row):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(words[i])):</span><br><span class="line">                <span class="keyword">if</span> j&gt;=<span class="built_in">len</span>(words) <span class="keyword">or</span> i &gt;=<span class="built_in">len</span>(words[j]) <span class="keyword">or</span> words[i][j]!=words[j][i]:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -540,64 +596,6 @@
     <category term="Python" scheme="http://example.com/tags/Python/"/>
     
     <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>4. Median of Two Sorted Arrays(hard)</title>
-    <link href="http://example.com/2022/10/17/4/"/>
-    <id>http://example.com/2022/10/17/4/</id>
-    <published>2022-10-17T20:06:08.000Z</published>
-    <updated>2022-10-19T20:46:57.117Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="4-Median-of-Two-Sorted-Arrays-hard"><a href="#4-Median-of-Two-Sorted-Arrays-hard" class="headerlink" title="4. Median of Two Sorted Arrays(hard)"></a>4. Median of Two Sorted Arrays(hard)</h1><h2 id="Given-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-return-the-median-of-the-two-sorted-arrays"><a href="#Given-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-return-the-median-of-the-two-sorted-arrays" class="headerlink" title="Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays."></a>Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.</h2><h2 id="The-overall-run-time-complexity-should-be-O-log-m-n"><a href="#The-overall-run-time-complexity-should-be-O-log-m-n" class="headerlink" title="The overall run time complexity should be O(log (m+n))."></a>The overall run time complexity should be O(log (m+n)).</h2><h3 id="leetcode题解"><a href="#leetcode题解" class="headerlink" title="leetcode题解"></a><a href="https://leetcode.cn/problems/median-of-two-sorted-arrays/solution/shuang-zhi-zhen-by-powcai/">leetcode题解</a></h3><p>这道题如果时间复杂度没有限定在 O(log(m+n))，我们可以用 O(m+n) 的算法解决，用两个指针分别指向两个数组，比较指针下的元素大小，一共移动次数为 (m+n + 1)/2，便是中位数。</p><p>首先，我们理解什么中位数：指的是该数左右个数相等。</p><p>比如：odd : [1,| 2 |,3]，2 就是这个数组的中位数，左右两边都只要 1 位；</p><p>even: [1,| 2, 3 |,4]，2,3 就是这个数组的中位数，左右两边 1 位；</p><p>那么，现在我们有两个数组：</p><p>num1: [a1,a2,a3,…an]</p><p>nums2: [b1,b2,b3,…bn]</p><p>[nums1[:left1],nums2[:left2] | nums1[left1:], nums2[left2:]]</p><p>只要保证左右两边 个数 相同，中位数就在 | 这个边界旁边产生。</p><p>如何找边界值，我们可以用二分法，我们先确定 num1 取 m1 个数的左半边，那么 num2 取 m2 = (m+n+1)/2 - m1 的左半边，找到合适的 m1，就用二分法找。</p><p>当 [ [a1],[b1,b2,b3] | [a2,..an],[b4,…bn] ]</p><p>我们只需要比较 b3 和 a2 的关系的大小，就可以知道这种分法是不是准确的！</p><p>例如：我们令：</p><p>nums1 = [-1,1,3,5,7,9]</p><p>nums2 =[2,4,6,8,10,12,14,16]</p><p>当 m1 = 4,m2 = 3 ,它的中位数就是median = (num1[m1] + num2[m2])/2</p><p>时间复杂度：O(log(min(m,n)))</p><p>对于代码中边界情况，大家需要自己琢磨。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMedianSortedArrays</span>(<span class="params">self, nums1: <span class="type">List</span>[<span class="built_in">int</span>], nums2: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">float</span>:</span></span><br><span class="line">        m, n = <span class="built_in">len</span>(nums1), <span class="built_in">len</span>(nums2)</span><br><span class="line">        <span class="keyword">if</span> m &gt; n: <span class="keyword">return</span> self.findMedianSortedArrays(nums2, nums1)</span><br><span class="line">        left, right = <span class="number">0</span>, m</span><br><span class="line">        half = (m + n + <span class="number">1</span>) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">while</span> left &lt; right:</span><br><span class="line">            i = (left + right) // <span class="number">2</span></span><br><span class="line">            j = half - i</span><br><span class="line">            <span class="keyword">if</span> nums1[i] &lt; nums2[j - <span class="number">1</span>]:</span><br><span class="line">                left = i + <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right = i</span><br><span class="line">        i, j = left, half - left</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> i == <span class="number">0</span>:</span><br><span class="line">            mid1 = nums2[j - <span class="number">1</span>]</span><br><span class="line">        <span class="keyword">elif</span> j == <span class="number">0</span>:</span><br><span class="line">            mid1 = nums1[i - <span class="number">1</span>]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            mid1 = <span class="built_in">max</span>(nums1[i - <span class="number">1</span>], nums2[j - <span class="number">1</span>])</span><br><span class="line">        <span class="keyword">if</span> (m + n) &amp; <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> mid1</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> i == m:</span><br><span class="line">            mid2 = nums2[j]</span><br><span class="line">        <span class="keyword">elif</span> j == n:</span><br><span class="line">            mid2 = nums1[i]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            mid2 = <span class="built_in">min</span>(nums1[i], nums2[j])</span><br><span class="line">        <span class="keyword">return</span> (mid1 + mid2) / <span class="number">2</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;4-Median-of-Two-Sorted-Arrays-hard&quot;&gt;&lt;a href=&quot;#4-Median-of-Two-Sorted-Arrays-hard&quot; class=&quot;headerlink&quot; title=&quot;4. Median of Two Sorted </summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-    <category term="binary search" scheme="http://example.com/tags/binary-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1832. Check if the Sentence Is Pangram(easy)</title>
-    <link href="http://example.com/2022/10/17/1832/"/>
-    <id>http://example.com/2022/10/17/1832/</id>
-    <published>2022-10-17T19:15:49.000Z</published>
-    <updated>2022-10-19T20:46:32.914Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1832-Check-if-the-Sentence-Is-Pangram-easy"><a href="#1832-Check-if-the-Sentence-Is-Pangram-easy" class="headerlink" title="1832. Check if the Sentence Is Pangram(easy)"></a>1832. Check if the Sentence Is Pangram(easy)</h1><h2 id="A-pangram-is-a-sentence-where-every-letter-of-the-English-alphabet-appears-at-least-once"><a href="#A-pangram-is-a-sentence-where-every-letter-of-the-English-alphabet-appears-at-least-once" class="headerlink" title="A pangram is a sentence where every letter of the English alphabet appears at least once."></a>A pangram is a sentence where every letter of the English alphabet appears at least once.</h2><h2 id="Given-a-string-sentence-containing-only-lowercase-English-letters-return-true-if-sentence-is-a-pangram-or-false-otherwise"><a href="#Given-a-string-sentence-containing-only-lowercase-English-letters-return-true-if-sentence-is-a-pangram-or-false-otherwise" class="headerlink" title="Given a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise."></a>Given a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.</h2><p>利用set的特性判断无重复后是否有26个字母</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">checkIfPangram</span>(<span class="params">self, sentence: <span class="built_in">str</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(sentence)&lt;=<span class="number">25</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(<span class="built_in">set</span>(sentence))==<span class="number">26</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1832-Check-if-the-Sentence-Is-Pangram-easy&quot;&gt;&lt;a href=&quot;#1832-Check-if-the-Sentence-Is-Pangram-easy&quot; class=&quot;headerlink&quot; title=&quot;1832. Ch</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
     
     <category term="string" scheme="http://example.com/tags/string/"/>
     
