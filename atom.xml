@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-07T22:00:24.712Z</updated>
+  <updated>2022-11-08T22:15:11.092Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>746. Min Cost Climbing Stairs(easy)</title>
+    <link href="http://example.com/2022/11/08/746/"/>
+    <id>http://example.com/2022/11/08/746/</id>
+    <published>2022-11-08T22:14:38.000Z</published>
+    <updated>2022-11-08T22:15:11.092Z</updated>
+    
+    <content type="html"><![CDATA[<p>You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps.</p><p>You can either start from the step with index 0, or the step with index 1.</p><p>Return the minimum cost to reach the top of the floor.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6. Zigzag Conversion(medium)</title>
+    <link href="http://example.com/2022/11/07/6/"/>
+    <id>http://example.com/2022/11/07/6/</id>
+    <published>2022-11-07T22:13:20.000Z</published>
+    <updated>2022-11-07T22:17:49.821Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="6-Zigzag-Conversion-medium"><a href="#6-Zigzag-Conversion-medium" class="headerlink" title="6. Zigzag Conversion(medium)"></a>6. Zigzag Conversion(medium)</h1><h2 id="The-string-“PAYPALISHIRING”-is-written-in-a-zigzag-pattern-on-a-given-number-of-rows-like-this-you-may-want-to-display-this-pattern-in-a-fixed-font-for-better-legibility"><a href="#The-string-“PAYPALISHIRING”-is-written-in-a-zigzag-pattern-on-a-given-number-of-rows-like-this-you-may-want-to-display-this-pattern-in-a-fixed-font-for-better-legibility" class="headerlink" title="The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)"></a>The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">P   A   H   N</span><br><span class="line">A P L S I I G</span><br><span class="line">Y   I   R</span><br></pre></td></tr></table></figure><p>And then read line by line: “PAHNAPLSIIGYIR”</p><p>Write the code that will take a string and make this conversion given a number of rows:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string convert(string s, int numRows);</span><br></pre></td></tr></table></figure><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a><a href="https://leetcode.cn/problems/zigzag-conversion/solutions/21610/zzi-xing-bian-huan-by-jyd/">题解</a></h3><p>这道题没有用到什么独特的数据结构或者算法，但是这里用一个flag记录是否要反方向记录</p><p>解题思路：<br>题目理解：<br>字符串 s 是以 Z 字形为顺序存储的字符串，目标是按行打印。<br>设 numRows 行字符串分别为 s1, s2s_2s<br>2,…, sn，则容易发现：按顺序遍历字符串 s 时，每个字符 c 在 Z 字形中对应的行索引先从 s1增大至 sn，再从 sn减小至 s1…… 如此反复。<br>因此，解决方案为：模拟这个行索引的变化，在遍历 s 中把每个字符填到正确的行 res[i] 。<br>算法流程： 按顺序遍历字符串 s；<br>res[i] += c： 把每个字符 c 填入对应行 si；<br>i += flag： 更新当前字符 c 对应的行索引；<br>flag = - flag： 在达到 ZZZ 字形转折点时，执行反向。<br>复杂度分析：<br>时间复杂度 O(N) ：遍历一遍字符串 s；<br>空间复杂度 O(N) ：各行字符串共占用 O(N)额外空间。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">convert</span>(<span class="params">self, s: <span class="built_in">str</span>, numRows: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        <span class="keyword">if</span> numRows &lt; <span class="number">2</span>: <span class="keyword">return</span> s</span><br><span class="line">        res = [<span class="string">&quot;&quot;</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(numRows)]</span><br><span class="line">        i, flag = <span class="number">0</span>, -<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            res[i] += c</span><br><span class="line">            <span class="keyword">if</span> i == <span class="number">0</span> <span class="keyword">or</span> i == numRows - <span class="number">1</span>: flag = -flag</span><br><span class="line">            i += flag</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(res)</span><br></pre></td></tr></table></figure><p>确实是非常巧妙的方法</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;6-Zigzag-Conversion-medium&quot;&gt;&lt;a href=&quot;#6-Zigzag-Conversion-medium&quot; class=&quot;headerlink&quot; title=&quot;6. Zigzag Conversion(medium)&quot;&gt;&lt;/a&gt;6. Zig</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+  </entry>
   
   <entry>
     <title>1684. Count the Number of Consistent Strings(easy)</title>
@@ -535,64 +591,6 @@
     <category term="array" scheme="http://example.com/tags/array/"/>
     
     <category term="string" scheme="http://example.com/tags/string/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1636. Sort Array by Increasing Frequency(easy)</title>
-    <link href="http://example.com/2022/10/31/1636/"/>
-    <id>http://example.com/2022/10/31/1636/</id>
-    <published>2022-11-01T01:50:56.000Z</published>
-    <updated>2022-11-01T02:08:08.545Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1636-Sort-Array-by-Increasing-Frequency-easy"><a href="#1636-Sort-Array-by-Increasing-Frequency-easy" class="headerlink" title="1636. Sort Array by Increasing Frequency(easy)"></a>1636. Sort Array by Increasing Frequency(easy)</h1><h2 id="Given-an-array-of-integers-nums-sort-the-array-in-increasing-order-based-on-the-frequency-of-the-values-If-multiple-values-have-the-same-frequency-sort-them-in-decreasing-order"><a href="#Given-an-array-of-integers-nums-sort-the-array-in-increasing-order-based-on-the-frequency-of-the-values-If-multiple-values-have-the-same-frequency-sort-them-in-decreasing-order" class="headerlink" title="Given an array of integers nums, sort the array in increasing order based on the frequency of the values. If multiple values have the same frequency, sort them in decreasing order."></a>Given an array of integers nums, sort the array in increasing order based on the frequency of the values. If multiple values have the same frequency, sort them in decreasing order.</h2><h2 id="Return-the-sorted-array"><a href="#Return-the-sorted-array" class="headerlink" title="Return the sorted array."></a>Return the sorted array.</h2><p>对hashmap的value进行升序排序，简单但有用<br>当frequency相同时，数值按降序排列</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">frequencySort</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        cnt=Counter(nums)</span><br><span class="line">        nums.sort(key=<span class="keyword">lambda</span> x:(cnt[x],-x) )</span><br><span class="line">        <span class="keyword">return</span> nums</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>例：<br>输入nums = [2,3,1,3,2]<br>得到 cnt : Counter({2: 2, 3: 2, 1: 1})</p><p>无参的 sort() 会依次对nums的值升序排序<br>而 sort(key) 会先把nums的值传给表达式key,按照key返回的值大小再给对应的nums排序<br>第1次传2，(cnt[2], -2)) 得到 (2,-2)<br>第2次传3，(cnt[3], -3)) 得到 (2,-3)<br>第3次传1，(cnt[1], -1)) 得到 (1,-1)<br>第4次传3，(cnt[3], -3)) 得到 (2,-3)<br>第5次传2，(cnt[2], -2)) 得到 (2,-2)<br>排序顺序为(1,-1),(2,-3),(2,-3),(2,-2),(2,-2)<br>对应的nums的值为1,3,3,2,2</p><p>sort是针对于列表的排列方法。默认升序排序。key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。此处传入的是一个元组，先以第一个字段进行排列。第一个字段一样，再以第二个字段进行排序。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1636-Sort-Array-by-Increasing-Frequency-easy&quot;&gt;&lt;a href=&quot;#1636-Sort-Array-by-Increasing-Frequency-easy&quot; class=&quot;headerlink&quot; title=&quot;1636</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>8. String to Integer (atoi)(medium)</title>
-    <link href="http://example.com/2022/10/19/8/"/>
-    <id>http://example.com/2022/10/19/8/</id>
-    <published>2022-10-19T20:41:22.000Z</published>
-    <updated>2022-10-19T21:37:33.291Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="8-String-to-Integer-atoi-medium"><a href="#8-String-to-Integer-atoi-medium" class="headerlink" title="8. String to Integer (atoi)(medium)"></a>8. String to Integer (atoi)(medium)</h1><h2 id="Implement-the-myAtoi-string-s-function-which-converts-a-string-to-a-32-bit-signed-integer-similar-to-C-C-’s-atoi-function"><a href="#Implement-the-myAtoi-string-s-function-which-converts-a-string-to-a-32-bit-signed-integer-similar-to-C-C-’s-atoi-function" class="headerlink" title="Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++’s atoi function)."></a>Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++’s atoi function).</h2><h2 id="The-algorithm-for-myAtoi-string-s-is-as-follows"><a href="#The-algorithm-for-myAtoi-string-s-is-as-follows" class="headerlink" title="The algorithm for myAtoi(string s) is as follows:"></a>The algorithm for myAtoi(string s) is as follows:</h2><p>Read in and ignore any leading whitespace.<br>Check if the next character (if not already at the end of the string) is ‘-‘ or ‘+’. Read this character in if it is either. This determines if the final result is negative or positive respectively. Assume the result is positive if neither is present.<br>Read in next the characters until the next non-digit character or the end of the input is reached. The rest of the string is ignored.<br>Convert these digits into an integer (i.e. “123” -&gt; 123, “0032” -&gt; 32). If no digits were read, then the integer is 0. Change the sign as necessary (from step 2).<br>If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then clamp the integer so that it remains in the range. Specifically, integers less than -231 should be clamped to -231, and integers greater than 231 - 1 should be clamped to 231 - 1.<br>Return the integer as the final result.</p><p>请你来实现一个 myAtoi(string s) 函数，使其能将字符串转换成一个 32 位有符号整数（类似 C/C++ 中的 atoi 函数）。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;42&quot;</span><br><span class="line">输出：42</span><br><span class="line">解释：加粗的字符串为已经读入的字符，插入符号是当前读取的字符。</span><br><span class="line">第 1 步：&quot;42&quot;（当前没有读入字符，因为没有前导空格）</span><br><span class="line">         ^</span><br><span class="line">第 2 步：&quot;42&quot;（当前没有读入字符，因为这里不存在 &#x27;-&#x27; 或者 &#x27;+&#x27;）</span><br><span class="line">         ^</span><br><span class="line">第 3 步：&quot;42&quot;（读入 &quot;42&quot;）</span><br><span class="line">           ^</span><br><span class="line">解析得到整数 42 。</span><br><span class="line">由于 &quot;42&quot; 在范围 [-231, 231 - 1] 内，最终结果为 42 。</span><br></pre></td></tr></table></figure><h3 id="方法一：正则表达式"><a href="#方法一：正则表达式" class="headerlink" title="方法一：正则表达式"></a>方法一：<a href="https://leetcode.cn/problems/string-to-integer-atoi/solution/python-1xing-zheng-ze-biao-da-shi-by-knifezhu/">正则表达式</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">myAtoi</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(<span class="built_in">min</span>(<span class="built_in">int</span>(*re.findall(<span class="string">&#x27;^[\+\-]?\d+&#x27;</span>, s.lstrip())), <span class="number">2</span>**<span class="number">31</span> - <span class="number">1</span>), -<span class="number">2</span>**<span class="number">31</span>)</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">正则表达re模块</span><br><span class="line">re.findall</span><br><span class="line">返回string中所有与pattern匹配的全部字符串,返回形式为数组。</span><br><span class="line">^：匹配字符串开头</span><br><span class="line">[\+\-]：代表一个+字符或-字符</span><br><span class="line">?：前面一个字符可有可无</span><br><span class="line">\d：一个数字</span><br><span class="line">+：前面一个字符的一个或多个</span><br><span class="line">\D：一个非数字字符</span><br><span class="line">*：前面一个字符的0个或多个</span><br><span class="line">Python lstrip() 方法用于截掉字符串左边的空格或指定字符</span><br></pre></td></tr></table></figure><p>详细版</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">myAtoi</span>(<span class="params">self, <span class="built_in">str</span>: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        INT_MAX = <span class="number">2147483647</span>    </span><br><span class="line">        INT_MIN = -<span class="number">2147483648</span></span><br><span class="line">        <span class="built_in">str</span> = <span class="built_in">str</span>.lstrip()      <span class="comment">#清除左边多余的空格</span></span><br><span class="line">        num_re = re.<span class="built_in">compile</span>(<span class="string">r&#x27;^[\+\-]?\d+&#x27;</span>)   <span class="comment">#设置正则规则</span></span><br><span class="line">        num = num_re.findall(<span class="built_in">str</span>)   <span class="comment">#查找匹配的内容</span></span><br><span class="line">        num = <span class="built_in">int</span>(*num) <span class="comment">#由于返回的是个列表，解包并且转换成整数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(<span class="built_in">min</span>(num,INT_MAX),INT_MIN)    <span class="comment">#返回值</span></span><br></pre></td></tr></table></figure><h3 id="方法二：有限状态机"><a href="#方法二：有限状态机" class="headerlink" title="方法二：有限状态机"></a>方法二：<a href="https://leetcode.cn/problems/string-to-integer-atoi/solution/zi-fu-chuan-zhuan-huan-zheng-shu-atoi-by-leetcode-/">有限状态机</a></h3><p>准确地说，这是确定有限状态机（deterministic finite automaton, DFA）。</p><p>我们的程序在每个时刻有一个状态 s，每次从序列中输入一个字符 c，并根据字符 c 转移到下一个状态 s’。这样，我们只需要建立一个覆盖所有情况的从 s 与 c 映射到 s’ 的表格即可解决题目中的问题。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">INT_MAX = <span class="number">2</span> ** <span class="number">31</span> - <span class="number">1</span></span><br><span class="line">INT_MIN = -<span class="number">2</span> ** <span class="number">31</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Automaton</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.state = <span class="string">&#x27;start&#x27;</span></span><br><span class="line">        self.sign = <span class="number">1</span></span><br><span class="line">        self.ans = <span class="number">0</span></span><br><span class="line">        self.table = &#123;</span><br><span class="line">            <span class="string">&#x27;start&#x27;</span>: [<span class="string">&#x27;start&#x27;</span>, <span class="string">&#x27;signed&#x27;</span>, <span class="string">&#x27;in_number&#x27;</span>, <span class="string">&#x27;end&#x27;</span>],</span><br><span class="line">            <span class="string">&#x27;signed&#x27;</span>: [<span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;in_number&#x27;</span>, <span class="string">&#x27;end&#x27;</span>],</span><br><span class="line">            <span class="string">&#x27;in_number&#x27;</span>: [<span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;in_number&#x27;</span>, <span class="string">&#x27;end&#x27;</span>],</span><br><span class="line">            <span class="string">&#x27;end&#x27;</span>: [<span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;end&#x27;</span>, <span class="string">&#x27;end&#x27;</span>],</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_col</span>(<span class="params">self, c</span>):</span></span><br><span class="line">        <span class="keyword">if</span> c.isspace():</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> c == <span class="string">&#x27;+&#x27;</span> <span class="keyword">or</span> c == <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> c.isdigit():</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span>(<span class="params">self, c</span>):</span></span><br><span class="line">        self.state = self.table[self.state][self.get_col(c)]</span><br><span class="line">        <span class="keyword">if</span> self.state == <span class="string">&#x27;in_number&#x27;</span>:</span><br><span class="line">            self.ans = self.ans * <span class="number">10</span> + <span class="built_in">int</span>(c)</span><br><span class="line">            self.ans = <span class="built_in">min</span>(self.ans, INT_MAX) <span class="keyword">if</span> self.sign == <span class="number">1</span> <span class="keyword">else</span> <span class="built_in">min</span>(self.ans, -INT_MIN)</span><br><span class="line">        <span class="keyword">elif</span> self.state == <span class="string">&#x27;signed&#x27;</span>:</span><br><span class="line">            self.sign = <span class="number">1</span> <span class="keyword">if</span> c == <span class="string">&#x27;+&#x27;</span> <span class="keyword">else</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">myAtoi</span>(<span class="params">self, <span class="built_in">str</span>: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        automaton = Automaton()</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> <span class="built_in">str</span>:</span><br><span class="line">            automaton.get(c)</span><br><span class="line">        <span class="keyword">return</span> automaton.sign * automaton.ans</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;8-String-to-Integer-atoi-medium&quot;&gt;&lt;a href=&quot;#8-String-to-Integer-atoi-medium&quot; class=&quot;headerlink&quot; title=&quot;8. String to Integer (atoi)(me</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
-    
-    <category term="DFA" scheme="http://example.com/tags/DFA/"/>
     
   </entry>
   
