@@ -4,6 +4,159 @@
   
     
     <entry>
+      <title>2131. Longest Palindrome by Concatenating Two Letter Words(medium)</title>
+      <link href="/2022/11/12/2131/"/>
+      <url>/2022/11/12/2131/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2131-Longest-Palindrome-by-Concatenating-Two-Letter-Words-medium"><a href="#2131-Longest-Palindrome-by-Concatenating-Two-Letter-Words-medium" class="headerlink" title="2131. Longest Palindrome by Concatenating Two Letter Words(medium)"></a>2131. Longest Palindrome by Concatenating Two Letter Words(medium)</h1><h2 id="You-are-given-an-array-of-strings-words-Each-element-of-words-consists-of-two-lowercase-English-letters"><a href="#You-are-given-an-array-of-strings-words-Each-element-of-words-consists-of-two-lowercase-English-letters" class="headerlink" title="You are given an array of strings words. Each element of words consists of two lowercase English letters."></a>You are given an array of strings words. Each element of words consists of two lowercase English letters.</h2><h2 id="Create-the-longest-possible-palindrome-by-selecting-some-elements-from-words-and-concatenating-them-in-any-order-Each-element-can-be-selected-at-most-once"><a href="#Create-the-longest-possible-palindrome-by-selecting-some-elements-from-words-and-concatenating-them-in-any-order-Each-element-can-be-selected-at-most-once" class="headerlink" title="Create the longest possible palindrome by selecting some elements from words and concatenating them in any order. Each element can be selected at most once."></a>Create the longest possible palindrome by selecting some elements from words and concatenating them in any order. Each element can be selected at most once.</h2><h2 id="Return-the-length-of-the-longest-palindrome-that-you-can-create-If-it-is-impossible-to-create-any-palindrome-return-0"><a href="#Return-the-length-of-the-longest-palindrome-that-you-can-create-If-it-is-impossible-to-create-any-palindrome-return-0" class="headerlink" title="Return the length of the longest palindrome that you can create. If it is impossible to create any palindrome, return 0."></a>Return the length of the longest palindrome that you can create. If it is impossible to create any palindrome, return 0.</h2><h2 id="A-palindrome-is-a-string-that-reads-the-same-forward-and-backward"><a href="#A-palindrome-is-a-string-that-reads-the-same-forward-and-backward" class="headerlink" title="A palindrome is a string that reads the same forward and backward."></a>A palindrome is a string that reads the same forward and backward.</h2><p><a href="https://leetcode.cn/problems/longest-palindrome-by-concatenating-two-letter-words/solutions/1202034/lian-jie-liang-zi-mu-dan-ci-de-dao-de-zu-vs99/">力扣官方题解</a></p><p>方法一：贪心 + 哈希表<br>思路与算法</p><p>根据回文串的定义，回文串可以由奇数或者偶数个 words 中的单词拼接而成，但必须满足以下条件：</p><p>如果数量为奇数，那么位于正中间的单词必须是回文字符串（即两个字符相等）；</p><p>每个单词和反转后对应位置的单词必须互为反转字符串。</p><p>根据上面的两个条件，我们可以得出构造最长回文串的规则：</p><p>对于两个字符不同的单词，需要尽可能多的成对选择它和它的反转字符串（如有）；</p><p>对于两个字符相同的单词，需要尽可能多的成对选择该单词；</p><p>如果按照上述条件挑选后，仍然存在未被选择的两个字符相同的单词（此时该字符串只可能有一个未被选择，且该字符串一定在 words 中出现奇数次），我们可以任意选择一个。</p><p>因此，我们用哈希表统计 words 中每个单词的出现次数。随后，我们遍历哈希表的所有元素，并用 res 维护可能构成回文字符串的最长长度，同时用初值为 false 的布尔变量 mid 判断是否存在可以作为中心单词的、出现奇数次的回文单词。在遍历到字符串 word 时，我们首先求出它反转后的字符串 rev，此时根据 word 与 rev 的关系，有以下两种情况：</p><p>word≠rev，此时我们需要统计两者在 words 出现次数的最小值，即为成对选择的最多数目。假设此时对数为 n，则其对最长回文字符串贡献的字符长度为 4n，我们将 res 加上对应值；</p><p>word=rev，此时可以构成的对数为 ⌊m/2⌋，即对最长回文字符串贡献的字符长度为 4⌊m/2⌋，我们同样将 res 加上对应值。除此以外，我们还需要判断 word 的出现次数 m 是否为奇数：</p><p>如果 m 为奇数，则存在可以作为中心单词的剩余回文单词，我们将 mid 置为 true；</p><p>如果 m 为偶数，则不存在可以作为中心单词的剩余回文单词，我们不改变 mid 的取值。</p><p>最后，我们根据 mid 的取值，判断最长回文串是否含有中心单词。如果 mid 为 true，则代表含有，我们将 res 加上 2；反之则没有，我们不进行任何操作。</p><p>最后，我们返回 res 作为最长回文串的长度。</p><p>细节</p><p>在遍历哈希表中的每个单词时，为了避免重复计算成对选择的单词，我们只在 word 的字典序大于等于 rev 时更新 res。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestPalindrome</span>(<span class="params">self, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        freq = Counter(words)   <span class="comment"># 单词出现次数</span></span><br><span class="line">        res = <span class="number">0</span>   <span class="comment"># 最长回文串长度</span></span><br><span class="line">        mid = <span class="literal">False</span>   <span class="comment"># 是否含有中心单词</span></span><br><span class="line">        <span class="keyword">for</span> word, cnt <span class="keyword">in</span> freq.items():</span><br><span class="line">            <span class="comment"># 遍历出现的单词，并更新长度</span></span><br><span class="line">            rev = word[<span class="number">1</span>] + word[<span class="number">0</span>]   <span class="comment"># 反转后的单词</span></span><br><span class="line">            <span class="keyword">if</span> word == rev:</span><br><span class="line">                <span class="keyword">if</span> cnt % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                    mid = <span class="literal">True</span></span><br><span class="line">                res += <span class="number">2</span> * (cnt // <span class="number">2</span> * <span class="number">2</span>)</span><br><span class="line">            <span class="keyword">elif</span> word &gt; rev:   <span class="comment"># 避免重复遍历</span></span><br><span class="line">                res += <span class="number">4</span> * <span class="built_in">min</span>(freq[word], freq[rev])</span><br><span class="line">        <span class="keyword">if</span> mid:</span><br><span class="line">            <span class="comment"># 含有中心单词，更新长度</span></span><br><span class="line">            res += <span class="number">2</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> hashmap </tag>
+            
+            <tag> greedy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1641. Count Sorted Vowel Strings(medium)</title>
+      <link href="/2022/11/12/1641/"/>
+      <url>/2022/11/12/1641/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1641-Count-Sorted-Vowel-Strings-medium"><a href="#1641-Count-Sorted-Vowel-Strings-medium" class="headerlink" title="1641. Count Sorted Vowel Strings(medium)"></a>1641. Count Sorted Vowel Strings(medium)</h1><h2 id="Given-an-integer-n-return-the-number-of-strings-of-length-n-that-consist-only-of-vowels-a-e-i-o-u-and-are-lexicographically-sorted"><a href="#Given-an-integer-n-return-the-number-of-strings-of-length-n-that-consist-only-of-vowels-a-e-i-o-u-and-are-lexicographically-sorted" class="headerlink" title="Given an integer n, return the number of strings of length n that consist only of vowels (a, e, i, o, u) and are lexicographically sorted."></a>Given an integer n, return the number of strings of length n that consist only of vowels (a, e, i, o, u) and are lexicographically sorted.</h2><h2 id="A-string-s-is-lexicographically-sorted-if-for-all-valid-i-s-i-is-the-same-as-or-comes-before-s-i-1-in-the-alphabet"><a href="#A-string-s-is-lexicographically-sorted-if-for-all-valid-i-s-i-is-the-same-as-or-comes-before-s-i-1-in-the-alphabet" class="headerlink" title="A string s is lexicographically sorted if for all valid i, s[i] is the same as or comes before s[i+1] in the alphabet."></a>A string s is lexicographically sorted if for all valid i, s[i] is the same as or comes before s[i+1] in the alphabet.</h2><h3 id="官方解法"><a href="#官方解法" class="headerlink" title="官方解法"></a><a href="">官方解法</a></h3><h3 id="数学解法"><a href="#数学解法" class="headerlink" title="数学解法"></a><a href="https://leetcode.cn/problems/count-sorted-vowel-strings/solutions/469467/zhong-xue-shu-xue-ke-pu-n-ge-xiao-qiu-fang-dao-m-g/">数学解法</a></h3><p>看到题目的第一眼就感觉这是排列组合，但没想好怎么写出排列的公式，这位大佬的思路太牛了：</p><h4 id="这个问题的数学解法，可以把问题转换成将-n-个小球放到-5-个盒子里，盒子可以为空。"><a href="#这个问题的数学解法，可以把问题转换成将-n-个小球放到-5-个盒子里，盒子可以为空。" class="headerlink" title="这个问题的数学解法，可以把问题转换成将 n 个小球放到 5 个盒子里，盒子可以为空。"></a>这个问题的数学解法，可以把问题转换成将 n 个小球放到 5 个盒子里，盒子可以为空。</h4><p>我们可以想象成把 n 个字符分配给五个元音所代表的盒子中。一旦每个盒子中的字符个数定了，那么这个字符串也固定下来了。因为题目要求必须是字典序，所以一定 a 字符在最前；其次是 e 字符；其次是 i 字符；其次是 o 字符；其次是 u 字符。</p><p>下面问题的关键就是，n 个小球放到 5 个盒子里，盒子可以为空，一共有多少种方法？</p><p>这是经典的中学数学问题。更一般的，我们来探讨，将 n 个小球放到 m 个盒子里，有多少种方法？</p><p>首先，我们考虑问题的简单版本，即盒子不能为空的情况。</p><p>此时，我们只需要在 n 个小球排成一排，中间放 m - 1 个隔板，放好以后，相当于把 n 个小球分成了 m 份。每一份对应一个盒子里的小球数量。</p><p>因为盒子不能为空，所以两个小球之间不可能放多个隔板，左右两端也不可能放隔板。因此，放隔板的位置有 n - 1 个，我们要放 m - 1 个隔板。答案为 C(n - 1, m - 1)。</p><p>有了这个结论，再来讨论问题的复杂版本，就简单了，即盒子可以为空的情况。</p><p>此时，我们只需要先拿 m 个新的小球，在 m 个盒子里，每个盒子中扔进去一个小球。之后，再分配原来的这 n 个小球，得到的分配结果，肯定 m 个盒子里都不为空。但此时，我们使用了 n + m 个小球。</p><p>换句话说，把 n 个小球放到 m 个盒子里，盒子可以为空，等价于：把 n + m 个小球放到 m 个盒子里，盒子不能为空。</p><p>大家也可以想成是：我们先把 n + m 个小球放到 m 个盒子里，盒子不能为空，然后再在每个盒子里拿走 1 个小球，总共拿走了 m 个小球，得到的结果，就是把 n 个小球放到 m 个盒子里，盒子可以为空的解。</p><p>把 n + m 个小球放到 m 个盒子里，盒子不能为空的分法，带入上面的公式，就是 C(n + m - 1, m - 1)</p><p>所以，把 n 个小球放到 m 个盒子里，盒子可以为空，答案为 C(n + m - 1, m - 1)。</p><h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>将 n 个小球放到 m 个盒子里，盒子不为空：C(n - 1, m - 1)；</p><p>将 n 个小球放到 m 个盒子里，盒子可以空：C(n + m - 1, m - 1)；</p><p>对于这个问题，m = 5，盒子可以为空，所以答案是 C(n + 5 - 1, 5 - 1) = C(n + 4, 4)</p><h4 id="提醒："><a href="#提醒：" class="headerlink" title="提醒："></a>提醒：</h4><p>分成五个盒子，首先不论空与不空，我们的五个盒子最终组成我们答案的形式是生成与每个盒子数量相等的对应字符串，然后把五个字符串穿起来，如aa+e+i+o+u这种，盒子里球的数量是某一个元音字母连续出现的数量，所以可以空</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> math </tag>
+            
+            <tag> dynamic programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1646. Get Maximum in Generated Array(easy)</title>
+      <link href="/2022/11/10/1646/"/>
+      <url>/2022/11/10/1646/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1646-Get-Maximum-in-Generated-Array-easy"><a href="#1646-Get-Maximum-in-Generated-Array-easy" class="headerlink" title="1646. Get Maximum in Generated Array(easy)"></a>1646. Get Maximum in Generated Array(easy)</h1><h2 id="You-are-given-an-integer-n-A-0-indexed-integer-array-nums-of-length-n-1-is-generated-in-the-following-way"><a href="#You-are-given-an-integer-n-A-0-indexed-integer-array-nums-of-length-n-1-is-generated-in-the-following-way" class="headerlink" title="You are given an integer n. A 0-indexed integer array nums of length n + 1 is generated in the following way:"></a>You are given an integer n. A 0-indexed integer array nums of length n + 1 is generated in the following way:</h2><p>nums[0] = 0<br>nums[1] = 1<br>nums[2 * i] = nums[i] when 2 &lt;= 2 * i &lt;= n<br>nums[2 * i + 1] = nums[i] + nums[i + 1] when 2 &lt;= 2 * i + 1 &lt;= n<br>Return the maximum integer in the array nums​​​.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 7</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: According to the given rules:</span><br><span class="line">  nums[0] = 0</span><br><span class="line">  nums[1] = 1</span><br><span class="line">  nums[(1 * 2) = 2] = nums[1] = 1</span><br><span class="line">  nums[(1 * 2) + 1 = 3] = nums[1] + nums[2] = 1 + 1 = 2</span><br><span class="line">  nums[(2 * 2) = 4] = nums[2] = 1</span><br><span class="line">  nums[(2 * 2) + 1 = 5] = nums[2] + nums[3] = 1 + 2 = 3</span><br><span class="line">  nums[(3 * 2) = 6] = nums[3] = 2</span><br><span class="line">  nums[(3 * 2) + 1 = 7] = nums[3] + nums[4] = 2 + 1 = 3</span><br><span class="line">Hence, nums = [0,1,1,2,1,3,2,3], and the maximum is max(0,1,1,2,1,3,2,3) = 3.</span><br></pre></td></tr></table></figure><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/get-maximum-in-generated-array/solutions/952714/huo-qu-sheng-cheng-shu-zu-zhong-de-zui-d-0z2l/">官方题解</a></h3><p>我们可以直接根据题目中描述的规则来计算出 nums 数组，并返回其最大元素。</p><p>为了简化代码逻辑，我们可以化简题目中的递推式。当 i≥2 时：</p><p>当i为偶数，nums[i]=nums[i//2]<br>当i为奇数，nums[i]=nums[i//2]+nums[i//2+1]</p><p>所以总结在一起是，nums[i]=nums[i//2]+i%2*nums[i//2+1]</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getMaximumGenerated</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> n==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        dp=[<span class="number">0</span>]*(n+<span class="number">1</span>)</span><br><span class="line">        dp[<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">            dp[i]=dp[i//<span class="number">2</span>]+i%<span class="number">2</span>*dp[i//<span class="number">2</span>+<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(dp)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> math </tag>
+            
+            <tag> dynamic programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1025. Divisor Game(easy)</title>
+      <link href="/2022/11/10/1025/"/>
+      <url>/2022/11/10/1025/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1025-Divisor-Game-easy"><a href="#1025-Divisor-Game-easy" class="headerlink" title="1025. Divisor Game(easy)"></a>1025. Divisor Game(easy)</h1><h2 id="Alice-and-Bob-take-turns-playing-a-game-with-Alice-starting-first"><a href="#Alice-and-Bob-take-turns-playing-a-game-with-Alice-starting-first" class="headerlink" title="Alice and Bob take turns playing a game, with Alice starting first."></a>Alice and Bob take turns playing a game, with Alice starting first.</h2><h2 id="Initially-there-is-a-number-n-on-the-chalkboard-On-each-player’s-turn-that-player-makes-a-move-consisting-of"><a href="#Initially-there-is-a-number-n-on-the-chalkboard-On-each-player’s-turn-that-player-makes-a-move-consisting-of" class="headerlink" title="Initially, there is a number n on the chalkboard. On each player’s turn, that player makes a move consisting of:"></a>Initially, there is a number n on the chalkboard. On each player’s turn, that player makes a move consisting of:</h2><p>Choosing any x with 0 &lt; x &lt; n and n % x == 0.<br>Replacing the number n on the chalkboard with n - x.<br>Also, if a player cannot make a move, they lose the game.</p><h2 id="Return-true-if-and-only-if-Alice-wins-the-game-assuming-both-players-play-optimally"><a href="#Return-true-if-and-only-if-Alice-wins-the-game-assuming-both-players-play-optimally" class="headerlink" title="Return true if and only if Alice wins the game, assuming both players play optimally."></a>Return true if and only if Alice wins the game, assuming both players play optimally.</h2><p>基本思路：</p><p>最终结果应该是占到 2 的赢，占到 1 的输；</p><p>若当前为奇数，奇数的约数只能是奇数或者 1，因此下一个一定是偶数；</p><p>若当前为偶数， 偶数的约数可以是奇数可以是偶数也可以是 1，因此直接减 1，则下一个是奇数；</p><p>因此，奇则输，偶则赢。直接:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">divisorGame</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="keyword">return</span> n%<span class="number">2</span>==<span class="number">0</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> math </tag>
+            
+            <tag> dynamic programming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1047. Remove All Adjacent Duplicates In String(easy)</title>
+      <link href="/2022/11/10/1047/"/>
+      <url>/2022/11/10/1047/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1047-Remove-All-Adjacent-Duplicates-In-String-easy"><a href="#1047-Remove-All-Adjacent-Duplicates-In-String-easy" class="headerlink" title="1047. Remove All Adjacent Duplicates In String(easy)"></a>1047. Remove All Adjacent Duplicates In String(easy)</h1><h2 id="You-are-given-a-string-s-consisting-of-lowercase-English-letters-A-duplicate-removal-consists-of-choosing-two-adjacent-and-equal-letters-and-removing-them"><a href="#You-are-given-a-string-s-consisting-of-lowercase-English-letters-A-duplicate-removal-consists-of-choosing-two-adjacent-and-equal-letters-and-removing-them" class="headerlink" title="You are given a string s consisting of lowercase English letters. A duplicate removal consists of choosing two adjacent and equal letters and removing them."></a>You are given a string s consisting of lowercase English letters. A duplicate removal consists of choosing two adjacent and equal letters and removing them.</h2><h2 id="We-repeatedly-make-duplicate-removals-on-s-until-we-no-longer-can"><a href="#We-repeatedly-make-duplicate-removals-on-s-until-we-no-longer-can" class="headerlink" title="We repeatedly make duplicate removals on s until we no longer can."></a>We repeatedly make duplicate removals on s until we no longer can.</h2><h2 id="Return-the-final-string-after-all-such-duplicate-removals-have-been-made-It-can-be-proven-that-the-answer-is-unique"><a href="#Return-the-final-string-after-all-such-duplicate-removals-have-been-made-It-can-be-proven-that-the-answer-is-unique" class="headerlink" title="Return the final string after all such duplicate removals have been made. It can be proven that the answer is unique."></a>Return the final string after all such duplicate removals have been made. It can be proven that the answer is unique.</h2><p>这道题用栈就可以解决，输入进来判断和stack队首是否相等，如果相等就弹出，不相等就存进去</p><pre><code class="python">class Solution:    def removeDuplicates(self, s: str) -&gt; str:        stack=[]        for letter in s:            if stack and letter==stack[-1]:                stack.pop()            else:                stack.append(letter)        return &quot;&quot;.join(stack)</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> stack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>905. Sort Array By Parity(easy)</title>
       <link href="/2022/11/09/905/"/>
       <url>/2022/11/09/905/</url>
@@ -3627,7 +3780,7 @@
       <link href="/2022/09/11/LeetCode-skill8-two-pointers/"/>
       <url>/2022/09/11/LeetCode-skill8-two-pointers/</url>
       
-        <content type="html"><![CDATA[<p>滑动窗口：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 滑动窗口算法框架 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">slidingWindow</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">    unordered_map&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; window;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (right &lt; s.size()) &#123;</span><br><span class="line">        <span class="comment">// c 是将移入窗口的字符</span></span><br><span class="line">        <span class="keyword">char</span> c = s[right];</span><br><span class="line">        <span class="comment">// 增大窗口</span></span><br><span class="line">        right++;</span><br><span class="line">        <span class="comment">// 进行窗口内数据的一系列更新</span></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*** debug 输出的位置 ***/</span></span><br><span class="line">        printf(<span class="string">&quot;window: [%d, %d)\n&quot;</span>, left, right);</span><br><span class="line">        <span class="comment">/********************/</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 判断左侧窗口是否要收缩</span></span><br><span class="line">        <span class="keyword">while</span> (window needs shrink) &#123;</span><br><span class="line">            <span class="comment">// d 是将移出窗口的字符</span></span><br><span class="line">            <span class="keyword">char</span> d = s[left];</span><br><span class="line">            <span class="comment">// 缩小窗口</span></span><br><span class="line">            left++;</span><br><span class="line">            <span class="comment">// 进行窗口内数据的一系列更新</span></span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">slidingWindow</span>(<span class="params">string s</span>):</span></span><br><span class="line">    </span><br><span class="line">    window=&#123;&#125;</span><br><span class="line">    <span class="built_in">int</span> left = <span class="number">0</span>, right = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> right&lt;<span class="built_in">len</span>(s):</span><br><span class="line">        <span class="comment">#c 是将移入窗口的字符</span></span><br><span class="line">        c=s[right]</span><br><span class="line">        <span class="comment"># 增大窗口</span></span><br><span class="line">        right+=<span class="number">1</span></span><br><span class="line">        <span class="comment"># 进行窗口内数据的一系列更新</span></span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">#*** debug 输出的位置 ***/</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;window: [%d, %d)\n&quot;</span>, left, right)</span><br><span class="line">        <span class="comment">#********************/</span></span><br><span class="line">        <span class="comment"># 判断左侧窗口是否要收缩</span></span><br><span class="line">        <span class="keyword">while</span> (window needs shrink) </span><br><span class="line">            <span class="comment">#d 是将移出窗口的字符</span></span><br><span class="line">            d = s[left]</span><br><span class="line">            <span class="comment">#缩小窗口</span></span><br><span class="line">            left+=<span class="number">1</span></span><br><span class="line">            <span class="comment">#进行窗口内数据的一系列更新</span></span><br><span class="line">            ...</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p>滑动窗口框架：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 滑动窗口算法框架 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">slidingWindow</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">    unordered_map&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; window;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (right &lt; s.size()) &#123;</span><br><span class="line">        <span class="comment">// c 是将移入窗口的字符</span></span><br><span class="line">        <span class="keyword">char</span> c = s[right];</span><br><span class="line">        <span class="comment">// 增大窗口</span></span><br><span class="line">        right++;</span><br><span class="line">        <span class="comment">// 进行窗口内数据的一系列更新</span></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*** debug 输出的位置 ***/</span></span><br><span class="line">        printf(<span class="string">&quot;window: [%d, %d)\n&quot;</span>, left, right);</span><br><span class="line">        <span class="comment">/********************/</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 判断左侧窗口是否要收缩</span></span><br><span class="line">        <span class="keyword">while</span> (window needs shrink) &#123;</span><br><span class="line">            <span class="comment">// d 是将移出窗口的字符</span></span><br><span class="line">            <span class="keyword">char</span> d = s[left];</span><br><span class="line">            <span class="comment">// 缩小窗口</span></span><br><span class="line">            left++;</span><br><span class="line">            <span class="comment">// 进行窗口内数据的一系列更新</span></span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">slidingWindow</span>(<span class="params">string s</span>):</span></span><br><span class="line">    </span><br><span class="line">    window=&#123;&#125;</span><br><span class="line">    <span class="built_in">int</span> left = <span class="number">0</span>, right = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> right&lt;<span class="built_in">len</span>(s):</span><br><span class="line">        <span class="comment">#c 是将移入窗口的字符</span></span><br><span class="line">        c=s[right]</span><br><span class="line">        <span class="comment"># 增大窗口</span></span><br><span class="line">        right+=<span class="number">1</span></span><br><span class="line">        <span class="comment"># 进行窗口内数据的一系列更新</span></span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">#*** debug 输出的位置 ***/</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;window: [%d, %d)\n&quot;</span>, left, right)</span><br><span class="line">        <span class="comment">#********************/</span></span><br><span class="line">        <span class="comment"># 判断左侧窗口是否要收缩</span></span><br><span class="line">        <span class="keyword">while</span> (window needs shrink) </span><br><span class="line">            <span class="comment">#d 是将移出窗口的字符</span></span><br><span class="line">            d = s[left]</span><br><span class="line">            <span class="comment">#缩小窗口</span></span><br><span class="line">            left+=<span class="number">1</span></span><br><span class="line">            <span class="comment">#进行窗口内数据的一系列更新</span></span><br><span class="line">            ...</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -6225,6 +6378,10 @@
         <tags>
             
             <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> dynamic programming </tag>
             
         </tags>
       
