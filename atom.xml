@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-15T02:28:15.069Z</updated>
+  <updated>2022-11-15T23:03:55.405Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,295 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>507. Perfect Number(easy)</title>
+    <link href="http://example.com/2022/11/15/507/"/>
+    <id>http://example.com/2022/11/15/507/</id>
+    <published>2022-11-15T22:59:43.000Z</published>
+    <updated>2022-11-15T23:03:55.405Z</updated>
+    
+    <content type="html"><![CDATA[<p>A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. A divisor of an integer x is an integer that can divide x evenly.</p><p>Given an integer n, return true if n is a perfect number, otherwise return false.</p><p>所有的余数之和等于num本身</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">checkPerfectNumber</span>(<span class="params">self, num: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        res=[]</span><br><span class="line">        x=sqrt(num)</span><br><span class="line">        <span class="keyword">if</span> num==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">int</span>(x)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> num%i==<span class="number">0</span>:</span><br><span class="line">                res.append(i)</span><br><span class="line">                <span class="keyword">if</span> i!=<span class="number">1</span>:</span><br><span class="line">                    res.append(num//i)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span>(res)==num</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. A divisor of an in</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="math" scheme="http://example.com/tags/math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>504. Base 7(easy)</title>
+    <link href="http://example.com/2022/11/15/504/"/>
+    <id>http://example.com/2022/11/15/504/</id>
+    <published>2022-11-15T22:46:59.000Z</published>
+    <updated>2022-11-15T23:03:39.964Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="504-Base-7-easy"><a href="#504-Base-7-easy" class="headerlink" title="504. Base 7(easy)"></a>504. Base 7(easy)</h1><h2 id="Given-an-integer-num-return-a-string-of-its-base-7-representation"><a href="#Given-an-integer-num-return-a-string-of-its-base-7-representation" class="headerlink" title="Given an integer num, return a string of its base 7 representation."></a>Given an integer num, return a string of its base 7 representation.</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">convertToBase7</span>(<span class="params">self, num: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        res=<span class="built_in">list</span>()</span><br><span class="line">        x=num</span><br><span class="line">        num=<span class="built_in">abs</span>(num)</span><br><span class="line">        <span class="keyword">if</span> num==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;0&quot;</span></span><br><span class="line">        <span class="keyword">while</span> num!=<span class="number">0</span>:</span><br><span class="line">            carry=num%<span class="number">7</span></span><br><span class="line">            num=(num-carry)//<span class="number">7</span></span><br><span class="line">            res.append(carry)</span><br><span class="line">        res=res[::-<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">if</span> x&gt;<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(<span class="built_in">map</span>(<span class="built_in">str</span>,res))</span><br><span class="line">        <span class="keyword">elif</span> x&lt;<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;-&quot;</span>+<span class="string">&quot;&quot;</span>.join(<span class="built_in">map</span>(<span class="built_in">str</span>,res))</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;504-Base-7-easy&quot;&gt;&lt;a href=&quot;#504-Base-7-easy&quot; class=&quot;headerlink&quot; title=&quot;504. Base 7(easy)&quot;&gt;&lt;/a&gt;504. Base 7(easy)&lt;/h1&gt;&lt;h2 id=&quot;Given-an-</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>500. Keyboard Row(easy)</title>
+    <link href="http://example.com/2022/11/15/500/"/>
+    <id>http://example.com/2022/11/15/500/</id>
+    <published>2022-11-15T22:30:21.000Z</published>
+    <updated>2022-11-15T23:03:10.281Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="500-Keyboard-Row-easy"><a href="#500-Keyboard-Row-easy" class="headerlink" title="500. Keyboard Row(easy)"></a>500. Keyboard Row(easy)</h1><p>Given an array of strings words, return the words that can be typed using letters of the alphabet on only one row of American keyboard like the image below.</p><p>In the American keyboard:</p><p>the first row consists of the characters “qwertyuiop”,<br>the second row consists of the characters “asdfghjkl”, and<br>the third row consists of the characters “zxcvbnm”.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findWords</span>(<span class="params">self, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">str</span>]:</span></span><br><span class="line">        s1 = <span class="string">&quot;qwertyuiop&quot;</span></span><br><span class="line">        s2 = <span class="string">&quot;asdfghjkl&quot;</span></span><br><span class="line">        s3 = <span class="string">&quot;zxcvbnm&quot;</span></span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">            cnt1 = cnt2 = cnt3 = <span class="number">0</span></span><br><span class="line">            <span class="keyword">for</span> c <span class="keyword">in</span> <span class="built_in">list</span>(word.lower()):</span><br><span class="line">                <span class="keyword">if</span> c <span class="keyword">in</span> s1: cnt1 += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> c <span class="keyword">in</span> s2: cnt2 += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> c <span class="keyword">in</span> s3: cnt3 += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">len</span>(word) == cnt1) <span class="keyword">or</span> (<span class="built_in">len</span>(word) == cnt2) <span class="keyword">or</span> (<span class="built_in">len</span>(word) == cnt3): </span><br><span class="line">                res.append(word)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;500-Keyboard-Row-easy&quot;&gt;&lt;a href=&quot;#500-Keyboard-Row-easy&quot; class=&quot;headerlink&quot; title=&quot;500. Keyboard Row(easy)&quot;&gt;&lt;/a&gt;500. Keyboard Row(eas</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>482. License Key Formatting(easy)</title>
+    <link href="http://example.com/2022/11/15/482/"/>
+    <id>http://example.com/2022/11/15/482/</id>
+    <published>2022-11-15T22:06:12.000Z</published>
+    <updated>2022-11-15T23:04:28.249Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="482-License-Key-Formatting-easy"><a href="#482-License-Key-Formatting-easy" class="headerlink" title="482. License Key Formatting(easy)"></a>482. License Key Formatting(easy)</h1><h2 id="You-are-given-a-license-key-represented-as-a-string-s-that-consists-of-only-alphanumeric-characters-and-dashes-The-string-is-separated-into-n-1-groups-by-n-dashes-You-are-also-given-an-integer-k"><a href="#You-are-given-a-license-key-represented-as-a-string-s-that-consists-of-only-alphanumeric-characters-and-dashes-The-string-is-separated-into-n-1-groups-by-n-dashes-You-are-also-given-an-integer-k" class="headerlink" title="You are given a license key represented as a string s that consists of only alphanumeric characters and dashes. The string is separated into n + 1 groups by n dashes. You are also given an integer k."></a>You are given a license key represented as a string s that consists of only alphanumeric characters and dashes. The string is separated into n + 1 groups by n dashes. You are also given an integer k.</h2><h2 id="We-want-to-reformat-the-string-s-such-that-each-group-contains-exactly-k-characters-except-for-the-first-group-which-could-be-shorter-than-k-but-still-must-contain-at-least-one-character-Furthermore-there-must-be-a-dash-inserted-between-two-groups-and-you-should-convert-all-lowercase-letters-to-uppercase"><a href="#We-want-to-reformat-the-string-s-such-that-each-group-contains-exactly-k-characters-except-for-the-first-group-which-could-be-shorter-than-k-but-still-must-contain-at-least-one-character-Furthermore-there-must-be-a-dash-inserted-between-two-groups-and-you-should-convert-all-lowercase-letters-to-uppercase" class="headerlink" title="We want to reformat the string s such that each group contains exactly k characters, except for the first group, which could be shorter than k but still must contain at least one character. Furthermore, there must be a dash inserted between two groups, and you should convert all lowercase letters to uppercase."></a>We want to reformat the string s such that each group contains exactly k characters, except for the first group, which could be shorter than k but still must contain at least one character. Furthermore, there must be a dash inserted between two groups, and you should convert all lowercase letters to uppercase.</h2><h2 id="Return-the-reformatted-license-key"><a href="#Return-the-reformatted-license-key" class="headerlink" title="Return the reformatted license key."></a>Return the reformatted license key.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;5F3Z-2e-9-w&quot;, k = 4</span><br><span class="line">Output: &quot;5F3Z-2E9W&quot;</span><br><span class="line">Explanation: The string s has been split into two parts, each part has 4 characters.</span><br><span class="line">Note that the two extra dashes are not needed and can be removed.</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">licenseKeyFormatting</span>(<span class="params">self, s: <span class="built_in">str</span>, k: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        ans = <span class="built_in">list</span>()</span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s) - <span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> s[i] != <span class="string">&quot;-&quot;</span>:</span><br><span class="line">                ans.append(s[i].upper())</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> cnt % k == <span class="number">0</span>:</span><br><span class="line">                    ans.append(<span class="string">&quot;-&quot;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> ans <span class="keyword">and</span> ans[-<span class="number">1</span>] == <span class="string">&quot;-&quot;</span>:</span><br><span class="line">            ans.pop()</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(ans[::-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;482-License-Key-Formatting-easy&quot;&gt;&lt;a href=&quot;#482-License-Key-Formatting-easy&quot; class=&quot;headerlink&quot; title=&quot;482. License Key Formatting(ea</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="maths" scheme="http://example.com/tags/maths/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>495. Teemo Attacking(easy)</title>
+    <link href="http://example.com/2022/11/15/495/"/>
+    <id>http://example.com/2022/11/15/495/</id>
+    <published>2022-11-15T21:44:23.000Z</published>
+    <updated>2022-11-15T23:02:55.479Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="495-Teemo-Attacking-easy"><a href="#495-Teemo-Attacking-easy" class="headerlink" title="495. Teemo Attacking(easy)"></a>495. Teemo Attacking(easy)</h1><h2 id="Our-hero-Teemo-is-attacking-an-enemy-Ashe-with-poison-attacks-When-Teemo-attacks-Ashe-Ashe-gets-poisoned-for-a-exactly-duration-seconds-More-formally-an-attack-at-second-t-will-mean-Ashe-is-poisoned-during-the-inclusive-time-interval-t-t-duration-1-If-Teemo-attacks-again-before-the-poison-effect-ends-the-timer-for-it-is-reset-and-the-poison-effect-will-end-duration-seconds-after-the-new-attack"><a href="#Our-hero-Teemo-is-attacking-an-enemy-Ashe-with-poison-attacks-When-Teemo-attacks-Ashe-Ashe-gets-poisoned-for-a-exactly-duration-seconds-More-formally-an-attack-at-second-t-will-mean-Ashe-is-poisoned-during-the-inclusive-time-interval-t-t-duration-1-If-Teemo-attacks-again-before-the-poison-effect-ends-the-timer-for-it-is-reset-and-the-poison-effect-will-end-duration-seconds-after-the-new-attack" class="headerlink" title="Our hero Teemo is attacking an enemy Ashe with poison attacks! When Teemo attacks Ashe, Ashe gets poisoned for a exactly duration seconds. More formally, an attack at second t will mean Ashe is poisoned during the inclusive time interval [t, t + duration - 1]. If Teemo attacks again before the poison effect ends, the timer for it is reset, and the poison effect will end duration seconds after the new attack."></a>Our hero Teemo is attacking an enemy Ashe with poison attacks! When Teemo attacks Ashe, Ashe gets poisoned for a exactly duration seconds. More formally, an attack at second t will mean Ashe is poisoned during the inclusive time interval [t, t + duration - 1]. If Teemo attacks again before the poison effect ends, the timer for it is reset, and the poison effect will end duration seconds after the new attack.</h2><h2 id="You-are-given-a-non-decreasing-integer-array-timeSeries-where-timeSeries-i-denotes-that-Teemo-attacks-Ashe-at-second-timeSeries-i-and-an-integer-duration"><a href="#You-are-given-a-non-decreasing-integer-array-timeSeries-where-timeSeries-i-denotes-that-Teemo-attacks-Ashe-at-second-timeSeries-i-and-an-integer-duration" class="headerlink" title="You are given a non-decreasing integer array timeSeries, where timeSeries[i] denotes that Teemo attacks Ashe at second timeSeries[i], and an integer duration."></a>You are given a non-decreasing integer array timeSeries, where timeSeries[i] denotes that Teemo attacks Ashe at second timeSeries[i], and an integer duration.</h2><h2 id="Return-the-total-number-of-seconds-that-Ashe-is-poisoned"><a href="#Return-the-total-number-of-seconds-that-Ashe-is-poisoned" class="headerlink" title="Return the total number of seconds that Ashe is poisoned."></a>Return the total number of seconds that Ashe is poisoned.</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findPoisonedDuration</span>(<span class="params">self, timeSeries: <span class="type">List</span>[<span class="built_in">int</span>], duration: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        ans=duration*<span class="built_in">len</span>(timeSeries)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(timeSeries)):</span><br><span class="line">            ans-=<span class="built_in">max</span>(<span class="number">0</span>,duration-(timeSeries[i]-timeSeries[i-<span class="number">1</span>]))</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;495-Teemo-Attacking-easy&quot;&gt;&lt;a href=&quot;#495-Teemo-Attacking-easy&quot; class=&quot;headerlink&quot; title=&quot;495. Teemo Attacking(easy)&quot;&gt;&lt;/a&gt;495. Teemo A</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="maths" scheme="http://example.com/tags/maths/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>492. Construct the Rectangle(easy)</title>
+    <link href="http://example.com/2022/11/15/492/"/>
+    <id>http://example.com/2022/11/15/492/</id>
+    <published>2022-11-15T21:25:16.000Z</published>
+    <updated>2022-11-15T23:02:42.767Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="492-Construct-the-Rectangle-easy"><a href="#492-Construct-the-Rectangle-easy" class="headerlink" title="492. Construct the Rectangle(easy)"></a>492. Construct the Rectangle(easy)</h1><h2 id="A-web-developer-needs-to-know-how-to-design-a-web-page’s-size-So-given-a-specific-rectangular-web-page’s-area-your-job-by-now-is-to-design-a-rectangular-web-page-whose-length-L-and-width-W-satisfy-the-following-requirements"><a href="#A-web-developer-needs-to-know-how-to-design-a-web-page’s-size-So-given-a-specific-rectangular-web-page’s-area-your-job-by-now-is-to-design-a-rectangular-web-page-whose-length-L-and-width-W-satisfy-the-following-requirements" class="headerlink" title="A web developer needs to know how to design a web page’s size. So, given a specific rectangular web page’s area, your job by now is to design a rectangular web page, whose length L and width W satisfy the following requirements:"></a>A web developer needs to know how to design a web page’s size. So, given a specific rectangular web page’s area, your job by now is to design a rectangular web page, whose length L and width W satisfy the following requirements:</h2><h2 id="The-area-of-the-rectangular-web-page-you-designed-must-equal-to-the-given-target-area"><a href="#The-area-of-the-rectangular-web-page-you-designed-must-equal-to-the-given-target-area" class="headerlink" title="The area of the rectangular web page you designed must equal to the given target area."></a>The area of the rectangular web page you designed must equal to the given target area.</h2><h2 id="The-width-W-should-not-be-larger-than-the-length-L-which-means-L-gt-W"><a href="#The-width-W-should-not-be-larger-than-the-length-L-which-means-L-gt-W" class="headerlink" title="The width W should not be larger than the length L, which means L &gt;= W."></a>The width W should not be larger than the length L, which means L &gt;= W.</h2><h2 id="The-difference-between-length-L-and-width-W-should-be-as-small-as-possible"><a href="#The-difference-between-length-L-and-width-W-should-be-as-small-as-possible" class="headerlink" title="The difference between length L and width W should be as small as possible."></a>The difference between length L and width W should be as small as possible.</h2><h2 id="Return-an-array-L-W-where-L-and-W-are-the-length-and-width-of-the-web-page-you-designed-in-sequence"><a href="#Return-an-array-L-W-where-L-and-W-are-the-length-and-width-of-the-web-page-you-designed-in-sequence" class="headerlink" title="Return an array [L, W] where L and W are the length and width of the web page you designed in sequence."></a>Return an array [L, W] where L and W are the length and width of the web page you designed in sequence.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: area = 4</span><br><span class="line">Output: [2,2]</span><br><span class="line">Explanation: The target area is 4, and all the possible ways to construct it are [1,4], [2,2], [4,1]. </span><br><span class="line">But according to requirement 2, [1,4] is illegal; according to requirement 3,  [4,1] is not optimal compared to [2,2]. So the length L is 2, and the width W is 2.</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">constructRectangle</span>(<span class="params">self, area: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(area**<span class="number">0.5</span>),<span class="number">0</span>,-<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> area%i==<span class="number">0</span>:</span><br><span class="line">                <span class="keyword">return</span> [area//i,i]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;492-Construct-the-Rectangle-easy&quot;&gt;&lt;a href=&quot;#492-Construct-the-Rectangle-easy&quot; class=&quot;headerlink&quot; title=&quot;492. Construct the Rectangle</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="maths" scheme="http://example.com/tags/maths/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>476. Number Complement(easy)</title>
+    <link href="http://example.com/2022/11/15/476/"/>
+    <id>http://example.com/2022/11/15/476/</id>
+    <published>2022-11-15T21:02:51.000Z</published>
+    <updated>2022-11-15T21:08:39.448Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="476-Number-Complement-easy"><a href="#476-Number-Complement-easy" class="headerlink" title="476. Number Complement(easy)"></a>476. Number Complement(easy)</h1><h2 id="The-complement-of-an-integer-is-the-integer-you-get-when-you-flip-all-the-0’s-to-1’s-and-all-the-1’s-to-0’s-in-its-binary-representation"><a href="#The-complement-of-an-integer-is-the-integer-you-get-when-you-flip-all-the-0’s-to-1’s-and-all-the-1’s-to-0’s-in-its-binary-representation" class="headerlink" title="The complement of an integer is the integer you get when you flip all the 0’s to 1’s and all the 1’s to 0’s in its binary representation."></a>The complement of an integer is the integer you get when you flip all the 0’s to 1’s and all the 1’s to 0’s in its binary representation.</h2><h2 id="For-example-The-integer-5-is-“101”-in-binary-and-its-complement-is-“010”-which-is-the-integer-2"><a href="#For-example-The-integer-5-is-“101”-in-binary-and-its-complement-is-“010”-which-is-the-integer-2" class="headerlink" title="For example, The integer 5 is “101” in binary and its complement is “010” which is the integer 2."></a>For example, The integer 5 is “101” in binary and its complement is “010” which is the integer 2.</h2><h2 id="Given-an-integer-num-return-its-complement"><a href="#Given-an-integer-num-return-its-complement" class="headerlink" title="Given an integer num, return its complement."></a>Given an integer num, return its complement.</h2><p>今天这道题乍看之下很简单，直接跟二进制全 1 的数异或即可：</p><p>比如：给定数字为 5 （101），跟 111 进行异或运算，结果为 010。</p><p>实则不然，因为计算机在存储 5 这个数字的时候是按照 32 位来进行存储的，应该为 00000000000000000000000000000101（下简写为00..00101），所以，跟 32 位全是 1 的数字异或之后，高位的那些 0 也会全部变成 1，最终的结果为 11111111111111111111111111111010，与题目给定的结果将不一致。</p><p>所以，我们需要换一种思路。</p><p>其实，我们只需要找到最高位的 1，将最高位的 1 所在的位置及比它低的位置全变成 1，再异或即可。</p><p>比如，给定数字为 5（00..00101），最高位的 1 是第三位，我们将第三位及比它低的位置全变成 1，即 00..00111，再进行异或就得到了 010 这个结果。</p><p>那么，如何找到最高位的 1，又如何将其及比它低的位置全变成 1 呢？</p><p>关于第一个问题：我们这里介绍一种非常简单高效的方式，每次找到最低位（最右边）的 1 并把它打掉（变成 0），最终找到最高位的 1。</p><p>关于第二个问题：我们只需要将最高位的 1 左移一位，再减 1，就可以得到最高位为 1 的位置及比它低的位置全是 1 的数字了。</p><p>比如，给定数字为 5（00..00101），我们第一次找到的 1 是 00.00001，把它打掉后数字变为 00..00100，然后，找到的第二个 1 是 00..00100，把这个 1 再打掉后数字变为 00..00000，所以，我们要找的最高位的 1 就是 00..00100 这个数字，把这个数字左移一位变成00..01000，再减 1 得到 00..00111，最后，再与原数字异或，得到 00..00010，完事儿。</p><p>关于溢出：题目约定了给定的数字为大于或等于 1 的 32 位数字，所以，32 位的最高位不会为 1，因此，不会溢出 。</p><p>作者：tong-zhu<br>链接：<a href="https://leetcode.cn/problems/number-complement/solution/tong-ge-lai-shua-ti-la-jian-dan-gao-xiao-k0p9/">https://leetcode.cn/problems/number-complement/solution/tong-ge-lai-shua-ti-la-jian-dan-gao-xiao-k0p9/</a><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findComplement</span>(<span class="params">self, num: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        highbit=<span class="number">1</span></span><br><span class="line">        x=num</span><br><span class="line">        <span class="keyword">while</span> x!=<span class="number">0</span>:</span><br><span class="line">            highbit=x&amp;(-x)</span><br><span class="line">            x=x&amp;(x-<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> num^((highbit&lt;&lt;<span class="number">1</span>)-<span class="number">1</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;476-Number-Complement-easy&quot;&gt;&lt;a href=&quot;#476-Number-Complement-easy&quot; class=&quot;headerlink&quot; title=&quot;476. Number Complement(easy)&quot;&gt;&lt;/a&gt;476. N</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="bitmask" scheme="http://example.com/tags/bitmask/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>796. Rotate String(easy)</title>
+    <link href="http://example.com/2022/11/14/796/"/>
+    <id>http://example.com/2022/11/14/796/</id>
+    <published>2022-11-15T04:20:55.000Z</published>
+    <updated>2022-11-15T04:22:30.754Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Given-two-strings-s-and-goal-return-true-if-and-only-if-s-can-become-goal-after-some-number-of-shifts-on-s"><a href="#Given-two-strings-s-and-goal-return-true-if-and-only-if-s-can-become-goal-after-some-number-of-shifts-on-s" class="headerlink" title="Given two strings s and goal, return true if and only if s can become goal after some number of shifts on s."></a>Given two strings s and goal, return true if and only if s can become goal after some number of shifts on s.</h2><h2 id="A-shift-on-s-consists-of-moving-the-leftmost-character-of-s-to-the-rightmost-position"><a href="#A-shift-on-s-consists-of-moving-the-leftmost-character-of-s-to-the-rightmost-position" class="headerlink" title="A shift on s consists of moving the leftmost character of s to the rightmost position."></a>A shift on s consists of moving the leftmost character of s to the rightmost position.</h2><h2 id="For-example-if-s-“abcde”-then-it-will-be-“bcdea”-after-one-shift"><a href="#For-example-if-s-“abcde”-then-it-will-be-“bcdea”-after-one-shift" class="headerlink" title="For example, if s = “abcde”, then it will be “bcdea” after one shift."></a>For example, if s = “abcde”, then it will be “bcdea” after one shift.</h2><p>可以用子字符串的方式，判断goal在不在两个s连在一起的字符串里</p><pre><code class="python">class Solution:    def rotateString(self, s: str, goal: str) -&gt; bool:        if len(s)!=len(goal):            return False        else:            if goal in s+s:                return True            else:                return False</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Given-two-strings-s-and-goal-return-true-if-and-only-if-s-can-become-goal-after-some-number-of-shifts-on-s&quot;&gt;&lt;a href=&quot;#Given-two-stri</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+    <category term="substring" scheme="http://example.com/tags/substring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>128. Longest Consecutive Sequence(medium)</title>
+    <link href="http://example.com/2022/11/14/128/"/>
+    <id>http://example.com/2022/11/14/128/</id>
+    <published>2022-11-15T03:44:55.000Z</published>
+    <updated>2022-11-15T04:16:24.742Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="128-Longest-Consecutive-Sequence-medium"><a href="#128-Longest-Consecutive-Sequence-medium" class="headerlink" title="128. Longest Consecutive Sequence(medium)"></a>128. Longest Consecutive Sequence(medium)</h1><h2 id="Given-an-unsorted-array-of-integers-nums-return-the-length-of-the-longest-consecutive-elements-sequence"><a href="#Given-an-unsorted-array-of-integers-nums-return-the-length-of-the-longest-consecutive-elements-sequence" class="headerlink" title="Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence."></a>Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.</h2><h2 id="You-must-write-an-algorithm-that-runs-in-O-n-time"><a href="#You-must-write-an-algorithm-that-runs-in-O-n-time" class="headerlink" title="You must write an algorithm that runs in O(n) time."></a>You must write an algorithm that runs in O(n) time.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [100,4,200,1,3,2]</span><br><span class="line">Output: 4</span><br><span class="line">Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.</span><br></pre></td></tr></table></figure><p>先对nums取set后排序(如果有相同的数字，是可以直接跳过，而且计数也不会停的)，然后不断计数连续的数字 </p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestConsecutive</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        nums=<span class="built_in">list</span>(<span class="built_in">set</span>(nums))</span><br><span class="line">        nums.sort()</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums)==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">elif</span> <span class="built_in">len</span>(nums)==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>        </span><br><span class="line">        res=<span class="number">0</span></span><br><span class="line">        count=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i]-nums[i-<span class="number">1</span>]==<span class="number">1</span>:</span><br><span class="line">                count+=<span class="number">1</span>                </span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                count=<span class="number">1</span></span><br><span class="line">            res=<span class="built_in">max</span>(res,count)                </span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;128-Longest-Consecutive-Sequence-medium&quot;&gt;&lt;a href=&quot;#128-Longest-Consecutive-Sequence-medium&quot; class=&quot;headerlink&quot; title=&quot;128. Longest C</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="array" scheme="http://example.com/tags/array/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>238. Product of Array Except Self(medium)</title>
+    <link href="http://example.com/2022/11/14/238/"/>
+    <id>http://example.com/2022/11/14/238/</id>
+    <published>2022-11-15T03:21:06.000Z</published>
+    <updated>2022-11-15T04:16:35.920Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="238-Product-of-Array-Except-Self-medium"><a href="#238-Product-of-Array-Except-Self-medium" class="headerlink" title="238. Product of Array Except Self(medium)"></a>238. Product of Array Except Self(medium)</h1><h2 id="Given-an-integer-array-nums-return-an-array-answer-such-that-answer-i-is-equal-to-the-product-of-all-the-elements-of-nums-except-nums-i"><a href="#Given-an-integer-array-nums-return-an-array-answer-such-that-answer-i-is-equal-to-the-product-of-all-the-elements-of-nums-except-nums-i" class="headerlink" title="Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i]."></a>Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].</h2><h2 id="The-product-of-any-prefix-or-suffix-of-nums-is-guaranteed-to-fit-in-a-32-bit-integer"><a href="#The-product-of-any-prefix-or-suffix-of-nums-is-guaranteed-to-fit-in-a-32-bit-integer" class="headerlink" title="The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer."></a>The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.</h2><h2 id="You-must-write-an-algorithm-that-runs-in-O-n-time-and-without-using-the-division-operation"><a href="#You-must-write-an-algorithm-that-runs-in-O-n-time-and-without-using-the-division-operation" class="headerlink" title="You must write an algorithm that runs in O(n) time and without using the division operation."></a>You must write an algorithm that runs in O(n) time and without using the division operation.</h2><p>因为题目限制了除法，所以为了缩减时间复杂度，模仿前缀和数组，建立两个数组，一个从左边乘得到的数组，一个从右边乘得到的数组，最后的结果就等于两个数组在相同位置的乘积</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">productExceptSelf</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        n=<span class="built_in">len</span>(nums)</span><br><span class="line">        L,R,res=[<span class="number">0</span>]*n,[<span class="number">0</span>]*n,[<span class="number">0</span>]*n</span><br><span class="line">        L[<span class="number">0</span>]=<span class="number">1</span></span><br><span class="line">        R[n-<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n):</span><br><span class="line">            L[i]=nums[i-<span class="number">1</span>]*L[i-<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(<span class="built_in">range</span>(n-<span class="number">1</span>)):</span><br><span class="line">            R[i]=nums[i+<span class="number">1</span>]*R[i+<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            res[i]=L[i]*R[i]</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;238-Product-of-Array-Except-Self-medium&quot;&gt;&lt;a href=&quot;#238-Product-of-Array-Except-Self-medium&quot; class=&quot;headerlink&quot; title=&quot;238. Product o</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="difference array" scheme="http://example.com/tags/difference-array/"/>
+    
+  </entry>
+  
+  <entry>
     <title>49. Group Anagrams(medium)</title>
     <link href="http://example.com/2022/11/14/49/"/>
     <id>http://example.com/2022/11/14/49/</id>
     <published>2022-11-15T02:19:26.000Z</published>
-    <updated>2022-11-15T02:28:15.069Z</updated>
+    <updated>2022-11-15T04:16:46.365Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="49-Group-Anagrams-medium"><a href="#49-Group-Anagrams-medium" class="headerlink" title="49. Group Anagrams(medium)"></a>49. Group Anagrams(medium)</h1><h2 id="Given-an-array-of-strings-strs-group-the-anagrams-together-You-can-return-the-answer-in-any-order"><a href="#Given-an-array-of-strings-strs-group-the-anagrams-together-You-can-return-the-answer-in-any-order" class="headerlink" title="Given an array of strings strs, group the anagrams together. You can return the answer in any order."></a>Given an array of strings strs, group the anagrams together. You can return the answer in any order.</h2><h2 id="An-Anagram-is-a-word-or-phrase-formed-by-rearranging-the-letters-of-a-different-word-or-phrase-typically-using-all-the-original-letters-exactly-once"><a href="#An-Anagram-is-a-word-or-phrase-formed-by-rearranging-the-letters-of-a-different-word-or-phrase-typically-using-all-the-original-letters-exactly-once" class="headerlink" title="An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once."></a>An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="49-Group-Anagrams-medium"><a href="#49-Group-Anagrams-medium" class="headerlink" title="49. Group Anagrams(medium)"></a>49. Group Anagrams(medium)</h1><h2 id="Given-an-array-of-strings-strs-group-the-anagrams-together-You-can-return-the-answer-in-any-order"><a href="#Given-an-array-of-strings-strs-group-the-anagrams-together-You-can-return-the-answer-in-any-order" class="headerlink" title="Given an array of strings strs, group the anagrams together. You can return the answer in any order."></a>Given an array of strings strs, group the anagrams together. You can return the answer in any order.</h2><h2 id="An-Anagram-is-a-word-or-phrase-formed-by-rearranging-the-letters-of-a-different-word-or-phrase-typically-using-all-the-original-letters-exactly-once"><a href="#An-Anagram-is-a-word-or-phrase-formed-by-rearranging-the-letters-of-a-different-word-or-phrase-typically-using-all-the-original-letters-exactly-once" class="headerlink" title="An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once."></a>An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.</h2><h3 id="leetcode-官方题解"><a href="#leetcode-官方题解" class="headerlink" title="leetcode 官方题解"></a><a href="https://leetcode.cn/problems/group-anagrams/solution/zi-mu-yi-wei-ci-fen-zu-by-leetcode-solut-gyoc/">leetcode 官方题解</a></h3><p>由于互为字母异位词的两个字符串包含的字母相同，因此对两个字符串分别进行排序之后得到的字符串一定是相同的，故可以将排序之后的字符串作为哈希表的键。<br>这道题主要是把字符串本身当作键，字母相同的字符作为键是同一个</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">groupAnagrams</span>(<span class="params">self, strs: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">str</span>]]:</span></span><br><span class="line">        n=<span class="built_in">len</span>(strs)</span><br><span class="line">        mp=collections.defaultdict(<span class="built_in">list</span>)</span><br><span class="line">        <span class="keyword">for</span> st <span class="keyword">in</span> strs:</span><br><span class="line">            key=<span class="string">&quot;&quot;</span>.join(<span class="built_in">sorted</span>(st))</span><br><span class="line">            mp[key].append(st)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">list</span>(mp.values())   </span><br></pre></td></tr></table></figure>]]></content>
     
     
       
@@ -49,7 +331,7 @@
     <link href="http://example.com/2022/11/14/217/"/>
     <id>http://example.com/2022/11/14/217/</id>
     <published>2022-11-15T02:03:23.000Z</published>
-    <updated>2022-11-15T02:05:19.176Z</updated>
+    <updated>2022-11-15T02:30:11.819Z</updated>
     
     <content type="html"><![CDATA[<h1 id="217-Contains-Duplicate-easy"><a href="#217-Contains-Duplicate-easy" class="headerlink" title="217. Contains Duplicate(easy)"></a>217. Contains Duplicate(easy)</h1><h1 id="Given-an-integer-array-nums-return-true-if-any-value-appears-at-least-twice-in-the-array-and-return-false-if-every-element-is-distinct"><a href="#Given-an-integer-array-nums-return-true-if-any-value-appears-at-least-twice-in-the-array-and-return-false-if-every-element-is-distinct" class="headerlink" title="Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct."></a>Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,3,1]</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure><p>利用ｓｅｔ的去重属性</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">containsDuplicate</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(<span class="built_in">set</span>(nums))!=<span class="built_in">len</span>(nums)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -77,7 +359,7 @@
     <link href="http://example.com/2022/11/12/2131/"/>
     <id>http://example.com/2022/11/12/2131/</id>
     <published>2022-11-12T22:34:35.000Z</published>
-    <updated>2022-11-12T22:38:56.640Z</updated>
+    <updated>2022-11-15T02:29:51.173Z</updated>
     
     <content type="html"><![CDATA[<h1 id="2131-Longest-Palindrome-by-Concatenating-Two-Letter-Words-medium"><a href="#2131-Longest-Palindrome-by-Concatenating-Two-Letter-Words-medium" class="headerlink" title="2131. Longest Palindrome by Concatenating Two Letter Words(medium)"></a>2131. Longest Palindrome by Concatenating Two Letter Words(medium)</h1><h2 id="You-are-given-an-array-of-strings-words-Each-element-of-words-consists-of-two-lowercase-English-letters"><a href="#You-are-given-an-array-of-strings-words-Each-element-of-words-consists-of-two-lowercase-English-letters" class="headerlink" title="You are given an array of strings words. Each element of words consists of two lowercase English letters."></a>You are given an array of strings words. Each element of words consists of two lowercase English letters.</h2><h2 id="Create-the-longest-possible-palindrome-by-selecting-some-elements-from-words-and-concatenating-them-in-any-order-Each-element-can-be-selected-at-most-once"><a href="#Create-the-longest-possible-palindrome-by-selecting-some-elements-from-words-and-concatenating-them-in-any-order-Each-element-can-be-selected-at-most-once" class="headerlink" title="Create the longest possible palindrome by selecting some elements from words and concatenating them in any order. Each element can be selected at most once."></a>Create the longest possible palindrome by selecting some elements from words and concatenating them in any order. Each element can be selected at most once.</h2><h2 id="Return-the-length-of-the-longest-palindrome-that-you-can-create-If-it-is-impossible-to-create-any-palindrome-return-0"><a href="#Return-the-length-of-the-longest-palindrome-that-you-can-create-If-it-is-impossible-to-create-any-palindrome-return-0" class="headerlink" title="Return the length of the longest palindrome that you can create. If it is impossible to create any palindrome, return 0."></a>Return the length of the longest palindrome that you can create. If it is impossible to create any palindrome, return 0.</h2><h2 id="A-palindrome-is-a-string-that-reads-the-same-forward-and-backward"><a href="#A-palindrome-is-a-string-that-reads-the-same-forward-and-backward" class="headerlink" title="A palindrome is a string that reads the same forward and backward."></a>A palindrome is a string that reads the same forward and backward.</h2><p><a href="https://leetcode.cn/problems/longest-palindrome-by-concatenating-two-letter-words/solutions/1202034/lian-jie-liang-zi-mu-dan-ci-de-dao-de-zu-vs99/">力扣官方题解</a></p><p>方法一：贪心 + 哈希表<br>思路与算法</p><p>根据回文串的定义，回文串可以由奇数或者偶数个 words 中的单词拼接而成，但必须满足以下条件：</p><p>如果数量为奇数，那么位于正中间的单词必须是回文字符串（即两个字符相等）；</p><p>每个单词和反转后对应位置的单词必须互为反转字符串。</p><p>根据上面的两个条件，我们可以得出构造最长回文串的规则：</p><p>对于两个字符不同的单词，需要尽可能多的成对选择它和它的反转字符串（如有）；</p><p>对于两个字符相同的单词，需要尽可能多的成对选择该单词；</p><p>如果按照上述条件挑选后，仍然存在未被选择的两个字符相同的单词（此时该字符串只可能有一个未被选择，且该字符串一定在 words 中出现奇数次），我们可以任意选择一个。</p><p>因此，我们用哈希表统计 words 中每个单词的出现次数。随后，我们遍历哈希表的所有元素，并用 res 维护可能构成回文字符串的最长长度，同时用初值为 false 的布尔变量 mid 判断是否存在可以作为中心单词的、出现奇数次的回文单词。在遍历到字符串 word 时，我们首先求出它反转后的字符串 rev，此时根据 word 与 rev 的关系，有以下两种情况：</p><p>word≠rev，此时我们需要统计两者在 words 出现次数的最小值，即为成对选择的最多数目。假设此时对数为 n，则其对最长回文字符串贡献的字符长度为 4n，我们将 res 加上对应值；</p><p>word=rev，此时可以构成的对数为 ⌊m/2⌋，即对最长回文字符串贡献的字符长度为 4⌊m/2⌋，我们同样将 res 加上对应值。除此以外，我们还需要判断 word 的出现次数 m 是否为奇数：</p><p>如果 m 为奇数，则存在可以作为中心单词的剩余回文单词，我们将 mid 置为 true；</p><p>如果 m 为偶数，则不存在可以作为中心单词的剩余回文单词，我们不改变 mid 的取值。</p><p>最后，我们根据 mid 的取值，判断最长回文串是否含有中心单词。如果 mid 为 true，则代表含有，我们将 res 加上 2；反之则没有，我们不进行任何操作。</p><p>最后，我们返回 res 作为最长回文串的长度。</p><p>细节</p><p>在遍历哈希表中的每个单词时，为了避免重复计算成对选择的单词，我们只在 word 的字典序大于等于 rev 时更新 res。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestPalindrome</span>(<span class="params">self, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        freq = Counter(words)   <span class="comment"># 单词出现次数</span></span><br><span class="line">        res = <span class="number">0</span>   <span class="comment"># 最长回文串长度</span></span><br><span class="line">        mid = <span class="literal">False</span>   <span class="comment"># 是否含有中心单词</span></span><br><span class="line">        <span class="keyword">for</span> word, cnt <span class="keyword">in</span> freq.items():</span><br><span class="line">            <span class="comment"># 遍历出现的单词，并更新长度</span></span><br><span class="line">            rev = word[<span class="number">1</span>] + word[<span class="number">0</span>]   <span class="comment"># 反转后的单词</span></span><br><span class="line">            <span class="keyword">if</span> word == rev:</span><br><span class="line">                <span class="keyword">if</span> cnt % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                    mid = <span class="literal">True</span></span><br><span class="line">                res += <span class="number">2</span> * (cnt // <span class="number">2</span> * <span class="number">2</span>)</span><br><span class="line">            <span class="keyword">elif</span> word &gt; rev:   <span class="comment"># 避免重复遍历</span></span><br><span class="line">                res += <span class="number">4</span> * <span class="built_in">min</span>(freq[word], freq[rev])</span><br><span class="line">        <span class="keyword">if</span> mid:</span><br><span class="line">            <span class="comment"># 含有中心单词，更新长度</span></span><br><span class="line">            res += <span class="number">2</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -107,7 +389,7 @@
     <link href="http://example.com/2022/11/12/1641/"/>
     <id>http://example.com/2022/11/12/1641/</id>
     <published>2022-11-12T22:15:19.000Z</published>
-    <updated>2022-11-12T22:18:46.410Z</updated>
+    <updated>2022-11-15T02:29:18.050Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1641-Count-Sorted-Vowel-Strings-medium"><a href="#1641-Count-Sorted-Vowel-Strings-medium" class="headerlink" title="1641. Count Sorted Vowel Strings(medium)"></a>1641. Count Sorted Vowel Strings(medium)</h1><h2 id="Given-an-integer-n-return-the-number-of-strings-of-length-n-that-consist-only-of-vowels-a-e-i-o-u-and-are-lexicographically-sorted"><a href="#Given-an-integer-n-return-the-number-of-strings-of-length-n-that-consist-only-of-vowels-a-e-i-o-u-and-are-lexicographically-sorted" class="headerlink" title="Given an integer n, return the number of strings of length n that consist only of vowels (a, e, i, o, u) and are lexicographically sorted."></a>Given an integer n, return the number of strings of length n that consist only of vowels (a, e, i, o, u) and are lexicographically sorted.</h2><h2 id="A-string-s-is-lexicographically-sorted-if-for-all-valid-i-s-i-is-the-same-as-or-comes-before-s-i-1-in-the-alphabet"><a href="#A-string-s-is-lexicographically-sorted-if-for-all-valid-i-s-i-is-the-same-as-or-comes-before-s-i-1-in-the-alphabet" class="headerlink" title="A string s is lexicographically sorted if for all valid i, s[i] is the same as or comes before s[i+1] in the alphabet."></a>A string s is lexicographically sorted if for all valid i, s[i] is the same as or comes before s[i+1] in the alphabet.</h2><h3 id="官方解法"><a href="#官方解法" class="headerlink" title="官方解法"></a><a href="">官方解法</a></h3><h3 id="数学解法"><a href="#数学解法" class="headerlink" title="数学解法"></a><a href="https://leetcode.cn/problems/count-sorted-vowel-strings/solutions/469467/zhong-xue-shu-xue-ke-pu-n-ge-xiao-qiu-fang-dao-m-g/">数学解法</a></h3><p>看到题目的第一眼就感觉这是排列组合，但没想好怎么写出排列的公式，这位大佬的思路太牛了：</p><h4 id="这个问题的数学解法，可以把问题转换成将-n-个小球放到-5-个盒子里，盒子可以为空。"><a href="#这个问题的数学解法，可以把问题转换成将-n-个小球放到-5-个盒子里，盒子可以为空。" class="headerlink" title="这个问题的数学解法，可以把问题转换成将 n 个小球放到 5 个盒子里，盒子可以为空。"></a>这个问题的数学解法，可以把问题转换成将 n 个小球放到 5 个盒子里，盒子可以为空。</h4><p>我们可以想象成把 n 个字符分配给五个元音所代表的盒子中。一旦每个盒子中的字符个数定了，那么这个字符串也固定下来了。因为题目要求必须是字典序，所以一定 a 字符在最前；其次是 e 字符；其次是 i 字符；其次是 o 字符；其次是 u 字符。</p><p>下面问题的关键就是，n 个小球放到 5 个盒子里，盒子可以为空，一共有多少种方法？</p><p>这是经典的中学数学问题。更一般的，我们来探讨，将 n 个小球放到 m 个盒子里，有多少种方法？</p><p>首先，我们考虑问题的简单版本，即盒子不能为空的情况。</p><p>此时，我们只需要在 n 个小球排成一排，中间放 m - 1 个隔板，放好以后，相当于把 n 个小球分成了 m 份。每一份对应一个盒子里的小球数量。</p><p>因为盒子不能为空，所以两个小球之间不可能放多个隔板，左右两端也不可能放隔板。因此，放隔板的位置有 n - 1 个，我们要放 m - 1 个隔板。答案为 C(n - 1, m - 1)。</p><p>有了这个结论，再来讨论问题的复杂版本，就简单了，即盒子可以为空的情况。</p><p>此时，我们只需要先拿 m 个新的小球，在 m 个盒子里，每个盒子中扔进去一个小球。之后，再分配原来的这 n 个小球，得到的分配结果，肯定 m 个盒子里都不为空。但此时，我们使用了 n + m 个小球。</p><p>换句话说，把 n 个小球放到 m 个盒子里，盒子可以为空，等价于：把 n + m 个小球放到 m 个盒子里，盒子不能为空。</p><p>大家也可以想成是：我们先把 n + m 个小球放到 m 个盒子里，盒子不能为空，然后再在每个盒子里拿走 1 个小球，总共拿走了 m 个小球，得到的结果，就是把 n 个小球放到 m 个盒子里，盒子可以为空的解。</p><p>把 n + m 个小球放到 m 个盒子里，盒子不能为空的分法，带入上面的公式，就是 C(n + m - 1, m - 1)</p><p>所以，把 n 个小球放到 m 个盒子里，盒子可以为空，答案为 C(n + m - 1, m - 1)。</p><h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>将 n 个小球放到 m 个盒子里，盒子不为空：C(n - 1, m - 1)；</p><p>将 n 个小球放到 m 个盒子里，盒子可以空：C(n + m - 1, m - 1)；</p><p>对于这个问题，m = 5，盒子可以为空，所以答案是 C(n + 5 - 1, 5 - 1) = C(n + 4, 4)</p><h4 id="提醒："><a href="#提醒：" class="headerlink" title="提醒："></a>提醒：</h4><p>分成五个盒子，首先不论空与不空，我们的五个盒子最终组成我们答案的形式是生成与每个盒子数量相等的对应字符串，然后把五个字符串穿起来，如aa+e+i+o+u这种，盒子里球的数量是某一个元音字母连续出现的数量，所以可以空</p>]]></content>
     
@@ -137,7 +419,7 @@
     <link href="http://example.com/2022/11/10/1646/"/>
     <id>http://example.com/2022/11/10/1646/</id>
     <published>2022-11-10T22:27:01.000Z</published>
-    <updated>2022-11-10T22:29:54.218Z</updated>
+    <updated>2022-11-15T02:29:39.038Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1646-Get-Maximum-in-Generated-Array-easy"><a href="#1646-Get-Maximum-in-Generated-Array-easy" class="headerlink" title="1646. Get Maximum in Generated Array(easy)"></a>1646. Get Maximum in Generated Array(easy)</h1><h2 id="You-are-given-an-integer-n-A-0-indexed-integer-array-nums-of-length-n-1-is-generated-in-the-following-way"><a href="#You-are-given-an-integer-n-A-0-indexed-integer-array-nums-of-length-n-1-is-generated-in-the-following-way" class="headerlink" title="You are given an integer n. A 0-indexed integer array nums of length n + 1 is generated in the following way:"></a>You are given an integer n. A 0-indexed integer array nums of length n + 1 is generated in the following way:</h2><p>nums[0] = 0<br>nums[1] = 1<br>nums[2 * i] = nums[i] when 2 &lt;= 2 * i &lt;= n<br>nums[2 * i + 1] = nums[i] + nums[i + 1] when 2 &lt;= 2 * i + 1 &lt;= n<br>Return the maximum integer in the array nums​​​.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 7</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: According to the given rules:</span><br><span class="line">  nums[0] = 0</span><br><span class="line">  nums[1] = 1</span><br><span class="line">  nums[(1 * 2) = 2] = nums[1] = 1</span><br><span class="line">  nums[(1 * 2) + 1 = 3] = nums[1] + nums[2] = 1 + 1 = 2</span><br><span class="line">  nums[(2 * 2) = 4] = nums[2] = 1</span><br><span class="line">  nums[(2 * 2) + 1 = 5] = nums[2] + nums[3] = 1 + 2 = 3</span><br><span class="line">  nums[(3 * 2) = 6] = nums[3] = 2</span><br><span class="line">  nums[(3 * 2) + 1 = 7] = nums[3] + nums[4] = 2 + 1 = 3</span><br><span class="line">Hence, nums = [0,1,1,2,1,3,2,3], and the maximum is max(0,1,1,2,1,3,2,3) = 3.</span><br></pre></td></tr></table></figure><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/get-maximum-in-generated-array/solutions/952714/huo-qu-sheng-cheng-shu-zu-zhong-de-zui-d-0z2l/">官方题解</a></h3><p>我们可以直接根据题目中描述的规则来计算出 nums 数组，并返回其最大元素。</p><p>为了简化代码逻辑，我们可以化简题目中的递推式。当 i≥2 时：</p><p>当i为偶数，nums[i]=nums[i//2]<br>当i为奇数，nums[i]=nums[i//2]+nums[i//2+1]</p><p>所以总结在一起是，nums[i]=nums[i//2]+i%2*nums[i//2+1]</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getMaximumGenerated</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> n==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        dp=[<span class="number">0</span>]*(n+<span class="number">1</span>)</span><br><span class="line">        dp[<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">            dp[i]=dp[i//<span class="number">2</span>]+i%<span class="number">2</span>*dp[i//<span class="number">2</span>+<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(dp)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -307,290 +589,6 @@
     <category term="stack" scheme="http://example.com/tags/stack/"/>
     
     <category term="Data structure design" scheme="http://example.com/tags/Data-structure-design/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2244. Minimum Rounds to Complete All Tasks(medium)</title>
-    <link href="http://example.com/2022/11/09/2244/"/>
-    <id>http://example.com/2022/11/09/2244/</id>
-    <published>2022-11-09T20:24:14.000Z</published>
-    <updated>2022-11-09T22:24:42.577Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="2244-Minimum-Rounds-to-Complete-All-Tasks-medium"><a href="#2244-Minimum-Rounds-to-Complete-All-Tasks-medium" class="headerlink" title="2244. Minimum Rounds to Complete All Tasks(medium)"></a>2244. Minimum Rounds to Complete All Tasks(medium)</h1><h2 id="You-are-given-a-0-indexed-integer-array-tasks-where-tasks-i-represents-the-difficulty-level-of-a-task-In-each-round-you-can-complete-either-2-or-3-tasks-of-the-same-difficulty-level"><a href="#You-are-given-a-0-indexed-integer-array-tasks-where-tasks-i-represents-the-difficulty-level-of-a-task-In-each-round-you-can-complete-either-2-or-3-tasks-of-the-same-difficulty-level" class="headerlink" title="You are given a 0-indexed integer array tasks, where tasks[i] represents the difficulty level of a task. In each round, you can complete either 2 or 3 tasks of the same difficulty level."></a>You are given a 0-indexed integer array tasks, where tasks[i] represents the difficulty level of a task. In each round, you can complete either 2 or 3 tasks of the same difficulty level.</h2><h2 id="Return-the-minimum-rounds-required-to-complete-all-the-tasks-or-1-if-it-is-not-possible-to-complete-all-the-tasks"><a href="#Return-the-minimum-rounds-required-to-complete-all-the-tasks-or-1-if-it-is-not-possible-to-complete-all-the-tasks" class="headerlink" title="Return the minimum rounds required to complete all the tasks, or -1 if it is not possible to complete all the tasks."></a>Return the minimum rounds required to complete all the tasks, or -1 if it is not possible to complete all the tasks.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: tasks = [2,2,3,3,2,4,4,4,4,4]</span><br><span class="line">Output: 4</span><br><span class="line">Explanation: To complete all the tasks, a possible plan is:</span><br><span class="line">- In the first round, you complete 3 tasks of difficulty level 2. </span><br><span class="line">- In the second round, you complete 2 tasks of difficulty level 3. </span><br><span class="line">- In the third round, you complete 3 tasks of difficulty level 4. </span><br><span class="line">- In the fourth round, you complete 2 tasks of difficulty level 4.  </span><br><span class="line">It can be shown that all the tasks cannot be completed in fewer than 4 rounds, so the answer is 4.</span><br></pre></td></tr></table></figure><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><p>通过Counter记录相同task，然后遍历每个value的个数count分情况讨论，遇到只有一个的直接返回-1，对3能整除的ans加上count除3<br>剩下的都是除三向下取整加1</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#from collections import Counter</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minimumRounds</span>(<span class="params">self, tasks: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        ans=<span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(tasks)==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">        hashmap=Counter(tasks)</span><br><span class="line">        ans=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> count <span class="keyword">in</span> hashmap.values():</span><br><span class="line">            <span class="keyword">if</span> count==<span class="number">1</span>:</span><br><span class="line">                <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> count%<span class="number">3</span>==<span class="number">0</span>:</span><br><span class="line">                ans+=count/<span class="number">3</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ans+=count//<span class="number">3</span>+<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">int</span>(ans)        </span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;2244-Minimum-Rounds-to-Complete-All-Tasks-medium&quot;&gt;&lt;a href=&quot;#2244-Minimum-Rounds-to-Complete-All-Tasks-medium&quot; class=&quot;headerlink&quot; tit</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>746. Min Cost Climbing Stairs(easy)</title>
-    <link href="http://example.com/2022/11/08/746/"/>
-    <id>http://example.com/2022/11/08/746/</id>
-    <published>2022-11-08T22:14:38.000Z</published>
-    <updated>2022-11-08T23:20:48.987Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="746-Min-Cost-Climbing-Stairs-easy"><a href="#746-Min-Cost-Climbing-Stairs-easy" class="headerlink" title="746. Min Cost Climbing Stairs(easy)"></a>746. Min Cost Climbing Stairs(easy)</h1><h2 id="You-are-given-an-integer-array-cost-where-cost-i-is-the-cost-of-ith-step-on-a-staircase-Once-you-pay-the-cost-you-can-either-climb-one-or-two-steps"><a href="#You-are-given-an-integer-array-cost-where-cost-i-is-the-cost-of-ith-step-on-a-staircase-Once-you-pay-the-cost-you-can-either-climb-one-or-two-steps" class="headerlink" title="You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps."></a>You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps.</h2><h2 id="You-can-either-start-from-the-step-with-index-0-or-the-step-with-index-1"><a href="#You-can-either-start-from-the-step-with-index-0-or-the-step-with-index-1" class="headerlink" title="You can either start from the step with index 0, or the step with index 1."></a>You can either start from the step with index 0, or the step with index 1.</h2><h2 id="Return-the-minimum-cost-to-reach-the-top-of-the-floor"><a href="#Return-the-minimum-cost-to-reach-the-top-of-the-floor" class="headerlink" title="Return the minimum cost to reach the top of the floor."></a>Return the minimum cost to reach the top of the floor.</h2><h2 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/min-cost-climbing-stairs/solutions/528955/shi-yong-zui-xiao-hua-fei-pa-lou-ti-by-l-ncf8/">官方题解</a></h2><p>创建长度为 n+1的数组 dp，其中 dp[i] 表示达到下标 i 的最小花费。</p><p>由于可以选择下标 0 或 1 作为初始阶梯，因此有 dp[0]=dp[1]=0</p><p>状态转移方程如下：</p><p>dp[i]=min(dp[i−1]+cost[i−1],dp[i−2]+cost[i−2])</p><p>有了这个方程，这道题就好下手了</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minCostClimbingStairs</span>(<span class="params">self, cost: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        n=<span class="built_in">len</span>(cost)</span><br><span class="line">        dp=[<span class="number">0</span>]*(n+<span class="number">1</span>)</span><br><span class="line">        dp[<span class="number">0</span>]=dp[<span class="number">1</span>]=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">            dp[i]=<span class="built_in">min</span>(dp[i-<span class="number">1</span>]+cost[i-<span class="number">1</span>],dp[i-<span class="number">2</span>]+cost[i-<span class="number">2</span>])</span><br><span class="line">        <span class="keyword">return</span> dp[n]</span><br></pre></td></tr></table></figure><p>优化：<br>利用滚动数组</p><p>注意到当 i≥2时，dp[i] 只和 dp[i−1] 与 dp[i−2] 有关，因此可以使用滚动数组的思想，将空间复杂度优化到 O(1)。<br>类似于不维护一个完整数组，只计算到最后一个数字</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minCostClimbingStairs</span>(<span class="params">self, cost: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        n = <span class="built_in">len</span>(cost)</span><br><span class="line">        prev = curr = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, n + <span class="number">1</span>):</span><br><span class="line">            nxt = <span class="built_in">min</span>(curr + cost[i - <span class="number">1</span>], prev + cost[i - <span class="number">2</span>])</span><br><span class="line">            prev, curr = curr, nxt</span><br><span class="line">        <span class="keyword">return</span> curr</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;746-Min-Cost-Climbing-Stairs-easy&quot;&gt;&lt;a href=&quot;#746-Min-Cost-Climbing-Stairs-easy&quot; class=&quot;headerlink&quot; title=&quot;746. Min Cost Climbing Sta</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>6. Zigzag Conversion(medium)</title>
-    <link href="http://example.com/2022/11/07/6/"/>
-    <id>http://example.com/2022/11/07/6/</id>
-    <published>2022-11-07T22:13:20.000Z</published>
-    <updated>2022-11-08T22:17:23.256Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="6-Zigzag-Conversion-medium"><a href="#6-Zigzag-Conversion-medium" class="headerlink" title="6. Zigzag Conversion(medium)"></a>6. Zigzag Conversion(medium)</h1><h2 id="The-string-“PAYPALISHIRING”-is-written-in-a-zigzag-pattern-on-a-given-number-of-rows-like-this-you-may-want-to-display-this-pattern-in-a-fixed-font-for-better-legibility"><a href="#The-string-“PAYPALISHIRING”-is-written-in-a-zigzag-pattern-on-a-given-number-of-rows-like-this-you-may-want-to-display-this-pattern-in-a-fixed-font-for-better-legibility" class="headerlink" title="The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)"></a>The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">P   A   H   N</span><br><span class="line">A P L S I I G</span><br><span class="line">Y   I   R</span><br></pre></td></tr></table></figure><p>And then read line by line: “PAHNAPLSIIGYIR”</p><p>Write the code that will take a string and make this conversion given a number of rows:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string convert(string s, int numRows);</span><br></pre></td></tr></table></figure><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a><a href="https://leetcode.cn/problems/zigzag-conversion/solutions/21610/zzi-xing-bian-huan-by-jyd/">题解</a></h3><p>这道题没有用到什么独特的数据结构或者算法，但是这里用一个flag记录是否要反方向记录</p><p>解题思路：<br>题目理解：<br>字符串 s 是以 Z 字形为顺序存储的字符串，目标是按行打印。<br>设 numRows 行字符串分别为 s1, s2s_2s<br>2,…, sn，则容易发现：按顺序遍历字符串 s 时，每个字符 c 在 Z 字形中对应的行索引先从 s1增大至 sn，再从 sn减小至 s1…… 如此反复。<br>因此，解决方案为：模拟这个行索引的变化，在遍历 s 中把每个字符填到正确的行 res[i] 。<br>算法流程： 按顺序遍历字符串 s；<br>res[i] += c： 把每个字符 c 填入对应行 si；<br>i += flag： 更新当前字符 c 对应的行索引；<br>flag = - flag： 在达到 ZZZ 字形转折点时，执行反向。<br>复杂度分析：<br>时间复杂度 O(N) ：遍历一遍字符串 s；<br>空间复杂度 O(N) ：各行字符串共占用 O(N)额外空间。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">convert</span>(<span class="params">self, s: <span class="built_in">str</span>, numRows: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        <span class="keyword">if</span> numRows &lt; <span class="number">2</span>: <span class="keyword">return</span> s</span><br><span class="line">        res = [<span class="string">&quot;&quot;</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(numRows)]</span><br><span class="line">        i, flag = <span class="number">0</span>, -<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            res[i] += c</span><br><span class="line">            <span class="keyword">if</span> i == <span class="number">0</span> <span class="keyword">or</span> i == numRows - <span class="number">1</span>: flag = -flag</span><br><span class="line">            i += flag</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(res)</span><br></pre></td></tr></table></figure><p>确实是非常巧妙的方法</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;6-Zigzag-Conversion-medium&quot;&gt;&lt;a href=&quot;#6-Zigzag-Conversion-medium&quot; class=&quot;headerlink&quot; title=&quot;6. Zigzag Conversion(medium)&quot;&gt;&lt;/a&gt;6. Zig</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1684. Count the Number of Consistent Strings(easy)</title>
-    <link href="http://example.com/2022/11/07/1684/"/>
-    <id>http://example.com/2022/11/07/1684/</id>
-    <published>2022-11-07T21:56:53.000Z</published>
-    <updated>2022-11-08T22:16:45.208Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1684-Count-the-Number-of-Consistent-Strings-easy"><a href="#1684-Count-the-Number-of-Consistent-Strings-easy" class="headerlink" title="1684. Count the Number of Consistent Strings(easy)"></a>1684. Count the Number of Consistent Strings(easy)</h1><h2 id="You-are-given-a-string-allowed-consisting-of-distinct-characters-and-an-array-of-strings-words-A-string-is-consistent-if-all-characters-in-the-string-appear-in-the-string-allowed"><a href="#You-are-given-a-string-allowed-consisting-of-distinct-characters-and-an-array-of-strings-words-A-string-is-consistent-if-all-characters-in-the-string-appear-in-the-string-allowed" class="headerlink" title="You are given a string allowed consisting of distinct characters and an array of strings words. A string is consistent if all characters in the string appear in the string allowed."></a>You are given a string allowed consisting of distinct characters and an array of strings words. A string is consistent if all characters in the string appear in the string allowed.</h2><h2 id="Return-the-number-of-consistent-strings-in-the-array-words"><a href="#Return-the-number-of-consistent-strings-in-the-array-words" class="headerlink" title="Return the number of consistent strings in the array words."></a>Return the number of consistent strings in the array words.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: allowed = &quot;ab&quot;, words = [&quot;ad&quot;,&quot;bd&quot;,&quot;aaab&quot;,&quot;baa&quot;,&quot;badab&quot;]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: Strings &quot;aaab&quot; and &quot;baa&quot; are consistent since they only contain characters &#x27;a&#x27; and &#x27;b&#x27;.</span><br></pre></td></tr></table></figure><p>这道题原本是想对words进行set操作的，后面发现对list里的每一个数都操作太麻烦，所以换一个思路，选择从反方向入手。<br>题目是要我们找words里的字母只含有allowed里的字母，所以将allowed去重后，如果words的单词里的字母如果不在allowed里，就记录下来cnt<br>最后输出的是有相同字母的，那么就用words的总个数减去cnt即可</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countConsistentStrings</span>(<span class="params">self, allowed: <span class="built_in">str</span>, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        allowed=<span class="built_in">set</span>(allowed)</span><br><span class="line">        cnt=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> cha <span class="keyword">in</span> words:</span><br><span class="line">            <span class="keyword">for</span> letter <span class="keyword">in</span> cha:</span><br><span class="line">                <span class="keyword">if</span> letter <span class="keyword">not</span> <span class="keyword">in</span> allowed:</span><br><span class="line">                    cnt+=<span class="number">1</span></span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(words)-cnt</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1684-Count-the-Number-of-Consistent-Strings-easy&quot;&gt;&lt;a href=&quot;#1684-Count-the-Number-of-Consistent-Strings-easy&quot; class=&quot;headerlink&quot; tit</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-    <category term="set" scheme="http://example.com/tags/set/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1137. N-th Tribonacci Number(easy)</title>
-    <link href="http://example.com/2022/11/07/1137/"/>
-    <id>http://example.com/2022/11/07/1137/</id>
-    <published>2022-11-07T21:41:07.000Z</published>
-    <updated>2022-11-08T22:16:28.780Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1137-N-th-Tribonacci-Number-easy"><a href="#1137-N-th-Tribonacci-Number-easy" class="headerlink" title="1137. N-th Tribonacci Number(easy)"></a>1137. N-th Tribonacci Number(easy)</h1><h2 id="The-Tribonacci-sequence-Tn-is-defined-as-follows"><a href="#The-Tribonacci-sequence-Tn-is-defined-as-follows" class="headerlink" title="The Tribonacci sequence Tn is defined as follows:"></a>The Tribonacci sequence Tn is defined as follows:</h2><p>T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n &gt;= 0.</p><p>Given n, return the value of Tn.</p><p>三个数连续相加的斐波那契数列，还是动态规划的思路</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tribonacci</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> n&lt;<span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> n</span><br><span class="line">        <span class="keyword">elif</span> n==<span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        dp=[<span class="number">0</span>]*(n+<span class="number">1</span>)</span><br><span class="line">        dp[<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">        dp[<span class="number">2</span>]=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>,n+<span class="number">1</span>):</span><br><span class="line">            dp[i]=dp[i-<span class="number">1</span>]+dp[i-<span class="number">2</span>]+dp[i-<span class="number">3</span>]</span><br><span class="line">        <span class="keyword">return</span> dp[n]</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1137-N-th-Tribonacci-Number-easy&quot;&gt;&lt;a href=&quot;#1137-N-th-Tribonacci-Number-easy&quot; class=&quot;headerlink&quot; title=&quot;1137. N-th Tribonacci Number</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>509. Fibonacci Number(easy)</title>
-    <link href="http://example.com/2022/11/07/509/"/>
-    <id>http://example.com/2022/11/07/509/</id>
-    <published>2022-11-07T21:12:54.000Z</published>
-    <updated>2022-11-08T22:16:12.770Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="509-Fibonacci-Number-easy"><a href="#509-Fibonacci-Number-easy" class="headerlink" title="509. Fibonacci Number(easy)"></a>509. Fibonacci Number(easy)</h1><h2 id="The-Fibonacci-numbers-commonly-denoted-F-n-form-a-sequence-called-the-Fibonacci-sequence-such-that-each-number-is-the-sum-of-the-two-preceding-ones-starting-from-0-and-1-That-is"><a href="#The-Fibonacci-numbers-commonly-denoted-F-n-form-a-sequence-called-the-Fibonacci-sequence-such-that-each-number-is-the-sum-of-the-two-preceding-ones-starting-from-0-and-1-That-is" class="headerlink" title="The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,"></a>The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">F(0) = 0, F(1) = 1</span><br><span class="line">F(n) = F(n - 1) + F(n - 2), for n &gt; 1.</span><br></pre></td></tr></table></figure><p>Given n, calculate F(n).</p><p>斐波那契数列<br>F(0)=0,F(1)=1</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fib</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> n&lt;<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> n</span><br><span class="line">        dp=[<span class="number">0</span>]*(n+<span class="number">1</span>)</span><br><span class="line">        dp[<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">            dp[i]=dp[i-<span class="number">1</span>]+dp[i-<span class="number">2</span>]</span><br><span class="line">        <span class="keyword">return</span> dp[n]</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;509-Fibonacci-Number-easy&quot;&gt;&lt;a href=&quot;#509-Fibonacci-Number-easy&quot; class=&quot;headerlink&quot; title=&quot;509. Fibonacci Number(easy)&quot;&gt;&lt;/a&gt;509. Fibo</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1323. Maximum 69 Number(easy)</title>
-    <link href="http://example.com/2022/11/06/1323/"/>
-    <id>http://example.com/2022/11/06/1323/</id>
-    <published>2022-11-07T03:57:00.000Z</published>
-    <updated>2022-11-07T03:59:25.023Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1323-Maximum-69-Number-easy"><a href="#1323-Maximum-69-Number-easy" class="headerlink" title="1323. Maximum 69 Number(easy)"></a>1323. Maximum 69 Number(easy)</h1><h2 id="You-are-given-a-positive-integer-num-consisting-only-of-digits-6-and-9"><a href="#You-are-given-a-positive-integer-num-consisting-only-of-digits-6-and-9" class="headerlink" title="You are given a positive integer num consisting only of digits 6 and 9."></a>You are given a positive integer num consisting only of digits 6 and 9.</h2><h2 id="Return-the-maximum-number-you-can-get-by-changing-at-most-one-digit-6-becomes-9-and-9-becomes-6"><a href="#Return-the-maximum-number-you-can-get-by-changing-at-most-one-digit-6-becomes-9-and-9-becomes-6" class="headerlink" title="Return the maximum number you can get by changing at most one digit (6 becomes 9, and 9 becomes 6)."></a>Return the maximum number you can get by changing at most one digit (6 becomes 9, and 9 becomes 6).</h2><p>将num转换为字符串，然后再转换成list<br>判断list有没有6，如果没有直接输出num<br>index(x)返回找到的第一个x<br>最后join把字符串连在一起</p><pre><code class="python">class Solution:    def maximum69Number (self, num: int) -&gt; int:        s=list(str(num))        if &#39;6&#39; not in s:            return num        s[s.index(&#39;6&#39;)]=&#39;9&#39;        return &#39;&#39;.join(s)</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1323-Maximum-69-Number-easy&quot;&gt;&lt;a href=&quot;#1323-Maximum-69-Number-easy&quot; class=&quot;headerlink&quot; title=&quot;1323. Maximum 69 Number(easy)&quot;&gt;&lt;/a&gt;132</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>408. Valid Word Abbreviation(easy)</title>
-    <link href="http://example.com/2022/11/06/408/"/>
-    <id>http://example.com/2022/11/06/408/</id>
-    <published>2022-11-07T03:50:54.000Z</published>
-    <updated>2022-11-07T03:52:07.012Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="408-Valid-Word-Abbreviation-easy"><a href="#408-Valid-Word-Abbreviation-easy" class="headerlink" title="408. Valid Word Abbreviation(easy)"></a>408. Valid Word Abbreviation(easy)</h1><h2 id="A-string-can-be-abbreviated-by-replacing-any-number-of-non-adjacent-non-empty-substrings-with-their-lengths-The-lengths-should-not-have-leading-zeros"><a href="#A-string-can-be-abbreviated-by-replacing-any-number-of-non-adjacent-non-empty-substrings-with-their-lengths-The-lengths-should-not-have-leading-zeros" class="headerlink" title="A string can be abbreviated by replacing any number of non-adjacent, non-empty substrings with their lengths. The lengths should not have leading zeros."></a>A string can be abbreviated by replacing any number of non-adjacent, non-empty substrings with their lengths. The lengths should not have leading zeros.</h2><p>For example, a string such as “substitution” could be abbreviated as (but not limited to):</p><p>“s10n” (“s ubstitutio n”)<br>“sub4u4” (“sub stit u tion”)<br>“12” (“substitution”)<br>“su3i1u2on” (“su bst i t u ti on”)<br>“substitution” (no substrings replaced)<br>The following are not valid abbreviations:</p><p>“s55n” (“s ubsti tutio n”, the replaced substrings are adjacent)<br>“s010n” (has leading zeros)<br>“s0ubstitution” (replaces an empty substring)<br>Given a string word and an abbreviation abbr, return whether the string matches the given abbreviation.</p><p>A substring is a contiguous non-empty sequence of characters within a string.</p><p>这道题就是直接模拟计算<br><a href="https://leetcode.com/problems/valid-word-abbreviation/solutions/144195/python-straightforward-solution-beats-100/">题解</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">validWordAbbreviation</span>(<span class="params">self, word, abbr</span>):</span></span><br><span class="line">        i = j = <span class="number">0</span></span><br><span class="line">        m, n = <span class="built_in">len</span>(word), <span class="built_in">len</span>(abbr)</span><br><span class="line">        <span class="keyword">while</span> i &lt; m <span class="keyword">and</span> j &lt; n:</span><br><span class="line">            <span class="keyword">if</span> word[i] == abbr[j]:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> abbr[j] == <span class="string">&quot;0&quot;</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="keyword">elif</span> abbr[j].isnumeric():</span><br><span class="line">                k = j</span><br><span class="line">                <span class="keyword">while</span> k &lt; n <span class="keyword">and</span> abbr[k].isnumeric():</span><br><span class="line">                    k += <span class="number">1</span></span><br><span class="line">                i += <span class="built_in">int</span>(abbr[j:k])</span><br><span class="line">                j = k</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> i == m <span class="keyword">and</span> j == n</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;408-Valid-Word-Abbreviation-easy&quot;&gt;&lt;a href=&quot;#408-Valid-Word-Abbreviation-easy&quot; class=&quot;headerlink&quot; title=&quot;408. Valid Word Abbreviation</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>459. Repeated Substring Pattern(easy)</title>
-    <link href="http://example.com/2022/11/06/459/"/>
-    <id>http://example.com/2022/11/06/459/</id>
-    <published>2022-11-07T03:31:10.000Z</published>
-    <updated>2022-11-07T03:41:32.883Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="459-Repeated-Substring-Pattern-easy"><a href="#459-Repeated-Substring-Pattern-easy" class="headerlink" title="459. Repeated Substring Pattern(easy)"></a>459. Repeated Substring Pattern(easy)</h1><h2 id="Given-a-string-s-check-if-it-can-be-constructed-by-taking-a-substring-of-it-and-appending-multiple-copies-of-the-substring-together"><a href="#Given-a-string-s-check-if-it-can-be-constructed-by-taking-a-substring-of-it-and-appending-multiple-copies-of-the-substring-together" class="headerlink" title="Given a string s, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together."></a>Given a string s, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.</h2><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a><a href="https://leetcode.com/problems/repeated-substring-pattern/solutions/94334/easy-python-solution-with-explaination/">题解</a></h3><p>这道题的题解非常有技巧：</p><ol><li>First char of input string is first char of repeated substring</li><li>Last char of input string is last char of repeated substring</li><li>Let S1 = S + S (where S in input string)</li><li>Remove 1 and last char of S1. Let this be S2</li><li>If S exists in S2 then return true else false</li><li>Let i be index in S2 where S starts then repeated substring length i + 1 and repeated substring S[0: i+1]</li></ol><p>这里最基础的一点是，新字符串s2=s+s，s是一开始的字符串。如果s是重复的，那么s2从第二个字符到倒数第二个字符里一定包含了s</p><pre><code class="python">class Solution:    def repeatedSubstringPattern(self, s: str) -&gt; bool:        if not s:            return False        s2=(s+s)[1:-1]        return s2.find(s)!=-1</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;459-Repeated-Substring-Pattern-easy&quot;&gt;&lt;a href=&quot;#459-Repeated-Substring-Pattern-easy&quot; class=&quot;headerlink&quot; title=&quot;459. Repeated Substrin</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>422. Valid Word Square(easy)</title>
-    <link href="http://example.com/2022/11/06/422/"/>
-    <id>http://example.com/2022/11/06/422/</id>
-    <published>2022-11-07T03:29:24.000Z</published>
-    <updated>2022-11-07T03:41:17.823Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="422-Valid-Word-Square-easy"><a href="#422-Valid-Word-Square-easy" class="headerlink" title="422. Valid Word Square(easy)"></a>422. Valid Word Square(easy)</h1><h2 id="Given-an-array-of-strings-words-return-true-if-it-forms-a-valid-word-square"><a href="#Given-an-array-of-strings-words-return-true-if-it-forms-a-valid-word-square" class="headerlink" title="Given an array of strings words, return true if it forms a valid word square."></a>Given an array of strings words, return true if it forms a valid word square.</h2><h2 id="A-sequence-of-strings-forms-a-valid-word-square-if-the-kth-row-and-column-read-the-same-string-where-0-lt-k-lt-max-numRows-numColumns"><a href="#A-sequence-of-strings-forms-a-valid-word-square-if-the-kth-row-and-column-read-the-same-string-where-0-lt-k-lt-max-numRows-numColumns" class="headerlink" title="A sequence of strings forms a valid word square if the kth row and column read the same string, where 0 &lt;= k &lt; max(numRows, numColumns)."></a>A sequence of strings forms a valid word square if the kth row and column read the same string, where 0 &lt;= k &lt; max(numRows, numColumns).</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: words = [&quot;abcd&quot;,&quot;bnrt&quot;,&quot;crmy&quot;,&quot;dtye&quot;]</span><br><span class="line">Output: true</span><br><span class="line">Explanation:</span><br><span class="line">The 1st row and 1st column both read &quot;abcd&quot;.</span><br><span class="line">The 2nd row and 2nd column both read &quot;bnrt&quot;.</span><br><span class="line">The 3rd row and 3rd column both read &quot;crmy&quot;.</span><br><span class="line">The 4th row and 4th column both read &quot;dtye&quot;.</span><br><span class="line">Therefore, it is a valid word square.</span><br></pre></td></tr></table></figure><p>找矩阵是否对称</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">validWordSquare</span>(<span class="params">self, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="keyword">if</span> words==<span class="literal">None</span> <span class="keyword">or</span> <span class="built_in">len</span>(words)==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        row=<span class="built_in">len</span>(words)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(row):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(words[i])):</span><br><span class="line">                <span class="keyword">if</span> j&gt;=<span class="built_in">len</span>(words) <span class="keyword">or</span> i &gt;=<span class="built_in">len</span>(words[j]) <span class="keyword">or</span> words[i][j]!=words[j][i]:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;422-Valid-Word-Square-easy&quot;&gt;&lt;a href=&quot;#422-Valid-Word-Square-easy&quot; class=&quot;headerlink&quot; title=&quot;422. Valid Word Square(easy)&quot;&gt;&lt;/a&gt;422. V</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-    <category term="matrix" scheme="http://example.com/tags/matrix/"/>
     
   </entry>
   
