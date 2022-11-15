@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-12T22:38:56.640Z</updated>
+  <updated>2022-11-15T02:28:15.069Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>49. Group Anagrams(medium)</title>
+    <link href="http://example.com/2022/11/14/49/"/>
+    <id>http://example.com/2022/11/14/49/</id>
+    <published>2022-11-15T02:19:26.000Z</published>
+    <updated>2022-11-15T02:28:15.069Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="49-Group-Anagrams-medium"><a href="#49-Group-Anagrams-medium" class="headerlink" title="49. Group Anagrams(medium)"></a>49. Group Anagrams(medium)</h1><h2 id="Given-an-array-of-strings-strs-group-the-anagrams-together-You-can-return-the-answer-in-any-order"><a href="#Given-an-array-of-strings-strs-group-the-anagrams-together-You-can-return-the-answer-in-any-order" class="headerlink" title="Given an array of strings strs, group the anagrams together. You can return the answer in any order."></a>Given an array of strings strs, group the anagrams together. You can return the answer in any order.</h2><h2 id="An-Anagram-is-a-word-or-phrase-formed-by-rearranging-the-letters-of-a-different-word-or-phrase-typically-using-all-the-original-letters-exactly-once"><a href="#An-Anagram-is-a-word-or-phrase-formed-by-rearranging-the-letters-of-a-different-word-or-phrase-typically-using-all-the-original-letters-exactly-once" class="headerlink" title="An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once."></a>An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;49-Group-Anagrams-medium&quot;&gt;&lt;a href=&quot;#49-Group-Anagrams-medium&quot; class=&quot;headerlink&quot; title=&quot;49. Group Anagrams(medium)&quot;&gt;&lt;/a&gt;49. Group An</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>217. Contains Duplicate(easy)</title>
+    <link href="http://example.com/2022/11/14/217/"/>
+    <id>http://example.com/2022/11/14/217/</id>
+    <published>2022-11-15T02:03:23.000Z</published>
+    <updated>2022-11-15T02:05:19.176Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="217-Contains-Duplicate-easy"><a href="#217-Contains-Duplicate-easy" class="headerlink" title="217. Contains Duplicate(easy)"></a>217. Contains Duplicate(easy)</h1><h1 id="Given-an-integer-array-nums-return-true-if-any-value-appears-at-least-twice-in-the-array-and-return-false-if-every-element-is-distinct"><a href="#Given-an-integer-array-nums-return-true-if-any-value-appears-at-least-twice-in-the-array-and-return-false-if-every-element-is-distinct" class="headerlink" title="Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct."></a>Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,3,1]</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure><p>利用ｓｅｔ的去重属性</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">containsDuplicate</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(<span class="built_in">set</span>(nums))!=<span class="built_in">len</span>(nums)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;217-Contains-Duplicate-easy&quot;&gt;&lt;a href=&quot;#217-Contains-Duplicate-easy&quot; class=&quot;headerlink&quot; title=&quot;217. Contains Duplicate(easy)&quot;&gt;&lt;/a&gt;217</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="set" scheme="http://example.com/tags/set/"/>
+    
+  </entry>
   
   <entry>
     <title>2131. Longest Palindrome by Concatenating Two Letter Words(medium)</title>
@@ -535,62 +591,6 @@
     <category term="string" scheme="http://example.com/tags/string/"/>
     
     <category term="matrix" scheme="http://example.com/tags/matrix/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>463. Island Perimeter(easy)</title>
-    <link href="http://example.com/2022/11/06/463/"/>
-    <id>http://example.com/2022/11/06/463/</id>
-    <published>2022-11-07T02:45:13.000Z</published>
-    <updated>2022-11-07T02:47:04.406Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="463-Island-Perimeter-easy"><a href="#463-Island-Perimeter-easy" class="headerlink" title="463. Island Perimeter(easy)"></a>463. Island Perimeter(easy)</h1><h2 id="You-are-given-row-x-col-grid-representing-a-map-where-grid-i-j-1-represents-land-and-grid-i-j-0-represents-water"><a href="#You-are-given-row-x-col-grid-representing-a-map-where-grid-i-j-1-represents-land-and-grid-i-j-0-represents-water" class="headerlink" title="You are given row x col grid representing a map where grid[i][j] = 1 represents land and grid[i][j] = 0 represents water."></a>You are given row x col grid representing a map where grid[i][j] = 1 represents land and grid[i][j] = 0 represents water.</h2><h2 id="Grid-cells-are-connected-horizontally-vertically-not-diagonally-The-grid-is-completely-surrounded-by-water-and-there-is-exactly-one-island-i-e-one-or-more-connected-land-cells"><a href="#Grid-cells-are-connected-horizontally-vertically-not-diagonally-The-grid-is-completely-surrounded-by-water-and-there-is-exactly-one-island-i-e-one-or-more-connected-land-cells" class="headerlink" title="Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells)."></a>Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).</h2><h2 id="The-island-doesn’t-have-“lakes”-meaning-the-water-inside-isn’t-connected-to-the-water-around-the-island-One-cell-is-a-square-with-side-length-1-The-grid-is-rectangular-width-and-height-don’t-exceed-100-Determine-the-perimeter-of-the-island"><a href="#The-island-doesn’t-have-“lakes”-meaning-the-water-inside-isn’t-connected-to-the-water-around-the-island-One-cell-is-a-square-with-side-length-1-The-grid-is-rectangular-width-and-height-don’t-exceed-100-Determine-the-perimeter-of-the-island" class="headerlink" title="The island doesn’t have “lakes”, meaning the water inside isn’t connected to the water around the island. One cell is a square with side length 1. The grid is rectangular, width and height don’t exceed 100. Determine the perimeter of the island."></a>The island doesn’t have “lakes”, meaning the water inside isn’t connected to the water around the island. One cell is a square with side length 1. The grid is rectangular, width and height don’t exceed 100. Determine the perimeter of the island.</h2><p>直接模拟，看当前为1的格子四边有没有其他为1的格子</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">islandPerimeter</span>(<span class="params">self, grid: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        row=<span class="built_in">len</span>(grid)</span><br><span class="line">        col=<span class="built_in">len</span>(grid[<span class="number">0</span>])</span><br><span class="line">        ans=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(row):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(col):</span><br><span class="line">                <span class="keyword">if</span> grid[i][j]==<span class="number">1</span>:</span><br><span class="line">                    ans+=<span class="number">4</span></span><br><span class="line">                    <span class="keyword">if</span> i+<span class="number">1</span>&lt;row <span class="keyword">and</span> grid[i+<span class="number">1</span>][j]==<span class="number">1</span>:</span><br><span class="line">                        ans-=<span class="number">1</span></span><br><span class="line">                    <span class="keyword">if</span> i-<span class="number">1</span>&gt;=<span class="number">0</span> <span class="keyword">and</span> grid[i-<span class="number">1</span>][j]==<span class="number">1</span>:</span><br><span class="line">                        ans-=<span class="number">1</span></span><br><span class="line">                    <span class="keyword">if</span> j+<span class="number">1</span>&lt;col <span class="keyword">and</span> grid[i][j+<span class="number">1</span>]==<span class="number">1</span>:</span><br><span class="line">                        ans-=<span class="number">1</span></span><br><span class="line">                    <span class="keyword">if</span> j-<span class="number">1</span>&gt;=<span class="number">0</span> <span class="keyword">and</span> grid[i][j-<span class="number">1</span>]==<span class="number">1</span>:</span><br><span class="line">                        ans-=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans </span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;463-Island-Perimeter-easy&quot;&gt;&lt;a href=&quot;#463-Island-Perimeter-easy&quot; class=&quot;headerlink&quot; title=&quot;463. Island Perimeter(easy)&quot;&gt;&lt;/a&gt;463. Isla</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="matrix" scheme="http://example.com/tags/matrix/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>461. Hamming Distance(easy)</title>
-    <link href="http://example.com/2022/11/06/461/"/>
-    <id>http://example.com/2022/11/06/461/</id>
-    <published>2022-11-07T02:25:00.000Z</published>
-    <updated>2022-11-07T02:28:58.640Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="461-Hamming-Distance-easy"><a href="#461-Hamming-Distance-easy" class="headerlink" title="461. Hamming Distance(easy)"></a>461. Hamming Distance(easy)</h1><h2 id="The-Hamming-distance-between-two-integers-is-the-number-of-positions-at-which-the-corresponding-bits-are-different"><a href="#The-Hamming-distance-between-two-integers-is-the-number-of-positions-at-which-the-corresponding-bits-are-different" class="headerlink" title="The Hamming distance between two integers is the number of positions at which the corresponding bits are different."></a>The Hamming distance between two integers is the number of positions at which the corresponding bits are different.</h2><h2 id="Given-two-integers-x-and-y-return-the-Hamming-distance-between-them"><a href="#Given-two-integers-x-and-y-return-the-Hamming-distance-between-them" class="headerlink" title="Given two integers x and y, return the Hamming distance between them."></a>Given two integers x and y, return the Hamming distance between them.</h2><p>这个用运位算的方法很巧妙<br>设x=1(0001),y=4(0100)<br>xor就是5(0101)<br>xor%2是1<br>xor&gt;&gt;=1 向右移了一位，此时是xor=(0010)<br>xor%2=0<br>xor&gt;&gt;=1 向右移一位，此时是xor=(0001)<br>xor%2=1<br>xor&gt;&gt;=1 向右移一位，此时是xor=(0000)<br>这时返回就是2</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hammingDistance</span>(<span class="params">self, x: <span class="built_in">int</span>, y: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        xor=x^y</span><br><span class="line">        res=<span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> xor!=<span class="number">0</span>:</span><br><span class="line">            res+=xor%<span class="number">2</span></span><br><span class="line">            xor&gt;&gt;=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;461-Hamming-Distance-easy&quot;&gt;&lt;a href=&quot;#461-Hamming-Distance-easy&quot; class=&quot;headerlink&quot; title=&quot;461. Hamming Distance(easy)&quot;&gt;&lt;/a&gt;461. Hamm</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="bitwise" scheme="http://example.com/tags/bitwise/"/>
     
   </entry>
   
