@@ -1,144 +1,343 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="zh-CN">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#3367D6"/>
-  <link rel="apple-touch-icon" href="/icons-192.png">
-  <link rel="manifest" href="/manifest.json">
-  
-  <meta name="generator" content="Hexo 5.4.0">
-
-  
-    <meta name="description" content="所求皆如愿，所行化坦途">
-  
-
-  
-
-  
-    <meta name="author" content="leaf">
-  
-
-  
-
-  
-
-  <title>136. Single Number(easy) | 八角书屋</title>
-
-  
-
-  
-    <link rel="shortcut icon" href="/tree.ico">
-  
-
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@1.1.3/index.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/monokai.css">
-  
-
-  
-<link rel="stylesheet" href="/css/style.css">
-
-<link rel="alternate" href="/atom.xml" title="八角书屋" type="application/atom+xml">
-</head>
-<body>
-  <div class="root-container">
     
-<!-- header container -->
-<header class="header-container post">
-  
-    <div class="post-image" style="background-image: url(https://cdn.staticaly.com/gh/upuphero/image-hosting@master/ball_4k.5y4nxeuvx8w0.webp)"></div>
-  
+    <title>136. Single Number(easy) - 八角书屋</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="136. Single Number(easy)Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.You must implement a solution with a linear runtime complexity and us">
+<meta property="og:type" content="article">
+<meta property="og:title" content="136. Single Number(easy)">
+<meta property="og:url" content="http://example.com/2022/09/30/136/index.html">
+<meta property="og:site_name" content="八角书屋">
+<meta property="og:description" content="136. Single Number(easy)Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.You must implement a solution with a linear runtime complexity and us">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-30T15:28:13.000Z">
+<meta property="article:modified_time" content="2022-10-02T20:09:30.072Z">
+<meta property="article:author" content="leaf">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="bitwise">
+<meta name="twitter:card" content="summary">
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
-  <!-- navbar -->
-<nav class="navbar">
-  <div class="navbar-content">
-    <!-- logo -->
-    <div class="navbar-logo">
-      <a href="/">
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1668742982030">
+    
+    <link rel="stylesheet" href="/css/style.css?v=1668742982030">
+
+    
         
-          八角书屋
+            <link rel="stylesheet" href="/custom.css?v=1668742982030">
         
-      </a>
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="八角书屋" type="application/atom+xml">
+</head>
+
+<body class="mdui-drawer-body-left">
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.staticaly.com/gh/upuphero/image-hosting@master/DVA鬼刀3440x1440壁纸.4wsj6bhewne0.webp)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="leaf" class="mdui-btn mdui-btn-icon"><img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/cover-image/42af107fca806538d6f148c7d2dda144ac34820e.3fn6hjcv3co0.webp" alt="leaf"></a>
+            </div>
+        </div>
     </div>
-    <!-- link -->
-    <div class="navbar-link">
-      <div class="navbar-btn">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <ul class="navbar-list">
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="leaf">
+            <img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/cover-image/42af107fca806538d6f148c7d2dda144ac34820e.3fn6hjcv3co0.webp" alt="leaf" alt="leaf">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>282</div>
+        <div><span>标签</span>66</div>
+        <div><span>分类</span>2</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
         
-          <li class="navbar-list-item"><a href="/">Main</a></li>
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
         
-          <li class="navbar-list-item"><a href="/about">About</a></li>
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/donate.html" title="给我赞助">
+            <i class="mdui-list-item-icon nexmoefont icon-coffee"></i>
+            <div class="mdui-list-item-content">
+                给我赞助
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博主">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博主
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+
+
+	<script async src="/js/search.js?v=1668742982030"></script>
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://www.linkedin.com/in/zijianye"
+			target="_blank"
+			mdui-tooltip="{content: 'linkedin'}"
+			style="
+				color: rgb(249, 174, 8);
+				background-color: rgba(249, 174, 8, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-QQ"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/20238211"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/upuphero"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://twitter.com/nexmoe"
+			target="_blank"
+			mdui-tooltip="{content: 'Twitter'}"
+			style="
+				color: rgb(59, 151, 239);
+				background-color: rgba(59, 151, 239, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-twitter"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://nexmoe.com/atom.xml"
+			target="_blank"
+			mdui-tooltip="{content: 'RSS'}"
+			style="
+				color: rgb(247, 132, 34);
+				background-color: rgba(247, 132, 34, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-rss"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/life/">life</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/study/">study</a>
+          <span class="category-list-count">274</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/Backtracking/" style="font-size: 10.5px;">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;">Counter</a> <a href="/tags/DFA/" style="font-size: 10.5px;">DFA</a> <a href="/tags/DFS/" style="font-size: 10.5px;">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 12px;">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 16px;">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;">Greatest common divisor </a> <a href="/tags/Heap-Sort/" style="font-size: 10px;">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;">LCP</a> <a href="/tags/Linked-list/" style="font-size: 17px;">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13px;">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11px;">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.5px;">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.5px;">Python</a> <a href="/tags/Queues/" style="font-size: 10.5px;">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.5px;">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.5px;">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.5px;">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.5px;">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.5px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 13.5px;">Tree</a> <a href="/tags/array/" style="font-size: 19px;">array</a> <a href="/tags/binary-search/" style="font-size: 12px;">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.5px;">binary search algorithm</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary tree</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary-tree</a> <a href="/tags/bitmask/" style="font-size: 10px;">bitmask</a> <a href="/tags/bitwise/" style="font-size: 16px;">bitwise</a> <a href="/tags/difference-array/" style="font-size: 12.5px;">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.5px;">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 15.5px;">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.5px;">game</a> <a href="/tags/greedy/" style="font-size: 10px;">greedy</a> <a href="/tags/greedy-algorithm/" style="font-size: 15px;">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.5px;">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.5px;">hashset</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a> <a href="/tags/life/" style="font-size: 10.5px;">life</a> <a href="/tags/linked-list/" style="font-size: 10.5px;">linked-list</a> <a href="/tags/list/" style="font-size: 10px;">list</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mapping/" style="font-size: 11px;">mapping</a> <a href="/tags/math/" style="font-size: 14px;">math</a> <a href="/tags/maths/" style="font-size: 11px;">maths</a> <a href="/tags/matrix/" style="font-size: 10.5px;">matrix</a> <a href="/tags/prefix-sum/" style="font-size: 13px;">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;">prime number</a> <a href="/tags/python-function/" style="font-size: 10.5px;">python function</a> <a href="/tags/recursion/" style="font-size: 14.5px;">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/set/" style="font-size: 11.5px;">set</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/sliding-window/" style="font-size: 10px;">sliding window</a> <a href="/tags/sort/" style="font-size: 10.5px;">sort</a> <a href="/tags/stack/" style="font-size: 16.5px;">stack</a> <a href="/tags/string/" style="font-size: 17.5px;">string</a> <a href="/tags/substring/" style="font-size: 10px;">substring</a> <a href="/tags/topk/" style="font-size: 12px;">topk</a> <a href="/tags/tree/" style="font-size: 12px;">tree</a> <a href="/tags/two-pointer/" style="font-size: 12px;">two-pointer</a> <a href="/tags/two-pointers/" style="font-size: 18px;">two-pointers</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(17);
+        var tags_length = parseInt(66);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+
+    
+        
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">278</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/11/16/222/">222. Count Complete Tree Nodes(medium)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/16/354/">354. Russian Doll Envelopes(hard)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/16/521/">521. Longest Uncommon Subsequence I(easy)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/16/520/">520. Detect Capital(easy)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/15/300/">300. Longest Increasing Subsequence(medium)</a>
+          </li>
         
       </ul>
     </div>
   </div>
-</nav>
 
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-    <div class="header-content">
-      <div class="post-text layout-block">
-        <div class="layout-margin">
-          <h1 class="title-wrap">136. Single Number(easy)</h1>
-          <h2 class="title-sub-wrap">
-            <strong>leaf</strong>
-            <span>发布于</span>
-            <time  class="article-date" datetime="2022-09-30T15:28:13.000Z" itemprop="datePublished">2022-09-30</time>
-          </h2>
-          <ul class="wrap-list dark">
-  
-    <li><a href="/categories/study/">📒 study</a></li>
-  
-</ul>
-          <ul class="wrap-list dark">
-  
-    <li><a href="/tags/leetcode/">🏷️ leetcode</a></li>
-  
-    <li><a href="/tags/Python/">🏷️ Python</a></li>
-  
-    <li><a href="/tags/bitwise/">🏷️ bitwise</a></li>
-  
-</ul>
-        </div>
-      </div>
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2022 leaf
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
     </div>
-  
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
 
-  
-  
-  
-</header>
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: NaN%;"> 
+            <img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/ball_4k.5y4nxeuvx8w0.webp" alt="136. Single Number(easy)" loading="lazy">
+            <h1>136. Single Number(easy)</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2022年09月30日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/study/">study</a>
+        
+        
+    <a><i class="nexmoefont icon-areachart"></i>约324字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要1分钟</a>
 
-    <!-- 文章 -->
+    </div>
+    
+    
+    
+    
+    
+</div>
 
-<!-- 文章内容 -->
-<div class="body-container">
-  <article class="content-container layout-block post-container">
-    <div class="article-info">
-      
-      
-      
-      
-      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="136-Single-Number-easy"><a href="#136-Single-Number-easy" class="headerlink" title="136. Single Number(easy)"></a>136. Single Number(easy)</h1><h2 id="Given-a-non-empty-array-of-integers-nums-every-element-appears-twice-except-for-one-Find-that-single-one"><a href="#Given-a-non-empty-array-of-integers-nums-every-element-appears-twice-except-for-one-Find-that-single-one" class="headerlink" title="Given a non-empty array of integers nums, every element appears twice except for one. Find that single one."></a>Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.</h2><h2 id="You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space"><a href="#You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space" class="headerlink" title="You must implement a solution with a linear runtime complexity and use only constant extra space."></a>You must implement a solution with a linear runtime complexity and use only constant extra space.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [2,2,1]</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
+    <h1 id="136-Single-Number-easy"><a href="#136-Single-Number-easy" class="headerlink" title="136. Single Number(easy)"></a>136. Single Number(easy)</h1><h2 id="Given-a-non-empty-array-of-integers-nums-every-element-appears-twice-except-for-one-Find-that-single-one"><a href="#Given-a-non-empty-array-of-integers-nums-every-element-appears-twice-except-for-one-Find-that-single-one" class="headerlink" title="Given a non-empty array of integers nums, every element appears twice except for one. Find that single one."></a>Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.</h2><h2 id="You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space"><a href="#You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space" class="headerlink" title="You must implement a solution with a linear runtime complexity and use only constant extra space."></a>You must implement a solution with a linear runtime complexity and use only constant extra space.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [2,2,1]</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
 
 
 <p>这道题的关键在于异或运算，异或也叫半加运算，其运算法则相当于不带进位的二进制加法：二进制下用1表示真，0表示假，则异或的运算法则为：0⊕0=0，1⊕0=1，0⊕1=1，1⊕1=0</p>
@@ -150,233 +349,87 @@
 <p>Syntax: reduce(function, sequence[, initial]) -&gt; value</p>
 <p>When the initial value is provided, the function is called with the initial value and the first item from the sequence.</p>
 
-      </section>
-
-      
-      
-        <nav class="article-nav">
-          
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/bloodborne.3n9snwzfily0.webp"></div>
-    
-    <div class="card-text">
-      
-        <a href="/2022/10/01/137/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">137. Single Number II(medium)</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
   </article>
-</div>
-          
-          
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-      <div class="card-cover" background-image-lazy data-img="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/bow.2wm5z26zf3w0.webp"></div>
-    
-    <div class="card-text">
-      
-        <a href="/2022/09/30/191/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">191. Number of 1 Bits(easy)</h2>
-        </a>
-      
-      <div class="card-text--row">Older</div>
-    </div>
-  </article>
-</div>
-          
-        </nav>
-      
 
-      <section class="page-message-container layout-padding">
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>leaf<br>
+        <strong>本文链接：</strong><a href="http://example.com/2022/09/30/136/" title="http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;09&#x2F;30&#x2F;136&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;09&#x2F;30&#x2F;136&#x2F;</a><br>
         
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
 
 
   
   
-
-  
-  
-
-
-      </section>
-    </div>
-    <div class="widget-info">
-      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
-  <div class="widget-body">
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
     
-      <img src="https://raw.githubusercontent.com/upuphero/image-hosting/master/鬼刀风铃-蝴蝶飞舞4k壁纸.5yao5kzk1oc0.webp" class="soft-size--round soft-style--box" alt="leaf">
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Python/" rel="tag">Python</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/bitwise/" rel="tag">bitwise</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/leetcode/" rel="tag">leetcode</a>
     
-    
-      <h2>leaf</h2>
-    
-    
-      <p>所求皆如愿，所行化坦途</p>
-    
-
-    <div class="count-box">
-      <div class="count-box--item">
-        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
-</svg>
-        <span>277</span>
-      </div>
-      <div class="count-box--item">
-        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
-</svg>
-        2
-      </div>
-      <div class="count-box--item">
-        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
-</svg>
-        65
-      </div>
-    </div>
-  </div>
-</section>
-
-      
-
-      
-<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
-  <div class="widget-title">
-    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
-</svg>
-    <span>NOTICE</span>
-  </div>
-  <div class="widget-body">
-    <p>每天一个类型的题目，刷到哭为止</p>
-  </div>
-</section>
-
-
-      <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
-  <div class="widget-title">
-    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
-</svg>
-    <span>CATEGORYS</span>
-  </div>
-  <div class="widget-body">
-    <ul class="categorys-list">
-      
-        <li class="categorys-list-item">
-          <a href="/categories/life/">
-            life (4)
-          </a>
-        </li>
-      
-        <li class="categorys-list-item">
-          <a href="/categories/study/">
-            study (269)
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-</section>
-
-      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
-  <div class="widget-title">
-    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
-</svg>
-    <span>TAGS</span>
-  </div>
-  <div class="widget-body">
-    <div class="tags-cloud">
-      <a href="/tags/Backtracking/" style="font-size: 10.53px;" class="tags-cloud-1">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;" class="tags-cloud-0">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;" class="tags-cloud-0">Counter</a> <a href="/tags/DFA/" style="font-size: 10.53px;" class="tags-cloud-1">DFA</a> <a href="/tags/DFS/" style="font-size: 10.53px;" class="tags-cloud-1">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 12.11px;" class="tags-cloud-2">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 15.79px;" class="tags-cloud-6">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;" class="tags-cloud-0">Greatest common divisor </a> <a href="/tags/Heap-Sort/" style="font-size: 10px;" class="tags-cloud-0">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;" class="tags-cloud-0">LCP</a> <a href="/tags/Linked-list/" style="font-size: 16.84px;" class="tags-cloud-7">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13.16px;" class="tags-cloud-3">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11.05px;" class="tags-cloud-1">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;" class="tags-cloud-0">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.53px;" class="tags-cloud-1">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;" class="tags-cloud-0">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.47px;" class="tags-cloud-9">Python</a> <a href="/tags/Queues/" style="font-size: 10.53px;" class="tags-cloud-1">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.53px;" class="tags-cloud-1">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.58px;" class="tags-cloud-2">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.58px;" class="tags-cloud-2">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.53px;" class="tags-cloud-1">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;" class="tags-cloud-0">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.53px;" class="tags-cloud-1">Traversal</a> <a href="/tags/Tree/" style="font-size: 13.68px;" class="tags-cloud-4">Tree</a> <a href="/tags/array/" style="font-size: 18.95px;" class="tags-cloud-9">array</a> <a href="/tags/binary-search/" style="font-size: 11.05px;" class="tags-cloud-1">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.63px;" class="tags-cloud-3">binary search algorithm</a> <a href="/tags/binary-tree/" style="font-size: 10px;" class="tags-cloud-0">binary-tree</a> <a href="/tags/bitmask/" style="font-size: 10px;" class="tags-cloud-0">bitmask</a> <a href="/tags/bitwise/" style="font-size: 15.79px;" class="tags-cloud-6">bitwise</a> <a href="/tags/difference-array/" style="font-size: 12.63px;" class="tags-cloud-3">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.53px;" class="tags-cloud-1">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 14.74px;" class="tags-cloud-5">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.53px;" class="tags-cloud-1">game</a> <a href="/tags/greedy/" style="font-size: 10px;" class="tags-cloud-0">greedy</a> <a href="/tags/greedy-algorithm/" style="font-size: 15.26px;" class="tags-cloud-5">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.42px;" class="tags-cloud-8">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.53px;" class="tags-cloud-1">hashset</a> <a href="/tags/if/" style="font-size: 10px;" class="tags-cloud-0">if</a> <a href="/tags/leetcode/" style="font-size: 20px;" class="tags-cloud-10">leetcode</a> <a href="/tags/life/" style="font-size: 10.53px;" class="tags-cloud-1">life</a> <a href="/tags/linked-list/" style="font-size: 10.53px;" class="tags-cloud-1">linked-list</a> <a href="/tags/list/" style="font-size: 10px;" class="tags-cloud-0">list</a> <a href="/tags/loop/" style="font-size: 10px;" class="tags-cloud-0">loop</a> <a href="/tags/mapping/" style="font-size: 11.05px;" class="tags-cloud-1">mapping</a> <a href="/tags/math/" style="font-size: 14.21px;" class="tags-cloud-4">math</a> <a href="/tags/maths/" style="font-size: 11.05px;" class="tags-cloud-1">maths</a> <a href="/tags/matrix/" style="font-size: 10.53px;" class="tags-cloud-1">matrix</a> <a href="/tags/prefix-sum/" style="font-size: 13.16px;" class="tags-cloud-3">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;" class="tags-cloud-0">prime number</a> <a href="/tags/python-function/" style="font-size: 10.53px;" class="tags-cloud-1">python function</a> <a href="/tags/recursion/" style="font-size: 14.74px;" class="tags-cloud-5">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;" class="tags-cloud-0">schedule</a> <a href="/tags/set/" style="font-size: 11.58px;" class="tags-cloud-2">set</a> <a href="/tags/skills/" style="font-size: 10px;" class="tags-cloud-0">skills</a> <a href="/tags/sliding-window/" style="font-size: 10px;" class="tags-cloud-0">sliding window</a> <a href="/tags/sort/" style="font-size: 10.53px;" class="tags-cloud-1">sort</a> <a href="/tags/stack/" style="font-size: 16.32px;" class="tags-cloud-6">stack</a> <a href="/tags/string/" style="font-size: 17.37px;" class="tags-cloud-7">string</a> <a href="/tags/substring/" style="font-size: 10px;" class="tags-cloud-0">substring</a> <a href="/tags/topk/" style="font-size: 12.11px;" class="tags-cloud-2">topk</a> <a href="/tags/tree/" style="font-size: 12.11px;" class="tags-cloud-2">tree</a> <a href="/tags/two-pointer/" style="font-size: 12.11px;" class="tags-cloud-2">two-pointer</a> <a href="/tags/two-pointers/" style="font-size: 17.89px;" class="tags-cloud-8">two-pointers</a>
-    </div>
-  </div>
-</section>
-    </div>
-  </article>
 </div>
 
-    <!-- footer container -->
-<footer id="footer" class="footer">
-  <div class="footer-container">
-    
-    <div class="social-icons">
-      
-        
-      
-        
-      
-        
-      
-        
-          <a href="https://github.com/miiiku/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
-            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
-</svg>
-          </a>
-        
-      
-        
-          <a href="https://twitter.com/guanquanhong" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
-            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
-</svg>
-          </a>
-        
-      
+  
+      <div class="nexmoe-post-footer">
+          
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#136-Single-Number-easy"><span class="toc-number">1.</span> <span class="toc-text">136. Single Number(easy)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Given-a-non-empty-array-of-integers-nums-every-element-appears-twice-except-for-one-Find-that-single-one"><span class="toc-number">1.1.</span> <span class="toc-text">Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#You-must-implement-a-solution-with-a-linear-runtime-complexity-and-use-only-constant-extra-space"><span class="toc-number">1.2.</span> <span class="toc-text">You must implement a solution with a linear runtime complexity and use only constant extra space.</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#python-reduce"><span class="toc-number">1.2.1.</span> <span class="toc-text">python reduce</span></a></li></ol></li></ol></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
     </div>
-     
-    <p>&copy; 2022 <a href="/" target="_blank">leaf</a></p>
+    <div id="nexmoe-search-space">
+	<div class="search-container">
+		<div class="search-header">
+			<div class="search-input-container">
+				<input
+					class="search-input"
+					type="text"
+					placeholder="搜索"
+					oninput="sinput();"
+				/>
+			</div>
+			<a class="search-close" onclick="sclose();">×</a>
+		</div>
+		<div class="search-body"></div>
+	</div>
+</div>
 
     
-
-    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
-
-    <p>
-      <a href="javascript:;" id="theme-light">🌞 浅色</a>
-      <a href="javascript:;" id="theme-dark">🌛 深色</a>
-      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
-    </p>
-  </div>
-</footer>
-  </div>
-
-  <div class="back-to-top-fixed soft-size--round soft-style--box">
-    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
-      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
-      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
-    </svg>
-  </div>
-
-  
-  <!-- aplayer -->
+<script src="/lib/mdui_043tiny/mdui.js"></script>
+<script src="/lib/fancybox/fancybox.umd.js"></script>
 
 
-<!-- dplayer -->
+ 
 
+<script async src="/js/app.js?v=1668742982032"></script>
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
 
-
-  
-
-
-  
-
-
-  
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-  
-  <!-- 尾部用户自定义相关内容 -->
 </body>
+
 </html>

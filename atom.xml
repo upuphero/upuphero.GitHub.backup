@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-16T03:58:29.596Z</updated>
+  <updated>2022-11-18T03:21:03.756Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,150 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>222. Count Complete Tree Nodes(medium)</title>
+    <link href="http://example.com/2022/11/16/222/"/>
+    <id>http://example.com/2022/11/16/222/</id>
+    <published>2022-11-17T04:39:29.000Z</published>
+    <updated>2022-11-18T03:21:03.756Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="222-Count-Complete-Tree-Nodes-medium"><a href="#222-Count-Complete-Tree-Nodes-medium" class="headerlink" title="222. Count Complete Tree Nodes(medium)"></a>222. Count Complete Tree Nodes(medium)</h1><h2 id="Given-the-root-of-a-complete-binary-tree-return-the-number-of-the-nodes-in-the-tree"><a href="#Given-the-root-of-a-complete-binary-tree-return-the-number-of-the-nodes-in-the-tree" class="headerlink" title="Given the root of a complete binary tree, return the number of the nodes in the tree."></a>Given the root of a complete binary tree, return the number of the nodes in the tree.</h2><h2 id="According-to-Wikipedia-every-level-except-possibly-the-last-is-completely-filled-in-a-complete-binary-tree-and-all-nodes-in-the-last-level-are-as-far-left-as-possible-It-can-have-between-1-and-2h-nodes-inclusive-at-the-last-level-h"><a href="#According-to-Wikipedia-every-level-except-possibly-the-last-is-completely-filled-in-a-complete-binary-tree-and-all-nodes-in-the-last-level-are-as-far-left-as-possible-It-can-have-between-1-and-2h-nodes-inclusive-at-the-last-level-h" class="headerlink" title="According to Wikipedia, every level, except possibly the last, is completely filled in a complete binary tree, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h."></a>According to Wikipedia, every level, except possibly the last, is completely filled in a complete binary tree, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h.</h2><h2 id="Design-an-algorithm-that-runs-in-less-than-O-n-time-complexity"><a href="#Design-an-algorithm-that-runs-in-less-than-O-n-time-complexity" class="headerlink" title="Design an algorithm that runs in less than O(n) time complexity."></a>Design an algorithm that runs in less than O(n) time complexity.</h2><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution:"></a>Solution:</h2><h2 id="wiki"><a href="#wiki" class="headerlink" title="wiki:"></a>wiki:</h2><h4 id="完全二叉树-Complete-Binary-Tree-："><a href="#完全二叉树-Complete-Binary-Tree-：" class="headerlink" title="完全二叉树 (Complete Binary Tree)："></a>完全二叉树 (Complete Binary Tree)：</h4><p>A Complete Binary Tree （CBT) is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.</p><p>对于一颗二叉树，假设其深度为d（d&gt;1）。除了第d层外，其它各层的节点数目均已达最大值，且第d层所有节点从左向右连续地紧密排列，这样的二叉树被称为完全二叉树；</p><p>换句话说，完全二叉树从根结点到倒数第二层满足完美二叉树，最后一层可以不完全填充，其叶子结点都靠左对齐。</p><h4 id="完美二叉树-Perfect-Binary-Tree-："><a href="#完美二叉树-Perfect-Binary-Tree-：" class="headerlink" title="完美二叉树 (Perfect Binary Tree)："></a>完美二叉树 (Perfect Binary Tree)：</h4><p>A Perfect Binary Tree(PBT) is a tree with all leaf nodes at the same depth. All internal nodes have degree 2.</p><p>二叉树的第i层至多拥有 2^{i-1} 个节点数；深度为k的二叉树至多总共有 {\displaystyle 2^{\begin{aligned}k+1\end{aligned}}-1} 个节点数，而总计拥有节点数匹配的，称为“满二叉树”；</p><h4 id="完满二叉树-Full-Binary-Tree"><a href="#完满二叉树-Full-Binary-Tree" class="headerlink" title="完满二叉树 (Full Binary Tree):"></a>完满二叉树 (Full Binary Tree):</h4><p>A Full Binary Tree (FBT) is a tree in which every node other than the leaves has two children.</p><p>换句话说，所有非叶子结点的度都是2。（只要你有孩子，你就必然是有两个孩子。）</p><p><a href="https://www.cnblogs.com/grandyang/p/4567827.html">思路</a><br>我们还是要来利用一下完全二叉树这个条件，不然感觉对出题者不太尊重。<br>通过上面对完全二叉树跟完美二叉树的定义比较，可以看出二者的关系是，完美二叉树一定是完全二叉树，而完全二叉树不一定是完美二叉树。<br>那么这道题给的完全二叉树就有可能是完美二叉树，若是完美二叉树，节点个数很好求，为2的h次方减1，h为该完美二叉树的高度。若不是的话，只能老老实实的一个一个数结点了。<br>思路是由 root 根结点往下，分别找最靠左边和最靠右边的路径长度，如果长度相等，则证明二叉树最后一层节点是满的，是满二叉树，直接返回节点个数，如果不相等，则节点个数为左子树的节点个数加上右子树的节点个数再加1(根节点)，其中左右子树节点个数的计算可以使用递归来计算，参见代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countNodes</span>(<span class="params">self, root: <span class="type">Optional</span>[TreeNode]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        hLeft=<span class="number">0</span></span><br><span class="line">        hRight=<span class="number">0</span></span><br><span class="line">        pLeft=root</span><br><span class="line">        pRight=root</span><br><span class="line">        <span class="keyword">while</span> pLeft:</span><br><span class="line">            hLeft+=<span class="number">1</span></span><br><span class="line">            pLeft=pLeft.left</span><br><span class="line">        <span class="keyword">while</span> pRight:</span><br><span class="line">            hRight+=<span class="number">1</span></span><br><span class="line">            pRight=pRight.right</span><br><span class="line">        <span class="keyword">if</span> hLeft==hRight:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">pow</span>(<span class="number">2</span>,hLeft)-<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> self.countNodes(root.left)+self.countNodes(root.right)+<span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;222-Count-Complete-Tree-Nodes-medium&quot;&gt;&lt;a href=&quot;#222-Count-Complete-Tree-Nodes-medium&quot; class=&quot;headerlink&quot; title=&quot;222. Count Complete </summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="binary tree" scheme="http://example.com/tags/binary-tree/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>354. Russian Doll Envelopes(hard)</title>
+    <link href="http://example.com/2022/11/16/354/"/>
+    <id>http://example.com/2022/11/16/354/</id>
+    <published>2022-11-17T04:29:21.000Z</published>
+    <updated>2022-11-17T04:33:07.775Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="354-Russian-Doll-Envelopes-hard"><a href="#354-Russian-Doll-Envelopes-hard" class="headerlink" title="354. Russian Doll Envelopes(hard)"></a>354. Russian Doll Envelopes(hard)</h1><p>You are given a 2D array of integers envelopes where envelopes[i] = [wi, hi] represents the width and the height of an envelope.</p><p>One envelope can fit into another if and only if both the width and height of one envelope are greater than the other envelope’s width and height.</p><p>Return the maximum number of envelopes you can Russian doll (i.e., put one inside the other).</p><p>Note: You cannot rotate an envelope.</p><p>这道题和300. Longest Increasing Subsequence(medium)属于类似问题，只不过该问题把维度升到二维了，先对宽度 w 进行升序排序，如果遇到 w 相同的情况，则按照高度 h 降序排序；之后把所有的 h 作为一个数组，在这个数组上计算 LIS 的长度就是答案。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxEnvelopes</span>(<span class="params">self, envelopes: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> envelopes:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        n = <span class="built_in">len</span>(envelopes)</span><br><span class="line">        envelopes.sort(key=<span class="keyword">lambda</span> x: (x[<span class="number">0</span>], -x[<span class="number">1</span>]))<span class="comment">#w升序排列，h降序排列</span></span><br><span class="line">        arr=[envelopes[<span class="number">0</span>][<span class="number">1</span>]]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">if</span> envelopes[i][<span class="number">1</span>]&gt;arr[-<span class="number">1</span>]:</span><br><span class="line">                arr.append(envelopes[i][<span class="number">1</span>])</span><br><span class="line">            <span class="keyword">elif</span> envelopes[i][<span class="number">1</span>]&lt;arr[-<span class="number">1</span>]:</span><br><span class="line">                left,right=<span class="number">0</span>,n-<span class="number">1</span></span><br><span class="line">                <span class="keyword">while</span> left&lt;right:</span><br><span class="line">                    mid=left+(right-left)//<span class="number">2</span> <span class="comment">#这里用mid=(left+right)//2 会超范围</span></span><br><span class="line">                    <span class="keyword">if</span> arr[mid]&gt;=envelopes[i][<span class="number">1</span>]:</span><br><span class="line">                        right=mid</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        left=mid+<span class="number">1</span></span><br><span class="line">                arr[left]=envelopes[i][<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(arr)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;354-Russian-Doll-Envelopes-hard&quot;&gt;&lt;a href=&quot;#354-Russian-Doll-Envelopes-hard&quot; class=&quot;headerlink&quot; title=&quot;354. Russian Doll Envelopes(ha</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
+    
+    <category term="binary search" scheme="http://example.com/tags/binary-search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>521. Longest Uncommon Subsequence I(easy)</title>
+    <link href="http://example.com/2022/11/16/521/"/>
+    <id>http://example.com/2022/11/16/521/</id>
+    <published>2022-11-16T21:43:24.000Z</published>
+    <updated>2022-11-18T03:28:19.157Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="521-Longest-Uncommon-Subsequence-I-easy"><a href="#521-Longest-Uncommon-Subsequence-I-easy" class="headerlink" title="521. Longest Uncommon Subsequence I(easy)"></a>521. Longest Uncommon Subsequence I(easy)</h1><h2 id="Given-two-strings-a-and-b-return-the-length-of-the-longest-uncommon-subsequence-between-a-and-b-If-the-longest-uncommon-subsequence-does-not-exist-return-1"><a href="#Given-two-strings-a-and-b-return-the-length-of-the-longest-uncommon-subsequence-between-a-and-b-If-the-longest-uncommon-subsequence-does-not-exist-return-1" class="headerlink" title="Given two strings a and b, return the length of the longest uncommon subsequence between a and b. If the longest uncommon subsequence does not exist, return -1."></a>Given two strings a and b, return the length of the longest uncommon subsequence between a and b. If the longest uncommon subsequence does not exist, return -1.</h2><h2 id="An-uncommon-subsequence-between-two-strings-is-a-string-that-is-a-subsequence-of-one-but-not-the-other"><a href="#An-uncommon-subsequence-between-two-strings-is-a-string-that-is-a-subsequence-of-one-but-not-the-other" class="headerlink" title="An uncommon subsequence between two strings is a string that is a subsequence of one but not the other."></a>An uncommon subsequence between two strings is a string that is a subsequence of one but not the other.</h2><h2 id="A-subsequence-of-a-string-s-is-a-string-that-can-be-obtained-after-deleting-any-number-of-characters-from-s"><a href="#A-subsequence-of-a-string-s-is-a-string-that-can-be-obtained-after-deleting-any-number-of-characters-from-s" class="headerlink" title="A subsequence of a string s is a string that can be obtained after deleting any number of characters from s."></a>A subsequence of a string s is a string that can be obtained after deleting any number of characters from s.</h2><h2 id="For-example-“abc”-is-a-subsequence-of-“aebdc”-because-you-can-delete-the-underlined-characters-in-“aebdc”-to-get-“abc”-Other-subsequences-of-“aebdc”-include-“aebdc”-“aeb”-and-“”-empty-string"><a href="#For-example-“abc”-is-a-subsequence-of-“aebdc”-because-you-can-delete-the-underlined-characters-in-“aebdc”-to-get-“abc”-Other-subsequences-of-“aebdc”-include-“aebdc”-“aeb”-and-“”-empty-string" class="headerlink" title="For example, “abc” is a subsequence of “aebdc” because you can delete the underlined characters in “aebdc” to get “abc”. Other subsequences of “aebdc” include “aebdc”, “aeb”, and “” (empty string)."></a>For example, “abc” is a subsequence of “aebdc” because you can delete the underlined characters in “aebdc” to get “abc”. Other subsequences of “aebdc” include “aebdc”, “aeb”, and “” (empty string).</h2><p>这道题很唬人啊，我一开始以为是双指针两个字符串不断比较，后来发现，只需要判断一点即可，如果字符串a和b相同，那么返回-1<br>如果不相同，最大的不同子字符串就是最长的那个字符串</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findLUSlength</span>(<span class="params">self, a: <span class="built_in">str</span>, b: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> a==b:</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">max</span>(<span class="built_in">len</span>(a),<span class="built_in">len</span>(b))</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;521-Longest-Uncommon-Subsequence-I-easy&quot;&gt;&lt;a href=&quot;#521-Longest-Uncommon-Subsequence-I-easy&quot; class=&quot;headerlink&quot; title=&quot;521. Longest U</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>520. Detect Capital(easy)</title>
+    <link href="http://example.com/2022/11/16/520/"/>
+    <id>http://example.com/2022/11/16/520/</id>
+    <published>2022-11-16T21:29:16.000Z</published>
+    <updated>2022-11-16T21:43:37.277Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="520-Detect-Capital-easy"><a href="#520-Detect-Capital-easy" class="headerlink" title="520. Detect Capital(easy)"></a>520. Detect Capital(easy)</h1><p>We define the usage of capitals in a word to be right when one of the following cases holds:</p><p>All letters in this word are capitals, like “USA”.<br>All letters in this word are not capitals, like “leetcode”.<br>Only the first letter in this word is capital, like “Google”.<br>Given a string word, return true if the usage of capitals in it is right.</p><p>分几种情况讨论，然后用到了isupper()和islower()两个函数</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">detectCapitalUse</span>(<span class="params">self, word: <span class="built_in">str</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        n=<span class="built_in">len</span>(word)</span><br><span class="line">        <span class="keyword">if</span> n==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">elif</span> word.isupper():</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">elif</span> word.islower():</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">elif</span> word[<span class="number">0</span>].isupper():</span><br><span class="line">            <span class="keyword">if</span> word[<span class="number">1</span>:].islower():</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;520-Detect-Capital-easy&quot;&gt;&lt;a href=&quot;#520-Detect-Capital-easy&quot; class=&quot;headerlink&quot; title=&quot;520. Detect Capital(easy)&quot;&gt;&lt;/a&gt;520. Detect Cap</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>300. Longest Increasing Subsequence(medium)</title>
+    <link href="http://example.com/2022/11/15/300/"/>
+    <id>http://example.com/2022/11/15/300/</id>
+    <published>2022-11-16T04:26:56.000Z</published>
+    <updated>2022-11-17T04:30:11.955Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="300-Longest-Increasing-Subsequence-medium"><a href="#300-Longest-Increasing-Subsequence-medium" class="headerlink" title="300. Longest Increasing Subsequence(medium)"></a>300. Longest Increasing Subsequence(medium)</h1><h2 id="Given-an-integer-array-nums-return-the-length-of-the-longest-strictly-increasing-subsequence"><a href="#Given-an-integer-array-nums-return-the-length-of-the-longest-strictly-increasing-subsequence" class="headerlink" title="Given an integer array nums, return the length of the longest strictly increasing subsequence."></a>Given an integer array nums, return the length of the longest strictly increasing subsequence.</h2><p>求最长严格递增子序列的长度。</p><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-by-leetcode-soluti/">官方题解</a></h3><h4 id="方法一：动态规划"><a href="#方法一：动态规划" class="headerlink" title="方法一：动态规划"></a>方法一：动态规划</h4><p>这个方法会超时</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLIS</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> nums:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        dp = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            dp.append(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i):</span><br><span class="line">                <span class="keyword">if</span> nums[i] &gt; nums[j]:</span><br><span class="line">                    dp[i] = <span class="built_in">max</span>(dp[i], dp[j] + <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(dp)</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="方法二：贪心-二分查找"><a href="#方法二：贪心-二分查找" class="headerlink" title="方法二：贪心 + 二分查找"></a>方法二：贪心 + 二分查找</h4><p>这道题的方法二，原题解写的不太容易理解，试着在这里再解释一遍：</p><p>无序列表最关键的一句在于： 数组 d[i]表示长度为 i 的最长上升子序列的末尾元素的最小值，即在数组 1,2,3,4,5,6中长度为3的上升子序列可以为 1,2,3也可以为 2,3,4等等但是d[3]=3，即子序列末尾元素最小为3。</p><p>无序列表解释清了数组d的含义之后，我们接着需要证明数组d具有单调性，即证明i&lt;j时，d[i]&lt;d[j]，使用反证法，假设存在k&lt;j时，d[k]&gt;d[j]，但在长度为j，末尾元素为d[j]的子序列A中，将后j-i个元素减掉，可以得到一个长度为i的子序列B，其末尾元素t1必然小于d[j]（因为在子序列A中，t1的位置上在d[j]的后面），而我们假设数组d必须符合表示长度为 i 的最长上升子序列的末尾元素的最小值，此时长度为i的子序列的末尾元素t1&lt;d[j]&lt;d[k]，即t1&lt;d[k]，所以d[k]不是最小的，与题设相矛盾，因此可以证明其单调性</p><p>无序列表证明单调性有两个好处：1.可以使用二分法；2.数组d的长度即为最长子序列的长度；</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;300-Longest-Increasing-Subsequence-medium&quot;&gt;&lt;a href=&quot;#300-Longest-Increasing-Subsequence-medium&quot; class=&quot;headerlink&quot; title=&quot;300. Longe</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
+    
+    <category term="binary search" scheme="http://example.com/tags/binary-search/"/>
+    
+  </entry>
   
   <entry>
     <title>501. Find Mode in Binary Search Tree(easy)</title>
@@ -439,152 +583,6 @@
     <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
     
     <category term="greedy" scheme="http://example.com/tags/greedy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1641. Count Sorted Vowel Strings(medium)</title>
-    <link href="http://example.com/2022/11/12/1641/"/>
-    <id>http://example.com/2022/11/12/1641/</id>
-    <published>2022-11-12T22:15:19.000Z</published>
-    <updated>2022-11-15T02:29:18.050Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1641-Count-Sorted-Vowel-Strings-medium"><a href="#1641-Count-Sorted-Vowel-Strings-medium" class="headerlink" title="1641. Count Sorted Vowel Strings(medium)"></a>1641. Count Sorted Vowel Strings(medium)</h1><h2 id="Given-an-integer-n-return-the-number-of-strings-of-length-n-that-consist-only-of-vowels-a-e-i-o-u-and-are-lexicographically-sorted"><a href="#Given-an-integer-n-return-the-number-of-strings-of-length-n-that-consist-only-of-vowels-a-e-i-o-u-and-are-lexicographically-sorted" class="headerlink" title="Given an integer n, return the number of strings of length n that consist only of vowels (a, e, i, o, u) and are lexicographically sorted."></a>Given an integer n, return the number of strings of length n that consist only of vowels (a, e, i, o, u) and are lexicographically sorted.</h2><h2 id="A-string-s-is-lexicographically-sorted-if-for-all-valid-i-s-i-is-the-same-as-or-comes-before-s-i-1-in-the-alphabet"><a href="#A-string-s-is-lexicographically-sorted-if-for-all-valid-i-s-i-is-the-same-as-or-comes-before-s-i-1-in-the-alphabet" class="headerlink" title="A string s is lexicographically sorted if for all valid i, s[i] is the same as or comes before s[i+1] in the alphabet."></a>A string s is lexicographically sorted if for all valid i, s[i] is the same as or comes before s[i+1] in the alphabet.</h2><h3 id="官方解法"><a href="#官方解法" class="headerlink" title="官方解法"></a><a href="">官方解法</a></h3><h3 id="数学解法"><a href="#数学解法" class="headerlink" title="数学解法"></a><a href="https://leetcode.cn/problems/count-sorted-vowel-strings/solutions/469467/zhong-xue-shu-xue-ke-pu-n-ge-xiao-qiu-fang-dao-m-g/">数学解法</a></h3><p>看到题目的第一眼就感觉这是排列组合，但没想好怎么写出排列的公式，这位大佬的思路太牛了：</p><h4 id="这个问题的数学解法，可以把问题转换成将-n-个小球放到-5-个盒子里，盒子可以为空。"><a href="#这个问题的数学解法，可以把问题转换成将-n-个小球放到-5-个盒子里，盒子可以为空。" class="headerlink" title="这个问题的数学解法，可以把问题转换成将 n 个小球放到 5 个盒子里，盒子可以为空。"></a>这个问题的数学解法，可以把问题转换成将 n 个小球放到 5 个盒子里，盒子可以为空。</h4><p>我们可以想象成把 n 个字符分配给五个元音所代表的盒子中。一旦每个盒子中的字符个数定了，那么这个字符串也固定下来了。因为题目要求必须是字典序，所以一定 a 字符在最前；其次是 e 字符；其次是 i 字符；其次是 o 字符；其次是 u 字符。</p><p>下面问题的关键就是，n 个小球放到 5 个盒子里，盒子可以为空，一共有多少种方法？</p><p>这是经典的中学数学问题。更一般的，我们来探讨，将 n 个小球放到 m 个盒子里，有多少种方法？</p><p>首先，我们考虑问题的简单版本，即盒子不能为空的情况。</p><p>此时，我们只需要在 n 个小球排成一排，中间放 m - 1 个隔板，放好以后，相当于把 n 个小球分成了 m 份。每一份对应一个盒子里的小球数量。</p><p>因为盒子不能为空，所以两个小球之间不可能放多个隔板，左右两端也不可能放隔板。因此，放隔板的位置有 n - 1 个，我们要放 m - 1 个隔板。答案为 C(n - 1, m - 1)。</p><p>有了这个结论，再来讨论问题的复杂版本，就简单了，即盒子可以为空的情况。</p><p>此时，我们只需要先拿 m 个新的小球，在 m 个盒子里，每个盒子中扔进去一个小球。之后，再分配原来的这 n 个小球，得到的分配结果，肯定 m 个盒子里都不为空。但此时，我们使用了 n + m 个小球。</p><p>换句话说，把 n 个小球放到 m 个盒子里，盒子可以为空，等价于：把 n + m 个小球放到 m 个盒子里，盒子不能为空。</p><p>大家也可以想成是：我们先把 n + m 个小球放到 m 个盒子里，盒子不能为空，然后再在每个盒子里拿走 1 个小球，总共拿走了 m 个小球，得到的结果，就是把 n 个小球放到 m 个盒子里，盒子可以为空的解。</p><p>把 n + m 个小球放到 m 个盒子里，盒子不能为空的分法，带入上面的公式，就是 C(n + m - 1, m - 1)</p><p>所以，把 n 个小球放到 m 个盒子里，盒子可以为空，答案为 C(n + m - 1, m - 1)。</p><h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>将 n 个小球放到 m 个盒子里，盒子不为空：C(n - 1, m - 1)；</p><p>将 n 个小球放到 m 个盒子里，盒子可以空：C(n + m - 1, m - 1)；</p><p>对于这个问题，m = 5，盒子可以为空，所以答案是 C(n + 5 - 1, 5 - 1) = C(n + 4, 4)</p><h4 id="提醒："><a href="#提醒：" class="headerlink" title="提醒："></a>提醒：</h4><p>分成五个盒子，首先不论空与不空，我们的五个盒子最终组成我们答案的形式是生成与每个盒子数量相等的对应字符串，然后把五个字符串穿起来，如aa+e+i+o+u这种，盒子里球的数量是某一个元音字母连续出现的数量，所以可以空</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1641-Count-Sorted-Vowel-Strings-medium&quot;&gt;&lt;a href=&quot;#1641-Count-Sorted-Vowel-Strings-medium&quot; class=&quot;headerlink&quot; title=&quot;1641. Count Sort</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="math" scheme="http://example.com/tags/math/"/>
-    
-    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1646. Get Maximum in Generated Array(easy)</title>
-    <link href="http://example.com/2022/11/10/1646/"/>
-    <id>http://example.com/2022/11/10/1646/</id>
-    <published>2022-11-10T22:27:01.000Z</published>
-    <updated>2022-11-15T02:29:39.038Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1646-Get-Maximum-in-Generated-Array-easy"><a href="#1646-Get-Maximum-in-Generated-Array-easy" class="headerlink" title="1646. Get Maximum in Generated Array(easy)"></a>1646. Get Maximum in Generated Array(easy)</h1><h2 id="You-are-given-an-integer-n-A-0-indexed-integer-array-nums-of-length-n-1-is-generated-in-the-following-way"><a href="#You-are-given-an-integer-n-A-0-indexed-integer-array-nums-of-length-n-1-is-generated-in-the-following-way" class="headerlink" title="You are given an integer n. A 0-indexed integer array nums of length n + 1 is generated in the following way:"></a>You are given an integer n. A 0-indexed integer array nums of length n + 1 is generated in the following way:</h2><p>nums[0] = 0<br>nums[1] = 1<br>nums[2 * i] = nums[i] when 2 &lt;= 2 * i &lt;= n<br>nums[2 * i + 1] = nums[i] + nums[i + 1] when 2 &lt;= 2 * i + 1 &lt;= n<br>Return the maximum integer in the array nums​​​.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 7</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: According to the given rules:</span><br><span class="line">  nums[0] = 0</span><br><span class="line">  nums[1] = 1</span><br><span class="line">  nums[(1 * 2) = 2] = nums[1] = 1</span><br><span class="line">  nums[(1 * 2) + 1 = 3] = nums[1] + nums[2] = 1 + 1 = 2</span><br><span class="line">  nums[(2 * 2) = 4] = nums[2] = 1</span><br><span class="line">  nums[(2 * 2) + 1 = 5] = nums[2] + nums[3] = 1 + 2 = 3</span><br><span class="line">  nums[(3 * 2) = 6] = nums[3] = 2</span><br><span class="line">  nums[(3 * 2) + 1 = 7] = nums[3] + nums[4] = 2 + 1 = 3</span><br><span class="line">Hence, nums = [0,1,1,2,1,3,2,3], and the maximum is max(0,1,1,2,1,3,2,3) = 3.</span><br></pre></td></tr></table></figure><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/get-maximum-in-generated-array/solutions/952714/huo-qu-sheng-cheng-shu-zu-zhong-de-zui-d-0z2l/">官方题解</a></h3><p>我们可以直接根据题目中描述的规则来计算出 nums 数组，并返回其最大元素。</p><p>为了简化代码逻辑，我们可以化简题目中的递推式。当 i≥2 时：</p><p>当i为偶数，nums[i]=nums[i//2]<br>当i为奇数，nums[i]=nums[i//2]+nums[i//2+1]</p><p>所以总结在一起是，nums[i]=nums[i//2]+i%2*nums[i//2+1]</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getMaximumGenerated</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> n==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        dp=[<span class="number">0</span>]*(n+<span class="number">1</span>)</span><br><span class="line">        dp[<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">            dp[i]=dp[i//<span class="number">2</span>]+i%<span class="number">2</span>*dp[i//<span class="number">2</span>+<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(dp)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1646-Get-Maximum-in-Generated-Array-easy&quot;&gt;&lt;a href=&quot;#1646-Get-Maximum-in-Generated-Array-easy&quot; class=&quot;headerlink&quot; title=&quot;1646. Get Ma</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="math" scheme="http://example.com/tags/math/"/>
-    
-    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1025. Divisor Game(easy)</title>
-    <link href="http://example.com/2022/11/10/1025/"/>
-    <id>http://example.com/2022/11/10/1025/</id>
-    <published>2022-11-10T22:01:15.000Z</published>
-    <updated>2022-11-10T22:06:07.448Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1025-Divisor-Game-easy"><a href="#1025-Divisor-Game-easy" class="headerlink" title="1025. Divisor Game(easy)"></a>1025. Divisor Game(easy)</h1><h2 id="Alice-and-Bob-take-turns-playing-a-game-with-Alice-starting-first"><a href="#Alice-and-Bob-take-turns-playing-a-game-with-Alice-starting-first" class="headerlink" title="Alice and Bob take turns playing a game, with Alice starting first."></a>Alice and Bob take turns playing a game, with Alice starting first.</h2><h2 id="Initially-there-is-a-number-n-on-the-chalkboard-On-each-player’s-turn-that-player-makes-a-move-consisting-of"><a href="#Initially-there-is-a-number-n-on-the-chalkboard-On-each-player’s-turn-that-player-makes-a-move-consisting-of" class="headerlink" title="Initially, there is a number n on the chalkboard. On each player’s turn, that player makes a move consisting of:"></a>Initially, there is a number n on the chalkboard. On each player’s turn, that player makes a move consisting of:</h2><p>Choosing any x with 0 &lt; x &lt; n and n % x == 0.<br>Replacing the number n on the chalkboard with n - x.<br>Also, if a player cannot make a move, they lose the game.</p><h2 id="Return-true-if-and-only-if-Alice-wins-the-game-assuming-both-players-play-optimally"><a href="#Return-true-if-and-only-if-Alice-wins-the-game-assuming-both-players-play-optimally" class="headerlink" title="Return true if and only if Alice wins the game, assuming both players play optimally."></a>Return true if and only if Alice wins the game, assuming both players play optimally.</h2><p>基本思路：</p><p>最终结果应该是占到 2 的赢，占到 1 的输；</p><p>若当前为奇数，奇数的约数只能是奇数或者 1，因此下一个一定是偶数；</p><p>若当前为偶数， 偶数的约数可以是奇数可以是偶数也可以是 1，因此直接减 1，则下一个是奇数；</p><p>因此，奇则输，偶则赢。直接:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">divisorGame</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="keyword">return</span> n%<span class="number">2</span>==<span class="number">0</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1025-Divisor-Game-easy&quot;&gt;&lt;a href=&quot;#1025-Divisor-Game-easy&quot; class=&quot;headerlink&quot; title=&quot;1025. Divisor Game(easy)&quot;&gt;&lt;/a&gt;1025. Divisor Game</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="math" scheme="http://example.com/tags/math/"/>
-    
-    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1047. Remove All Adjacent Duplicates In String(easy)</title>
-    <link href="http://example.com/2022/11/10/1047/"/>
-    <id>http://example.com/2022/11/10/1047/</id>
-    <published>2022-11-10T21:52:01.000Z</published>
-    <updated>2022-11-10T22:05:59.242Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1047-Remove-All-Adjacent-Duplicates-In-String-easy"><a href="#1047-Remove-All-Adjacent-Duplicates-In-String-easy" class="headerlink" title="1047. Remove All Adjacent Duplicates In String(easy)"></a>1047. Remove All Adjacent Duplicates In String(easy)</h1><h2 id="You-are-given-a-string-s-consisting-of-lowercase-English-letters-A-duplicate-removal-consists-of-choosing-two-adjacent-and-equal-letters-and-removing-them"><a href="#You-are-given-a-string-s-consisting-of-lowercase-English-letters-A-duplicate-removal-consists-of-choosing-two-adjacent-and-equal-letters-and-removing-them" class="headerlink" title="You are given a string s consisting of lowercase English letters. A duplicate removal consists of choosing two adjacent and equal letters and removing them."></a>You are given a string s consisting of lowercase English letters. A duplicate removal consists of choosing two adjacent and equal letters and removing them.</h2><h2 id="We-repeatedly-make-duplicate-removals-on-s-until-we-no-longer-can"><a href="#We-repeatedly-make-duplicate-removals-on-s-until-we-no-longer-can" class="headerlink" title="We repeatedly make duplicate removals on s until we no longer can."></a>We repeatedly make duplicate removals on s until we no longer can.</h2><h2 id="Return-the-final-string-after-all-such-duplicate-removals-have-been-made-It-can-be-proven-that-the-answer-is-unique"><a href="#Return-the-final-string-after-all-such-duplicate-removals-have-been-made-It-can-be-proven-that-the-answer-is-unique" class="headerlink" title="Return the final string after all such duplicate removals have been made. It can be proven that the answer is unique."></a>Return the final string after all such duplicate removals have been made. It can be proven that the answer is unique.</h2><p>这道题用栈就可以解决，输入进来判断和stack队首是否相等，如果相等就弹出，不相等就存进去</p><pre><code class="python">class Solution:    def removeDuplicates(self, s: str) -&gt; str:        stack=[]        for letter in s:            if stack and letter==stack[-1]:                stack.pop()            else:                stack.append(letter)        return &quot;&quot;.join(stack)</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1047-Remove-All-Adjacent-Duplicates-In-String-easy&quot;&gt;&lt;a href=&quot;#1047-Remove-All-Adjacent-Duplicates-In-String-easy&quot; class=&quot;headerlink&quot;</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="stack" scheme="http://example.com/tags/stack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>905. Sort Array By Parity(easy)</title>
-    <link href="http://example.com/2022/11/09/905/"/>
-    <id>http://example.com/2022/11/09/905/</id>
-    <published>2022-11-09T22:18:43.000Z</published>
-    <updated>2022-11-09T22:25:18.014Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="905-Sort-Array-By-Parity-easy"><a href="#905-Sort-Array-By-Parity-easy" class="headerlink" title="905. Sort Array By Parity(easy)"></a>905. Sort Array By Parity(easy)</h1><h2 id="Given-an-integer-array-nums-move-all-the-even-integers-at-the-beginning-of-the-array-followed-by-all-the-odd-integers"><a href="#Given-an-integer-array-nums-move-all-the-even-integers-at-the-beginning-of-the-array-followed-by-all-the-odd-integers" class="headerlink" title="Given an integer array nums, move all the even integers at the beginning of the array followed by all the odd integers."></a>Given an integer array nums, move all the even integers at the beginning of the array followed by all the odd integers.</h2><h2 id="Return-any-array-that-satisfies-this-condition"><a href="#Return-any-array-that-satisfies-this-condition" class="headerlink" title="Return any array that satisfies this condition."></a>Return any array that satisfies this condition.</h2><p>偶数放前面，奇数放后面</p><p>第一种方法<br>对%2的值排序</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortArrayByParity</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        nums.sort(key = <span class="keyword">lambda</span> x: x % <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">return</span> nums</span><br></pre></td></tr></table></figure><p>第二种方法<br>通过交换队首和队尾的值</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortArrayByParity</span>(<span class="params">self, nums</span>):</span></span><br><span class="line">        i, j = <span class="number">0</span>, <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; j:</span><br><span class="line">            <span class="keyword">if</span> nums[i] % <span class="number">2</span> &gt; nums[j] % <span class="number">2</span>:</span><br><span class="line">                nums[i], nums[j] = nums[j], nums[i]</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> nums[i] % <span class="number">2</span> == <span class="number">0</span>: i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> nums[j] % <span class="number">2</span> == <span class="number">1</span>: j -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> nums</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;905-Sort-Array-By-Parity-easy&quot;&gt;&lt;a href=&quot;#905-Sort-Array-By-Parity-easy&quot; class=&quot;headerlink&quot; title=&quot;905. Sort Array By Parity(easy)&quot;&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="sort" scheme="http://example.com/tags/sort/"/>
     
   </entry>
   
