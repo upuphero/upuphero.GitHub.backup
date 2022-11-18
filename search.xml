@@ -173,9 +173,9 @@
             
             <tag> Python </tag>
             
-            <tag> DFS </tag>
-            
             <tag> binary-tree </tag>
+            
+            <tag> DFS </tag>
             
         </tags>
       
@@ -1181,9 +1181,9 @@
             
             <tag> Python </tag>
             
-            <tag> stack </tag>
-            
             <tag> string </tag>
+            
+            <tag> stack </tag>
             
         </tags>
       
@@ -1212,9 +1212,9 @@
             
             <tag> Python </tag>
             
-            <tag> stack </tag>
-            
             <tag> string </tag>
+            
+            <tag> stack </tag>
             
         </tags>
       
@@ -1301,9 +1301,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> string </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -1332,9 +1332,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> string </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -1363,9 +1363,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> string </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -1425,9 +1425,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> string </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -1547,9 +1547,9 @@
             
             <tag> Python </tag>
             
-            <tag> topk </tag>
-            
             <tag> hashmap </tag>
+            
+            <tag> topk </tag>
             
         </tags>
       
@@ -1578,9 +1578,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> string </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -1669,9 +1669,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> string </tag>
+            
+            <tag> array </tag>
             
             <tag> bitwise </tag>
             
@@ -1791,9 +1791,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> string </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -1853,9 +1853,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> string </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -1946,9 +1946,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> string </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -1977,9 +1977,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> stack </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -2039,9 +2039,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> string </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -2538,9 +2538,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
+            
+            <tag> two-pointers </tag>
             
             <tag> set </tag>
             
@@ -2569,9 +2569,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -3412,9 +3412,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> string </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -3443,9 +3443,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> string </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -3892,9 +3892,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> stack </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -3923,9 +3923,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> stack </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -3954,9 +3954,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> stack </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -4014,9 +4014,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> stack </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -4045,9 +4045,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> stack </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -4076,9 +4076,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> stack </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -4107,9 +4107,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> stack </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -4136,11 +4136,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> array </tag>
+            
+            <tag> two-pointers </tag>
             
             <tag> Sliding-Window </tag>
             
@@ -4169,9 +4169,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> array </tag>
-            
             <tag> dynamic programming </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -4198,9 +4198,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> prefix sum </tag>
-            
             <tag> array </tag>
+            
+            <tag> prefix sum </tag>
             
         </tags>
       
@@ -4227,9 +4227,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> prefix sum </tag>
-            
             <tag> array </tag>
+            
+            <tag> prefix sum </tag>
             
         </tags>
       
@@ -4256,11 +4256,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> array </tag>
+            
+            <tag> two-pointers </tag>
             
             <tag> Sliding-Window </tag>
             
@@ -4289,11 +4289,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> array </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -4320,11 +4320,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> array </tag>
+            
+            <tag> two-pointers </tag>
             
             <tag> Sliding-Window </tag>
             
@@ -4353,11 +4353,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> array </tag>
+            
+            <tag> two-pointers </tag>
             
             <tag> Sliding-Window </tag>
             
@@ -4388,9 +4388,9 @@
             
             <tag> Python </tag>
             
-            <tag> array </tag>
-            
             <tag> math </tag>
+            
+            <tag> array </tag>
             
         </tags>
       
@@ -4417,9 +4417,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> prefix sum </tag>
-            
             <tag> array </tag>
+            
+            <tag> prefix sum </tag>
             
         </tags>
       
@@ -4870,9 +4870,9 @@
             
             <tag> Python </tag>
             
-            <tag> Dynamic Programming </tag>
-            
             <tag> difference array </tag>
+            
+            <tag> Dynamic Programming </tag>
             
         </tags>
       
@@ -4943,11 +4943,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> array </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -4974,11 +4974,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> array </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -5005,11 +5005,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> array </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -5061,11 +5061,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> array </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -5092,11 +5092,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> array </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -5123,11 +5123,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> array </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -5185,9 +5185,9 @@
             
             <tag> Python </tag>
             
-            <tag> Linked list </tag>
-            
             <tag> recursion </tag>
+            
+            <tag> Linked list </tag>
             
         </tags>
       
@@ -5214,11 +5214,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> Linked list </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -5231,7 +5231,7 @@
       <link href="/2022/08/27/142/"/>
       <url>/2022/08/27/142/</url>
       
-        <content type="html"><![CDATA[<h1 id="142-Linked-List-Cycle-II-medium"><a href="#142-Linked-List-Cycle-II-medium" class="headerlink" title="142. Linked List Cycle II(medium)"></a>142. Linked List Cycle II(medium)</h1><h3 id="快慢指针-leetcode题解"><a href="#快慢指针-leetcode题解" class="headerlink" title="快慢指针-leetcode题解"></a><a href="https://leetcode.cn/problems/linked-list-cycle-ii/solution/huan-xing-lian-biao-ii-by-leetcode-solution/">快慢指针-leetcode题解</a></h3><p><img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/142_fig1.4mi7jkj5o2g0.webp" alt="142"></p><p>思路与算法</p><p>我们使用两个指针，fast 与 slow。它们起始都位于链表的头部。随后，slow 指针每次向后移动一个位置，而 fast 指针向后移动两个位置。如果链表中存在环，则 fast 指针最终将再次与 slow 指针在环中相遇。</p><p>如下图所示，设链表中环外部分的长度为 a。slow 指针进入环后，又走了 bb 的距离与 fast 相遇。此时，fast 指针已经走完了环的 nn 圈，因此它走过的总距离为 a+n(b+c)+b=a+(n+1)b+nc。</p><p>根据题意，任意时刻，fast 指针走过的距离都为 slow 指针的 2 倍。因此，我们有</p><p>a+(n+1)b+nc=2(a+b)⟹a=c+(n−1)(b+c)</p><p>a=c+(n−1)(b+c)<br>有了 a=c+(n−1)(b+c) 的等量关系，我们会发现：从相遇点到入环点的距离加上 n−1 圈的环长，恰好等于从链表头部到入环点的距离。</p><p>因此，当发现 slow 与 fast 相遇时，我们再额外使用一个指针 ptr。起始，它指向链表头部；随后，它和 slow 每次向后移动一个位置。最终，它们会在入环点相遇。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">detectCycle</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        fast = head</span><br><span class="line">        slow = head</span><br><span class="line">        <span class="keyword">while</span> fast:</span><br><span class="line">            slow = slow.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">if</span> fast.<span class="built_in">next</span>:</span><br><span class="line">                fast = fast.<span class="built_in">next</span>.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">            <span class="keyword">if</span> fast == slow:</span><br><span class="line">                ptr = head</span><br><span class="line">                <span class="keyword">while</span> ptr!=slow:</span><br><span class="line">                    ptr=ptr.<span class="built_in">next</span></span><br><span class="line">                    slow = slow.<span class="built_in">next</span></span><br><span class="line">                <span class="keyword">return</span> ptr</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="142-Linked-List-Cycle-II-medium"><a href="#142-Linked-List-Cycle-II-medium" class="headerlink" title="142. Linked List Cycle II(medium)"></a>142. Linked List Cycle II(medium)</h1><h3 id="快慢指针-leetcode题解"><a href="#快慢指针-leetcode题解" class="headerlink" title="快慢指针-leetcode题解"></a><a href="https://leetcode.cn/problems/linked-list-cycle-ii/solution/huan-xing-lian-biao-ii-by-leetcode-solution/">快慢指针-leetcode题解</a></h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/142_fig1.4mi7jkj5o2g0.webp" alt="142" data-caption="142" loading="lazy"></p><p>思路与算法</p><p>我们使用两个指针，fast 与 slow。它们起始都位于链表的头部。随后，slow 指针每次向后移动一个位置，而 fast 指针向后移动两个位置。如果链表中存在环，则 fast 指针最终将再次与 slow 指针在环中相遇。</p><p>如下图所示，设链表中环外部分的长度为 a。slow 指针进入环后，又走了 bb 的距离与 fast 相遇。此时，fast 指针已经走完了环的 nn 圈，因此它走过的总距离为 a+n(b+c)+b=a+(n+1)b+nc。</p><p>根据题意，任意时刻，fast 指针走过的距离都为 slow 指针的 2 倍。因此，我们有</p><p>a+(n+1)b+nc=2(a+b)⟹a=c+(n−1)(b+c)</p><p>a=c+(n−1)(b+c)<br>有了 a=c+(n−1)(b+c) 的等量关系，我们会发现：从相遇点到入环点的距离加上 n−1 圈的环长，恰好等于从链表头部到入环点的距离。</p><p>因此，当发现 slow 与 fast 相遇时，我们再额外使用一个指针 ptr。起始，它指向链表头部；随后，它和 slow 每次向后移动一个位置。最终，它们会在入环点相遇。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">detectCycle</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        fast = head</span><br><span class="line">        slow = head</span><br><span class="line">        <span class="keyword">while</span> fast:</span><br><span class="line">            slow = slow.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">if</span> fast.<span class="built_in">next</span>:</span><br><span class="line">                fast = fast.<span class="built_in">next</span>.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">            <span class="keyword">if</span> fast == slow:</span><br><span class="line">                ptr = head</span><br><span class="line">                <span class="keyword">while</span> ptr!=slow:</span><br><span class="line">                    ptr=ptr.<span class="built_in">next</span></span><br><span class="line">                    slow = slow.<span class="built_in">next</span></span><br><span class="line">                <span class="keyword">return</span> ptr</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -5245,11 +5245,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> Linked list </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -5305,11 +5305,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> Linked list </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -5365,11 +5365,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> Linked list </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -6009,9 +6009,9 @@
             
             <tag> Python </tag>
             
-            <tag> Linked list </tag>
-            
             <tag> recursion </tag>
+            
+            <tag> Linked list </tag>
             
         </tags>
       
@@ -6040,9 +6040,9 @@
             
             <tag> Python </tag>
             
-            <tag> Linked list </tag>
-            
             <tag> recursion </tag>
+            
+            <tag> Linked list </tag>
             
         </tags>
       
@@ -6071,9 +6071,9 @@
             
             <tag> Python </tag>
             
-            <tag> Linked list </tag>
-            
             <tag> recursion </tag>
+            
+            <tag> Linked list </tag>
             
         </tags>
       
@@ -6102,9 +6102,9 @@
             
             <tag> Python </tag>
             
-            <tag> Linked list </tag>
-            
             <tag> recursion </tag>
+            
+            <tag> Linked list </tag>
             
         </tags>
       
@@ -6133,9 +6133,9 @@
             
             <tag> Python </tag>
             
-            <tag> Linked list </tag>
-            
             <tag> recursion </tag>
+            
+            <tag> Linked list </tag>
             
         </tags>
       
@@ -6164,9 +6164,9 @@
             
             <tag> Python </tag>
             
-            <tag> Linked list </tag>
-            
             <tag> recursion </tag>
+            
+            <tag> Linked list </tag>
             
         </tags>
       
@@ -6179,7 +6179,7 @@
       <link href="/2022/08/14/543/"/>
       <url>/2022/08/14/543/</url>
       
-        <content type="html"><![CDATA[<h1 id="543-Diameter-of-Binary-Tree-Easy"><a href="#543-Diameter-of-Binary-Tree-Easy" class="headerlink" title="543. Diameter of Binary Tree (Easy)"></a>543. Diameter of Binary Tree (Easy)</h1><h2 id="Given-the-root-of-a-binary-tree-return-the-length-of-the-diameter-of-the-tree"><a href="#Given-the-root-of-a-binary-tree-return-the-length-of-the-diameter-of-the-tree" class="headerlink" title="Given the root of a binary tree, return the length of the diameter of the tree."></a>Given the root of a binary tree, return the length of the diameter of the tree.</h2><h2 id="The-diameter-of-a-binary-tree-is-the-length-of-the-longest-path-between-any-two-nodes-in-a-tree-This-path-may-or-may-not-pass-through-the-root"><a href="#The-diameter-of-a-binary-tree-is-the-length-of-the-longest-path-between-any-two-nodes-in-a-tree-This-path-may-or-may-not-pass-through-the-root" class="headerlink" title="The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root."></a>The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.</h2><h2 id="The-length-of-a-path-between-two-nodes-is-represented-by-the-number-of-edges-between-them"><a href="#The-length-of-a-path-between-two-nodes-is-represented-by-the-number-of-edges-between-them" class="headerlink" title="The length of a path between two nodes is represented by the number of edges between them."></a>The length of a path between two nodes is represented by the number of edges between them.</h2><p>经典重现<br><img src="https://s2.51cto.com/oss/202108/05/76b5d27335a0239eacf8b76a391ed229.jpg" alt="binary tree"></p><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/diameter-of-binary-tree/solution/er-cha-shu-de-zhi-jing-by-leetcode-solution/">官方题解</a></h3><h4 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h4><p>其实我看到这道题感觉和<a href="https://upuphero.github.io/2022/08/14/110/">110. Balanced Binary Tree (Easy)</a>很像，可以在求高度的基础上稍微改一下<br>首先我们知道一条路径的长度为该路径经过的节点数减一，所以求直径（即求路径长度的最大值）等效于求路径经过节点数的最大值减一。</p><p>而任意一条路径均可以被看作由某个节点为起点，从其左儿子和右儿子向下遍历的路径拼接得到。</p><p>假设我们知道对于该节点的左儿子向下遍历经过最多的节点数 L （即以左儿子为根的子树的深度） 和其右儿子向下遍历经过最多的节点数 R （即以右儿子为根的子树的深度），那么以该节点为起点的路径经过节点数的最大值即为 L+R+1 。</p><p>我们记节点node 为起点的路径经过节点数的最大值为 d<sub>node</sub>，那么二叉树的直径就是所有节点 d<sub>node</sub>的最大值减一。</p><p>最后的算法流程为：我们定义一个递归函数 depth(node) 计算 d<sub>node</sub>，函数返回该节点为根的子树的深度。先递归调用左儿子和右儿子求得它们为根的子树的深度 L 和 R ，则该节点为根的子树的深度即为max(L,R)+1</p><p>该节点的 d<sub>node</sub> 值为L+R+1</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">diameterOfBinaryTree</span>(<span class="params">self, root: <span class="type">Optional</span>[TreeNode]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        self.ans = <span class="number">1</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">depth</span>(<span class="params">root</span>):</span></span><br><span class="line">            <span class="comment"># 访问到空节点了，返回0</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            <span class="comment"># 左儿子为根的子树的深度</span></span><br><span class="line">            L = depth(root.left)</span><br><span class="line">            <span class="comment"># 右儿子为根的子树的深度</span></span><br><span class="line">            R = depth(root.right)</span><br><span class="line">            <span class="comment"># 计算d_node即L+R+1 并更新ans</span></span><br><span class="line">            self.ans = <span class="built_in">max</span>(self.ans, L + R + <span class="number">1</span>)</span><br><span class="line">            <span class="comment"># 返回该节点为根的子树的深度</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">max</span>(L, R) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        depth(root)</span><br><span class="line">        <span class="keyword">return</span> self.ans - <span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="543-Diameter-of-Binary-Tree-Easy"><a href="#543-Diameter-of-Binary-Tree-Easy" class="headerlink" title="543. Diameter of Binary Tree (Easy)"></a>543. Diameter of Binary Tree (Easy)</h1><h2 id="Given-the-root-of-a-binary-tree-return-the-length-of-the-diameter-of-the-tree"><a href="#Given-the-root-of-a-binary-tree-return-the-length-of-the-diameter-of-the-tree" class="headerlink" title="Given the root of a binary tree, return the length of the diameter of the tree."></a>Given the root of a binary tree, return the length of the diameter of the tree.</h2><h2 id="The-diameter-of-a-binary-tree-is-the-length-of-the-longest-path-between-any-two-nodes-in-a-tree-This-path-may-or-may-not-pass-through-the-root"><a href="#The-diameter-of-a-binary-tree-is-the-length-of-the-longest-path-between-any-two-nodes-in-a-tree-This-path-may-or-may-not-pass-through-the-root" class="headerlink" title="The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root."></a>The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.</h2><h2 id="The-length-of-a-path-between-two-nodes-is-represented-by-the-number-of-edges-between-them"><a href="#The-length-of-a-path-between-two-nodes-is-represented-by-the-number-of-edges-between-them" class="headerlink" title="The length of a path between two nodes is represented by the number of edges between them."></a>The length of a path between two nodes is represented by the number of edges between them.</h2><p>经典重现<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://s2.51cto.com/oss/202108/05/76b5d27335a0239eacf8b76a391ed229.jpg" alt="binary tree" data-caption="binary tree" loading="lazy"></p><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/diameter-of-binary-tree/solution/er-cha-shu-de-zhi-jing-by-leetcode-solution/">官方题解</a></h3><h4 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h4><p>其实我看到这道题感觉和<a href="https://upuphero.github.io/2022/08/14/110/">110. Balanced Binary Tree (Easy)</a>很像，可以在求高度的基础上稍微改一下<br>首先我们知道一条路径的长度为该路径经过的节点数减一，所以求直径（即求路径长度的最大值）等效于求路径经过节点数的最大值减一。</p><p>而任意一条路径均可以被看作由某个节点为起点，从其左儿子和右儿子向下遍历的路径拼接得到。</p><p>假设我们知道对于该节点的左儿子向下遍历经过最多的节点数 L （即以左儿子为根的子树的深度） 和其右儿子向下遍历经过最多的节点数 R （即以右儿子为根的子树的深度），那么以该节点为起点的路径经过节点数的最大值即为 L+R+1 。</p><p>我们记节点node 为起点的路径经过节点数的最大值为 d<sub>node</sub>，那么二叉树的直径就是所有节点 d<sub>node</sub>的最大值减一。</p><p>最后的算法流程为：我们定义一个递归函数 depth(node) 计算 d<sub>node</sub>，函数返回该节点为根的子树的深度。先递归调用左儿子和右儿子求得它们为根的子树的深度 L 和 R ，则该节点为根的子树的深度即为max(L,R)+1</p><p>该节点的 d<sub>node</sub> 值为L+R+1</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">diameterOfBinaryTree</span>(<span class="params">self, root: <span class="type">Optional</span>[TreeNode]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        self.ans = <span class="number">1</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">depth</span>(<span class="params">root</span>):</span></span><br><span class="line">            <span class="comment"># 访问到空节点了，返回0</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            <span class="comment"># 左儿子为根的子树的深度</span></span><br><span class="line">            L = depth(root.left)</span><br><span class="line">            <span class="comment"># 右儿子为根的子树的深度</span></span><br><span class="line">            R = depth(root.right)</span><br><span class="line">            <span class="comment"># 计算d_node即L+R+1 并更新ans</span></span><br><span class="line">            self.ans = <span class="built_in">max</span>(self.ans, L + R + <span class="number">1</span>)</span><br><span class="line">            <span class="comment"># 返回该节点为根的子树的深度</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">max</span>(L, R) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        depth(root)</span><br><span class="line">        <span class="keyword">return</span> self.ans - <span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -6195,9 +6195,9 @@
             
             <tag> Python </tag>
             
-            <tag> Linked list </tag>
-            
             <tag> recursion </tag>
+            
+            <tag> Linked list </tag>
             
         </tags>
       
@@ -6210,7 +6210,7 @@
       <link href="/2022/08/14/110/"/>
       <url>/2022/08/14/110/</url>
       
-        <content type="html"><![CDATA[<h1 id="110-Balanced-Binary-Tree-Easy"><a href="#110-Balanced-Binary-Tree-Easy" class="headerlink" title="110. Balanced Binary Tree (Easy)"></a>110. Balanced Binary Tree (Easy)</h1><h2 id="Given-a-binary-tree-determine-if-it-is-height-balanced"><a href="#Given-a-binary-tree-determine-if-it-is-height-balanced" class="headerlink" title="Given a binary tree, determine if it is height-balanced."></a>Given a binary tree, determine if it is height-balanced.</h2><h2 id="For-this-problem-a-height-balanced-binary-tree-is-defined-as"><a href="#For-this-problem-a-height-balanced-binary-tree-is-defined-as" class="headerlink" title="For this problem, a height-balanced binary tree is defined as:"></a>For this problem, a height-balanced binary tree is defined as:</h2><h2 id="a-binary-tree-in-which-the-left-and-right-subtrees-of-every-node-differ-in-height-by-no-more-than-1"><a href="#a-binary-tree-in-which-the-left-and-right-subtrees-of-every-node-differ-in-height-by-no-more-than-1" class="headerlink" title="a binary tree in which the left and right subtrees of every node differ in height by no more than 1."></a>a binary tree in which the left and right subtrees of every node differ in height by no more than 1.</h2><p>经典重现<br><img src="https://s2.51cto.com/oss/202108/05/76b5d27335a0239eacf8b76a391ed229.jpg" alt="binary tree"></p><h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2><p><a href="https://leetcode.cn/problems/balanced-binary-tree/solution/ping-heng-er-cha-shu-by-leetcode-solution/">两种办法</a></p><h3 id="方法一：自顶向下的递归"><a href="#方法一：自顶向下的递归" class="headerlink" title="方法一：自顶向下的递归"></a>方法一：自顶向下的递归</h3><p>定义函数 height，用于计算二叉树中的任意一个节点 p 的高度：<br>height(p)=max(height(p.left),height(p.right))+1 P是非空节点</p><p>有了计算节点高度的函数，即可判断二叉树是否平衡。具体做法类似于二叉树的前序遍历，即对于当前遍历到的节点，首先计算左右子树的高度，如果左右子树的高度差是否不超过 1，再分别递归地遍历左右子节点，并判断左子树和右子树是否平衡。这是一个自顶向下的递归的过程。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isBalanced</span>(<span class="params">self, root: TreeNode</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">height</span>(<span class="params">root: TreeNode</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">max</span>(height(root.left), height(root.right)) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">abs</span>(height(root.left) - height(root.right)) &lt;= <span class="number">1</span> <span class="keyword">and</span> self.isBalanced(root.left) <span class="keyword">and</span> self.isBalanced(root.right)</span><br></pre></td></tr></table></figure><h3 id="方法二：自底向上的递归"><a href="#方法二：自底向上的递归" class="headerlink" title="方法二：自底向上的递归"></a>方法二：自底向上的递归</h3><p>方法一由于是自顶向下递归，因此对于同一个节点，函数 height 会被重复调用，导致时间复杂度较高。如果使用自底向上的做法，则对于每个节点，函数 height 只会被调用一次。</p><p>自底向上递归的做法类似于后序遍历，对于当前遍历到的节点，先递归地判断其左右子树是否平衡，再判断以当前节点为根的子树是否平衡。如果一棵子树是平衡的，则返回其高度（高度一定是非负整数），否则返回 -1。如果存在一棵子树不平衡，则整个二叉树一定不平衡。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isBalanced</span>(<span class="params">self, root: TreeNode</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">height</span>(<span class="params">root: TreeNode</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            leftHeight = height(root.left)</span><br><span class="line">            rightHeight = height(root.right)</span><br><span class="line">            <span class="keyword">if</span> leftHeight == -<span class="number">1</span> <span class="keyword">or</span> rightHeight == -<span class="number">1</span> <span class="keyword">or</span> <span class="built_in">abs</span>(leftHeight - rightHeight) &gt; <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">max</span>(leftHeight, rightHeight) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> height(root) &gt;= <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>优化</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isBalanced</span>(<span class="params">self, root: TreeNode</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">helper</span>(<span class="params">node</span>):</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> node:  <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            left_depth = helper(node.left)</span><br><span class="line">            right_depth = helper(node.right)</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">abs</span>(left_depth - right_depth) &gt; <span class="number">1</span>:</span><br><span class="line">                flag[<span class="number">0</span>] = <span class="literal">False</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">max</span>(left_depth, right_depth) + <span class="number">1</span></span><br><span class="line">        flag = [<span class="literal">True</span>]</span><br><span class="line">        helper(root)</span><br><span class="line">        <span class="keyword">return</span> flag[<span class="number">0</span>]</span><br></pre></td></tr></table></figure><p>这里为什么要用flag[0]而不是一个变量呢？<br>直接一个变量需要加self关键字，否则传不进递归函数里，因为变量的赋值和初始化都是一个语法会导致歧义，所以递归里修改flag的值会当成定义一个新的flag变量，而这个变量只在递归里生效，所以递归外部定义的flag无法被修改，大概类似局部变量和全局变量的区别，而列表、字典等，初始化和赋值的方法不同，因此不会导致歧义，所以函数对其修改也会改变调用代码中的值，结论如下:</p><p>列表、字典、集合：总是会按引用传入函数，函数代码组中对变量数据结构的任何改变都会反映到调用代码中。<br>字符串、整数 、元组：总是会按值传入函数，函数中对变量的任何修改是这个函数私有的，不会反映到调用代码中。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="110-Balanced-Binary-Tree-Easy"><a href="#110-Balanced-Binary-Tree-Easy" class="headerlink" title="110. Balanced Binary Tree (Easy)"></a>110. Balanced Binary Tree (Easy)</h1><h2 id="Given-a-binary-tree-determine-if-it-is-height-balanced"><a href="#Given-a-binary-tree-determine-if-it-is-height-balanced" class="headerlink" title="Given a binary tree, determine if it is height-balanced."></a>Given a binary tree, determine if it is height-balanced.</h2><h2 id="For-this-problem-a-height-balanced-binary-tree-is-defined-as"><a href="#For-this-problem-a-height-balanced-binary-tree-is-defined-as" class="headerlink" title="For this problem, a height-balanced binary tree is defined as:"></a>For this problem, a height-balanced binary tree is defined as:</h2><h2 id="a-binary-tree-in-which-the-left-and-right-subtrees-of-every-node-differ-in-height-by-no-more-than-1"><a href="#a-binary-tree-in-which-the-left-and-right-subtrees-of-every-node-differ-in-height-by-no-more-than-1" class="headerlink" title="a binary tree in which the left and right subtrees of every node differ in height by no more than 1."></a>a binary tree in which the left and right subtrees of every node differ in height by no more than 1.</h2><p>经典重现<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://s2.51cto.com/oss/202108/05/76b5d27335a0239eacf8b76a391ed229.jpg" alt="binary tree" data-caption="binary tree" loading="lazy"></p><h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2><p><a href="https://leetcode.cn/problems/balanced-binary-tree/solution/ping-heng-er-cha-shu-by-leetcode-solution/">两种办法</a></p><h3 id="方法一：自顶向下的递归"><a href="#方法一：自顶向下的递归" class="headerlink" title="方法一：自顶向下的递归"></a>方法一：自顶向下的递归</h3><p>定义函数 height，用于计算二叉树中的任意一个节点 p 的高度：<br>height(p)=max(height(p.left),height(p.right))+1 P是非空节点</p><p>有了计算节点高度的函数，即可判断二叉树是否平衡。具体做法类似于二叉树的前序遍历，即对于当前遍历到的节点，首先计算左右子树的高度，如果左右子树的高度差是否不超过 1，再分别递归地遍历左右子节点，并判断左子树和右子树是否平衡。这是一个自顶向下的递归的过程。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isBalanced</span>(<span class="params">self, root: TreeNode</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">height</span>(<span class="params">root: TreeNode</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">max</span>(height(root.left), height(root.right)) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">abs</span>(height(root.left) - height(root.right)) &lt;= <span class="number">1</span> <span class="keyword">and</span> self.isBalanced(root.left) <span class="keyword">and</span> self.isBalanced(root.right)</span><br></pre></td></tr></table></figure><h3 id="方法二：自底向上的递归"><a href="#方法二：自底向上的递归" class="headerlink" title="方法二：自底向上的递归"></a>方法二：自底向上的递归</h3><p>方法一由于是自顶向下递归，因此对于同一个节点，函数 height 会被重复调用，导致时间复杂度较高。如果使用自底向上的做法，则对于每个节点，函数 height 只会被调用一次。</p><p>自底向上递归的做法类似于后序遍历，对于当前遍历到的节点，先递归地判断其左右子树是否平衡，再判断以当前节点为根的子树是否平衡。如果一棵子树是平衡的，则返回其高度（高度一定是非负整数），否则返回 -1。如果存在一棵子树不平衡，则整个二叉树一定不平衡。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isBalanced</span>(<span class="params">self, root: TreeNode</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">height</span>(<span class="params">root: TreeNode</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            leftHeight = height(root.left)</span><br><span class="line">            rightHeight = height(root.right)</span><br><span class="line">            <span class="keyword">if</span> leftHeight == -<span class="number">1</span> <span class="keyword">or</span> rightHeight == -<span class="number">1</span> <span class="keyword">or</span> <span class="built_in">abs</span>(leftHeight - rightHeight) &gt; <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">max</span>(leftHeight, rightHeight) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> height(root) &gt;= <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>优化</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isBalanced</span>(<span class="params">self, root: TreeNode</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">helper</span>(<span class="params">node</span>):</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> node:  <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            left_depth = helper(node.left)</span><br><span class="line">            right_depth = helper(node.right)</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">abs</span>(left_depth - right_depth) &gt; <span class="number">1</span>:</span><br><span class="line">                flag[<span class="number">0</span>] = <span class="literal">False</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">max</span>(left_depth, right_depth) + <span class="number">1</span></span><br><span class="line">        flag = [<span class="literal">True</span>]</span><br><span class="line">        helper(root)</span><br><span class="line">        <span class="keyword">return</span> flag[<span class="number">0</span>]</span><br></pre></td></tr></table></figure><p>这里为什么要用flag[0]而不是一个变量呢？<br>直接一个变量需要加self关键字，否则传不进递归函数里，因为变量的赋值和初始化都是一个语法会导致歧义，所以递归里修改flag的值会当成定义一个新的flag变量，而这个变量只在递归里生效，所以递归外部定义的flag无法被修改，大概类似局部变量和全局变量的区别，而列表、字典等，初始化和赋值的方法不同，因此不会导致歧义，所以函数对其修改也会改变调用代码中的值，结论如下:</p><p>列表、字典、集合：总是会按引用传入函数，函数代码组中对变量数据结构的任何改变都会反映到调用代码中。<br>字符串、整数 、元组：总是会按值传入函数，函数中对变量的任何修改是这个函数私有的，不会反映到调用代码中。</p>]]></content>
       
       
       <categories>
@@ -6239,7 +6239,7 @@
       <link href="/2022/08/14/104/"/>
       <url>/2022/08/14/104/</url>
       
-        <content type="html"><![CDATA[<h1 id="104-Maximum-Depth-of-Binary-Tree-Easy"><a href="#104-Maximum-Depth-of-Binary-Tree-Easy" class="headerlink" title="104. Maximum Depth of Binary Tree (Easy)"></a>104. Maximum Depth of Binary Tree (Easy)</h1><h2 id="Given-the-root-of-a-binary-tree-return-its-maximum-depth"><a href="#Given-the-root-of-a-binary-tree-return-its-maximum-depth" class="headerlink" title="Given the root of a binary tree, return its maximum depth."></a>Given the root of a binary tree, return its maximum depth.</h2><h2 id="A-binary-tree’s-maximum-depth-is-the-number-of-nodes-along-the-longest-path-from-the-root-node-down-to-the-farthest-leaf-node"><a href="#A-binary-tree’s-maximum-depth-is-the-number-of-nodes-along-the-longest-path-from-the-root-node-down-to-the-farthest-leaf-node" class="headerlink" title="A binary tree’s maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node."></a>A binary tree’s maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.</h2><p>经典重现<br><img src="https://s2.51cto.com/oss/202108/05/76b5d27335a0239eacf8b76a391ed229.jpg" alt="binary tree"></p><p>这道题是求二叉树的深度，可以用深度优先搜索。<br>算法思想： 一个节点的高度=max(左孩子的高度,右孩子的高度)+1。 进行先序遍历搜索，每次递归返回的时候统计其左右孩子中最大的深度。</p><pre><code class="python"># Definition for a binary tree node.# class TreeNode:#     def __init__(self, val=0, left=None, right=None):#         self.val = val#         self.left = left#         self.right = rightclass Solution:    def maxDepth(self, root: Optional[TreeNode]) -&gt; int:        if root is None:            return 0        else:            left_height = self.maxDepth(root.left)            right_height = self.maxDepth(root.right)            return max(left_height,right_height)+1</code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="104-Maximum-Depth-of-Binary-Tree-Easy"><a href="#104-Maximum-Depth-of-Binary-Tree-Easy" class="headerlink" title="104. Maximum Depth of Binary Tree (Easy)"></a>104. Maximum Depth of Binary Tree (Easy)</h1><h2 id="Given-the-root-of-a-binary-tree-return-its-maximum-depth"><a href="#Given-the-root-of-a-binary-tree-return-its-maximum-depth" class="headerlink" title="Given the root of a binary tree, return its maximum depth."></a>Given the root of a binary tree, return its maximum depth.</h2><h2 id="A-binary-tree’s-maximum-depth-is-the-number-of-nodes-along-the-longest-path-from-the-root-node-down-to-the-farthest-leaf-node"><a href="#A-binary-tree’s-maximum-depth-is-the-number-of-nodes-along-the-longest-path-from-the-root-node-down-to-the-farthest-leaf-node" class="headerlink" title="A binary tree’s maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node."></a>A binary tree’s maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.</h2><p>经典重现<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://s2.51cto.com/oss/202108/05/76b5d27335a0239eacf8b76a391ed229.jpg" alt="binary tree" data-caption="binary tree" loading="lazy"></p><p>这道题是求二叉树的深度，可以用深度优先搜索。<br>算法思想： 一个节点的高度=max(左孩子的高度,右孩子的高度)+1。 进行先序遍历搜索，每次递归返回的时候统计其左右孩子中最大的深度。</p><pre><code class="python"># Definition for a binary tree node.# class TreeNode:#     def __init__(self, val=0, left=None, right=None):#         self.val = val#         self.left = left#         self.right = rightclass Solution:    def maxDepth(self, root: Optional[TreeNode]) -&gt; int:        if root is None:            return 0        else:            left_height = self.maxDepth(root.left)            right_height = self.maxDepth(root.right)            return max(left_height,right_height)+1</code></pre>]]></content>
       
       
       <categories>
@@ -6268,7 +6268,7 @@
       <link href="/2022/08/06/328/"/>
       <url>/2022/08/06/328/</url>
       
-        <content type="html"><![CDATA[<h1 id="328-Odd-Even-Linked-List-Medium"><a href="#328-Odd-Even-Linked-List-Medium" class="headerlink" title="328. Odd Even Linked List (Medium)"></a>328. Odd Even Linked List (Medium)</h1><h2 id="Given-the-head-of-a-singly-linked-list-group-all-the-nodes-with-odd-indices-together-followed-by-the-nodes-with-even-indices-and-return-the-reordered-list"><a href="#Given-the-head-of-a-singly-linked-list-group-all-the-nodes-with-odd-indices-together-followed-by-the-nodes-with-even-indices-and-return-the-reordered-list" class="headerlink" title="Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list."></a>Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.</h2><h2 id="The-first-node-is-considered-odd-and-the-second-node-is-even-and-so-on"><a href="#The-first-node-is-considered-odd-and-the-second-node-is-even-and-so-on" class="headerlink" title="The first node is considered odd, and the second node is even, and so on."></a>The first node is considered odd, and the second node is even, and so on.</h2><h2 id="Note-that-the-relative-order-inside-both-the-even-and-odd-groups-should-remain-as-it-was-in-the-input"><a href="#Note-that-the-relative-order-inside-both-the-even-and-odd-groups-should-remain-as-it-was-in-the-input" class="headerlink" title="Note that the relative order inside both the even and odd groups should remain as it was in the input."></a>Note that the relative order inside both the even and odd groups should remain as it was in the input.</h2><h2 id="You-must-solve-the-problem-in-O-1-extra-space-complexity-and-O-n-time-complexity"><a href="#You-must-solve-the-problem-in-O-1-extra-space-complexity-and-O-n-time-complexity" class="headerlink" title="You must solve the problem in O(1) extra space complexity and O(n) time complexity."></a>You must solve the problem in O(1) extra space complexity and O(n) time complexity.</h2><p>总结是把奇数节点串一块儿，再把偶数节点串一起，然后把两个连成一条链表</p><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/odd-even-linked-list/solution/qi-ou-lian-biao-by-leetcode-solution/">官方题解</a></h3><p><img src="https://assets.leetcode-cn.com/solution-static/328/1.png" alt="图片"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">oddEvenList</span>(<span class="params">self, head: ListNode</span>) -&gt; ListNode:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line">        </span><br><span class="line">        evenHead = head.<span class="built_in">next</span> <span class="comment">#新建一个链表头</span></span><br><span class="line">        odd, even = head, evenHead</span><br><span class="line">        <span class="keyword">while</span> even <span class="keyword">and</span> even.<span class="built_in">next</span>:</span><br><span class="line">            odd.<span class="built_in">next</span> = even.<span class="built_in">next</span></span><br><span class="line">            odd = odd.<span class="built_in">next</span></span><br><span class="line">            even.<span class="built_in">next</span> = odd.<span class="built_in">next</span></span><br><span class="line">            even = even.<span class="built_in">next</span></span><br><span class="line">        odd.<span class="built_in">next</span> = evenHead</span><br><span class="line">        <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="328-Odd-Even-Linked-List-Medium"><a href="#328-Odd-Even-Linked-List-Medium" class="headerlink" title="328. Odd Even Linked List (Medium)"></a>328. Odd Even Linked List (Medium)</h1><h2 id="Given-the-head-of-a-singly-linked-list-group-all-the-nodes-with-odd-indices-together-followed-by-the-nodes-with-even-indices-and-return-the-reordered-list"><a href="#Given-the-head-of-a-singly-linked-list-group-all-the-nodes-with-odd-indices-together-followed-by-the-nodes-with-even-indices-and-return-the-reordered-list" class="headerlink" title="Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list."></a>Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.</h2><h2 id="The-first-node-is-considered-odd-and-the-second-node-is-even-and-so-on"><a href="#The-first-node-is-considered-odd-and-the-second-node-is-even-and-so-on" class="headerlink" title="The first node is considered odd, and the second node is even, and so on."></a>The first node is considered odd, and the second node is even, and so on.</h2><h2 id="Note-that-the-relative-order-inside-both-the-even-and-odd-groups-should-remain-as-it-was-in-the-input"><a href="#Note-that-the-relative-order-inside-both-the-even-and-odd-groups-should-remain-as-it-was-in-the-input" class="headerlink" title="Note that the relative order inside both the even and odd groups should remain as it was in the input."></a>Note that the relative order inside both the even and odd groups should remain as it was in the input.</h2><h2 id="You-must-solve-the-problem-in-O-1-extra-space-complexity-and-O-n-time-complexity"><a href="#You-must-solve-the-problem-in-O-1-extra-space-complexity-and-O-n-time-complexity" class="headerlink" title="You must solve the problem in O(1) extra space complexity and O(n) time complexity."></a>You must solve the problem in O(1) extra space complexity and O(n) time complexity.</h2><p>总结是把奇数节点串一块儿，再把偶数节点串一起，然后把两个连成一条链表</p><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/odd-even-linked-list/solution/qi-ou-lian-biao-by-leetcode-solution/">官方题解</a></h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://assets.leetcode-cn.com/solution-static/328/1.png" alt="图片" data-caption="图片" loading="lazy"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">oddEvenList</span>(<span class="params">self, head: ListNode</span>) -&gt; ListNode:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line">        </span><br><span class="line">        evenHead = head.<span class="built_in">next</span> <span class="comment">#新建一个链表头</span></span><br><span class="line">        odd, even = head, evenHead</span><br><span class="line">        <span class="keyword">while</span> even <span class="keyword">and</span> even.<span class="built_in">next</span>:</span><br><span class="line">            odd.<span class="built_in">next</span> = even.<span class="built_in">next</span></span><br><span class="line">            odd = odd.<span class="built_in">next</span></span><br><span class="line">            even.<span class="built_in">next</span> = odd.<span class="built_in">next</span></span><br><span class="line">            even = even.<span class="built_in">next</span></span><br><span class="line">        odd.<span class="built_in">next</span> = evenHead</span><br><span class="line">        <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -6458,9 +6458,9 @@
             
             <tag> Python </tag>
             
-            <tag> Linked list </tag>
-            
             <tag> recursion </tag>
+            
+            <tag> Linked list </tag>
             
         </tags>
       
@@ -6487,11 +6487,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> Linked list </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -6518,11 +6518,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> Linked list </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -6535,7 +6535,7 @@
       <link href="/2022/07/20/LeetCode12-Tree/"/>
       <url>/2022/07/20/LeetCode12-Tree/</url>
       
-        <content type="html"><![CDATA[<p>参考：</p><h2 id="Leetcode-题解-链表"><a href="#Leetcode-题解-链表" class="headerlink" title="Leetcode 题解 - 链表"></a><a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E9%93%BE%E8%A1%A8.md">Leetcode 题解 - 链表</a></h2><h2 id="leetcode-tag"><a href="#leetcode-tag" class="headerlink" title="leetcode tag"></a><a href="https://leetcode.com/tag/linked-list/">leetcode tag</a></h2><p>如果说数据结构是算法的基础，那么数组和链表就是数据结构的基础。因为像堆，栈，树，图等比较复杂的数组结基本上都可以由数组和链表来表示，所以掌握数组和链表的基本操作十分重要。</p><p>一棵树要么是空树，要么有两个指针，每个指针指向一棵树。树是一种递归结构，很多树的问题可以使用递归来处理。<br><img src="https://s2.51cto.com/oss/202108/05/76b5d27335a0239eacf8b76a391ed229.jpg" alt="binary tree"></p>]]></content>
+        <content type="html"><![CDATA[<p>参考：</p><h2 id="Leetcode-题解-链表"><a href="#Leetcode-题解-链表" class="headerlink" title="Leetcode 题解 - 链表"></a><a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E9%93%BE%E8%A1%A8.md">Leetcode 题解 - 链表</a></h2><h2 id="leetcode-tag"><a href="#leetcode-tag" class="headerlink" title="leetcode tag"></a><a href="https://leetcode.com/tag/linked-list/">leetcode tag</a></h2><p>如果说数据结构是算法的基础，那么数组和链表就是数据结构的基础。因为像堆，栈，树，图等比较复杂的数组结基本上都可以由数组和链表来表示，所以掌握数组和链表的基本操作十分重要。</p><p>一棵树要么是空树，要么有两个指针，每个指针指向一棵树。树是一种递归结构，很多树的问题可以使用递归来处理。<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://s2.51cto.com/oss/202108/05/76b5d27335a0239eacf8b76a391ed229.jpg" alt="binary tree" data-caption="binary tree" loading="lazy"></p>]]></content>
       
       
       <categories>
@@ -6818,11 +6818,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> hashmap </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -6849,11 +6849,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> hashmap </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -6880,11 +6880,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> hashmap </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -7233,9 +7233,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
+            
+            <tag> two-pointers </tag>
             
             <tag> sort </tag>
             
@@ -7532,7 +7532,7 @@
       <link href="/2022/06/11/121/"/>
       <url>/2022/06/11/121/</url>
       
-        <content type="html"><![CDATA[<h1 id="121-Best-Time-to-Buy-and-Sell-Stock-Easy"><a href="#121-Best-Time-to-Buy-and-Sell-Stock-Easy" class="headerlink" title="121. Best Time to Buy and Sell Stock (Easy)"></a>121. Best Time to Buy and Sell Stock (Easy)</h1><h2 id="You-are-given-an-array-prices-where-prices-i-is-the-price-of-a-given-stock-on-the-ith-day"><a href="#You-are-given-an-array-prices-where-prices-i-is-the-price-of-a-given-stock-on-the-ith-day" class="headerlink" title="You are given an array prices where prices[i] is the price of a given stock on the ith day."></a>You are given an array prices where prices[i] is the price of a given stock on the ith day.</h2><h2 id="You-want-to-maximize-your-profit-by-choosing-a-single-day-to-buy-one-stock-and-choosing-a-different-day-in-the-future-to-sell-that-stock"><a href="#You-want-to-maximize-your-profit-by-choosing-a-single-day-to-buy-one-stock-and-choosing-a-different-day-in-the-future-to-sell-that-stock" class="headerlink" title="You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock."></a>You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.</h2><h2 id="Return-the-maximum-profit-you-can-achieve-from-this-transaction-If-you-cannot-achieve-any-profit-return-0"><a href="#Return-the-maximum-profit-you-can-achieve-from-this-transaction-If-you-cannot-achieve-any-profit-return-0" class="headerlink" title="Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0."></a>Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.</h2><p>其实这题是动态规划的问题.卖股票一共六题，分别是<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-i/">121</a>,<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/">122</a>,<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/">123</a>,<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/">188</a>,<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309</a>,<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">714</a></p><p><img src="https://pic.leetcode-cn.com/4eaadab491f2bf88639d66c9d51bb0115e694ae08d637841ac18172b631cb21f-0121.gif" alt="图片"></p><p><a href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/solution/yong-zui-shao-shu-liang-de-jian-yin-bao-qi-qiu-1-2/">官方题解</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxProfit</span>(<span class="params">self, prices: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        minprice = <span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>) <span class="comment">#float(&#x27;inf&#x27;)表示正无穷大</span></span><br><span class="line">        maxprofit = <span class="number">0</span> <span class="comment">#保存当前最大的利润</span></span><br><span class="line">        <span class="keyword">for</span> price <span class="keyword">in</span> prices: <span class="comment">#一次遍历</span></span><br><span class="line">            maxprofit = <span class="built_in">max</span>(price - minprice, maxprofit)<span class="comment">#当前利润与最大的利润相比</span></span><br><span class="line">            minprice = <span class="built_in">min</span>(price, minprice) <span class="comment">#保存当前最小的价格</span></span><br><span class="line">        <span class="keyword">return</span> maxprofit</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="121-Best-Time-to-Buy-and-Sell-Stock-Easy"><a href="#121-Best-Time-to-Buy-and-Sell-Stock-Easy" class="headerlink" title="121. Best Time to Buy and Sell Stock (Easy)"></a>121. Best Time to Buy and Sell Stock (Easy)</h1><h2 id="You-are-given-an-array-prices-where-prices-i-is-the-price-of-a-given-stock-on-the-ith-day"><a href="#You-are-given-an-array-prices-where-prices-i-is-the-price-of-a-given-stock-on-the-ith-day" class="headerlink" title="You are given an array prices where prices[i] is the price of a given stock on the ith day."></a>You are given an array prices where prices[i] is the price of a given stock on the ith day.</h2><h2 id="You-want-to-maximize-your-profit-by-choosing-a-single-day-to-buy-one-stock-and-choosing-a-different-day-in-the-future-to-sell-that-stock"><a href="#You-want-to-maximize-your-profit-by-choosing-a-single-day-to-buy-one-stock-and-choosing-a-different-day-in-the-future-to-sell-that-stock" class="headerlink" title="You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock."></a>You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.</h2><h2 id="Return-the-maximum-profit-you-can-achieve-from-this-transaction-If-you-cannot-achieve-any-profit-return-0"><a href="#Return-the-maximum-profit-you-can-achieve-from-this-transaction-If-you-cannot-achieve-any-profit-return-0" class="headerlink" title="Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0."></a>Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.</h2><p>其实这题是动态规划的问题.卖股票一共六题，分别是<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-i/">121</a>,<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/">122</a>,<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/">123</a>,<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/">188</a>,<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309</a>,<a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">714</a></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://pic.leetcode-cn.com/4eaadab491f2bf88639d66c9d51bb0115e694ae08d637841ac18172b631cb21f-0121.gif" alt="图片" data-caption="图片" loading="lazy"></p><p><a href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/solution/yong-zui-shao-shu-liang-de-jian-yin-bao-qi-qiu-1-2/">官方题解</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxProfit</span>(<span class="params">self, prices: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        minprice = <span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>) <span class="comment">#float(&#x27;inf&#x27;)表示正无穷大</span></span><br><span class="line">        maxprofit = <span class="number">0</span> <span class="comment">#保存当前最大的利润</span></span><br><span class="line">        <span class="keyword">for</span> price <span class="keyword">in</span> prices: <span class="comment">#一次遍历</span></span><br><span class="line">            maxprofit = <span class="built_in">max</span>(price - minprice, maxprofit)<span class="comment">#当前利润与最大的利润相比</span></span><br><span class="line">            minprice = <span class="built_in">min</span>(price, minprice) <span class="comment">#保存当前最小的价格</span></span><br><span class="line">        <span class="keyword">return</span> maxprofit</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -7588,7 +7588,7 @@
       <link href="/2022/06/10/452/"/>
       <url>/2022/06/10/452/</url>
       
-        <content type="html"><![CDATA[<h1 id="452-Minimum-Number-of-Arrows-to-Burst-Balloons-Medium"><a href="#452-Minimum-Number-of-Arrows-to-Burst-Balloons-Medium" class="headerlink" title="452. Minimum Number of Arrows to Burst Balloons (Medium)"></a>452. Minimum Number of Arrows to Burst Balloons (Medium)</h1><h2 id="There-are-some-spherical-balloons-taped-onto-a-flat-wall-that-represents-the-XY-plane-The-balloons-are-represented-as-a-2D-integer-array-points-where-points-i-xstart-xend-denotes-a-balloon-whose-horizontal-diameter-stretches-between-xstart-and-xend-You-do-not-know-the-exact-y-coordinates-of-the-balloons"><a href="#There-are-some-spherical-balloons-taped-onto-a-flat-wall-that-represents-the-XY-plane-The-balloons-are-represented-as-a-2D-integer-array-points-where-points-i-xstart-xend-denotes-a-balloon-whose-horizontal-diameter-stretches-between-xstart-and-xend-You-do-not-know-the-exact-y-coordinates-of-the-balloons" class="headerlink" title="There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons."></a>There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.</h2><h2 id="Arrows-can-be-shot-up-directly-vertically-in-the-positive-y-direction-from-different-points-along-the-x-axis-A-balloon-with-xstart-and-xend-is-burst-by-an-arrow-shot-at-x-if-xstart-lt-x-lt-xend-There-is-no-limit-to-the-number-of-arrows-that-can-be-shot-A-shot-arrow-keeps-traveling-up-infinitely-bursting-any-balloons-in-its-path"><a href="#Arrows-can-be-shot-up-directly-vertically-in-the-positive-y-direction-from-different-points-along-the-x-axis-A-balloon-with-xstart-and-xend-is-burst-by-an-arrow-shot-at-x-if-xstart-lt-x-lt-xend-There-is-no-limit-to-the-number-of-arrows-that-can-be-shot-A-shot-arrow-keeps-traveling-up-infinitely-bursting-any-balloons-in-its-path" class="headerlink" title="Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;= x &lt;= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path."></a>Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;= x &lt;= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path.</h2><h2 id="Given-the-array-points-return-the-minimum-number-of-arrows-that-must-be-shot-to-burst-all-balloons"><a href="#Given-the-array-points-return-the-minimum-number-of-arrows-that-must-be-shot-to-burst-all-balloons" class="headerlink" title="Given the array points, return the minimum number of arrows that must be shot to burst all balloons."></a>Given the array points, return the minimum number of arrows that must be shot to burst all balloons.</h2><p>题目描述：气球在一个水平数轴上摆放，可以重叠，飞镖垂直投向坐标轴，使得路径上的气球都被刺破。求解最小的投飞镖次数使所有气球都被刺破。</p><p>也是计算不重叠的区间个数，不过和 Non-overlapping points 的区别在于，[1, 2] 和 [2, 3] 在本题中算是重叠区间。</p><p><img src="https://assets.leetcode-cn.com/solution-static/452/1.png" alt="射箭"></p><p>Example</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">[[10,16], [2,8], [1,6], [7,12]]</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">2</span><br></pre></td></tr></table></figure><h2 id="排序-贪心"><a href="#排序-贪心" class="headerlink" title="排序 + 贪心"></a>排序 + 贪心</h2><p>这道题和 435. Non-overlapping Intervals (Medium) 有些类似，都是寻找重合区间</p><p>贪心：<br>既然每个气球都需要被引爆，那么在满足引爆对箭限制最大的那个气球（因为它一定要被引爆，而箭和其它同时被引爆的气球 都可以迁就它，所以满足它是必须的） 的同时，引爆尽可能多其他的气球。</p><p>在付出不变的的前提下，获得尽可能多。</p><p>简单来说就是先按照区间右边边界从小到大排序，为了尽可能的多引爆气球，第一支箭射在第一个区间的最右边，根据后面区间的左端点判断一共引爆了哪些区间，并从剩下未被引爆的气球中，再选择右边界位置最靠左的那一个，确定下一支箭，直到所有的气球都被引爆。</p><p>有个问题是这 nn 个气球对应的区间互不重叠，while 循环需要执行 n 次。所以当遇到x(j) ≤ y(i)时 我们可以直接跳出循环，y(j)就是下一个箭的位置。</p><p><a href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/solution/yong-zui-shao-shu-liang-de-jian-yin-bao-qi-qiu-1-2/">官方题解</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMinArrowShots</span>(<span class="params">self, points: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> points:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>        </span><br><span class="line">        points.sort(key=<span class="keyword">lambda</span> balloon: balloon[<span class="number">1</span>])</span><br><span class="line">        pos = points[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">        ans = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> balloon <span class="keyword">in</span> points:</span><br><span class="line">            <span class="keyword">if</span> balloon[<span class="number">0</span>] &gt; pos:</span><br><span class="line">                pos = balloon[<span class="number">1</span>]</span><br><span class="line">                ans += <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="452-Minimum-Number-of-Arrows-to-Burst-Balloons-Medium"><a href="#452-Minimum-Number-of-Arrows-to-Burst-Balloons-Medium" class="headerlink" title="452. Minimum Number of Arrows to Burst Balloons (Medium)"></a>452. Minimum Number of Arrows to Burst Balloons (Medium)</h1><h2 id="There-are-some-spherical-balloons-taped-onto-a-flat-wall-that-represents-the-XY-plane-The-balloons-are-represented-as-a-2D-integer-array-points-where-points-i-xstart-xend-denotes-a-balloon-whose-horizontal-diameter-stretches-between-xstart-and-xend-You-do-not-know-the-exact-y-coordinates-of-the-balloons"><a href="#There-are-some-spherical-balloons-taped-onto-a-flat-wall-that-represents-the-XY-plane-The-balloons-are-represented-as-a-2D-integer-array-points-where-points-i-xstart-xend-denotes-a-balloon-whose-horizontal-diameter-stretches-between-xstart-and-xend-You-do-not-know-the-exact-y-coordinates-of-the-balloons" class="headerlink" title="There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons."></a>There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.</h2><h2 id="Arrows-can-be-shot-up-directly-vertically-in-the-positive-y-direction-from-different-points-along-the-x-axis-A-balloon-with-xstart-and-xend-is-burst-by-an-arrow-shot-at-x-if-xstart-lt-x-lt-xend-There-is-no-limit-to-the-number-of-arrows-that-can-be-shot-A-shot-arrow-keeps-traveling-up-infinitely-bursting-any-balloons-in-its-path"><a href="#Arrows-can-be-shot-up-directly-vertically-in-the-positive-y-direction-from-different-points-along-the-x-axis-A-balloon-with-xstart-and-xend-is-burst-by-an-arrow-shot-at-x-if-xstart-lt-x-lt-xend-There-is-no-limit-to-the-number-of-arrows-that-can-be-shot-A-shot-arrow-keeps-traveling-up-infinitely-bursting-any-balloons-in-its-path" class="headerlink" title="Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;= x &lt;= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path."></a>Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;= x &lt;= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path.</h2><h2 id="Given-the-array-points-return-the-minimum-number-of-arrows-that-must-be-shot-to-burst-all-balloons"><a href="#Given-the-array-points-return-the-minimum-number-of-arrows-that-must-be-shot-to-burst-all-balloons" class="headerlink" title="Given the array points, return the minimum number of arrows that must be shot to burst all balloons."></a>Given the array points, return the minimum number of arrows that must be shot to burst all balloons.</h2><p>题目描述：气球在一个水平数轴上摆放，可以重叠，飞镖垂直投向坐标轴，使得路径上的气球都被刺破。求解最小的投飞镖次数使所有气球都被刺破。</p><p>也是计算不重叠的区间个数，不过和 Non-overlapping points 的区别在于，[1, 2] 和 [2, 3] 在本题中算是重叠区间。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://assets.leetcode-cn.com/solution-static/452/1.png" alt="射箭" data-caption="射箭" loading="lazy"></p><p>Example</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">[[10,16], [2,8], [1,6], [7,12]]</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">2</span><br></pre></td></tr></table></figure><h2 id="排序-贪心"><a href="#排序-贪心" class="headerlink" title="排序 + 贪心"></a>排序 + 贪心</h2><p>这道题和 435. Non-overlapping Intervals (Medium) 有些类似，都是寻找重合区间</p><p>贪心：<br>既然每个气球都需要被引爆，那么在满足引爆对箭限制最大的那个气球（因为它一定要被引爆，而箭和其它同时被引爆的气球 都可以迁就它，所以满足它是必须的） 的同时，引爆尽可能多其他的气球。</p><p>在付出不变的的前提下，获得尽可能多。</p><p>简单来说就是先按照区间右边边界从小到大排序，为了尽可能的多引爆气球，第一支箭射在第一个区间的最右边，根据后面区间的左端点判断一共引爆了哪些区间，并从剩下未被引爆的气球中，再选择右边界位置最靠左的那一个，确定下一支箭，直到所有的气球都被引爆。</p><p>有个问题是这 nn 个气球对应的区间互不重叠，while 循环需要执行 n 次。所以当遇到x(j) ≤ y(i)时 我们可以直接跳出循环，y(j)就是下一个箭的位置。</p><p><a href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/solution/yong-zui-shao-shu-liang-de-jian-yin-bao-qi-qiu-1-2/">官方题解</a></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMinArrowShots</span>(<span class="params">self, points: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> points:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>        </span><br><span class="line">        points.sort(key=<span class="keyword">lambda</span> balloon: balloon[<span class="number">1</span>])</span><br><span class="line">        pos = points[<span class="number">0</span>][<span class="number">1</span>]</span><br><span class="line">        ans = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> balloon <span class="keyword">in</span> points:</span><br><span class="line">            <span class="keyword">if</span> balloon[<span class="number">0</span>] &gt; pos:</span><br><span class="line">                pos = balloon[<span class="number">1</span>]</span><br><span class="line">                ans += <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -7710,9 +7710,9 @@
             
             <tag> Python </tag>
             
-            <tag> topk </tag>
-            
             <tag> hashmap </tag>
+            
+            <tag> topk </tag>
             
         </tags>
       
@@ -7739,11 +7739,11 @@
             
             <tag> leetcode </tag>
             
+            <tag> hashmap </tag>
+            
             <tag> Quick Sort </tag>
             
             <tag> topk </tag>
-            
-            <tag> hashmap </tag>
             
         </tags>
       
@@ -7772,9 +7772,9 @@
             
             <tag> Python </tag>
             
-            <tag> topk </tag>
-            
             <tag> hashmap </tag>
+            
+            <tag> topk </tag>
             
         </tags>
       
@@ -7857,9 +7857,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -7886,11 +7886,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
             
             <tag> Linked list </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -7917,9 +7917,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -7946,9 +7946,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -7975,9 +7975,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
+            
+            <tag> two-pointers </tag>
             
             <tag> list </tag>
             
@@ -8006,9 +8006,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -8035,9 +8035,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -8089,9 +8089,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> two-pointers </tag>
-            
             <tag> Python </tag>
+            
+            <tag> two-pointers </tag>
             
         </tags>
       
@@ -8129,7 +8129,7 @@
       <link href="/2022/05/16/elden-ring-boss/"/>
       <url>/2022/05/16/elden-ring-boss/</url>
       
-        <content type="html"><![CDATA[<h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>当我们褪色者重新回到交界地，第一个相遇的法环碎片持有者就是史东威尔城城主“黄金”葛瑞克，一个臭名昭著的神之后裔，黄金家族成员，在史东威尔城附近的破屋里，我们会遇到一位红帽女孩，会知道葛瑞克利用被称为接肢的技术四处劫掠褪色者，将砍下的手脚接在自己身上来增加自身的实力。这座腐朽的城池里到处都是残肢断臂，在一座大厅里我们还能见到在出生点相似的截肢贵族。在城池里我们还会遇到同样对葛瑞克所作所为十分不齿的女战士涅斐丽·露，她会在我们与葛瑞克战斗中助我们一臂之力。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%8E%A5%E8%82%A2.5zgwu136oo40.webp" alt="接肢"></p><p>在我们将他击退之后，他还会砍下自己的左手，并接上一个龙头，试图再度增强自己的力量。但当我们最终击败他时，他喃喃地说到：“总有一天，我们会回到黄金树脚下的故乡……“葛瑞克作为曾经最强的一族——”黄金“一族的后人，却非常孱弱，艾尔登法环被女神玛莉卡敲碎后，群雄并起，引发了旷日持久的碎片战争，黄金树脚下的王城多次遭到进攻，葛瑞克混在女人堆里逃出王城，躲在史东薇尔城苟活，曾经想挑战女武神，却被被女武神打的满地找牙。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%85%B5%E8%B4%A5%E5%A6%82%E5%B1%B1%E5%80%92.5rvvday8fkk0.webp" alt="兵败如山倒"></p><p>他妄图通过接肢变得更强，却是想着能够有朝一日可以重现黄金一族的辉煌，当他砍下手臂接上龙头时，他会朝天怒吼：“诸位祖先，敬请见证！”只可惜乱世之中，不符合无上意志的棋子都会被抹去。</p><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>乘着灵马特雷托一路北上，在雷亚卢卡利亚魔法学院，我们会遭遇曾经被称为“满月”女王的蕾娜菈。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%BB%A1%E6%9C%88%E5%A5%B3%E7%8E%8B%E5%A4%A7%E5%8D%A2%E6%81%A9.3jkdl5ccy3c0.webp" alt="满月女王大卢恩"><br>作为卡利亚魔法王国曾经的领导者，卡利亚魔法王国和黄金树势力曾经敌对，黄金树派出了英雄拉达冈前来讨伐，结果蕾娜菈和拉达冈在战场上相爱，双方化干戈为玉帛，喜结连理还诞下了三个子嗣。（分别是碎星将军拉塔恩，月之公主菈妮（神人），黄金树司法官拉卡德）</p><p>但好景不长，拉达冈突然抛下了自己的妻子，回到黄金树和永恒女王玛丽卡结婚。突然失去爱情支撑的蕾娜菈就此丧失了神智，成为现在这幅模样并被卡利亚王室囚禁于大书库。</p><p>她的手里怀抱着拉达冈留给她的琥珀一样的大卢恩，神志不清，不断地利用大卢恩的力量诞生没有自我意识的孩子。</p><p>在打碎女王身边的防护罩后</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%A5%B3%E7%8E%8B.6ktlkq7hr88.webp" alt="女王"></p><p>女儿月之公主菈妮会用魔法代替她的母亲与我们战斗，重现了全盛时期的满月女王：灵魂激流一类的法术随意释放，还可以召唤巨龙巨人狼群的灵体协助战斗。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%BB%A1%E6%9C%88%E5%A5%B3%E7%8E%8B.u8tx9yd3ksw.webp" alt="满月女王"></p><h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>往东，我们进入了满目猩红腐败的盖利德地区，刚进入红狮子城的配乐极其震撼和忧伤，这么一位一等一的英雄，在盖利德和女武神的战斗中遭受猩红腐败的腐蚀后，自我放逐到恸哭山丘，即使像野狗一样啃噬着战场上的尸体，依然维持着星空的封印。他的手下红狮子军在盖利德修筑了一条熏烧火墙，用火焰同被猩红腐败腐蚀变异的巨大怪物开展永无止境的死斗。<br><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%8B%89%E5%A1%94%E6%81%A9.6s44iqw0kyw0.webp" alt="拉塔恩"></p><p>一望无际的战场上布满了断戟残垣，只能远远看到他的庞大身躯和贯穿天空的重力大箭，这是一场战斗祭奠，拉塔恩的手下奇异骑士邀请天下豪杰群聚于此，希望能解除他的痛苦，像一位战士一样死去，如果不把战士壶亚历山大和狼哥等英雄们召唤出来，单对单战斗确实是非常困难的事。如果召唤所有英雄跟这位最强半神贴身肉搏，扑面而来的是那种英雄末路的悲壮感，大开大合的招式在战士们中杀进杀出，能坚持战斗到最后一刻的就只剩下壶哥和狼哥，终于击败拉塔恩将军后，天上静滞的星星突然开始流动，随着拉塔恩将军的逝去，群星的封印被解除，新的命运齿轮开始转动</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E8%A7%A3%E6%94%BE%E7%BE%A4%E6%98%9F.map0i942acw.webp" alt="解放群星"></p><h2 id="四"><a href="#四" class="headerlink" title="四"></a>四</h2><p>随着星空封印解除，一枚流星砸穿了地面，地下的永恒之城重现人世，充满恶意的恐怖外神，黑暗弃子艾丝缇从星空坠落，砸穿了天空城之后，又将诺克史黛拉沉入地底，这与永恒之城的种种悖逆之举有关，他们制造了可以伤害无上意志和二指的猎杀指头刀，又试图通过仿身泪滴造出新的神灵，从而引来了无上意志的惩罚。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E9%BB%91%E6%9A%97%E5%BC%83%E5%AD%90%E8%89%BE%E6%96%AF%E6%8F%90.4mk6fn5wmoe0.webp" alt="黑暗弃子艾斯提"></p><p>巨大的身躯由星星构成，面部是一张令人不寒而栗的骷髅脸，拥有通过黑洞瞬移的能力</p><h2 id="五"><a href="#五" class="headerlink" title="五"></a>五</h2><p>当褪色者攻进王城，踏入王座大厅之时，我们会遇到一位身上长满犄角，面貌丑陋的王：噩兆王蒙葛特。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%99%A9%E5%85%86%E7%8E%8B-(3).17zez1e8xhk0.webp" alt="噩兆王-(3)"></p><p>他是一位悲剧的半神，因为长相丑陋，自出生时就和兄弟蒙格一同被扔进了王城的下水道，虽然是黄金王朝的王子过得却是老鼠一般的生活。他本应诅咒这个畸形的世界，但讽刺的是，当艾尔登法环破碎后，群雄逐鹿，王城也遭到各路人马的进攻，曾经的半神和神人们纷纷自立门户，只有这位生活在下水道里的噩兆王蒙葛特，在关键时间挑起了守城的重任，并击退了所有来犯之敌，多次保住了黄金王城，在碎片战争中，他甚至击败了有着最强半神名号的拉塔恩将军。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%99%A9%E5%85%86%E7%8E%8B.zz7mh0ns0cw.webp" alt="噩兆王"></p><p>击败蒙葛特后，他的追忆中这样描述：即使生为赐福无缘的恶兆之子，蒙葛特仍愿意为黄金树的守卫，不是因为被爱，想要回馈，而是他单纯希望去爱。似乎与这个黄金王朝的命运一样，他身后的王座只需轻轻一碰就变成了碎片。</p><h2 id="六"><a href="#六" class="headerlink" title="六"></a>六</h2><p>当“黄金”葛德文成为死王子后，古龙就待在他的好友体内，不停与死亡搏斗，在死眠少女菲雅的梦境中，我们见到了传说中的“死龙”弗尔桑克斯。</p><p>当死龙飞翔在天空手持红雷配上木星大红斑似的背景，场景混乱又充满了阴郁的美感。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%AD%BB%E9%BE%99.2o7vqe77gfq0.webp" alt="死龙"></p><h2 id="七"><a href="#七" class="headerlink" title="七"></a>七</h2><p>在亚坛高原西边的火山地区，这里有黄金王朝的司法官拉卡德，是一个毫无怜悯心的法官，也是众多拷问官的长官。如蛇一般，令人感到生厌的男人。</p><p>拉卡德是拉达冈和满月女王的孩子之一。对于黄金树信仰而言，“……拉卡德犯下了亵渎罪，是罪无可赦的敌人。”艾尔登法环破碎之前的拉卡德是残酷的司法官，整个牢镇随处可见被折磨虐待的白金之子。在破碎战争中，他曾是反对黄金树的霸王，反叛黄金树信仰，反对无上意志，为了追求更强的力量反抗黄金树主动被大蛇吞噬。我们会先通过小蛇女的邀请加入名为叛律者的组织。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E7%81%AB%E5%B1%B1%E5%AE%98%E9%82%B8%E5%B0%8F%E8%9B%87%E5%A5%B3.1uuo8t56o7k0.webp" alt="火山官邸小蛇女"></p><p>那些具有反对黄金树潜质的英雄们，会被邀请到火山府邸，完成一系列亵渎（反抗黄金律法）之举。但是在拉卡德变成大蛇之后，因为最终能出色完成任务的叛律者都要去谒见拉卡德，而这些叛律者最终的遭遇，就和拉卡德曾经的骑士一样被吞噬，变成大蛇的一部分。</p><p>在完成了火山官邸安排的红灵入侵任务（击杀其他褪色者）后，拉卡德的侧室塔尼斯，一个一直戴着面具替拉卡德处理日常事务的女人，终于同意我们觐见亵渎君王拉卡德。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%8B%89%E5%8D%A1%E5%BE%B7.2qqguzuqhsg0.webp" alt="拉卡德"></p><p>在大蛇前的不远处，有一把大蛇狩猎矛，与大蛇对峙时，能形成风暴似的光刃</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%8B%89%E5%8D%A1%E5%BE%B7-%E9%A3%8E%E6%9A%B4%E7%9F%9B.1x5z2bhjz51c.webp" alt="拉卡德-风暴矛"></p><p>在拉卡德被风暴之刃击败后，他的侧室会跪坐在大蛇的尸体处，不断地啃食着尸体的头部，希望借此变成蛇人继承他的意志，算是交界地的一对苦命鸳鸯了。</p><h2 id="八"><a href="#八" class="headerlink" title="八"></a>八</h2><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%A5%B3%E6%AD%A6%E7%A5%9E.3kbc2m7gnqw.webp" alt="女武神"></p><p>女武神玛莲妮亚，“米凯拉的锋刃”，手下有战无不胜的尊腐骑士大军，装上义手，带上飞翼头盔，掌握那高展飞翼的技能“水鸟乱舞”。为了帮哥哥米凯拉登上王位参加碎片战争，女武神玛莲妮亚在外四处征战，鲜血君王蒙格趁虚而入将米凯拉从圣树中掳走，玛莲妮亚率领大军一路南下寻找线索，而罪魁祸首蒙格的鲜血王朝就在盖利德地区（碎星将军拉塔恩的统治区域）的地下深处。当女武神赶到盖利德时，认为是拉塔恩抢走了哥哥米凯拉，与驻守于此的碎星将军以及他的红狮子军团展开了一场惊天动地的大战，史称艾奥尼亚之战。在最终的对决中，娇艳的腐败花朵怒放，吞噬了整个艾奥尼亚。拉塔恩与玛莲妮亚战成平手。这场无人胜利的战争伴随着玛莲妮亚的昏迷和拉塔恩的疯狂落下帷幕。</p><p>昏迷的玛莲妮亚被英雄芬雷带回圣树，从那以后好像迷失了自我，安安静静坐在圣树深处，等待着哥哥回归。</p><p>在我们第一次击倒女武神之后，她再次释放了体内的猩红腐败之力</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%A5%B3%E6%AD%A6%E7%A5%9E%E4%BA%8C%E9%98%B6%E6%AE%B5.4e8xbca3rrg.webp" alt="女武神二阶段"></p><p>玛莲妮亚如同一只妖艳而致命的蝴蝶飞翔在空中，展现着完全状态下女武神的恐怖力量，她重重的将刀劈向地面，一朵朵猩红腐败之花怒放。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%A5%B3%E6%AD%A6%E7%A5%9E%E4%BA%8C%E9%98%B6%E6%AE%B5.5dvcazx35ag0.webp" alt="女武神二阶段"></p><p>击败女武神之后获得的大卢恩也如同她本人一样，也充满了猩红腐败的力量</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%A5%B3%E6%AD%A6%E7%A5%9E%E5%A4%A7%E5%8D%A2%E6%81%A9.1zwty3tfz5q8.webp" alt="女武神大卢恩"></p><h2 id="九"><a href="#九" class="headerlink" title="九"></a>九</h2><p>不得不说，玛莉卡的子嗣们，也就是半神们，都有着自己的野心和理想。鲜血君王蒙格，与孪生兄弟噩兆王蒙葛特一起守卫王城之时，也期望能建立属于自己的鲜血王朝。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E7%B1%B3%E5%87%AF%E6%8B%89%E7%9A%84%E8%8C%A7.3mgjvu8tfwq0.webp" alt="米凯拉的茧"></p><p>在碎片战争中，蒙格绑走了神人米凯拉，神人是神的候补，在玛莉卡女王失踪之后有着成为神的资格，蒙格利用血茧培育着米凯拉，当米凯拉成神之际，自己就可以以艾尔登之王的身份君临天下。殊不知，是蒙格自己的愿望，还是米凯拉的诱惑导致的呢？</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E8%92%99%E6%A0%BC%E5%92%8C%E7%B1%B3%E5%87%AF%E6%8B%89.1bciyje0cckg.webp" alt="蒙格和米凯拉"><br><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E8%92%99%E6%A0%BC.1x6uysx08ug0.webp" alt="蒙格"></p><h2 id="十"><a href="#十" class="headerlink" title="十"></a>十</h2><p>天空城里的黑剑玛利喀斯是玛莉卡女王忠诚的结拜弟弟，将命定之死寄宿在自身的剑里，令所有的半神感到畏惧。而就是因为它们明白何谓畏惧，才会是英雄。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E9%BB%91%E5%89%91%E4%BA%8C%E9%98%B6%E6%AE%B5%E5%BC%80%E5%A4%B4.2zezr2k3z8e0.webp" alt="黑剑二阶段开头"></p><p>在阴谋之夜，死亡的一部分被偷走之后，玛利喀斯把黑剑封印在自己体内，为的是不再让它失窃。</p><p>褪色者和黑剑第一次相遇是在盖利德的最北边的野兽祭祀塔，见到的是野兽祭祀模样的玛利喀斯，穿着肮脏破烂的外衣，迫切的渴望着死根，在吃了四个死根之后他甚至会陷入疯狂攻击我们，在十个死根完全收集之后，他会从祭祀塔里消失，下一次再见是在天空城。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E9%BB%91%E5%89%91.1wx0hv9col28.webp" alt="黑剑"></p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E9%BE%99%E7%8E%8B.41eybrgpofo0.webp" alt="龙王"><br><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E7%81%AB%E5%B1%B1%E5%B7%A8%E4%BA%BA.183gb0scvxog.webp" alt="火山巨人"></p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E7%9B%B8%E9%81%87%E5%88%9D%E4%BB%A3%E7%8E%8B.2u204qv0zhs0.webp" alt="相遇初代王"></p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%88%9D%E4%BB%A3%E7%8E%8B%E6%8B%A6%E8%B7%AF.7acl2a2g6xc0.webp" alt="初代王拦路"></p><p>圣树的女武神是我死亡次数最多的boss，但有猎犬步伐加上耍无赖的用了冤魂绕圈打法，其实难度并没有打只狼的一心艰难，就是得多挂几次学一下怎么躲水鸟，法师的一个问题是血太薄，被水鸟的任何一个连招中的两刀砍到就没了。王城下水道的“恶兆之子”蒙格和鲜血王朝的“碎片君王”蒙格我也没什么战斗记忆，只要记得喝滴露就可以破解他的倒计时大招。火焰巨人倒真是卡住了我一段时间，因为遍地打滚被压碎了好几次，放弃了当甘道夫的想法选择用岩石球就很容易了。龙王普拉顿桑克斯可以说是后期除了女武神之外第二强的boss，瞬移，秒人光炮，大范围龙爪aoe，黑刀姐第一次boss半血都没到就被打没了，主要是每死一次得跑一阵才能到boss房，技能也没有死龙酷炫，基本每招都能秒我，战斗体验很糟糕。然后是黑剑，黑剑二阶段的战斗身姿是最帅的，那套盔甲配上黑剑的火焰燃烧特效从天上劈下刀光非常引人入胜，但整体并不难打，因为他血很薄又没有女武神那样的吸血buff，平台上还有几根石柱，虽然不能秦王绕柱但可以躲柱子后面喝口药回回状态。初代王荷莱露说实话出场表演很一般，并没有感觉到初代艾尔登之王的逼格，猎犬步伐躲投技，跳起来躲大范围捶地aoe，二阶段撕狮子那段很惊讶，但后面鞋子的特写有点出戏（鞋带不好系啊），二阶段在骨灰和女战士（现在是史东威尔城城主）也没什么难度就过了。最终boss红毛拉达冈和艾尔登之兽在圣龙徽护符+2，螃蟹肉和祷告圣防护的buff下打了两次就过了，红毛有个问题，就是读指令的动作太明显了，属于敌不动我不动那种，没有动作游戏的体验，就像只狼里的弦一郎加一心我打了快一天才赢，但是结束以后就觉得很爽，弹刀出刀忍义手有一种见招拆招的快感，跟拉达冈打就像回合制游戏，他出招我就翻滚，等他技能后摇我再砍一剑然后继续泥地打滚或者猎犬步伐找机会。<br>战灰的加入虽然简化了战斗，但个别骨灰的强势导致我完全没有想法使用其他的骨灰，点名黑刀姐和仿身泪滴。仿身泪滴在我玩的时候已经被削，不再是大哥了，但它血厚啊。黑刀姐就更强了，战技经常放还是比例掉血，会瞬移，移动灵活。攻击欲望强，打大型怪跟战神一样，当然希望宫崎老贼的更新方式是加强其他骨灰而不是削已有的强势骨灰。</p><p>你将会在游戏里遇到以下角色：</p><p>一个姑娘告诉你她的城堡里奴隶造反了，她的城主父亲正在努力抵抗叛军，她给你一封信，让你带给他父亲，劝说他离开。于是你杀进城堡找到她父亲，结果他父亲说自己奉葛瑞克大人（这片区域的君王）抵抗叛军，不能离开，关键是镇城之剑不能落入叛军之手，于是你又杀了叛军的老大拿回了剑，你以为城主这下可以和女儿团聚了，于是高兴滴回去找姑娘，结果发现姑娘已经倒在了血泊中，旁边赫然插着奴隶们使用的大刀。你沮丧地回去找城主，却发现不知情的城主说自己的任务已经完成了，未来要为女儿而活……再回到和妹子相遇的地方，会见到这个心碎的父亲在女儿的尸体旁捶地怒吼，高喊要为了女儿复仇。后期在一间充满尸臭的破屋里，这个父亲会失智地攻击我们。复仇已经吞噬了他的心，也许倒在玩家的剑下，和女儿团聚，是对他来说最好的结局。</p><p>在魔法学院外，你会遇到一个落魄魔法师托普斯，求你给他十块钱去弄点吃的，他会教你魔法作为报酬。他教的魔法有点奇怪（比如一个可以照明用魔法，虽然没有战斗力但很实用），他说自己很有自知之明，知道自己是块朽木，很遗憾不能教给玩家好的魔法，他希望能进入魔法学院去研究。之后玩家找到魔法学院钥匙可以交给他，他会非常感谢你然后离去。在玩家探索魔法学院的时候，可以在某一个地方找到托普斯的尸体：被绑在椅子上，死前似乎依然在研究魔法。而调查他的尸体，可以发现他赌上性命研究的魔法：托普斯的立场。这个魔法的效果非常逆天，可以弹开所有魔法。物品介绍中这样描述：后世的人们会明白，那受人嘲讽的理念，其实是足以成立新教室的发现。</p><p>同样是魔法师，你会在某处遗迹地下室遇见一个女魔法师瑟廉，如果你希望她教你魔法，她会警告你自己是被魔法学院驱逐的魔女。如果玩家表示不介意的话，瑟廉会惊讶并表示愿意教我们魔法，并亲切称呼我们为徒弟。在玩家此后的征程中，老师知无不言，还会一直鼓励我们，甚至表示就算玩家一无所成，还是可以去找她，毕竟老师永远会给弟子留一个位置。然而随着剧情推进，我们会发现原来老师就是魔法学院里被称为“尸块魔女”的存在，为了探索禁忌的星星起源而杀害了无数魔法师。当玩家将两位大魔法师尸体的位置告诉老师后，老师最终会和他们融合，变成一颗恐怖的人面球，痛苦地向我们呻吟：“呜呜呜呜，徒弟，呜呜呜……”虽然探索禁忌的疯狂行为终究要付出代价，但即使是内心再怎么疯狂之人，对于那个当初不介意自己出身，愿意接纳自己的小徒弟，她依然愿意袒露内心真心相对。（也有说法人面球就是星星的雏形，老师其实是得道了）</p><p>在一座桥旁， 玩家会遇到一个长着手脚的壶被卡在地上，请求我们的帮忙。帮他脱困后，他会告诉我们自己是战士壶——铁拳亚历山大，正要去红狮子城参加战斗祭奠。他爽朗的笑声让人印象深刻。在战斗祭奠上携手壶哥一同击败半神拉塔恩将军后，壶哥会浑身裂痕趴在地上，告诉我们刚才我们的表现很棒，但自己没几下就被打趴下了，还出现了好多裂痕，壶里的内容物都漏出来了，好在这里有很多战士的尸体，可以弥补遗失的内容物。我们这才知道原来战士壶就是战士尸体的容器，他是战士们战意的承载者。为了变得更强，壶哥决定去火山官邸旁的熔岩接受高温炙烤，又去巨人雪山寻找神火锻造自己，最终他和我们在天空城相逢。每次碰面，他总是用爽朗的笑声回应我们，好像不管何种失意都不会影响他的斗志，尽管他身上的裂痕越来越多。在天空城，壶哥邀请我们作为他的一场试炼，因为我们是他认可的英雄。开打后我们发现，相比其他战士壶，壶哥强太多太多了，他不但可以喷火，甚至挥手就可以掀起火焰风暴，一双铁拳使出的火焰升龙拳甚至可以击飞曾经弑神的玩家。但是壶的承载度终归有限，壶哥还是倒下了。他告诉我们，他知道壶终归只是壶，但作为战士，他战斗到了最后一刻。最终，在爽朗的笑声中，壶哥像其他战士壶一样碎裂成了碎片。</p><p>在游戏中，你会遇到一个自称霍劳斯的骑士，说他和女仆走散了，如果你见到了可以告诉他，还说如果有人敢动他女仆他就不客气了，嘴上还说着霍劳斯以血代言（用让你出血代替用嘴逼逼），给人感觉是个狠人。后来在魔法学院前，你发现他找到了已经被杀害的女仆，他告诉你凶手是火山官邸的人，他非要复仇不可，因为霍劳斯家族以血代言。后来在大本营，他告诉你他找到了火山官邸的人，但对方竟然要拉他入伙，他表示自己气的要大开杀戒了。让人大跌眼镜的是，当玩家进入火山官邸后，竟然见到霍劳斯，他告诉你，他也加入火山官邸了，不想复仇了。他还自己找了一个理由：英雄不会刻意走干净的路，我要选择一条污秽的路来证明我的英雄气概。无数玩家在他的脚下留言：前有大便，前无马（妈），愤怒！等等来表达内心的不满。之后霍劳斯屡屡出任务失败（火山官邸以猎杀同类为任务），他向玩家诉苦自己这双手根本不适合成为英雄。玩家通过支线任务也得知原来霍劳斯有一个哥哥，由于弟弟太过没用，哥哥名正言顺当上了家主，也一直爱着弟弟，并希望弟弟不要走上霍劳斯以血代言的铁血道路。但弟弟也一直想着走出哥哥的阴影……后来在壶村，玩家发现霍劳斯逃出了火山官邸，在这里当上了维壶师，维修这里的战士壶，虽然这份工作看起来低微，但看着在自己的维护下，壶们一个个恢复健康，霍劳斯说：我从火山官邸逃了出来，从所有地方逃了出来，逃避一切。说出来你可能不信，但我在这里，才有了真正活着的感觉。一段时间后玩家回来，会发现所有的壶都碎了，只有一个小壶还完好，而霍劳斯只剩下最后一口气。原来村里遇到了偷猎者，是霍劳斯用性命击退了他们。当你告诉霍劳斯壶都没事时，他会欣慰地说，就算是自己这样没用的人，也会有派上用场的时候，并最后说出了那句他一直挂在嘴边的话：霍劳斯以血代言。在他的尸体旁，全是玩家的留言，几乎都是一样的内容：前有英雄。</p><p>在一座山洞中，你会遇到一个名为帕奇的光头，一开始他会攻击你，但如果你将他打到半血，他会跪地求饶，如果你放过他，他就开始拍你马屁。他的房间里放着一个宝箱，如果玩家去开，就会中陷阱被传送到别处，帕奇还会嘲笑我们是贪婪之徒。之后玩家可以在火山官邸遇到他，他会将自己的猎杀任务让给你（大概率是太强他自己打不过），如果你完成了任务，他会说帮你去汇报，但不会把任务奖励给你，除非你亲自问他才会不情愿地给你，但就是这样一个滑头，却在游戏里得到善终，逍遥快活。</p><p>NPC不得善终，几乎是魂系列的定律，那些坚持原则的角色，大部分落得凄惨的下场，反而是帕奇这样的角色，却能活得游刃有余，这何尝不是对现实世界的一种无情嘲弄。当然，那些明知不可为而为之的角色，虽然最终陨落，但却实实在在给玩家的心里留下了一份感动。</p><p>———3.21更新————</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>当我们褪色者重新回到交界地，第一个相遇的法环碎片持有者就是史东威尔城城主“黄金”葛瑞克，一个臭名昭著的神之后裔，黄金家族成员，在史东威尔城附近的破屋里，我们会遇到一位红帽女孩，会知道葛瑞克利用被称为接肢的技术四处劫掠褪色者，将砍下的手脚接在自己身上来增加自身的实力。这座腐朽的城池里到处都是残肢断臂，在一座大厅里我们还能见到在出生点相似的截肢贵族。在城池里我们还会遇到同样对葛瑞克所作所为十分不齿的女战士涅斐丽·露，她会在我们与葛瑞克战斗中助我们一臂之力。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%8E%A5%E8%82%A2.5zgwu136oo40.webp" alt="接肢" data-caption="接肢" loading="lazy"></p><p>在我们将他击退之后，他还会砍下自己的左手，并接上一个龙头，试图再度增强自己的力量。但当我们最终击败他时，他喃喃地说到：“总有一天，我们会回到黄金树脚下的故乡……“葛瑞克作为曾经最强的一族——”黄金“一族的后人，却非常孱弱，艾尔登法环被女神玛莉卡敲碎后，群雄并起，引发了旷日持久的碎片战争，黄金树脚下的王城多次遭到进攻，葛瑞克混在女人堆里逃出王城，躲在史东薇尔城苟活，曾经想挑战女武神，却被被女武神打的满地找牙。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%85%B5%E8%B4%A5%E5%A6%82%E5%B1%B1%E5%80%92.5rvvday8fkk0.webp" alt="兵败如山倒" data-caption="兵败如山倒" loading="lazy"></p><p>他妄图通过接肢变得更强，却是想着能够有朝一日可以重现黄金一族的辉煌，当他砍下手臂接上龙头时，他会朝天怒吼：“诸位祖先，敬请见证！”只可惜乱世之中，不符合无上意志的棋子都会被抹去。</p><h2 id="二"><a href="#二" class="headerlink" title="二"></a>二</h2><p>乘着灵马特雷托一路北上，在雷亚卢卡利亚魔法学院，我们会遭遇曾经被称为“满月”女王的蕾娜菈。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%BB%A1%E6%9C%88%E5%A5%B3%E7%8E%8B%E5%A4%A7%E5%8D%A2%E6%81%A9.3jkdl5ccy3c0.webp" alt="满月女王大卢恩" data-caption="满月女王大卢恩" loading="lazy"><br>作为卡利亚魔法王国曾经的领导者，卡利亚魔法王国和黄金树势力曾经敌对，黄金树派出了英雄拉达冈前来讨伐，结果蕾娜菈和拉达冈在战场上相爱，双方化干戈为玉帛，喜结连理还诞下了三个子嗣。（分别是碎星将军拉塔恩，月之公主菈妮（神人），黄金树司法官拉卡德）</p><p>但好景不长，拉达冈突然抛下了自己的妻子，回到黄金树和永恒女王玛丽卡结婚。突然失去爱情支撑的蕾娜菈就此丧失了神智，成为现在这幅模样并被卡利亚王室囚禁于大书库。</p><p>她的手里怀抱着拉达冈留给她的琥珀一样的大卢恩，神志不清，不断地利用大卢恩的力量诞生没有自我意识的孩子。</p><p>在打碎女王身边的防护罩后</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%A5%B3%E7%8E%8B.6ktlkq7hr88.webp" alt="女王" data-caption="女王" loading="lazy"></p><p>女儿月之公主菈妮会用魔法代替她的母亲与我们战斗，重现了全盛时期的满月女王：灵魂激流一类的法术随意释放，还可以召唤巨龙巨人狼群的灵体协助战斗。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%BB%A1%E6%9C%88%E5%A5%B3%E7%8E%8B.u8tx9yd3ksw.webp" alt="满月女王" data-caption="满月女王" loading="lazy"></p><h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><p>往东，我们进入了满目猩红腐败的盖利德地区，刚进入红狮子城的配乐极其震撼和忧伤，这么一位一等一的英雄，在盖利德和女武神的战斗中遭受猩红腐败的腐蚀后，自我放逐到恸哭山丘，即使像野狗一样啃噬着战场上的尸体，依然维持着星空的封印。他的手下红狮子军在盖利德修筑了一条熏烧火墙，用火焰同被猩红腐败腐蚀变异的巨大怪物开展永无止境的死斗。<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%8B%89%E5%A1%94%E6%81%A9.6s44iqw0kyw0.webp" alt="拉塔恩" data-caption="拉塔恩" loading="lazy"></p><p>一望无际的战场上布满了断戟残垣，只能远远看到他的庞大身躯和贯穿天空的重力大箭，这是一场战斗祭奠，拉塔恩的手下奇异骑士邀请天下豪杰群聚于此，希望能解除他的痛苦，像一位战士一样死去，如果不把战士壶亚历山大和狼哥等英雄们召唤出来，单对单战斗确实是非常困难的事。如果召唤所有英雄跟这位最强半神贴身肉搏，扑面而来的是那种英雄末路的悲壮感，大开大合的招式在战士们中杀进杀出，能坚持战斗到最后一刻的就只剩下壶哥和狼哥，终于击败拉塔恩将军后，天上静滞的星星突然开始流动，随着拉塔恩将军的逝去，群星的封印被解除，新的命运齿轮开始转动</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E8%A7%A3%E6%94%BE%E7%BE%A4%E6%98%9F.map0i942acw.webp" alt="解放群星" data-caption="解放群星" loading="lazy"></p><h2 id="四"><a href="#四" class="headerlink" title="四"></a>四</h2><p>随着星空封印解除，一枚流星砸穿了地面，地下的永恒之城重现人世，充满恶意的恐怖外神，黑暗弃子艾丝缇从星空坠落，砸穿了天空城之后，又将诺克史黛拉沉入地底，这与永恒之城的种种悖逆之举有关，他们制造了可以伤害无上意志和二指的猎杀指头刀，又试图通过仿身泪滴造出新的神灵，从而引来了无上意志的惩罚。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E9%BB%91%E6%9A%97%E5%BC%83%E5%AD%90%E8%89%BE%E6%96%AF%E6%8F%90.4mk6fn5wmoe0.webp" alt="黑暗弃子艾斯提" data-caption="黑暗弃子艾斯提" loading="lazy"></p><p>巨大的身躯由星星构成，面部是一张令人不寒而栗的骷髅脸，拥有通过黑洞瞬移的能力</p><h2 id="五"><a href="#五" class="headerlink" title="五"></a>五</h2><p>当褪色者攻进王城，踏入王座大厅之时，我们会遇到一位身上长满犄角，面貌丑陋的王：噩兆王蒙葛特。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%99%A9%E5%85%86%E7%8E%8B-(3).17zez1e8xhk0.webp" alt="噩兆王-(3)" data-caption="噩兆王-(3)" loading="lazy"></p><p>他是一位悲剧的半神，因为长相丑陋，自出生时就和兄弟蒙格一同被扔进了王城的下水道，虽然是黄金王朝的王子过得却是老鼠一般的生活。他本应诅咒这个畸形的世界，但讽刺的是，当艾尔登法环破碎后，群雄逐鹿，王城也遭到各路人马的进攻，曾经的半神和神人们纷纷自立门户，只有这位生活在下水道里的噩兆王蒙葛特，在关键时间挑起了守城的重任，并击退了所有来犯之敌，多次保住了黄金王城，在碎片战争中，他甚至击败了有着最强半神名号的拉塔恩将军。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%99%A9%E5%85%86%E7%8E%8B.zz7mh0ns0cw.webp" alt="噩兆王" data-caption="噩兆王" loading="lazy"></p><p>击败蒙葛特后，他的追忆中这样描述：即使生为赐福无缘的恶兆之子，蒙葛特仍愿意为黄金树的守卫，不是因为被爱，想要回馈，而是他单纯希望去爱。似乎与这个黄金王朝的命运一样，他身后的王座只需轻轻一碰就变成了碎片。</p><h2 id="六"><a href="#六" class="headerlink" title="六"></a>六</h2><p>当“黄金”葛德文成为死王子后，古龙就待在他的好友体内，不停与死亡搏斗，在死眠少女菲雅的梦境中，我们见到了传说中的“死龙”弗尔桑克斯。</p><p>当死龙飞翔在天空手持红雷配上木星大红斑似的背景，场景混乱又充满了阴郁的美感。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%AD%BB%E9%BE%99.2o7vqe77gfq0.webp" alt="死龙" data-caption="死龙" loading="lazy"></p><h2 id="七"><a href="#七" class="headerlink" title="七"></a>七</h2><p>在亚坛高原西边的火山地区，这里有黄金王朝的司法官拉卡德，是一个毫无怜悯心的法官，也是众多拷问官的长官。如蛇一般，令人感到生厌的男人。</p><p>拉卡德是拉达冈和满月女王的孩子之一。对于黄金树信仰而言，“……拉卡德犯下了亵渎罪，是罪无可赦的敌人。”艾尔登法环破碎之前的拉卡德是残酷的司法官，整个牢镇随处可见被折磨虐待的白金之子。在破碎战争中，他曾是反对黄金树的霸王，反叛黄金树信仰，反对无上意志，为了追求更强的力量反抗黄金树主动被大蛇吞噬。我们会先通过小蛇女的邀请加入名为叛律者的组织。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E7%81%AB%E5%B1%B1%E5%AE%98%E9%82%B8%E5%B0%8F%E8%9B%87%E5%A5%B3.1uuo8t56o7k0.webp" alt="火山官邸小蛇女" data-caption="火山官邸小蛇女" loading="lazy"></p><p>那些具有反对黄金树潜质的英雄们，会被邀请到火山府邸，完成一系列亵渎（反抗黄金律法）之举。但是在拉卡德变成大蛇之后，因为最终能出色完成任务的叛律者都要去谒见拉卡德，而这些叛律者最终的遭遇，就和拉卡德曾经的骑士一样被吞噬，变成大蛇的一部分。</p><p>在完成了火山官邸安排的红灵入侵任务（击杀其他褪色者）后，拉卡德的侧室塔尼斯，一个一直戴着面具替拉卡德处理日常事务的女人，终于同意我们觐见亵渎君王拉卡德。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%8B%89%E5%8D%A1%E5%BE%B7.2qqguzuqhsg0.webp" alt="拉卡德" data-caption="拉卡德" loading="lazy"></p><p>在大蛇前的不远处，有一把大蛇狩猎矛，与大蛇对峙时，能形成风暴似的光刃</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E6%8B%89%E5%8D%A1%E5%BE%B7-%E9%A3%8E%E6%9A%B4%E7%9F%9B.1x5z2bhjz51c.webp" alt="拉卡德-风暴矛" data-caption="拉卡德-风暴矛" loading="lazy"></p><p>在拉卡德被风暴之刃击败后，他的侧室会跪坐在大蛇的尸体处，不断地啃食着尸体的头部，希望借此变成蛇人继承他的意志，算是交界地的一对苦命鸳鸯了。</p><h2 id="八"><a href="#八" class="headerlink" title="八"></a>八</h2><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%A5%B3%E6%AD%A6%E7%A5%9E.3kbc2m7gnqw.webp" alt="女武神" data-caption="女武神" loading="lazy"></p><p>女武神玛莲妮亚，“米凯拉的锋刃”，手下有战无不胜的尊腐骑士大军，装上义手，带上飞翼头盔，掌握那高展飞翼的技能“水鸟乱舞”。为了帮哥哥米凯拉登上王位参加碎片战争，女武神玛莲妮亚在外四处征战，鲜血君王蒙格趁虚而入将米凯拉从圣树中掳走，玛莲妮亚率领大军一路南下寻找线索，而罪魁祸首蒙格的鲜血王朝就在盖利德地区（碎星将军拉塔恩的统治区域）的地下深处。当女武神赶到盖利德时，认为是拉塔恩抢走了哥哥米凯拉，与驻守于此的碎星将军以及他的红狮子军团展开了一场惊天动地的大战，史称艾奥尼亚之战。在最终的对决中，娇艳的腐败花朵怒放，吞噬了整个艾奥尼亚。拉塔恩与玛莲妮亚战成平手。这场无人胜利的战争伴随着玛莲妮亚的昏迷和拉塔恩的疯狂落下帷幕。</p><p>昏迷的玛莲妮亚被英雄芬雷带回圣树，从那以后好像迷失了自我，安安静静坐在圣树深处，等待着哥哥回归。</p><p>在我们第一次击倒女武神之后，她再次释放了体内的猩红腐败之力</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%A5%B3%E6%AD%A6%E7%A5%9E%E4%BA%8C%E9%98%B6%E6%AE%B5.4e8xbca3rrg.webp" alt="女武神二阶段" data-caption="女武神二阶段" loading="lazy"></p><p>玛莲妮亚如同一只妖艳而致命的蝴蝶飞翔在空中，展现着完全状态下女武神的恐怖力量，她重重的将刀劈向地面，一朵朵猩红腐败之花怒放。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%A5%B3%E6%AD%A6%E7%A5%9E%E4%BA%8C%E9%98%B6%E6%AE%B5.5dvcazx35ag0.webp" alt="女武神二阶段" data-caption="女武神二阶段" loading="lazy"></p><p>击败女武神之后获得的大卢恩也如同她本人一样，也充满了猩红腐败的力量</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%A5%B3%E6%AD%A6%E7%A5%9E%E5%A4%A7%E5%8D%A2%E6%81%A9.1zwty3tfz5q8.webp" alt="女武神大卢恩" data-caption="女武神大卢恩" loading="lazy"></p><h2 id="九"><a href="#九" class="headerlink" title="九"></a>九</h2><p>不得不说，玛莉卡的子嗣们，也就是半神们，都有着自己的野心和理想。鲜血君王蒙格，与孪生兄弟噩兆王蒙葛特一起守卫王城之时，也期望能建立属于自己的鲜血王朝。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E7%B1%B3%E5%87%AF%E6%8B%89%E7%9A%84%E8%8C%A7.3mgjvu8tfwq0.webp" alt="米凯拉的茧" data-caption="米凯拉的茧" loading="lazy"></p><p>在碎片战争中，蒙格绑走了神人米凯拉，神人是神的候补，在玛莉卡女王失踪之后有着成为神的资格，蒙格利用血茧培育着米凯拉，当米凯拉成神之际，自己就可以以艾尔登之王的身份君临天下。殊不知，是蒙格自己的愿望，还是米凯拉的诱惑导致的呢？</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E8%92%99%E6%A0%BC%E5%92%8C%E7%B1%B3%E5%87%AF%E6%8B%89.1bciyje0cckg.webp" alt="蒙格和米凯拉" data-caption="蒙格和米凯拉" loading="lazy"><br><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E8%92%99%E6%A0%BC.1x6uysx08ug0.webp" alt="蒙格" data-caption="蒙格" loading="lazy"></p><h2 id="十"><a href="#十" class="headerlink" title="十"></a>十</h2><p>天空城里的黑剑玛利喀斯是玛莉卡女王忠诚的结拜弟弟，将命定之死寄宿在自身的剑里，令所有的半神感到畏惧。而就是因为它们明白何谓畏惧，才会是英雄。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E9%BB%91%E5%89%91%E4%BA%8C%E9%98%B6%E6%AE%B5%E5%BC%80%E5%A4%B4.2zezr2k3z8e0.webp" alt="黑剑二阶段开头" data-caption="黑剑二阶段开头" loading="lazy"></p><p>在阴谋之夜，死亡的一部分被偷走之后，玛利喀斯把黑剑封印在自己体内，为的是不再让它失窃。</p><p>褪色者和黑剑第一次相遇是在盖利德的最北边的野兽祭祀塔，见到的是野兽祭祀模样的玛利喀斯，穿着肮脏破烂的外衣，迫切的渴望着死根，在吃了四个死根之后他甚至会陷入疯狂攻击我们，在十个死根完全收集之后，他会从祭祀塔里消失，下一次再见是在天空城。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E9%BB%91%E5%89%91.1wx0hv9col28.webp" alt="黑剑" data-caption="黑剑" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E9%BE%99%E7%8E%8B.41eybrgpofo0.webp" alt="龙王" data-caption="龙王" loading="lazy"><br><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E7%81%AB%E5%B1%B1%E5%B7%A8%E4%BA%BA.183gb0scvxog.webp" alt="火山巨人" data-caption="火山巨人" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E7%9B%B8%E9%81%87%E5%88%9D%E4%BB%A3%E7%8E%8B.2u204qv0zhs0.webp" alt="相遇初代王" data-caption="相遇初代王" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%88%9D%E4%BB%A3%E7%8E%8B%E6%8B%A6%E8%B7%AF.7acl2a2g6xc0.webp" alt="初代王拦路" data-caption="初代王拦路" loading="lazy"></p><p>圣树的女武神是我死亡次数最多的boss，但有猎犬步伐加上耍无赖的用了冤魂绕圈打法，其实难度并没有打只狼的一心艰难，就是得多挂几次学一下怎么躲水鸟，法师的一个问题是血太薄，被水鸟的任何一个连招中的两刀砍到就没了。王城下水道的“恶兆之子”蒙格和鲜血王朝的“碎片君王”蒙格我也没什么战斗记忆，只要记得喝滴露就可以破解他的倒计时大招。火焰巨人倒真是卡住了我一段时间，因为遍地打滚被压碎了好几次，放弃了当甘道夫的想法选择用岩石球就很容易了。龙王普拉顿桑克斯可以说是后期除了女武神之外第二强的boss，瞬移，秒人光炮，大范围龙爪aoe，黑刀姐第一次boss半血都没到就被打没了，主要是每死一次得跑一阵才能到boss房，技能也没有死龙酷炫，基本每招都能秒我，战斗体验很糟糕。然后是黑剑，黑剑二阶段的战斗身姿是最帅的，那套盔甲配上黑剑的火焰燃烧特效从天上劈下刀光非常引人入胜，但整体并不难打，因为他血很薄又没有女武神那样的吸血buff，平台上还有几根石柱，虽然不能秦王绕柱但可以躲柱子后面喝口药回回状态。初代王荷莱露说实话出场表演很一般，并没有感觉到初代艾尔登之王的逼格，猎犬步伐躲投技，跳起来躲大范围捶地aoe，二阶段撕狮子那段很惊讶，但后面鞋子的特写有点出戏（鞋带不好系啊），二阶段在骨灰和女战士（现在是史东威尔城城主）也没什么难度就过了。最终boss红毛拉达冈和艾尔登之兽在圣龙徽护符+2，螃蟹肉和祷告圣防护的buff下打了两次就过了，红毛有个问题，就是读指令的动作太明显了，属于敌不动我不动那种，没有动作游戏的体验，就像只狼里的弦一郎加一心我打了快一天才赢，但是结束以后就觉得很爽，弹刀出刀忍义手有一种见招拆招的快感，跟拉达冈打就像回合制游戏，他出招我就翻滚，等他技能后摇我再砍一剑然后继续泥地打滚或者猎犬步伐找机会。<br>战灰的加入虽然简化了战斗，但个别骨灰的强势导致我完全没有想法使用其他的骨灰，点名黑刀姐和仿身泪滴。仿身泪滴在我玩的时候已经被削，不再是大哥了，但它血厚啊。黑刀姐就更强了，战技经常放还是比例掉血，会瞬移，移动灵活。攻击欲望强，打大型怪跟战神一样，当然希望宫崎老贼的更新方式是加强其他骨灰而不是削已有的强势骨灰。</p><p>你将会在游戏里遇到以下角色：</p><p>一个姑娘告诉你她的城堡里奴隶造反了，她的城主父亲正在努力抵抗叛军，她给你一封信，让你带给他父亲，劝说他离开。于是你杀进城堡找到她父亲，结果他父亲说自己奉葛瑞克大人（这片区域的君王）抵抗叛军，不能离开，关键是镇城之剑不能落入叛军之手，于是你又杀了叛军的老大拿回了剑，你以为城主这下可以和女儿团聚了，于是高兴滴回去找姑娘，结果发现姑娘已经倒在了血泊中，旁边赫然插着奴隶们使用的大刀。你沮丧地回去找城主，却发现不知情的城主说自己的任务已经完成了，未来要为女儿而活……再回到和妹子相遇的地方，会见到这个心碎的父亲在女儿的尸体旁捶地怒吼，高喊要为了女儿复仇。后期在一间充满尸臭的破屋里，这个父亲会失智地攻击我们。复仇已经吞噬了他的心，也许倒在玩家的剑下，和女儿团聚，是对他来说最好的结局。</p><p>在魔法学院外，你会遇到一个落魄魔法师托普斯，求你给他十块钱去弄点吃的，他会教你魔法作为报酬。他教的魔法有点奇怪（比如一个可以照明用魔法，虽然没有战斗力但很实用），他说自己很有自知之明，知道自己是块朽木，很遗憾不能教给玩家好的魔法，他希望能进入魔法学院去研究。之后玩家找到魔法学院钥匙可以交给他，他会非常感谢你然后离去。在玩家探索魔法学院的时候，可以在某一个地方找到托普斯的尸体：被绑在椅子上，死前似乎依然在研究魔法。而调查他的尸体，可以发现他赌上性命研究的魔法：托普斯的立场。这个魔法的效果非常逆天，可以弹开所有魔法。物品介绍中这样描述：后世的人们会明白，那受人嘲讽的理念，其实是足以成立新教室的发现。</p><p>同样是魔法师，你会在某处遗迹地下室遇见一个女魔法师瑟廉，如果你希望她教你魔法，她会警告你自己是被魔法学院驱逐的魔女。如果玩家表示不介意的话，瑟廉会惊讶并表示愿意教我们魔法，并亲切称呼我们为徒弟。在玩家此后的征程中，老师知无不言，还会一直鼓励我们，甚至表示就算玩家一无所成，还是可以去找她，毕竟老师永远会给弟子留一个位置。然而随着剧情推进，我们会发现原来老师就是魔法学院里被称为“尸块魔女”的存在，为了探索禁忌的星星起源而杀害了无数魔法师。当玩家将两位大魔法师尸体的位置告诉老师后，老师最终会和他们融合，变成一颗恐怖的人面球，痛苦地向我们呻吟：“呜呜呜呜，徒弟，呜呜呜……”虽然探索禁忌的疯狂行为终究要付出代价，但即使是内心再怎么疯狂之人，对于那个当初不介意自己出身，愿意接纳自己的小徒弟，她依然愿意袒露内心真心相对。（也有说法人面球就是星星的雏形，老师其实是得道了）</p><p>在一座桥旁， 玩家会遇到一个长着手脚的壶被卡在地上，请求我们的帮忙。帮他脱困后，他会告诉我们自己是战士壶——铁拳亚历山大，正要去红狮子城参加战斗祭奠。他爽朗的笑声让人印象深刻。在战斗祭奠上携手壶哥一同击败半神拉塔恩将军后，壶哥会浑身裂痕趴在地上，告诉我们刚才我们的表现很棒，但自己没几下就被打趴下了，还出现了好多裂痕，壶里的内容物都漏出来了，好在这里有很多战士的尸体，可以弥补遗失的内容物。我们这才知道原来战士壶就是战士尸体的容器，他是战士们战意的承载者。为了变得更强，壶哥决定去火山官邸旁的熔岩接受高温炙烤，又去巨人雪山寻找神火锻造自己，最终他和我们在天空城相逢。每次碰面，他总是用爽朗的笑声回应我们，好像不管何种失意都不会影响他的斗志，尽管他身上的裂痕越来越多。在天空城，壶哥邀请我们作为他的一场试炼，因为我们是他认可的英雄。开打后我们发现，相比其他战士壶，壶哥强太多太多了，他不但可以喷火，甚至挥手就可以掀起火焰风暴，一双铁拳使出的火焰升龙拳甚至可以击飞曾经弑神的玩家。但是壶的承载度终归有限，壶哥还是倒下了。他告诉我们，他知道壶终归只是壶，但作为战士，他战斗到了最后一刻。最终，在爽朗的笑声中，壶哥像其他战士壶一样碎裂成了碎片。</p><p>在游戏中，你会遇到一个自称霍劳斯的骑士，说他和女仆走散了，如果你见到了可以告诉他，还说如果有人敢动他女仆他就不客气了，嘴上还说着霍劳斯以血代言（用让你出血代替用嘴逼逼），给人感觉是个狠人。后来在魔法学院前，你发现他找到了已经被杀害的女仆，他告诉你凶手是火山官邸的人，他非要复仇不可，因为霍劳斯家族以血代言。后来在大本营，他告诉你他找到了火山官邸的人，但对方竟然要拉他入伙，他表示自己气的要大开杀戒了。让人大跌眼镜的是，当玩家进入火山官邸后，竟然见到霍劳斯，他告诉你，他也加入火山官邸了，不想复仇了。他还自己找了一个理由：英雄不会刻意走干净的路，我要选择一条污秽的路来证明我的英雄气概。无数玩家在他的脚下留言：前有大便，前无马（妈），愤怒！等等来表达内心的不满。之后霍劳斯屡屡出任务失败（火山官邸以猎杀同类为任务），他向玩家诉苦自己这双手根本不适合成为英雄。玩家通过支线任务也得知原来霍劳斯有一个哥哥，由于弟弟太过没用，哥哥名正言顺当上了家主，也一直爱着弟弟，并希望弟弟不要走上霍劳斯以血代言的铁血道路。但弟弟也一直想着走出哥哥的阴影……后来在壶村，玩家发现霍劳斯逃出了火山官邸，在这里当上了维壶师，维修这里的战士壶，虽然这份工作看起来低微，但看着在自己的维护下，壶们一个个恢复健康，霍劳斯说：我从火山官邸逃了出来，从所有地方逃了出来，逃避一切。说出来你可能不信，但我在这里，才有了真正活着的感觉。一段时间后玩家回来，会发现所有的壶都碎了，只有一个小壶还完好，而霍劳斯只剩下最后一口气。原来村里遇到了偷猎者，是霍劳斯用性命击退了他们。当你告诉霍劳斯壶都没事时，他会欣慰地说，就算是自己这样没用的人，也会有派上用场的时候，并最后说出了那句他一直挂在嘴边的话：霍劳斯以血代言。在他的尸体旁，全是玩家的留言，几乎都是一样的内容：前有英雄。</p><p>在一座山洞中，你会遇到一个名为帕奇的光头，一开始他会攻击你，但如果你将他打到半血，他会跪地求饶，如果你放过他，他就开始拍你马屁。他的房间里放着一个宝箱，如果玩家去开，就会中陷阱被传送到别处，帕奇还会嘲笑我们是贪婪之徒。之后玩家可以在火山官邸遇到他，他会将自己的猎杀任务让给你（大概率是太强他自己打不过），如果你完成了任务，他会说帮你去汇报，但不会把任务奖励给你，除非你亲自问他才会不情愿地给你，但就是这样一个滑头，却在游戏里得到善终，逍遥快活。</p><p>NPC不得善终，几乎是魂系列的定律，那些坚持原则的角色，大部分落得凄惨的下场，反而是帕奇这样的角色，却能活得游刃有余，这何尝不是对现实世界的一种无情嘲弄。当然，那些明知不可为而为之的角色，虽然最终陨落，但却实实在在给玩家的心里留下了一份感动。</p><p>———3.21更新————</p>]]></content>
       
       
       <categories>
@@ -8154,7 +8154,7 @@
       <link href="/2022/05/16/elden-ring/"/>
       <url>/2022/05/16/elden-ring/</url>
       
-        <content type="html"><![CDATA[<p>说实话，作为我第一款全价购买的steam游戏，艾尔登法环就像一场盛宴，他几乎满足了我对奇幻世界和宏大史诗的全部期待。从四月一日到四月十八日，一周目耗时105小时，完成了所有的结局和几乎所有的支线，在此感谢“老戴解说”，在他的视频帮助下我成功体验到了老头环的魅力，还有全成就(^_^)。</p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%85%A8%E6%88%90%E5%B0%B1.4l3lk90t6qe0.webp" alt="全成就"></p><h2 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h2><h3 id="1-宏大史诗和庞大的世界观。"><a href="#1-宏大史诗和庞大的世界观。" class="headerlink" title="1.宏大史诗和庞大的世界观。"></a>1.宏大史诗和庞大的世界观。</h3><p>最早接触的魂类游戏是只狼，在我多周目不同的结局后，我开始体验到魂类游戏的魅力，虽然黑魂3前期打boss对我来说并不难，但有个很头疼的问题是迷路，这也是弃坑黑魂3的原因。我个人非常喜欢宏大世界观和史诗故事，看完了龙崎棒棒糖所有关于黑魂背景的介绍视频之后，我很期待乔治马丁和宫崎老贼能描绘出多么精彩的画卷，在剧情和背景的设定上，老头环达到了我对游戏的最高评价。<br><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%87%BA%E7%94%9F%E7%82%B9.77c6cdw5yuw0.webp" alt="出生点"></p><h3 id="2-美学设计-前有绝景"><a href="#2-美学设计-前有绝景" class="headerlink" title="2.美学设计/前有绝景"></a>2.美学设计/前有绝景</h3><p>我从出生点开始，就不断的F12截图，一直到游戏结束，既是记录游戏剧情，也是对游戏画面的感叹。虽然老头环的贴图不算精细，但整体环境充满了特点，并且在老头环，不同的地区会有不同的场景描绘，不像黑魂都是黑暗阴森。<br><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%8F%B2%E4%B8%9C%E5%A8%81%E5%B0%94%E5%9F%8E.2xo9rwygi9c0.webp" alt="史东威尔城"></p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%8F%B2%E4%B8%9C%E5%A8%81%E5%B0%94%E5%9F%8E-(2).50o20o1khwk0.webp" alt="史东威尔城-(2)"></p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%9C%B0%E4%B8%8B%E5%9F%8E-(2).7efse996mpw0.webp" alt="地下城-(2)"></p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E7%8E%8B%E5%9F%8E-%E4%BA%8C%E5%91%A8%E7%9B%AE.i8o7uazbitk.webp" alt="王城-二周目"></p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E9%9B%AA%E5%B1%B1-%E5%89%8D%E6%9C%89%E7%BB%9D%E6%99%AF.5skhjn3gcl00.webp" alt="雪山-前有绝景"></p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%A4%A9%E7%A9%BA%E5%9F%8E.1e9s8xlcq1a8.webp" alt="天空城"></p><p><img src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E7%81%B0%E5%9F%8E.33b3v6b97dk0.webp" alt="灰城"></p><h2 id="中性（个人看法）"><a href="#中性（个人看法）" class="headerlink" title="中性（个人看法）"></a>中性（个人看法）</h2><h3 id="1-战斗设计"><a href="#1-战斗设计" class="headerlink" title="1.战斗设计"></a>1.战斗设计</h3><p>说实话这种类似黑魂的战斗体验并没有很优秀，快慢刀加读指令还是很头痛的，个人来说还是更喜欢只狼那种偏向ACT的战斗风格，而不是满地打滚当驴学派玩家。不过法师的加入让老头环入门更加简单，作为不用灵魂激流就喜欢月光剑贴脸砍的狂战士甘道夫，虽然少部分时候在受苦，整体来说战斗体验还是不错的。</p><p>但是！后期圣树，雪山和雪原，数值膨胀的太离谱了，不刷级不行，印象深刻的是圣树罗蕾塔门口的两个魔法师，顶级法师了属于是，攻击力极高，血贼厚，没有蓝条，远比后面的罗蕾塔boss强，地方又狭窄，别说战斗了，就是跑酷都不好跑。（打到这的时候就感叹这里的每个小兵都能暴捶葛瑞克之流）</p><h3 id="2-地图设计"><a href="#2-地图设计" class="headerlink" title="2.地图设计"></a>2.地图设计</h3><p>前期洞窟和地面城池的设计算是非常巧妙，很多地方有捷径或者意想不到的到达方式，虽然依然有各种转角遇到背刺的小兵和石像鬼，但这也算是法环作为恐怖游戏的一种标签，但后期雪原非常空旷，如果不是进去的暴风雪挡住了视线，刚进去的那里什么都没有</p><h3 id="3-NPC设计"><a href="#3-NPC设计" class="headerlink" title="3.NPC设计"></a>3.NPC设计</h3><p>NPC的设计可以说是有好有坏，描写非常深刻的有战士壶亚历山大狼哥还有亲爱的老师瑟廉，但其他的就不是那么印象深刻了，其实如果可以把支线连在一起看，大部分NPC都是有血有肉（虽然绝大部分都是悲剧结局）但巧就巧在法环的内容量太大，又有接下来提到的任务指引问题，只有看攻略猛攻一个故事，才能体会深刻，就比如说海德要塞那个城主，要我来回跑图（中途还没有赐福）才能接近完成任务。还有个问题是老头环里的NPC跟投币木马似的，话总是不一次讲完，必须得不停的对话。<br>顺便一提，传说中的魂系经典人物帕奇，说实话如果没有这层buff帕奇就是个杂兵，在一周目我通过攻略经历了所有和帕奇有关的故事，包括被他在火山地区踹下悬崖。我非常不理解为什么玩家们会喜欢这样一个偷奸耍滑作奸犯科的NPC，在二周目我选择直接把他砍翻，除了几个猎杀褪色者任务，即使没有他整个故事流程也没有影响。</p><h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><h3 id="1-最垃圾：任务指引"><a href="#1-最垃圾：任务指引" class="headerlink" title="1.最垃圾：任务指引"></a>1.最垃圾：任务指引</h3><p>任务指引其实不能用垃圾来形容，应该是完全没有。碎片化叙事我可以接受，以往的魂类游戏都是在一个走廊里把剧本一张张放好（不一定按顺序），但现在，他把剧本撒在了一个六十层大楼里，需要不断地上蹿下跳去找，而且里面还有各种各样的粪坑。我不相信作为一个普通玩家能够在不看攻略的情况下做完大部分任务，甚至说，不看攻略连很多支线都不知道在哪开始接。<br>作为一个开放世界，没有任务清单意味着我根本记不住多个任务，一边在被小兵暴杀的同时我还要记下一步支线怎么走？好些NPC我一开始不看攻略一头雾水， “你谁啊就跟我搭话”<br>更别说什么商人卖的情报了，有些商人藏在什么鸟不拉屎的地方啊，举个例子，卡利亚学院传送门那里，那个商人在传送门后面的断桥处，但是，你不能通过传送门走，要沿着断桥走，断桥上全是树木和灌木丛遮挡视线，还有一片狼群，然后才能看到商人，不看攻略哪个正常人会在看到传送门的情况下往断桥里钻？<br>就算有商人的情报，米莉森的支线还有三指女巫的支线的地点就完全没有提示，本来任务流程的间隔非常大，这些支线本身体量又有限，开放世界进一步分割并加剧了任务的碎片化，你必须得在这个开放世界闲逛，才能找到他们，这样就光剩碎片没故事了。<br>主线剧情有个大问题是我把老婆当柴火烧了树以后就黑屏到天空城了？到了天空城我为什么要去揍黑剑？什么提示也没有就让我去拿命定之死？命定之死前面只提到可以干掉半神，没说干掉黑剑释放命定之死才能真正烧黄金树。<br>如果只能通过看攻略才能完成任务，那么作为一款游戏我认为法环的任务指引是极其失败的。<br>有人会洗白说这是魂系游戏的特色，“老ass一周目基本不会上网查看攻略的，最多交流下自己发现的问题。魂游戏的一周目无知探索是最有乐趣的而且这个无知不可逆。”但这是开放世界，不是以往的线性叙事，魂系游戏的前提是游戏，这么大的游戏体量难道要我一个普通玩家拿个笔记本自己记？</p><h3 id="2-部分物品获得设计"><a href="#2-部分物品获得设计" class="headerlink" title="2.部分物品获得设计"></a>2.部分物品获得设计</h3><p>故事散布在大楼里就算了，问题是底下还有粪坑，在死根深处有个传说护符，需要穿过一片黑暗的蚂蚁窝，就是在黑暗中，你得辨别蚂蚁窝的布局看着无数只巨大蚂蚁在边上进攻骑马穿梭跳跃，我是真的被恶心到了，纯粹的生理恶心，这个护符的放置地点让我不可能给这个游戏打满分，纯粹故意恶心玩家，不会有打着魂类游戏的旗号的昆虫爱好者喜欢吧，不会吧不会吧<br>更别提什么大手怪还有蚯蚓脸了，但好歹没有那种强制你盯着看的设计出现<br>还有各种各样的奇怪藏东西地点，让我感觉制作组只是故意把他们藏在玩家找不到的地点，而不是打完一场战斗后的战利品，我在收集物品时（特别是后期）完全没有那种“原来在这里”的惊喜</p><h3 id="3-跑酷设计"><a href="#3-跑酷设计" class="headerlink" title="3.跑酷设计"></a>3.跑酷设计</h3><p>在小兵和房顶穿梭的时间远远大于打boss的时间，很多无意义的堆怪耗尽耐心。印象最深的是卡利亚学院楼顶的跑酷，跳到有一处房顶的时候，本来距离就远不太好跳，还在这里布置了一个类似只狼的风筝怪，我在空中被它打下去很多次，我忍了很久才没有卸游戏。当然有人洗白说这是魂系游戏的特点，我只能说适当的恶心人可以，恶心多了就只能徒增厌恶</p><h3 id="4-剧情bug"><a href="#4-剧情bug" class="headerlink" title="4.剧情bug"></a>4.剧情bug</h3><p>黑剑和野兽祭祀，这是很多人都提到的bug了，打完黑剑野兽祭祀还在，有些人洗白说这是不同时空的黑剑，但老头环前面没有出现什么时空分割的设定，我倾向于是有个bug或者是这部分没做完就拿出来发售了。<br>吐槽一下，还有烧树后飞到天空城，这都啥啊就飞上去了？咋飞的啊，要是梅琳娜有这本事她怎么不早用呢。有人说是桂奥尔龙墓的那条大白龙带我们到天空城的，但这都只是解包推测的，本身剧情就是有断层，即使后续有更新但游戏都发售了总得先有个自圆其说的解释吧，拿个什么商人情报或者犄角旮旯里的碎片先当谜语人也行啊，但什么都没有，即使洗白有法环体量大的理由，但事实在这里，在这一段就是有剧情上的漏洞。<br>还有一个是关于火山巨人的，他不是被黄金家族干倒了吗，都被玛莉卡控制了怎么二阶段还可以通过献祭获得邪神力量啊？要是能和邪神沟通有自我意识为什么要阻止我烧树，不应该高高兴兴把黄金树给点了吗，又何必打上这一架。</p>]]></content>
+        <content type="html"><![CDATA[<p>说实话，作为我第一款全价购买的steam游戏，艾尔登法环就像一场盛宴，他几乎满足了我对奇幻世界和宏大史诗的全部期待。从四月一日到四月十八日，一周目耗时105小时，完成了所有的结局和几乎所有的支线，在此感谢“老戴解说”，在他的视频帮助下我成功体验到了老头环的魅力，还有全成就(^_^)。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%85%A8%E6%88%90%E5%B0%B1.4l3lk90t6qe0.webp" alt="全成就" data-caption="全成就" loading="lazy"></p><h2 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h2><h3 id="1-宏大史诗和庞大的世界观。"><a href="#1-宏大史诗和庞大的世界观。" class="headerlink" title="1.宏大史诗和庞大的世界观。"></a>1.宏大史诗和庞大的世界观。</h3><p>最早接触的魂类游戏是只狼，在我多周目不同的结局后，我开始体验到魂类游戏的魅力，虽然黑魂3前期打boss对我来说并不难，但有个很头疼的问题是迷路，这也是弃坑黑魂3的原因。我个人非常喜欢宏大世界观和史诗故事，看完了龙崎棒棒糖所有关于黑魂背景的介绍视频之后，我很期待乔治马丁和宫崎老贼能描绘出多么精彩的画卷，在剧情和背景的设定上，老头环达到了我对游戏的最高评价。<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%87%BA%E7%94%9F%E7%82%B9.77c6cdw5yuw0.webp" alt="出生点" data-caption="出生点" loading="lazy"></p><h3 id="2-美学设计-前有绝景"><a href="#2-美学设计-前有绝景" class="headerlink" title="2.美学设计/前有绝景"></a>2.美学设计/前有绝景</h3><p>我从出生点开始，就不断的F12截图，一直到游戏结束，既是记录游戏剧情，也是对游戏画面的感叹。虽然老头环的贴图不算精细，但整体环境充满了特点，并且在老头环，不同的地区会有不同的场景描绘，不像黑魂都是黑暗阴森。<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%8F%B2%E4%B8%9C%E5%A8%81%E5%B0%94%E5%9F%8E.2xo9rwygi9c0.webp" alt="史东威尔城" data-caption="史东威尔城" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%8F%B2%E4%B8%9C%E5%A8%81%E5%B0%94%E5%9F%8E-(2).50o20o1khwk0.webp" alt="史东威尔城-(2)" data-caption="史东威尔城-(2)" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%9C%B0%E4%B8%8B%E5%9F%8E-(2).7efse996mpw0.webp" alt="地下城-(2)" data-caption="地下城-(2)" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E7%8E%8B%E5%9F%8E-%E4%BA%8C%E5%91%A8%E7%9B%AE.i8o7uazbitk.webp" alt="王城-二周目" data-caption="王城-二周目" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E9%9B%AA%E5%B1%B1-%E5%89%8D%E6%9C%89%E7%BB%9D%E6%99%AF.5skhjn3gcl00.webp" alt="雪山-前有绝景" data-caption="雪山-前有绝景" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E5%A4%A9%E7%A9%BA%E5%9F%8E.1e9s8xlcq1a8.webp" alt="天空城" data-caption="天空城" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://cdn.jsdelivr.net/gh/upuphero/image-hosting@master/elden/%E7%81%B0%E5%9F%8E.33b3v6b97dk0.webp" alt="灰城" data-caption="灰城" loading="lazy"></p><h2 id="中性（个人看法）"><a href="#中性（个人看法）" class="headerlink" title="中性（个人看法）"></a>中性（个人看法）</h2><h3 id="1-战斗设计"><a href="#1-战斗设计" class="headerlink" title="1.战斗设计"></a>1.战斗设计</h3><p>说实话这种类似黑魂的战斗体验并没有很优秀，快慢刀加读指令还是很头痛的，个人来说还是更喜欢只狼那种偏向ACT的战斗风格，而不是满地打滚当驴学派玩家。不过法师的加入让老头环入门更加简单，作为不用灵魂激流就喜欢月光剑贴脸砍的狂战士甘道夫，虽然少部分时候在受苦，整体来说战斗体验还是不错的。</p><p>但是！后期圣树，雪山和雪原，数值膨胀的太离谱了，不刷级不行，印象深刻的是圣树罗蕾塔门口的两个魔法师，顶级法师了属于是，攻击力极高，血贼厚，没有蓝条，远比后面的罗蕾塔boss强，地方又狭窄，别说战斗了，就是跑酷都不好跑。（打到这的时候就感叹这里的每个小兵都能暴捶葛瑞克之流）</p><h3 id="2-地图设计"><a href="#2-地图设计" class="headerlink" title="2.地图设计"></a>2.地图设计</h3><p>前期洞窟和地面城池的设计算是非常巧妙，很多地方有捷径或者意想不到的到达方式，虽然依然有各种转角遇到背刺的小兵和石像鬼，但这也算是法环作为恐怖游戏的一种标签，但后期雪原非常空旷，如果不是进去的暴风雪挡住了视线，刚进去的那里什么都没有</p><h3 id="3-NPC设计"><a href="#3-NPC设计" class="headerlink" title="3.NPC设计"></a>3.NPC设计</h3><p>NPC的设计可以说是有好有坏，描写非常深刻的有战士壶亚历山大狼哥还有亲爱的老师瑟廉，但其他的就不是那么印象深刻了，其实如果可以把支线连在一起看，大部分NPC都是有血有肉（虽然绝大部分都是悲剧结局）但巧就巧在法环的内容量太大，又有接下来提到的任务指引问题，只有看攻略猛攻一个故事，才能体会深刻，就比如说海德要塞那个城主，要我来回跑图（中途还没有赐福）才能接近完成任务。还有个问题是老头环里的NPC跟投币木马似的，话总是不一次讲完，必须得不停的对话。<br>顺便一提，传说中的魂系经典人物帕奇，说实话如果没有这层buff帕奇就是个杂兵，在一周目我通过攻略经历了所有和帕奇有关的故事，包括被他在火山地区踹下悬崖。我非常不理解为什么玩家们会喜欢这样一个偷奸耍滑作奸犯科的NPC，在二周目我选择直接把他砍翻，除了几个猎杀褪色者任务，即使没有他整个故事流程也没有影响。</p><h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><h3 id="1-最垃圾：任务指引"><a href="#1-最垃圾：任务指引" class="headerlink" title="1.最垃圾：任务指引"></a>1.最垃圾：任务指引</h3><p>任务指引其实不能用垃圾来形容，应该是完全没有。碎片化叙事我可以接受，以往的魂类游戏都是在一个走廊里把剧本一张张放好（不一定按顺序），但现在，他把剧本撒在了一个六十层大楼里，需要不断地上蹿下跳去找，而且里面还有各种各样的粪坑。我不相信作为一个普通玩家能够在不看攻略的情况下做完大部分任务，甚至说，不看攻略连很多支线都不知道在哪开始接。<br>作为一个开放世界，没有任务清单意味着我根本记不住多个任务，一边在被小兵暴杀的同时我还要记下一步支线怎么走？好些NPC我一开始不看攻略一头雾水， “你谁啊就跟我搭话”<br>更别说什么商人卖的情报了，有些商人藏在什么鸟不拉屎的地方啊，举个例子，卡利亚学院传送门那里，那个商人在传送门后面的断桥处，但是，你不能通过传送门走，要沿着断桥走，断桥上全是树木和灌木丛遮挡视线，还有一片狼群，然后才能看到商人，不看攻略哪个正常人会在看到传送门的情况下往断桥里钻？<br>就算有商人的情报，米莉森的支线还有三指女巫的支线的地点就完全没有提示，本来任务流程的间隔非常大，这些支线本身体量又有限，开放世界进一步分割并加剧了任务的碎片化，你必须得在这个开放世界闲逛，才能找到他们，这样就光剩碎片没故事了。<br>主线剧情有个大问题是我把老婆当柴火烧了树以后就黑屏到天空城了？到了天空城我为什么要去揍黑剑？什么提示也没有就让我去拿命定之死？命定之死前面只提到可以干掉半神，没说干掉黑剑释放命定之死才能真正烧黄金树。<br>如果只能通过看攻略才能完成任务，那么作为一款游戏我认为法环的任务指引是极其失败的。<br>有人会洗白说这是魂系游戏的特色，“老ass一周目基本不会上网查看攻略的，最多交流下自己发现的问题。魂游戏的一周目无知探索是最有乐趣的而且这个无知不可逆。”但这是开放世界，不是以往的线性叙事，魂系游戏的前提是游戏，这么大的游戏体量难道要我一个普通玩家拿个笔记本自己记？</p><h3 id="2-部分物品获得设计"><a href="#2-部分物品获得设计" class="headerlink" title="2.部分物品获得设计"></a>2.部分物品获得设计</h3><p>故事散布在大楼里就算了，问题是底下还有粪坑，在死根深处有个传说护符，需要穿过一片黑暗的蚂蚁窝，就是在黑暗中，你得辨别蚂蚁窝的布局看着无数只巨大蚂蚁在边上进攻骑马穿梭跳跃，我是真的被恶心到了，纯粹的生理恶心，这个护符的放置地点让我不可能给这个游戏打满分，纯粹故意恶心玩家，不会有打着魂类游戏的旗号的昆虫爱好者喜欢吧，不会吧不会吧<br>更别提什么大手怪还有蚯蚓脸了，但好歹没有那种强制你盯着看的设计出现<br>还有各种各样的奇怪藏东西地点，让我感觉制作组只是故意把他们藏在玩家找不到的地点，而不是打完一场战斗后的战利品，我在收集物品时（特别是后期）完全没有那种“原来在这里”的惊喜</p><h3 id="3-跑酷设计"><a href="#3-跑酷设计" class="headerlink" title="3.跑酷设计"></a>3.跑酷设计</h3><p>在小兵和房顶穿梭的时间远远大于打boss的时间，很多无意义的堆怪耗尽耐心。印象最深的是卡利亚学院楼顶的跑酷，跳到有一处房顶的时候，本来距离就远不太好跳，还在这里布置了一个类似只狼的风筝怪，我在空中被它打下去很多次，我忍了很久才没有卸游戏。当然有人洗白说这是魂系游戏的特点，我只能说适当的恶心人可以，恶心多了就只能徒增厌恶</p><h3 id="4-剧情bug"><a href="#4-剧情bug" class="headerlink" title="4.剧情bug"></a>4.剧情bug</h3><p>黑剑和野兽祭祀，这是很多人都提到的bug了，打完黑剑野兽祭祀还在，有些人洗白说这是不同时空的黑剑，但老头环前面没有出现什么时空分割的设定，我倾向于是有个bug或者是这部分没做完就拿出来发售了。<br>吐槽一下，还有烧树后飞到天空城，这都啥啊就飞上去了？咋飞的啊，要是梅琳娜有这本事她怎么不早用呢。有人说是桂奥尔龙墓的那条大白龙带我们到天空城的，但这都只是解包推测的，本身剧情就是有断层，即使后续有更新但游戏都发售了总得先有个自圆其说的解释吧，拿个什么商人情报或者犄角旮旯里的碎片先当谜语人也行啊，但什么都没有，即使洗白有法环体量大的理由，但事实在这里，在这一段就是有剧情上的漏洞。<br>还有一个是关于火山巨人的，他不是被黄金家族干倒了吗，都被玛莉卡控制了怎么二阶段还可以通过献祭获得邪神力量啊？要是能和邪神沟通有自我意识为什么要阻止我烧树，不应该高高兴兴把黄金树给点了吗，又何必打上这一架。</p>]]></content>
       
       
       <categories>

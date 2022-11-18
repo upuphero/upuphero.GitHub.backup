@@ -30,13 +30,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1668744818104">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1668745054928">
     
-    <link rel="stylesheet" href="/css/style.css?v=1668744818104">
+    <link rel="stylesheet" href="/css/style.css?v=1668745054928">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1668744818104">
+            <link rel="stylesheet" href="/custom.css?v=1668745054928">
         
     
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="八角书屋" type="application/atom+xml">
@@ -82,13 +82,6 @@
             </div>
         </a>
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/donate.html" title="给我赞助">
-            <i class="mdui-list-item-icon nexmoefont icon-coffee"></i>
-            <div class="mdui-list-item-content">
-                给我赞助
-            </div>
-        </a>
-        
         <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博主">
             <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
             <div class="mdui-list-item-content">
@@ -115,7 +108,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1668744818105"></script>
+	<script async src="/js/search.js?v=1668745054928"></script>
 
 
 
@@ -340,7 +333,7 @@
 
     <h1 id="452-Minimum-Number-of-Arrows-to-Burst-Balloons-Medium"><a href="#452-Minimum-Number-of-Arrows-to-Burst-Balloons-Medium" class="headerlink" title="452. Minimum Number of Arrows to Burst Balloons (Medium)"></a>452. Minimum Number of Arrows to Burst Balloons (Medium)</h1><h2 id="There-are-some-spherical-balloons-taped-onto-a-flat-wall-that-represents-the-XY-plane-The-balloons-are-represented-as-a-2D-integer-array-points-where-points-i-xstart-xend-denotes-a-balloon-whose-horizontal-diameter-stretches-between-xstart-and-xend-You-do-not-know-the-exact-y-coordinates-of-the-balloons"><a href="#There-are-some-spherical-balloons-taped-onto-a-flat-wall-that-represents-the-XY-plane-The-balloons-are-represented-as-a-2D-integer-array-points-where-points-i-xstart-xend-denotes-a-balloon-whose-horizontal-diameter-stretches-between-xstart-and-xend-You-do-not-know-the-exact-y-coordinates-of-the-balloons" class="headerlink" title="There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons."></a>There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.</h2><h2 id="Arrows-can-be-shot-up-directly-vertically-in-the-positive-y-direction-from-different-points-along-the-x-axis-A-balloon-with-xstart-and-xend-is-burst-by-an-arrow-shot-at-x-if-xstart-lt-x-lt-xend-There-is-no-limit-to-the-number-of-arrows-that-can-be-shot-A-shot-arrow-keeps-traveling-up-infinitely-bursting-any-balloons-in-its-path"><a href="#Arrows-can-be-shot-up-directly-vertically-in-the-positive-y-direction-from-different-points-along-the-x-axis-A-balloon-with-xstart-and-xend-is-burst-by-an-arrow-shot-at-x-if-xstart-lt-x-lt-xend-There-is-no-limit-to-the-number-of-arrows-that-can-be-shot-A-shot-arrow-keeps-traveling-up-infinitely-bursting-any-balloons-in-its-path" class="headerlink" title="Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;= x &lt;= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path."></a>Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;= x &lt;= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path.</h2><h2 id="Given-the-array-points-return-the-minimum-number-of-arrows-that-must-be-shot-to-burst-all-balloons"><a href="#Given-the-array-points-return-the-minimum-number-of-arrows-that-must-be-shot-to-burst-all-balloons" class="headerlink" title="Given the array points, return the minimum number of arrows that must be shot to burst all balloons."></a>Given the array points, return the minimum number of arrows that must be shot to burst all balloons.</h2><p>题目描述：气球在一个水平数轴上摆放，可以重叠，飞镖垂直投向坐标轴，使得路径上的气球都被刺破。求解最小的投飞镖次数使所有气球都被刺破。</p>
 <p>也是计算不重叠的区间个数，不过和 Non-overlapping points 的区别在于，[1, 2] 和 [2, 3] 在本题中算是重叠区间。</p>
-<p><img src="https://assets.leetcode-cn.com/solution-static/452/1.png" alt="射箭"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://assets.leetcode-cn.com/solution-static/452/1.png" alt="射箭" data-caption="射箭" loading="lazy"></p>
 <p>Example</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">[[10,16], [2,8], [1,6], [7,12]]</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
 <h2 id="排序-贪心"><a href="#排序-贪心" class="headerlink" title="排序 + 贪心"></a>排序 + 贪心</h2><p>这道题和 435. Non-overlapping Intervals (Medium) 有些类似，都是寻找重合区间</p>
@@ -427,7 +420,7 @@
 
  
 
-<script async src="/js/app.js?v=1668744818107"></script>
+<script async src="/js/app.js?v=1668745054931"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
 

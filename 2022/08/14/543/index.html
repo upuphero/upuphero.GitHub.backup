@@ -23,8 +23,8 @@
 <meta property="article:author" content="leaf">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="Python">
-<meta property="article:tag" content="Linked list">
 <meta property="article:tag" content="recursion">
+<meta property="article:tag" content="Linked list">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.51cto.com/oss/202108/05/76b5d27335a0239eacf8b76a391ed229.jpg">
     
@@ -32,13 +32,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1668744817945">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1668745054753">
     
-    <link rel="stylesheet" href="/css/style.css?v=1668744817945">
+    <link rel="stylesheet" href="/css/style.css?v=1668745054753">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1668744817945">
+            <link rel="stylesheet" href="/custom.css?v=1668745054753">
         
     
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="八角书屋" type="application/atom+xml">
@@ -84,13 +84,6 @@
             </div>
         </a>
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/donate.html" title="给我赞助">
-            <i class="mdui-list-item-icon nexmoefont icon-coffee"></i>
-            <div class="mdui-list-item-content">
-                给我赞助
-            </div>
-        </a>
-        
         <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博主">
             <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
             <div class="mdui-list-item-content">
@@ -117,7 +110,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1668744817945"></script>
+	<script async src="/js/search.js?v=1668745054753"></script>
 
 
 
@@ -340,7 +333,7 @@
     
 </div>
 
-    <h1 id="543-Diameter-of-Binary-Tree-Easy"><a href="#543-Diameter-of-Binary-Tree-Easy" class="headerlink" title="543. Diameter of Binary Tree (Easy)"></a>543. Diameter of Binary Tree (Easy)</h1><h2 id="Given-the-root-of-a-binary-tree-return-the-length-of-the-diameter-of-the-tree"><a href="#Given-the-root-of-a-binary-tree-return-the-length-of-the-diameter-of-the-tree" class="headerlink" title="Given the root of a binary tree, return the length of the diameter of the tree."></a>Given the root of a binary tree, return the length of the diameter of the tree.</h2><h2 id="The-diameter-of-a-binary-tree-is-the-length-of-the-longest-path-between-any-two-nodes-in-a-tree-This-path-may-or-may-not-pass-through-the-root"><a href="#The-diameter-of-a-binary-tree-is-the-length-of-the-longest-path-between-any-two-nodes-in-a-tree-This-path-may-or-may-not-pass-through-the-root" class="headerlink" title="The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root."></a>The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.</h2><h2 id="The-length-of-a-path-between-two-nodes-is-represented-by-the-number-of-edges-between-them"><a href="#The-length-of-a-path-between-two-nodes-is-represented-by-the-number-of-edges-between-them" class="headerlink" title="The length of a path between two nodes is represented by the number of edges between them."></a>The length of a path between two nodes is represented by the number of edges between them.</h2><p>经典重现<br><img src="https://s2.51cto.com/oss/202108/05/76b5d27335a0239eacf8b76a391ed229.jpg" alt="binary tree"></p>
+    <h1 id="543-Diameter-of-Binary-Tree-Easy"><a href="#543-Diameter-of-Binary-Tree-Easy" class="headerlink" title="543. Diameter of Binary Tree (Easy)"></a>543. Diameter of Binary Tree (Easy)</h1><h2 id="Given-the-root-of-a-binary-tree-return-the-length-of-the-diameter-of-the-tree"><a href="#Given-the-root-of-a-binary-tree-return-the-length-of-the-diameter-of-the-tree" class="headerlink" title="Given the root of a binary tree, return the length of the diameter of the tree."></a>Given the root of a binary tree, return the length of the diameter of the tree.</h2><h2 id="The-diameter-of-a-binary-tree-is-the-length-of-the-longest-path-between-any-two-nodes-in-a-tree-This-path-may-or-may-not-pass-through-the-root"><a href="#The-diameter-of-a-binary-tree-is-the-length-of-the-longest-path-between-any-two-nodes-in-a-tree-This-path-may-or-may-not-pass-through-the-root" class="headerlink" title="The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root."></a>The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.</h2><h2 id="The-length-of-a-path-between-two-nodes-is-represented-by-the-number-of-edges-between-them"><a href="#The-length-of-a-path-between-two-nodes-is-represented-by-the-number-of-edges-between-them" class="headerlink" title="The length of a path between two nodes is represented by the number of edges between them."></a>The length of a path between two nodes is represented by the number of edges between them.</h2><p>经典重现<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="https://s2.51cto.com/oss/202108/05/76b5d27335a0239eacf8b76a391ed229.jpg" alt="binary tree" data-caption="binary tree" loading="lazy"></p>
 <h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/diameter-of-binary-tree/solution/er-cha-shu-de-zhi-jing-by-leetcode-solution/">官方题解</a></h3><h4 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h4><p>其实我看到这道题感觉和<a target="_blank" rel="noopener" href="https://upuphero.github.io/2022/08/14/110/">110. Balanced Binary Tree (Easy)</a>很像，可以在求高度的基础上稍微改一下<br>首先我们知道一条路径的长度为该路径经过的节点数减一，所以求直径（即求路径长度的最大值）等效于求路径经过节点数的最大值减一。</p>
 <p>而任意一条路径均可以被看作由某个节点为起点，从其左儿子和右儿子向下遍历的路径拼接得到。</p>
 <p>假设我们知道对于该节点的左儿子向下遍历经过最多的节点数 L （即以左儿子为根的子树的深度） 和其右儿子向下遍历经过最多的节点数 R （即以右儿子为根的子树的深度），那么以该节点为起点的路径经过节点数的最大值即为 L+R+1 。</p>
@@ -426,7 +419,7 @@
 
  
 
-<script async src="/js/app.js?v=1668744817947"></script>
+<script async src="/js/app.js?v=1668745054756"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
 

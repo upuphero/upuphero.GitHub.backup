@@ -184,9 +184,9 @@
     
     <category term="Python" scheme="http://example.com/tags/Python/"/>
     
-    <category term="DFS" scheme="http://example.com/tags/DFS/"/>
-    
     <category term="binary-tree" scheme="http://example.com/tags/binary-tree/"/>
+    
+    <category term="DFS" scheme="http://example.com/tags/DFS/"/>
     
   </entry>
   
