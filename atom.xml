@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-18T03:48:00.301Z</updated>
+  <updated>2022-11-21T20:38:43.125Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,118 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>599. Minimum Index Sum of Two Lists(easy)</title>
+    <link href="http://example.com/2022/11/21/599/"/>
+    <id>http://example.com/2022/11/21/599/</id>
+    <published>2022-11-21T20:34:31.000Z</published>
+    <updated>2022-11-21T20:38:43.125Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="599-Minimum-Index-Sum-of-Two-Lists-easy"><a href="#599-Minimum-Index-Sum-of-Two-Lists-easy" class="headerlink" title="599. Minimum Index Sum of Two Lists(easy)"></a>599. Minimum Index Sum of Two Lists(easy)</h1><h2 id="Given-two-arrays-of-strings-list1-and-list2-find-the-common-strings-with-the-least-index-sum"><a href="#Given-two-arrays-of-strings-list1-and-list2-find-the-common-strings-with-the-least-index-sum" class="headerlink" title="Given two arrays of strings list1 and list2, find the common strings with the least index sum."></a>Given two arrays of strings list1 and list2, find the common strings with the least index sum.</h2><h2 id="A-common-string-is-a-string-that-appeared-in-both-list1-and-list2"><a href="#A-common-string-is-a-string-that-appeared-in-both-list1-and-list2" class="headerlink" title="A common string is a string that appeared in both list1 and list2."></a>A common string is a string that appeared in both list1 and list2.</h2><h2 id="A-common-string-with-the-least-index-sum-is-a-common-string-such-that-if-it-appeared-at-list1-i-and-list2-j-then-i-j-should-be-the-minimum-value-among-all-the-other-common-strings"><a href="#A-common-string-with-the-least-index-sum-is-a-common-string-such-that-if-it-appeared-at-list1-i-and-list2-j-then-i-j-should-be-the-minimum-value-among-all-the-other-common-strings" class="headerlink" title="A common string with the least index sum is a common string such that if it appeared at list1[i] and list2[j] then i + j should be the minimum value among all the other common strings."></a>A common string with the least index sum is a common string such that if it appeared at list1[i] and list2[j] then i + j should be the minimum value among all the other common strings.</h2><h2 id="Return-all-the-common-strings-with-the-least-index-sum-Return-the-answer-in-any-order"><a href="#Return-all-the-common-strings-with-the-least-index-sum-Return-the-answer-in-any-order" class="headerlink" title="Return all the common strings with the least index sum. Return the answer in any order."></a>Return all the common strings with the least index sum. Return the answer in any order.</h2><p>先找出两个list相同的字符，再记录下最小的数值，然后用hashmap找到对应的字符</p><pre><code class="python">class Solution:    def findRestaurant(self, list1: List[str], list2: List[str]) -&gt; List[str]:        ans=[]        d=&#123;&#125;        for i in range(len(list1)):            if list1[i] in list2:                d[list1[i]]=i+list2.index(list1[i])        min_index=min(d.values())        res=[]        for i in d:            if d[i]==min_index:                res.append(i)        return res        </code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;599-Minimum-Index-Sum-of-Two-Lists-easy&quot;&gt;&lt;a href=&quot;#599-Minimum-Index-Sum-of-Two-Lists-easy&quot; class=&quot;headerlink&quot; title=&quot;599. Minimum I</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>917. Reverse Only Letters(easy)</title>
+    <link href="http://example.com/2022/11/21/917/"/>
+    <id>http://example.com/2022/11/21/917/</id>
+    <published>2022-11-21T20:10:44.000Z</published>
+    <updated>2022-11-21T20:37:39.526Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="917-Reverse-Only-Letters-easy"><a href="#917-Reverse-Only-Letters-easy" class="headerlink" title="917. Reverse Only Letters(easy)"></a>917. Reverse Only Letters(easy)</h1><h2 id="Given-a-string-s-reverse-the-string-according-to-the-following-rules"><a href="#Given-a-string-s-reverse-the-string-according-to-the-following-rules" class="headerlink" title="Given a string s, reverse the string according to the following rules:"></a>Given a string s, reverse the string according to the following rules:</h2><h2 id="All-the-characters-that-are-not-English-letters-remain-in-the-same-position"><a href="#All-the-characters-that-are-not-English-letters-remain-in-the-same-position" class="headerlink" title="All the characters that are not English letters remain in the same position."></a>All the characters that are not English letters remain in the same position.</h2><h2 id="All-the-English-letters-lowercase-or-uppercase-should-be-reversed"><a href="#All-the-English-letters-lowercase-or-uppercase-should-be-reversed" class="headerlink" title="All the English letters (lowercase or uppercase) should be reversed."></a>All the English letters (lowercase or uppercase) should be reversed.</h2><h2 id="Return-s-after-reversing-it"><a href="#Return-s-after-reversing-it" class="headerlink" title="Return s after reversing it."></a>Return s after reversing it.</h2><p>stack用在这里正好，字母存进栈，等识别到符号就放符号，不是符号就pop</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseOnlyLetters</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        letters=[c <span class="keyword">for</span> c <span class="keyword">in</span> s <span class="keyword">if</span> c.isalpha()]</span><br><span class="line">        ans=[]</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> c.isalpha():</span><br><span class="line">                ans.append(letters.pop())</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ans.append(c)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(ans)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;917-Reverse-Only-Letters-easy&quot;&gt;&lt;a href=&quot;#917-Reverse-Only-Letters-easy&quot; class=&quot;headerlink&quot; title=&quot;917. Reverse Only Letters(easy)&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="stack" scheme="http://example.com/tags/stack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>598. Range Addition II(easy)</title>
+    <link href="http://example.com/2022/11/21/598/"/>
+    <id>http://example.com/2022/11/21/598/</id>
+    <published>2022-11-21T16:44:20.000Z</published>
+    <updated>2022-11-21T16:45:25.032Z</updated>
+    
+    <content type="html"><![CDATA[<p>You are given an m x n matrix M initialized with all 0’s and an array of operations ops, where ops[i] = [ai, bi] means M[x][y] should be incremented by one for all 0 &lt;= x &lt; ai and 0 &lt;= y &lt; bi.</p><p>Count and return the number of maximum integers in the matrix after performing all the operations.</p><pre><code class="python">class Solution:    def maxCount(self, m: int, n: int, ops: List[List[int]]) -&gt; int:        mina, minb = m, n        for a, b in ops:            mina = min(mina, a)            minb = min(minb, b)        return mina * minb</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;You are given an m x n matrix M initialized with all 0’s and an array of operations ops, where ops[i] = [ai, bi] means M[x][y] should be </summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="math" scheme="http://example.com/tags/math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>709. To Lower Case(easy)</title>
+    <link href="http://example.com/2022/11/21/709/"/>
+    <id>http://example.com/2022/11/21/709/</id>
+    <published>2022-11-21T16:21:16.000Z</published>
+    <updated>2022-11-21T16:45:34.364Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="709-To-Lower-Case-easy"><a href="#709-To-Lower-Case-easy" class="headerlink" title="709. To Lower Case(easy)"></a>709. To Lower Case(easy)</h1><h2 id="Given-a-string-s-return-the-string-after-replacing-every-uppercase-letter-with-the-same-lowercase-letter"><a href="#Given-a-string-s-return-the-string-after-replacing-every-uppercase-letter-with-the-same-lowercase-letter" class="headerlink" title="Given a string s, return the string after replacing every uppercase letter with the same lowercase letter."></a>Given a string s, return the string after replacing every uppercase letter with the same lowercase letter.</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">toLowerCase</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        <span class="keyword">return</span> s.lower()</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;709-To-Lower-Case-easy&quot;&gt;&lt;a href=&quot;#709-To-Lower-Case-easy&quot; class=&quot;headerlink&quot; title=&quot;709. To Lower Case(easy)&quot;&gt;&lt;/a&gt;709. To Lower Case</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+  </entry>
   
   <entry>
     <title>222. Count Complete Tree Nodes(medium)</title>
@@ -469,120 +581,6 @@
     <category term="Python" scheme="http://example.com/tags/Python/"/>
     
     <category term="array" scheme="http://example.com/tags/array/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>238. Product of Array Except Self(medium)</title>
-    <link href="http://example.com/2022/11/14/238/"/>
-    <id>http://example.com/2022/11/14/238/</id>
-    <published>2022-11-15T03:21:06.000Z</published>
-    <updated>2022-11-15T04:16:35.920Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="238-Product-of-Array-Except-Self-medium"><a href="#238-Product-of-Array-Except-Self-medium" class="headerlink" title="238. Product of Array Except Self(medium)"></a>238. Product of Array Except Self(medium)</h1><h2 id="Given-an-integer-array-nums-return-an-array-answer-such-that-answer-i-is-equal-to-the-product-of-all-the-elements-of-nums-except-nums-i"><a href="#Given-an-integer-array-nums-return-an-array-answer-such-that-answer-i-is-equal-to-the-product-of-all-the-elements-of-nums-except-nums-i" class="headerlink" title="Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i]."></a>Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].</h2><h2 id="The-product-of-any-prefix-or-suffix-of-nums-is-guaranteed-to-fit-in-a-32-bit-integer"><a href="#The-product-of-any-prefix-or-suffix-of-nums-is-guaranteed-to-fit-in-a-32-bit-integer" class="headerlink" title="The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer."></a>The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.</h2><h2 id="You-must-write-an-algorithm-that-runs-in-O-n-time-and-without-using-the-division-operation"><a href="#You-must-write-an-algorithm-that-runs-in-O-n-time-and-without-using-the-division-operation" class="headerlink" title="You must write an algorithm that runs in O(n) time and without using the division operation."></a>You must write an algorithm that runs in O(n) time and without using the division operation.</h2><p>因为题目限制了除法，所以为了缩减时间复杂度，模仿前缀和数组，建立两个数组，一个从左边乘得到的数组，一个从右边乘得到的数组，最后的结果就等于两个数组在相同位置的乘积</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">productExceptSelf</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        n=<span class="built_in">len</span>(nums)</span><br><span class="line">        L,R,res=[<span class="number">0</span>]*n,[<span class="number">0</span>]*n,[<span class="number">0</span>]*n</span><br><span class="line">        L[<span class="number">0</span>]=<span class="number">1</span></span><br><span class="line">        R[n-<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n):</span><br><span class="line">            L[i]=nums[i-<span class="number">1</span>]*L[i-<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(<span class="built_in">range</span>(n-<span class="number">1</span>)):</span><br><span class="line">            R[i]=nums[i+<span class="number">1</span>]*R[i+<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            res[i]=L[i]*R[i]</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;238-Product-of-Array-Except-Self-medium&quot;&gt;&lt;a href=&quot;#238-Product-of-Array-Except-Self-medium&quot; class=&quot;headerlink&quot; title=&quot;238. Product o</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="difference array" scheme="http://example.com/tags/difference-array/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>49. Group Anagrams(medium)</title>
-    <link href="http://example.com/2022/11/14/49/"/>
-    <id>http://example.com/2022/11/14/49/</id>
-    <published>2022-11-15T02:19:26.000Z</published>
-    <updated>2022-11-18T04:12:56.853Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="49-Group-Anagrams-medium"><a href="#49-Group-Anagrams-medium" class="headerlink" title="49. Group Anagrams(medium)"></a>49. Group Anagrams(medium)</h1><h2 id="Given-an-array-of-strings-strs-group-the-anagrams-together-You-can-return-the-answer-in-any-order"><a href="#Given-an-array-of-strings-strs-group-the-anagrams-together-You-can-return-the-answer-in-any-order" class="headerlink" title="Given an array of strings strs, group the anagrams together. You can return the answer in any order."></a>Given an array of strings strs, group the anagrams together. You can return the answer in any order.</h2><h2 id="An-Anagram-is-a-word-or-phrase-formed-by-rearranging-the-letters-of-a-different-word-or-phrase-typically-using-all-the-original-letters-exactly-once"><a href="#An-Anagram-is-a-word-or-phrase-formed-by-rearranging-the-letters-of-a-different-word-or-phrase-typically-using-all-the-original-letters-exactly-once" class="headerlink" title="An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once."></a>An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.</h2><h3 id="leetcode-官方题解"><a href="#leetcode-官方题解" class="headerlink" title="leetcode 官方题解"></a><a href="https://leetcode.cn/problems/group-anagrams/solution/zi-mu-yi-wei-ci-fen-zu-by-leetcode-solut-gyoc/">leetcode 官方题解</a></h3><p>由于互为字母异位词的两个字符串包含的字母相同，因此对两个字符串分别进行排序之后得到的字符串一定是相同的，故可以将排序之后的字符串作为哈希表的键。<br>这道题主要是把字符串本身当作键，字母相同的字符作为键是同一个</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">groupAnagrams</span>(<span class="params">self, strs: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">str</span>]]:</span></span><br><span class="line">        n=<span class="built_in">len</span>(strs)</span><br><span class="line">        mp=collections.defaultdict(<span class="built_in">list</span>)</span><br><span class="line">        <span class="keyword">for</span> st <span class="keyword">in</span> strs:</span><br><span class="line">            key=<span class="string">&quot;&quot;</span>.join(<span class="built_in">sorted</span>(st))</span><br><span class="line">            mp[key].append(st)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">list</span>(mp.values())   </span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;49-Group-Anagrams-medium&quot;&gt;&lt;a href=&quot;#49-Group-Anagrams-medium&quot; class=&quot;headerlink&quot; title=&quot;49. Group Anagrams(medium)&quot;&gt;&lt;/a&gt;49. Group An</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>217. Contains Duplicate(easy)</title>
-    <link href="http://example.com/2022/11/14/217/"/>
-    <id>http://example.com/2022/11/14/217/</id>
-    <published>2022-11-15T02:03:23.000Z</published>
-    <updated>2022-11-15T02:30:11.819Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="217-Contains-Duplicate-easy"><a href="#217-Contains-Duplicate-easy" class="headerlink" title="217. Contains Duplicate(easy)"></a>217. Contains Duplicate(easy)</h1><h1 id="Given-an-integer-array-nums-return-true-if-any-value-appears-at-least-twice-in-the-array-and-return-false-if-every-element-is-distinct"><a href="#Given-an-integer-array-nums-return-true-if-any-value-appears-at-least-twice-in-the-array-and-return-false-if-every-element-is-distinct" class="headerlink" title="Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct."></a>Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,3,1]</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure><p>利用ｓｅｔ的去重属性</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">containsDuplicate</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(<span class="built_in">set</span>(nums))!=<span class="built_in">len</span>(nums)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;217-Contains-Duplicate-easy&quot;&gt;&lt;a href=&quot;#217-Contains-Duplicate-easy&quot; class=&quot;headerlink&quot; title=&quot;217. Contains Duplicate(easy)&quot;&gt;&lt;/a&gt;217</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="set" scheme="http://example.com/tags/set/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2131. Longest Palindrome by Concatenating Two Letter Words(medium)</title>
-    <link href="http://example.com/2022/11/12/2131/"/>
-    <id>http://example.com/2022/11/12/2131/</id>
-    <published>2022-11-12T22:34:35.000Z</published>
-    <updated>2022-11-15T02:29:51.173Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="2131-Longest-Palindrome-by-Concatenating-Two-Letter-Words-medium"><a href="#2131-Longest-Palindrome-by-Concatenating-Two-Letter-Words-medium" class="headerlink" title="2131. Longest Palindrome by Concatenating Two Letter Words(medium)"></a>2131. Longest Palindrome by Concatenating Two Letter Words(medium)</h1><h2 id="You-are-given-an-array-of-strings-words-Each-element-of-words-consists-of-two-lowercase-English-letters"><a href="#You-are-given-an-array-of-strings-words-Each-element-of-words-consists-of-two-lowercase-English-letters" class="headerlink" title="You are given an array of strings words. Each element of words consists of two lowercase English letters."></a>You are given an array of strings words. Each element of words consists of two lowercase English letters.</h2><h2 id="Create-the-longest-possible-palindrome-by-selecting-some-elements-from-words-and-concatenating-them-in-any-order-Each-element-can-be-selected-at-most-once"><a href="#Create-the-longest-possible-palindrome-by-selecting-some-elements-from-words-and-concatenating-them-in-any-order-Each-element-can-be-selected-at-most-once" class="headerlink" title="Create the longest possible palindrome by selecting some elements from words and concatenating them in any order. Each element can be selected at most once."></a>Create the longest possible palindrome by selecting some elements from words and concatenating them in any order. Each element can be selected at most once.</h2><h2 id="Return-the-length-of-the-longest-palindrome-that-you-can-create-If-it-is-impossible-to-create-any-palindrome-return-0"><a href="#Return-the-length-of-the-longest-palindrome-that-you-can-create-If-it-is-impossible-to-create-any-palindrome-return-0" class="headerlink" title="Return the length of the longest palindrome that you can create. If it is impossible to create any palindrome, return 0."></a>Return the length of the longest palindrome that you can create. If it is impossible to create any palindrome, return 0.</h2><h2 id="A-palindrome-is-a-string-that-reads-the-same-forward-and-backward"><a href="#A-palindrome-is-a-string-that-reads-the-same-forward-and-backward" class="headerlink" title="A palindrome is a string that reads the same forward and backward."></a>A palindrome is a string that reads the same forward and backward.</h2><p><a href="https://leetcode.cn/problems/longest-palindrome-by-concatenating-two-letter-words/solutions/1202034/lian-jie-liang-zi-mu-dan-ci-de-dao-de-zu-vs99/">力扣官方题解</a></p><p>方法一：贪心 + 哈希表<br>思路与算法</p><p>根据回文串的定义，回文串可以由奇数或者偶数个 words 中的单词拼接而成，但必须满足以下条件：</p><p>如果数量为奇数，那么位于正中间的单词必须是回文字符串（即两个字符相等）；</p><p>每个单词和反转后对应位置的单词必须互为反转字符串。</p><p>根据上面的两个条件，我们可以得出构造最长回文串的规则：</p><p>对于两个字符不同的单词，需要尽可能多的成对选择它和它的反转字符串（如有）；</p><p>对于两个字符相同的单词，需要尽可能多的成对选择该单词；</p><p>如果按照上述条件挑选后，仍然存在未被选择的两个字符相同的单词（此时该字符串只可能有一个未被选择，且该字符串一定在 words 中出现奇数次），我们可以任意选择一个。</p><p>因此，我们用哈希表统计 words 中每个单词的出现次数。随后，我们遍历哈希表的所有元素，并用 res 维护可能构成回文字符串的最长长度，同时用初值为 false 的布尔变量 mid 判断是否存在可以作为中心单词的、出现奇数次的回文单词。在遍历到字符串 word 时，我们首先求出它反转后的字符串 rev，此时根据 word 与 rev 的关系，有以下两种情况：</p><p>word≠rev，此时我们需要统计两者在 words 出现次数的最小值，即为成对选择的最多数目。假设此时对数为 n，则其对最长回文字符串贡献的字符长度为 4n，我们将 res 加上对应值；</p><p>word=rev，此时可以构成的对数为 ⌊m/2⌋，即对最长回文字符串贡献的字符长度为 4⌊m/2⌋，我们同样将 res 加上对应值。除此以外，我们还需要判断 word 的出现次数 m 是否为奇数：</p><p>如果 m 为奇数，则存在可以作为中心单词的剩余回文单词，我们将 mid 置为 true；</p><p>如果 m 为偶数，则不存在可以作为中心单词的剩余回文单词，我们不改变 mid 的取值。</p><p>最后，我们根据 mid 的取值，判断最长回文串是否含有中心单词。如果 mid 为 true，则代表含有，我们将 res 加上 2；反之则没有，我们不进行任何操作。</p><p>最后，我们返回 res 作为最长回文串的长度。</p><p>细节</p><p>在遍历哈希表中的每个单词时，为了避免重复计算成对选择的单词，我们只在 word 的字典序大于等于 rev 时更新 res。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestPalindrome</span>(<span class="params">self, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        freq = Counter(words)   <span class="comment"># 单词出现次数</span></span><br><span class="line">        res = <span class="number">0</span>   <span class="comment"># 最长回文串长度</span></span><br><span class="line">        mid = <span class="literal">False</span>   <span class="comment"># 是否含有中心单词</span></span><br><span class="line">        <span class="keyword">for</span> word, cnt <span class="keyword">in</span> freq.items():</span><br><span class="line">            <span class="comment"># 遍历出现的单词，并更新长度</span></span><br><span class="line">            rev = word[<span class="number">1</span>] + word[<span class="number">0</span>]   <span class="comment"># 反转后的单词</span></span><br><span class="line">            <span class="keyword">if</span> word == rev:</span><br><span class="line">                <span class="keyword">if</span> cnt % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                    mid = <span class="literal">True</span></span><br><span class="line">                res += <span class="number">2</span> * (cnt // <span class="number">2</span> * <span class="number">2</span>)</span><br><span class="line">            <span class="keyword">elif</span> word &gt; rev:   <span class="comment"># 避免重复遍历</span></span><br><span class="line">                res += <span class="number">4</span> * <span class="built_in">min</span>(freq[word], freq[rev])</span><br><span class="line">        <span class="keyword">if</span> mid:</span><br><span class="line">            <span class="comment"># 含有中心单词，更新长度</span></span><br><span class="line">            res += <span class="number">2</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;2131-Longest-Palindrome-by-Concatenating-Two-Letter-Words-medium&quot;&gt;&lt;a href=&quot;#2131-Longest-Palindrome-by-Concatenating-Two-Letter-Word</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
-    
-    <category term="greedy" scheme="http://example.com/tags/greedy/"/>
     
   </entry>
   
