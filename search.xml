@@ -4,6 +4,99 @@
   
     
     <entry>
+      <title>541. Reverse String II(easy)</title>
+      <link href="/2022/11/21/541/"/>
+      <url>/2022/11/21/541/</url>
+      
+        <content type="html"><![CDATA[<h1 id="541-Reverse-String-II-easy"><a href="#541-Reverse-String-II-easy" class="headerlink" title="541. Reverse String II(easy)"></a>541. Reverse String II(easy)</h1><h2 id="Given-a-string-s-and-an-integer-k-reverse-the-first-k-characters-for-every-2k-characters-counting-from-the-start-of-the-string"><a href="#Given-a-string-s-and-an-integer-k-reverse-the-first-k-characters-for-every-2k-characters-counting-from-the-start-of-the-string" class="headerlink" title="Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string."></a>Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string.</h2><h2 id="If-there-are-fewer-than-k-characters-left-reverse-all-of-them-If-there-are-less-than-2k-but-greater-than-or-equal-to-k-characters-then-reverse-the-first-k-characters-and-leave-the-other-as-original"><a href="#If-there-are-fewer-than-k-characters-left-reverse-all-of-them-If-there-are-less-than-2k-but-greater-than-or-equal-to-k-characters-then-reverse-the-first-k-characters-and-leave-the-other-as-original" class="headerlink" title="If there are fewer than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and leave the other as original."></a>If there are fewer than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and leave the other as original.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;abcdefg&quot;, k = 2</span><br><span class="line">Output: &quot;bacdfeg&quot;</span><br></pre></td></tr></table></figure><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/reverse-string-ii/solution/fan-zhuan-zi-fu-chuan-ii-by-leetcode-sol-ua7s/">官方题解</a></h3><p>官方题解太简单了，思路非常简单，就是i到i+k的字母翻转就可以</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseStr</span>(<span class="params">self, s: <span class="built_in">str</span>, k: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        t = <span class="built_in">list</span>(s)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(t), <span class="number">2</span> * k):</span><br><span class="line">            t[i: i + k] = <span class="built_in">reversed</span>(t[i: i + k])</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(t)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> string </tag>
+            
+            <tag> list </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>557. Reverse Words in a String III(easy)</title>
+      <link href="/2022/11/21/557/"/>
+      <url>/2022/11/21/557/</url>
+      
+        <content type="html"><![CDATA[<h1 id="557-Reverse-Words-in-a-String-III-easy"><a href="#557-Reverse-Words-in-a-String-III-easy" class="headerlink" title="557. Reverse Words in a String III(easy)"></a>557. Reverse Words in a String III(easy)</h1><h2 id="Given-a-string-s-reverse-the-order-of-characters-in-each-word-within-a-sentence-while-still-preserving-whitespace-and-initial-word-order"><a href="#Given-a-string-s-reverse-the-order-of-characters-in-each-word-within-a-sentence-while-still-preserving-whitespace-and-initial-word-order" class="headerlink" title="Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order."></a>Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;Let&#x27;s take LeetCode contest&quot;</span><br><span class="line">Output: &quot;s&#x27;teL ekat edoCteeL tsetnoc&quot;</span><br></pre></td></tr></table></figure><p>题目本身倒不难，就是输出的字符串形式相对麻烦</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseWords</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        s=<span class="built_in">list</span>(s.split())</span><br><span class="line">        res=[]</span><br><span class="line">        ans=[]</span><br><span class="line">        stack=[]</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> c:</span><br><span class="line">                stack.append(i)</span><br><span class="line">            <span class="keyword">for</span> _ <span class="keyword">in</span> c:</span><br><span class="line">                res.append(stack.pop())</span><br><span class="line">            ans.append(<span class="string">&quot;&quot;</span>.join(res))</span><br><span class="line">            stack=[]</span><br><span class="line">            res=[]</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot; &quot;</span>.join(ans)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> string </tag>
+            
+            <tag> stack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>696. Count Binary Substrings(easy)</title>
+      <link href="/2022/11/21/696/"/>
+      <url>/2022/11/21/696/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Given-a-binary-string-s-return-the-number-of-non-empty-substrings-that-have-the-same-number-of-0’s-and-1’s-and-all-the-0’s-and-all-the-1’s-in-these-substrings-are-grouped-consecutively"><a href="#Given-a-binary-string-s-return-the-number-of-non-empty-substrings-that-have-the-same-number-of-0’s-and-1’s-and-all-the-0’s-and-all-the-1’s-in-these-substrings-are-grouped-consecutively" class="headerlink" title="Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively."></a>Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively.</h2><h2 id="Substrings-that-occur-multiple-times-are-counted-the-number-of-times-they-occur"><a href="#Substrings-that-occur-multiple-times-are-counted-the-number-of-times-they-occur" class="headerlink" title="Substrings that occur multiple times are counted the number of times they occur."></a>Substrings that occur multiple times are counted the number of times they occur.</h2><h2 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/count-binary-substrings/solution/ji-shu-er-jin-zhi-zi-chuan-by-leetcode-solution/">官方题解</a></h2><p>看到该题的第一反应是位运算，但是没有想好该怎么解。但其实根本没有那么复杂：<br>我们可以将字符串 s 按照 0 和 1 的连续段分组，存在 counts 数组中，例如 s = 00111011，可以得到这样的 counts 数组：counts={2,3,1,2}。</p><p>这里 counts 数组中两个相邻的数一定代表的是两种不同的字符。假设 counts 数组中两个相邻的数字为 u 或者 v，它们对应着 u 个 0 和 v 个 1，或者 u 个 1 和 v 个 0。它们能组成的满足条件的子串数目为 min{u,v}，即一对相邻的数字对答案的贡献。</p><p>我们只要遍历所有相邻的数对，求它们的贡献总和，即可得到答案。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countBinarySubstrings</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line"></span><br><span class="line">        n=<span class="built_in">len</span>(s)</span><br><span class="line">        last=<span class="number">0</span></span><br><span class="line">        ans=<span class="number">0</span></span><br><span class="line">        i=<span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> i &lt;n:</span><br><span class="line">            c=s[i]</span><br><span class="line">            count=<span class="number">0</span></span><br><span class="line">            <span class="keyword">while</span> i&lt;n <span class="keyword">and</span> s[i]==c:</span><br><span class="line">                i+=<span class="number">1</span></span><br><span class="line">                count+=<span class="number">1</span></span><br><span class="line">            ans +=<span class="built_in">min</span>(count,last)</span><br><span class="line">            last=count</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> string </tag>
+            
+            <tag> array </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>599. Minimum Index Sum of Two Lists(easy)</title>
       <link href="/2022/11/21/599/"/>
       <url>/2022/11/21/599/</url>
@@ -37,7 +130,7 @@
       <link href="/2022/11/21/917/"/>
       <url>/2022/11/21/917/</url>
       
-        <content type="html"><![CDATA[<h1 id="917-Reverse-Only-Letters-easy"><a href="#917-Reverse-Only-Letters-easy" class="headerlink" title="917. Reverse Only Letters(easy)"></a>917. Reverse Only Letters(easy)</h1><h2 id="Given-a-string-s-reverse-the-string-according-to-the-following-rules"><a href="#Given-a-string-s-reverse-the-string-according-to-the-following-rules" class="headerlink" title="Given a string s, reverse the string according to the following rules:"></a>Given a string s, reverse the string according to the following rules:</h2><h2 id="All-the-characters-that-are-not-English-letters-remain-in-the-same-position"><a href="#All-the-characters-that-are-not-English-letters-remain-in-the-same-position" class="headerlink" title="All the characters that are not English letters remain in the same position."></a>All the characters that are not English letters remain in the same position.</h2><h2 id="All-the-English-letters-lowercase-or-uppercase-should-be-reversed"><a href="#All-the-English-letters-lowercase-or-uppercase-should-be-reversed" class="headerlink" title="All the English letters (lowercase or uppercase) should be reversed."></a>All the English letters (lowercase or uppercase) should be reversed.</h2><h2 id="Return-s-after-reversing-it"><a href="#Return-s-after-reversing-it" class="headerlink" title="Return s after reversing it."></a>Return s after reversing it.</h2><p>stack用在这里正好，字母存进栈，等识别到符号就放符号，不是符号就pop</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseOnlyLetters</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        letters=[c <span class="keyword">for</span> c <span class="keyword">in</span> s <span class="keyword">if</span> c.isalpha()]</span><br><span class="line">        ans=[]</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> c.isalpha():</span><br><span class="line">                ans.append(letters.pop())</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ans.append(c)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(ans)</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="917-Reverse-Only-Letters-easy"><a href="#917-Reverse-Only-Letters-easy" class="headerlink" title="917. Reverse Only Letters(easy)"></a>917. Reverse Only Letters(easy)</h1><h2 id="Given-a-string-s-reverse-the-string-according-to-the-following-rules"><a href="#Given-a-string-s-reverse-the-string-according-to-the-following-rules" class="headerlink" title="Given a string s, reverse the string according to the following rules:"></a>Given a string s, reverse the string according to the following rules:</h2><h2 id="All-the-characters-that-are-not-English-letters-remain-in-the-same-position"><a href="#All-the-characters-that-are-not-English-letters-remain-in-the-same-position" class="headerlink" title="All the characters that are not English letters remain in the same position."></a>All the characters that are not English letters remain in the same position.</h2><h2 id="All-the-English-letters-lowercase-or-uppercase-should-be-reversed"><a href="#All-the-English-letters-lowercase-or-uppercase-should-be-reversed" class="headerlink" title="All the English letters (lowercase or uppercase) should be reversed."></a>All the English letters (lowercase or uppercase) should be reversed.</h2><h2 id="Return-s-after-reversing-it"><a href="#Return-s-after-reversing-it" class="headerlink" title="Return s after reversing it."></a>Return s after reversing it.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;ab-cd&quot;</span><br><span class="line">Output: &quot;dc-ba&quot;</span><br></pre></td></tr></table></figure><p>stack用在这里正好，字母存进栈，等识别到符号就放符号，不是符号就pop</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseOnlyLetters</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        letters=[c <span class="keyword">for</span> c <span class="keyword">in</span> s <span class="keyword">if</span> c.isalpha()]</span><br><span class="line">        ans=[]</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> c.isalpha():</span><br><span class="line">                ans.append(letters.pop())</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ans.append(c)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(ans)</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
