@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-21T21:56:23.824Z</updated>
+  <updated>2022-11-27T20:05:35.621Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,272 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2486</title>
+    <link href="http://example.com/2022/11/27/2486/"/>
+    <id>http://example.com/2022/11/27/2486/</id>
+    <published>2022-11-27T20:05:03.000Z</published>
+    <updated>2022-11-27T20:05:35.621Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">appendCharacters</span>(<span class="params">self, s: <span class="built_in">str</span>, t: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        count=<span class="number">0</span></span><br><span class="line">        i=j=<span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> i&lt;<span class="built_in">len</span>(s) <span class="keyword">and</span> j&lt;<span class="built_in">len</span>(t):</span><br><span class="line">            <span class="keyword">if</span> s[i]==t[j]:</span><br><span class="line">                j+=<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                j+=<span class="number">0</span></span><br><span class="line">            i+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(t)-j</span><br><span class="line"></span><br><span class="line">              </span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="string" scheme="http://example.com/tags/string/"/>
+    
+    <category term="two-pointers" scheme="http://example.com/tags/two-pointers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2485. Find the Pivot Integer(easy)</title>
+    <link href="http://example.com/2022/11/27/2485/"/>
+    <id>http://example.com/2022/11/27/2485/</id>
+    <published>2022-11-27T19:59:09.000Z</published>
+    <updated>2022-11-27T20:00:32.599Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2485-Find-the-Pivot-Integer-easy"><a href="#2485-Find-the-Pivot-Integer-easy" class="headerlink" title="2485. Find the Pivot Integer(easy)"></a>2485. Find the Pivot Integer(easy)</h1><h2 id="Given-a-positive-integer-n-find-the-pivot-integer-x-such-that"><a href="#Given-a-positive-integer-n-find-the-pivot-integer-x-such-that" class="headerlink" title="Given a positive integer n, find the pivot integer x such that:"></a>Given a positive integer n, find the pivot integer x such that:</h2><h2 id="sum-of-all-elements-between-1-and-x-inclusively-equals-the-sum-of-all-elements-between-x-and-n-inclusively"><a href="#sum-of-all-elements-between-1-and-x-inclusively-equals-the-sum-of-all-elements-between-x-and-n-inclusively" class="headerlink" title="sum of all elements between 1 and x inclusively equals the sum of all elements between x and n inclusively."></a>sum of all elements between 1 and x inclusively equals the sum of all elements between x and n inclusively.</h2><h2 id="Return-the-pivot-integer-x-If-no-such-integer-exists-return-1-It-is-guaranteed-that-there-will-be-at-most-one-pivot-index-for-the-given-input"><a href="#Return-the-pivot-integer-x-If-no-such-integer-exists-return-1-It-is-guaranteed-that-there-will-be-at-most-one-pivot-index-for-the-given-input" class="headerlink" title="Return the pivot integer x. If no such integer exists, return -1. It is guaranteed that there will be at most one pivot index for the given input."></a>Return the pivot integer x. If no such integer exists, return -1. It is guaranteed that there will be at most one pivot index for the given input.</h2><p>这就是个数学题</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pivotInteger</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        num=(<span class="built_in">pow</span>(n,<span class="number">2</span>)+n)/<span class="number">2</span></span><br><span class="line">        num1=sqrt(num)</span><br><span class="line">        <span class="keyword">if</span> num1%<span class="number">1</span>==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">int</span>(num1)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2485-Find-the-Pivot-Integer-easy&quot;&gt;&lt;a href=&quot;#2485-Find-the-Pivot-Integer-easy&quot; class=&quot;headerlink&quot; title=&quot;2485. Find the Pivot Integer</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="maths" scheme="http://example.com/tags/maths/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>781. Rabbits in Forest(medium)</title>
+    <link href="http://example.com/2022/11/25/781/"/>
+    <id>http://example.com/2022/11/25/781/</id>
+    <published>2022-11-26T03:19:00.000Z</published>
+    <updated>2022-11-26T03:19:41.015Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numRabbits</span>(<span class="params">self, answers: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        hashmap=Counter(answers)</span><br><span class="line">        res=<span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> hashmap:</span><br><span class="line">           </span><br><span class="line">            res +=(x + hashmap[x]) // (x + <span class="number">1</span>) * (x + <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="dfs" scheme="http://example.com/tags/dfs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>200. Number of Islands(medium)</title>
+    <link href="http://example.com/2022/11/25/200/"/>
+    <id>http://example.com/2022/11/25/200/</id>
+    <published>2022-11-26T02:23:09.000Z</published>
+    <updated>2022-11-26T02:39:06.120Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="200-Number-of-Islands-medium"><a href="#200-Number-of-Islands-medium" class="headerlink" title="200. Number of Islands(medium)"></a>200. Number of Islands(medium)</h1><h2 id="Given-an-m-x-n-2D-binary-grid-grid-which-represents-a-map-of-‘1’s-land-and-‘0’s-water-return-the-number-of-islands"><a href="#Given-an-m-x-n-2D-binary-grid-grid-which-represents-a-map-of-‘1’s-land-and-‘0’s-water-return-the-number-of-islands" class="headerlink" title="Given an m x n 2D binary grid grid which represents a map of ‘1’s (land) and ‘0’s (water), return the number of islands."></a>Given an m x n 2D binary grid grid which represents a map of ‘1’s (land) and ‘0’s (water), return the number of islands.</h2><h2 id="An-island-is-surrounded-by-water-and-is-formed-by-connecting-adjacent-lands-horizontally-or-vertically-You-may-assume-all-four-edges-of-the-grid-are-all-surrounded-by-water"><a href="#An-island-is-surrounded-by-water-and-is-formed-by-connecting-adjacent-lands-horizontally-or-vertically-You-may-assume-all-four-edges-of-the-grid-are-all-surrounded-by-water" class="headerlink" title="An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water."></a>An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: grid = [</span><br><span class="line">  [&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;],</span><br><span class="line">  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;],</span><br><span class="line">  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],</span><br><span class="line">  [&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;]</span><br><span class="line">]</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure><h3 id="岛屿系列"><a href="#岛屿系列" class="headerlink" title="岛屿系列"></a><a href="https://labuladong.github.io/algo/4/31/107/">岛屿系列</a></h3><ol start="1020"><li>Number of Enclaves    1020. 飞地的数量    </li><li>Number of Closed Islands    1254. 统计封闭岛屿的数目    </li><li>Count Sub Islands    1905. 统计子岛屿    </li><li>Number of Islands    200. 岛屿数量    </li><li>Number of Distinct Islands🔒    694. 不同岛屿的数量🔒    </li><li>Max Area of Island    695. 岛屿的最大面积</li></ol><p>岛屿系列题目的核心考点就是用 DFS/BFS 算法遍历二维数组。</p><p>那么如何在二维矩阵中使用 DFS 搜索呢？如果把二维矩阵中的每一个位置看做一个节点，这个节点的上下左右四个位置就是相邻节点，那么整个矩阵就可以抽象成一幅网状的「图」结构。</p><p>根据 学习数据结构和算法的框架思维，完全可以根据二叉树的遍历框架改写出二维矩阵的 DFS 代码框架：<br>Java 版本</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 二叉树遍历框架</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">traverse</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    traverse(root.left);</span><br><span class="line">    traverse(root.right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 二维矩阵遍历框架</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span>[][] grid, <span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">boolean</span>[][] visited)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> m = grid.length, n = grid[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">if</span> (i &lt; <span class="number">0</span> || j &lt; <span class="number">0</span> || i &gt;= m || j &gt;= n) &#123;</span><br><span class="line">        <span class="comment">// 超出索引边界</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (visited[i][j]) &#123;</span><br><span class="line">        <span class="comment">// 已遍历过 (i, j)</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 进入节点 (i, j)</span></span><br><span class="line">    visited[i][j] = <span class="keyword">true</span>;</span><br><span class="line">    dfs(grid, i - <span class="number">1</span>, j, visited); <span class="comment">// 上</span></span><br><span class="line">    dfs(grid, i + <span class="number">1</span>, j, visited); <span class="comment">// 下</span></span><br><span class="line">    dfs(grid, i, j - <span class="number">1</span>, visited); <span class="comment">// 左</span></span><br><span class="line">    dfs(grid, i, j + <span class="number">1</span>, visited); <span class="comment">// 右</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>python 版本</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dfs</span>(<span class="params">grid,i,j</span>):</span></span><br><span class="line">            m=<span class="built_in">len</span>(grid)</span><br><span class="line">            n=<span class="built_in">len</span>(grid[<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">if</span> i&lt;<span class="number">0</span> <span class="keyword">or</span> j&lt;<span class="number">0</span> <span class="keyword">or</span> i&gt;=m <span class="keyword">or</span> j&gt;=n:</span><br><span class="line">                <span class="keyword">return</span> </span><br><span class="line">            <span class="keyword">if</span> grid[i][j]==<span class="string">&#x27;0&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> </span><br><span class="line">            grid[i][j]=<span class="string">&#x27;0&#x27;</span></span><br><span class="line">            dfs(grid,i+<span class="number">1</span>,j)</span><br><span class="line">            dfs(grid,i,j+<span class="number">1</span>)</span><br><span class="line">            dfs(grid,i-<span class="number">1</span>,j)</span><br><span class="line">            dfs(grid,i,j-<span class="number">1</span>)</span><br></pre></td></tr></table></figure><p>代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numIslands</span>(<span class="params">self, grid: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">str</span>]]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="comment"># 从 (i, j) 开始，将与之相邻的陆地都变成海水</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">dfs</span>(<span class="params">grid,i,j</span>):</span></span><br><span class="line">            m=<span class="built_in">len</span>(grid)</span><br><span class="line">            n=<span class="built_in">len</span>(grid[<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">if</span> i&lt;<span class="number">0</span> <span class="keyword">or</span> j&lt;<span class="number">0</span> <span class="keyword">or</span> i&gt;=m <span class="keyword">or</span> j&gt;=n:</span><br><span class="line">                <span class="comment"># 超出索引边界</span></span><br><span class="line">                <span class="keyword">return</span> </span><br><span class="line">            <span class="keyword">if</span> grid[i][j]==<span class="string">&#x27;0&#x27;</span>:</span><br><span class="line">                <span class="comment"># 已经是海水了</span></span><br><span class="line">                <span class="keyword">return</span> </span><br><span class="line">            <span class="comment"># 将 (i, j) 变成海水,这里的上下左右顺序不影响结果</span></span><br><span class="line">            grid[i][j]=<span class="string">&#x27;0&#x27;</span></span><br><span class="line">            dfs(grid,i+<span class="number">1</span>,j)</span><br><span class="line">            dfs(grid,i,j+<span class="number">1</span>)</span><br><span class="line">            dfs(grid,i-<span class="number">1</span>,j)</span><br><span class="line">            dfs(grid,i,j-<span class="number">1</span>)</span><br><span class="line">        </span><br><span class="line">        res=<span class="number">0</span></span><br><span class="line">        m=<span class="built_in">len</span>(grid)</span><br><span class="line">        n=<span class="built_in">len</span>(grid[<span class="number">0</span>])</span><br><span class="line">        <span class="comment"># 遍历 grid</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">                <span class="keyword">if</span> grid[i][j]==<span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">                    <span class="comment"># 每发现一个岛屿，岛屿数量加一</span></span><br><span class="line">                    res+=<span class="number">1</span></span><br><span class="line">                    <span class="comment"># 然后使用 DFS 将岛屿淹了</span></span><br><span class="line">                    dfs(grid,i,j)</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;200-Number-of-Islands-medium&quot;&gt;&lt;a href=&quot;#200-Number-of-Islands-medium&quot; class=&quot;headerlink&quot; title=&quot;200. Number of Islands(medium)&quot;&gt;&lt;/a&gt;</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="dfs" scheme="http://example.com/tags/dfs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1190. Reverse Substrings Between Each Pair of Parentheses(medium)</title>
+    <link href="http://example.com/2022/11/25/1190/"/>
+    <id>http://example.com/2022/11/25/1190/</id>
+    <published>2022-11-26T01:28:00.000Z</published>
+    <updated>2022-11-26T01:46:09.959Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1190-Reverse-Substrings-Between-Each-Pair-of-Parentheses-medium"><a href="#1190-Reverse-Substrings-Between-Each-Pair-of-Parentheses-medium" class="headerlink" title="1190. Reverse Substrings Between Each Pair of Parentheses(medium)"></a>1190. Reverse Substrings Between Each Pair of Parentheses(medium)</h1><h2 id="You-are-given-a-string-s-that-consists-of-lower-case-English-letters-and-brackets"><a href="#You-are-given-a-string-s-that-consists-of-lower-case-English-letters-and-brackets" class="headerlink" title="You are given a string s that consists of lower case English letters and brackets."></a>You are given a string s that consists of lower case English letters and brackets.</h2><h2 id="Reverse-the-strings-in-each-pair-of-matching-parentheses-starting-from-the-innermost-one"><a href="#Reverse-the-strings-in-each-pair-of-matching-parentheses-starting-from-the-innermost-one" class="headerlink" title="Reverse the strings in each pair of matching parentheses, starting from the innermost one."></a>Reverse the strings in each pair of matching parentheses, starting from the innermost one.</h2><h2 id="Your-result-should-not-contain-any-brackets"><a href="#Your-result-should-not-contain-any-brackets" class="headerlink" title="Your result should not contain any brackets."></a>Your result should not contain any brackets.</h2><p>一道复杂版的栈题目，在遇到多括号的情况下，需要另外设置一个字符串res去存储当前括号反转后的字符串，再存回stack<br>然后再从stack pop出下一个括号的反转字符串，存储以后再赋给stack，最后，返回stack</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseParentheses</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        stack=[]</span><br><span class="line">        n=<span class="built_in">len</span>(s)</span><br><span class="line">        <span class="keyword">for</span> char <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> char !=<span class="string">&quot;)&quot;</span>:</span><br><span class="line">                stack.append(char)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                result=<span class="string">&quot;&quot;</span></span><br><span class="line">                current=stack.pop()</span><br><span class="line">                <span class="keyword">while</span> current!=<span class="string">&quot;(&quot;</span>:</span><br><span class="line">                    result+=current</span><br><span class="line">                    current=stack.pop()</span><br><span class="line">                <span class="keyword">for</span> char <span class="keyword">in</span> result:</span><br><span class="line">                    stack.append(char)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(stack)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1190-Reverse-Substrings-Between-Each-Pair-of-Parentheses-medium&quot;&gt;&lt;a href=&quot;#1190-Reverse-Substrings-Between-Each-Pair-of-Parentheses-</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="stack" scheme="http://example.com/tags/stack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1010. Pairs of Songs With Total Durations Divisible by 60(medium)</title>
+    <link href="http://example.com/2022/11/23/1010/"/>
+    <id>http://example.com/2022/11/23/1010/</id>
+    <published>2022-11-24T00:03:06.000Z</published>
+    <updated>2022-11-24T00:11:39.475Z</updated>
+    
+    <content type="html"><![CDATA[<p>You are given a list of songs where the ith song has a duration of time[i] seconds.</p><p>Return the number of pairs of songs for which their total duration in seconds is divisible by 60. Formally, we want the number of indices i, j such that i &lt; j with (time[i] + time[j]) % 60 == 0.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: time = [30,20,150,100,40]</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: Three pairs have a total duration divisible by 60:</span><br><span class="line">(time[0] = 30, time[2] = 150): total duration 180</span><br><span class="line">(time[1] = 20, time[3] = 100): total duration 120</span><br><span class="line">(time[1] = 20, time[4] = 40): total duration 60</span><br></pre></td></tr></table></figure><p>其实就是2sum的升级版，要求在一组数中找到和是60的倍数的两个数<br>一开始用的2sum加hashmap的思路，但发现非常麻烦<br>后来看到<a href="https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/solutions/">题解</a>发现了数学方法：</p><p>Intuition<br>Calculate the time % 60 then it will be exactly same as two sum problem.</p><p>Explanation<br>t % 60 gets the remainder from 0 to 59.<br>We count the occurrence of each remainders in a array/hashmap c.</p><p>we want to know that, for each t,<br>how many x satisfy (t + x) % 60 = 0.</p><p>The straight forward idea is to take x % 60 = 60 - t % 60,<br>which is valid for the most cases.<br>But if t % 60 = 0, x % 60 = 0 instead of 60.</p><p>One solution is to use x % 60 = (60 - t % 60) % 60,<br>the other idea is to use x % 60 = (600 - t) % 60.<br>Not sure which one is more straight forward.</p><h4 id="这个问题的关键公式："><a href="#这个问题的关键公式：" class="headerlink" title="这个问题的关键公式："></a>这个问题的关键公式：</h4><p>假设两个数x和y的和是60的倍数则有 (x+y)%60==0<br>所以</p><h4 id="x-60-y-60-60或者x-60-y-60-0"><a href="#x-60-y-60-60或者x-60-y-60-0" class="headerlink" title="x%60+y%60==60或者x%60+y%60==0"></a>x%60+y%60==60或者x%60+y%60==0</h4><p>不得不说我从来没有想过求余的公式的展开<br>可以转换成 x % 60 = (60 - t % 60) % 60</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numPairsDivisibleBy60</span>(<span class="params">self, time</span>):</span></span><br><span class="line">        c = [<span class="number">0</span>] * <span class="number">60</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> t <span class="keyword">in</span> time:</span><br><span class="line">            res += c[-t % <span class="number">60</span>]</span><br><span class="line">            c[t % <span class="number">60</span>] += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;You are given a list of songs where the ith song has a duration of time[i] seconds.&lt;/p&gt;
+&lt;p&gt;Return the number of pairs of songs for which </summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>45. Jump Game II(medium)</title>
+    <link href="http://example.com/2022/11/22/45/"/>
+    <id>http://example.com/2022/11/22/45/</id>
+    <published>2022-11-23T03:36:19.000Z</published>
+    <updated>2022-11-23T03:38:38.746Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="45-Jump-Game-II-medium"><a href="#45-Jump-Game-II-medium" class="headerlink" title="45. Jump Game II(medium)"></a>45. Jump Game II(medium)</h1><h2 id="You-are-given-a-0-indexed-array-of-integers-nums-of-length-n-You-are-initially-positioned-at-nums-0"><a href="#You-are-given-a-0-indexed-array-of-integers-nums-of-length-n-You-are-initially-positioned-at-nums-0" class="headerlink" title="You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0]."></a>You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0].</h2><h2 id="Each-element-nums-i-represents-the-maximum-length-of-a-forward-jump-from-index-i-In-other-words-if-you-are-at-nums-i-you-can-jump-to-any-nums-i-j-where"><a href="#Each-element-nums-i-represents-the-maximum-length-of-a-forward-jump-from-index-i-In-other-words-if-you-are-at-nums-i-you-can-jump-to-any-nums-i-j-where" class="headerlink" title="Each element nums[i] represents the maximum length of a forward jump from index i. In other words, if you are at nums[i], you can jump to any nums[i + j] where:"></a>Each element nums[i] represents the maximum length of a forward jump from index i. In other words, if you are at nums[i], you can jump to any nums[i + j] where:</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0 &lt;= j &lt;= nums[i] and</span><br><span class="line">i + j &lt; n</span><br></pre></td></tr></table></figure><h2 id="Return-the-minimum-number-of-jumps-to-reach-nums-n-1-The-test-cases-are-generated-such-that-you-can-reach-nums-n-1"><a href="#Return-the-minimum-number-of-jumps-to-reach-nums-n-1-The-test-cases-are-generated-such-that-you-can-reach-nums-n-1" class="headerlink" title="Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach nums[n - 1]."></a>Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach nums[n - 1].</h2><p>用贪心的思想来做这道题会更节省时间<br>[3,1,4,2……]<br>比如这个例子，我们站在索引 0 的位置，可以向前跳 1，2 或 3 步</p><p>最佳的选择显然应该跳 2 步调到索引 2，因为 nums[2] 的可跳跃区域涵盖了索引区间 [3..6]，比其他的都大。</p><p>这就是思路，我们用 i 和 end 标记了可以选择的跳跃步数，farthest 标记了所有选择 [i..end] 中能够跳到的最远距离，jumps 记录跳跃次数。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">jump</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        n=<span class="built_in">len</span>(nums)</span><br><span class="line">        jumps=<span class="number">0</span></span><br><span class="line">        farthest=<span class="number">0</span></span><br><span class="line">        end=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">1</span>):</span><br><span class="line">            farthest=<span class="built_in">max</span>(nums[i]+i,farthest)</span><br><span class="line">            <span class="keyword">if</span> end==i:</span><br><span class="line">                jumps+=<span class="number">1</span></span><br><span class="line">                end=farthest</span><br><span class="line">        <span class="keyword">return</span> jumps</span><br><span class="line">        </span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;45-Jump-Game-II-medium&quot;&gt;&lt;a href=&quot;#45-Jump-Game-II-medium&quot; class=&quot;headerlink&quot; title=&quot;45. Jump Game II(medium)&quot;&gt;&lt;/a&gt;45. Jump Game II(m</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
+    
+    <category term="Greedy" scheme="http://example.com/tags/Greedy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>22. Generate Parentheses(medium)</title>
+    <link href="http://example.com/2022/11/22/22/"/>
+    <id>http://example.com/2022/11/22/22/</id>
+    <published>2022-11-22T21:13:39.000Z</published>
+    <updated>2022-11-22T21:14:43.673Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">generateParenthesis</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">str</span>]:</span></span><br><span class="line">        ans=[]</span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">backtrack</span>(<span class="params">S,left,right</span>):</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(S)==<span class="number">2</span>*n:</span><br><span class="line">                ans.append(<span class="string">&#x27;&#x27;</span>.join(S))</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            <span class="keyword">if</span> left&lt;n:</span><br><span class="line">                S.append(<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">                backtrack(S,left+<span class="number">1</span>,right)</span><br><span class="line">                S.pop()</span><br><span class="line">            <span class="keyword">if</span> right&lt;left:</span><br><span class="line">                S.append(<span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">                backtrack(S,left,right+<span class="number">1</span>)</span><br><span class="line">                S.pop()</span><br><span class="line">        backtrack([],<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
+    
+    <category term="backtracking" scheme="http://example.com/tags/backtracking/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>279. Perfect Squares(medium)</title>
+    <link href="http://example.com/2022/11/22/279/"/>
+    <id>http://example.com/2022/11/22/279/</id>
+    <published>2022-11-22T20:49:44.000Z</published>
+    <updated>2022-11-22T21:14:52.835Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="279-Perfect-Squares-medium"><a href="#279-Perfect-Squares-medium" class="headerlink" title="279. Perfect Squares(medium)"></a>279. Perfect Squares(medium)</h1><h2 id="Given-an-integer-n-return-the-least-number-of-perfect-square-numbers-that-sum-to-n"><a href="#Given-an-integer-n-return-the-least-number-of-perfect-square-numbers-that-sum-to-n" class="headerlink" title="Given an integer n, return the least number of perfect square numbers that sum to n."></a>Given an integer n, return the least number of perfect square numbers that sum to n.</h2><h2 id="A-perfect-square-is-an-integer-that-is-the-square-of-an-integer-in-other-words-it-is-the-product-of-some-integer-with-itself-For-example-1-4-9-and-16-are-perfect-squares-while-3-and-11-are-not"><a href="#A-perfect-square-is-an-integer-that-is-the-square-of-an-integer-in-other-words-it-is-the-product-of-some-integer-with-itself-For-example-1-4-9-and-16-are-perfect-squares-while-3-and-11-are-not" class="headerlink" title="A perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not."></a>A perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 12</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: 12 = 4 + 4 + 4.</span><br></pre></td></tr></table></figure><h2 id="leetcode题解"><a href="#leetcode题解" class="headerlink" title="leetcode题解"></a><a href="https://leetcode.cn/problems/perfect-squares/solution/dong-tai-gui-hua-bfs-zhu-xing-jie-shi-python3-by-2/">leetcode题解</a></h2><h4 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numSquares</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        dp=[i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n+<span class="number">1</span>)]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">int</span>(i**(<span class="number">0.5</span>))+<span class="number">1</span>):</span><br><span class="line">                dp[i]=<span class="built_in">min</span>(dp[i],dp[i-j*j]+<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> dp[-<span class="number">1</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="BFS方法"><a href="#BFS方法" class="headerlink" title="BFS方法"></a><a href="https://leetcode.cn/problems/perfect-squares/solution/python3zui-ji-chu-de-bfstao-lu-dai-ma-gua-he-ru-me/">BFS方法</a></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">node</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,value,step=<span class="number">0</span></span>):</span></span><br><span class="line">        self.value = value</span><br><span class="line">        self.step = step</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;&lt;value:&#123;&#125;, step:&#123;&#125;&gt;&#x27;</span>.<span class="built_in">format</span>(self.value,self.step)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numSquares</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        queue = [node(n)]</span><br><span class="line">        visited = <span class="built_in">set</span>([node(n).value])</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> queue:</span><br><span class="line">            vertex = queue.pop(<span class="number">0</span>)</span><br><span class="line">            residuals = [vertex.value - n*n <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">int</span>(vertex.value**<span class="number">.5</span>)+<span class="number">1</span>)]</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> residuals:</span><br><span class="line">                new_vertex = node(i, vertex.step+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">if</span> i==<span class="number">0</span>:                   </span><br><span class="line">                    <span class="keyword">return</span> new_vertex.step</span><br><span class="line">                    </span><br><span class="line">                <span class="keyword">elif</span> i <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">                    queue.append(new_vertex)</span><br><span class="line">                    visited.add(i)</span><br><span class="line">                                        </span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;279-Perfect-Squares-medium&quot;&gt;&lt;a href=&quot;#279-Perfect-Squares-medium&quot; class=&quot;headerlink&quot; title=&quot;279. Perfect Squares(medium)&quot;&gt;&lt;/a&gt;279. P</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
+    
+    <category term="BFS" scheme="http://example.com/tags/BFS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>541. Reverse String II(easy)</title>
     <link href="http://example.com/2022/11/21/541/"/>
     <id>http://example.com/2022/11/21/541/</id>
     <published>2022-11-21T21:53:36.000Z</published>
-    <updated>2022-11-21T21:56:23.824Z</updated>
+    <updated>2022-11-22T00:28:24.271Z</updated>
     
     <content type="html"><![CDATA[<h1 id="541-Reverse-String-II-easy"><a href="#541-Reverse-String-II-easy" class="headerlink" title="541. Reverse String II(easy)"></a>541. Reverse String II(easy)</h1><h2 id="Given-a-string-s-and-an-integer-k-reverse-the-first-k-characters-for-every-2k-characters-counting-from-the-start-of-the-string"><a href="#Given-a-string-s-and-an-integer-k-reverse-the-first-k-characters-for-every-2k-characters-counting-from-the-start-of-the-string" class="headerlink" title="Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string."></a>Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string.</h2><h2 id="If-there-are-fewer-than-k-characters-left-reverse-all-of-them-If-there-are-less-than-2k-but-greater-than-or-equal-to-k-characters-then-reverse-the-first-k-characters-and-leave-the-other-as-original"><a href="#If-there-are-fewer-than-k-characters-left-reverse-all-of-them-If-there-are-less-than-2k-but-greater-than-or-equal-to-k-characters-then-reverse-the-first-k-characters-and-leave-the-other-as-original" class="headerlink" title="If there are fewer than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and leave the other as original."></a>If there are fewer than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and leave the other as original.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;abcdefg&quot;, k = 2</span><br><span class="line">Output: &quot;bacdfeg&quot;</span><br></pre></td></tr></table></figure><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/reverse-string-ii/solution/fan-zhuan-zi-fu-chuan-ii-by-leetcode-sol-ua7s/">官方题解</a></h3><p>官方题解太简单了，思路非常简单，就是i到i+k的字母翻转就可以</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseStr</span>(<span class="params">self, s: <span class="built_in">str</span>, k: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        t = <span class="built_in">list</span>(s)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(t), <span class="number">2</span> * k):</span><br><span class="line">            t[i: i + k] = <span class="built_in">reversed</span>(t[i: i + k])</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(t)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -329,262 +590,6 @@
     <category term="Python" scheme="http://example.com/tags/Python/"/>
     
     <category term="string" scheme="http://example.com/tags/string/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>300. Longest Increasing Subsequence(medium)</title>
-    <link href="http://example.com/2022/11/15/300/"/>
-    <id>http://example.com/2022/11/15/300/</id>
-    <published>2022-11-16T04:26:56.000Z</published>
-    <updated>2022-11-18T04:12:37.916Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="300-Longest-Increasing-Subsequence-medium"><a href="#300-Longest-Increasing-Subsequence-medium" class="headerlink" title="300. Longest Increasing Subsequence(medium)"></a>300. Longest Increasing Subsequence(medium)</h1><h2 id="Given-an-integer-array-nums-return-the-length-of-the-longest-strictly-increasing-subsequence"><a href="#Given-an-integer-array-nums-return-the-length-of-the-longest-strictly-increasing-subsequence" class="headerlink" title="Given an integer array nums, return the length of the longest strictly increasing subsequence."></a>Given an integer array nums, return the length of the longest strictly increasing subsequence.</h2><p>求最长严格递增子序列的长度。</p><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-by-leetcode-soluti/">官方题解</a></h3><h4 id="方法一：动态规划"><a href="#方法一：动态规划" class="headerlink" title="方法一：动态规划"></a>方法一：动态规划</h4><p>这个方法会超时</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLIS</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> nums:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        dp = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            dp.append(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i):</span><br><span class="line">                <span class="keyword">if</span> nums[i] &gt; nums[j]:</span><br><span class="line">                    dp[i] = <span class="built_in">max</span>(dp[i], dp[j] + <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(dp)</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="方法二：贪心-二分查找"><a href="#方法二：贪心-二分查找" class="headerlink" title="方法二：贪心 + 二分查找"></a>方法二：贪心 + 二分查找</h4><p>这道题的方法二，原题解写的不太容易理解，试着在这里再解释一遍：</p><p>无序列表最关键的一句在于： 数组 d[i]表示长度为 i 的最长上升子序列的末尾元素的最小值，即在数组 1,2,3,4,5,6中长度为3的上升子序列可以为 1,2,3也可以为 2,3,4等等但是d[3]=3，即子序列末尾元素最小为3。</p><p>无序列表解释清了数组d的含义之后，我们接着需要证明数组d具有单调性，即证明i&lt;j时，d[i]&lt;d[j]，使用反证法，假设存在k&lt;j时，d[k]&gt;d[j]，但在长度为j，末尾元素为d[j]的子序列A中，将后j-i个元素减掉，可以得到一个长度为i的子序列B，其末尾元素t1必然小于d[j]（因为在子序列A中，t1的位置上在d[j]的后面），而我们假设数组d必须符合表示长度为 i 的最长上升子序列的末尾元素的最小值，此时长度为i的子序列的末尾元素t1&lt;d[j]&lt;d[k]，即t1&lt;d[k]，所以d[k]不是最小的，与题设相矛盾，因此可以证明其单调性</p><p>无序列表证明单调性有两个好处：1.可以使用二分法；2.数组d的长度即为最长子序列的长度；</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;300-Longest-Increasing-Subsequence-medium&quot;&gt;&lt;a href=&quot;#300-Longest-Increasing-Subsequence-medium&quot; class=&quot;headerlink&quot; title=&quot;300. Longe</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
-    
-    <category term="binary search" scheme="http://example.com/tags/binary-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>501. Find Mode in Binary Search Tree(easy)</title>
-    <link href="http://example.com/2022/11/15/501/"/>
-    <id>http://example.com/2022/11/15/501/</id>
-    <published>2022-11-16T03:57:10.000Z</published>
-    <updated>2022-11-18T04:13:07.156Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="501-Find-Mode-in-Binary-Search-Tree-easy"><a href="#501-Find-Mode-in-Binary-Search-Tree-easy" class="headerlink" title="501. Find Mode in Binary Search Tree(easy)"></a>501. Find Mode in Binary Search Tree(easy)</h1><h2 id="Given-the-root-of-a-binary-search-tree-BST-with-duplicates-return-all-the-mode-s-i-e-the-most-frequently-occurred-element-in-it"><a href="#Given-the-root-of-a-binary-search-tree-BST-with-duplicates-return-all-the-mode-s-i-e-the-most-frequently-occurred-element-in-it" class="headerlink" title="Given the root of a binary search tree (BST) with duplicates, return all the mode(s) (i.e., the most frequently occurred element) in it."></a>Given the root of a binary search tree (BST) with duplicates, return all the mode(s) (i.e., the most frequently occurred element) in it.</h2><h2 id="If-the-tree-has-more-than-one-mode-return-them-in-any-order"><a href="#If-the-tree-has-more-than-one-mode-return-them-in-any-order" class="headerlink" title="If the tree has more than one mode, return them in any order."></a>If the tree has more than one mode, return them in any order.</h2><p>Assume a BST is defined as follows:</p><p>The left subtree of a node contains only nodes with keys less than or equal to the node’s key.<br>The right subtree of a node contains only nodes with keys greater than or equal to the node’s key.<br>Both the left and right subtrees must also be binary search trees.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMode</span>(<span class="params">self, root: <span class="type">Optional</span>[TreeNode]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        counter= defaultdict(<span class="built_in">int</span>)</span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">dfs</span>(<span class="params">root</span>):</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">                <span class="keyword">return</span> </span><br><span class="line">            counter[root.val]+=<span class="number">1</span></span><br><span class="line">            dfs(root.left)</span><br><span class="line">            dfs(root.right)</span><br><span class="line">        dfs(root)</span><br><span class="line">        max_val=<span class="built_in">max</span>(counter.values())</span><br><span class="line">        <span class="keyword">return</span> [i <span class="keyword">for</span> i <span class="keyword">in</span> counter <span class="keyword">if</span> counter[i]==max_val]</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;501-Find-Mode-in-Binary-Search-Tree-easy&quot;&gt;&lt;a href=&quot;#501-Find-Mode-in-Binary-Search-Tree-easy&quot; class=&quot;headerlink&quot; title=&quot;501. Find Mo</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="binary-tree" scheme="http://example.com/tags/binary-tree/"/>
-    
-    <category term="DFS" scheme="http://example.com/tags/DFS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>506. Relative Ranks(easy)</title>
-    <link href="http://example.com/2022/11/15/506/"/>
-    <id>http://example.com/2022/11/15/506/</id>
-    <published>2022-11-16T03:51:28.000Z</published>
-    <updated>2022-11-18T04:13:16.072Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="506-Relative-Ranks-easy"><a href="#506-Relative-Ranks-easy" class="headerlink" title="506. Relative Ranks(easy)"></a>506. Relative Ranks(easy)</h1><h2 id="You-are-given-an-integer-array-score-of-size-n-where-score-i-is-the-score-of-the-ith-athlete-in-a-competition-All-the-scores-are-guaranteed-to-be-unique"><a href="#You-are-given-an-integer-array-score-of-size-n-where-score-i-is-the-score-of-the-ith-athlete-in-a-competition-All-the-scores-are-guaranteed-to-be-unique" class="headerlink" title="You are given an integer array score of size n, where score[i] is the score of the ith athlete in a competition. All the scores are guaranteed to be unique."></a>You are given an integer array score of size n, where score[i] is the score of the ith athlete in a competition. All the scores are guaranteed to be unique.</h2><h2 id="The-athletes-are-placed-based-on-their-scores-where-the-1st-place-athlete-has-the-highest-score-the-2nd-place-athlete-has-the-2nd-highest-score-and-so-on-The-placement-of-each-athlete-determines-their-rank"><a href="#The-athletes-are-placed-based-on-their-scores-where-the-1st-place-athlete-has-the-highest-score-the-2nd-place-athlete-has-the-2nd-highest-score-and-so-on-The-placement-of-each-athlete-determines-their-rank" class="headerlink" title="The athletes are placed based on their scores, where the 1st place athlete has the highest score, the 2nd place athlete has the 2nd highest score, and so on. The placement of each athlete determines their rank:"></a>The athletes are placed based on their scores, where the 1st place athlete has the highest score, the 2nd place athlete has the 2nd highest score, and so on. The placement of each athlete determines their rank:</h2><p>The 1st place athlete’s rank is “Gold Medal”.<br>The 2nd place athlete’s rank is “Silver Medal”.<br>The 3rd place athlete’s rank is “Bronze Medal”.<br>For the 4th place to the nth place athlete, their rank is their placement number (i.e., the xth place athlete’s rank is “x”).<br>Return an array answer of size n where answer[i] is the rank of the ith athlete.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findRelativeRanks</span>(<span class="params">self, score: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">str</span>]:</span></span><br><span class="line">        nums=<span class="built_in">sorted</span>(score)</span><br><span class="line"></span><br><span class="line">        res=[]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(score)):</span><br><span class="line">            <span class="keyword">if</span> nums.index(score[i])==<span class="built_in">len</span>(score)-<span class="number">1</span>:</span><br><span class="line">                res.append(<span class="string">&#x27;Gold Medal&#x27;</span>)</span><br><span class="line">            <span class="keyword">elif</span> nums.index(score[i])==<span class="built_in">len</span>(score)-<span class="number">2</span>:</span><br><span class="line">                res.append(<span class="string">&#x27;Silver Medal&#x27;</span>)</span><br><span class="line">            <span class="keyword">elif</span> nums.index(score[i])==<span class="built_in">len</span>(score)-<span class="number">3</span>:</span><br><span class="line">                res.append(<span class="string">&#x27;Bronze Medal&#x27;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                res.append(<span class="built_in">str</span>(<span class="built_in">len</span>(nums)-nums.index(score[i])))</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;506-Relative-Ranks-easy&quot;&gt;&lt;a href=&quot;#506-Relative-Ranks-easy&quot; class=&quot;headerlink&quot; title=&quot;506. Relative Ranks(easy)&quot;&gt;&lt;/a&gt;506. Relative R</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>507. Perfect Number(easy)</title>
-    <link href="http://example.com/2022/11/15/507/"/>
-    <id>http://example.com/2022/11/15/507/</id>
-    <published>2022-11-15T22:59:43.000Z</published>
-    <updated>2022-11-18T04:13:20.210Z</updated>
-    
-    <content type="html"><![CDATA[<p>A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. A divisor of an integer x is an integer that can divide x evenly.</p><p>Given an integer n, return true if n is a perfect number, otherwise return false.</p><p>所有的余数之和等于num本身</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">checkPerfectNumber</span>(<span class="params">self, num: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        res=[]</span><br><span class="line">        x=sqrt(num)</span><br><span class="line">        <span class="keyword">if</span> num==<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">int</span>(x)+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> num%i==<span class="number">0</span>:</span><br><span class="line">                res.append(i)</span><br><span class="line">                <span class="keyword">if</span> i!=<span class="number">1</span>:</span><br><span class="line">                    res.append(num//i)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span>(res)==num</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself. A divisor of an in</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="math" scheme="http://example.com/tags/math/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>504. Base 7(easy)</title>
-    <link href="http://example.com/2022/11/15/504/"/>
-    <id>http://example.com/2022/11/15/504/</id>
-    <published>2022-11-15T22:46:59.000Z</published>
-    <updated>2022-11-18T04:13:03.815Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="504-Base-7-easy"><a href="#504-Base-7-easy" class="headerlink" title="504. Base 7(easy)"></a>504. Base 7(easy)</h1><h2 id="Given-an-integer-num-return-a-string-of-its-base-7-representation"><a href="#Given-an-integer-num-return-a-string-of-its-base-7-representation" class="headerlink" title="Given an integer num, return a string of its base 7 representation."></a>Given an integer num, return a string of its base 7 representation.</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">convertToBase7</span>(<span class="params">self, num: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        res=<span class="built_in">list</span>()</span><br><span class="line">        x=num</span><br><span class="line">        num=<span class="built_in">abs</span>(num)</span><br><span class="line">        <span class="keyword">if</span> num==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;0&quot;</span></span><br><span class="line">        <span class="keyword">while</span> num!=<span class="number">0</span>:</span><br><span class="line">            carry=num%<span class="number">7</span></span><br><span class="line">            num=(num-carry)//<span class="number">7</span></span><br><span class="line">            res.append(carry)</span><br><span class="line">        res=res[::-<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">if</span> x&gt;<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(<span class="built_in">map</span>(<span class="built_in">str</span>,res))</span><br><span class="line">        <span class="keyword">elif</span> x&lt;<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;-&quot;</span>+<span class="string">&quot;&quot;</span>.join(<span class="built_in">map</span>(<span class="built_in">str</span>,res))</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;504-Base-7-easy&quot;&gt;&lt;a href=&quot;#504-Base-7-easy&quot; class=&quot;headerlink&quot; title=&quot;504. Base 7(easy)&quot;&gt;&lt;/a&gt;504. Base 7(easy)&lt;/h1&gt;&lt;h2 id=&quot;Given-an-</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>500. Keyboard Row(easy)</title>
-    <link href="http://example.com/2022/11/15/500/"/>
-    <id>http://example.com/2022/11/15/500/</id>
-    <published>2022-11-15T22:30:21.000Z</published>
-    <updated>2022-11-18T04:13:30.217Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="500-Keyboard-Row-easy"><a href="#500-Keyboard-Row-easy" class="headerlink" title="500. Keyboard Row(easy)"></a>500. Keyboard Row(easy)</h1><p>Given an array of strings words, return the words that can be typed using letters of the alphabet on only one row of American keyboard like the image below.</p><p>In the American keyboard:</p><p>the first row consists of the characters “qwertyuiop”,<br>the second row consists of the characters “asdfghjkl”, and<br>the third row consists of the characters “zxcvbnm”.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findWords</span>(<span class="params">self, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">str</span>]:</span></span><br><span class="line">        s1 = <span class="string">&quot;qwertyuiop&quot;</span></span><br><span class="line">        s2 = <span class="string">&quot;asdfghjkl&quot;</span></span><br><span class="line">        s3 = <span class="string">&quot;zxcvbnm&quot;</span></span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> word <span class="keyword">in</span> words:</span><br><span class="line">            cnt1 = cnt2 = cnt3 = <span class="number">0</span></span><br><span class="line">            <span class="keyword">for</span> c <span class="keyword">in</span> <span class="built_in">list</span>(word.lower()):</span><br><span class="line">                <span class="keyword">if</span> c <span class="keyword">in</span> s1: cnt1 += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> c <span class="keyword">in</span> s2: cnt2 += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> c <span class="keyword">in</span> s3: cnt3 += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">len</span>(word) == cnt1) <span class="keyword">or</span> (<span class="built_in">len</span>(word) == cnt2) <span class="keyword">or</span> (<span class="built_in">len</span>(word) == cnt3): </span><br><span class="line">                res.append(word)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;500-Keyboard-Row-easy&quot;&gt;&lt;a href=&quot;#500-Keyboard-Row-easy&quot; class=&quot;headerlink&quot; title=&quot;500. Keyboard Row(easy)&quot;&gt;&lt;/a&gt;500. Keyboard Row(eas</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>482. License Key Formatting(easy)</title>
-    <link href="http://example.com/2022/11/15/482/"/>
-    <id>http://example.com/2022/11/15/482/</id>
-    <published>2022-11-15T22:06:12.000Z</published>
-    <updated>2022-11-15T23:04:28.249Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="482-License-Key-Formatting-easy"><a href="#482-License-Key-Formatting-easy" class="headerlink" title="482. License Key Formatting(easy)"></a>482. License Key Formatting(easy)</h1><h2 id="You-are-given-a-license-key-represented-as-a-string-s-that-consists-of-only-alphanumeric-characters-and-dashes-The-string-is-separated-into-n-1-groups-by-n-dashes-You-are-also-given-an-integer-k"><a href="#You-are-given-a-license-key-represented-as-a-string-s-that-consists-of-only-alphanumeric-characters-and-dashes-The-string-is-separated-into-n-1-groups-by-n-dashes-You-are-also-given-an-integer-k" class="headerlink" title="You are given a license key represented as a string s that consists of only alphanumeric characters and dashes. The string is separated into n + 1 groups by n dashes. You are also given an integer k."></a>You are given a license key represented as a string s that consists of only alphanumeric characters and dashes. The string is separated into n + 1 groups by n dashes. You are also given an integer k.</h2><h2 id="We-want-to-reformat-the-string-s-such-that-each-group-contains-exactly-k-characters-except-for-the-first-group-which-could-be-shorter-than-k-but-still-must-contain-at-least-one-character-Furthermore-there-must-be-a-dash-inserted-between-two-groups-and-you-should-convert-all-lowercase-letters-to-uppercase"><a href="#We-want-to-reformat-the-string-s-such-that-each-group-contains-exactly-k-characters-except-for-the-first-group-which-could-be-shorter-than-k-but-still-must-contain-at-least-one-character-Furthermore-there-must-be-a-dash-inserted-between-two-groups-and-you-should-convert-all-lowercase-letters-to-uppercase" class="headerlink" title="We want to reformat the string s such that each group contains exactly k characters, except for the first group, which could be shorter than k but still must contain at least one character. Furthermore, there must be a dash inserted between two groups, and you should convert all lowercase letters to uppercase."></a>We want to reformat the string s such that each group contains exactly k characters, except for the first group, which could be shorter than k but still must contain at least one character. Furthermore, there must be a dash inserted between two groups, and you should convert all lowercase letters to uppercase.</h2><h2 id="Return-the-reformatted-license-key"><a href="#Return-the-reformatted-license-key" class="headerlink" title="Return the reformatted license key."></a>Return the reformatted license key.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;5F3Z-2e-9-w&quot;, k = 4</span><br><span class="line">Output: &quot;5F3Z-2E9W&quot;</span><br><span class="line">Explanation: The string s has been split into two parts, each part has 4 characters.</span><br><span class="line">Note that the two extra dashes are not needed and can be removed.</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">licenseKeyFormatting</span>(<span class="params">self, s: <span class="built_in">str</span>, k: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        ans = <span class="built_in">list</span>()</span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s) - <span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> s[i] != <span class="string">&quot;-&quot;</span>:</span><br><span class="line">                ans.append(s[i].upper())</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> cnt % k == <span class="number">0</span>:</span><br><span class="line">                    ans.append(<span class="string">&quot;-&quot;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> ans <span class="keyword">and</span> ans[-<span class="number">1</span>] == <span class="string">&quot;-&quot;</span>:</span><br><span class="line">            ans.pop()</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(ans[::-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;482-License-Key-Formatting-easy&quot;&gt;&lt;a href=&quot;#482-License-Key-Formatting-easy&quot; class=&quot;headerlink&quot; title=&quot;482. License Key Formatting(ea</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="maths" scheme="http://example.com/tags/maths/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>495. Teemo Attacking(easy)</title>
-    <link href="http://example.com/2022/11/15/495/"/>
-    <id>http://example.com/2022/11/15/495/</id>
-    <published>2022-11-15T21:44:23.000Z</published>
-    <updated>2022-11-15T23:02:55.479Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="495-Teemo-Attacking-easy"><a href="#495-Teemo-Attacking-easy" class="headerlink" title="495. Teemo Attacking(easy)"></a>495. Teemo Attacking(easy)</h1><h2 id="Our-hero-Teemo-is-attacking-an-enemy-Ashe-with-poison-attacks-When-Teemo-attacks-Ashe-Ashe-gets-poisoned-for-a-exactly-duration-seconds-More-formally-an-attack-at-second-t-will-mean-Ashe-is-poisoned-during-the-inclusive-time-interval-t-t-duration-1-If-Teemo-attacks-again-before-the-poison-effect-ends-the-timer-for-it-is-reset-and-the-poison-effect-will-end-duration-seconds-after-the-new-attack"><a href="#Our-hero-Teemo-is-attacking-an-enemy-Ashe-with-poison-attacks-When-Teemo-attacks-Ashe-Ashe-gets-poisoned-for-a-exactly-duration-seconds-More-formally-an-attack-at-second-t-will-mean-Ashe-is-poisoned-during-the-inclusive-time-interval-t-t-duration-1-If-Teemo-attacks-again-before-the-poison-effect-ends-the-timer-for-it-is-reset-and-the-poison-effect-will-end-duration-seconds-after-the-new-attack" class="headerlink" title="Our hero Teemo is attacking an enemy Ashe with poison attacks! When Teemo attacks Ashe, Ashe gets poisoned for a exactly duration seconds. More formally, an attack at second t will mean Ashe is poisoned during the inclusive time interval [t, t + duration - 1]. If Teemo attacks again before the poison effect ends, the timer for it is reset, and the poison effect will end duration seconds after the new attack."></a>Our hero Teemo is attacking an enemy Ashe with poison attacks! When Teemo attacks Ashe, Ashe gets poisoned for a exactly duration seconds. More formally, an attack at second t will mean Ashe is poisoned during the inclusive time interval [t, t + duration - 1]. If Teemo attacks again before the poison effect ends, the timer for it is reset, and the poison effect will end duration seconds after the new attack.</h2><h2 id="You-are-given-a-non-decreasing-integer-array-timeSeries-where-timeSeries-i-denotes-that-Teemo-attacks-Ashe-at-second-timeSeries-i-and-an-integer-duration"><a href="#You-are-given-a-non-decreasing-integer-array-timeSeries-where-timeSeries-i-denotes-that-Teemo-attacks-Ashe-at-second-timeSeries-i-and-an-integer-duration" class="headerlink" title="You are given a non-decreasing integer array timeSeries, where timeSeries[i] denotes that Teemo attacks Ashe at second timeSeries[i], and an integer duration."></a>You are given a non-decreasing integer array timeSeries, where timeSeries[i] denotes that Teemo attacks Ashe at second timeSeries[i], and an integer duration.</h2><h2 id="Return-the-total-number-of-seconds-that-Ashe-is-poisoned"><a href="#Return-the-total-number-of-seconds-that-Ashe-is-poisoned" class="headerlink" title="Return the total number of seconds that Ashe is poisoned."></a>Return the total number of seconds that Ashe is poisoned.</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findPoisonedDuration</span>(<span class="params">self, timeSeries: <span class="type">List</span>[<span class="built_in">int</span>], duration: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        ans=duration*<span class="built_in">len</span>(timeSeries)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(timeSeries)):</span><br><span class="line">            ans-=<span class="built_in">max</span>(<span class="number">0</span>,duration-(timeSeries[i]-timeSeries[i-<span class="number">1</span>]))</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;495-Teemo-Attacking-easy&quot;&gt;&lt;a href=&quot;#495-Teemo-Attacking-easy&quot; class=&quot;headerlink&quot; title=&quot;495. Teemo Attacking(easy)&quot;&gt;&lt;/a&gt;495. Teemo A</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="maths" scheme="http://example.com/tags/maths/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>492. Construct the Rectangle(easy)</title>
-    <link href="http://example.com/2022/11/15/492/"/>
-    <id>http://example.com/2022/11/15/492/</id>
-    <published>2022-11-15T21:25:16.000Z</published>
-    <updated>2022-11-15T23:02:42.767Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="492-Construct-the-Rectangle-easy"><a href="#492-Construct-the-Rectangle-easy" class="headerlink" title="492. Construct the Rectangle(easy)"></a>492. Construct the Rectangle(easy)</h1><h2 id="A-web-developer-needs-to-know-how-to-design-a-web-page’s-size-So-given-a-specific-rectangular-web-page’s-area-your-job-by-now-is-to-design-a-rectangular-web-page-whose-length-L-and-width-W-satisfy-the-following-requirements"><a href="#A-web-developer-needs-to-know-how-to-design-a-web-page’s-size-So-given-a-specific-rectangular-web-page’s-area-your-job-by-now-is-to-design-a-rectangular-web-page-whose-length-L-and-width-W-satisfy-the-following-requirements" class="headerlink" title="A web developer needs to know how to design a web page’s size. So, given a specific rectangular web page’s area, your job by now is to design a rectangular web page, whose length L and width W satisfy the following requirements:"></a>A web developer needs to know how to design a web page’s size. So, given a specific rectangular web page’s area, your job by now is to design a rectangular web page, whose length L and width W satisfy the following requirements:</h2><h2 id="The-area-of-the-rectangular-web-page-you-designed-must-equal-to-the-given-target-area"><a href="#The-area-of-the-rectangular-web-page-you-designed-must-equal-to-the-given-target-area" class="headerlink" title="The area of the rectangular web page you designed must equal to the given target area."></a>The area of the rectangular web page you designed must equal to the given target area.</h2><h2 id="The-width-W-should-not-be-larger-than-the-length-L-which-means-L-gt-W"><a href="#The-width-W-should-not-be-larger-than-the-length-L-which-means-L-gt-W" class="headerlink" title="The width W should not be larger than the length L, which means L &gt;= W."></a>The width W should not be larger than the length L, which means L &gt;= W.</h2><h2 id="The-difference-between-length-L-and-width-W-should-be-as-small-as-possible"><a href="#The-difference-between-length-L-and-width-W-should-be-as-small-as-possible" class="headerlink" title="The difference between length L and width W should be as small as possible."></a>The difference between length L and width W should be as small as possible.</h2><h2 id="Return-an-array-L-W-where-L-and-W-are-the-length-and-width-of-the-web-page-you-designed-in-sequence"><a href="#Return-an-array-L-W-where-L-and-W-are-the-length-and-width-of-the-web-page-you-designed-in-sequence" class="headerlink" title="Return an array [L, W] where L and W are the length and width of the web page you designed in sequence."></a>Return an array [L, W] where L and W are the length and width of the web page you designed in sequence.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: area = 4</span><br><span class="line">Output: [2,2]</span><br><span class="line">Explanation: The target area is 4, and all the possible ways to construct it are [1,4], [2,2], [4,1]. </span><br><span class="line">But according to requirement 2, [1,4] is illegal; according to requirement 3,  [4,1] is not optimal compared to [2,2]. So the length L is 2, and the width W is 2.</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">constructRectangle</span>(<span class="params">self, area: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(area**<span class="number">0.5</span>),<span class="number">0</span>,-<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> area%i==<span class="number">0</span>:</span><br><span class="line">                <span class="keyword">return</span> [area//i,i]</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;492-Construct-the-Rectangle-easy&quot;&gt;&lt;a href=&quot;#492-Construct-the-Rectangle-easy&quot; class=&quot;headerlink&quot; title=&quot;492. Construct the Rectangle</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="maths" scheme="http://example.com/tags/maths/"/>
     
   </entry>
   
