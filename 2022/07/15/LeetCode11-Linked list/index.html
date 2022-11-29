@@ -18,7 +18,7 @@
 <meta property="og:description" content="链表是空节点，或者有一个值和一个指向下一个链表的指针，因此很多链表问题可以用递归来处理。 参考： Leetcode 题解 - 链表leetcode tag如果说数据结构是算法的基础，那么数组和链表就是数据结构的基础。因为像堆，栈，树，图等比较复杂的数组结基本上都可以由数组和链表来表示，所以掌握数组和链表的基本操作十分重要。 Labuladong本文就总结一下单链表的基本技巧，每个技巧都对应着至少一">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-15T19:54:06.000Z">
-<meta property="article:modified_time" content="2022-08-28T20:24:44.628Z">
+<meta property="article:modified_time" content="2022-11-27T21:30:40.299Z">
 <meta property="article:author" content="leaf">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="Python">
@@ -29,13 +29,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1669579544587">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1669763253629">
     
-    <link rel="stylesheet" href="/css/style.css?v=1669579544587">
+    <link rel="stylesheet" href="/css/style.css?v=1669763253629">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1669579544587">
+            <link rel="stylesheet" href="/custom.css?v=1669763253629">
         
     
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="八角书屋" type="application/atom+xml">
@@ -61,7 +61,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>298</div>
+        <div><span>文章</span>303</div>
         <div><span>标签</span>70</div>
         <div><span>分类</span>2</div>
     </div>
@@ -107,7 +107,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1669579544587"></script>
+	<script async src="/js/search.js?v=1669763253629"></script>
 
 
 
@@ -209,7 +209,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/study/">study</a>
-          <span class="category-list-count">290</span>
+          <span class="category-list-count">295</span>
         </li>
 
         
@@ -224,7 +224,7 @@
         
   <div class="nexmoe-widget-wrap">
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/tags/Backtracking/" style="font-size: 10.53px;">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;">Counter</a> <a href="/tags/DFA/" style="font-size: 10.53px;">DFA</a> <a href="/tags/DFS/" style="font-size: 10.53px;">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 12.11px;">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 15.26px;">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;">Greatest common divisor </a> <a href="/tags/Greedy/" style="font-size: 10px;">Greedy</a> <a href="/tags/Heap-Sort/" style="font-size: 10px;">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;">LCP</a> <a href="/tags/Linked-list/" style="font-size: 16.84px;">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13.16px;">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11.05px;">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.53px;">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.47px;">Python</a> <a href="/tags/Queues/" style="font-size: 10.53px;">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.53px;">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.58px;">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.58px;">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.53px;">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.53px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 13.68px;">Tree</a> <a href="/tags/array/" style="font-size: 18.95px;">array</a> <a href="/tags/backtracking/" style="font-size: 10px;">backtracking</a> <a href="/tags/binary-search/" style="font-size: 12.11px;">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.63px;">binary search algorithm</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary tree</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary-tree</a> <a href="/tags/bitmask/" style="font-size: 10px;">bitmask</a> <a href="/tags/bitwise/" style="font-size: 15.26px;">bitwise</a> <a href="/tags/dfs/" style="font-size: 10.53px;">dfs</a> <a href="/tags/difference-array/" style="font-size: 12.63px;">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.53px;">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 15.79px;">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.53px;">game</a> <a href="/tags/greedy/" style="font-size: 10px;">greedy</a> <a href="/tags/greedy-algorithm/" style="font-size: 14.74px;">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.42px;">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.53px;">hashset</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a> <a href="/tags/life/" style="font-size: 10.53px;">life</a> <a href="/tags/linked-list/" style="font-size: 10.53px;">linked-list</a> <a href="/tags/list/" style="font-size: 10.53px;">list</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mapping/" style="font-size: 11.05px;">mapping</a> <a href="/tags/math/" style="font-size: 14.21px;">math</a> <a href="/tags/maths/" style="font-size: 11.58px;">maths</a> <a href="/tags/matrix/" style="font-size: 10.53px;">matrix</a> <a href="/tags/prefix-sum/" style="font-size: 13.16px;">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;">prime number</a> <a href="/tags/python-function/" style="font-size: 10.53px;">python function</a> <a href="/tags/recursion/" style="font-size: 14.21px;">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/set/" style="font-size: 11.58px;">set</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/sliding-window/" style="font-size: 10px;">sliding window</a> <a href="/tags/sort/" style="font-size: 10.53px;">sort</a> <a href="/tags/stack/" style="font-size: 16.32px;">stack</a> <a href="/tags/string/" style="font-size: 17.89px;">string</a> <a href="/tags/substring/" style="font-size: 10px;">substring</a> <a href="/tags/topk/" style="font-size: 12.11px;">topk</a> <a href="/tags/tree/" style="font-size: 12.11px;">tree</a> <a href="/tags/two-pointer/" style="font-size: 12.11px;">two-pointer</a> <a href="/tags/two-pointers/" style="font-size: 17.37px;">two-pointers</a>
+      <a href="/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/tags/Backtracking/" style="font-size: 10.53px;">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;">Counter</a> <a href="/tags/DFA/" style="font-size: 10.53px;">DFA</a> <a href="/tags/DFS/" style="font-size: 10.53px;">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 12.11px;">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 15.26px;">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;">Greatest common divisor </a> <a href="/tags/Greedy/" style="font-size: 10px;">Greedy</a> <a href="/tags/Heap-Sort/" style="font-size: 10px;">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;">LCP</a> <a href="/tags/Linked-list/" style="font-size: 16.84px;">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13.16px;">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11.05px;">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.53px;">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.47px;">Python</a> <a href="/tags/Queues/" style="font-size: 10.53px;">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.53px;">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.58px;">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.58px;">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.53px;">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.53px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 13.68px;">Tree</a> <a href="/tags/array/" style="font-size: 18.95px;">array</a> <a href="/tags/backtracking/" style="font-size: 10px;">backtracking</a> <a href="/tags/binary-search/" style="font-size: 12.11px;">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.63px;">binary search algorithm</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary tree</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary-tree</a> <a href="/tags/bitmask/" style="font-size: 10px;">bitmask</a> <a href="/tags/bitwise/" style="font-size: 15.26px;">bitwise</a> <a href="/tags/dfs/" style="font-size: 10.53px;">dfs</a> <a href="/tags/difference-array/" style="font-size: 12.63px;">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.53px;">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 16.32px;">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.53px;">game</a> <a href="/tags/greedy/" style="font-size: 10px;">greedy</a> <a href="/tags/greedy-algorithm/" style="font-size: 14.74px;">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.42px;">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.53px;">hashset</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a> <a href="/tags/life/" style="font-size: 10.53px;">life</a> <a href="/tags/linked-list/" style="font-size: 11.05px;">linked-list</a> <a href="/tags/list/" style="font-size: 10.53px;">list</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mapping/" style="font-size: 11.05px;">mapping</a> <a href="/tags/math/" style="font-size: 14.21px;">math</a> <a href="/tags/maths/" style="font-size: 11.58px;">maths</a> <a href="/tags/matrix/" style="font-size: 11.58px;">matrix</a> <a href="/tags/prefix-sum/" style="font-size: 13.16px;">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;">prime number</a> <a href="/tags/python-function/" style="font-size: 10.53px;">python function</a> <a href="/tags/recursion/" style="font-size: 14.21px;">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/set/" style="font-size: 11.58px;">set</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/sliding-window/" style="font-size: 10px;">sliding window</a> <a href="/tags/sort/" style="font-size: 10.53px;">sort</a> <a href="/tags/stack/" style="font-size: 15.79px;">stack</a> <a href="/tags/string/" style="font-size: 17.89px;">string</a> <a href="/tags/substring/" style="font-size: 10px;">substring</a> <a href="/tags/topk/" style="font-size: 12.11px;">topk</a> <a href="/tags/tree/" style="font-size: 12.11px;">tree</a> <a href="/tags/two-pointer/" style="font-size: 12.11px;">two-pointer</a> <a href="/tags/two-pointers/" style="font-size: 17.37px;">two-pointers</a>
     </div>
     
       <script>
@@ -252,7 +252,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">294</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">299</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -267,23 +267,23 @@
       <ul>
         
           <li>
-            <a href="/2022/11/27/2486/">2486</a>
+            <a href="/2022/11/29/1277/">1277. Count Square Submatrices with All Ones(medium)</a>
           </li>
         
           <li>
-            <a href="/2022/11/27/2485/">2485. Find the Pivot Integer(easy)</a>
+            <a href="/2022/11/29/221/">221. Maximal Square(medium)</a>
           </li>
         
           <li>
-            <a href="/2022/11/25/781/">781. Rabbits in Forest(medium)</a>
+            <a href="/2022/11/29/55/">55. Jump Game(medium)</a>
           </li>
         
           <li>
-            <a href="/2022/11/25/200/">200. Number of Islands(medium)</a>
+            <a href="/2022/11/27/23/">23. Merge k Sorted Lists(hard)</a>
           </li>
         
           <li>
-            <a href="/2022/11/25/1190/">1190. Reverse Substrings Between Each Pair of Parentheses(medium)</a>
+            <a href="/2022/11/27/2487/">2487. Remove Nodes From Linked List(medium)</a>
           </li>
         
       </ul>
@@ -306,7 +306,7 @@
 
   <article>
     
-        <div class="nexmoe-post-cover absolute" style="padding-top: NaN%;"> 
+        <div class="nexmoe-post-cover absolute" style="padding-top: 50%;"> 
             <img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/A2.1sbhuik77www.webp" alt="LeetCode11-Linked list" loading="lazy">
             <h1>LeetCode11-Linked list</h1>
         </div>
@@ -319,7 +319,7 @@
             <a class="nexmoefont icon-appstore-fill -link" href="/categories/study/">study</a>
         
         
-    <a><i class="nexmoefont icon-areachart"></i>约517字</a>
+    <a><i class="nexmoefont icon-areachart"></i>约601字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要2分钟</a>
 
     </div>
@@ -364,29 +364,13 @@
 <ol start="21">
 <li>Merge Two Sorted Lists(easy)</li>
 </ol>
-<pre><code class="python">class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -&gt; Optional[ListNode]:
-        current = pre =ListNode()
-        while list1 and list2:
-            if list1.val&lt;list2.val:
-                current.next = list1
-                list1, current = list1.next, list1
-                #list1 = list1.next
-                #current = list1                
-            else:
-                current.next = list2
-                list2, current = list2.next, list2
-                #list2=list2.next
-                #current = list2
-        if list1 or list2:
-            current.next=list1 if list1 else list2
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeTwoLists</span>(<span class="params">self, list1: <span class="type">Optional</span>[ListNode], list2: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span></span><br><span class="line">        current = pre =ListNode()</span><br><span class="line">        <span class="keyword">while</span> list1 <span class="keyword">and</span> list2:</span><br><span class="line">            <span class="keyword">if</span> list1.val&lt;list2.val:</span><br><span class="line">                current.<span class="built_in">next</span> = list1</span><br><span class="line">                list1, current = list1.<span class="built_in">next</span>, list1</span><br><span class="line">                <span class="comment">#list1 = list1.next</span></span><br><span class="line">                <span class="comment">#current = list1                </span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                current.<span class="built_in">next</span> = list2</span><br><span class="line">                list2, current = list2.<span class="built_in">next</span>, list2</span><br><span class="line">                <span class="comment">#list2=list2.next</span></span><br><span class="line">                <span class="comment">#current = list2</span></span><br><span class="line">        <span class="keyword">if</span> list1 <span class="keyword">or</span> list2:</span><br><span class="line">            current.<span class="built_in">next</span>=list1 <span class="keyword">if</span> list1 <span class="keyword">else</span> list2</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> pre.<span class="built_in">next</span></span><br><span class="line">```                </span><br><span class="line"></span><br><span class="line"><span class="number">23.</span> Merge k Sorted Lists(hard)</span><br><span class="line">```python</span><br><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, next=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.next = next</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeKLists</span>(<span class="params">self, lists: <span class="type">List</span>[<span class="type">Optional</span>[ListNode]]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span></span><br><span class="line">        temp = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(lists)):</span><br><span class="line">            <span class="keyword">while</span> lists[i]:</span><br><span class="line">                temp.append(lists[i].val)</span><br><span class="line">                lists[i] = lists[i].<span class="built_in">next</span></span><br><span class="line">        temp.sort()</span><br><span class="line">        head = current = ListNode()</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(temp)):</span><br><span class="line">            Node = ListNode(temp[i])</span><br><span class="line">            current.<span class="built_in">next</span> = Node</span><br><span class="line">            current = current.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> head.<span class="built_in">next</span></span><br></pre></td></tr></table></figure>
 
-        return pre.next
-</code></pre>
-<p>23</p>
-<p>86</p>
-<ol start="876">
-<li>Middle of the Linked List(easy)</li>
+<ol start="86">
+<li><p>Partition List(medium)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>Middle of the Linked List(easy)</p>
+</li>
 </ol>
 <ol start="234">
 <li>Palindrome Linked List<br>回文链表<br>这里运用到一个非常有趣的方法，借助二叉树后序遍历的思路，不需要显式反转原始链表也可以倒序遍历链表</li>
@@ -469,7 +453,7 @@
 
  
 
-<script async src="/js/app.js?v=1669579544589"></script>
+<script async src="/js/app.js?v=1669763253632"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
 

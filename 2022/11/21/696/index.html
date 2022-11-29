@@ -10,15 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <meta name="description" content="Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively.Substrings th">
+    <meta name="description" content="696. Count Binary Substrings(easy)Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are g">
 <meta property="og:type" content="article">
 <meta property="og:title" content="696. Count Binary Substrings(easy)">
 <meta property="og:url" content="http://example.com/2022/11/21/696/index.html">
 <meta property="og:site_name" content="八角书屋">
-<meta property="og:description" content="Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively.Substrings th">
+<meta property="og:description" content="696. Count Binary Substrings(easy)Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are g">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-21T20:57:28.000Z">
-<meta property="article:modified_time" content="2022-11-21T21:28:58.604Z">
+<meta property="article:modified_time" content="2022-11-27T21:30:52.087Z">
 <meta property="article:author" content="leaf">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="Python">
@@ -30,13 +30,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1669579543811">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1669763252822">
     
-    <link rel="stylesheet" href="/css/style.css?v=1669579543811">
+    <link rel="stylesheet" href="/css/style.css?v=1669763252822">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1669579543811">
+            <link rel="stylesheet" href="/custom.css?v=1669763252822">
         
     
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="八角书屋" type="application/atom+xml">
@@ -62,7 +62,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>298</div>
+        <div><span>文章</span>303</div>
         <div><span>标签</span>70</div>
         <div><span>分类</span>2</div>
     </div>
@@ -108,7 +108,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1669579543811"></script>
+	<script async src="/js/search.js?v=1669763252823"></script>
 
 
 
@@ -210,7 +210,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/study/">study</a>
-          <span class="category-list-count">290</span>
+          <span class="category-list-count">295</span>
         </li>
 
         
@@ -225,7 +225,7 @@
         
   <div class="nexmoe-widget-wrap">
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/tags/Backtracking/" style="font-size: 10.53px;">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;">Counter</a> <a href="/tags/DFA/" style="font-size: 10.53px;">DFA</a> <a href="/tags/DFS/" style="font-size: 10.53px;">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 12.11px;">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 15.26px;">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;">Greatest common divisor </a> <a href="/tags/Greedy/" style="font-size: 10px;">Greedy</a> <a href="/tags/Heap-Sort/" style="font-size: 10px;">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;">LCP</a> <a href="/tags/Linked-list/" style="font-size: 16.84px;">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13.16px;">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11.05px;">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.53px;">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.47px;">Python</a> <a href="/tags/Queues/" style="font-size: 10.53px;">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.53px;">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.58px;">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.58px;">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.53px;">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.53px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 13.68px;">Tree</a> <a href="/tags/array/" style="font-size: 18.95px;">array</a> <a href="/tags/backtracking/" style="font-size: 10px;">backtracking</a> <a href="/tags/binary-search/" style="font-size: 12.11px;">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.63px;">binary search algorithm</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary tree</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary-tree</a> <a href="/tags/bitmask/" style="font-size: 10px;">bitmask</a> <a href="/tags/bitwise/" style="font-size: 15.26px;">bitwise</a> <a href="/tags/dfs/" style="font-size: 10.53px;">dfs</a> <a href="/tags/difference-array/" style="font-size: 12.63px;">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.53px;">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 15.79px;">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.53px;">game</a> <a href="/tags/greedy/" style="font-size: 10px;">greedy</a> <a href="/tags/greedy-algorithm/" style="font-size: 14.74px;">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.42px;">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.53px;">hashset</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a> <a href="/tags/life/" style="font-size: 10.53px;">life</a> <a href="/tags/linked-list/" style="font-size: 10.53px;">linked-list</a> <a href="/tags/list/" style="font-size: 10.53px;">list</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mapping/" style="font-size: 11.05px;">mapping</a> <a href="/tags/math/" style="font-size: 14.21px;">math</a> <a href="/tags/maths/" style="font-size: 11.58px;">maths</a> <a href="/tags/matrix/" style="font-size: 10.53px;">matrix</a> <a href="/tags/prefix-sum/" style="font-size: 13.16px;">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;">prime number</a> <a href="/tags/python-function/" style="font-size: 10.53px;">python function</a> <a href="/tags/recursion/" style="font-size: 14.21px;">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/set/" style="font-size: 11.58px;">set</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/sliding-window/" style="font-size: 10px;">sliding window</a> <a href="/tags/sort/" style="font-size: 10.53px;">sort</a> <a href="/tags/stack/" style="font-size: 16.32px;">stack</a> <a href="/tags/string/" style="font-size: 17.89px;">string</a> <a href="/tags/substring/" style="font-size: 10px;">substring</a> <a href="/tags/topk/" style="font-size: 12.11px;">topk</a> <a href="/tags/tree/" style="font-size: 12.11px;">tree</a> <a href="/tags/two-pointer/" style="font-size: 12.11px;">two-pointer</a> <a href="/tags/two-pointers/" style="font-size: 17.37px;">two-pointers</a>
+      <a href="/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/tags/Backtracking/" style="font-size: 10.53px;">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;">Counter</a> <a href="/tags/DFA/" style="font-size: 10.53px;">DFA</a> <a href="/tags/DFS/" style="font-size: 10.53px;">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 12.11px;">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 15.26px;">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;">Greatest common divisor </a> <a href="/tags/Greedy/" style="font-size: 10px;">Greedy</a> <a href="/tags/Heap-Sort/" style="font-size: 10px;">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;">LCP</a> <a href="/tags/Linked-list/" style="font-size: 16.84px;">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13.16px;">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11.05px;">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.53px;">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.47px;">Python</a> <a href="/tags/Queues/" style="font-size: 10.53px;">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.53px;">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.58px;">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.58px;">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.53px;">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.53px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 13.68px;">Tree</a> <a href="/tags/array/" style="font-size: 18.95px;">array</a> <a href="/tags/backtracking/" style="font-size: 10px;">backtracking</a> <a href="/tags/binary-search/" style="font-size: 12.11px;">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.63px;">binary search algorithm</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary tree</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary-tree</a> <a href="/tags/bitmask/" style="font-size: 10px;">bitmask</a> <a href="/tags/bitwise/" style="font-size: 15.26px;">bitwise</a> <a href="/tags/dfs/" style="font-size: 10.53px;">dfs</a> <a href="/tags/difference-array/" style="font-size: 12.63px;">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.53px;">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 16.32px;">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.53px;">game</a> <a href="/tags/greedy/" style="font-size: 10px;">greedy</a> <a href="/tags/greedy-algorithm/" style="font-size: 14.74px;">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.42px;">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.53px;">hashset</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a> <a href="/tags/life/" style="font-size: 10.53px;">life</a> <a href="/tags/linked-list/" style="font-size: 11.05px;">linked-list</a> <a href="/tags/list/" style="font-size: 10.53px;">list</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mapping/" style="font-size: 11.05px;">mapping</a> <a href="/tags/math/" style="font-size: 14.21px;">math</a> <a href="/tags/maths/" style="font-size: 11.58px;">maths</a> <a href="/tags/matrix/" style="font-size: 11.58px;">matrix</a> <a href="/tags/prefix-sum/" style="font-size: 13.16px;">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;">prime number</a> <a href="/tags/python-function/" style="font-size: 10.53px;">python function</a> <a href="/tags/recursion/" style="font-size: 14.21px;">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/set/" style="font-size: 11.58px;">set</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/sliding-window/" style="font-size: 10px;">sliding window</a> <a href="/tags/sort/" style="font-size: 10.53px;">sort</a> <a href="/tags/stack/" style="font-size: 15.79px;">stack</a> <a href="/tags/string/" style="font-size: 17.89px;">string</a> <a href="/tags/substring/" style="font-size: 10px;">substring</a> <a href="/tags/topk/" style="font-size: 12.11px;">topk</a> <a href="/tags/tree/" style="font-size: 12.11px;">tree</a> <a href="/tags/two-pointer/" style="font-size: 12.11px;">two-pointer</a> <a href="/tags/two-pointers/" style="font-size: 17.37px;">two-pointers</a>
     </div>
     
       <script>
@@ -253,7 +253,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">294</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">299</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -268,23 +268,23 @@
       <ul>
         
           <li>
-            <a href="/2022/11/27/2486/">2486</a>
+            <a href="/2022/11/29/1277/">1277. Count Square Submatrices with All Ones(medium)</a>
           </li>
         
           <li>
-            <a href="/2022/11/27/2485/">2485. Find the Pivot Integer(easy)</a>
+            <a href="/2022/11/29/221/">221. Maximal Square(medium)</a>
           </li>
         
           <li>
-            <a href="/2022/11/25/781/">781. Rabbits in Forest(medium)</a>
+            <a href="/2022/11/29/55/">55. Jump Game(medium)</a>
           </li>
         
           <li>
-            <a href="/2022/11/25/200/">200. Number of Islands(medium)</a>
+            <a href="/2022/11/27/23/">23. Merge k Sorted Lists(hard)</a>
           </li>
         
           <li>
-            <a href="/2022/11/25/1190/">1190. Reverse Substrings Between Each Pair of Parentheses(medium)</a>
+            <a href="/2022/11/27/2487/">2487. Remove Nodes From Linked List(medium)</a>
           </li>
         
       </ul>
@@ -320,7 +320,7 @@
             <a class="nexmoefont icon-appstore-fill -link" href="/categories/study/">study</a>
         
         
-    <a><i class="nexmoefont icon-areachart"></i>约306字</a>
+    <a><i class="nexmoefont icon-areachart"></i>约311字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要1分钟</a>
 
     </div>
@@ -331,7 +331,7 @@
     
 </div>
 
-    <h2 id="Given-a-binary-string-s-return-the-number-of-non-empty-substrings-that-have-the-same-number-of-0’s-and-1’s-and-all-the-0’s-and-all-the-1’s-in-these-substrings-are-grouped-consecutively"><a href="#Given-a-binary-string-s-return-the-number-of-non-empty-substrings-that-have-the-same-number-of-0’s-and-1’s-and-all-the-0’s-and-all-the-1’s-in-these-substrings-are-grouped-consecutively" class="headerlink" title="Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively."></a>Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively.</h2><h2 id="Substrings-that-occur-multiple-times-are-counted-the-number-of-times-they-occur"><a href="#Substrings-that-occur-multiple-times-are-counted-the-number-of-times-they-occur" class="headerlink" title="Substrings that occur multiple times are counted the number of times they occur."></a>Substrings that occur multiple times are counted the number of times they occur.</h2><h2 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/count-binary-substrings/solution/ji-shu-er-jin-zhi-zi-chuan-by-leetcode-solution/">官方题解</a></h2><p>看到该题的第一反应是位运算，但是没有想好该怎么解。但其实根本没有那么复杂：<br>我们可以将字符串 s 按照 0 和 1 的连续段分组，存在 counts 数组中，例如 s = 00111011，可以得到这样的 counts 数组：counts={2,3,1,2}。</p>
+    <h1 id="696-Count-Binary-Substrings-easy"><a href="#696-Count-Binary-Substrings-easy" class="headerlink" title="696. Count Binary Substrings(easy)"></a>696. Count Binary Substrings(easy)</h1><h2 id="Given-a-binary-string-s-return-the-number-of-non-empty-substrings-that-have-the-same-number-of-0’s-and-1’s-and-all-the-0’s-and-all-the-1’s-in-these-substrings-are-grouped-consecutively"><a href="#Given-a-binary-string-s-return-the-number-of-non-empty-substrings-that-have-the-same-number-of-0’s-and-1’s-and-all-the-0’s-and-all-the-1’s-in-these-substrings-are-grouped-consecutively" class="headerlink" title="Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively."></a>Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively.</h2><h2 id="Substrings-that-occur-multiple-times-are-counted-the-number-of-times-they-occur"><a href="#Substrings-that-occur-multiple-times-are-counted-the-number-of-times-they-occur" class="headerlink" title="Substrings that occur multiple times are counted the number of times they occur."></a>Substrings that occur multiple times are counted the number of times they occur.</h2><h2 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/count-binary-substrings/solution/ji-shu-er-jin-zhi-zi-chuan-by-leetcode-solution/">官方题解</a></h2><p>看到该题的第一反应是位运算，但是没有想好该怎么解。但其实根本没有那么复杂：<br>我们可以将字符串 s 按照 0 和 1 的连续段分组，存在 counts 数组中，例如 s = 00111011，可以得到这样的 counts 数组：counts={2,3,1,2}。</p>
 <p>这里 counts 数组中两个相邻的数一定代表的是两种不同的字符。假设 counts 数组中两个相邻的数字为 u 或者 v，它们对应着 u 个 0 和 v 个 1，或者 u 个 1 和 v 个 0。它们能组成的满足条件的子串数目为 min{u,v}，即一对相邻的数字对答案的贡献。</p>
 <p>我们只要遍历所有相邻的数对，求它们的贡献总和，即可得到答案。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countBinarySubstrings</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line"></span><br><span class="line">        n=<span class="built_in">len</span>(s)</span><br><span class="line">        last=<span class="number">0</span></span><br><span class="line">        ans=<span class="number">0</span></span><br><span class="line">        i=<span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> i &lt;n:</span><br><span class="line">            c=s[i]</span><br><span class="line">            count=<span class="number">0</span></span><br><span class="line">            <span class="keyword">while</span> i&lt;n <span class="keyword">and</span> s[i]==c:</span><br><span class="line">                i+=<span class="number">1</span></span><br><span class="line">                count+=<span class="number">1</span></span><br><span class="line">            ans +=<span class="built_in">min</span>(count,last)</span><br><span class="line">            last=count</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
@@ -377,7 +377,7 @@
                               <button class="mdui-fab catalog" style="overflow:unset;">
                                   <i class="nexmoefont icon-i-catalog"></i>
                                   <div class="nexmoe-toc">
-                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Given-a-binary-string-s-return-the-number-of-non-empty-substrings-that-have-the-same-number-of-0%E2%80%99s-and-1%E2%80%99s-and-all-the-0%E2%80%99s-and-all-the-1%E2%80%99s-in-these-substrings-are-grouped-consecutively"><span class="toc-number">1.</span> <span class="toc-text">Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Substrings-that-occur-multiple-times-are-counted-the-number-of-times-they-occur"><span class="toc-number">2.</span> <span class="toc-text">Substrings that occur multiple times are counted the number of times they occur.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E9%A2%98%E8%A7%A3"><span class="toc-number">3.</span> <span class="toc-text">官方题解</span></a></li></ol>
+                                      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#696-Count-Binary-Substrings-easy"><span class="toc-number">1.</span> <span class="toc-text">696. Count Binary Substrings(easy)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Given-a-binary-string-s-return-the-number-of-non-empty-substrings-that-have-the-same-number-of-0%E2%80%99s-and-1%E2%80%99s-and-all-the-0%E2%80%99s-and-all-the-1%E2%80%99s-in-these-substrings-are-grouped-consecutively"><span class="toc-number">1.1.</span> <span class="toc-text">Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Substrings-that-occur-multiple-times-are-counted-the-number-of-times-they-occur"><span class="toc-number">1.2.</span> <span class="toc-text">Substrings that occur multiple times are counted the number of times they occur.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E9%A2%98%E8%A7%A3"><span class="toc-number">1.3.</span> <span class="toc-text">官方题解</span></a></li></ol></li></ol>
                                   </div>
                               </button>
                           
@@ -414,7 +414,7 @@
 
  
 
-<script async src="/js/app.js?v=1669579543814"></script>
+<script async src="/js/app.js?v=1669763252828"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
 
