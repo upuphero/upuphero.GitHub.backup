@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-29T23:09:35.258Z</updated>
+  <updated>2022-11-30T19:20:48.656Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>43</title>
+    <link href="http://example.com/2022/11/30/43/"/>
+    <id>http://example.com/2022/11/30/43/</id>
+    <published>2022-11-30T19:20:48.000Z</published>
+    <updated>2022-11-30T19:20:48.656Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>1277. Count Square Submatrices with All Ones(medium)</title>
@@ -568,34 +581,6 @@
     <category term="Python" scheme="http://example.com/tags/Python/"/>
     
     <category term="stack" scheme="http://example.com/tags/stack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>598. Range Addition II(easy)</title>
-    <link href="http://example.com/2022/11/21/598/"/>
-    <id>http://example.com/2022/11/21/598/</id>
-    <published>2022-11-21T16:44:20.000Z</published>
-    <updated>2022-11-21T16:45:25.032Z</updated>
-    
-    <content type="html"><![CDATA[<p>You are given an m x n matrix M initialized with all 0’s and an array of operations ops, where ops[i] = [ai, bi] means M[x][y] should be incremented by one for all 0 &lt;= x &lt; ai and 0 &lt;= y &lt; bi.</p><p>Count and return the number of maximum integers in the matrix after performing all the operations.</p><pre><code class="python">class Solution:    def maxCount(self, m: int, n: int, ops: List[List[int]]) -&gt; int:        mina, minb = m, n        for a, b in ops:            mina = min(mina, a)            minb = min(minb, b)        return mina * minb</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;You are given an m x n matrix M initialized with all 0’s and an array of operations ops, where ops[i] = [ai, bi] means M[x][y] should be </summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="math" scheme="http://example.com/tags/math/"/>
     
   </entry>
   
