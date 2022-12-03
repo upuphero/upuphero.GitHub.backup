@@ -18,7 +18,7 @@
 <meta property="og:description" content="Sort Characters By Frequency (Medium)  Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the st">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-09T21:39:17.000Z">
-<meta property="article:modified_time" content="2022-06-10T13:41:19.470Z">
+<meta property="article:modified_time" content="2022-12-03T03:12:23.344Z">
 <meta property="article:author" content="leaf">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="hashmap">
@@ -30,13 +30,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1669845314003">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1670038110763">
     
-    <link rel="stylesheet" href="/css/style.css?v=1669845314003">
+    <link rel="stylesheet" href="/css/style.css?v=1670038110763">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1669845314003">
+            <link rel="stylesheet" href="/custom.css?v=1670038110763">
         
     
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="八角书屋" type="application/atom+xml">
@@ -62,7 +62,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>304</div>
+        <div><span>文章</span>307</div>
         <div><span>标签</span>70</div>
         <div><span>分类</span>2</div>
     </div>
@@ -108,7 +108,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1669845314003"></script>
+	<script async src="/js/search.js?v=1670038110763"></script>
 
 
 
@@ -210,7 +210,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/study/">study</a>
-          <span class="category-list-count">295</span>
+          <span class="category-list-count">296</span>
         </li>
 
         
@@ -253,7 +253,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">300</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">303</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -268,23 +268,23 @@
       <ul>
         
           <li>
+            <a href="/2022/12/02/994/">994</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/30/921/">921</a>
+          </li>
+        
+          <li>
+            <a href="/2022/11/30/1704/">1704. Determine if String Halves Are Alike(easy)</a>
+          </li>
+        
+          <li>
             <a href="/2022/11/30/43/">43</a>
           </li>
         
           <li>
             <a href="/2022/11/29/1277/">1277. Count Square Submatrices with All Ones(medium)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/11/29/221/">221. Maximal Square(medium)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/11/29/55/">55. Jump Game(medium)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/11/27/23/">23. Merge k Sorted Lists(hard)</a>
           </li>
         
       </ul>
@@ -320,7 +320,7 @@
             <a class="nexmoefont icon-appstore-fill -link" href="/categories/study/">study</a>
         
         
-    <a><i class="nexmoefont icon-areachart"></i>约193字</a>
+    <a><i class="nexmoefont icon-areachart"></i>约200字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要1分钟</a>
 
     </div>
@@ -336,7 +336,7 @@
 </ol>
 <h2 id="Given-a-string-s-sort-it-in-decreasing-order-based-on-the-frequency-of-the-characters-The-frequency-of-a-character-is-the-number-of-times-it-appears-in-the-string"><a href="#Given-a-string-s-sort-it-in-decreasing-order-based-on-the-frequency-of-the-characters-The-frequency-of-a-character-is-the-number-of-times-it-appears-in-the-string" class="headerlink" title="Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string."></a>Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.</h2><h2 id="Return-the-sorted-string-If-there-are-multiple-answers-return-any-of-them"><a href="#Return-the-sorted-string-If-there-are-multiple-answers-return-any-of-them" class="headerlink" title="Return the sorted string. If there are multiple answers, return any of them."></a>Return the sorted string. If there are multiple answers, return any of them.</h2><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sort-characters-by-frequency/solution/python3-shuang-90-by-key-wu-xbod/">Leetcode 题解</a></p>
 <p>这道题和 347. Top K Frequent Elements (Medium) 几乎一样，一个是数字一个是字符串，方法也类似</p>
-<p>1.建哈希表，将字符串s中的每个字符计数<br>2.根据哈希表中的值进行降序排序即可<br>3.直接字符乘以数目</p>
+<p>1.建哈希表，将字符串s中的每个字符计数<br>2.根据哈希表中的值进行降序排序即可(这个方法很重要)<br>3.直接字符乘以数目</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">frequencySort</span>(<span class="params">self, s</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: str</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        hashmap = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> ans <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> ans <span class="keyword">not</span> <span class="keyword">in</span> hashmap:</span><br><span class="line">                hashmap[ans] = <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                hashmap[ans] += <span class="number">1</span></span><br><span class="line">        result = <span class="built_in">sorted</span>(hashmap.items(),key=<span class="keyword">lambda</span> hashmap:hashmap[<span class="number">1</span>],reverse=<span class="literal">True</span>)</span><br><span class="line">        s = <span class="string">&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(result)):</span><br><span class="line">            res = result[i][<span class="number">0</span>] * result[i][<span class="number">1</span>]</span><br><span class="line">            s += res</span><br><span class="line">        <span class="keyword">return</span> s </span><br></pre></td></tr></table></figure>
 
 
@@ -419,7 +419,7 @@
 
  
 
-<script async src="/js/app.js?v=1669845314006"></script>
+<script async src="/js/app.js?v=1670038110766"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
 

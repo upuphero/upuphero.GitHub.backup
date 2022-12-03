@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-30T19:20:48.656Z</updated>
+  <updated>2022-12-03T03:27:21.097Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>994</title>
+    <link href="http://example.com/2022/12/02/994/"/>
+    <id>http://example.com/2022/12/02/994/</id>
+    <published>2022-12-03T03:27:21.000Z</published>
+    <updated>2022-12-03T03:27:21.097Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>921</title>
+    <link href="http://example.com/2022/11/30/921/"/>
+    <id>http://example.com/2022/11/30/921/</id>
+    <published>2022-12-01T04:56:15.000Z</published>
+    <updated>2022-12-01T04:56:15.788Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1704. Determine if String Halves Are Alike(easy)</title>
+    <link href="http://example.com/2022/11/30/1704/"/>
+    <id>http://example.com/2022/11/30/1704/</id>
+    <published>2022-12-01T03:29:06.000Z</published>
+    <updated>2022-12-01T03:33:24.022Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1704-Determine-if-String-Halves-Are-Alike-easy"><a href="#1704-Determine-if-String-Halves-Are-Alike-easy" class="headerlink" title="1704. Determine if String Halves Are Alike(easy)"></a>1704. Determine if String Halves Are Alike(easy)</h1><p>You are given a string s of even length. Split this string into two halves of equal lengths, and let a be the first half and b be the second half.</p><p>Two strings are alike if they have the same number of vowels (‘a’, ‘e’, ‘i’, ‘o’, ‘u’, ‘A’, ‘E’, ‘I’, ‘O’, ‘U’). Notice that s contains uppercase and lowercase letters.</p><p>Return true if a and b are alike. Otherwise, return false.</p><p>这道题是把一个字符串劈成两半，左边为a右边为b，然后判断a和b里面的元音数是否相同。<br>这里面有一点简便计算的是，他不是考虑元音各自的个数，所以只要设一个常量往上加就可以了<br>如果考虑元音各自的个数，那就另外设两个hashmap，最后比较两个hashmap是否相同</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">halvesAreAlike</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        n=<span class="built_in">len</span>(s)</span><br><span class="line">        a=s[:n//<span class="number">2</span>]</span><br><span class="line">        b=s[n//<span class="number">2</span>:]</span><br><span class="line">        count_a=<span class="number">0</span></span><br><span class="line">        count_b=<span class="number">0</span></span><br><span class="line">        vowels=&#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;e&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;i&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;o&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;u&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;A&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;E&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;I&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;O&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;U&#x27;</span>:<span class="number">1</span>&#125;</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> a:</span><br><span class="line">            <span class="keyword">if</span> c <span class="keyword">in</span> vowels:</span><br><span class="line">                count_a+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> b:</span><br><span class="line">            <span class="keyword">if</span> c <span class="keyword">in</span> vowels:</span><br><span class="line">                count_b+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> count_a==count_b</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;1704-Determine-if-String-Halves-Are-Alike-easy&quot;&gt;&lt;a href=&quot;#1704-Determine-if-String-Halves-Are-Alike-easy&quot; class=&quot;headerlink&quot; title=&quot;</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
+    
+  </entry>
   
   <entry>
     <title>43</title>
@@ -493,92 +547,6 @@
     <category term="Python" scheme="http://example.com/tags/Python/"/>
     
     <category term="string" scheme="http://example.com/tags/string/"/>
-    
-    <category term="stack" scheme="http://example.com/tags/stack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>696. Count Binary Substrings(easy)</title>
-    <link href="http://example.com/2022/11/21/696/"/>
-    <id>http://example.com/2022/11/21/696/</id>
-    <published>2022-11-21T20:57:28.000Z</published>
-    <updated>2022-11-27T21:30:52.087Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="696-Count-Binary-Substrings-easy"><a href="#696-Count-Binary-Substrings-easy" class="headerlink" title="696. Count Binary Substrings(easy)"></a>696. Count Binary Substrings(easy)</h1><h2 id="Given-a-binary-string-s-return-the-number-of-non-empty-substrings-that-have-the-same-number-of-0’s-and-1’s-and-all-the-0’s-and-all-the-1’s-in-these-substrings-are-grouped-consecutively"><a href="#Given-a-binary-string-s-return-the-number-of-non-empty-substrings-that-have-the-same-number-of-0’s-and-1’s-and-all-the-0’s-and-all-the-1’s-in-these-substrings-are-grouped-consecutively" class="headerlink" title="Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively."></a>Given a binary string s, return the number of non-empty substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively.</h2><h2 id="Substrings-that-occur-multiple-times-are-counted-the-number-of-times-they-occur"><a href="#Substrings-that-occur-multiple-times-are-counted-the-number-of-times-they-occur" class="headerlink" title="Substrings that occur multiple times are counted the number of times they occur."></a>Substrings that occur multiple times are counted the number of times they occur.</h2><h2 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/count-binary-substrings/solution/ji-shu-er-jin-zhi-zi-chuan-by-leetcode-solution/">官方题解</a></h2><p>看到该题的第一反应是位运算，但是没有想好该怎么解。但其实根本没有那么复杂：<br>我们可以将字符串 s 按照 0 和 1 的连续段分组，存在 counts 数组中，例如 s = 00111011，可以得到这样的 counts 数组：counts={2,3,1,2}。</p><p>这里 counts 数组中两个相邻的数一定代表的是两种不同的字符。假设 counts 数组中两个相邻的数字为 u 或者 v，它们对应着 u 个 0 和 v 个 1，或者 u 个 1 和 v 个 0。它们能组成的满足条件的子串数目为 min{u,v}，即一对相邻的数字对答案的贡献。</p><p>我们只要遍历所有相邻的数对，求它们的贡献总和，即可得到答案。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countBinarySubstrings</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line"></span><br><span class="line">        n=<span class="built_in">len</span>(s)</span><br><span class="line">        last=<span class="number">0</span></span><br><span class="line">        ans=<span class="number">0</span></span><br><span class="line">        i=<span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> i &lt;n:</span><br><span class="line">            c=s[i]</span><br><span class="line">            count=<span class="number">0</span></span><br><span class="line">            <span class="keyword">while</span> i&lt;n <span class="keyword">and</span> s[i]==c:</span><br><span class="line">                i+=<span class="number">1</span></span><br><span class="line">                count+=<span class="number">1</span></span><br><span class="line">            ans +=<span class="built_in">min</span>(count,last)</span><br><span class="line">            last=count</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;696-Count-Binary-Substrings-easy&quot;&gt;&lt;a href=&quot;#696-Count-Binary-Substrings-easy&quot; class=&quot;headerlink&quot; title=&quot;696. Count Binary Substrings</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-    <category term="array" scheme="http://example.com/tags/array/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>599. Minimum Index Sum of Two Lists(easy)</title>
-    <link href="http://example.com/2022/11/21/599/"/>
-    <id>http://example.com/2022/11/21/599/</id>
-    <published>2022-11-21T20:34:31.000Z</published>
-    <updated>2022-11-21T20:38:43.125Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="599-Minimum-Index-Sum-of-Two-Lists-easy"><a href="#599-Minimum-Index-Sum-of-Two-Lists-easy" class="headerlink" title="599. Minimum Index Sum of Two Lists(easy)"></a>599. Minimum Index Sum of Two Lists(easy)</h1><h2 id="Given-two-arrays-of-strings-list1-and-list2-find-the-common-strings-with-the-least-index-sum"><a href="#Given-two-arrays-of-strings-list1-and-list2-find-the-common-strings-with-the-least-index-sum" class="headerlink" title="Given two arrays of strings list1 and list2, find the common strings with the least index sum."></a>Given two arrays of strings list1 and list2, find the common strings with the least index sum.</h2><h2 id="A-common-string-is-a-string-that-appeared-in-both-list1-and-list2"><a href="#A-common-string-is-a-string-that-appeared-in-both-list1-and-list2" class="headerlink" title="A common string is a string that appeared in both list1 and list2."></a>A common string is a string that appeared in both list1 and list2.</h2><h2 id="A-common-string-with-the-least-index-sum-is-a-common-string-such-that-if-it-appeared-at-list1-i-and-list2-j-then-i-j-should-be-the-minimum-value-among-all-the-other-common-strings"><a href="#A-common-string-with-the-least-index-sum-is-a-common-string-such-that-if-it-appeared-at-list1-i-and-list2-j-then-i-j-should-be-the-minimum-value-among-all-the-other-common-strings" class="headerlink" title="A common string with the least index sum is a common string such that if it appeared at list1[i] and list2[j] then i + j should be the minimum value among all the other common strings."></a>A common string with the least index sum is a common string such that if it appeared at list1[i] and list2[j] then i + j should be the minimum value among all the other common strings.</h2><h2 id="Return-all-the-common-strings-with-the-least-index-sum-Return-the-answer-in-any-order"><a href="#Return-all-the-common-strings-with-the-least-index-sum-Return-the-answer-in-any-order" class="headerlink" title="Return all the common strings with the least index sum. Return the answer in any order."></a>Return all the common strings with the least index sum. Return the answer in any order.</h2><p>先找出两个list相同的字符，再记录下最小的数值，然后用hashmap找到对应的字符</p><pre><code class="python">class Solution:    def findRestaurant(self, list1: List[str], list2: List[str]) -&gt; List[str]:        ans=[]        d=&#123;&#125;        for i in range(len(list1)):            if list1[i] in list2:                d[list1[i]]=i+list2.index(list1[i])        min_index=min(d.values())        res=[]        for i in d:            if d[i]==min_index:                res.append(i)        return res        </code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;599-Minimum-Index-Sum-of-Two-Lists-easy&quot;&gt;&lt;a href=&quot;#599-Minimum-Index-Sum-of-Two-Lists-easy&quot; class=&quot;headerlink&quot; title=&quot;599. Minimum I</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>917. Reverse Only Letters(easy)</title>
-    <link href="http://example.com/2022/11/21/917/"/>
-    <id>http://example.com/2022/11/21/917/</id>
-    <published>2022-11-21T20:10:44.000Z</published>
-    <updated>2022-11-21T21:13:30.703Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="917-Reverse-Only-Letters-easy"><a href="#917-Reverse-Only-Letters-easy" class="headerlink" title="917. Reverse Only Letters(easy)"></a>917. Reverse Only Letters(easy)</h1><h2 id="Given-a-string-s-reverse-the-string-according-to-the-following-rules"><a href="#Given-a-string-s-reverse-the-string-according-to-the-following-rules" class="headerlink" title="Given a string s, reverse the string according to the following rules:"></a>Given a string s, reverse the string according to the following rules:</h2><h2 id="All-the-characters-that-are-not-English-letters-remain-in-the-same-position"><a href="#All-the-characters-that-are-not-English-letters-remain-in-the-same-position" class="headerlink" title="All the characters that are not English letters remain in the same position."></a>All the characters that are not English letters remain in the same position.</h2><h2 id="All-the-English-letters-lowercase-or-uppercase-should-be-reversed"><a href="#All-the-English-letters-lowercase-or-uppercase-should-be-reversed" class="headerlink" title="All the English letters (lowercase or uppercase) should be reversed."></a>All the English letters (lowercase or uppercase) should be reversed.</h2><h2 id="Return-s-after-reversing-it"><a href="#Return-s-after-reversing-it" class="headerlink" title="Return s after reversing it."></a>Return s after reversing it.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;ab-cd&quot;</span><br><span class="line">Output: &quot;dc-ba&quot;</span><br></pre></td></tr></table></figure><p>stack用在这里正好，字母存进栈，等识别到符号就放符号，不是符号就pop</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseOnlyLetters</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        letters=[c <span class="keyword">for</span> c <span class="keyword">in</span> s <span class="keyword">if</span> c.isalpha()]</span><br><span class="line">        ans=[]</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> c.isalpha():</span><br><span class="line">                ans.append(letters.pop())</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ans.append(c)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(ans)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;917-Reverse-Only-Letters-easy&quot;&gt;&lt;a href=&quot;#917-Reverse-Only-Letters-easy&quot; class=&quot;headerlink&quot; title=&quot;917. Reverse Only Letters(easy)&quot;&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
     
     <category term="stack" scheme="http://example.com/tags/stack/"/>
     
