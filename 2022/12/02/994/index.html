@@ -4,35 +4,39 @@
 
 <head>
     
-    <title>994 - 八角书屋</title>
+    <title>994. Rotting Oranges(medium) - 八角书屋</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <meta name="description" content="所求皆如愿，所行化坦途">
+    <meta name="description" content="994. Rotting Oranges(medium)You are given an m x n grid where each cell can have one of three values:0 representing an empty cell,1 representing a fresh orange, or2 representing a rotten orange.Every">
 <meta property="og:type" content="article">
-<meta property="og:title" content="994">
+<meta property="og:title" content="994. Rotting Oranges(medium)">
 <meta property="og:url" content="http://example.com/2022/12/02/994/index.html">
 <meta property="og:site_name" content="八角书屋">
-<meta property="og:description" content="所求皆如愿，所行化坦途">
+<meta property="og:description" content="994. Rotting Oranges(medium)You are given an m x n grid where each cell can have one of three values:0 representing an empty cell,1 representing a fresh orange, or2 representing a rotten orange.Every">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-03T03:27:21.000Z">
-<meta property="article:modified_time" content="2022-12-03T03:27:21.097Z">
+<meta property="article:modified_time" content="2022-12-03T22:53:02.131Z">
 <meta property="article:author" content="leaf">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="matrix">
+<meta property="article:tag" content="bfs">
 <meta name="twitter:card" content="summary">
     
 <link rel="stylesheet" href="/lib/fancybox/fancybox.css">
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1670038109741">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1670257359491">
     
-    <link rel="stylesheet" href="/css/style.css?v=1670038109741">
+    <link rel="stylesheet" href="/css/style.css?v=1670257359491">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1670038109741">
+            <link rel="stylesheet" href="/custom.css?v=1670257359491">
         
     
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="八角书屋" type="application/atom+xml">
@@ -58,8 +62,8 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>307</div>
-        <div><span>标签</span>70</div>
+        <div><span>文章</span>312</div>
+        <div><span>标签</span>71</div>
         <div><span>分类</span>2</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
@@ -104,7 +108,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1670038109741"></script>
+	<script async src="/js/search.js?v=1670257359492"></script>
 
 
 
@@ -206,7 +210,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/study/">study</a>
-          <span class="category-list-count">296</span>
+          <span class="category-list-count">302</span>
         </li>
 
         
@@ -221,12 +225,12 @@
         
   <div class="nexmoe-widget-wrap">
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/tags/Backtracking/" style="font-size: 10.53px;">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;">Counter</a> <a href="/tags/DFA/" style="font-size: 10.53px;">DFA</a> <a href="/tags/DFS/" style="font-size: 10.53px;">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 12.11px;">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 15.26px;">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;">Greatest common divisor </a> <a href="/tags/Greedy/" style="font-size: 10px;">Greedy</a> <a href="/tags/Heap-Sort/" style="font-size: 10px;">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;">LCP</a> <a href="/tags/Linked-list/" style="font-size: 16.84px;">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13.16px;">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11.05px;">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.53px;">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.47px;">Python</a> <a href="/tags/Queues/" style="font-size: 10.53px;">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.53px;">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.58px;">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.58px;">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.53px;">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.53px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 13.68px;">Tree</a> <a href="/tags/array/" style="font-size: 18.95px;">array</a> <a href="/tags/backtracking/" style="font-size: 10px;">backtracking</a> <a href="/tags/binary-search/" style="font-size: 12.11px;">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.63px;">binary search algorithm</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary tree</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary-tree</a> <a href="/tags/bitmask/" style="font-size: 10px;">bitmask</a> <a href="/tags/bitwise/" style="font-size: 15.26px;">bitwise</a> <a href="/tags/dfs/" style="font-size: 10.53px;">dfs</a> <a href="/tags/difference-array/" style="font-size: 12.63px;">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.53px;">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 16.32px;">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.53px;">game</a> <a href="/tags/greedy/" style="font-size: 10px;">greedy</a> <a href="/tags/greedy-algorithm/" style="font-size: 14.74px;">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.42px;">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.53px;">hashset</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a> <a href="/tags/life/" style="font-size: 10.53px;">life</a> <a href="/tags/linked-list/" style="font-size: 11.05px;">linked-list</a> <a href="/tags/list/" style="font-size: 10.53px;">list</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mapping/" style="font-size: 11.05px;">mapping</a> <a href="/tags/math/" style="font-size: 14.21px;">math</a> <a href="/tags/maths/" style="font-size: 11.58px;">maths</a> <a href="/tags/matrix/" style="font-size: 11.58px;">matrix</a> <a href="/tags/prefix-sum/" style="font-size: 13.16px;">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;">prime number</a> <a href="/tags/python-function/" style="font-size: 10.53px;">python function</a> <a href="/tags/recursion/" style="font-size: 14.21px;">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/set/" style="font-size: 11.58px;">set</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/sliding-window/" style="font-size: 10px;">sliding window</a> <a href="/tags/sort/" style="font-size: 10.53px;">sort</a> <a href="/tags/stack/" style="font-size: 15.79px;">stack</a> <a href="/tags/string/" style="font-size: 17.89px;">string</a> <a href="/tags/substring/" style="font-size: 10px;">substring</a> <a href="/tags/topk/" style="font-size: 12.11px;">topk</a> <a href="/tags/tree/" style="font-size: 12.11px;">tree</a> <a href="/tags/two-pointer/" style="font-size: 12.11px;">two-pointer</a> <a href="/tags/two-pointers/" style="font-size: 17.37px;">two-pointers</a>
+      <a href="/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/tags/Backtracking/" style="font-size: 10.5px;">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;">Counter</a> <a href="/tags/DFA/" style="font-size: 10.5px;">DFA</a> <a href="/tags/DFS/" style="font-size: 10.5px;">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 12px;">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 15.5px;">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;">Greatest common divisor </a> <a href="/tags/Greedy/" style="font-size: 10px;">Greedy</a> <a href="/tags/Heap-Sort/" style="font-size: 10px;">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;">LCP</a> <a href="/tags/Linked-list/" style="font-size: 17px;">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13px;">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11px;">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.5px;">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.5px;">Python</a> <a href="/tags/Queues/" style="font-size: 10.5px;">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.5px;">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.5px;">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.5px;">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.5px;">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.5px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 13.5px;">Tree</a> <a href="/tags/array/" style="font-size: 19px;">array</a> <a href="/tags/backtracking/" style="font-size: 10px;">backtracking</a> <a href="/tags/bfs/" style="font-size: 10px;">bfs</a> <a href="/tags/binary-search/" style="font-size: 12px;">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.5px;">binary search algorithm</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary tree</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary-tree</a> <a href="/tags/bitmask/" style="font-size: 10px;">bitmask</a> <a href="/tags/bitwise/" style="font-size: 15.5px;">bitwise</a> <a href="/tags/dfs/" style="font-size: 10.5px;">dfs</a> <a href="/tags/difference-array/" style="font-size: 12.5px;">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.5px;">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 16.5px;">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.5px;">game</a> <a href="/tags/greedy/" style="font-size: 10px;">greedy</a> <a href="/tags/greedy-algorithm/" style="font-size: 14.5px;">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.5px;">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.5px;">hashset</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a> <a href="/tags/life/" style="font-size: 10.5px;">life</a> <a href="/tags/linked-list/" style="font-size: 11px;">linked-list</a> <a href="/tags/list/" style="font-size: 10.5px;">list</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mapping/" style="font-size: 11px;">mapping</a> <a href="/tags/math/" style="font-size: 15px;">math</a> <a href="/tags/maths/" style="font-size: 11.5px;">maths</a> <a href="/tags/matrix/" style="font-size: 13px;">matrix</a> <a href="/tags/prefix-sum/" style="font-size: 13px;">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;">prime number</a> <a href="/tags/python-function/" style="font-size: 10.5px;">python function</a> <a href="/tags/recursion/" style="font-size: 14px;">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/set/" style="font-size: 11.5px;">set</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/sliding-window/" style="font-size: 10px;">sliding window</a> <a href="/tags/sort/" style="font-size: 10.5px;">sort</a> <a href="/tags/stack/" style="font-size: 16px;">stack</a> <a href="/tags/string/" style="font-size: 18px;">string</a> <a href="/tags/substring/" style="font-size: 10px;">substring</a> <a href="/tags/topk/" style="font-size: 12px;">topk</a> <a href="/tags/tree/" style="font-size: 12px;">tree</a> <a href="/tags/two-pointer/" style="font-size: 12px;">two-pointer</a> <a href="/tags/two-pointers/" style="font-size: 17.5px;">two-pointers</a>
     </div>
     
       <script>
         var maxTagcloud = parseInt(17);
-        var tags_length = parseInt(70);
+        var tags_length = parseInt(71);
         var tags_arr = [];
         for(var i = 0; i < tags_length; i++){
           tags_arr.push(i);
@@ -249,7 +253,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">303</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">308</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -264,23 +268,23 @@
       <ul>
         
           <li>
-            <a href="/2022/12/02/994/">994</a>
+            <a href="/2022/12/05/256/">256. Paint House(medium)</a>
           </li>
         
           <li>
-            <a href="/2022/11/30/921/">921</a>
+            <a href="/2022/12/04/523/">523. Continuous Subarray Sum(medium)</a>
           </li>
         
           <li>
-            <a href="/2022/11/30/1704/">1704. Determine if String Halves Are Alike(easy)</a>
+            <a href="/2022/12/03/84/">84. Largest Rectangle in Histogram(hard)</a>
           </li>
         
           <li>
-            <a href="/2022/11/30/43/">43</a>
+            <a href="/2022/12/03/400/">400. Nth Digit(medium)</a>
           </li>
         
           <li>
-            <a href="/2022/11/29/1277/">1277. Count Square Submatrices with All Ones(medium)</a>
+            <a href="/2022/12/03/554/">554. Brick Wall(medium)</a>
           </li>
         
       </ul>
@@ -303,9 +307,9 @@
 
   <article>
     
-        <div class="nexmoe-post-cover"> 
-            <img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/DVA鬼刀3440x1440壁纸.4wsj6bhewne0.webp" alt="994" loading="lazy">
-            <h1>994</h1>
+        <div class="nexmoe-post-cover absolute" style="padding-top: 50%;"> 
+            <img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/cover-image/77a208d2fd1f4134d3338baa601f95cad0c85e18.1ayxsn7l7dmo.webp" alt="994. Rotting Oranges(medium)" loading="lazy">
+            <h1>994. Rotting Oranges(medium)</h1>
         </div>
     
     
@@ -313,9 +317,11 @@
     <div class="nexmoe-rainbow">
         <a class="nexmoefont icon-calendar-fill">2022年12月02日</a>
         
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/study/">study</a>
         
-    <a><i class="nexmoefont icon-areachart"></i>约0字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要1分钟</a>
+        
+    <a><i class="nexmoefont icon-areachart"></i>约580字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要2分钟</a>
 
     </div>
     
@@ -325,7 +331,9 @@
     
 </div>
 
-    
+    <h1 id="994-Rotting-Oranges-medium"><a href="#994-Rotting-Oranges-medium" class="headerlink" title="994. Rotting Oranges(medium)"></a>994. Rotting Oranges(medium)</h1><h2 id="You-are-given-an-m-x-n-grid-where-each-cell-can-have-one-of-three-values"><a href="#You-are-given-an-m-x-n-grid-where-each-cell-can-have-one-of-three-values" class="headerlink" title="You are given an m x n grid where each cell can have one of three values:"></a>You are given an m x n grid where each cell can have one of three values:</h2><p>0 representing an empty cell,<br>1 representing a fresh orange, or<br>2 representing a rotten orange.<br>Every minute, any fresh orange that is 4-directionally adjacent to a rotten orange becomes rotten.</p>
+<p>Return the minimum number of minutes that must elapse until no cell has a fresh orange. If this is impossible, return -1.</p>
+<h2 id="leetcode题解"><a href="#leetcode题解" class="headerlink" title="leetcode题解"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotting-oranges/solution/li-qing-si-lu-wei-shi-yao-yong-bfsyi-ji-ru-he-xie-/">leetcode题解</a></h2><h2 id="有了计算最短路径的层序-BFS-代码框架，写这道题就很简单了。这道题的主要思路是："><a href="#有了计算最短路径的层序-BFS-代码框架，写这道题就很简单了。这道题的主要思路是：" class="headerlink" title="有了计算最短路径的层序 BFS 代码框架，写这道题就很简单了。这道题的主要思路是："></a>有了计算最短路径的层序 BFS 代码框架，写这道题就很简单了。这道题的主要思路是：</h2><h2 id="一开始，我们找出所有腐烂的橘子，将它们放入队列，作为第-0-层的结点。"><a href="#一开始，我们找出所有腐烂的橘子，将它们放入队列，作为第-0-层的结点。" class="headerlink" title="一开始，我们找出所有腐烂的橘子，将它们放入队列，作为第 0 层的结点。"></a>一开始，我们找出所有腐烂的橘子，将它们放入队列，作为第 0 层的结点。</h2><h2 id="然后进行-BFS-遍历，每个结点的相邻结点可能是上、下、左、右四个方向的结点，注意判断结点位于网格边界的特殊情况。"><a href="#然后进行-BFS-遍历，每个结点的相邻结点可能是上、下、左、右四个方向的结点，注意判断结点位于网格边界的特殊情况。" class="headerlink" title="然后进行 BFS 遍历，每个结点的相邻结点可能是上、下、左、右四个方向的结点，注意判断结点位于网格边界的特殊情况。"></a>然后进行 BFS 遍历，每个结点的相邻结点可能是上、下、左、右四个方向的结点，注意判断结点位于网格边界的特殊情况。</h2><h2 id="由于可能存在无法被污染的橘子，我们需要记录新鲜橘子的数量。在-BFS-中，每遍历到一个橘子（污染了一个橘子），就将新鲜橘子的数量减一。如果-BFS-结束后这个数量仍未减为零，说明存在无法被污染的橘子。"><a href="#由于可能存在无法被污染的橘子，我们需要记录新鲜橘子的数量。在-BFS-中，每遍历到一个橘子（污染了一个橘子），就将新鲜橘子的数量减一。如果-BFS-结束后这个数量仍未减为零，说明存在无法被污染的橘子。" class="headerlink" title="由于可能存在无法被污染的橘子，我们需要记录新鲜橘子的数量。在 BFS 中，每遍历到一个橘子（污染了一个橘子），就将新鲜橘子的数量减一。如果 BFS 结束后这个数量仍未减为零，说明存在无法被污染的橘子。"></a>由于可能存在无法被污染的橘子，我们需要记录新鲜橘子的数量。在 BFS 中，每遍历到一个橘子（污染了一个橘子），就将新鲜橘子的数量减一。如果 BFS 结束后这个数量仍未减为零，说明存在无法被污染的橘子。</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span>    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">orangesRotting</span>(<span class="params">self, grid: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>)-&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        M = <span class="built_in">len</span>(grid)</span><br><span class="line">        N = <span class="built_in">len</span>(grid[<span class="number">0</span>])</span><br><span class="line">        queue = []</span><br><span class="line"></span><br><span class="line">        count = <span class="number">0</span>  <span class="comment"># count 表示新鲜橘子的数量</span></span><br><span class="line">        <span class="keyword">for</span> r <span class="keyword">in</span> <span class="built_in">range</span>(M):</span><br><span class="line">            <span class="keyword">for</span> c <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">                <span class="keyword">if</span> grid[r][c] == <span class="number">1</span>:</span><br><span class="line">                    count += <span class="number">1</span> <span class="comment">#计数好橘子</span></span><br><span class="line">                <span class="keyword">elif</span> grid[r][c] == <span class="number">2</span>:</span><br><span class="line">                    queue.append((r, c))</span><br><span class="line"></span><br><span class="line">        <span class="built_in">round</span> = <span class="number">0</span>  <span class="comment"># round 表示腐烂的轮数，或者分钟数</span></span><br><span class="line">        <span class="keyword">while</span> count &gt; <span class="number">0</span> <span class="keyword">and</span> <span class="built_in">len</span>(queue) &gt; <span class="number">0</span>:  <span class="comment"># 还有好橘子且队列还有坏橘子</span></span><br><span class="line">            <span class="built_in">round</span> += <span class="number">1</span>  <span class="comment"># 层数+1</span></span><br><span class="line">            n = <span class="built_in">len</span>(queue)  <span class="comment"># 记录这一层的坏橘子数</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):  <span class="comment"># 遍历完这一层的坏橘子</span></span><br><span class="line">                r, c = queue.pop(<span class="number">0</span>)  <span class="comment"># 取出队列开头的坏橘子坐标</span></span><br><span class="line">                <span class="keyword">if</span> r-<span class="number">1</span> &gt;= <span class="number">0</span> <span class="keyword">and</span> grid[r-<span class="number">1</span>][c] == <span class="number">1</span>:  <span class="comment"># 上邻有好橘子</span></span><br><span class="line">                    grid[r-<span class="number">1</span>][c] = <span class="number">2</span>  <span class="comment"># 好橘子变坏</span></span><br><span class="line">                    count -= <span class="number">1</span>  <span class="comment"># 好橘子数-1</span></span><br><span class="line">                    queue.append((r-<span class="number">1</span>, c))  <span class="comment"># 新变坏的这只橘子进入坏橘子队列</span></span><br><span class="line">                <span class="keyword">if</span> r+<span class="number">1</span> &lt; M <span class="keyword">and</span> grid[r+<span class="number">1</span>][c] == <span class="number">1</span>:  <span class="comment"># 下邻有好橘子</span></span><br><span class="line">                    grid[r+<span class="number">1</span>][c] = <span class="number">2</span></span><br><span class="line">                    count -= <span class="number">1</span></span><br><span class="line">                    queue.append((r+<span class="number">1</span>, c))</span><br><span class="line">                <span class="keyword">if</span> c-<span class="number">1</span> &gt;= <span class="number">0</span> <span class="keyword">and</span> grid[r][c-<span class="number">1</span>] == <span class="number">1</span>:  <span class="comment"># 左邻有好橘子</span></span><br><span class="line">                    grid[r][c-<span class="number">1</span>] = <span class="number">2</span></span><br><span class="line">                    count -= <span class="number">1</span></span><br><span class="line">                    queue.append((r, c-<span class="number">1</span>))</span><br><span class="line">                <span class="keyword">if</span> c+<span class="number">1</span> &lt; N <span class="keyword">and</span> grid[r][c+<span class="number">1</span>] == <span class="number">1</span>:  <span class="comment"># 右邻有好橘子</span></span><br><span class="line">                    grid[r][c+<span class="number">1</span>] = <span class="number">2</span></span><br><span class="line">                    count -= <span class="number">1</span></span><br><span class="line">                    queue.append((r, c+<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> count &gt; <span class="number">0</span>:  <span class="comment"># 还有好橘子</span></span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:  <span class="comment"># 没有好橘子了</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">round</span></span><br></pre></td></tr></table></figure>
     
   </article>
 
@@ -345,6 +353,8 @@
   <div class="nexmoe-post-meta nexmoe-rainbow">
    
     
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Python/" rel="tag">Python</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/bfs/" rel="tag">bfs</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/leetcode/" rel="tag">leetcode</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/matrix/" rel="tag">matrix</a>
+    
 </div>
 
   
@@ -360,6 +370,13 @@
                       
                         
                           
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#994-Rotting-Oranges-medium"><span class="toc-number">1.</span> <span class="toc-text">994. Rotting Oranges(medium)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#You-are-given-an-m-x-n-grid-where-each-cell-can-have-one-of-three-values"><span class="toc-number">1.1.</span> <span class="toc-text">You are given an m x n grid where each cell can have one of three values:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#leetcode%E9%A2%98%E8%A7%A3"><span class="toc-number">1.2.</span> <span class="toc-text">leetcode题解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E4%BA%86%E8%AE%A1%E7%AE%97%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%9A%84%E5%B1%82%E5%BA%8F-BFS-%E4%BB%A3%E7%A0%81%E6%A1%86%E6%9E%B6%EF%BC%8C%E5%86%99%E8%BF%99%E9%81%93%E9%A2%98%E5%B0%B1%E5%BE%88%E7%AE%80%E5%8D%95%E4%BA%86%E3%80%82%E8%BF%99%E9%81%93%E9%A2%98%E7%9A%84%E4%B8%BB%E8%A6%81%E6%80%9D%E8%B7%AF%E6%98%AF%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">有了计算最短路径的层序 BFS 代码框架，写这道题就很简单了。这道题的主要思路是：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%BC%80%E5%A7%8B%EF%BC%8C%E6%88%91%E4%BB%AC%E6%89%BE%E5%87%BA%E6%89%80%E6%9C%89%E8%85%90%E7%83%82%E7%9A%84%E6%A9%98%E5%AD%90%EF%BC%8C%E5%B0%86%E5%AE%83%E4%BB%AC%E6%94%BE%E5%85%A5%E9%98%9F%E5%88%97%EF%BC%8C%E4%BD%9C%E4%B8%BA%E7%AC%AC-0-%E5%B1%82%E7%9A%84%E7%BB%93%E7%82%B9%E3%80%82"><span class="toc-number">1.4.</span> <span class="toc-text">一开始，我们找出所有腐烂的橘子，将它们放入队列，作为第 0 层的结点。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%84%B6%E5%90%8E%E8%BF%9B%E8%A1%8C-BFS-%E9%81%8D%E5%8E%86%EF%BC%8C%E6%AF%8F%E4%B8%AA%E7%BB%93%E7%82%B9%E7%9A%84%E7%9B%B8%E9%82%BB%E7%BB%93%E7%82%B9%E5%8F%AF%E8%83%BD%E6%98%AF%E4%B8%8A%E3%80%81%E4%B8%8B%E3%80%81%E5%B7%A6%E3%80%81%E5%8F%B3%E5%9B%9B%E4%B8%AA%E6%96%B9%E5%90%91%E7%9A%84%E7%BB%93%E7%82%B9%EF%BC%8C%E6%B3%A8%E6%84%8F%E5%88%A4%E6%96%AD%E7%BB%93%E7%82%B9%E4%BD%8D%E4%BA%8E%E7%BD%91%E6%A0%BC%E8%BE%B9%E7%95%8C%E7%9A%84%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5%E3%80%82"><span class="toc-number">1.5.</span> <span class="toc-text">然后进行 BFS 遍历，每个结点的相邻结点可能是上、下、左、右四个方向的结点，注意判断结点位于网格边界的特殊情况。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B1%E4%BA%8E%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%E6%97%A0%E6%B3%95%E8%A2%AB%E6%B1%A1%E6%9F%93%E7%9A%84%E6%A9%98%E5%AD%90%EF%BC%8C%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E8%AE%B0%E5%BD%95%E6%96%B0%E9%B2%9C%E6%A9%98%E5%AD%90%E7%9A%84%E6%95%B0%E9%87%8F%E3%80%82%E5%9C%A8-BFS-%E4%B8%AD%EF%BC%8C%E6%AF%8F%E9%81%8D%E5%8E%86%E5%88%B0%E4%B8%80%E4%B8%AA%E6%A9%98%E5%AD%90%EF%BC%88%E6%B1%A1%E6%9F%93%E4%BA%86%E4%B8%80%E4%B8%AA%E6%A9%98%E5%AD%90%EF%BC%89%EF%BC%8C%E5%B0%B1%E5%B0%86%E6%96%B0%E9%B2%9C%E6%A9%98%E5%AD%90%E7%9A%84%E6%95%B0%E9%87%8F%E5%87%8F%E4%B8%80%E3%80%82%E5%A6%82%E6%9E%9C-BFS-%E7%BB%93%E6%9D%9F%E5%90%8E%E8%BF%99%E4%B8%AA%E6%95%B0%E9%87%8F%E4%BB%8D%E6%9C%AA%E5%87%8F%E4%B8%BA%E9%9B%B6%EF%BC%8C%E8%AF%B4%E6%98%8E%E5%AD%98%E5%9C%A8%E6%97%A0%E6%B3%95%E8%A2%AB%E6%B1%A1%E6%9F%93%E7%9A%84%E6%A9%98%E5%AD%90%E3%80%82"><span class="toc-number">1.6.</span> <span class="toc-text">由于可能存在无法被污染的橘子，我们需要记录新鲜橘子的数量。在 BFS 中，每遍历到一个橘子（污染了一个橘子），就将新鲜橘子的数量减一。如果 BFS 结束后这个数量仍未减为零，说明存在无法被污染的橘子。</span></a></li></ol></li></ol>
+                                  </div>
+                              </button>
                           
                           
                       
@@ -394,7 +411,7 @@
 
  
 
-<script async src="/js/app.js?v=1670038109745"></script>
+<script async src="/js/app.js?v=1670257359500"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
 

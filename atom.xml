@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-03T03:27:21.097Z</updated>
+  <updated>2022-12-05T15:42:24.391Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,15 +17,180 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>994</title>
+    <title>256. Paint House(medium)</title>
+    <link href="http://example.com/2022/12/05/256/"/>
+    <id>http://example.com/2022/12/05/256/</id>
+    <published>2022-12-05T15:32:49.000Z</published>
+    <updated>2022-12-05T15:42:24.391Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="256-Paint-House-medium"><a href="#256-Paint-House-medium" class="headerlink" title="256. Paint House(medium)"></a>256. Paint House(medium)</h1><h2 id="There-is-a-row-of-n-houses-where-each-house-can-be-painted-one-of-three-colors-red-blue-or-green-The-cost-of-painting-each-house-with-a-certain-color-is-different-You-have-to-paint-all-the-houses-such-that-no-two-adjacent-houses-have-the-same-color"><a href="#There-is-a-row-of-n-houses-where-each-house-can-be-painted-one-of-three-colors-red-blue-or-green-The-cost-of-painting-each-house-with-a-certain-color-is-different-You-have-to-paint-all-the-houses-such-that-no-two-adjacent-houses-have-the-same-color" class="headerlink" title="There is a row of n houses, where each house can be painted one of three colors: red, blue, or green. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color."></a>There is a row of n houses, where each house can be painted one of three colors: red, blue, or green. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.</h2><h2 id="The-cost-of-painting-each-house-with-a-certain-color-is-represented-by-an-n-x-3-cost-matrix-costs"><a href="#The-cost-of-painting-each-house-with-a-certain-color-is-represented-by-an-n-x-3-cost-matrix-costs" class="headerlink" title="The cost of painting each house with a certain color is represented by an n x 3 cost matrix costs."></a>The cost of painting each house with a certain color is represented by an n x 3 cost matrix costs.</h2><h2 id="example-costs-0-0-is-the-cost-of-painting-house-0-with-the-color-red-costs-1-2-is-the-cost-of-painting-house-1-with-color-green-and-so-on…"><a href="#example-costs-0-0-is-the-cost-of-painting-house-0-with-the-color-red-costs-1-2-is-the-cost-of-painting-house-1-with-color-green-and-so-on…" class="headerlink" title="example, costs[0][0] is the cost of painting house 0 with the color red; costs[1][2] is the cost of painting house 1 with color green, and so on…"></a>example, costs[0][0] is the cost of painting house 0 with the color red; costs[1][2] is the cost of painting house 1 with color green, and so on…</h2><h2 id="Return-the-minimum-cost-to-paint-all-houses"><a href="#Return-the-minimum-cost-to-paint-all-houses" class="headerlink" title="Return the minimum cost to paint all houses."></a>Return the minimum cost to paint all houses.</h2><h2 id="假如有一排房子，共-n-个，每个房子可以被粉刷成红色、蓝色或者绿色这三种颜色中的一种，你需要粉刷所有的房子并且使其相邻的两个房子颜色不能相同。"><a href="#假如有一排房子，共-n-个，每个房子可以被粉刷成红色、蓝色或者绿色这三种颜色中的一种，你需要粉刷所有的房子并且使其相邻的两个房子颜色不能相同。" class="headerlink" title="假如有一排房子，共 n 个，每个房子可以被粉刷成红色、蓝色或者绿色这三种颜色中的一种，你需要粉刷所有的房子并且使其相邻的两个房子颜色不能相同。"></a>假如有一排房子，共 n 个，每个房子可以被粉刷成红色、蓝色或者绿色这三种颜色中的一种，你需要粉刷所有的房子并且使其相邻的两个房子颜色不能相同。</h2><h2 id="当然，因为市场上不同颜色油漆的价格不同，所以房子粉刷成不同颜色的花费成本也是不同的。每个房子粉刷成不同颜色的花费是以一个-n-x-3-的正整数矩阵-costs-来表示的。"><a href="#当然，因为市场上不同颜色油漆的价格不同，所以房子粉刷成不同颜色的花费成本也是不同的。每个房子粉刷成不同颜色的花费是以一个-n-x-3-的正整数矩阵-costs-来表示的。" class="headerlink" title="当然，因为市场上不同颜色油漆的价格不同，所以房子粉刷成不同颜色的花费成本也是不同的。每个房子粉刷成不同颜色的花费是以一个 n x 3 的正整数矩阵 costs 来表示的。"></a>当然，因为市场上不同颜色油漆的价格不同，所以房子粉刷成不同颜色的花费成本也是不同的。每个房子粉刷成不同颜色的花费是以一个 n x 3 的正整数矩阵 costs 来表示的。</h2><h2 id="例如，costs-0-0-表示第-0-号房子粉刷成红色的成本花费；costs-1-2-表示第-1-号房子粉刷成绿色的花费，以此类推。"><a href="#例如，costs-0-0-表示第-0-号房子粉刷成红色的成本花费；costs-1-2-表示第-1-号房子粉刷成绿色的花费，以此类推。" class="headerlink" title="例如，costs[0][0] 表示第 0 号房子粉刷成红色的成本花费；costs[1][2] 表示第 1 号房子粉刷成绿色的花费，以此类推。"></a>例如，costs[0][0] 表示第 0 号房子粉刷成红色的成本花费；costs[1][2] 表示第 1 号房子粉刷成绿色的花费，以此类推。</h2><h2 id="请计算出粉刷完所有房子最少的花费成本。"><a href="#请计算出粉刷完所有房子最少的花费成本。" class="headerlink" title="请计算出粉刷完所有房子最少的花费成本。"></a>请计算出粉刷完所有房子最少的花费成本。</h2><p> </p><p>华子的机考题，改了一下数字，变成四种颜色了，但过程是一样的</p><h3 id="美区的官方题解"><a href="#美区的官方题解" class="headerlink" title="美区的官方题解"></a><a href="https://leetcode.com/problems/paint-house/solutions/490412/paint-house/">美区的官方题解</a></h3><p>就在costs这个矩阵上处理，从下往上，也就是从最后一行开始处理，上一行加上下一行的costs，就是找每行最小的成本然后不断的加到第一行，输出第一行里最小的结果</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minCost</span>(<span class="params">self, costs: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        n=<span class="built_in">len</span>(costs)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(<span class="built_in">range</span>(n-<span class="number">1</span>)):</span><br><span class="line">            costs[i][<span class="number">0</span>]+=<span class="built_in">min</span>(costs[i+<span class="number">1</span>][<span class="number">1</span>],costs[i+<span class="number">1</span>][<span class="number">2</span>])</span><br><span class="line">            costs[i][<span class="number">1</span>]+=<span class="built_in">min</span>(costs[i+<span class="number">1</span>][<span class="number">0</span>],costs[i+<span class="number">1</span>][<span class="number">2</span>])</span><br><span class="line">            costs[i][<span class="number">2</span>]+=<span class="built_in">min</span>(costs[i+<span class="number">1</span>][<span class="number">1</span>],costs[i+<span class="number">1</span>][<span class="number">0</span>])</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(costs)==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">min</span>(costs[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;256-Paint-House-medium&quot;&gt;&lt;a href=&quot;#256-Paint-House-medium&quot; class=&quot;headerlink&quot; title=&quot;256. Paint House(medium)&quot;&gt;&lt;/a&gt;256. Paint House(m</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
+    
+    <category term="matrix" scheme="http://example.com/tags/matrix/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>523. Continuous Subarray Sum(medium)</title>
+    <link href="http://example.com/2022/12/04/523/"/>
+    <id>http://example.com/2022/12/04/523/</id>
+    <published>2022-12-05T04:13:20.000Z</published>
+    <updated>2022-12-05T04:41:59.041Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="523-Continuous-Subarray-Sum-medium"><a href="#523-Continuous-Subarray-Sum-medium" class="headerlink" title="523. Continuous Subarray Sum(medium)"></a>523. Continuous Subarray Sum(medium)</h1><h2 id="Given-an-integer-array-nums-and-an-integer-k-return-true-if-nums-has-a-good-subarray-or-false-otherwise"><a href="#Given-an-integer-array-nums-and-an-integer-k-return-true-if-nums-has-a-good-subarray-or-false-otherwise" class="headerlink" title="Given an integer array nums and an integer k, return true if nums has a good subarray or false otherwise."></a>Given an integer array nums and an integer k, return true if nums has a good subarray or false otherwise.</h2><h2 id="A-good-subarray-is-a-subarray-where"><a href="#A-good-subarray-is-a-subarray-where" class="headerlink" title="A good subarray is a subarray where:"></a>A good subarray is a subarray where:</h2><p>its length is at least two, and<br>the sum of the elements of the subarray is a multiple of k.<br>Note that:</p><h2 id="A-subarray-is-a-contiguous-part-of-the-array"><a href="#A-subarray-is-a-contiguous-part-of-the-array" class="headerlink" title="A subarray is a contiguous part of the array."></a>A subarray is a contiguous part of the array.</h2><h2 id="An-integer-x-is-a-multiple-of-k-if-there-exists-an-integer-n-such-that-x-n-k-0-is-always-a-multiple-of-k"><a href="#An-integer-x-is-a-multiple-of-k-if-there-exists-an-integer-n-such-that-x-n-k-0-is-always-a-multiple-of-k" class="headerlink" title="An integer x is a multiple of k if there exists an integer n such that x = n * k. 0 is always a multiple of k."></a>An integer x is a multiple of k if there exists an integer n such that x = n * k. 0 is always a multiple of k.</h2><p>这道题最重要的就是同余定理，两个整数a、b，若它们除以整数m所得的余数相等，则称a与b对于模m同余或a同余于b模m。<br>举个例子就是，a%c=k,b%c=k 所以(a-b)%c=0</p><p>所以就是将不断求和的数组对K求余，得到的值看hashmap里有没有，没有就加进去，有的话就输出出来<br>这里子数组的最小长度是2，所以是不能直接这样从hashmap里只比较key，还需要利用i来设置value的值进行比较</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">checkSubarraySum</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], k: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span></span><br><span class="line">        hashmap=collections.defaultdict(<span class="built_in">int</span>)</span><br><span class="line">        sum1=<span class="number">0</span></span><br><span class="line">        count=<span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums)&lt;<span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        hashmap[<span class="number">0</span>]=<span class="number">0</span></span><br><span class="line">        remainder = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            sum1+=nums[i]</span><br><span class="line">            <span class="keyword">if</span> sum1%k <span class="keyword">not</span> <span class="keyword">in</span> hashmap:</span><br><span class="line">                hashmap[sum1 % k] = i + <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> hashmap[sum1%k]&lt;i:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;523-Continuous-Subarray-Sum-medium&quot;&gt;&lt;a href=&quot;#523-Continuous-Subarray-Sum-medium&quot; class=&quot;headerlink&quot; title=&quot;523. Continuous Subarray</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
+    
+    <category term="matrix" scheme="http://example.com/tags/matrix/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>84. Largest Rectangle in Histogram(hard)</title>
+    <link href="http://example.com/2022/12/03/84/"/>
+    <id>http://example.com/2022/12/03/84/</id>
+    <published>2022-12-04T00:12:05.000Z</published>
+    <updated>2022-12-04T01:03:18.117Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="84-Largest-Rectangle-in-Histogram-hard"><a href="#84-Largest-Rectangle-in-Histogram-hard" class="headerlink" title="84. Largest Rectangle in Histogram(hard)"></a>84. Largest Rectangle in Histogram(hard)</h1><h2 id="Given-an-array-of-integers-heights-representing-the-histogram’s-bar-height-where-the-width-of-each-bar-is-1-return-the-area-of-the-largest-rectangle-in-the-histogram"><a href="#Given-an-array-of-integers-heights-representing-the-histogram’s-bar-height-where-the-width-of-each-bar-is-1-return-the-area-of-the-largest-rectangle-in-the-histogram" class="headerlink" title="Given an array of integers heights representing the histogram’s bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram."></a>Given an array of integers heights representing the histogram’s bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.</h2><h3 id="leetcode题解"><a href="#leetcode题解" class="headerlink" title="leetcode题解"></a><a href="https://leetcode.cn/problems/largest-rectangle-in-histogram/solution/bao-li-jie-fa-zhan-by-liweiwei1419/">leetcode题解</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">largestRectangleArea</span>(<span class="params">self, heights: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        n = <span class="built_in">len</span>(heights)</span><br><span class="line">        left, right = [<span class="number">0</span>] * n, [<span class="number">0</span>] * n</span><br><span class="line"></span><br><span class="line">        mono_stack = <span class="built_in">list</span>()</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">while</span> mono_stack <span class="keyword">and</span> heights[mono_stack[-<span class="number">1</span>]] &gt;= heights[i]:</span><br><span class="line">                mono_stack.pop()</span><br><span class="line">            left[i] = mono_stack[-<span class="number">1</span>] <span class="keyword">if</span> mono_stack <span class="keyword">else</span> -<span class="number">1</span></span><br><span class="line">            mono_stack.append(i)</span><br><span class="line">        </span><br><span class="line">        mono_stack = <span class="built_in">list</span>()</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n - <span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">while</span> mono_stack <span class="keyword">and</span> heights[mono_stack[-<span class="number">1</span>]] &gt;= heights[i]:</span><br><span class="line">                mono_stack.pop()</span><br><span class="line">            right[i] = mono_stack[-<span class="number">1</span>] <span class="keyword">if</span> mono_stack <span class="keyword">else</span> n</span><br><span class="line">            mono_stack.append(i)</span><br><span class="line">        </span><br><span class="line">        ans = <span class="built_in">max</span>((right[i] - left[i] - <span class="number">1</span>) * heights[i] <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n)) <span class="keyword">if</span> n &gt; <span class="number">0</span> <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;84-Largest-Rectangle-in-Histogram-hard&quot;&gt;&lt;a href=&quot;#84-Largest-Rectangle-in-Histogram-hard&quot; class=&quot;headerlink&quot; title=&quot;84. Largest Rect</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="stack" scheme="http://example.com/tags/stack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>400. Nth Digit(medium)</title>
+    <link href="http://example.com/2022/12/03/400/"/>
+    <id>http://example.com/2022/12/03/400/</id>
+    <published>2022-12-03T22:51:32.000Z</published>
+    <updated>2022-12-03T22:56:32.528Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="400-Nth-Digit-medium"><a href="#400-Nth-Digit-medium" class="headerlink" title="400. Nth Digit(medium)"></a>400. Nth Digit(medium)</h1><h2 id="Given-an-integer-n-return-the-nth-digit-of-the-infinite-integer-sequence-1-2-3-4-5-6-7-8-9-10-11-…"><a href="#Given-an-integer-n-return-the-nth-digit-of-the-infinite-integer-sequence-1-2-3-4-5-6-7-8-9-10-11-…" class="headerlink" title="Given an integer n, return the nth digit of the infinite integer sequence [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, …]."></a>Given an integer n, return the nth digit of the infinite integer sequence [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, …].</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findNthDigit</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        d,count=<span class="number">1</span>,<span class="number">9</span></span><br><span class="line">        <span class="keyword">while</span> n&gt;d*count:</span><br><span class="line">            n-=d*count</span><br><span class="line">            d+=<span class="number">1</span></span><br><span class="line">            count*=<span class="number">10</span></span><br><span class="line">        index=n-<span class="number">1</span></span><br><span class="line">        start=<span class="number">10</span>**(d-<span class="number">1</span>)</span><br><span class="line">        num=start+index//d</span><br><span class="line">        digitIndex=index%d</span><br><span class="line">        <span class="keyword">return</span> num//<span class="number">10</span>**(d-digitIndex-<span class="number">1</span>)%<span class="number">10</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;400-Nth-Digit-medium&quot;&gt;&lt;a href=&quot;#400-Nth-Digit-medium&quot; class=&quot;headerlink&quot; title=&quot;400. Nth Digit(medium)&quot;&gt;&lt;/a&gt;400. Nth Digit(medium)&lt;/</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
+    
+    <category term="math" scheme="http://example.com/tags/math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>554. Brick Wall(medium)</title>
+    <link href="http://example.com/2022/12/03/554/"/>
+    <id>http://example.com/2022/12/03/554/</id>
+    <published>2022-12-03T21:51:34.000Z</published>
+    <updated>2022-12-03T22:53:37.604Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="554-Brick-Wall-medium"><a href="#554-Brick-Wall-medium" class="headerlink" title="554. Brick Wall(medium)"></a>554. Brick Wall(medium)</h1><h2 id="There-is-a-rectangular-brick-wall-in-front-of-you-with-n-rows-of-bricks-The-ith-row-has-some-number-of-bricks-each-of-the-same-height-i-e-one-unit-but-they-can-be-of-different-widths-The-total-width-of-each-row-is-the-same"><a href="#There-is-a-rectangular-brick-wall-in-front-of-you-with-n-rows-of-bricks-The-ith-row-has-some-number-of-bricks-each-of-the-same-height-i-e-one-unit-but-they-can-be-of-different-widths-The-total-width-of-each-row-is-the-same" class="headerlink" title="There is a rectangular brick wall in front of you with n rows of bricks. The ith row has some number of bricks each of the same height (i.e., one unit) but they can be of different widths. The total width of each row is the same."></a>There is a rectangular brick wall in front of you with n rows of bricks. The ith row has some number of bricks each of the same height (i.e., one unit) but they can be of different widths. The total width of each row is the same.</h2><h2 id="Draw-a-vertical-line-from-the-top-to-the-bottom-and-cross-the-least-bricks-If-your-line-goes-through-the-edge-of-a-brick-then-the-brick-is-not-considered-as-crossed-You-cannot-draw-a-line-just-along-one-of-the-two-vertical-edges-of-the-wall-in-which-case-the-line-will-obviously-cross-no-bricks"><a href="#Draw-a-vertical-line-from-the-top-to-the-bottom-and-cross-the-least-bricks-If-your-line-goes-through-the-edge-of-a-brick-then-the-brick-is-not-considered-as-crossed-You-cannot-draw-a-line-just-along-one-of-the-two-vertical-edges-of-the-wall-in-which-case-the-line-will-obviously-cross-no-bricks" class="headerlink" title="Draw a vertical line from the top to the bottom and cross the least bricks. If your line goes through the edge of a brick, then the brick is not considered as crossed. You cannot draw a line just along one of the two vertical edges of the wall, in which case the line will obviously cross no bricks."></a>Draw a vertical line from the top to the bottom and cross the least bricks. If your line goes through the edge of a brick, then the brick is not considered as crossed. You cannot draw a line just along one of the two vertical edges of the wall, in which case the line will obviously cross no bricks.</h2><h2 id="Given-the-2D-array-wall-that-contains-the-information-about-the-wall-return-the-minimum-number-of-crossed-bricks-after-drawing-such-a-vertical-line"><a href="#Given-the-2D-array-wall-that-contains-the-information-about-the-wall-return-the-minimum-number-of-crossed-bricks-after-drawing-such-a-vertical-line" class="headerlink" title="Given the 2D array wall that contains the information about the wall, return the minimum number of crossed bricks after drawing such a vertical line."></a>Given the 2D array wall that contains the information about the wall, return the minimum number of crossed bricks after drawing such a vertical line.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：wall = [[1,2,2,1],[3,1,2],[1,3,2],[2,4],[3,1,2],[1,3,1,1]]</span><br><span class="line">输出：2</span><br></pre></td></tr></table></figure><p><a href="https://leetcode.cn/problems/brick-wall/solution/gua-he-xin-shou-peng-you-men-de-shi-pin-miswe/">leetcode题解</a></p><p>其实主要思路就是从数组中怎么得到缝隙的位置。<br>如果缝隙的位置是根据缝隙离最左边多远来决定，那么缝隙的位置可由数组累加得到。<br>有了缝隙的位置很自然的会想到，可以统计每个位置有多少缝隙。<br>因为返回最少的砖头数量 = 墙高 - 最多缝隙</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">leastBricks</span>(<span class="params">self, wall: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        m=<span class="built_in">len</span>(wall)</span><br><span class="line">        count=collections.defaultdict(<span class="built_in">int</span>)</span><br><span class="line">        <span class="keyword">for</span> wallline <span class="keyword">in</span> wall:</span><br><span class="line">            dis=<span class="number">0</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(wallline)-<span class="number">1</span>):</span><br><span class="line">                dis+=wallline[i]</span><br><span class="line">                count[dis]+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(count.values())==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">len</span>(wall)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(wall)-<span class="built_in">max</span>(count.values())</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;554-Brick-Wall-medium&quot;&gt;&lt;a href=&quot;#554-Brick-Wall-medium&quot; class=&quot;headerlink&quot; title=&quot;554. Brick Wall(medium)&quot;&gt;&lt;/a&gt;554. Brick Wall(mediu</summary>
+      
+    
+    
+    
+    <category term="study" scheme="http://example.com/categories/study/"/>
+    
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
+    
+    <category term="math" scheme="http://example.com/tags/math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>994. Rotting Oranges(medium)</title>
     <link href="http://example.com/2022/12/02/994/"/>
     <id>http://example.com/2022/12/02/994/</id>
     <published>2022-12-03T03:27:21.000Z</published>
-    <updated>2022-12-03T03:27:21.097Z</updated>
+    <updated>2022-12-03T22:53:02.131Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="994-Rotting-Oranges-medium"><a href="#994-Rotting-Oranges-medium" class="headerlink" title="994. Rotting Oranges(medium)"></a>994. Rotting Oranges(medium)</h1><h2 id="You-are-given-an-m-x-n-grid-where-each-cell-can-have-one-of-three-values"><a href="#You-are-given-an-m-x-n-grid-where-each-cell-can-have-one-of-three-values" class="headerlink" title="You are given an m x n grid where each cell can have one of three values:"></a>You are given an m x n grid where each cell can have one of three values:</h2><p>0 representing an empty cell,<br>1 representing a fresh orange, or<br>2 representing a rotten orange.<br>Every minute, any fresh orange that is 4-directionally adjacent to a rotten orange becomes rotten.</p><p>Return the minimum number of minutes that must elapse until no cell has a fresh orange. If this is impossible, return -1.</p><h2 id="leetcode题解"><a href="#leetcode题解" class="headerlink" title="leetcode题解"></a><a href="https://leetcode.cn/problems/rotting-oranges/solution/li-qing-si-lu-wei-shi-yao-yong-bfsyi-ji-ru-he-xie-/">leetcode题解</a></h2><h2 id="有了计算最短路径的层序-BFS-代码框架，写这道题就很简单了。这道题的主要思路是："><a href="#有了计算最短路径的层序-BFS-代码框架，写这道题就很简单了。这道题的主要思路是：" class="headerlink" title="有了计算最短路径的层序 BFS 代码框架，写这道题就很简单了。这道题的主要思路是："></a>有了计算最短路径的层序 BFS 代码框架，写这道题就很简单了。这道题的主要思路是：</h2><h2 id="一开始，我们找出所有腐烂的橘子，将它们放入队列，作为第-0-层的结点。"><a href="#一开始，我们找出所有腐烂的橘子，将它们放入队列，作为第-0-层的结点。" class="headerlink" title="一开始，我们找出所有腐烂的橘子，将它们放入队列，作为第 0 层的结点。"></a>一开始，我们找出所有腐烂的橘子，将它们放入队列，作为第 0 层的结点。</h2><h2 id="然后进行-BFS-遍历，每个结点的相邻结点可能是上、下、左、右四个方向的结点，注意判断结点位于网格边界的特殊情况。"><a href="#然后进行-BFS-遍历，每个结点的相邻结点可能是上、下、左、右四个方向的结点，注意判断结点位于网格边界的特殊情况。" class="headerlink" title="然后进行 BFS 遍历，每个结点的相邻结点可能是上、下、左、右四个方向的结点，注意判断结点位于网格边界的特殊情况。"></a>然后进行 BFS 遍历，每个结点的相邻结点可能是上、下、左、右四个方向的结点，注意判断结点位于网格边界的特殊情况。</h2><h2 id="由于可能存在无法被污染的橘子，我们需要记录新鲜橘子的数量。在-BFS-中，每遍历到一个橘子（污染了一个橘子），就将新鲜橘子的数量减一。如果-BFS-结束后这个数量仍未减为零，说明存在无法被污染的橘子。"><a href="#由于可能存在无法被污染的橘子，我们需要记录新鲜橘子的数量。在-BFS-中，每遍历到一个橘子（污染了一个橘子），就将新鲜橘子的数量减一。如果-BFS-结束后这个数量仍未减为零，说明存在无法被污染的橘子。" class="headerlink" title="由于可能存在无法被污染的橘子，我们需要记录新鲜橘子的数量。在 BFS 中，每遍历到一个橘子（污染了一个橘子），就将新鲜橘子的数量减一。如果 BFS 结束后这个数量仍未减为零，说明存在无法被污染的橘子。"></a>由于可能存在无法被污染的橘子，我们需要记录新鲜橘子的数量。在 BFS 中，每遍历到一个橘子（污染了一个橘子），就将新鲜橘子的数量减一。如果 BFS 结束后这个数量仍未减为零，说明存在无法被污染的橘子。</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span>    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">orangesRotting</span>(<span class="params">self, grid: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>)-&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        M = <span class="built_in">len</span>(grid)</span><br><span class="line">        N = <span class="built_in">len</span>(grid[<span class="number">0</span>])</span><br><span class="line">        queue = []</span><br><span class="line"></span><br><span class="line">        count = <span class="number">0</span>  <span class="comment"># count 表示新鲜橘子的数量</span></span><br><span class="line">        <span class="keyword">for</span> r <span class="keyword">in</span> <span class="built_in">range</span>(M):</span><br><span class="line">            <span class="keyword">for</span> c <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">                <span class="keyword">if</span> grid[r][c] == <span class="number">1</span>:</span><br><span class="line">                    count += <span class="number">1</span> <span class="comment">#计数好橘子</span></span><br><span class="line">                <span class="keyword">elif</span> grid[r][c] == <span class="number">2</span>:</span><br><span class="line">                    queue.append((r, c))</span><br><span class="line"></span><br><span class="line">        <span class="built_in">round</span> = <span class="number">0</span>  <span class="comment"># round 表示腐烂的轮数，或者分钟数</span></span><br><span class="line">        <span class="keyword">while</span> count &gt; <span class="number">0</span> <span class="keyword">and</span> <span class="built_in">len</span>(queue) &gt; <span class="number">0</span>:  <span class="comment"># 还有好橘子且队列还有坏橘子</span></span><br><span class="line">            <span class="built_in">round</span> += <span class="number">1</span>  <span class="comment"># 层数+1</span></span><br><span class="line">            n = <span class="built_in">len</span>(queue)  <span class="comment"># 记录这一层的坏橘子数</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):  <span class="comment"># 遍历完这一层的坏橘子</span></span><br><span class="line">                r, c = queue.pop(<span class="number">0</span>)  <span class="comment"># 取出队列开头的坏橘子坐标</span></span><br><span class="line">                <span class="keyword">if</span> r-<span class="number">1</span> &gt;= <span class="number">0</span> <span class="keyword">and</span> grid[r-<span class="number">1</span>][c] == <span class="number">1</span>:  <span class="comment"># 上邻有好橘子</span></span><br><span class="line">                    grid[r-<span class="number">1</span>][c] = <span class="number">2</span>  <span class="comment"># 好橘子变坏</span></span><br><span class="line">                    count -= <span class="number">1</span>  <span class="comment"># 好橘子数-1</span></span><br><span class="line">                    queue.append((r-<span class="number">1</span>, c))  <span class="comment"># 新变坏的这只橘子进入坏橘子队列</span></span><br><span class="line">                <span class="keyword">if</span> r+<span class="number">1</span> &lt; M <span class="keyword">and</span> grid[r+<span class="number">1</span>][c] == <span class="number">1</span>:  <span class="comment"># 下邻有好橘子</span></span><br><span class="line">                    grid[r+<span class="number">1</span>][c] = <span class="number">2</span></span><br><span class="line">                    count -= <span class="number">1</span></span><br><span class="line">                    queue.append((r+<span class="number">1</span>, c))</span><br><span class="line">                <span class="keyword">if</span> c-<span class="number">1</span> &gt;= <span class="number">0</span> <span class="keyword">and</span> grid[r][c-<span class="number">1</span>] == <span class="number">1</span>:  <span class="comment"># 左邻有好橘子</span></span><br><span class="line">                    grid[r][c-<span class="number">1</span>] = <span class="number">2</span></span><br><span class="line">                    count -= <span class="number">1</span></span><br><span class="line">                    queue.append((r, c-<span class="number">1</span>))</span><br><span class="line">                <span class="keyword">if</span> c+<span class="number">1</span> &lt; N <span class="keyword">and</span> grid[r][c+<span class="number">1</span>] == <span class="number">1</span>:  <span class="comment"># 右邻有好橘子</span></span><br><span class="line">                    grid[r][c+<span class="number">1</span>] = <span class="number">2</span></span><br><span class="line">                    count -= <span class="number">1</span></span><br><span class="line">                    queue.append((r, c+<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> count &gt; <span class="number">0</span>:  <span class="comment"># 还有好橘子</span></span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:  <span class="comment"># 没有好橘子了</span></span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">round</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;994-Rotting-Oranges-medium&quot;&gt;&lt;a href=&quot;#994-Rotting-Oranges-medium&quot; class=&quot;headerlink&quot; title=&quot;994. Rotting Oranges(medium)&quot;&gt;&lt;/a&gt;994. R</summary>
+      
     
     
     
+    <category term="study" scheme="http://example.com/categories/study/"/>
     
+    
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="matrix" scheme="http://example.com/tags/matrix/"/>
+    
+    <category term="bfs" scheme="http://example.com/tags/bfs/"/>
     
   </entry>
   
@@ -399,156 +564,6 @@
     <category term="Python" scheme="http://example.com/tags/Python/"/>
     
     <category term="hashmap" scheme="http://example.com/tags/hashmap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>45. Jump Game II(medium)</title>
-    <link href="http://example.com/2022/11/22/45/"/>
-    <id>http://example.com/2022/11/22/45/</id>
-    <published>2022-11-23T03:36:19.000Z</published>
-    <updated>2022-11-27T20:07:53.725Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="45-Jump-Game-II-medium"><a href="#45-Jump-Game-II-medium" class="headerlink" title="45. Jump Game II(medium)"></a>45. Jump Game II(medium)</h1><h2 id="You-are-given-a-0-indexed-array-of-integers-nums-of-length-n-You-are-initially-positioned-at-nums-0"><a href="#You-are-given-a-0-indexed-array-of-integers-nums-of-length-n-You-are-initially-positioned-at-nums-0" class="headerlink" title="You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0]."></a>You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0].</h2><h2 id="Each-element-nums-i-represents-the-maximum-length-of-a-forward-jump-from-index-i-In-other-words-if-you-are-at-nums-i-you-can-jump-to-any-nums-i-j-where"><a href="#Each-element-nums-i-represents-the-maximum-length-of-a-forward-jump-from-index-i-In-other-words-if-you-are-at-nums-i-you-can-jump-to-any-nums-i-j-where" class="headerlink" title="Each element nums[i] represents the maximum length of a forward jump from index i. In other words, if you are at nums[i], you can jump to any nums[i + j] where:"></a>Each element nums[i] represents the maximum length of a forward jump from index i. In other words, if you are at nums[i], you can jump to any nums[i + j] where:</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0 &lt;= j &lt;= nums[i] and</span><br><span class="line">i + j &lt; n</span><br></pre></td></tr></table></figure><h2 id="Return-the-minimum-number-of-jumps-to-reach-nums-n-1-The-test-cases-are-generated-such-that-you-can-reach-nums-n-1"><a href="#Return-the-minimum-number-of-jumps-to-reach-nums-n-1-The-test-cases-are-generated-such-that-you-can-reach-nums-n-1" class="headerlink" title="Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach nums[n - 1]."></a>Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach nums[n - 1].</h2><p>用贪心的思想来做这道题会更节省时间<br>[3,1,4,2……]<br>比如这个例子，我们站在索引 0 的位置，可以向前跳 1，2 或 3 步</p><p>最佳的选择显然应该跳 2 步调到索引 2，因为 nums[2] 的可跳跃区域涵盖了索引区间 [3..6]，比其他的都大。</p><p>这就是思路，我们用 i 和 end 标记了可以选择的跳跃步数，farthest 标记了所有选择 [i..end] 中能够跳到的最远距离，jumps 记录跳跃次数。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">jump</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        n=<span class="built_in">len</span>(nums)</span><br><span class="line">        jumps=<span class="number">0</span></span><br><span class="line">        farthest=<span class="number">0</span></span><br><span class="line">        end=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">1</span>):</span><br><span class="line">            farthest=<span class="built_in">max</span>(nums[i]+i,farthest)</span><br><span class="line">            <span class="keyword">if</span> end==i:</span><br><span class="line">                jumps+=<span class="number">1</span></span><br><span class="line">                end=farthest</span><br><span class="line">        <span class="keyword">return</span> jumps</span><br><span class="line">        </span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;45-Jump-Game-II-medium&quot;&gt;&lt;a href=&quot;#45-Jump-Game-II-medium&quot; class=&quot;headerlink&quot; title=&quot;45. Jump Game II(medium)&quot;&gt;&lt;/a&gt;45. Jump Game II(m</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
-    
-    <category term="Greedy" scheme="http://example.com/tags/Greedy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>22. Generate Parentheses(medium)</title>
-    <link href="http://example.com/2022/11/22/22/"/>
-    <id>http://example.com/2022/11/22/22/</id>
-    <published>2022-11-22T21:13:39.000Z</published>
-    <updated>2022-11-22T21:14:43.673Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">generateParenthesis</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">str</span>]:</span></span><br><span class="line">        ans=[]</span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">backtrack</span>(<span class="params">S,left,right</span>):</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(S)==<span class="number">2</span>*n:</span><br><span class="line">                ans.append(<span class="string">&#x27;&#x27;</span>.join(S))</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">            <span class="keyword">if</span> left&lt;n:</span><br><span class="line">                S.append(<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">                backtrack(S,left+<span class="number">1</span>,right)</span><br><span class="line">                S.pop()</span><br><span class="line">            <span class="keyword">if</span> right&lt;left:</span><br><span class="line">                S.append(<span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">                backtrack(S,left,right+<span class="number">1</span>)</span><br><span class="line">                S.pop()</span><br><span class="line">        backtrack([],<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
-    
-    <category term="backtracking" scheme="http://example.com/tags/backtracking/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>279. Perfect Squares(medium)</title>
-    <link href="http://example.com/2022/11/22/279/"/>
-    <id>http://example.com/2022/11/22/279/</id>
-    <published>2022-11-22T20:49:44.000Z</published>
-    <updated>2022-11-22T21:14:52.835Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="279-Perfect-Squares-medium"><a href="#279-Perfect-Squares-medium" class="headerlink" title="279. Perfect Squares(medium)"></a>279. Perfect Squares(medium)</h1><h2 id="Given-an-integer-n-return-the-least-number-of-perfect-square-numbers-that-sum-to-n"><a href="#Given-an-integer-n-return-the-least-number-of-perfect-square-numbers-that-sum-to-n" class="headerlink" title="Given an integer n, return the least number of perfect square numbers that sum to n."></a>Given an integer n, return the least number of perfect square numbers that sum to n.</h2><h2 id="A-perfect-square-is-an-integer-that-is-the-square-of-an-integer-in-other-words-it-is-the-product-of-some-integer-with-itself-For-example-1-4-9-and-16-are-perfect-squares-while-3-and-11-are-not"><a href="#A-perfect-square-is-an-integer-that-is-the-square-of-an-integer-in-other-words-it-is-the-product-of-some-integer-with-itself-For-example-1-4-9-and-16-are-perfect-squares-while-3-and-11-are-not" class="headerlink" title="A perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not."></a>A perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 12</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: 12 = 4 + 4 + 4.</span><br></pre></td></tr></table></figure><h2 id="leetcode题解"><a href="#leetcode题解" class="headerlink" title="leetcode题解"></a><a href="https://leetcode.cn/problems/perfect-squares/solution/dong-tai-gui-hua-bfs-zhu-xing-jie-shi-python3-by-2/">leetcode题解</a></h2><h4 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numSquares</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        dp=[i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n+<span class="number">1</span>)]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">int</span>(i**(<span class="number">0.5</span>))+<span class="number">1</span>):</span><br><span class="line">                dp[i]=<span class="built_in">min</span>(dp[i],dp[i-j*j]+<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> dp[-<span class="number">1</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="BFS方法"><a href="#BFS方法" class="headerlink" title="BFS方法"></a><a href="https://leetcode.cn/problems/perfect-squares/solution/python3zui-ji-chu-de-bfstao-lu-dai-ma-gua-he-ru-me/">BFS方法</a></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">node</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,value,step=<span class="number">0</span></span>):</span></span><br><span class="line">        self.value = value</span><br><span class="line">        self.step = step</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;&lt;value:&#123;&#125;, step:&#123;&#125;&gt;&#x27;</span>.<span class="built_in">format</span>(self.value,self.step)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numSquares</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        queue = [node(n)]</span><br><span class="line">        visited = <span class="built_in">set</span>([node(n).value])</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> queue:</span><br><span class="line">            vertex = queue.pop(<span class="number">0</span>)</span><br><span class="line">            residuals = [vertex.value - n*n <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">int</span>(vertex.value**<span class="number">.5</span>)+<span class="number">1</span>)]</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> residuals:</span><br><span class="line">                new_vertex = node(i, vertex.step+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">if</span> i==<span class="number">0</span>:                   </span><br><span class="line">                    <span class="keyword">return</span> new_vertex.step</span><br><span class="line">                    </span><br><span class="line">                <span class="keyword">elif</span> i <span class="keyword">not</span> <span class="keyword">in</span> visited:</span><br><span class="line">                    queue.append(new_vertex)</span><br><span class="line">                    visited.add(i)</span><br><span class="line">                                        </span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;279-Perfect-Squares-medium&quot;&gt;&lt;a href=&quot;#279-Perfect-Squares-medium&quot; class=&quot;headerlink&quot; title=&quot;279. Perfect Squares(medium)&quot;&gt;&lt;/a&gt;279. P</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
-    
-    <category term="BFS" scheme="http://example.com/tags/BFS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>541. Reverse String II(easy)</title>
-    <link href="http://example.com/2022/11/21/541/"/>
-    <id>http://example.com/2022/11/21/541/</id>
-    <published>2022-11-21T21:53:36.000Z</published>
-    <updated>2022-11-22T00:28:24.271Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="541-Reverse-String-II-easy"><a href="#541-Reverse-String-II-easy" class="headerlink" title="541. Reverse String II(easy)"></a>541. Reverse String II(easy)</h1><h2 id="Given-a-string-s-and-an-integer-k-reverse-the-first-k-characters-for-every-2k-characters-counting-from-the-start-of-the-string"><a href="#Given-a-string-s-and-an-integer-k-reverse-the-first-k-characters-for-every-2k-characters-counting-from-the-start-of-the-string" class="headerlink" title="Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string."></a>Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string.</h2><h2 id="If-there-are-fewer-than-k-characters-left-reverse-all-of-them-If-there-are-less-than-2k-but-greater-than-or-equal-to-k-characters-then-reverse-the-first-k-characters-and-leave-the-other-as-original"><a href="#If-there-are-fewer-than-k-characters-left-reverse-all-of-them-If-there-are-less-than-2k-but-greater-than-or-equal-to-k-characters-then-reverse-the-first-k-characters-and-leave-the-other-as-original" class="headerlink" title="If there are fewer than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and leave the other as original."></a>If there are fewer than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and leave the other as original.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;abcdefg&quot;, k = 2</span><br><span class="line">Output: &quot;bacdfeg&quot;</span><br></pre></td></tr></table></figure><h3 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a><a href="https://leetcode.cn/problems/reverse-string-ii/solution/fan-zhuan-zi-fu-chuan-ii-by-leetcode-sol-ua7s/">官方题解</a></h3><p>官方题解太简单了，思路非常简单，就是i到i+k的字母翻转就可以</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseStr</span>(<span class="params">self, s: <span class="built_in">str</span>, k: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        t = <span class="built_in">list</span>(s)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(t), <span class="number">2</span> * k):</span><br><span class="line">            t[i: i + k] = <span class="built_in">reversed</span>(t[i: i + k])</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>.join(t)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;541-Reverse-String-II-easy&quot;&gt;&lt;a href=&quot;#541-Reverse-String-II-easy&quot; class=&quot;headerlink&quot; title=&quot;541. Reverse String II(easy)&quot;&gt;&lt;/a&gt;541. R</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-    <category term="list" scheme="http://example.com/tags/list/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>557. Reverse Words in a String III(easy)</title>
-    <link href="http://example.com/2022/11/21/557/"/>
-    <id>http://example.com/2022/11/21/557/</id>
-    <published>2022-11-21T21:25:37.000Z</published>
-    <updated>2022-11-21T21:27:38.240Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="557-Reverse-Words-in-a-String-III-easy"><a href="#557-Reverse-Words-in-a-String-III-easy" class="headerlink" title="557. Reverse Words in a String III(easy)"></a>557. Reverse Words in a String III(easy)</h1><h2 id="Given-a-string-s-reverse-the-order-of-characters-in-each-word-within-a-sentence-while-still-preserving-whitespace-and-initial-word-order"><a href="#Given-a-string-s-reverse-the-order-of-characters-in-each-word-within-a-sentence-while-still-preserving-whitespace-and-initial-word-order" class="headerlink" title="Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order."></a>Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;Let&#x27;s take LeetCode contest&quot;</span><br><span class="line">Output: &quot;s&#x27;teL ekat edoCteeL tsetnoc&quot;</span><br></pre></td></tr></table></figure><p>题目本身倒不难，就是输出的字符串形式相对麻烦</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseWords</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        s=<span class="built_in">list</span>(s.split())</span><br><span class="line">        res=[]</span><br><span class="line">        ans=[]</span><br><span class="line">        stack=[]</span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> c:</span><br><span class="line">                stack.append(i)</span><br><span class="line">            <span class="keyword">for</span> _ <span class="keyword">in</span> c:</span><br><span class="line">                res.append(stack.pop())</span><br><span class="line">            ans.append(<span class="string">&quot;&quot;</span>.join(res))</span><br><span class="line">            stack=[]</span><br><span class="line">            res=[]</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot; &quot;</span>.join(ans)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;557-Reverse-Words-in-a-String-III-easy&quot;&gt;&lt;a href=&quot;#557-Reverse-Words-in-a-String-III-easy&quot; class=&quot;headerlink&quot; title=&quot;557. Reverse Wor</summary>
-      
-    
-    
-    
-    <category term="study" scheme="http://example.com/categories/study/"/>
-    
-    
-    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="string" scheme="http://example.com/tags/string/"/>
-    
-    <category term="stack" scheme="http://example.com/tags/stack/"/>
     
   </entry>
   
