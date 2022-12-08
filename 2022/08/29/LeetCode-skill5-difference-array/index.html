@@ -18,7 +18,7 @@
 <meta property="og:description" content="本文讲一个和前缀和思想非常类似的算法技巧「差分数组」，差分数组的主要适用场景是频繁对原始数组的某个区间的元素进行增减。 比如说，我给你输入一个数组 nums，然后又要求给区间 nums[2..6] 全部加 1，再给 nums[3..9] 全部减 3，再给 nums[0..4] 全部加 2，再给… 一通操作猛如虎，然后问你，最后 nums 数组的值是什么？ 常规的思路很容易，你让我给区间 nums[">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-29T21:39:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T00:16:20.065Z">
+<meta property="article:modified_time" content="2022-12-05T20:15:13.953Z">
 <meta property="article:author" content="leaf">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="Python">
@@ -30,13 +30,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1670271054224">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1670463173863">
     
-    <link rel="stylesheet" href="/css/style.css?v=1670271054224">
+    <link rel="stylesheet" href="/css/style.css?v=1670463173863">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1670271054224">
+            <link rel="stylesheet" href="/custom.css?v=1670463173863">
         
     
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="八角书屋" type="application/atom+xml">
@@ -62,8 +62,8 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>312</div>
-        <div><span>标签</span>71</div>
+        <div><span>文章</span>319</div>
+        <div><span>标签</span>70</div>
         <div><span>分类</span>2</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
@@ -108,7 +108,7 @@
 </div>
 
 
-	<script async src="/js/search.js?v=1670271054224"></script>
+	<script async src="/js/search.js?v=1670463173863"></script>
 
 
 
@@ -210,7 +210,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/study/">study</a>
-          <span class="category-list-count">302</span>
+          <span class="category-list-count">309</span>
         </li>
 
         
@@ -225,12 +225,12 @@
         
   <div class="nexmoe-widget-wrap">
     <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
-      <a href="/tags/BFS/" style="font-size: 10px;">BFS</a> <a href="/tags/Backtracking/" style="font-size: 10.5px;">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;">Counter</a> <a href="/tags/DFA/" style="font-size: 10.5px;">DFA</a> <a href="/tags/DFS/" style="font-size: 10.5px;">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 12px;">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 15.5px;">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;">Greatest common divisor </a> <a href="/tags/Greedy/" style="font-size: 10px;">Greedy</a> <a href="/tags/Heap-Sort/" style="font-size: 10px;">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;">LCP</a> <a href="/tags/Linked-list/" style="font-size: 17px;">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13px;">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11px;">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.5px;">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.5px;">Python</a> <a href="/tags/Queues/" style="font-size: 10.5px;">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.5px;">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.5px;">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.5px;">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.5px;">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.5px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 13.5px;">Tree</a> <a href="/tags/array/" style="font-size: 19px;">array</a> <a href="/tags/backtracking/" style="font-size: 10px;">backtracking</a> <a href="/tags/bfs/" style="font-size: 10px;">bfs</a> <a href="/tags/binary-search/" style="font-size: 12px;">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.5px;">binary search algorithm</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary tree</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary-tree</a> <a href="/tags/bitmask/" style="font-size: 10px;">bitmask</a> <a href="/tags/bitwise/" style="font-size: 15.5px;">bitwise</a> <a href="/tags/dfs/" style="font-size: 10.5px;">dfs</a> <a href="/tags/difference-array/" style="font-size: 12.5px;">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.5px;">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 16.5px;">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.5px;">game</a> <a href="/tags/greedy/" style="font-size: 10px;">greedy</a> <a href="/tags/greedy-algorithm/" style="font-size: 14.5px;">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.5px;">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.5px;">hashset</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a> <a href="/tags/life/" style="font-size: 10.5px;">life</a> <a href="/tags/linked-list/" style="font-size: 11px;">linked-list</a> <a href="/tags/list/" style="font-size: 10.5px;">list</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mapping/" style="font-size: 11px;">mapping</a> <a href="/tags/math/" style="font-size: 15px;">math</a> <a href="/tags/maths/" style="font-size: 11.5px;">maths</a> <a href="/tags/matrix/" style="font-size: 13px;">matrix</a> <a href="/tags/prefix-sum/" style="font-size: 13px;">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;">prime number</a> <a href="/tags/python-function/" style="font-size: 10.5px;">python function</a> <a href="/tags/recursion/" style="font-size: 14px;">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/set/" style="font-size: 11.5px;">set</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/sliding-window/" style="font-size: 10px;">sliding window</a> <a href="/tags/sort/" style="font-size: 10.5px;">sort</a> <a href="/tags/stack/" style="font-size: 16px;">stack</a> <a href="/tags/string/" style="font-size: 18px;">string</a> <a href="/tags/substring/" style="font-size: 10px;">substring</a> <a href="/tags/topk/" style="font-size: 12px;">topk</a> <a href="/tags/tree/" style="font-size: 12px;">tree</a> <a href="/tags/two-pointer/" style="font-size: 12px;">two-pointer</a> <a href="/tags/two-pointers/" style="font-size: 17.5px;">two-pointers</a>
+      <a href="/tags/BFS/" style="font-size: 11px;">BFS</a> <a href="/tags/BST/" style="font-size: 10px;">BST</a> <a href="/tags/Backtracking/" style="font-size: 10.5px;">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;">Counter</a> <a href="/tags/DFA/" style="font-size: 10.5px;">DFA</a> <a href="/tags/DFS/" style="font-size: 11px;">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 12px;">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 15px;">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;">Greatest common divisor </a> <a href="/tags/Greedy/" style="font-size: 10px;">Greedy</a> <a href="/tags/Heap-Sort/" style="font-size: 10px;">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;">LCP</a> <a href="/tags/Linked-list/" style="font-size: 17px;">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13px;">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11px;">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.5px;">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.5px;">Python</a> <a href="/tags/Queues/" style="font-size: 10.5px;">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.5px;">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.5px;">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.5px;">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.5px;">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.5px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 14.5px;">Tree</a> <a href="/tags/array/" style="font-size: 19px;">array</a> <a href="/tags/backtracking/" style="font-size: 10.5px;">backtracking</a> <a href="/tags/binary-search/" style="font-size: 12px;">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.5px;">binary search algorithm</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary tree</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary-tree</a> <a href="/tags/bitmask/" style="font-size: 10px;">bitmask</a> <a href="/tags/bitwise/" style="font-size: 14.5px;">bitwise</a> <a href="/tags/date/" style="font-size: 10px;">date</a> <a href="/tags/dfs/" style="font-size: 10.5px;">dfs</a> <a href="/tags/difference-array/" style="font-size: 12.5px;">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.5px;">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 16px;">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.5px;">game</a> <a href="/tags/greedy/" style="font-size: 10px;">greedy</a> <a href="/tags/greedy-algorithm/" style="font-size: 14px;">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.5px;">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.5px;">hashset</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a> <a href="/tags/life/" style="font-size: 10.5px;">life</a> <a href="/tags/linked-list/" style="font-size: 11px;">linked-list</a> <a href="/tags/list/" style="font-size: 10.5px;">list</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mapping/" style="font-size: 11px;">mapping</a> <a href="/tags/math/" style="font-size: 16.5px;">math</a> <a href="/tags/matrix/" style="font-size: 13px;">matrix</a> <a href="/tags/prefix-sum/" style="font-size: 13px;">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;">prime number</a> <a href="/tags/python-function/" style="font-size: 10.5px;">python function</a> <a href="/tags/recursion/" style="font-size: 13.5px;">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/set/" style="font-size: 11.5px;">set</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/sliding-window/" style="font-size: 10px;">sliding window</a> <a href="/tags/sort/" style="font-size: 10.5px;">sort</a> <a href="/tags/stack/" style="font-size: 15.5px;">stack</a> <a href="/tags/string/" style="font-size: 17.5px;">string</a> <a href="/tags/substring/" style="font-size: 10px;">substring</a> <a href="/tags/topk/" style="font-size: 12px;">topk</a> <a href="/tags/tree/" style="font-size: 10px;">tree</a> <a href="/tags/two-pointers/" style="font-size: 18px;">two-pointers</a>
     </div>
     
       <script>
         var maxTagcloud = parseInt(17);
-        var tags_length = parseInt(71);
+        var tags_length = parseInt(70);
         var tags_arr = [];
         for(var i = 0; i < tags_length; i++){
           tags_arr.push(i);
@@ -253,7 +253,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">308</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">315</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -268,23 +268,23 @@
       <ul>
         
           <li>
-            <a href="/2022/12/05/256/">256. Paint House(medium)</a>
+            <a href="/2022/12/07/938/">938. Range Sum of BST(easy)</a>
           </li>
         
           <li>
-            <a href="/2022/12/04/523/">523. Continuous Subarray Sum(medium)</a>
+            <a href="/2022/12/06/1154/">1154. Day of the Year</a>
           </li>
         
           <li>
-            <a href="/2022/12/03/84/">84. Largest Rectangle in Histogram(hard)</a>
+            <a href="/2022/12/06/2303/">2303. Calculate Amount Paid in Taxes(easy)</a>
           </li>
         
           <li>
-            <a href="/2022/12/03/400/">400. Nth Digit(medium)</a>
+            <a href="/2022/12/06/530/">530. Minimum Absolute Difference in BST(easy)</a>
           </li>
         
           <li>
-            <a href="/2022/12/03/554/">554. Brick Wall(medium)</a>
+            <a href="/2022/12/06/561/">561. Array Partition(easy)</a>
           </li>
         
       </ul>
@@ -307,7 +307,7 @@
 
   <article>
     
-        <div class="nexmoe-post-cover absolute" style="padding-top: NaN%;"> 
+        <div class="nexmoe-post-cover absolute" style="padding-top: 50%;"> 
             <img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/25.5ybup13v4es0.webp" alt="LeetCode-skill5-difference-array" loading="lazy">
             <h1>LeetCode-skill5-difference-array</h1>
         </div>
@@ -336,14 +336,14 @@
 <p>一通操作猛如虎，然后问你，最后 nums 数组的值是什么？</p>
 <p>常规的思路很容易，你让我给区间 nums[i..j] 加上 val，那我就一个 for 循环给它们都加上呗，还能咋样？这种思路的时间复杂度是 O(N)，由于这个场景下对 nums 的修改非常频繁，所以效率会很低下。</p>
 <p>这里就需要差分数组的技巧，类似前缀和技巧构造的 prefix 数组，我们先对 nums 数组构造一个 diff 差分数组，diff[i] 就是 nums[i] 和 nums[i-1] 之差：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] diff = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length];</span><br><span class="line"><span class="comment">// 构造差分数组</span></span><br><span class="line">diff[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">    diff[i] = nums[i] - nums[i - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">int</span>[] diff = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[nums.length];<br><span class="hljs-comment">// 构造差分数组</span><br>diff[<span class="hljs-number">0</span>] = nums[<span class="hljs-number">0</span>];<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; nums.length; i++) &#123;<br>    diff[i] = nums[i] - nums[i - <span class="hljs-number">1</span>];<br>&#125;<br><br></code></pre></td></tr></table></figure>
 <p>通过这个 diff 差分数组是可以反推出原始数组 nums 的，代码逻辑如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[diff.length];</span><br><span class="line"><span class="comment">// 根据差分数组构造结果数组</span></span><br><span class="line">res[<span class="number">0</span>] = diff[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; diff.length; i++) &#123;</span><br><span class="line">    res[i] = res[i - <span class="number">1</span>] + diff[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">int</span>[] res = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[diff.length];<br><span class="hljs-comment">// 根据差分数组构造结果数组</span><br>res[<span class="hljs-number">0</span>] = diff[<span class="hljs-number">0</span>];<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; diff.length; i++) &#123;<br>    res[i] = res[i - <span class="hljs-number">1</span>] + diff[i];<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>原理很简单，回想 diff 数组反推 nums 数组的过程，diff[i] += 3 意味着给 nums[i..] 所有的元素都加了 3，然后 diff[j+1] -= 3 又意味着对于 nums[j+1..] 所有元素再减 3，那综合起来，是不是就是对 nums[i..j] 中的所有元素都加 3 了？</p>
 <p>只要花费 O(1) 的时间修改 diff 数组，就相当于给 nums 的整个区间做了修改。多次修改 diff，然后通过 diff 数组反推，即可得到 nums 修改后的结果。</p>
 <p>现在我们把差分数组抽象成一个类，包含 increment 方法和 result 方法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Difference</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, nums</span>):</span></span><br><span class="line">        self.nums = nums</span><br><span class="line">        self.diff = self.make_diff(self.nums)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">make_diff</span>(<span class="params">self, nums</span>):</span></span><br><span class="line">        diff = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums))]</span><br><span class="line">        diff[<span class="number">0</span>] = nums[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(nums)):</span><br><span class="line">            diff[i] = nums[i] - nums[i-<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">return</span> diff</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 给闭区间[i,j]增加val</span></span><br><span class="line">    <span class="comment"># 原理很简单，回想diff数组反推nums数组的过程，diff[i] += 3意味着给nums[i..]所有的元素都加了 3，然后diff[j+1] -= 3又意味着对于nums[j+1..]所有元素再减 3，那综合起来，是不是就是对nums[i..j]中的所有元素都加 3 了？</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">increment</span>(<span class="params">self, i, j, val</span>):</span></span><br><span class="line">        self.diff[i] += val</span><br><span class="line">        <span class="keyword">if</span> j + <span class="number">1</span> &lt; <span class="built_in">len</span>(self.diff):</span><br><span class="line">            self.diff[j + <span class="number">1</span>] -= val</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recover</span>(<span class="params">self</span>):</span></span><br><span class="line">        rdiff = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(self.diff))]</span><br><span class="line">        rdiff[<span class="number">0</span>] = self.diff[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(self.nums)):</span><br><span class="line">            rdiff[i] = rdiff[i-<span class="number">1</span>] + self.diff[i]</span><br><span class="line">        <span class="keyword">return</span> rdiff</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Difference</span>:</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, nums</span>):</span><br>        self.nums = nums<br>        self.diff = self.make_diff(self.nums)<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">make_diff</span>(<span class="hljs-params">self, nums</span>):</span><br>        diff = [<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(nums))]<br>        diff[<span class="hljs-number">0</span>] = nums[<span class="hljs-number">0</span>]<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-built_in">len</span>(nums)):<br>            diff[i] = nums[i] - nums[i-<span class="hljs-number">1</span>]<br>        <span class="hljs-keyword">return</span> diff<br><br>    <span class="hljs-comment"># 给闭区间[i,j]增加val</span><br>    <span class="hljs-comment"># 原理很简单，回想diff数组反推nums数组的过程，diff[i] += 3意味着给nums[i..]所有的元素都加了 3，然后diff[j+1] -= 3又意味着对于nums[j+1..]所有元素再减 3，那综合起来，是不是就是对nums[i..j]中的所有元素都加 3 了？</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">increment</span>(<span class="hljs-params">self, i, j, val</span>):</span><br>        self.diff[i] += val<br>        <span class="hljs-keyword">if</span> j + <span class="hljs-number">1</span> &lt; <span class="hljs-built_in">len</span>(self.diff):<br>            self.diff[j + <span class="hljs-number">1</span>] -= val<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">recover</span>(<span class="hljs-params">self</span>):</span><br>        rdiff = [<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(self.diff))]<br>        rdiff[<span class="hljs-number">0</span>] = self.diff[<span class="hljs-number">0</span>]<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-built_in">len</span>(self.nums)):<br>            rdiff[i] = rdiff[i-<span class="hljs-number">1</span>] + self.diff[i]<br>        <span class="hljs-keyword">return</span> rdiff<br></code></pre></td></tr></table></figure>
 
 
 <p>difference = Difference([8,5,9,6,1])<br>print(difference.diff)<br>rdiff = difference.recover()<br>print(rdiff)<br>difference.increment(2,3,1)<br>print(difference.diff)<br>rdiff = difference.recover()<br>print(rdiff)</p>
@@ -420,7 +420,7 @@
 
  
 
-<script async src="/js/app.js?v=1670271054227"></script>
+<script async src="/js/app.js?v=1670463173866"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
 

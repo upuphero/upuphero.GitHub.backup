@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>1154. Day of the Year - 八角书屋</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="1154. Day of the YearGiven a string date representing a Gregorian calendar date formatted as YYYY-MM-DD, return the day number of the year. 计算日期月份 123456789101112from calendar import monthrangeclass S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1154. Day of the Year">
+<meta property="og:url" content="http://example.com/2022/12/06/1154/index.html">
+<meta property="og:site_name" content="八角书屋">
+<meta property="og:description" content="1154. Day of the YearGiven a string date representing a Gregorian calendar date formatted as YYYY-MM-DD, return the day number of the year. 计算日期月份 123456789101112from calendar import monthrangeclass S">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-12-06T16:43:01.000Z">
+<meta property="article:modified_time" content="2022-12-08T01:32:32.412Z">
+<meta property="article:author" content="leaf">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="date">
+<meta name="twitter:card" content="summary">
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1670463173043">
+    
+    <link rel="stylesheet" href="/css/style.css?v=1670463173043">
+
+    
+        
+            <link rel="stylesheet" href="/custom.css?v=1670463173043">
+        
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="八角书屋" type="application/atom+xml">
+</head>
+
+<body class="mdui-drawer-body-left">
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.staticaly.com/gh/upuphero/image-hosting@master/DVA鬼刀3440x1440壁纸.4wsj6bhewne0.webp)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="leaf" class="mdui-btn mdui-btn-icon"><img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/cover-image/42af107fca806538d6f148c7d2dda144ac34820e.3fn6hjcv3co0.webp" alt="leaf"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="leaf">
+            <img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/cover-image/42af107fca806538d6f148c7d2dda144ac34820e.3fn6hjcv3co0.webp" alt="leaf" alt="leaf">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>319</div>
+        <div><span>标签</span>70</div>
+        <div><span>分类</span>2</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博主">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博主
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+
+
+	<script async src="/js/search.js?v=1670463173043"></script>
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://www.linkedin.com/in/zijianye"
+			target="_blank"
+			mdui-tooltip="{content: 'linkedin'}"
+			style="
+				color: rgb(249, 174, 8);
+				background-color: rgba(249, 174, 8, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-coffee"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/221025582"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/upuphero"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://twitter.com/nexmoe"
+			target="_blank"
+			mdui-tooltip="{content: 'Twitter'}"
+			style="
+				color: rgb(59, 151, 239);
+				background-color: rgba(59, 151, 239, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-twitter"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://nexmoe.com/atom.xml"
+			target="_blank"
+			mdui-tooltip="{content: 'RSS'}"
+			style="
+				color: rgb(247, 132, 34);
+				background-color: rgba(247, 132, 34, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-rss"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/life/">life</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/study/">study</a>
+          <span class="category-list-count">309</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/BFS/" style="font-size: 11px;">BFS</a> <a href="/tags/BST/" style="font-size: 10px;">BST</a> <a href="/tags/Backtracking/" style="font-size: 10.5px;">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;">Counter</a> <a href="/tags/DFA/" style="font-size: 10.5px;">DFA</a> <a href="/tags/DFS/" style="font-size: 11px;">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 12px;">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 15px;">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;">Greatest common divisor </a> <a href="/tags/Greedy/" style="font-size: 10px;">Greedy</a> <a href="/tags/Heap-Sort/" style="font-size: 10px;">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;">LCP</a> <a href="/tags/Linked-list/" style="font-size: 17px;">Linked list</a> <a href="/tags/Matrix/" style="font-size: 13px;">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 11px;">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.5px;">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.5px;">Python</a> <a href="/tags/Queues/" style="font-size: 10.5px;">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.5px;">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.5px;">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.5px;">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.5px;">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.5px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 14.5px;">Tree</a> <a href="/tags/array/" style="font-size: 19px;">array</a> <a href="/tags/backtracking/" style="font-size: 10.5px;">backtracking</a> <a href="/tags/binary-search/" style="font-size: 12px;">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.5px;">binary search algorithm</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary tree</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary-tree</a> <a href="/tags/bitmask/" style="font-size: 10px;">bitmask</a> <a href="/tags/bitwise/" style="font-size: 14.5px;">bitwise</a> <a href="/tags/date/" style="font-size: 10px;">date</a> <a href="/tags/dfs/" style="font-size: 10.5px;">dfs</a> <a href="/tags/difference-array/" style="font-size: 12.5px;">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.5px;">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 16px;">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.5px;">game</a> <a href="/tags/greedy/" style="font-size: 10px;">greedy</a> <a href="/tags/greedy-algorithm/" style="font-size: 14px;">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.5px;">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.5px;">hashset</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a> <a href="/tags/life/" style="font-size: 10.5px;">life</a> <a href="/tags/linked-list/" style="font-size: 11px;">linked-list</a> <a href="/tags/list/" style="font-size: 10.5px;">list</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mapping/" style="font-size: 11px;">mapping</a> <a href="/tags/math/" style="font-size: 16.5px;">math</a> <a href="/tags/matrix/" style="font-size: 13px;">matrix</a> <a href="/tags/prefix-sum/" style="font-size: 13px;">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;">prime number</a> <a href="/tags/python-function/" style="font-size: 10.5px;">python function</a> <a href="/tags/recursion/" style="font-size: 13.5px;">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/set/" style="font-size: 11.5px;">set</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/sliding-window/" style="font-size: 10px;">sliding window</a> <a href="/tags/sort/" style="font-size: 10.5px;">sort</a> <a href="/tags/stack/" style="font-size: 15.5px;">stack</a> <a href="/tags/string/" style="font-size: 17.5px;">string</a> <a href="/tags/substring/" style="font-size: 10px;">substring</a> <a href="/tags/topk/" style="font-size: 12px;">topk</a> <a href="/tags/tree/" style="font-size: 10px;">tree</a> <a href="/tags/two-pointers/" style="font-size: 18px;">two-pointers</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(17);
+        var tags_length = parseInt(70);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+
+    
+        
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">315</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/12/07/938/">938. Range Sum of BST(easy)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/06/1154/">1154. Day of the Year</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/06/2303/">2303. Calculate Amount Paid in Taxes(easy)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/06/530/">530. Minimum Absolute Difference in BST(easy)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/06/561/">561. Array Partition(easy)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2022 leaf
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 50%;"> 
+            <img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/cover-image/6d8dfc6134a85edf70db20f70c540923df5475ca.5mil4ciic0w0.webp" alt="1154. Day of the Year" loading="lazy">
+            <h1>1154. Day of the Year</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2022年12月06日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/study/">study</a>
+        
+        
+    <a><i class="nexmoefont icon-areachart"></i>约73字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要1分钟</a>
+
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h1 id="1154-Day-of-the-Year"><a href="#1154-Day-of-the-Year" class="headerlink" title="1154. Day of the Year"></a>1154. Day of the Year</h1><p>Given a string date representing a Gregorian calendar date formatted as YYYY-MM-DD, return the day number of the year.</p>
+<p>计算日期月份</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> calendar <span class="hljs-keyword">import</span> monthrange<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dayOfYear</span>(<span class="hljs-params">self, date</span>):</span><br>        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">numberDaysInMonth</span>(<span class="hljs-params">Y, M</span>):</span><br>            <span class="hljs-keyword">return</span> monthrange(Y, M)[<span class="hljs-number">1</span>]<br><br>        year, month, day = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, date.split(<span class="hljs-string">&quot;-&quot;</span>))<br>        res = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, month):<br>            res += numberDaysInMonth(year, i)<br>        <span class="hljs-keyword">return</span> res + day<br></code></pre></td></tr></table></figure>
+    
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>leaf<br>
+        <strong>本文链接：</strong><a href="http://example.com/2022/12/06/1154/" title="http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;12&#x2F;06&#x2F;1154&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;12&#x2F;06&#x2F;1154&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Python/" rel="tag">Python</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/date/" rel="tag">date</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/leetcode/" rel="tag">leetcode</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/math/" rel="tag">math</a>
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1154-Day-of-the-Year"><span class="toc-number">1.</span> <span class="toc-text">1154. Day of the Year</span></a></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-search-space">
+	<div class="search-container">
+		<div class="search-header">
+			<div class="search-input-container">
+				<input
+					class="search-input"
+					type="text"
+					placeholder="搜索"
+					oninput="sinput();"
+				/>
+			</div>
+			<a class="search-close" onclick="sclose();">×</a>
+		</div>
+		<div class="search-body"></div>
+	</div>
+</div>
+
+    
+<script src="/lib/mdui_043tiny/mdui.js"></script>
+<script src="/lib/fancybox/fancybox.umd.js"></script>
+
+
+ 
+
+<script async src="/js/app.js?v=1670463173051"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
