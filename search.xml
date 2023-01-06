@@ -4,6 +4,68 @@
   
     
     <entry>
+      <title>1833. Maximum Ice Cream Bars(medium)</title>
+      <link href="/2023/01/06/1833/"/>
+      <url>/2023/01/06/1833/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1833-Maximum-Ice-Cream-Bars-medium"><a href="#1833-Maximum-Ice-Cream-Bars-medium" class="headerlink" title="1833. Maximum Ice Cream Bars(medium)"></a>1833. Maximum Ice Cream Bars(medium)</h1><p>It is a sweltering summer day, and a boy wants to buy some ice cream bars.</p><p>At the store, there are n ice cream bars. You are given an array costs of length n, where costs[i] is the price of the ith ice cream bar in coins. The boy initially has coins coins to spend, and he wants to buy as many ice cream bars as possible. </p><p>Return the maximum number of ice cream bars the boy can buy with coins coins.</p><p>Note: The boy can buy the ice cream bars in any order.</p><p>这道题其实很简单，一个男孩手上有coins个硬币，然后求最多能最多买多少冰淇淋，而且还没有其他要求.那么先对数组排序，然后coins不断把数组里的数字减去，直到小于0也就是没钱买下一个冰淇淋，同时记个数就行</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">maxIceCream</span>(<span class="hljs-params">self, costs: <span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>], coins: <span class="hljs-built_in">int</span></span>) -&gt; <span class="hljs-built_in">int</span>:</span><br>        costs.sort()<br>        res=<span class="hljs-number">0</span><br>      <br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(costs)):<br>            <span class="hljs-keyword">if</span> costs[i]&lt;=coins:<br>                res+=<span class="hljs-number">1</span><br>                coins-=costs[i]<br>            <span class="hljs-keyword">else</span>:<br>                <span class="hljs-keyword">break</span><br>        <span class="hljs-keyword">return</span> res<br><br></code></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Tree </tag>
+            
+            <tag> Greedy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1339.Maximum Product of Splitted Binary Tree(medium)</title>
+      <link href="/2022/12/10/1339/"/>
+      <url>/2022/12/10/1339/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1339-Maximum-Product-of-Splitted-Binary-Tree-medium"><a href="#1339-Maximum-Product-of-Splitted-Binary-Tree-medium" class="headerlink" title="1339.Maximum Product of Splitted Binary Tree(medium)"></a>1339.Maximum Product of Splitted Binary Tree(medium)</h1><p>Given the root of a binary tree, split the binary tree into two subtrees by removing one edge such that the product of the sums of the subtrees is maximized.</p><p>Return the maximum product of the sums of the two subtrees. Since the answer may be too large, return it modulo 109 + 7.</p><p>Note that you need to maximize the answer before taking the mod and not after taking it.</p><h3 id="Leetcode官方题解"><a href="#Leetcode官方题解" class="headerlink" title="Leetcode官方题解"></a><a href="https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/solutions/506515/maximum-product-of-splitted-binary-tree/">Leetcode官方题解</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># Definition for a binary tree node.</span><br><span class="hljs-comment"># class TreeNode:</span><br><span class="hljs-comment">#     def __init__(self, val=0, left=None, right=None):</span><br><span class="hljs-comment">#         self.val = val</span><br><span class="hljs-comment">#         self.left = left</span><br><span class="hljs-comment">#         self.right = right</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">maxProduct</span>(<span class="hljs-params">self, root: TreeNode</span>) -&gt; <span class="hljs-built_in">int</span>:</span><br>        all_sums = []<br><br>        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tree_sum</span>(<span class="hljs-params">subroot</span>):</span><br>            <span class="hljs-keyword">if</span> subroot <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>: <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>            left_sum = tree_sum(subroot.left)<br>            right_sum = tree_sum(subroot.right)<br>            total_sum = left_sum + right_sum + subroot.val<br>            all_sums.append(total_sum)<br>            <span class="hljs-keyword">return</span> total_sum<br><br>        total = tree_sum(root)<br>        best = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> all_sums:<br>            best = <span class="hljs-built_in">max</span>(best, s * (total - s))   <br>        <span class="hljs-keyword">return</span> best % (<span class="hljs-number">10</span> ** <span class="hljs-number">9</span> + <span class="hljs-number">7</span>)<br>            <br></code></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Tree </tag>
+            
+            <tag> DFS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>938. Range Sum of BST(easy)</title>
       <link href="/2022/12/07/938/"/>
       <url>/2022/12/07/938/</url>
@@ -35,11 +97,11 @@
     
     
     <entry>
-      <title>1154. Day of the Year</title>
+      <title>1154. Day of the Year(easy)</title>
       <link href="/2022/12/06/1154/"/>
       <url>/2022/12/06/1154/</url>
       
-        <content type="html"><![CDATA[<h1 id="1154-Day-of-the-Year"><a href="#1154-Day-of-the-Year" class="headerlink" title="1154. Day of the Year"></a>1154. Day of the Year</h1><p>Given a string date representing a Gregorian calendar date formatted as YYYY-MM-DD, return the day number of the year.</p><p>计算日期月份</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> calendar <span class="hljs-keyword">import</span> monthrange<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dayOfYear</span>(<span class="hljs-params">self, date</span>):</span><br>        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">numberDaysInMonth</span>(<span class="hljs-params">Y, M</span>):</span><br>            <span class="hljs-keyword">return</span> monthrange(Y, M)[<span class="hljs-number">1</span>]<br><br>        year, month, day = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, date.split(<span class="hljs-string">&quot;-&quot;</span>))<br>        res = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, month):<br>            res += numberDaysInMonth(year, i)<br>        <span class="hljs-keyword">return</span> res + day<br></code></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="1154-Day-of-the-Year-easy"><a href="#1154-Day-of-the-Year-easy" class="headerlink" title="1154. Day of the Year(easy)"></a>1154. Day of the Year(easy)</h1><p>Given a string date representing a Gregorian calendar date formatted as YYYY-MM-DD, return the day number of the year.</p><p>计算日期月份</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> calendar <span class="hljs-keyword">import</span> monthrange<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dayOfYear</span>(<span class="hljs-params">self, date</span>):</span><br>        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">numberDaysInMonth</span>(<span class="hljs-params">Y, M</span>):</span><br>            <span class="hljs-keyword">return</span> monthrange(Y, M)[<span class="hljs-number">1</span>]<br><br>        year, month, day = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, date.split(<span class="hljs-string">&quot;-&quot;</span>))<br>        res = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, month):<br>            res += numberDaysInMonth(year, i)<br>        <span class="hljs-keyword">return</span> res + day<br></code></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -388,7 +450,7 @@
             
             <tag> matrix </tag>
             
-            <tag> BFS </tag>
+            <tag> BFS  </tag>
             
         </tags>
       

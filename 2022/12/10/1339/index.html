@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>1339.Maximum Product of Splitted Binary Tree(medium) - 八角书屋</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="1339.Maximum Product of Splitted Binary Tree(medium)Given the root of a binary tree, split the binary tree into two subtrees by removing one edge such that the product of the sums of the subtrees is m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1339.Maximum Product of Splitted Binary Tree(medium)">
+<meta property="og:url" content="http://example.com/2022/12/10/1339/index.html">
+<meta property="og:site_name" content="八角书屋">
+<meta property="og:description" content="1339.Maximum Product of Splitted Binary Tree(medium)Given the root of a binary tree, split the binary tree into two subtrees by removing one edge such that the product of the sums of the subtrees is m">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-12-10T20:39:16.000Z">
+<meta property="article:modified_time" content="2022-12-10T20:54:23.352Z">
+<meta property="article:author" content="leaf">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Tree">
+<meta property="article:tag" content="DFS">
+<meta name="twitter:card" content="summary">
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1673037737026">
+    
+    <link rel="stylesheet" href="/css/style.css?v=1673037737026">
+
+    
+        
+            <link rel="stylesheet" href="/custom.css?v=1673037737026">
+        
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="八角书屋" type="application/atom+xml">
+</head>
+
+<body class="mdui-drawer-body-left">
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://cdn.staticaly.com/gh/upuphero/image-hosting@master/DVA鬼刀3440x1440壁纸.4wsj6bhewne0.webp)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="leaf" class="mdui-btn mdui-btn-icon"><img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/cover-image/42af107fca806538d6f148c7d2dda144ac34820e.3fn6hjcv3co0.webp" alt="leaf"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="leaf">
+            <img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/cover-image/42af107fca806538d6f148c7d2dda144ac34820e.3fn6hjcv3co0.webp" alt="leaf" alt="leaf">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>321</div>
+        <div><span>标签</span>71</div>
+        <div><span>分类</span>2</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博主">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博主
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+
+
+	<script async src="/js/search.js?v=1673037737026"></script>
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://www.linkedin.com/in/zijianye"
+			target="_blank"
+			mdui-tooltip="{content: 'linkedin'}"
+			style="
+				color: rgb(249, 174, 8);
+				background-color: rgba(249, 174, 8, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-coffee"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/221025582"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/upuphero"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://twitter.com/nexmoe"
+			target="_blank"
+			mdui-tooltip="{content: 'Twitter'}"
+			style="
+				color: rgb(59, 151, 239);
+				background-color: rgba(59, 151, 239, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-twitter"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://nexmoe.com/atom.xml"
+			target="_blank"
+			mdui-tooltip="{content: 'RSS'}"
+			style="
+				color: rgb(247, 132, 34);
+				background-color: rgba(247, 132, 34, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-rss"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/life/">life</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/study/">study</a>
+          <span class="category-list-count">311</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/BFS/" style="font-size: 10.48px;">BFS</a> <a href="/tags/BFS/" style="font-size: 10px;">BFS </a> <a href="/tags/BST/" style="font-size: 10px;">BST</a> <a href="/tags/Backtracking/" style="font-size: 10.48px;">Backtracking</a> <a href="/tags/Circular-Queue/" style="font-size: 10px;">Circular Queue</a> <a href="/tags/Counter/" style="font-size: 10px;">Counter</a> <a href="/tags/DFA/" style="font-size: 10.48px;">DFA</a> <a href="/tags/DFS/" style="font-size: 11.43px;">DFS</a> <a href="/tags/Data-structure-design/" style="font-size: 11.9px;">Data structure design</a> <a href="/tags/Dynamic-Programming/" style="font-size: 14.76px;">Dynamic Programming</a> <a href="/tags/Greatest-common-divisor/" style="font-size: 10px;">Greatest common divisor </a> <a href="/tags/Greedy/" style="font-size: 10.48px;">Greedy</a> <a href="/tags/Heap-Sort/" style="font-size: 10px;">Heap Sort</a> <a href="/tags/LCP/" style="font-size: 10px;">LCP</a> <a href="/tags/Linked-list/" style="font-size: 17.14px;">Linked list</a> <a href="/tags/Matrix/" style="font-size: 12.86px;">Matrix</a> <a href="/tags/Palindrome/" style="font-size: 10.95px;">Palindrome</a> <a href="/tags/Palindrome-Number/" style="font-size: 10px;">Palindrome Number</a> <a href="/tags/Power/" style="font-size: 10.48px;">Power</a> <a href="/tags/Priority-Queue/" style="font-size: 10px;">Priority Queue</a> <a href="/tags/Python/" style="font-size: 19.52px;">Python</a> <a href="/tags/Queues/" style="font-size: 10.48px;">Queues</a> <a href="/tags/Quick-Sort/" style="font-size: 10.48px;">Quick Sort</a> <a href="/tags/Recursion/" style="font-size: 11.43px;">Recursion</a> <a href="/tags/Sliding-Window/" style="font-size: 11.43px;">Sliding-Window</a> <a href="/tags/Spiral/" style="font-size: 10.48px;">Spiral</a> <a href="/tags/Sweep-Line/" style="font-size: 10px;">Sweep Line </a> <a href="/tags/Traversal/" style="font-size: 10.48px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 15.24px;">Tree</a> <a href="/tags/array/" style="font-size: 19.05px;">array</a> <a href="/tags/backtracking/" style="font-size: 10.48px;">backtracking</a> <a href="/tags/binary-search/" style="font-size: 11.9px;">binary search</a> <a href="/tags/binary-search-algorithm/" style="font-size: 12.38px;">binary search algorithm</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary tree</a> <a href="/tags/binary-tree/" style="font-size: 10px;">binary-tree</a> <a href="/tags/bitmask/" style="font-size: 10px;">bitmask</a> <a href="/tags/bitwise/" style="font-size: 14.29px;">bitwise</a> <a href="/tags/date/" style="font-size: 10px;">date</a> <a href="/tags/dfs/" style="font-size: 10.48px;">dfs</a> <a href="/tags/difference-array/" style="font-size: 12.38px;">difference array</a> <a href="/tags/divide-and-conquer/" style="font-size: 10.48px;">divide and conquer</a> <a href="/tags/dynamic-programming/" style="font-size: 16.19px;">dynamic programming</a> <a href="/tags/game/" style="font-size: 10.48px;">game</a> <a href="/tags/greedy/" style="font-size: 10px;">greedy</a> <a href="/tags/greedy-algorithm/" style="font-size: 13.81px;">greedy algorithm</a> <a href="/tags/hashmap/" style="font-size: 18.57px;">hashmap</a> <a href="/tags/hashset/" style="font-size: 10.48px;">hashset</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a> <a href="/tags/life/" style="font-size: 10.48px;">life</a> <a href="/tags/linked-list/" style="font-size: 10.95px;">linked-list</a> <a href="/tags/list/" style="font-size: 10.48px;">list</a> <a href="/tags/loop/" style="font-size: 10px;">loop</a> <a href="/tags/mapping/" style="font-size: 10.95px;">mapping</a> <a href="/tags/math/" style="font-size: 16.67px;">math</a> <a href="/tags/matrix/" style="font-size: 12.86px;">matrix</a> <a href="/tags/prefix-sum/" style="font-size: 12.86px;">prefix sum</a> <a href="/tags/prime-number/" style="font-size: 10px;">prime number</a> <a href="/tags/python-function/" style="font-size: 10.48px;">python function</a> <a href="/tags/recursion/" style="font-size: 13.33px;">recursion</a> <a href="/tags/schedule/" style="font-size: 10px;">schedule</a> <a href="/tags/set/" style="font-size: 11.43px;">set</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/sliding-window/" style="font-size: 10px;">sliding window</a> <a href="/tags/sort/" style="font-size: 10.48px;">sort</a> <a href="/tags/stack/" style="font-size: 15.71px;">stack</a> <a href="/tags/string/" style="font-size: 17.62px;">string</a> <a href="/tags/substring/" style="font-size: 10px;">substring</a> <a href="/tags/topk/" style="font-size: 11.9px;">topk</a> <a href="/tags/tree/" style="font-size: 10px;">tree</a> <a href="/tags/two-pointers/" style="font-size: 18.1px;">two-pointers</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(17);
+        var tags_length = parseInt(71);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+
+    
+        
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">316</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/01/06/1833/">1833. Maximum Ice Cream Bars(medium)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/10/1339/">1339.Maximum Product of Splitted Binary Tree(medium)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/07/938/">938. Range Sum of BST(easy)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/06/1154/">1154. Day of the Year(easy)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/12/06/2303/">2303. Calculate Amount Paid in Taxes(easy)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2023 leaf
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 50%;"> 
+            <img src="https://cdn.staticaly.com/gh/upuphero/image-hosting@master/31_Reign_8k.1nf5ab129qw0.webp" alt="1339.Maximum Product of Splitted Binary Tree(medium)" loading="lazy">
+            <h1>1339.Maximum Product of Splitted Binary Tree(medium)</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2022年12月10日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/study/">study</a>
+        
+        
+    <a><i class="nexmoefont icon-areachart"></i>约165字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要1分钟</a>
+
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h1 id="1339-Maximum-Product-of-Splitted-Binary-Tree-medium"><a href="#1339-Maximum-Product-of-Splitted-Binary-Tree-medium" class="headerlink" title="1339.Maximum Product of Splitted Binary Tree(medium)"></a>1339.Maximum Product of Splitted Binary Tree(medium)</h1><p>Given the root of a binary tree, split the binary tree into two subtrees by removing one edge such that the product of the sums of the subtrees is maximized.</p>
+<p>Return the maximum product of the sums of the two subtrees. Since the answer may be too large, return it modulo 109 + 7.</p>
+<p>Note that you need to maximize the answer before taking the mod and not after taking it.</p>
+<h3 id="Leetcode官方题解"><a href="#Leetcode官方题解" class="headerlink" title="Leetcode官方题解"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/solutions/506515/maximum-product-of-splitted-binary-tree/">Leetcode官方题解</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># Definition for a binary tree node.</span><br><span class="hljs-comment"># class TreeNode:</span><br><span class="hljs-comment">#     def __init__(self, val=0, left=None, right=None):</span><br><span class="hljs-comment">#         self.val = val</span><br><span class="hljs-comment">#         self.left = left</span><br><span class="hljs-comment">#         self.right = right</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">maxProduct</span>(<span class="hljs-params">self, root: TreeNode</span>) -&gt; <span class="hljs-built_in">int</span>:</span><br>        all_sums = []<br><br>        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tree_sum</span>(<span class="hljs-params">subroot</span>):</span><br>            <span class="hljs-keyword">if</span> subroot <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>: <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>            left_sum = tree_sum(subroot.left)<br>            right_sum = tree_sum(subroot.right)<br>            total_sum = left_sum + right_sum + subroot.val<br>            all_sums.append(total_sum)<br>            <span class="hljs-keyword">return</span> total_sum<br><br>        total = tree_sum(root)<br>        best = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> all_sums:<br>            best = <span class="hljs-built_in">max</span>(best, s * (total - s))   <br>        <span class="hljs-keyword">return</span> best % (<span class="hljs-number">10</span> ** <span class="hljs-number">9</span> + <span class="hljs-number">7</span>)<br>            <br></code></pre></td></tr></table></figure>
+    
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>leaf<br>
+        <strong>本文链接：</strong><a href="http://example.com/2022/12/10/1339/" title="http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;12&#x2F;10&#x2F;1339&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;12&#x2F;10&#x2F;1339&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/DFS/" rel="tag">DFS</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Python/" rel="tag">Python</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Tree/" rel="tag">Tree</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/leetcode/" rel="tag">leetcode</a>
+    
+</div>
+
+  
+      <div class="nexmoe-post-footer">
+          
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1339-Maximum-Product-of-Splitted-Binary-Tree-medium"><span class="toc-number">1.</span> <span class="toc-text">1339.Maximum Product of Splitted Binary Tree(medium)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode%E5%AE%98%E6%96%B9%E9%A2%98%E8%A7%A3"><span class="toc-number">1.0.1.</span> <span class="toc-text">Leetcode官方题解</span></a></li></ol></li></ol></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-search-space">
+	<div class="search-container">
+		<div class="search-header">
+			<div class="search-input-container">
+				<input
+					class="search-input"
+					type="text"
+					placeholder="搜索"
+					oninput="sinput();"
+				/>
+			</div>
+			<a class="search-close" onclick="sclose();">×</a>
+		</div>
+		<div class="search-body"></div>
+	</div>
+</div>
+
+    
+<script src="/lib/mdui_043tiny/mdui.js"></script>
+<script src="/lib/fancybox/fancybox.umd.js"></script>
+
+
+ 
+
+<script async src="/js/app.js?v=1673037737035"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
